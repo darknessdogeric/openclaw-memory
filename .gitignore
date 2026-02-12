@@ -1,0 +1,12 @@
+# 敏感文件排除
+.env
+*.key
+*.pem
+**/.DS_Store
+
+# OpenClaw 运行时文件（不含记忆）
+BOOTSTRAP.md
+*.log
+
+# 可选：如果你有 MEMORY.md 包含敏感信息，取消下面这行
+# MEMORY.md
