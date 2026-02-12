@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B166ER 紧急停止按钮</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, #1e1e1e 0%, #2d2d2d 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+        }
+        
+        .container {
+            text-align: center;
+            padding: 40px;
+        }
+        
+        .title {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #e0e0e0;
+        }
+        
+        .subtitle {
+            font-size: 14px;
+            color: #888;
+            margin-bottom: 40px;
+        }
+        
+        .stop-button {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: none;
+            background: linear-gradient(145deg, #ff4444, #cc0000);
+            box-shadow: 
+                0 10px 30px rgba(255, 68, 68, 0.4),
+                inset 0 -5px 20px rgba(0, 0, 0, 0.3),
+                inset 0 5px 20px rgba(255, 255, 255, 0.2);
+            cursor: pointer;
+            font-size: 72px;
+            color: white;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .stop-button:hover {
+            transform: scale(1.05);
+            box-shadow: 
+                0 15px 40px rgba(255, 68, 68, 0.5),
+                inset 0 -5px 20px rgba(0, 0, 0, 0.3),
+                inset 0 5px 20px rgba(255, 255, 255, 0.2);
+        }
+        
+        .stop-button:active {
+            transform: scale(0.95);
+            box-shadow: 
+                0 5px 20px rgba(255, 68, 68, 0.3),
+                inset 0 -2px 10px rgba(0, 0, 0, 0.3);
+        }
+        
+        .stop-button.stopping {
+            background: linear-gradient(145deg, #ff8800, #cc6600);
+            pointer-events: none;
+        }
+        
+        .stop-button.stopped {
+            background: linear-gradient(145deg, #44ff44, #00cc00);
+        }
+        
+        .status {
+            margin-top: 30px;
+            font-size: 16px;
+            color: #aaa;
+            min-height: 24px;
+        }
+        
+        .status.success {
+            color: #44ff44;
+        }
+        
+        .status.error {
+            color: #ff4444;
+        }
+        
+        .shortcut-info {
+            margin-top: 40px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            max-width: 400px;
+        }
+        
+        .shortcut-info h3 {
+            font-size: 14px;
+            color: #888;
+            margin-bottom: 10px;
+        }
+        
+        .shortcut-info p {
+            font-size: 12px;
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        .keyboard-shortcut {
+            display: inline-block;
+            padding: 4px 8px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+            font-family: monospace;
+            margin: 0 4px;
+        }
+        
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(255, 68, 68, 0.7); }
+            70% { box-shadow: 0 0 0 30px rgba(255, 68, 68, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(255, 68, 68, 0); }
+        }
+        
+        .stop-button.pulse {
+            animation: pulse 2s infinite;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">🤖 B166ER 紧急停止</h1>
+        <p class="subtitle">当需要立即中断任务执行时点击</p>
+        
+        <button class="stop-button pulse" id="stopBtn" onclick="stopAgent()">
+            ⏹
+        </button>
+        
+        <div class="status" id="status">准备就绪</div>
+        
+        <div class="shortcut-info">
+            <h3>💡 使用提示</h3>
+            <p>
+                此按钮会发送停止信号给当前运行的 OpenClaw 会话。<br>
+                适用于：长时间运行的任务、意外循环、需要立即终止的操作。<br><br>
+                <strong>快捷键：</strong><span class="keyboard-shortcut">Ctrl + Shift + S</span> 快速停止
+            </p>
+        </div>
+    </div>
+
+    <script>
+        let isStopping = false;
+        
+        // 键盘快捷键 Ctrl+Shift+S
+        document.addEventListener('keydown', function(e) {
+            if (e.ctrlKey && e.shiftKey && e.key === 'S') {
+                e.preventDefault();
+                stopAgent();
+            }
+        });
+        
+        async function stopAgent() {
+            if (isStopping) return;
+            
+            const btn = document.getElementById('stopBtn');
+            const status = document.getElementById('status');
+            
+            isStopping = true;
+            btn.classList.remove('pulse');
+            btn.classList.add('stopping');
+            status.textContent = '正在发送停止信号...';
+            status.className = 'status';
+            
+            try {
+                // 调用 OpenClaw Gateway API 停止当前会话
+                const response = await fetch('http://localhost:3000/api/sessions/stop', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        action: 'stop',
+                        timestamp: new Date().toISOString()
+                    })
+                });
+                
+                if (response.ok) {
+                    btn.classList.remove('stopping');
+                    btn.classList.add('stopped');
+                    status.textContent = '✓ 停止信号已发送';
+                    status.className = 'status success';
+                    
+                    setTimeout(() => {
+                        btn.classList.remove('stopped');
+                        btn.classList.add('pulse');
+                        status.textContent = '准备就绪';
+                        status.className = 'status';
+                        isStopping = false;
+                    }, 3000);
+                } else {
+                    throw new Error('API 响应异常');
+                }
+            } catch (error) {
+                // 如果 API 调用失败，尝试通过 exec 发送停止命令
+                try {
+                    await fetch('http://localhost:3000/api/exec', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({
+                            command: 'taskkill /F /IM openclaw.exe',
+                            async: false
+                        })
+                    });
+                    
+                    status.textContent = '✓ 已强制终止进程';
+                    status.className = 'status success';
+                } catch (e) {
+                    btn.classList.remove('stopping');
+                    btn.classList.add('pulse');
+                    status.textContent = '✗ 停止失败，请手动关闭终端窗口';
+                    status.className = 'status error';
+                    console.error('停止失败:', error);
+                }
+                
+                setTimeout(() => {
+                    isStopping = false;
+                }, 3000);
+            }
+        }
+        
+        // 页面加载完成提示
+        window.addEventListener('load', () => {
+            console.log('B166ER 紧急停止按钮已加载');
+            console.log('快捷键: Ctrl+Shift+S');
+        });
+    </script>
+</body>
+</html>

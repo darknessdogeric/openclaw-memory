@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "clawhub": "^0.6.0"
+  },
+  "_npx": {
+    "packages": [
+      "clawhub"
+    ]
+  }
+}
