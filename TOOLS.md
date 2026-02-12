@@ -37,4 +37,12 @@ Skills are shared. Your setup is yours. Keeping them apart means you can update 
 
 ---
 
+### Tavily Search API
+- API Key: `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`
+- 免费额度: 1000次/月
+- 备用方案: 额度用完时用 Kimi 大模型联网搜索
+- 安装命令: `clawhub install tavily-search`
+
+---
+
 Add whatever helps you do your job. This is your cheat sheet.
