@@ -17,7 +17,15 @@
 - 频率: 每小时
 - Job ID: `575c1af7-9fbf-4e90-b309-4cf5005a6eac`
 
-### ✅ 待添加远程备份（推荐）
+### ✅ 本地压缩备份（主方案）
+- 位置: `C:\B166ER-Backup\`
+- 脚本: `C:\B166ER-Backup\backup.ps1`
+- 触发: **开机登录时** (onlogon)
+- 保留: 7天滚动
+- 任务名: `B166ER-StartupBackup`
+- 首次备份: 2026-02-12 21:34
+
+### ✅ 待添加远程备份（可选）
 ```bash
 cd ~/.openclaw/workspace
 git remote add origin https://github.com/<你的用户名>/openclaw-memory.git
@@ -28,6 +36,11 @@ git push -u origin master
 - 时区: GMT+8 (Asia/Shanghai)
 - 偏好: TOKEN 节省模式
 - 要求: 重装后记忆不丢失
+
+### ✅ 开机自启动配置
+- OpenClaw 服务: 已添加到启动文件夹
+- 位置: `%APPDATA%\Microsoft\Windows\Start Menu\Programs\Startup\OpenClaw.lnk`
+- Web 界面快捷方式: 已创建到桌面 `OpenClaw Web.lnk`
 
 ## 重要任务记录
 - [x] 2026-02-12: 配置 TOKEN 节省模式（保守方案）
