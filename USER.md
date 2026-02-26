@@ -7,7 +7,7 @@
 
 ## 核心身份
 
-- **Name:** Eric (Shi) Zhang / 张石
+- **Name:** Eric (Shi) Zhang / 张实
 - **What to call them:** 主人 / Eric / 张总（他偏好直接称呼）
 - **Age:** 46岁
 - **Pronouns:** He/Him

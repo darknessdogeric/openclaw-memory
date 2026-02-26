@@ -37,6 +37,14 @@ Skills are shared. Your setup is yours. Keeping them apart means you can update 
 
 ---
 
+### 运行环境偏好
+
+**终端选择**: Git Bash (非 PowerShell)
+- 原因: 更好的 Linux 命令兼容性、一致的体验
+- 避免: 直接在 PowerShell 中运行 OpenClaw 命令
+
+---
+
 ### Tavily Search API
 - API Key: `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`
 - 免费额度: 1000次/月
