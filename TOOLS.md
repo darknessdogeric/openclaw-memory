@@ -53,4 +53,17 @@ Skills are shared. Your setup is yours. Keeping them apart means you can update 
 
 ---
 
+### Agent Reach (互联网能力)
+- **版本**: 1.2.0
+- **安装位置**: C:\Python314\Lib\site-packages
+- **克隆位置**: C:\Users\Administrator\Downloads\agent-reach
+- **功能**: 
+  - 网页阅读: `curl https://r.jina.ai/http://URL`
+  - YouTube/B站字幕: `yt-dlp --dump-json "URL"`
+  - RSS解析: Python feedparser
+  - Twitter/小红书: 需配置Cookie (待配置)
+- **使用指南**: `docs/Agent_Reach_使用指南.md`
+
+---
+
 Add whatever helps you do your job. This is your cheat sheet.
