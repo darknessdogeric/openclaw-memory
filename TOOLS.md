@@ -66,4 +66,13 @@ Skills are shared. Your setup is yours. Keeping them apart means you can update 
 
 ---
 
+### Agent Reach - 社交媒体配置状态
+- **Twitter/X**: 可配置 (需安装 xreach-cli)
+- **小红书**: 需Docker (未安装)
+- **抖音**: 可配置 (需安装 douyin-mcp-server)
+- **配置指南**: `docs/Agent_Reach_社交媒体配置指南.md`
+- **状态报告**: `docs/Agent_Reach_配置状态报告.md`
+
+---
+
 Add whatever helps you do your job. This is your cheat sheet.
