@@ -75,4 +75,20 @@ Skills are shared. Your setup is yours. Keeping them apart means you can update 
 
 ---
 
+### 已安装 OpenClaw Skills (7个)
+位置: `C:\Users\Administrator\.openclaw\skills\`
+
+**核心技能**:
+- ✅ email - 邮件管理
+- ✅ calendar - 日程管理
+- ✅ github - GitHub集成
+- ✅ web-search - AI搜索
+- ✅ jina-reader - 网页阅读
+- ✅ twitter - Twitter/X监控
+- ✅ second-brain - 知识管理
+
+**配置方法**: 编辑各技能目录下的 SKILL.md 和 config.yaml
+
+---
+
 Add whatever helps you do your job. This is your cheat sheet.

@@ -8,6 +8,18 @@
     "proactive-agent-1-2-4": {
       "version": "1.0.0",
       "installedAt": 1770907935906
+    },
+    "agent-council": {
+      "version": "1.0.0",
+      "installedAt": 1770909825345
+    },
+    "agenticflow-skill": {
+      "version": "0.1.0",
+      "installedAt": 1770909839760
+    },
+    "aisa-twitter-api": {
+      "version": "1.0.0",
+      "installedAt": 1770909851342
     }
   }
 }
