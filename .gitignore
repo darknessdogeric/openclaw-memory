@@ -10,3 +10,10 @@ BOOTSTRAP.md
 
 # 可选：如果你有 MEMORY.md 包含敏感信息，取消下面这行
 # MEMORY.md
+
+# npm 缓存文件
+%APPDATA%/npm-cache/
+npm-cache/
+node_modules/
+.npm/
+.cache/
