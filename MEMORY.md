@@ -24,7 +24,7 @@ git commit -m "手动备份: $(date '+%Y-%m-%d %H:%M:%S')"
 git push origin master  # 如果已配置远程仓库
 ```
 
-### ✅ 本地压缩备份（主方案 - 唯一自动备份）
+### ✅ 本地压缩备份
 - 位置: `C:\B166ER-Backup\`
 - 脚本: `C:\B166ER-Backup\backup.ps1`
 - 触发: **开机登录时** (onlogon)
@@ -32,12 +32,21 @@ git push origin master  # 如果已配置远程仓库
 - 任务名: `B166ER-StartupBackup`
 - 首次备份: 2026-02-12 21:34
 
-### ✅ 待添加远程备份（可选）
+### ✅ GitHub 远程备份（待完成认证）
+- **仓库**: https://github.com/darknessdogeric/openclaw-memory.git
+- **用户**: darknessdogeric
+- **状态**: 🟡 远程地址已配置，待 Token 认证
+- **配置文档**: `docs/github-backup-setup.md`
+
+**开机同步脚本**: `C:\B166ER-Backup\github-sync.bat`
+
+**完成认证后执行**:
 ```bash
 cd ~/.openclaw/workspace
-git remote add origin https://github.com/<你的用户名>/openclaw-memory.git
 git push -u origin master
 ```
+
+**说明**: 需要在 GitHub 创建 Personal Access Token 并配置 Git 认证。详见配置文档。
 
 ## 用户关键信息
 - 时区: GMT+8 (Asia/Shanghai)
