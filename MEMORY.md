@@ -32,21 +32,22 @@ git push origin master  # 如果已配置远程仓库
 - 任务名: `B166ER-StartupBackup`
 - 首次备份: 2026-02-12 21:34
 
-### ✅ GitHub 远程备份（待完成认证）
+### ✅ GitHub 远程备份（已启用）
 - **仓库**: https://github.com/darknessdogeric/openclaw-memory.git
 - **用户**: darknessdogeric
-- **状态**: 🟡 远程地址已配置，待 Token 认证
+- **状态**: 🟢 运行中（首次推送完成: 2026-03-02）
 - **配置文档**: `docs/github-backup-setup.md`
 
-**开机同步脚本**: `C:\B166ER-Backup\github-sync.bat`
+**自动同步**:
+- 开机同步脚本: `C:\B166ER-Backup\github-sync.bat`
+- 启动快捷方式: `%APPDATA%\Microsoft\Windows\Start Menu\Programs\Startup\B166ER-GitHub-Sync.lnk`
+- 触发: 每天开机时自动同步
 
-**完成认证后执行**:
+**手动推送**:
 ```bash
 cd ~/.openclaw/workspace
-git push -u origin master
+git push origin master
 ```
-
-**说明**: 需要在 GitHub 创建 Personal Access Token 并配置 Git 认证。详见配置文档。
 
 ## 用户关键信息
 - 时区: GMT+8 (Asia/Shanghai)
