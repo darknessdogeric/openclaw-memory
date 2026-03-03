@@ -1,5 +1,34 @@
 # HEARTBEAT.md
 
-# Keep this file empty (or with only comments) to skip heartbeat API calls.
+# B166ER 自主技能迭代系统
 
-# Add tasks below when you want the agent to check something periodically.
+## 心跳任务配置
+
+### 任务1：技能市场扫描（每30分钟）
+- 检查 Clawhub 新技能
+- 检查已有技能更新
+- 记录到监控清单
+
+### 任务2：行业动态监控（每2小时）
+- AI/LLM 领域新闻
+- 酒店行业技术更新
+- 项目相关工具发布
+
+### 任务3：每日技能报告（21:00）
+- 汇总当日发现
+- 推荐安装列表
+- 明日学习计划
+
+---
+
+## 执行逻辑
+
+当收到心跳时：
+1. 读取上次交互时间
+2. 如果 >30分钟无指令 → 启动轻量技能扫描
+3. 如果 >1小时无指令 → 启动深度技能搜索
+4. 如果 21:00-01:00 → 推送当日技能报告
+5. 如果发现高价值技能 → 主动汇报
+
+## 监控清单位置
+`memory/B166ER-skill-upgrade-checklist.md`
