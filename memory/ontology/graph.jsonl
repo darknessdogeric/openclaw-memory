@@ -1,0 +1,3 @@
+{"op": "create", "entity": {"id": "pers_a71f9e3f", "type": "Person", "properties": {"name": "\u5f20\u5b9e"}, "created": "2026-03-06T13:52:43.154250+00:00", "updated": "2026-03-06T13:52:43.154250+00:00"}, "timestamp": "2026-03-06T13:52:43.154250+00:00"}
+{"op": "create", "entity": {"id": "proj_b39fb3af", "type": "Project", "properties": {"name": "AHL-LLM\u53bb\u4e2d\u5fc3\u5316\u65c5\u884c\u5e73\u53f0", "status": "\u878d\u8d44\u4e2d"}, "created": "2026-03-06T13:53:04.592791+00:00", "updated": "2026-03-06T13:53:04.592791+00:00"}, "timestamp": "2026-03-06T13:53:04.592791+00:00"}
+{"op": "relate", "from": "pers_a71f9e3f", "rel": "owns", "to": "proj_b39fb3af", "properties": {}, "timestamp": "2026-03-06T13:53:04.593957+00:00"}
