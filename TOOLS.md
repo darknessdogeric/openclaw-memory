@@ -387,6 +387,45 @@ cp assets/*.md ./
 
 ---
 
+### ImageGen Skill - AI图像生成技能 ✅
+**位置**: `C:\Users\Administrator\.openclaw\skills\image-gen\`
+**功能**: 使用AI根据文本描述生成图像
+**依赖**: `pip install requests`
+**状态**: ✅ 已安装，测试通过
+**特点**: 支持免费Pollinations服务，无需API Key
+
+**使用方法**:
+```bash
+# 生成图像（默认使用免费服务）
+image-gen "一个现代化酒店大堂，大理石地面，水晶吊灯"
+
+# 指定风格和细节
+image-gen "豪华酒店客房，海景落地窗，白色床铺，极简风格"
+
+# 指定尺寸
+image-gen "精致西餐摆盘，牛排配红酒" -s 1024x1024
+```
+
+**Python API**:
+```python
+from image_gen import ImageGenerator
+
+gen = ImageGenerator()
+result = gen.generate("温馨民宿客厅，有壁炉和书架")
+print(result['images'][0])  # 输出图像路径
+```
+
+**输出位置**: `C:\Users\Administrator\Desktop\AI_Generated_Images\`
+
+**支持提供商**:
+| 提供商 | 费用 | 需要API Key |
+|--------|------|-------------|
+| Pollinations | 免费 | ❌ 不需要 |
+| OpenAI DALL-E | 付费 | ✅ 需要 |
+| Stability AI | 付费 | ✅ 需要 |
+
+---
+
 ### MD2ALL Converter - Markdown全能转换技能 ✅
 - **位置**: `C:\Users\Administrator\.openclaw\skills\md2all-converter\`
 - **主脚本**: `md2all.py`
