@@ -151,11 +151,100 @@ bash scripts/web-fetch.sh --url "https://example.com"
 
 ---
 
+### Google Workspace (gog) Skill - 已安装 ✅
+**位置**: `C:\Users\Administrator\.openclaw\skills\gworkspace\`
+**来源**: https://github.com/voidborne-d/google-workspace-skill
+**功能**: 通过 gws CLI 管理 Google Workspace (Drive, Gmail, Calendar, Sheets, Docs, Chat, Tasks, Admin, Meet)
+**状态**: ✅ Skill已安装，使用 Python 实现 (gws-python)
+**实现方式**: `gws-python` - 纯Python Google API客户端
+**工具路径**: `C:\Users\Administrator\.openclaw\tools\gws-python\`
+
+**已解决**: Windows下原gws CLI运行问题，改用Python实现完全兼容
+
+**使用方法**:
+```bash
+# 列出最近的 Drive 文件
+gws drive files list --params "{\"pageSize\": 10}"
+
+# 搜索 Gmail
+gws gmail messages list --params "{\"maxResults\": 10, \"q\": \"is:unread\"}"
+
+# 创建日历事件
+gws calendar events insert --params "{\"calendarId\": \"primary\"}" --json "{\"summary\": \"会议\", \"start\": {\"dateTime\": \"2026-03-09T10:00:00+08:00\"}}"
+
+# 读取 Sheets
+gws sheets values get --params "{\"spreadsheetId\": \"ID\", \"range\": \"Sheet1!A1:D10\"}"
+```
+
+**首次配置**:
+1. 访问 https://console.cloud.google.com/
+2. 创建项目并启用 Google Workspace API
+3. 创建 OAuth 2.0 凭证 (桌面应用类型)
+4. 下载 `credentials.json` 放置到: `%USERPROFILE%\.gws-python\credentials.json`
+5. 首次运行任意命令会触发浏览器授权
+
+**安装/修复**:
+```bash
+# 重新安装 gws 命令
+cd C:\Users\Administrator\.openclaw\tools\gws-python
+install.bat
+```
+
+---
+
 ### Skill Creator (已安装)
 **位置**: `C:\Users\Administrator\.openclaw\skills\skill-creator\`
 **来源**: https://github.com/nkchivas/openclaw-skill-skill-creator
 **功能**: 自动生成OpenClaw技能结构
 **状态**: ✅ 已克隆
+
+---
+
+### Summarize 技能 (已安装) ✅
+**位置**: `C:\Users\Administrator\.openclaw\skills\summarize\`
+**功能**: 通用文本摘要，支持文章、论文、视频字幕、聊天记录
+**依赖**: `pip install jieba`
+**状态**: ✅ 已创建，纯Python实现，测试通过
+
+**使用方法**:
+```bash
+# 文本摘要
+summarize "你的长文本" -t text
+
+# 论文结构化摘要
+summarize paper.txt -t paper
+
+# 视频字幕摘要
+summarize subtitles.srt -t video
+
+# 聊天记录摘要（提取行动项）
+summarize chat.txt -t chat
+
+# 保存到文件
+summarize article.md -t text -o summary.json
+```
+
+**Python API**:
+```python
+from summarize import TextSummarizer, PaperSummarizer
+
+# 通用摘要
+text = "长文本内容..."
+summary = TextSummarizer(text).summarize_extractive(ratio=0.3)
+
+# 论文摘要
+paper = PaperSummarizer(paper_text)
+result = paper.summarize()
+print(result['summary'])  # 结构化摘要
+```
+
+**支持类型**:
+| 类型 | 说明 | 输出 |
+|------|------|------|
+| text | 通用文本 | 抽取式+生成式摘要 |
+| paper | 学术论文 | 摘要/方法/结果/结论 |
+| video | 视频字幕 | 内容概述+关键知识点 |
+| chat | 聊天记录 | 参与者+主题+行动项 |
 
 ---
 
@@ -291,22 +380,69 @@ cp assets/*.md ./
 
 ---
 
-### Markdown转PDF技能 (MD2PDF Converter)
+### Markdown转PDF技能 (MD2PDF Converter) - 已弃用
 - **位置**: `C:\Users\Administrator\.openclaw\skills\md2pdf-converter\`
-- **脚本**: `张实项目总控\06-AHL-去中心化旅行平台\md_to_pdf.py`
-- **一键运行**: `转换MD为PDF.bat`
-- **依赖**: Python + wkhtmltopdf
-- **安装**: https://wkhtmltopdf.org/downloads.html
-- **用途**: 将项目文档Markdown转换为专业PDF
+- **状态**: ⛔ 已弃用，请使用 MD2ALL Converter
+- **原因**: 需要安装wkhtmltopdf外部依赖
+
+---
+
+### MD2ALL Converter - Markdown全能转换技能 ✅
+- **位置**: `C:\Users\Administrator\.openclaw\skills\md2all-converter\`
+- **主脚本**: `md2all.py`
+- **安装脚本**: `安装MD2ALL.bat`
+- **依赖**: 纯Python (python-docx, markdown, fpdf2)
+- **优势**: 无需wkhtmltopdf/pandoc等外部依赖
+- **用途**: 将Markdown转换为PDF、Word、HTML三种格式
+
+**功能特性**:
+| 功能 | 支持程度 | 说明 |
+|------|----------|------|
+| Markdown转PDF | ⭐⭐⭐⭐⭐ | 专业排版，适合打印 |
+| Markdown转Word | ⭐⭐⭐⭐⭐ | 可编辑，保留格式 |
+| Markdown转HTML | ⭐⭐⭐⭐⭐ | 带CSS样式，适合网页 |
+| 中文支持 | ⭐⭐⭐⭐⭐ | 自动检测系统字体 |
+
+**安装方法**:
+```bash
+# 方式1: 双击运行
+安装MD2ALL.bat
+
+# 方式2: 手动安装
+pip install python-docx markdown fpdf2 beautifulsoup4
+```
 
 **使用方法**:
 ```bash
-# 方式1: 双击运行
-转换MD为PDF.bat
+# 转换全部格式（PDF+Word+HTML）
+python md2all.py 文档.md
 
-# 方式2: 命令行
-python md_to_pdf.py
+# 仅转换为PDF
+python md2all.py 文档.md pdf
+
+# 仅转换为Word
+python md2all.py 文档.md docx
+
+# 仅转换为HTML
+python md2all.py 文档.md html
 ```
+
+**Python调用**:
+```python
+from md2all import convert_file
+
+# 转换文件
+results = convert_file("README.md", output_format="all")
+# 返回: ['README.pdf', 'README.docx', 'README.html']
+```
+
+**支持的Markdown语法**:
+- ✅ 标题（H1-H6）
+- ✅ 加粗、斜体、代码
+- ✅ 有序/无序列表
+- ✅ 表格
+- ✅ 代码块
+- ✅ 分隔线
 
 ---
 
