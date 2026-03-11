@@ -1,0 +1,230 @@
+
+============================================================
+File 1: 酒店进场SOP.xlsx
+============================================================
+Sheets: ['Sheet1']
+
+--- Sheet: Sheet1 ---
+Shape: (61, 7)
+     酒店进场SOP Unnamed: 1             Unnamed: 2          Unnamed: 3        Unnamed: 4 Unnamed: 5 Unnamed: 6
+0       一级项目       二级项目                   三级项目                四级项目              五级项目       完成手势       完成时间
+1   酒店基本情况了解   酒店基础信息收集    酒店各渠道账号，PMS系统，子账号创建                 NaN               NaN        NaN        NaN
+2        NaN  各个平台的数据备忘           各平台点评数、点评分备忘                 NaN               NaN        NaN        NaN
+3        NaN        NaN         各平台服务质量分、雷达图备忘                 NaN               NaN        NaN        NaN
+4        NaN        NaN               酒店全城排序备忘                 NaN               NaN        NaN        NaN
+5        NaN        NaN      酒店同商圈、同星级好评优先排序备忘                 NaN               NaN        NaN        NaN
+6        NaN        NaN        全城酒店同星级好评优先排序备忘                 NaN               NaN        NaN        NaN
+7        NaN        NaN  各平台流量转化数据漏斗图历史一个月数据备忘                 NaN               NaN        NaN        NaN
+8        NaN        NaN       同商圈、同星级、低价优先排序备忘                 NaN               NaN        NaN        NaN
+9        NaN  各平台业务初步对接             添加平台业务经理微信                 NaN               NaN        NaN        NaN
+10       NaN        NaN    了解酒店所在城市、商圈、同星级市场情况                 NaN               NaN        NaN        NaN
+11       NaN        NaN         了解酒店的历史问题，酒店权益                 NaN               NaN        NaN        NaN
+12       NaN    五项排查和优化              梳理合同保留房数量                 NaN               NaN        NaN        NaN
+13       NaN        NaN           断直连停freesale                 NaN               NaN        NaN        NaN
+14       NaN        NaN             灭代理（假如有代理）                 NaN               NaN        NaN        NaN
+15       NaN        NaN       梳理买断协议，尽快把买断房消耗掉                 NaN               NaN        NaN        NaN
+16       NaN        NaN                免房梳理+消耗                 NaN               NaN        NaN        NaN
+17    酒店进场进程     营销方案制定                   目标分解  合作前后预计业绩变化展示（进场测算）               NaN        NaN        NaN
+18       NaN        NaN                    NaN      合作期目标按月拆解（月预期）               NaN        NaN        NaN
+19       NaN        NaN                 平台数据分析            酒万十八要素梳理               NaN        NaN        NaN
+20       NaN        NaN                    NaN                用户分析          客源地域占比情况        NaN        NaN
+21       NaN        NaN                    NaN                 NaN        提前预定连住天数情况        NaN        NaN
+22       NaN        NaN                    NaN                 NaN           用户年龄层分析        NaN        NaN
+23       NaN        NaN                    NaN                 NaN      酒店后台问答用户需求分析        NaN        NaN
+24       NaN        NaN                    NaN                 NaN            点评优劣分析        NaN        NaN
+25       NaN        NaN                    NaN                竞对分析  同商圈、同星级第一是谁，产量如何        NaN        NaN
+26       NaN        NaN                    NaN                 NaN     沟通全城第一是谁，产量如何        NaN        NaN
+27       NaN        NaN                    NaN                 NaN              点评分析        NaN        NaN
+28       NaN        NaN                    NaN                 NaN              图片分析        NaN        NaN
+29       NaN        NaN                    NaN                 NaN            房型名称分析        NaN        NaN
+
+
+
+============================================================
+File 2: 项目日常（日回收）20260301v1.xlsx
+============================================================
+Sheets: ['日常跟进1.28', '日常1.30 ', '日常1.31', '日常跟进2.3', '💡日常跟进2.6日', '2月周复盘（第一周）', '3.2（测试）', '3.3（开始）', '3.4', '3.5', '3.6', '3.7']
+
+--- Sheet: 日常跟进1.28 ---
+Shape: (24, 19)
+        项目信息 Unnamed: 1 Unnamed: 2 Unnamed: 3 Unnamed: 4     Unnamed: 5 日常任务查询 Unnamed: 7 Unnamed: 8 Unnamed: 9    Unnamed: 10          Unnamed: 11 Unnamed: 12  日常复盘 Unnamed: 14 Unnamed: 15 Unnamed: 16 Unnamed: 17 Unnamed: 18
+0         组长      owner       城市经理         省份         城市             项目  价态助手及     远期180天       滚动远期      热点日期及             日报  违规、履约检查，数据检查备忘、昨日简报        旅拍出产  付费推广       好评日复盘      大美卡日复盘      晚间数据备忘   勾选前一天是否完成  收益追踪表(周维度)
+1        NaN        NaN        NaN        NaN        NaN            NaN   促销检查       房态检查      铺价30天     热点房型监控  （预计收入表/收入进度表）                  NaN         NaN   日复盘         NaN         NaN         NaN         NaN         NaN
+2   蝴蝶\n（18）      蝴蝶（6）         梧桐         湖北         武汉             憬黎    NaN        NaN        NaN        NaN            NaN                  NaN         NaN   NaN         NaN         NaN         NaN         NaN         NaN
+3        NaN        NaN         晴天         河南         鹤壁             中州      ✅          ✅          ✅          ✅            NaN                    ✅         NaN   NaN         NaN         NaN         NaN         NaN         NaN
+4        NaN        NaN         大熊         山西         太原   liuliu城市度假酒店      ✅          ✅          ✅        NaN            NaN                    ✅           ✅   NaN           ❌           ❌         NaN         NaN         NaN
+5        NaN        NaN         大锤         湖北         武汉          朗丽兹酒店    NaN        NaN        NaN        NaN            NaN                  NaN         NaN   NaN         NaN         NaN         NaN         NaN         NaN
+6        NaN        NaN         晴天         新疆        阿克苏          华瑞大酒店    NaN        NaN        NaN        NaN            NaN                  NaN         NaN   NaN         NaN         NaN         NaN         NaN         NaN
+7        NaN        NaN         晴天         湖南         长沙        潇影华美达酒店    NaN        NaN        NaN        NaN            NaN                  NaN         NaN   NaN         NaN         NaN         NaN         NaN         NaN
+8        NaN      汤圆（1）         大熊         河南         开封             丽禧    NaN        NaN        NaN        NaN              ✅                    ✅         NaN     ❌         NaN         NaN         NaN         NaN         NaN
+9        NaN      水稻（3）         晴天         重庆         重庆           云涉酒店    NaN        NaN        NaN        NaN            NaN                  NaN         NaN   NaN         NaN         NaN         NaN         NaN         NaN
+10       NaN        NaN         晴天         江苏         南京         恬觅小憩酒店    NaN        NaN        NaN        NaN            NaN                  NaN         NaN   NaN         NaN         NaN         NaN         NaN         NaN
+11       NaN        NaN         晴天         重庆         万州      泊逸云尚/云栖酒店      ✅        NaN          ✅        NaN              ✅                    ✅         NaN   NaN         NaN         NaN         NaN         NaN         NaN
+12       NaN        NaN         大锤         重庆         奉节         奉节渝东酒店      ✅        NaN          ✅          ✅              ✅                    ✅         NaN   NaN         NaN         NaN         NaN         NaN         NaN
+13       NaN      考拉（4）         晴天         广西         阳朔     途易蓝相和里度假酒店    NaN        NaN        NaN        NaN            NaN                  NaN         NaN   NaN         NaN         NaN         NaN         NaN         NaN
+14       NaN        NaN         晴天         河南         信阳          美亚达酒店      ✅          ✅          ✅          ✅              ✅                    ✅           ❌     ✅           ❌           ❌           ✅         NaN         NaN
+15       NaN        NaN         晴天         安徽         涡阳           金陵山庄      ✅          ✅          ✅          ✅              ❌                    ✅           ❌     ✅           ❌           ❌           ✅         NaN         NaN
+16       NaN        NaN         大熊         北京         北京      北京准噶尔明珠酒店      ✅          ✅          ✅          ✅              ✅                    ✅           ❌     ✅           ❌           ❌           ✅         NaN         NaN
+17       NaN        NaN         大锤         四川         乐山   乐山云上汤池酒店（待进）    NaN        NaN        NaN        NaN            NaN                  NaN         NaN   NaN         NaN         NaN         NaN         NaN         NaN
+18       NaN      曲奇（4）         大锤         江苏         扬州           中青国际    NaN        NaN        NaN        NaN            NaN                  NaN         NaN   NaN         NaN         NaN         NaN         NaN         NaN
+19       NaN        NaN         晴天         安徽         阜阳      广美国际酒店工作群    NaN        NaN        NaN        NaN            NaN                  NaN         NaN   NaN         NaN         NaN         NaN         NaN         NaN
+20       NaN        NaN         晴天         四川         遂宁        阑珊居假日酒店      ✅          ✅          ✅        NaN              ✅                    ✅         NaN   NaN         NaN         NaN         NaN         NaN         NaN
+21       NaN        NaN         晴天         河南         郑州        净隅设计师酒店      ✅          ✅          ✅        NaN              ✅                    ✅         NaN   NaN         NaN           ✅         NaN         NaN         NaN
+22       NaN        NaN         大熊         甘肃         甘南         景恒国际酒店      ✅          ✅          ✅        NaN              ✅                    ✅           ✅   NaN           ✅         NaN         NaN         NaN         NaN
+23       NaN        NaN         大熊         云南         芒市  南宿·不远处·澄心私汤云邸      ✅        NaN        NaN        NaN            NaN                    ✅         NaN   NaN         NaN         NaN         NaN         NaN         NaN
+
+
+
+--- Sheet: 日常1.30  ---
+Shape: (24, 19)
+        项目信息 Unnamed: 1 Unnamed: 2 Unnamed: 3 Unnamed: 4     Unnamed: 5 日常任务查询 Unnamed: 7 Unnamed: 8 Unnamed: 9    Unnamed: 10          Unnamed: 11 Unnamed: 12  日常复盘 Unnamed: 14 Unnamed: 15 Unnamed: 16 Unnamed: 17 Unnamed: 18
+0         组长      owner       城市经理         省份         城市             项目  价态助手及     远期180天       滚动远期      热点日期及             日报  违规、履约检查，数据检查备忘、昨日简报        旅拍出产  付费推广       好评日复盘      大美卡日复盘      晚间数据备忘   勾选前一天是否完成  收益追踪表(周维度)
+1        NaN        NaN        NaN        NaN        NaN            NaN   促销检查       房态检查      铺价30天     热点房型监控  （预计收入表/收入进度表）                  NaN         NaN   日复盘         NaN         NaN         NaN         NaN         NaN
+2   蝴蝶\n（18）      蝴蝶（6）         梧桐         湖北         武汉             憬黎    NaN        NaN        NaN        NaN            NaN                  NaN         NaN   NaN         NaN         NaN         NaN         NaN         NaN
+3        NaN        NaN         晴天         河南         鹤壁             中州      ✅        NaN        NaN        NaN            NaN                  NaN         NaN   NaN         NaN         NaN         NaN         NaN         NaN
+4        NaN        NaN         大熊         山西         太原   liuliu城市度假酒店    NaN        NaN        NaN        NaN            NaN                  NaN         NaN   NaN         NaN         NaN         NaN         NaN         NaN
+5        NaN        NaN         大锤         湖北         武汉          朗丽兹酒店    NaN        NaN        NaN        NaN            NaN                  NaN         NaN   NaN         NaN         NaN         NaN         NaN         NaN
+6        NaN        NaN         晴天         新疆        阿克苏          华瑞大酒店    NaN        NaN        NaN        NaN            NaN                  NaN         NaN   NaN         NaN         NaN         NaN         NaN         NaN
+7        NaN        NaN         晴天         湖南         长沙        潇影华美达酒店    NaN        NaN        NaN        NaN            NaN                  NaN         NaN   NaN         NaN         NaN         NaN         NaN         NaN
+8        NaN      汤圆（1）         大熊         河南         开封             丽禧    NaN        NaN        NaN        NaN            NaN                  NaN         NaN   NaN         NaN         NaN         NaN         NaN         NaN
+9        NaN      水稻（3）         晴天         重庆         重庆           云涉酒店    NaN        NaN        NaN        NaN            NaN                  NaN         NaN   NaN         NaN         NaN         NaN         NaN         NaN
+10       NaN        NaN         晴天         江苏         南京         恬觅小憩酒店    NaN        NaN        NaN        NaN            NaN                  NaN         NaN   NaN         NaN         NaN         NaN         NaN         NaN
+11       NaN        NaN         晴天         重庆         万州      泊逸云尚/云栖酒店      ✅        NaN          ✅        NaN              ✅                    ✅         NaN   NaN         NaN         NaN         NaN         NaN         NaN
+12       NaN        NaN         大锤         重庆         奉节         奉节渝东酒店      ✅        NaN          ✅          ✅              ✅                    ✅         NaN   NaN         NaN         NaN         NaN         NaN         NaN
+13       NaN      考拉（4）         晴天         广西         阳朔     途易蓝相和里度假酒店    NaN        NaN        NaN        NaN            NaN                  NaN         NaN   NaN         NaN         NaN         NaN         NaN         NaN
+14       NaN        NaN         晴天         河南         信阳          美亚达酒店      ✅          ✅          ✅        NaN              ✅                    ✅         NaN     ✅           ❌           ❌           ✅         NaN         NaN
+15       NaN        NaN         晴天         安徽         涡阳           金陵山庄      ✅        NaN          ✅        NaN              ❌                    ✅         NaN     ❌           ❌           ❌           ✅         NaN         NaN
+16       NaN        NaN         大熊         北京         北京      北京准噶尔明珠酒店      ✅          ✅          ✅        NaN              ✅                    ✅         NaN     ✅           ❌           ❌           ✅         NaN         NaN
+17       NaN        NaN         大锤         四川         乐山   乐山云上汤池酒店（待进）    NaN        NaN        NaN        NaN            NaN                  NaN         NaN   NaN         NaN         NaN         NaN         NaN         NaN
+18       NaN      曲奇（4）         大锤         江苏         扬州           中青国际    NaN        NaN        NaN        NaN            NaN                  NaN         NaN   NaN         NaN         NaN         NaN         NaN         NaN
+19       NaN        NaN         晴天         安徽         阜阳      广美国际酒店工作群    NaN        NaN        NaN        NaN            NaN                  NaN         NaN   NaN         NaN         NaN         NaN         NaN         NaN
+20       NaN        NaN         晴天         四川         遂宁        阑珊居假日酒店      ✅          ✅        NaN        NaN              ✅                    ✅         NaN   NaN         NaN         NaN         NaN         NaN         NaN
+21       NaN        NaN         晴天         河南         郑州        净隅设计师酒店      ✅          ✅          ✅          ✅              ✅                    ✅         NaN   NaN         NaN         NaN         NaN         NaN         NaN
+22       NaN        NaN         大熊         甘肃         甘南         景恒国际酒店      ✅          ✅        NaN        NaN              ✅                    ✅         NaN   NaN         NaN         NaN         NaN         NaN         NaN
+23       NaN        NaN         大熊         云南         芒市  南宿·不远处·澄心私汤云邸      ✅          ✅        NaN        NaN              ✅                    ✅         NaN   NaN         NaN         NaN         NaN         NaN         NaN
+
+
+
+--- Sheet: 日常1.31 ---
+Shape: (24, 19)
+        项目信息 Unnamed: 1 Unnamed: 2 Unnamed: 3 Unnamed: 4     Unnamed: 5 日常任务查询 Unnamed: 7 Unnamed: 8 Unnamed: 9    Unnamed: 10          Unnamed: 11 Unnamed: 12  日常复盘 Unnamed: 14 Unnamed: 15 Unnamed: 16 Unnamed: 17 Unnamed: 18
+0         组长      owner       城市经理         省份         城市             项目  价态助手及     远期180天       滚动远期      热点日期及             日报  违规、履约检查，数据检查备忘、昨日简报        旅拍出产  付费推广       好评日复盘      大美卡日复盘      晚间数据备忘   勾选前一天是否完成  收益追踪表(周维度)
+1        NaN        NaN        NaN        NaN        NaN            NaN   促销检查       房态检查      铺价30天     热点房型监控  （预计收入表/收入进度表）                  NaN         NaN   日复盘         NaN         NaN         NaN         NaN         NaN
+2   蝴蝶\n（18）      蝴蝶（6）         梧桐         湖北         武汉         憬黎（葡萄）    NaN        NaN        NaN        NaN            NaN                  NaN         NaN   NaN         NaN         NaN         NaN         NaN         NaN
+3        NaN        NaN         晴天         河南         鹤壁             中州      ✅          ✅          ❌          ✅              ✅                    ✅           ✅   NaN         NaN         NaN         NaN         NaN         NaN
+4        NaN        NaN         大熊         山西         太原   liuliu城市度假酒店    NaN          ✅          ✅          ✅              ✅                  NaN         NaN   NaN         NaN         NaN         NaN         NaN         NaN
+5        NaN        NaN         大锤         湖北         武汉          朗丽兹酒店      ✅          ✅          ✅        NaN              ✅                    ✅         NaN   NaN         NaN         NaN         NaN         NaN         NaN
+6        NaN        NaN         晴天         新疆        阿克苏          华瑞大酒店      ✅          ✅        NaN        NaN              ✅                    ✅         NaN   NaN         NaN         NaN         NaN         NaN         NaN
+7        NaN        NaN         晴天         湖南         长沙        潇影华美达酒店      ✅          ✅          ✅          ✅              ✅                    ✅         NaN   NaN         NaN         NaN         NaN         NaN         NaN
+8        NaN      汤圆（1）         大熊         河南         开封             丽禧      ✅          ✅        NaN        NaN              ✅                    ✅         NaN   NaN         NaN         NaN         NaN         NaN         NaN
+9        NaN      水稻（3）         晴天         重庆         重庆           云涉酒店    NaN        NaN        NaN        NaN            NaN                  NaN         NaN   NaN         NaN         NaN         NaN         NaN         NaN
+10       NaN        NaN         晴天         江苏         南京         恬觅小憩酒店    NaN        NaN        NaN        NaN            NaN                  NaN         NaN   NaN         NaN         NaN         NaN         NaN         NaN
+11       NaN        NaN         晴天         重庆         万州      泊逸云尚/云栖酒店      ✅        NaN          ✅        NaN              ✅                    ✅         NaN   NaN         NaN         NaN         NaN         NaN         NaN
+12       NaN        NaN         大锤         重庆         奉节         奉节渝东酒店      ✅        NaN          ✅          ✅              ✅                    ✅         NaN   NaN         NaN         NaN         NaN         NaN         NaN
+13       NaN      考拉（4）         晴天         广西         阳朔     途易蓝相和里度假酒店    NaN        NaN        NaN        NaN            NaN                  NaN         NaN   NaN         NaN         NaN         NaN         NaN         NaN
+14       NaN        NaN         晴天         河南         信阳          美亚达酒店      ✅          ✅          ✅          ✅              ✅                    ✅           ✅     ✅           ❌           ❌           ✅         NaN         NaN
+15       NaN        NaN         晴天         安徽         涡阳           金陵山庄      ✅          ✅          ✅        NaN              ✅                    ✅           ✅     ❌           ❌           ❌           ✅         NaN         NaN
+16       NaN        NaN         大熊         北京         北京      北京准噶尔明珠酒店      ✅          ✅          ✅          ✅              ✅                    ✅           ✅     ❌           ❌           ❌           ✅         NaN         NaN
+17       NaN        NaN         大锤         四川         乐山   乐山云上汤池酒店（待进）    NaN        NaN        NaN        NaN            NaN                  NaN         NaN   NaN         NaN         NaN         NaN         NaN         NaN
+18       NaN      曲奇（4）         大锤         江苏         扬州           中青国际    NaN        NaN        NaN        NaN            NaN                  NaN         NaN   NaN         NaN         NaN         NaN         NaN         NaN
+19       NaN        NaN         晴天         安徽         阜阳      广美国际酒店工作群    NaN        NaN        NaN        NaN            NaN                  NaN         NaN   NaN         NaN         NaN         NaN         NaN         NaN
+20       NaN        NaN         晴天         四川         遂宁        阑珊居假日酒店      ✅          ✅          ✅          ✅              ✅                    ✅         NaN   NaN         NaN         NaN         NaN         NaN         NaN
+21       NaN        NaN         晴天         河南         郑州        净隅设计师酒店      ✅          ✅          ✅          ✅              ✅                    ✅         NaN   NaN         NaN         NaN         NaN         NaN         NaN
+22       NaN        NaN         大熊         甘肃         甘南         景恒国际酒店      ✅          ✅          ✅          ✅            NaN                    ✅         NaN   NaN         NaN         NaN         NaN         NaN         NaN
+23       NaN        NaN         大熊         云南         芒市  南宿·不远处·澄心私汤云邸      ✅          ✅        NaN        NaN            NaN                  NaN         NaN   NaN         NaN         NaN         NaN         NaN         NaN
+
+
+
+============================================================
+File 3: 项目进度（需回收）20260301v1.xlsx
+============================================================
+Sheets: ['日常跟进1.28', '日常1.30 ', '日常1.31', '日常跟进2.3', '💡日常跟进2.6日', '2月周复盘（第一周）', '②优化20项排查']
+
+--- Sheet: 日常跟进1.28 ---
+Shape: (24, 19)
+        项目信息 Unnamed: 1 Unnamed: 2 Unnamed: 3 Unnamed: 4     Unnamed: 5 日常任务查询 Unnamed: 7 Unnamed: 8 Unnamed: 9    Unnamed: 10          Unnamed: 11 Unnamed: 12  日常复盘 Unnamed: 14 Unnamed: 15 Unnamed: 16 Unnamed: 17 Unnamed: 18
+0         组长      owner       城市经理         省份         城市             项目  价态助手及     远期180天       滚动远期      热点日期及             日报  违规、履约检查，数据检查备忘、昨日简报        旅拍出产  付费推广       好评日复盘      大美卡日复盘      晚间数据备忘   勾选前一天是否完成  收益追踪表(周维度)
+1        NaN        NaN        NaN        NaN        NaN            NaN   促销检查       房态检查      铺价30天     热点房型监控  （预计收入表/收入进度表）                  NaN         NaN   日复盘         NaN         NaN         NaN         NaN         NaN
+2   蝴蝶\n（18）      蝴蝶（6）         梧桐         湖北         武汉             憬黎    NaN        NaN        NaN        NaN            NaN                  NaN         NaN   NaN         NaN         NaN         NaN         NaN         NaN
+3        NaN        NaN         晴天         河南         鹤壁             中州      ✅          ✅          ✅          ✅            NaN                    ✅         NaN   NaN         NaN         NaN         NaN         NaN         NaN
+4        NaN        NaN         大熊         山西         太原   liuliu城市度假酒店      ✅          ✅          ✅        NaN            NaN                    ✅           ✅   NaN           ❌           ❌         NaN         NaN         NaN
+5        NaN        NaN         大锤         湖北         武汉          朗丽兹酒店    NaN        NaN        NaN        NaN            NaN                  NaN         NaN   NaN         NaN         NaN         NaN         NaN         NaN
+6        NaN        NaN         晴天         新疆        阿克苏          华瑞大酒店    NaN        NaN        NaN        NaN            NaN                  NaN         NaN   NaN         NaN         NaN         NaN         NaN         NaN
+7        NaN        NaN         晴天         湖南         长沙        潇影华美达酒店    NaN        NaN        NaN        NaN            NaN                  NaN         NaN   NaN         NaN         NaN         NaN         NaN         NaN
+8        NaN      汤圆（1）         大熊         河南         开封             丽禧    NaN        NaN        NaN        NaN              ✅                    ✅         NaN     ❌         NaN         NaN         NaN         NaN         NaN
+9        NaN      水稻（3）         晴天         重庆         重庆           云涉酒店    NaN        NaN        NaN        NaN            NaN                  NaN         NaN   NaN         NaN         NaN         NaN         NaN         NaN
+10       NaN        NaN         晴天         江苏         南京         恬觅小憩酒店    NaN        NaN        NaN        NaN            NaN                  NaN         NaN   NaN         NaN         NaN         NaN         NaN         NaN
+11       NaN        NaN         晴天         重庆         万州      泊逸云尚/云栖酒店      ✅        NaN          ✅        NaN              ✅                    ✅         NaN   NaN         NaN         NaN         NaN         NaN         NaN
+12       NaN        NaN         大锤         重庆         奉节         奉节渝东酒店      ✅        NaN          ✅          ✅              ✅                    ✅         NaN   NaN         NaN         NaN         NaN         NaN         NaN
+13       NaN      考拉（4）         晴天         广西         阳朔     途易蓝相和里度假酒店    NaN        NaN        NaN        NaN            NaN                  NaN         NaN   NaN         NaN         NaN         NaN         NaN         NaN
+14       NaN        NaN         晴天         河南         信阳          美亚达酒店      ✅          ✅          ✅          ✅              ✅                    ✅           ❌     ✅           ❌           ❌           ✅         NaN         NaN
+15       NaN        NaN         晴天         安徽         涡阳           金陵山庄      ✅          ✅          ✅          ✅              ❌                    ✅           ❌     ✅           ❌           ❌           ✅         NaN         NaN
+16       NaN        NaN         大熊         北京         北京      北京准噶尔明珠酒店      ✅          ✅          ✅          ✅              ✅                    ✅           ❌     ✅           ❌           ❌           ✅         NaN         NaN
+17       NaN        NaN         大锤         四川         乐山   乐山云上汤池酒店（待进）    NaN        NaN        NaN        NaN            NaN                  NaN         NaN   NaN         NaN         NaN         NaN         NaN         NaN
+18       NaN      曲奇（4）         大锤         江苏         扬州           中青国际    NaN        NaN        NaN        NaN            NaN                  NaN         NaN   NaN         NaN         NaN         NaN         NaN         NaN
+19       NaN        NaN         晴天         安徽         阜阳      广美国际酒店工作群    NaN        NaN        NaN        NaN            NaN                  NaN         NaN   NaN         NaN         NaN         NaN         NaN         NaN
+20       NaN        NaN         晴天         四川         遂宁        阑珊居假日酒店      ✅          ✅          ✅        NaN              ✅                    ✅         NaN   NaN         NaN         NaN         NaN         NaN         NaN
+21       NaN        NaN         晴天         河南         郑州        净隅设计师酒店      ✅          ✅          ✅        NaN              ✅                    ✅         NaN   NaN         NaN           ✅         NaN         NaN         NaN
+22       NaN        NaN         大熊         甘肃         甘南         景恒国际酒店      ✅          ✅          ✅        NaN              ✅                    ✅           ✅   NaN           ✅         NaN         NaN         NaN         NaN
+23       NaN        NaN         大熊         云南         芒市  南宿·不远处·澄心私汤云邸      ✅        NaN        NaN        NaN            NaN                    ✅         NaN   NaN         NaN         NaN         NaN         NaN         NaN
+
+
+
+--- Sheet: 日常1.30  ---
+Shape: (24, 19)
+        项目信息 Unnamed: 1 Unnamed: 2 Unnamed: 3 Unnamed: 4     Unnamed: 5 日常任务查询 Unnamed: 7 Unnamed: 8 Unnamed: 9    Unnamed: 10          Unnamed: 11 Unnamed: 12  日常复盘 Unnamed: 14 Unnamed: 15 Unnamed: 16 Unnamed: 17 Unnamed: 18
+0         组长      owner       城市经理         省份         城市             项目  价态助手及     远期180天       滚动远期      热点日期及             日报  违规、履约检查，数据检查备忘、昨日简报        旅拍出产  付费推广       好评日复盘      大美卡日复盘      晚间数据备忘   勾选前一天是否完成  收益追踪表(周维度)
+1        NaN        NaN        NaN        NaN        NaN            NaN   促销检查       房态检查      铺价30天     热点房型监控  （预计收入表/收入进度表）                  NaN         NaN   日复盘         NaN         NaN         NaN         NaN         NaN
+2   蝴蝶\n（18）      蝴蝶（6）         梧桐         湖北         武汉             憬黎    NaN        NaN        NaN        NaN            NaN                  NaN         NaN   NaN         NaN         NaN         NaN         NaN         NaN
+3        NaN        NaN         晴天         河南         鹤壁             中州      ✅        NaN        NaN        NaN            NaN                  NaN         NaN   NaN         NaN         NaN         NaN         NaN         NaN
+4        NaN        NaN         大熊         山西         太原   liuliu城市度假酒店    NaN        NaN        NaN        NaN            NaN                  NaN         NaN   NaN         NaN         NaN         NaN         NaN         NaN
+5        NaN        NaN         大锤         湖北         武汉          朗丽兹酒店    NaN        NaN        NaN        NaN            NaN                  NaN         NaN   NaN         NaN         NaN         NaN         NaN         NaN
+6        NaN        NaN         晴天         新疆        阿克苏          华瑞大酒店    NaN        NaN        NaN        NaN            NaN                  NaN         NaN   NaN         NaN         NaN         NaN         NaN         NaN
+7        NaN        NaN         晴天         湖南         长沙        潇影华美达酒店    NaN        NaN        NaN        NaN            NaN                  NaN         NaN   NaN         NaN         NaN         NaN         NaN         NaN
+8        NaN      汤圆（1）         大熊         河南         开封             丽禧    NaN        NaN        NaN        NaN            NaN                  NaN         NaN   NaN         NaN         NaN         NaN         NaN         NaN
+9        NaN      水稻（3）         晴天         重庆         重庆           云涉酒店    NaN        NaN        NaN        NaN            NaN                  NaN         NaN   NaN         NaN         NaN         NaN         NaN         NaN
+10       NaN        NaN         晴天         江苏         南京         恬觅小憩酒店    NaN        NaN        NaN        NaN            NaN                  NaN         NaN   NaN         NaN         NaN         NaN         NaN         NaN
+11       NaN        NaN         晴天         重庆         万州      泊逸云尚/云栖酒店      ✅        NaN          ✅        NaN              ✅                    ✅         NaN   NaN         NaN         NaN         NaN         NaN         NaN
+12       NaN        NaN         大锤         重庆         奉节         奉节渝东酒店      ✅        NaN          ✅          ✅              ✅                    ✅         NaN   NaN         NaN         NaN         NaN         NaN         NaN
+13       NaN      考拉（4）         晴天         广西         阳朔     途易蓝相和里度假酒店    NaN        NaN        NaN        NaN            NaN                  NaN         NaN   NaN         NaN         NaN         NaN         NaN         NaN
+14       NaN        NaN         晴天         河南         信阳          美亚达酒店      ✅          ✅          ✅        NaN              ✅                    ✅         NaN     ✅           ❌           ❌           ✅         NaN         NaN
+15       NaN        NaN         晴天         安徽         涡阳           金陵山庄      ✅        NaN          ✅        NaN              ❌                    ✅         NaN     ❌           ❌           ❌           ✅         NaN         NaN
+16       NaN        NaN         大熊         北京         北京      北京准噶尔明珠酒店      ✅          ✅          ✅        NaN              ✅                    ✅         NaN     ✅           ❌           ❌           ✅         NaN         NaN
+17       NaN        NaN         大锤         四川         乐山   乐山云上汤池酒店（待进）    NaN        NaN        NaN        NaN            NaN                  NaN         NaN   NaN         NaN         NaN         NaN         NaN         NaN
+18       NaN      曲奇（4）         大锤         江苏         扬州           中青国际    NaN        NaN        NaN        NaN            NaN                  NaN         NaN   NaN         NaN         NaN         NaN         NaN         NaN
+19       NaN        NaN         晴天         安徽         阜阳      广美国际酒店工作群    NaN        NaN        NaN        NaN            NaN                  NaN         NaN   NaN         NaN         NaN         NaN         NaN         NaN
+20       NaN        NaN         晴天         四川         遂宁        阑珊居假日酒店      ✅          ✅        NaN        NaN              ✅                    ✅         NaN   NaN         NaN         NaN         NaN         NaN         NaN
+21       NaN        NaN         晴天         河南         郑州        净隅设计师酒店      ✅          ✅          ✅          ✅              ✅                    ✅         NaN   NaN         NaN         NaN         NaN         NaN         NaN
+22       NaN        NaN         大熊         甘肃         甘南         景恒国际酒店      ✅          ✅        NaN        NaN              ✅                    ✅         NaN   NaN         NaN         NaN         NaN         NaN         NaN
+23       NaN        NaN         大熊         云南         芒市  南宿·不远处·澄心私汤云邸      ✅          ✅        NaN        NaN              ✅                    ✅         NaN   NaN         NaN         NaN         NaN         NaN         NaN
+
+
+
+--- Sheet: 日常1.31 ---
+Shape: (24, 19)
+        项目信息 Unnamed: 1 Unnamed: 2 Unnamed: 3 Unnamed: 4     Unnamed: 5 日常任务查询 Unnamed: 7 Unnamed: 8 Unnamed: 9    Unnamed: 10          Unnamed: 11 Unnamed: 12  日常复盘 Unnamed: 14 Unnamed: 15 Unnamed: 16 Unnamed: 17 Unnamed: 18
+0         组长      owner       城市经理         省份         城市             项目  价态助手及     远期180天       滚动远期      热点日期及             日报  违规、履约检查，数据检查备忘、昨日简报        旅拍出产  付费推广       好评日复盘      大美卡日复盘      晚间数据备忘   勾选前一天是否完成  收益追踪表(周维度)
+1        NaN        NaN        NaN        NaN        NaN            NaN   促销检查       房态检查      铺价30天     热点房型监控  （预计收入表/收入进度表）                  NaN         NaN   日复盘         NaN         NaN         NaN         NaN         NaN
+2   蝴蝶\n（18）      蝴蝶（6）         梧桐         湖北         武汉         憬黎（葡萄）    NaN        NaN        NaN        NaN            NaN                  NaN         NaN   NaN         NaN         NaN         NaN         NaN         NaN
+3        NaN        NaN         晴天         河南         鹤壁             中州      ✅          ✅          ❌          ✅              ✅                    ✅           ✅   NaN         NaN         NaN         NaN         NaN         NaN
+4        NaN        NaN         大熊         山西         太原   liuliu城市度假酒店    NaN          ✅          ✅          ✅              ✅                  NaN         NaN   NaN         NaN         NaN         NaN         NaN         NaN
+5        NaN        NaN         大锤         湖北         武汉          朗丽兹酒店      ✅          ✅          ✅        NaN              ✅                    ✅         NaN   NaN         NaN         NaN         NaN         NaN         NaN
+6        NaN        NaN         晴天         新疆        阿克苏          华瑞大酒店      ✅          ✅        NaN        NaN              ✅                    ✅         NaN   NaN         NaN         NaN         NaN         NaN         NaN
+7        NaN        NaN         晴天         湖南         长沙        潇影华美达酒店      ✅          ✅          ✅          ✅              ✅                    ✅         NaN   NaN         NaN         NaN         NaN         NaN         NaN
+8        NaN      汤圆（1）         大熊         河南         开封             丽禧      ✅          ✅        NaN        NaN              ✅                    ✅         NaN   NaN         NaN         NaN         NaN         NaN         NaN
+9        NaN      水稻（3）         晴天         重庆         重庆           云涉酒店    NaN        NaN        NaN        NaN            NaN                  NaN         NaN   NaN         NaN         NaN         NaN         NaN         NaN
+10       NaN        NaN         晴天         江苏         南京         恬觅小憩酒店    NaN        NaN        NaN        NaN            NaN                  NaN         NaN   NaN         NaN         NaN         NaN         NaN         NaN
+11       NaN        NaN         晴天         重庆         万州      泊逸云尚/云栖酒店      ✅        NaN          ✅        NaN              ✅                    ✅         NaN   NaN         NaN         NaN         NaN         NaN         NaN
+12       NaN        NaN         大锤         重庆         奉节         奉节渝东酒店      ✅        NaN          ✅          ✅              ✅                    ✅         NaN   NaN         NaN         NaN         NaN         NaN         NaN
+13       NaN      考拉（4）         晴天         广西         阳朔     途易蓝相和里度假酒店    NaN        NaN        NaN        NaN            NaN                  NaN         NaN   NaN         NaN         NaN         NaN         NaN         NaN
+14       NaN        NaN         晴天         河南         信阳          美亚达酒店      ✅          ✅          ✅          ✅              ✅                    ✅           ✅     ✅           ❌           ❌           ✅         NaN         NaN
+15       NaN        NaN         晴天         安徽         涡阳           金陵山庄      ✅          ✅          ✅        NaN              ✅                    ✅           ✅     ❌           ❌           ❌           ✅         NaN         NaN
+16       NaN        NaN         大熊         北京         北京      北京准噶尔明珠酒店      ✅          ✅          ✅          ✅              ✅                    ✅           ✅     ❌           ❌           ❌           ✅         NaN         NaN
+17       NaN        NaN         大锤         四川         乐山   乐山云上汤池酒店（待进）    NaN        NaN        NaN        NaN            NaN                  NaN         NaN   NaN         NaN         NaN         NaN         NaN         NaN
+18       NaN      曲奇（4）         大锤         江苏         扬州           中青国际    NaN        NaN        NaN        NaN            NaN                  NaN         NaN   NaN         NaN         NaN         NaN         NaN         NaN
+19       NaN        NaN         晴天         安徽         阜阳      广美国际酒店工作群    NaN        NaN        NaN        NaN            NaN                  NaN         NaN   NaN         NaN         NaN         NaN         NaN         NaN
+20       NaN        NaN         晴天         四川         遂宁        阑珊居假日酒店      ✅          ✅          ✅          ✅              ✅                    ✅         NaN   NaN         NaN         NaN         NaN         NaN         NaN
+21       NaN        NaN         晴天         河南         郑州        净隅设计师酒店      ✅          ✅          ✅          ✅              ✅                    ✅         NaN   NaN         NaN         NaN         NaN         NaN         NaN
+22       NaN        NaN         大熊         甘肃         甘南         景恒国际酒店      ✅          ✅          ✅          ✅            NaN                    ✅         NaN   NaN         NaN         NaN         NaN         NaN         NaN
+23       NaN        NaN         大熊         云南         芒市  南宿·不远处·澄心私汤云邸      ✅          ✅        NaN        NaN            NaN                  NaN         NaN   NaN         NaN         NaN         NaN         NaN         NaN
+
