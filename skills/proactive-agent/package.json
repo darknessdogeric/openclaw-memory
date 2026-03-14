@@ -1,0 +1,12 @@
+{
+  "name": "proactive-agent",
+  "version": "1.0.0",
+  "description": "OpenClaw skill: proactive-agent",
+  "author": "OpenClaw Assistant",
+  "license": "MIT",
+  "created": "2026-02-23T11:40:13.050024",
+  "category": "skills",
+  "files": [
+    "SKILL.md"
+  ]
+}

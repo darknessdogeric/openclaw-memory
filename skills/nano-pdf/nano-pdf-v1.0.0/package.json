@@ -1,0 +1,14 @@
+{
+  "name": "nano-pdf",
+  "version": "1.0.0",
+  "description": "Edit PDFs with natural-language instructions using the nano-pdf CLI.",
+  "author": "OpenClaw Team",
+  "license": "MIT",
+  "created": "2026-02-23T11:46:00.693982",
+  "type": "system-skill",
+  "files": [
+    "SKILL.md"
+  ],
+  "file_count": 1,
+  "source": "OpenClaw Official"
+}

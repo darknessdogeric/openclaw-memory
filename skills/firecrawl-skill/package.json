@@ -1,0 +1,37 @@
+{
+  "name": "firecrawl",
+  "version": "1.0.0",
+  "description": "Web scraping and crawling with Firecrawl API. Fetch webpage content as markdown, take screenshots, extract structured data, search the web, and crawl documentation sites.",
+  "main": "fc.py",
+  "keywords": [
+    "firecrawl",
+    "web-scraping",
+    "crawling",
+    "screenshots",
+    "data-extraction",
+    "markdown",
+    "documentation",
+    "openclaw",
+    "clawdbot",
+    "skill"
+  ],
+  "author": "captmarbles",
+  "license": "MIT",
+  "clawdhub": {
+    "skill": {
+      "name": "firecrawl",
+      "version": "1.0.0",
+      "description": "Web scraping and crawling with Firecrawl API",
+      "category": "web",
+      "tags": ["scraping", "crawling", "web", "data-extraction"],
+      "requirements": {
+        "env": ["FIRECRAWL_API_KEY"],
+        "python": ["firecrawl"]
+      }
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/capt-marbles/firecrawl"
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "skill_name": "nano-pdf-edit",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "hey can you fix the typo on page 3 of my pitch deck? it says 'recieve' instead of 'receive'. the file is pitch_deck_v3.pdf in my downloads",
+      "expected_output": "Runs nano-pdf edit on page 3 with a prompt to fix the typo",
+      "should_trigger": true
+    },
+    {
+      "id": 2,
+      "prompt": "I need to update the revenue chart on slide 8 of quarterly_report.pdf — Q3 should show $2.5M not $2.1M, and change the bar color to blue",
+      "expected_output": "Runs nano-pdf edit on page 8 with chart update prompt",
+      "should_trigger": true
+    },
+    {
+      "id": 3,
+      "prompt": "add a new title slide at the beginning of my deck.pdf that says 'Annual Review 2025' with a clean modern look",
+      "expected_output": "Runs nano-pdf add at position 0",
+      "should_trigger": true
+    },
+    {
+      "id": 4,
+      "prompt": "can you change the branding colors across slides 1, 3, and 5 of marketing_deck.pdf? I want dark blue headers with white text, similar to how page 2 looks",
+      "expected_output": "Runs nano-pdf edit on pages 1, 3, 5 with --style-refs 2",
+      "should_trigger": true
+    },
+    {
+      "id": 5,
+      "prompt": "I uploaded my_presentation.pdf — the date on the cover slide still says January 2025, can you change it to February 2026?",
+      "expected_output": "Runs nano-pdf edit on page 1 to update the date",
+      "should_trigger": true
+    },
+    {
+      "id": 6,
+      "prompt": "extract all the text from this PDF and put it in a markdown file",
+      "expected_output": "Should NOT trigger — this is text extraction, not visual editing",
+      "should_trigger": false
+    },
+    {
+      "id": 7,
+      "prompt": "merge these three PDFs into one document: report_q1.pdf, report_q2.pdf, report_q3.pdf",
+      "expected_output": "Should NOT trigger — this is PDF merging, not AI editing",
+      "should_trigger": false
+    },
+    {
+      "id": 8,
+      "prompt": "fill in the form fields in this tax_form.pdf — name is John Smith, SSN is 123-45-6789",
+      "expected_output": "Should NOT trigger — this is form filling, not visual editing",
+      "should_trigger": false
+    },
+    {
+      "id": 9,
+      "prompt": "can you create a new PDF report summarizing our Q3 sales data? I'll give you the numbers",
+      "expected_output": "Should NOT trigger — this is creating a new PDF from scratch, not editing an existing one with nano-pdf",
+      "should_trigger": false
+    },
+    {
+      "id": 10,
+      "prompt": "split this 50-page PDF into individual files, one per chapter",
+      "expected_output": "Should NOT trigger — this is PDF splitting",
+      "should_trigger": false
+    }
+  ]
+}

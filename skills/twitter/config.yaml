@@ -1,0 +1,26 @@
+# Twitter/X Configuration
+# 使用Cookie登录方式
+
+# Cookie配置 (从Chrome导出)
+cookies: |
+  # 请粘贴从Cookie-Editor导出的JSON
+  # 格式示例:
+  # [{
+  #   "name": "auth_token",
+  #   "value": "你的token",
+  #   "domain": ".twitter.com"
+  # }]
+
+# 或者使用环境变量
+# 在系统环境变量中设置 TWITTER_COOKIES
+
+# Cookie获取步骤:
+# 1. Chrome浏览器登录Twitter/X (使用小号!)
+# 2. 安装Cookie-Editor扩展
+# 3. 导出JSON格式Cookie
+# 4. 粘贴到上方cookies字段
+
+# 注意: 
+# - 使用小号，不要用主账号
+# - Cookie会过期，需要定期更新
+# - 频繁调用可能导致账号限制

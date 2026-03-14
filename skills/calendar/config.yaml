@@ -1,0 +1,21 @@
+# Calendar Configuration
+# 请配置你的日历服务
+
+# Google Calendar (推荐)
+google:
+  enabled: false  # 设为true启用
+  client_id: ""  # OAuth client ID
+  client_secret: ""  # OAuth client secret
+  # 获取方法: https://console.cloud.google.com/apis/credentials
+
+# Microsoft 365/Outlook
+microsoft:
+  enabled: false  # 设为true启用
+  client_id: ""  # Azure app client ID
+  tenant_id: ""  # Azure tenant ID
+  # 获取方法: https://portal.azure.com/#blade/Microsoft_AAD_RegisteredApps/ApplicationsListBlade
+
+# 本地日历 (无需配置，直接使用)
+local:
+  enabled: true
+  storage: ~/.openclaw/skills/calendar/events.json

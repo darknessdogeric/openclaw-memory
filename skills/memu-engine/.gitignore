@@ -1,0 +1,22 @@
+# Runtime data / local state
+data/
+python/data/
+
+# Python caches
+**/__pycache__/
+*.pyc
+
+# Python env + build artifacts
+python/.venv/
+.venv/
+*.egg-info/
+dist/
+build/
+
+# Node.js
+node_modules/
+package-lock.json
+
+# Misc
+*.bak
+.DS_Store

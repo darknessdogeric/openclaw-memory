@@ -1,0 +1,16 @@
+# GitHub Configuration
+# 请配置你的GitHub访问凭证
+
+# 方式1: 使用GitHub Token (推荐)
+token: ""  # 你的GitHub Personal Access Token
+username: ""  # 你的GitHub用户名
+
+# 方式2: 使用gh CLI认证 (会自动读取)
+# 运行: gh auth login
+# 无需在此配置文件填写
+
+# GitHub Token获取方法:
+# 1. 访问 https://github.com/settings/tokens
+# 2. 点击 "Generate new token (classic)"
+# 3. 选择需要的权限 (repo, read:org等)
+# 4. 复制生成的token到此配置文件

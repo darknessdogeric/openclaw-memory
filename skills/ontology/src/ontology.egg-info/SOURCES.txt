@@ -1,0 +1,14 @@
+README.md
+pyproject.toml
+src/ontology.egg-info/PKG-INFO
+src/ontology.egg-info/SOURCES.txt
+src/ontology.egg-info/dependency_links.txt
+src/ontology.egg-info/requires.txt
+src/ontology.egg-info/top_level.txt
+src/services/entity_service.py
+src/services/relation_service.py
+src/services/schema_service.py
+src/services/validation_service.py
+src/utils/graph_loader.py
+src/utils/id_utils.py
+src/utils/path_utils.py
