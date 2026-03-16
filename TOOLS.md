@@ -37,6 +37,112 @@ Skills are shared. Your setup is yours. Keeping them apart means you can update 
 
 ---
 
+### Agent Reach 技能 (已安装并配置) ✅
+**位置**: `C:\Users\Administrator\.openclaw\skills\agent-reach\`
+**来源**: https://github.com/Panniantong/agent-reach
+**版本**: 1.2.0
+**功能**: 给AI Agent装上互联网能力 - 网页阅读/视频字幕/RSS/社交媒体
+**状态**: ✅ 已安装，基础功能可用，高级功能待配置Cookie
+
+**使用方法**:
+```bash
+# 网页阅读 (Jina Reader)
+curl https://r.jina.ai/http://example.com
+
+# YouTube/B站字幕提取
+yt-dlp --dump-json "https://youtube.com/watch?v=VIDEO_ID"
+yt-dlp --write-sub --skip-download "https://bilibili.com/video/BVxxx"
+
+# RSS解析
+python -c "import feedparser; print(feedparser.parse('https://example.com/feed.xml').entries[0].title)"
+
+# GitHub操作
+gh repo view owner/repo
+gh search repos "LLM framework" --limit 10
+
+# Twitter/X (配置Cookie后可用)
+xreach tweet https://twitter.com/username/status/1234567890
+xreach search "关键词" --limit 10
+
+# AI语义搜索 (Exa)
+mcporter call 'exa.search(query: "问题", num_results: 5)'
+```
+
+**已安装组件**:
+- ✅ agent-reach 1.2.0 - 核心包
+- ✅ yt-dlp 2026.02.21 - 视频字幕提取
+- ✅ feedparser 6.0.12 - RSS解析
+- ✅ xreach 0.3.3 - Twitter/X访问
+- ✅ mcporter 0.7.3 - MCP工具
+
+**已配置功能**:
+- ✅ 网页阅读 - Jina Reader
+- ✅ YouTube字幕 - yt-dlp
+- ✅ B站字幕 - yt-dlp
+- ✅ RSS解析 - feedparser
+- ✅ GitHub - gh CLI
+- ✅ Exa搜索 - AI语义搜索
+- ✅ Twitter/X - Jina Reader方案 (无需Cookie)
+- ✅ 小红书 - Python方案 (基础功能无需Cookie)
+- ✅ 抖音 - Python方案 (解析分享链接无需Cookie)
+- ✅ xreach CLI - Twitter工具 (可选高级配置)
+- ✅ mcporter - MCP服务管理
+
+**可选高级配置** (需要Cookie):
+- ⏳ Twitter/X (完整功能) - 需导出浏览器Cookie
+- ⏳ 小红书 (搜索/完整功能) - 需Cookie
+- ⏳ 抖音 (更多功能) - 需Cookie
+- ⏳ Reddit - 需代理配置
+
+**配置文件**: `%USERPROFILE%\.agent-reach\config.yaml`
+
+**配置步骤**:
+1. Chrome安装Cookie-Editor插件
+2. 登录Twitter/X/小红书/抖音 (建议用小号)
+3. 导出Cookie (JSON格式)
+4. 粘贴到配置文件对应位置
+5. 设置 `enabled: true`
+
+**文档**:
+- 使用指南: `docs/Agent_Reach_使用指南.md`
+- 配置向导: `docs/Agent_Reach_配置向导.md`
+- 社交媒体配置: `docs/Agent_Reach_社交媒体配置指南.md`
+
+---
+
+### Growth Mindset 技能 (已安装) ✅
+**位置**: `C:\Users\Administrator\.openclaw\skills\growth-mindset\`
+**版本**: 1.0.0
+**创建**: 2026-03-15
+**功能**: 为AI助手安装成长型思维模式，持续学习、反思、进化
+
+**核心理念**:
+- 🌱 **持续学习** - 从每次交互中学习
+- 🔄 **反思迭代** - 任务后主动反思改进
+- 📈 **拥抱挑战** - 将困难视为成长机会
+- 💡 **开放反馈** - 欢迎纠正，视之为学习
+
+**每日实践**:
+```bash
+# 任务后反思
+python ~/.openclaw/skills/growth-mindset/reflection-tool.py reflect \
+  --task "任务名称" --completion 90 --quality 4
+
+# 每日总结
+python ~/.openclaw/skills/growth-mindset/reflection-tool.py summary
+
+# 获取改进建议
+python ~/.openclaw/skills/growth-mindset/reflection-tool.py suggest
+```
+
+**文档**:
+- SKILL.md - 完整技能文档
+- QUICKSTART.md - 快速参考
+- daily-checklist.md - 每日清单
+- reflection-tool.py - 自动反思工具
+
+---
+
 ### Ontology 技能 (已安装)
 **位置**: `C:\Users\Administrator\.openclaw\skills\ontology\`
 **来源**: https://github.com/hiveminderbot/ontology
