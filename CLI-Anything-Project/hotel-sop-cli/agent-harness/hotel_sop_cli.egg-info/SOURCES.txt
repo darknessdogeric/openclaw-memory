@@ -1,0 +1,10 @@
+setup.py
+cli_anything/__init__.py
+cli_anything/hotel_sop/__init__.py
+cli_anything/hotel_sop/cli.py
+hotel_sop_cli.egg-info/PKG-INFO
+hotel_sop_cli.egg-info/SOURCES.txt
+hotel_sop_cli.egg-info/dependency_links.txt
+hotel_sop_cli.egg-info/entry_points.txt
+hotel_sop_cli.egg-info/requires.txt
+hotel_sop_cli.egg-info/top_level.txt

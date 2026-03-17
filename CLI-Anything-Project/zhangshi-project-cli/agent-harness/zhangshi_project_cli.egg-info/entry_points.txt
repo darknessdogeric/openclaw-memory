@@ -1,0 +1,2 @@
+[console_scripts]
+zs-project = cli_anything.zhangshi_project.cli:main

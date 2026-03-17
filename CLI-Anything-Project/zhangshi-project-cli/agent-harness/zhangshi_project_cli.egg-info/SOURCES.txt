@@ -1,0 +1,10 @@
+setup.py
+cli_anything/__init__.py
+cli_anything/zhangshi_project/__init__.py
+cli_anything/zhangshi_project/cli.py
+zhangshi_project_cli.egg-info/PKG-INFO
+zhangshi_project_cli.egg-info/SOURCES.txt
+zhangshi_project_cli.egg-info/dependency_links.txt
+zhangshi_project_cli.egg-info/entry_points.txt
+zhangshi_project_cli.egg-info/requires.txt
+zhangshi_project_cli.egg-info/top_level.txt

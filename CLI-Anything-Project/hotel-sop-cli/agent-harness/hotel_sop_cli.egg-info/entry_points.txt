@@ -1,0 +1,2 @@
+[console_scripts]
+sop-query = cli_anything.hotel_sop.cli:main

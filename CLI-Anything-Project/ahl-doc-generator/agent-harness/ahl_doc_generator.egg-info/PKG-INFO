@@ -1,0 +1,13 @@
+Metadata-Version: 2.4
+Name: ahl-doc-generator
+Version: 0.1.0
+Summary: AHL Project Document Generator CLI
+Author: B166ER
+Requires-Python: >=3.10
+Requires-Dist: click>=8.0.0
+Requires-Dist: jinja2>=3.0.0
+Requires-Dist: pyyaml>=6.0
+Dynamic: author
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary

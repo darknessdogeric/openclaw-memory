@@ -1,0 +1,2 @@
+[console_scripts]
+ahl-doc = cli_anything.ahl_doc.cli:main
