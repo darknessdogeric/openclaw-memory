@@ -37,6 +37,149 @@ Skills are shared. Your setup is yours. Keeping them apart means you can update 
 
 ---
 
+### MemOS 记忆操作系统 (已部署) 🧠
+**位置**: `C:\Users\Administrator\.openclaw\workspace\MemOS\`
+**来源**: https://github.com/MemTensor/MemOS
+**版本**: v2.0.9 (星尘 Stardust)
+**功能**: AI Agent 长期记忆操作系统
+**状态**: 🟡 代码已克隆，依赖已安装，待配置数据库后启动
+
+**核心能力**:
+- 🧠 **长期记忆** - 为 LLM 提供持久化记忆存储
+- 🔗 **记忆图谱** - Neo4j 图数据库存储记忆关系
+- 📊 **向量检索** - Qdrant 向量数据库支持语义搜索
+- 🧊 **MemCube** - 多知识库管理，支持隔离和共享
+- 🔄 **记忆调度** - 异步处理，毫秒级延迟
+- 💬 **记忆反馈** - 自然语言修正和补充记忆
+- 🔌 **OpenClaw 插件** - 官方生命周期插件支持
+
+**部署方式**:
+| 方式 | 状态 | 说明 |
+|------|------|------|
+| Docker | ⏳ 待安装 Docker Desktop | 推荐方式，一键启动 |
+| Windows Python | 🟡 部分就绪 | 需安装 Neo4j + Qdrant |
+| MemOS Cloud | ✅ 可用 | 无需部署，直接使用 |
+
+**项目结构**:
+```
+MemOS/
+├── src/              # 核心源代码
+├── docker/           # Docker 配置文件
+├── examples/         # 使用示例
+├── apps/             # 应用插件 (含 OpenClaw)
+├── .env              # 环境变量配置
+├── start_windows.bat # Windows 启动脚本
+└── WINDOWS_DEPLOY.md # Windows 部署指南
+```
+
+**配置说明**:
+- **API**: 默认使用 Kimi (moonshot/kimi-k2.5)
+- **端口**: 8000 (REST API)
+- **数据库**: Neo4j (图) + Qdrant (向量)
+- **文档**: http://localhost:8000/docs
+
+**快速启动 (Windows)**:
+```bash
+# 方式 1: Docker (推荐)
+cd MemOS/docker
+docker-compose up
+
+# 方式 2: Python 本地运行
+.\start_windows.bat
+```
+
+**使用示例**:
+```python
+# 添加记忆
+requests.post("http://localhost:8000/product/add", json={
+    "user_id": "user-123",
+    "mem_cube_id": "cube-456",
+    "messages": [{"role": "user", "content": "我喜欢草莓"}]
+})
+
+# 搜索记忆
+requests.post("http://localhost:8000/product/search", json={
+    "query": "我喜欢什么",
+    "user_id": "user-123",
+    "mem_cube_id": "cube-456"
+})
+```
+
+**OpenClaw 集成**:
+- 云端插件: https://github.com/MemTensor/MemOS-Cloud-OpenClaw-Plugin
+- 本地插件: `@memtensor/memos-local-openclaw-plugin`
+- 功能: 自动召回记忆 + 对话后保存记忆
+
+**资源链接**:
+- 论文: https://arxiv.org/abs/2507.03724
+- 文档: https://memos-docs.openmem.net/
+- 社区: https://discord.gg/Txbx3gebZR
+
+---
+
+### PPT Deck Builder Pro 技能 (已安装) ✅
+**位置**: `C:\Users\Administrator\.openclaw\workspace\skills\ppt-deck-builder-pro\`
+**来源**: https://github.com/lk251066/ppt-deck-builder-openclaw-skill
+**版本**: 0.3.0
+**功能**: AI驱动的专业PPT生成，支持多种风格预设和可替换图片后端
+**状态**: ✅ 已安装，依赖已配置 (requests, python-pptx)
+
+**核心能力**:
+- 🎨 **多种风格预设**: 深蓝商务风、浅底咨询风、白板手写风、自定义风格
+- 🤖 **AI图片生成**: 每页生成固定文字的专业PPT图片
+- 📝 **智能排版**: 自动处理标题、要点、阅读路径
+- 🔄 **单页返修**: 支持单独修复某页而不重跑整套PPT
+- 📦 **自动打包**: 将图片打包成 .pptx 格式
+
+**风格预设**:
+| 预设 | 适用场景 | 特点 |
+|------|---------|------|
+| `dark_blue_business` | 客户提案、企业汇报 | 深蓝商务风，高端大气 |
+| `light_consulting` | 密集内容、高可读性 | 浅底黑字，咨询风格 |
+| `whiteboard_handdrawn` | 教学课件、创始人讲解 | 白板手写风，手绘插图 |
+| `custom` | 品牌定制、特殊需求 | 自定义风格 |
+
+**使用方法**:
+```bash
+# 进入技能目录
+cd C:\Users\Administrator\.openclaw\workspace\skills\ppt-deck-builder-pro
+
+# 检查环境
+bash scripts/check_env.sh
+
+# 生成小样测试 (推荐先跑3-5页测试)
+bash scripts/run_reference_pack.sh plan.json output_dir
+
+# 生成完整PPT
+bash scripts/run_image_batch.sh plan.json output_dir
+
+# 打包成PPTX
+bash scripts/package_image_deck.sh output_dir deck.pptx plan.json
+
+# 单页返修 (第8页)
+bash scripts/rerun_single_page.sh plan.json output_dir 8
+```
+
+**计划文件模板**: `assets/slide_plan_template.json`
+**页面简报模板**: `assets/page_brief_template.md`
+**风格预设说明**: `references/style-presets.md`
+
+**图片生成后端**:
+- 默认: `runninghub_g31` (需要 RUNNINGHUB_API_KEY)
+- 自定义: `command` (可接入其他AI绘图服务)
+
+**工作流程**:
+1. 确定受众、目标、预期行动
+2. 选择风格预设
+3. 构建页面序列
+4. 编写每页简报 (page brief)
+5. 生成小样测试
+6. 全量生成
+7. 审核并返修问题页
+8. 打包交付
+
+---
+
 ### Agent Reach 技能 (已安装并配置) ✅
 **位置**: `C:\Users\Administrator\.openclaw\skills\agent-reach\`
 **来源**: https://github.com/Panniantong/agent-reach

@@ -1,0 +1,4 @@
+interface:
+  display_name: "PPT Deck Builder"
+  short_description: "Portable PPT workflow with style presets, sample packs, image generation, QA, and packaging"
+  default_prompt: "Use $ppt-deck-builder to build a PPT with a chosen style preset such as business blue, light consulting, or whiteboard hand-drawn, then run sample generation, full image generation, repair, and packaging using only this skill folder."
