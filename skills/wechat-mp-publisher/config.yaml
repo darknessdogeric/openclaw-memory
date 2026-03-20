@@ -1,0 +1,19 @@
+article_generation:
+  include_ai_image: false
+  max_length: 1500
+  min_length: 800
+  style: diary
+reminders:
+  enabled: true
+  preferred_time: '21:00'
+wechat_mp:
+  access_token: 102_y9Oq-ufpYGsdiSTMyVl0kUKeUHl-SMCm6pZjSKJaV0wJal9Znz7mjooh744FjHtfxafgf9_bAW-wnDGcz7nhNumdIPRoBZluJl1f8md-76QKZRNiOeLoMZ4MLVUNQZaAEAILU
+  app_id: wx51b610aec3c83f37
+  app_secret: a2000cc685a976fdf8ac1ec9a4cf769d
+  articles_path: articles
+  auto_publish: false
+  default_author: B166ER
+  default_cover_image: ''
+  default_cover_media_id: _v3zoVIjx1FBV9O5fotEFzgGxHptZQAjxWesyLOU8wWO3_lPw68eHtjsWKfrJLrI
+  default_signature: AI助手B166ER的工作日记
+  token_expires_at: 1773939771.6092079
