@@ -37,6 +37,67 @@ Skills are shared. Your setup is yours. Keeping them apart means you can update 
 
 ---
 
+### OpenViking - AI Agent 上下文数据库 ✅
+**位置**: `C:\Users\Administrator\.openclaw\workspace\skills\openviking\`
+**来源**: https://github.com/volcengine/OpenViking
+**版本**: v0.2.9
+**功能**: 字节跳动火山引擎开源的 AI Agent 上下文数据库
+**状态**: ✅ 已安装，待配置 API Key 后启动
+
+**核心能力**:
+- 🗂️ **文件系统管理范式** - 统一组织记忆、资源、技能
+- 📊 **分层上下文加载** - L0/L1/L2 三级结构，按需加载，节省 Token
+- 🔍 **目录递归检索** - 结合目录定位与语义搜索，精准获取上下文
+- 👁️ **可视化检索轨迹** - 可观察的上下文检索过程
+- 🔄 **自动会话管理** - 自动压缩提取长期记忆，Agent 越用越聪明
+
+**与 OpenClaw 集成效果**:
+- 任务完成率提升 **43%** (相比原生记忆)
+- Token 成本降低 **91%**
+- 输入 Token 从 2400万 降至 200万
+
+**安装状态**: ✅ 已完成
+```bash
+pip install openviking  # v0.2.9 已安装
+ov --version            # 0.2.6
+```
+
+**配置步骤**:
+1. 获取火山引擎 API Key: https://console.volcengine.com/ark/
+2. 复制配置文件模板: `cp ~/.openviking/ov.conf.example ~/.openviking/ov.conf`
+3. 编辑 `ov.conf`，填入你的 API Key
+4. 设置环境变量: `$env:OPENVIKING_CONFIG_FILE = "$HOME/.openviking/ov.conf"`
+5. 启动服务器: `openviking-server`
+
+**配置文件示例**: `C:\Users\Administrator\.openviking\ov.conf.example`
+
+**使用方法**:
+```bash
+# 启动服务器
+openviking-server
+
+# 查看状态
+ov status
+
+# 添加资源
+ov add-resource https://github.com/volcengine/OpenViking
+
+# 列出资源
+ov ls viking://resources/
+
+# 语义搜索
+ov find "what is openviking"
+
+# 交互式聊天 (VikingBot)
+openviking-server --with-bot
+ov chat
+```
+
+**文档**: https://www.openviking.ai/docs
+**社区**: Discord https://discord.com/invite/eHvx8E9XF3
+
+---
+
 ### MemOS 记忆操作系统 (已部署) 🧠
 **位置**: `C:\Users\Administrator\.openclaw\workspace\MemOS\`
 **来源**: https://github.com/MemTensor/MemOS
