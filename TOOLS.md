@@ -62,20 +62,29 @@ pip install openviking  # v0.2.9 已安装
 ov --version            # 0.2.6
 ```
 
-**配置状态**: ✅ 已完成 (使用 Kimi API)
+**配置状态**: ✅ 已完成并运行中
 - 配置文件: `C:\Users\Administrator\.openviking\ov.conf`
 - 环境变量: `OPENVIKING_CONFIG_FILE` 已设置
-- VLM 模型: Kimi (moonshot-v1-8k)
-- ⚠️ **注意**: Kimi 暂不支持 Embedding API，可能需要降级到文本检索模式
+- 服务器: http://127.0.0.1:1933 ✅ 运行中
+- 工作目录: `C:\openviking_data`
+- VLM 模型: Kimi (moonshot-v1-8k) ✅ 正常
+- Embedding: Jina (需有效 API Key) ⚠️ 待配置
 
 **配置步骤**:
-1. ✅ 配置文件已创建: `C:\Users\Administrator\.openviking\ov.conf`
-2. ✅ 环境变量已设置: `$env:OPENVIKING_CONFIG_FILE`
-3. 启动服务器: `openviking-server`
+1. ✅ 配置文件: `C:\Users\Administrator\.openviking\ov.conf`
+2. ✅ 环境变量: `$env:OPENVIKING_CONFIG_FILE`
+3. ✅ 启动服务器: `openviking-server` (已在后台运行)
 
-**已知问题**:
-- Kimi Embedding API 返回 403，可能需要单独申请或使用替代方案
-- 建议: 使用火山引擎或 OpenAI 的 Embedding API 以获得完整功能
+**待解决问题**:
+- Embedding API 需要有效的 Jina API Key
+- 获取地址: https://jina.ai/api-dashboard/key-manager
+- 免费额度: 每月 100万 tokens
+
+**当前可用功能**:
+- ✅ VLM 对话（Kimi）
+- ✅ 文件系统管理
+- ✅ 资源管理
+- ⚠️ 语义搜索（降级为文本匹配，待 Embedding 配置后恢复）
 
 **配置文件示例**: `C:\Users\Administrator\.openviking\ov.conf.example`
 
