@@ -62,12 +62,20 @@ pip install openviking  # v0.2.9 已安装
 ov --version            # 0.2.6
 ```
 
+**配置状态**: ✅ 已完成 (使用 Kimi API)
+- 配置文件: `C:\Users\Administrator\.openviking\ov.conf`
+- 环境变量: `OPENVIKING_CONFIG_FILE` 已设置
+- VLM 模型: Kimi (moonshot-v1-8k)
+- ⚠️ **注意**: Kimi 暂不支持 Embedding API，可能需要降级到文本检索模式
+
 **配置步骤**:
-1. 获取火山引擎 API Key: https://console.volcengine.com/ark/
-2. 复制配置文件模板: `cp ~/.openviking/ov.conf.example ~/.openviking/ov.conf`
-3. 编辑 `ov.conf`，填入你的 API Key
-4. 设置环境变量: `$env:OPENVIKING_CONFIG_FILE = "$HOME/.openviking/ov.conf"`
-5. 启动服务器: `openviking-server`
+1. ✅ 配置文件已创建: `C:\Users\Administrator\.openviking\ov.conf`
+2. ✅ 环境变量已设置: `$env:OPENVIKING_CONFIG_FILE`
+3. 启动服务器: `openviking-server`
+
+**已知问题**:
+- Kimi Embedding API 返回 403，可能需要单独申请或使用替代方案
+- 建议: 使用火山引擎或 OpenAI 的 Embedding API 以获得完整功能
 
 **配置文件示例**: `C:\Users\Administrator\.openviking\ov.conf.example`
 
