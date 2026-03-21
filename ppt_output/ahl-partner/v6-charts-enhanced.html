@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AHL Partner - 图表增强版</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+SC:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+    <style>
+        :root { --primary: #2563eb; --primary-light: #3b82f6; --accent: #06b6d4; --accent-warm: #f59e0b; --success: #10b981; --danger: #ef4444; --bg-dark: #0a0a0f; --bg-card: rgba(255,255,255,0.03); --border: rgba(255,255,255,0.08); --text: #fff; --text-muted: #9ca3af; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Noto Sans SC', 'Inter', sans-serif; background: #000; color: var(--text); overflow: hidden; }
+        .viewport { width: 100vw; height: 100vh; display: flex; justify-content: center; align-items: center; background: #000; }
+        .canvas { position: relative; width: 100vw; height: 56.25vw; max-height: 100vh; max-width: 177.78vh; overflow: hidden; }
+        .bg-layer { position: absolute; inset: 0; background: linear-gradient(135deg, #0a0a0f 0%, #1a1a2e 50%, #0f0f1a 100%); z-index: 0; }
+        .bg-mesh { position: absolute; inset: 0; background-image: radial-gradient(at 40% 20%, rgba(37, 99, 235, 0.12) 0px, transparent 50%), radial-gradient(at 80% 0%, rgba(6, 182, 212, 0.08) 0px, transparent 50%); }
+        .bg-grid { position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,0.015) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.015) 1px, transparent 1px); background-size: 40px 40px; }
+        .orb { position: absolute; border-radius: 50%; filter: blur(80px); animation: float 20s ease-in-out infinite; }
+        .orb-1 { width: 350px; height: 350px; background: rgba(37, 99, 235, 0.25); top: -80px; left: -80px; }
+        .orb-2 { width: 250px; height: 250px; background: rgba(6, 182, 212, 0.2); bottom: -50px; right: -50px; animation-delay: -10s; }
+        @keyframes float { 0%,100%{transform:translate(0,0)} 25%{transform:translate(20px,-20px)} 50%{transform:translate(-10px,10px)} 75%{transform:translate(15px,15px)} }
+        .slide { position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; opacity: 0; pointer-events: none; transition: opacity 0.8s ease; z-index: 1; }
+        .slide.active { opacity: 1; pointer-events: auto; }
+        .content { position: relative; z-index: 10; padding: 0 5%; display: flex; flex-direction: column; align-items: center; gap: 1.2rem; }
+        .tag { font-size: clamp(0.55rem,0.85rem,0.8rem); letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); font-weight: 500; }
+        .title { font-weight: 800; font-size: clamp(2.2rem,5vw,4.5rem); line-height: 1.1; letter-spacing: -0.02em; }
+        .title-gradient { background: linear-gradient(135deg, #fff, var(--accent)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        
+        /* Charts */
+        .chart-container { display: flex; gap: 2rem; justify-content: center; align-items: center; width: 100%; max-width: 950px; margin-top: 1rem; }
+        
+        /* Bar Chart */
+        .bar-chart { display: flex; align-items: flex-end; gap: 1rem; height: 200px; padding: 1.5rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; }
+        .bar-item { display: flex; flex-direction: column; align-items: center; gap: 0.5rem; flex: 1; }
+        .bar { width: 100%; max-width: 55px; background: linear-gradient(180deg, var(--primary-light), var(--primary)); border-radius: 8px 8px 0 0; position: relative; animation: barGrow 1s ease-out; }
+        .bar:hover { filter: brightness(1.2); }
+        .bar-label { font-size: 0.75rem; color: var(--text-muted); }
+        .bar-value { position: absolute; top: -25px; left: 50%; transform: translateX(-50%); font-size: 0.85rem; font-weight: 600; color: var(--text); }
+        @keyframes barGrow { from { height: 0 !important; } }
+        
+        /* Donut Chart */
+        .donut-chart { position: relative; width: 200px; height: 200px; }
+        .donut-svg { width: 100%; height: 100%; transform: rotate(-90deg); }
+        .donut-segment { fill: none; stroke-width: 25; stroke-linecap: round; animation: donutDraw 1.5s ease-out; }
+        @keyframes donutDraw { from { stroke-dasharray: 0 100; } }
+        .donut-center { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; }
+        .donut-value { font-size: 2rem; font-weight: 800; color: var(--text); }
+        .donut-label { font-size: 0.75rem; color: var(--text-muted); }
+        
+        /* Progress Rings */
+        .progress-ring-container { display: flex; gap: 2.5rem; justify-content: center; flex-wrap: wrap; }
+        .progress-ring { position: relative; width: 100px; height: 100px; }
+        .progress-ring svg { width: 100%; height: 100%; transform: rotate(-90deg); }
+        .progress-ring circle { fill: none; stroke-width: 8; stroke-linecap: round; }
+        .progress-bg { stroke: rgba(255,255,255,0.1); }
+        .progress-fill { stroke: var(--primary); stroke-dasharray: 251; stroke-dashoffset: 251; animation: progressDraw 1.5s ease-out forwards; }
+        .progress-ring:nth-child(2) .progress-fill { stroke: var(--accent); }
+        .progress-ring:nth-child(3) .progress-fill { stroke: var(--success); }
+        .progress-ring:nth-child(4) .progress-fill { stroke: var(--accent-warm); }
+        @keyframes progressDraw { to { stroke-dashoffset: var(--progress); } }
+        .progress-text { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 1.1rem; font-weight: 700; }
+        
+        /* Funnel */
+        .funnel { display: flex; flex-direction: column; align-items: center; gap: 6px; width: 100%; max-width: 450px; }
+        .funnel-stage { display: flex; align-items: center; justify-content: center; height: 50px; background: linear-gradient(90deg, var(--primary), var(--accent)); border-radius: 10px; color: #fff; font-weight: 600; transition: 0.3s; animation: funnelSlide 0.8s ease-out both; }
+        .funnel-stage:hover { filter: brightness(1.1); transform: scaleX(1.02); }
+        .funnel-stage:nth-child(1) { width: 100%; }
+        .funnel-stage:nth-child(2) { width: 82%; animation-delay: 0.1s; background: linear-gradient(90deg, #3b82f6, #0891b2); }
+        .funnel-stage:nth-child(3) { width: 64%; animation-delay: 0.2s; background: linear-gradient(90deg, #06b6d4, #10b981); }
+        .funnel-stage:nth-child(4) { width: 46%; animation-delay: 0.3s; background: linear-gradient(90deg, #10b981, #f59e0b); }
+        @keyframes funnelSlide { from { opacity: 0; transform: translateX(-30px); } }
+        
+        /* Timeline */
+        .timeline-h { display: flex; justify-content: space-between; width: 100%; max-width: 950px; position: relative; padding: 2rem 0; }
+        .timeline-h::before { content: ''; position: absolute; top: 50%; left: 5%; right: 5%; height: 3px; background: linear-gradient(90deg, var(--primary), var(--accent)); border-radius: 2px; }
+        .timeline-item-h { display: flex; flex-direction: column; align-items: center; position: relative; z-index: 1; }
+        .timeline-dot { width: 18px; height: 18px; background: var(--primary); border-radius: 50%; box-shadow: 0 0 20px var(--primary); }
+        .timeline-content-h { text-align: center; margin-top: 1rem; }
+        .timeline-date { font-size: 0.8rem; color: var(--accent); font-weight: 600; }
+        .timeline-title { font-size: 1.1rem; font-weight: 700; margin: 0.4rem 0; }
+        .timeline-desc { font-size: 0.75rem; color: var(--text-muted); }
+        
+        /* Matrix */
+        .matrix { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; width: 100%; max-width: 700px; }
+        .matrix-cell { padding: 1.2rem; border-radius: 14px; text-align: left; }
+        .matrix-cell h4 { font-size: 1rem; margin-bottom: 0.5rem; }
+        .matrix-cell p { font-size: 0.8rem; color: var(--text-muted); line-height: 1.5; }
+        .matrix-1 { background: rgba(239,68,68,0.1); border: 1px solid rgba(239,68,68,0.2); }
+        .matrix-2 { background: rgba(245,158,11,0.1); border: 1px solid rgba(245,158,11,0.2); }
+        .matrix-3 { background: rgba(34,197,94,0.1); border: 1px solid rgba(34,197,94,0.2); }
+        .matrix-4 { background: rgba(37,99,235,0.1); border: 1px solid rgba(37,99,235,0.2); }
+        
+        /* Table */
+        .compare-table { width: 100%; max-width: 850px; border-collapse: collapse; margin-top: 1rem; font-size: 0.85rem; }
+        .compare-table th, .compare-table td { padding: 0.9rem; text-align: center; border: 1px solid var(--border); }
+        .compare-table th { background: var(--bg-card); font-weight: 600; color: var(--accent); }
+        .compare-table td { color: var(--text-muted); }
+        .compare-table tr:hover td { background: rgba(255,255,255,0.02); }
+        .check { color: var(--success); font-size: 1.1rem; }
+        .cross { color: var(--danger); font-size: 1.1rem; }
+        .highlight-cell { color: var(--success) !important; font-weight: 600; }
+        
+        /* Process Flow */
+        .process-flow { display: flex; align-items: center; justify-content: center; gap: 0.8rem; width: 100%; flex-wrap: wrap; }
+        .process-step { padding: 1rem 1.2rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; text-align: center; min-width: 130px; transition: 0.3s; }
+        .process-step:hover { border-color: var(--primary); transform: translateY(-3px); }
+        .process-step h4 { font-size: 0.9rem; color: var(--accent); margin-bottom: 0.3rem; }
+        .process-step p { font-size: 0.7rem; color: var(--text-muted); }
+        .process-arrow { font-size: 1.5rem; color: var(--primary); }
+        
+        /* Stat Cards */
+        .stat-cards { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; width: 100%; max-width: 900px; }
+        .stat-card-box { background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; padding: 1.3rem; text-align: center; transition: 0.3s; }
+        .stat-card-box:hover { border-color: var(--primary); transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0,0,0,0.3); }
+        .stat-icon { font-size: 2rem; margin-bottom: 0.5rem; }
+        .stat-num { font-size: 1.8rem; font-weight: 800; color: var(--text); }
+        .stat-num.highlight { color: var(--accent); }
+        .stat-desc { font-size: 0.75rem; color: var(--text-muted); margin-top: 0.3rem; }
+        
+        /* Icons Grid */
+        .icons-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; width: 100%; max-width: 700px; }
+        .icon-box { display: flex; flex-direction: column; align-items: center; gap: 0.5rem; padding: 1.2rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 14px; transition: 0.3s; }
+        .icon-box:hover { border-color: var(--primary); transform: translateY(-3px); }
+        .icon-emoji { font-size: 2rem; }
+        .icon-label { font-size: 0.75rem; color: var(--text-muted); }
+        
+        /* Feature List */
+        .feature-list { display: flex; flex-direction: column; gap: 0.7rem; width: 100%; max-width: 550px; }
+        .feature-item-list { display: flex; align-items: center; gap: 0.8rem; padding: 0.8rem 1rem; background: var(--bg-card); border-radius: 10px; text-align: left; }
+        .feature-icon-list { width: 28px; height: 28px; background: linear-gradient(135deg, var(--primary), var(--accent)); border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 0.9rem; flex-shrink: 0; }
+        
+        /* Nav */
+        .nav { position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%); display: flex; gap: 8px; z-index: 100; padding: 10px 20px; background: rgba(0,0,0,0.7); backdrop-filter: blur(10px); border-radius: 30px; border: 1px solid var(--border); }
+        .dot { width: 8px; height: 8px; border-radius: 50%; background: rgba(255,255,255,0.2); cursor: pointer; transition: 0.3s; }
+        .dot.active { background: var(--accent); transform: scale(1.3); box-shadow: 0 0 10px var(--accent); }
+        .counter { position: fixed; top: 24px; right: 32px; font-size: 14px; color: rgba(255,255,255,0.3); z-index: 100; }
+        
+        .slide.active .title { animation: slideUp 0.8s ease-out; }
+        .slide.active .tag { animation: slideUp 0.8s ease-out 0.2s both; }
+        @keyframes slideUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <div class="viewport">
+            <div class="canvas">
+                <div class="bg-layer"></div>
+                <div class="bg-mesh"></div>
+                <div class="bg-grid"></div>
+                <div class="orb orb-1"></div>
+                <div class="orb orb-2"></div>
+                
+                <!-- Slide 1: Cover -->
+                <div class="slide" :class="{active:cur===0}">
+                    <div class="content">
+                        <p class="tag">📊 数据驱动 · 图表可视化</p>
+                        <h1 class="title title-gradient">AHL项目介绍</h1>
+                        <p style="color:var(--text-muted);margin-top:0.5rem;font-size:1.1rem">用数据说话 · 让价值可视化</p>
+                    </div>
+                </div>
+                
+                <!-- Slide 2: Key Metrics -->
+                <div class="slide" :class="{active:cur===1}">
+                    <div class="content">
+                        <p class="tag">📈 核心指标</p>
+                        <h1 class="title">关键数据一览</h1>
+                        <div class="stat-cards">
+                            <div class="stat-card-box"><div class="stat-icon">💰</div><div class="stat-num">2-3%</div><div class="stat-desc">技术费率</div></div>
+                            <div class="stat-card-box"><div class="stat-icon">🎯</div><div class="stat-num highlight">95%</div><div class="stat-desc">匹配准确率</div></div>
+                            <div class="stat-card-box"><div class="stat-icon">📉</div><div class="stat-num">80%</div><div class="stat-desc">成本节省</div></div>
+                            <div class="stat-card-box"><div class="stat-icon">🚀</div><div class="stat-num highlight">10x</div><div class="stat-desc">效率提升</div></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Slide 3: Bar Chart -->
+                <div class="slide" :class="{active:cur===2}">
+                    <div class="content">
+                        <p class="tag">📊 费用对比</p>
+                        <h1 class="title">佣金费率对比</h1>
+                        <div class="chart-container">
+                            <div class="bar-chart">
+                                <div class="bar-item"><div class="bar" style="height:160px"><span class="bar-value">25%</span></div><span class="bar-label">OTA</span></div>
+                                <div class="bar-item"><div class="bar" style="height:140px;background:linear-gradient(180deg,#f97316,#ea580c)"><span class="bar-value">22%</span></div><span class="bar-label">美团</span></div>
+                                <div class="bar-item"><div class="bar" style="height:115px;background:linear-gradient(180deg,#8b5cf6,#7c3aed)"><span class="bar-value">18%</span></div><span class="bar-label">飞猪</span></div>
+                                <div class="bar-item"><div class="bar" style="height:35px;background:linear-gradient(180deg,#10b981,#059669)"><span class="bar-value">3%</span></div><span class="bar-label">AHL</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Slide 4: Donut Chart -->
+                <div class="slide" :class="{active:cur===3}">
+                    <div class="content">
+                        <p class="tag">🥧 成本结构</p>
+                        <h1 class="title">技术费组成</h1>
+                        <div class="chart-container">
+                            <div class="donut-chart">
+                                <svg class="donut-svg" viewBox="0 0 42 42">
+                                    <circle class="donut-segment" cx="21" cy="21" r="15.91549430918954" stroke="#2563eb" stroke-dasharray="40 60" />
+                                    <circle class="donut-segment" cx="21" cy="21" r="15.91549430918954" stroke="#06b6d4" stroke-dasharray="30 70" stroke-dashoffset="-40" />
+                                    <circle class="donut-segment" cx="21" cy="21" r="15.91549430918954" stroke="#10b981" stroke-dasharray="20 80" stroke-dashoffset="-70" />
+                                    <circle class="donut-segment" cx="21" cy="21" r="15.91549430918954" stroke="#f59e0b" stroke-dasharray="10 90" stroke-dashoffset="-90" />
+                                </svg>
+                                <div class="donut-center"><div class="donut-value">100%</div><div class="donut-label">总计</div></div>
+                            </div>
+                            <div class="feature-list">
+                                <div class="feature-item-list"><span style="color:#2563eb;font-weight:700;width:20px">▌</span> 服务器 40%</div>
+                                <div class="feature-item-list"><span style="color:#06b6d4;font-weight:700;width:20px">▌</span> AI模型 30%</div>
+                                <div class="feature-item-list"><span style="color:#10b981;font-weight:700;width:20px">▌</span> 运维 20%</div>
+                                <div class="feature-item-list"><span style="color:#f59e0b;font-weight:700;width:20px">▌</span> 其他 10%</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Slide 5: Progress Rings -->
+                <div class="slide" :class="{active:cur===4}">
+                    <div class="content">
+                        <p class="tag">⚡ 系统性能</p>
+                        <h1 class="title">核心性能指标</h1>
+                        <div class="progress-ring-container" style="margin-top:1.5rem">
+                            <div class="progress-ring"><svg viewBox="0 0 100 100"><circle class="progress-bg" cx="50" cy="50" r="40"/><circle class="progress-fill" cx="50" cy="50" r="40" style="--progress:50"/></svg><span class="progress-text">99.9%</span></div>
+                            <div class="progress-ring"><svg viewBox="0 0 100 100"><circle class="progress-bg" cx="50" cy="50" r="40"/><circle class="progress-fill" cx="50" cy="50" r="40" style="--progress:30"/></svg><span class="progress-text">&lt;50ms</span></div>
+                            <div class="progress-ring"><svg viewBox="0 0 100 100"><circle class="progress-bg" cx="50" cy="50" r="40"/><circle class="progress-fill" cx="50" cy="50" r="40" style="--progress:20"/></svg><span class="progress-text">95%</span></div>
+                            <div class="progress-ring"><svg viewBox="0 0 100 100"><circle class="progress-bg" cx="50" cy="50" r="40"/><circle class="progress-fill" cx="50" cy="50" r="40" style="--progress:40"/></svg><span class="progress-text">24/7</span></div>
+                        </div>
+                        <div style="display:flex;gap:2rem;justify-content:center;margin-top:1rem;font-size:0.8rem;color:var(--text-muted)"><span>系统可用性</span><span>平均响应</span><span>匹配准确率</span><span>服务时间</span></div>
+                    </div>
+                </div>
+                
+                <!-- Slide 6: Funnel -->
+                <div class="slide" :class="{active:cur===5}">
+                    <div class="content">
+                        <p class="tag">🔻 转化漏斗</p>
+                        <h1 class="title">用户转化路径</h1>
+                        <div class="funnel" style="margin-top:1.5rem">
+                            <div class="funnel-stage"><span>曝光 · 100万+</span></div>
+                            <div class="funnel-stage"><span>点击 · 50万+</span></div>
+                            <div class="funnel-stage"><span>注册 · 20万+</span></div>
+                            <div class="funnel-stage"><span>交易 · 10万+</span></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Slide 7: Timeline -->
+                <div class="slide" :class="{active:cur===6}">
+                    <div class="content">
+                        <p class="tag">📅 发展历程</p>
+                        <h1 class="title">三年里程碑</h1>
+                        <div class="timeline-h" style="margin-top:2rem">
+                            <div class="timeline-item-h"><div class="timeline-dot"></div><div class="timeline-content-h"><p class="timeline-date">2026 Q1</p><p class="timeline-title">平台上线</p><p class="timeline-desc">首批50家商户</p></div></div>
+                            <div class="timeline-item-h"><div class="timeline-dot" style="background:var(--accent)"></div><div class="timeline-content-h"><p class="timeline-date">2026 Q3</p><p class="timeline-title">规模扩张</p><p class="timeline-desc">商户达500家</p></div></div>
+                            <div class="timeline-item-h"><div class="timeline-dot" style="background:var(--success)"></div><div class="timeline-content-h"><p class="timeline-date">2027 Q2</p><p class="timeline-title">行业领先</p><p class="timeline-desc">商户达5000家</p></div></div>
+                            <div class="timeline-item-h"><div class="timeline-dot" style="background:var(--accent-warm);box-shadow: 0 0 20px var(--accent-warm)"></div><div class="timeline-content-h"><p class="timeline-date">2028</p><p class="timeline-title">行业标准</p><p class="timeline-desc">市场占有率30%</p></div></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Slide 8: Matrix -->
+                <div class="slide" :class="{active:cur===7}">
+                    <div class="content">
+                        <p class="tag">🎯 战略分析</p>
+                        <h1 class="title">SWOT矩阵</h1>
+                        <div class="matrix" style="margin-top:1.5rem">
+                            <div class="matrix-cell matrix-3"><h4>✅ 优势 Strengths</h4><p>AI技术领先 · 成本优势明显 · 团队经验丰富</p></div>
+                            <div class="matrix-cell matrix-4"><h4>🔮 机会 Opportunities</h4><p>OTA垄断松动 · 酒店数字化需求 · 政策支持</p></div>
+                            <div class="matrix-cell matrix-2"><h4>⚠️ 劣势 Weaknesses</h4><p>品牌认知度低 · 初期资源有限 · 团队扩张中</p></div>
+                            <div class="matrix-cell matrix-1"><h4>⛔ 威胁 Threats</h4><p>巨头竞争 · 市场接受度 · 监管政策变化</p></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Slide 9: Comparison Table -->
+                <div class="slide" :class="{active:cur===8}">
+                    <div class="content">
+                        <p class="tag">⚖️ 全面对比</p>
+                        <h1 class="title">功能对比表</h1>
+                        <table class="compare-table">
+                            <tr><th>功能</th><th>AHL</th><th>OTA</th><th>传统</th></tr>
+                            <tr><td>技术费率</td><td class="highlight-cell">2-3%</td><td>15-25%</td><td>5-10%</td></tr>
+                            <tr><td>AI智能匹配</td><td><span class="check">✓</span></td><td><span class="cross">✗</span></td><td><span class="cross">✗</span></td></tr>
+                            <tr><td>数据自有</td><td><span class="check">✓</span></td><td><span class="cross">✗</span></td><td><span class="check">✓</span></td></tr>
+                            <tr><td>实时分析</td><td><span class="check">✓</span></td><td><span class="check">✓</span></td><td><span class="cross">✗</span></td></tr>
+                            <tr><td>24/7支持</td><td><span class="check">✓</span></td><td><span class="check">✓</span></td><td><span class="cross">✗</span></td></tr>
+                        </table>
+                    </div>
+                </div>
+                
+                <!-- Slide 10: Process -->
+                <div class="slide" :class="{active:cur===9}">
+                    <div class="content">
+                        <p class="tag">⚙️ 运营流程</p>
+                        <h1 class="title">标准化服务流程</h1>
+                        <div class="process-flow" style="margin-top:1.5rem">
+                            <div class="process-step"><h4>1. 入驻</h4><p>资料提交</p></div>
+                            <span class="process-arrow">→</span>
+                            <div class="process-step"><h4>2. 审核</h4><p>1-3天</p></div>
+                            <span class="process-arrow">→</span>
+                            <div class="process-step"><h4>3. 配置</h4><p>AI初始化</p></div>
+                            <span class="process-arrow">→</span>
+                            <div class="process-step"><h4>4. 上线</h4><p>开始运营</p></div>
+                            <span class="process-arrow">→</span>
+                            <div class="process-step"><h4>5. 优化</h4><p>持续迭代</p></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Slide 11: Icons Grid -->
+                <div class="slide" :class="{active:cur===10}">
+                    <div class="content">
+                        <p class="tag">🎨 核心能力</p>
+                        <h1 class="title">9大AGENT</h1>
+                        <div class="icons-grid" style="margin-top:1.5rem">
+                            <div class="icon-box"><span class="icon-emoji">🏢</span><span class="icon-label">运营AGENT</span></div>
+                            <div class="icon-box"><span class="icon-emoji">📢</span><span class="icon-label">营销AGENT</span></div>
+                            <div class="icon-box"><span class="icon-emoji">💰</span><span class="icon-label">收益AGENT</span></div>
+                            <div class="icon-box"><span class="icon-emoji">🔧</span><span class="icon-label">工程AGENT</span></div>
+                            <div class="icon-box"><span class="icon-emoji">🛡️</span><span class="icon-label">安防AGENT</span></div>
+                            <div class="icon-box"><span class="icon-emoji">🎪</span><span class="icon-label">宴会AGENT</span></div>
+                            <div class="icon-box"><span class="icon-emoji">📊</span><span class="icon-label">财务AGENT</span></div>
+                            <div class="icon-box"><span class="icon-emoji">👥</span><span class="icon-label">人资AGENT</span></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Slide 12: End -->
+                <div class="slide" :class="{active:cur===11}">
+                    <div class="content">
+                        <h1 class="title-gradient">感谢关注</h1>
+                        <p style="margin-top:1rem;color:var(--text-muted)">AHL · AI去中心化旅行服务平台</p>
+                        <p class="tag" style="margin-top:2rem">让旅行更直接 · 让酒店更自主</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="nav"><div v-for="i in 12" :key="i" class="dot" :class="{active:cur===i-1}" @click="cur=i-1"></div></div>
+        <div class="counter">{{cur+1}} / 12</div>
+    </div>
+    
+    <script>
+        const {createApp, ref} = Vue;
+        createApp({
+            setup() {
+                const cur = ref(0);
+                window.addEventListener('keydown', e => {
+                    if (e.key === 'ArrowRight' || e.key === ' ' || e.key === 'ArrowDown') { if (cur.value < 11) cur.value++; }
+                    if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') { if (cur.value > 0) cur.value--; }
+                });
+                return {cur};
+            }
+        }).mount('#app');
+    </script>
+</body>
+</html>
