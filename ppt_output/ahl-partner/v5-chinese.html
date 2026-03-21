@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AHL项目介绍 - V5 国风版</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&family=Noto+Sans+SC:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+    <style>
+        :root {
+            --red: #c41e3a;
+            --gold: #d4af37;
+            --green: #00a86b;
+            --bg: #fdf8f4;
+            --text: #2d2d2d;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Noto Sans SC', 'Noto Serif SC', sans-serif; background: #f5f0eb; color: var(--text); overflow: hidden; }
+        .viewport { width: 100vw; height: 100vh; display: flex; justify-content: center; align-items: center; background: #f5f0eb; }
+        .canvas { position: relative; width: 100vw; height: 56.25vw; max-height: 100vh; max-width: 177.78vh; overflow: hidden; background: var(--bg); }
+        .slide { position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; background: var(--bg); opacity: 0; pointer-events: none; transition: opacity 0.9s ease; }
+        .slide.active { opacity: 1; pointer-events: auto; }
+        .pattern { position: absolute; inset: 0; background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0L60 30L30 60L0 30z' fill='%23c41e3a' fill-opacity='0.03'/%3E%3C/svg%3E"); z-index: 0; }
+        .border { position: absolute; inset: 20px; border: 2px solid var(--red); opacity: 0.2; z-index: 1; }
+        .border::before, .border::after { content: ''; position: absolute; width: 20px; height: 20px; border: 2px solid var(--gold); }
+        .border::before { top: -5px; left: -5px; border-right: none; border-bottom: none; }
+        .border::after { bottom: -5px; right: -5px; border-left: none; border-top: none; }
+        .content { position: relative; z-index: 10; padding: 0 10%; display: flex; flex-direction: column; align-items: center; gap: 1rem; }
+        .tag { font-size: clamp(0.65rem,0.9rem,0.8rem); letter-spacing: 0.3em; color: var(--red); font-family: 'Noto Serif SC', serif; }
+        .title { font-weight: 700; font-size: clamp(2.5rem,5vw,4.5rem); line-height: 1.2; font-family: 'Noto Serif SC', serif; color: var(--text); }
+        .title .accent { color: var(--red); }
+        .subtitle { font-weight: 400; font-size: clamp(0.95rem,1.5vw,1.3rem); color: #666; line-height: 1.6; font-family: 'Noto Serif SC', serif; }
+        .divider { display: flex; align-items: center; gap: 1rem; margin: 0.8rem 0; }
+        .divider-line { width: 40px; height: 1px; background: var(--gold); }
+        .divider-dot { width: 6px; height: 6px; background: var(--red); border-radius: 50%; }
+        .stat-row { display: flex; gap: 2.5rem; justify-content: center; margin-top: 0.8rem; }
+        .stat { text-align: center; }
+        .stat-num { font-weight: 700; font-size: clamp(2rem,4vw,3.5rem); font-family: 'Noto Serif SC', serif; color: var(--red); }
+        .stat-label { font-size: clamp(0.7rem,0.95rem,0.85rem); color: #888; margin-top: 0.2rem; }
+        .list { text-align: left; display: flex; flex-direction: column; gap: 0.6rem; }
+        .list-item { font-size: clamp(0.9rem,1.35vw,1.15rem); color: var(--text); display: flex; align-items: center; gap: 0.6rem; }
+        .list-item::before { content: '◆'; color: var(--gold); font-size: 0.7rem; }
+        .timeline { display: flex; gap: 1.2rem; justify-content: center; }
+        .timeline-item { text-align: center; padding: 1rem 1.3rem; border: 1px solid #e0d5ce; }
+        .timeline-phase { font-weight: 700; font-size: 0.95rem; color: var(--red); font-family: 'Noto Serif SC', serif; }
+        .timeline-time { font-size: 0.7rem; color: #999; margin: 0.25rem 0; }
+        .timeline-count { font-size: 1.3rem; font-weight: 700; }
+        .nav { position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); display: flex; gap: 8px; z-index: 100; }
+        .dot { width: 8px; height: 8px; border-radius: 50%; background: #ccc; cursor: pointer; transition: 0.3s; }
+        .dot.active { background: var(--red); transform: scale(1.3); }
+        .counter { position: fixed; top: 20px; right: 30px; font-size: 14px; color: #aaa; font-family: 'Noto Serif SC', serif; z-index: 100; }
+        .slide.active .title { animation: fadeIn 1s ease-out; }
+        .slide.active .subtitle { animation: fadeIn 1s ease-out 0.2s both; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <div class="viewport">
+            <div class="canvas">
+                <!-- Slide 1 -->
+                <div class="slide" :class="{active:cur===0}">
+                    <div class="pattern"></div>
+                    <div class="border"></div>
+                    <div class="content">
+                        <p class="tag">项目介绍</p>
+                        <h1 class="title"><span class="accent">A</span>HL</h1>
+                        <div class="divider"><div class="divider-line"></div><div class="divider-dot"></div><div class="divider-line"></div></div>
+                        <p class="subtitle">AI去中心化旅行服务平台</p>
+                        <p style="margin-top:0.5rem;color:#888;font-size:0.9rem">让酒店与旅行者直接连接</p>
+                    </div>
+                </div>
+                <!-- Slide 2 -->
+                <div class="slide" :class="{active:cur===1}">
+                    <div class="pattern"></div>
+                    <div class="content">
+                        <p class="tag">行业之痛</p>
+                        <h1 class="title">三大<span class="accent">困境</span></h1>
+                        <div class="list" style="margin-top:1.2rem">
+                            <p class="list-item">OTA佣金 15-25%，利润被抽走</p>
+                            <p class="list-item">客户数据被平台掌控</p>
+                            <p class="list-item">流量成本日益攀升</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 3 -->
+                <div class="slide" :class="{active:cur===2}">
+                    <div class="pattern"></div>
+                    <div class="content">
+                        <p class="tag">AHL方案</p>
+                        <h1 class="title">破局<span class="accent">之道</span></h1>
+                        <div class="stat-row" style="margin-top:1.2rem">
+                            <div class="stat"><div class="stat-num">2-3%</div><div class="stat-label">技术费率</div></div>
+                            <div class="stat"><div class="stat-num">95%</div><div class="stat-label">匹配准确率</div></div>
+                            <div class="stat"><div class="stat-num">80%</div><div class="stat-label">成本节省</div></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 4 -->
+                <div class="slide" :class="{active:cur===3}">
+                    <div class="pattern"></div>
+                    <div class="content">
+                        <p class="tag">技术架构</p>
+                        <h1 class="title">九大<span class="accent">能力</span></h1>
+                        <p class="subtitle" style="margin-top:0.3rem">9大AGENT × 87个SKILL</p>
+                        <div class="list" style="margin-top:1rem">
+                            <p class="list-item">运营 · 营销 · 收益管理</p>
+                            <p class="list-item">工程 · 安防 · 宴会统筹</p>
+                            <p class="list-item">财务 · 人资 · 供应链</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 5 -->
+                <div class="slide" :class="{active:cur===4}">
+                    <div class="pattern"></div>
+                    <div class="content">
+                        <p class="tag">发展蓝图</p>
+                        <h1 class="title">三年<span class="accent">规划</span></h1>
+                        <div class="timeline" style="margin-top:1.5rem">
+                            <div class="timeline-item"><div class="timeline-phase">种子期</div><div class="timeline-time">M1-M3</div><div class="timeline-count">50家</div></div>
+                            <div class="timeline-item"><div class="timeline-phase">爆发期</div><div class="timeline-time">M4-M9</div><div class="timeline-count">500家</div></div>
+                            <div class="timeline-item"><div class="timeline-phase">平台期</div><div class="timeline-time">M10-M18</div><div class="timeline-count">5000家</div></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 6 -->
+                <div class="slide" :class="{active:cur===5}">
+                    <div class="pattern"></div>
+                    <div class="border"></div>
+                    <div class="content">
+                        <p class="tag">融资计划</p>
+                        <h1 class="title">种子轮</h1>
+                        <div class="divider"><div class="divider-line"></div><div class="divider-dot"></div><div class="divider-line"></div></div>
+                        <p class="subtitle">500-800万 · 出让15-20%</p>
+                        <p style="margin-top:0.5rem;color:#888">投后估值 3000-5000万</p>
+                    </div>
+                </div>
+                <!-- Slide 7 -->
+                <div class="slide" :class="{active:cur===6}">
+                    <div class="pattern"></div>
+                    <div class="content">
+                        <p class="tag">合作共赢</p>
+                        <h1 class="title">诚邀<span class="accent">加入</span></h1>
+                        <div class="list" style="margin-top:1.2rem">
+                            <p class="list-item">2-3% 超低技术费率</p>
+                            <p class="list-item">100% 客户数据自有</p>
+                            <p class="list-item">AI赋能 降本增效</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 8 -->
+                <div class="slide" :class="{active:cur===7}">
+                    <div class="pattern"></div>
+                    <div class="border"></div>
+                    <div class="content">
+                        <h1 class="title">感谢<span class="accent">关注</span></h1>
+                        <div class="divider"><div class="divider-line"></div><div class="divider-dot"></div><div class="divider-line"></div></div>
+                        <p class="subtitle">AHL · AI去中心化旅行服务平台</p>
+                        <p style="margin-top:0.8rem;color:#888;font-size:0.9rem">让旅行更直接 · 让酒店更自主</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="nav"><div v-for="i in 8" :key="i" class="dot" :class="{active:cur===i-1}" @click="cur=i-1"></div></div>
+        <div class="counter">{{cur+1}} / 8</div>
+    </div>
+    <script>
+        const {createApp,ref}=Vue;createApp({setup(){const cur=ref(0);window.addEventListener('keydown',e=>{if(e.key==='ArrowRight'||e.key===' '||e.key==='ArrowDown'){if(cur.value<7)cur.value++}if(e.key==='ArrowLeft'||e.key==='ArrowUp'){if(cur.value>0)cur.value--}});return{cur}}}).mount('#app');
+    </script>
+</body>
+</html>

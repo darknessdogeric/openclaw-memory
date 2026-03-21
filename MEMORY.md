@@ -499,3 +499,28 @@ OTA运营成功公式 = 流量 × 转化率 × 客单价 × 复购率
 - 模板预览: `skills/ppt-deck-builder-pro/assets/templates/preview.html`
 
 **对标能力**: Kimi PPT模板 / 豆包PPT模板 / NotebookLM
+
+### PPT增强版本库 (2026-03-21)
+**输出位置**: `ppt_output/ahl-partner/`
+
+**已生成8个版本**:
+| 版本 | 文件 | 特点 | 适用场景 |
+|------|------|------|---------|
+| V1 | v1-corporate.html | 企业专业蓝 | 商务谈判 |
+| V2 | v2-startup.html | 活力创业紫橙 | 融资路演 |
+| V3 | v3-minimal.html | 极简白 | 设计展示 |
+| V4 | v4-tech.html | 科技渐变 | AI峰会 |
+| V5 | v5-chinese.html | 国风雅韵 | 文化演讲 |
+| **V2-Premium** | v2-premium-corporate.html | 多层渐变+毛玻璃+动画 | 高端商务 ⭐ |
+| **V3-Dynamic** | v3-dynamic.html | 粒子+几何+脉冲效果 | 融资路演 ⭐⭐ |
+| **V4-Luxury** | v4-luxury.html | 黑金+衬线字体+边框 | 高端品牌 ⭐⭐ |
+
+**新增视觉特性**:
+- 多层渐变背景 + 动态光球
+- 粒子系统 + 浮动几何图形
+- 毛玻璃卡片效果
+- 丰富的入场动画
+- 黑金奢华边框装饰
+- 悬停交互效果
+
+**使用方式**: 浏览器打开 index.html 选择版本

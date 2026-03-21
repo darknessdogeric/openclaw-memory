@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AHL项目介绍PPT - 版本选择</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans SC', sans-serif; 
+            background: #0a0a0f; 
+            color: #fff; 
+            padding: 40px; 
+            min-height: 100vh;
+        }
+        h1 { 
+            text-align: center; 
+            font-size: 2.2rem; 
+            margin-bottom: 8px; 
+            background: linear-gradient(135deg, #f97316, #7c3aed);
+            -webkit-background-clip: text; 
+            -webkit-text-fill-color: transparent;
+        }
+        .subtitle { text-align: center; color: #666; margin-bottom: 50px; font-size: 1rem; }
+        
+        .versions-title {
+            text-align: center;
+            font-size: 1.3rem;
+            color: #888;
+            margin: 40px 0 20px;
+            letter-spacing: 0.1em;
+        }
+        
+        .grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
+            gap: 24px; 
+            max-width: 1400px; 
+            margin: 0 auto; 
+        }
+        
+        .card { 
+            background: #12121a; 
+            border-radius: 20px; 
+            overflow: hidden; 
+            transition: transform 0.4s, box-shadow 0.4s; 
+            cursor: pointer; 
+            text-decoration: none; 
+            color: inherit; 
+            display: block;
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+        .card:hover { 
+            transform: translateY(-10px); 
+            box-shadow: 0 25px 50px rgba(0,0,0,0.5);
+        }
+        
+        .preview { 
+            aspect-ratio: 16/9; 
+            position: relative; 
+            overflow: hidden; 
+        }
+        
+        .preview-inner {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+        }
+        
+        /* Version preview styles */
+        .v1 { background: linear-gradient(180deg, #0f172a, #1e3a5f); color: #60a5fa; }
+        .v2 { background: linear-gradient(135deg, #0c0a1a, #1a1025); color: #a78bfa; }
+        .v3 { background: #fff; color: #000; }
+        .v4 { background: linear-gradient(135deg, #0f172a, #1e1b4b, #312e81); color: #a78bfa; }
+        .v5 { background: #fdf8f4; color: #c41e3a; }
+        
+        /* New premium versions */
+        .vp-corp { background: linear-gradient(135deg, #0a0a0f, #1a1a2e); }
+        .vp-corp .preview-inner { color: #06b6d4; }
+        
+        .vp-dynamic { background: linear-gradient(135deg, #09090b, #1a1a1a); }
+        .vp-dynamic .preview-inner { color: #f97316; }
+        
+        .vp-luxury { background: linear-gradient(180deg, #0a0a0a, #1a1a1a); }
+        .vp-luxury .preview-inner { color: #d4af37; }
+        
+        .info { padding: 24px; }
+        .info h3 { 
+            font-size: 1.15rem; 
+            margin-bottom: 8px; 
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .badge {
+            font-size: 0.65rem;
+            padding: 3px 8px;
+            border-radius: 20px;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+        }
+        .badge-new {
+            background: linear-gradient(135deg, #f97316, #ea580c);
+            color: #fff;
+        }
+        .badge-hot {
+            background: linear-gradient(135deg, #ef4444, #dc2626);
+            color: #fff;
+        }
+        .info p { 
+            font-size: 0.85rem; 
+            color: #666; 
+            line-height: 1.5; 
+        }
+        .scenes {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-top: 12px;
+        }
+        .scene-tag {
+            background: rgba(255,255,255,0.05);
+            padding: 4px 10px;
+            border-radius: 15px;
+            font-size: 0.7rem;
+            color: #888;
+        }
+        
+        .features-list {
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid rgba(255,255,255,0.05);
+        }
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.75rem;
+            color: #555;
+            margin-bottom: 4px;
+        }
+        .feature-item::before { content: '✓'; color: #22c55e; }
+    </style>
+</head>
+<body>
+    <h1>AHL项目介绍PPT</h1>
+    <p class="subtitle">8种不同风格版本，点击预览完整演示</p>
+    
+    <p class="versions-title">━━━ 基础版本 ━━━</p>
+    <div class="grid">
+        <a href="v1-corporate.html" target="_blank" class="card">
+            <div class="preview v1"><div class="preview-inner">企业专业</div></div>
+            <div class="info">
+                <h3>V1: 企业专业版 <span class="badge">经典</span></h3>
+                <p>海军蓝专业风格，适合正式商务场合</p>
+                <div class="scenes">
+                    <span class="scene-tag">商务谈判</span>
+                    <span class="scene-tag">企业合作</span>
+                    <span class="scene-tag">董事会</span>
+                </div>
+            </div>
+        </a>
+        
+        <a href="v2-startup.html" target="_blank" class="card">
+            <div class="preview v2"><div class="preview-inner">活力创业</div></div>
+            <div class="info">
+                <h3>V2: 活力创业版</h3>
+                <p>紫橙渐变，动感活力，适合投资人路演</p>
+                <div class="scenes">
+                    <span class="scene-tag">融资路演</span>
+                    <span class="scene-tag">创业大赛</span>
+                    <span class="scene-tag">产品发布</span>
+                </div>
+            </div>
+        </a>
+        
+        <a href="v3-minimal.html" target="_blank" class="card">
+            <div class="preview v3"><div class="preview-inner" style="color:#000">极简白</div></div>
+            <div class="info">
+                <h3>V3: 极简白 <span class="badge" style="background:#e5e5e5;color:#000">推荐</span></h3>
+                <p>纯白背景，黑色文字，极简设计风格</p>
+                <div class="scenes">
+                    <span class="scene-tag">设计展示</span>
+                    <span class="scene-tag">创意提案</span>
+                    <span class="scene-tag">国际场合</span>
+                </div>
+            </div>
+        </a>
+        
+        <a href="v4-tech.html" target="_blank" class="card">
+            <div class="preview v4"><div class="preview-inner">科技未来</div></div>
+            <div class="info">
+                <h3>V4: 科技未来版</h3>
+                <p>蓝紫粉渐变，玻璃拟态，AI科技感</p>
+                <div class="scenes">
+                    <span class="scene-tag">科技发布</span>
+                    <span class="scene-tag">AI峰会</span>
+                    <span class="scene-tag">开发者大会</span>
+                </div>
+            </div>
+        </a>
+        
+        <a href="v5-chinese.html" target="_blank" class="card">
+            <div class="preview v5"><div class="preview-inner" style="color:#c41e3a">国风雅韵</div></div>
+            <div class="info">
+                <h3>V5: 国风雅韵版</h3>
+                <p>朱红金绿，水墨纹理，古典雅致</p>
+                <div class="scenes">
+                    <span class="scene-tag">文化演讲</span>
+                    <span class="scene-tag">传统品牌</span>
+                    <span class="scene-tag">非遗推介</span>
+                </div>
+            </div>
+        </a>
+    </div>
+    
+    <p class="versions-title">━━━ 增强版本 (推荐) ━━━</p>
+    <div class="grid">
+        <a href="v2-premium-corporate.html" target="_blank" class="card">
+            <div class="preview vp-corp"><div class="preview-inner">Premium</div></div>
+            <div class="info">
+                <h3>V2-Premium 企业尊享版 <span class="badge badge-new">NEW</span></h3>
+                <p>深色系 + 高级动效 + 毛玻璃卡片 + 丰富动画</p>
+                <div class="features-list">
+                    <div class="feature-item">多层渐变背景</div>
+                    <div class="feature-item">浮动光球动画</div>
+                    <div class="feature-item">卡片悬停效果</div>
+                    <div class="feature-item">平滑入场动画</div>
+                </div>
+                <div class="scenes">
+                    <span class="scene-tag">高端商务</span>
+                    <span class="scene-tag">战略合作</span>
+                    <span class="scene-tag">投资谈判</span>
+                </div>
+            </div>
+        </a>
+        
+        <a href="v3-dynamic.html" target="_blank" class="card">
+            <div class="preview vp-dynamic"><div class="preview-inner">Dynamic</div></div>
+            <div class="info">
+                <h3>V3-Dynamic 活力燃动版 <span class="badge badge-hot">HOT</span></h3>
+                <p>橙色品牌色 + 粒子系统 + 几何浮动 + 强烈动效</p>
+                <div class="features-list">
+                    <div class="feature-item">动态粒子背景</div>
+                    <div class="feature-item">浮动几何图形</div>
+                    <div class="feature-item">脉冲CTA按钮</div>
+                    <div class="feature-item">交错入场动画</div>
+                </div>
+                <div class="scenes">
+                    <span class="scene-tag">融资路演</span>
+                    <span class="scene-tag">创业大赛</span>
+                    <span class="scene-tag">产品发布</span>
+                </div>
+            </div>
+        </a>
+        
+        <a href="v4-luxury.html" target="_blank" class="card">
+            <div class="preview vp-luxury"><div class="preview-inner">Luxury</div></div>
+            <div class="info">
+                <h3>V4-Luxury 奢华尊享版 <span class="badge badge-new">NEW</span></h3>
+                <p>黑金配色 + 衬线字体 + 边框装饰 + 极致细节</p>
+                <div class="features-list">
+                    <div class="feature-item">金色装饰边框</div>
+                    <div class="feature-item">Playfair字体</div>
+                    <div class="feature-item">luxury动效</div>
+                    <div class="feature-item">高端卡片设计</div>
+                </div>
+                <div class="scenes">
+                    <span class="scene-tag">高端品牌</span>
+                    <span class="scene-tag">VIP客户</span>
+                    <span class="scene-tag">私人银行</span>
+                </div>
+            </div>
+        </a>
+    </div>
+    
+    <p style="text-align:center;color:#444;margin-top:50px;font-size:0.85rem;">
+        使用键盘 ← → 方向键翻页 | 空格键下一页
+    </p>
+</body>
+</html>

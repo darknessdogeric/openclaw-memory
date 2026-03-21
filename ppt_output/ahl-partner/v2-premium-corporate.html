@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AHL Partner Presentation V2 - Premium Corporate</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+SC:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --accent: #06b6d4;
+            --accent-warm: #f59e0b;
+            --bg-dark: #0a0a0f;
+            --bg-card: rgba(255,255,255,0.03);
+            --border: rgba(255,255,255,0.08);
+            --text: #fff;
+            --text-muted: #9ca3af;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Noto Sans SC', 'Inter', sans-serif; background: #000; color: var(--text); overflow: hidden; }
+        
+        .viewport { width: 100vw; height: 100vh; display: flex; justify-content: center; align-items: center; background: #000; }
+        .canvas { position: relative; width: 100vw; height: 56.25vw; max-height: 100vh; max-width: 177.78vh; overflow: hidden; }
+        
+        /* Advanced Background System */
+        .bg-layer { position: absolute; inset: 0; z-index: 0; }
+        .bg-gradient { 
+            background: linear-gradient(135deg, #0a0a0f 0%, #1a1a2e 50%, #0f0f1a 100%);
+        }
+        .bg-mesh {
+            background-image: 
+                radial-gradient(at 40% 20%, rgba(37, 99, 235, 0.15) 0px, transparent 50%),
+                radial-gradient(at 80% 0%, rgba(6, 182, 212, 0.1) 0px, transparent 50%),
+                radial-gradient(at 0% 50%, rgba(37, 99, 235, 0.1) 0px, transparent 50%),
+                radial-gradient(at 80% 50%, rgba(6, 182, 212, 0.08) 0px, transparent 50%),
+                radial-gradient(at 0% 100%, rgba(37, 99, 235, 0.1) 0px, transparent 50%);
+        }
+        .bg-grid {
+            background-image: 
+                linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+            background-size: 60px 60px;
+        }
+        .bg-noise {
+            position: absolute;
+            inset: 0;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+            opacity: 0.03;
+            pointer-events: none;
+        }
+        
+        /* Floating Elements */
+        .float-orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            animation: floatOrb 20s ease-in-out infinite;
+        }
+        .orb-1 { width: 400px; height: 400px; background: rgba(37, 99, 235, 0.3); top: -100px; left: -100px; }
+        .orb-2 { width: 300px; height: 300px; background: rgba(6, 182, 212, 0.2); bottom: -50px; right: -50px; animation-delay: -10s; }
+        .orb-3 { width: 200px; height: 200px; background: rgba(245, 158, 11, 0.15); top: 50%; left: 50%; transform: translate(-50%, -50%); animation-duration: 25s; }
+        
+        @keyframes floatOrb {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            25% { transform: translate(30px, -30px) scale(1.05); }
+            50% { transform: translate(-20px, 20px) scale(0.95); }
+            75% { transform: translate(20px, 30px) scale(1.02); }
+        }
+        
+        /* Geometric Decorations */
+        .geo-line {
+            position: absolute;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+            height: 1px;
+        }
+        .geo-circle {
+            position: absolute;
+            border: 1px solid rgba(255,255,255,0.05);
+            border-radius: 50%;
+        }
+        
+        /* Slide Styles */
+        .slide { 
+            position: absolute; 
+            inset: 0; 
+            display: flex; 
+            flex-direction: column; 
+            justify-content: center; 
+            align-items: center; 
+            text-align: center; 
+            opacity: 0; 
+            pointer-events: none; 
+            transition: opacity 0.8s ease; 
+            z-index: 1;
+        }
+        .slide.active { opacity: 1; pointer-events: auto; }
+        
+        /* Content Styles */
+        .content { 
+            position: relative; 
+            z-index: 10; 
+            padding: 0 8%; 
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            gap: 1.5rem; 
+        }
+        
+        /* Typography */
+        .tag { 
+            font-size: clamp(0.6rem, 1vw, 0.85rem); 
+            letter-spacing: 0.25em; 
+            text-transform: uppercase; 
+            color: var(--accent); 
+            font-weight: 500;
+        }
+        .tag-warm { color: var(--accent-warm); }
+        
+        .title { 
+            font-weight: 800; 
+            font-size: clamp(2.5rem, 6vw, 5rem); 
+            line-height: 1.1; 
+            letter-spacing: -0.03em; 
+            background: linear-gradient(135deg, #fff 0%, #e2e8f0 50%, #94a3b8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .title-gradient {
+            background: linear-gradient(135deg, #fff 0%, var(--accent) 50%, var(--primary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .subtitle { 
+            font-weight: 400; 
+            font-size: clamp(1rem, 2vw, 1.5rem); 
+            color: var(--text-muted); 
+            line-height: 1.6; 
+            max-width: 700px;
+        }
+        
+        /* Stats Grid */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            width: 100%;
+            max-width: 900px;
+            margin-top: 1rem;
+        }
+        .stat-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 1.5rem;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            transition: transform 0.3s, border-color 0.3s;
+        }
+        .stat-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary);
+        }
+        .stat-num { 
+            font-weight: 800; 
+            font-size: clamp(2rem, 4vw, 3.5rem); 
+            line-height: 1;
+            background: linear-gradient(135deg, var(--accent), var(--primary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .stat-label { 
+            font-size: clamp(0.75rem, 1vw, 0.95rem); 
+            color: var(--text-muted); 
+            margin-top: 0.5rem; 
+        }
+        
+        /* List Styles */
+        .feature-list {
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            max-width: 700px;
+        }
+        .feature-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            padding: 1rem 1.5rem;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            transition: transform 0.3s, border-color 0.3s;
+        }
+        .feature-item:hover {
+            transform: translateX(10px);
+            border-color: var(--accent);
+        }
+        .feature-icon {
+            width: 32px;
+            height: 32px;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 0.9rem;
+            flex-shrink: 0;
+        }
+        .feature-text {
+            font-size: clamp(0.95rem, 1.4vw, 1.2rem);
+            color: var(--text);
+            line-height: 1.5;
+        }
+        .feature-highlight {
+            color: var(--accent);
+            font-weight: 600;
+        }
+        
+        /* Timeline */
+        .timeline {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            width: 100%;
+            max-width: 1000px;
+        }
+        .timeline-item {
+            flex: 1;
+            text-align: center;
+            padding: 1.5rem;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            position: relative;
+            overflow: hidden;
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+        }
+        .timeline-phase {
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: var(--accent);
+        }
+        .timeline-time {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin: 0.3rem 0;
+        }
+        .timeline-count {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--text);
+        }
+        
+        /* Comparison */
+        .compare-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            width: 100%;
+            max-width: 900px;
+        }
+        .compare-card {
+            padding: 1.5rem;
+            border-radius: 16px;
+            text-align: left;
+        }
+        .compare-ota {
+            background: linear-gradient(135deg, rgba(239, 68, 68, 0.1), rgba(239, 68, 68, 0.05));
+            border: 1px solid rgba(239, 68, 68, 0.2);
+        }
+        .compare-ahl {
+            background: linear-gradient(135deg, rgba(34, 197, 94, 0.1), rgba(34, 197, 94, 0.05));
+            border: 1px solid rgba(34, 197, 94, 0.2);
+        }
+        .compare-title {
+            font-weight: 700;
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .compare-ota .compare-title { color: #ef4444; }
+        .compare-ahl .compare-title { color: #22c55e; }
+        .compare-item {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            padding: 0.4rem 0;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .compare-item::before { content: '•'; }
+        
+        /* CTA Button */
+        .cta-group {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        .cta-btn {
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-decoration: none;
+        }
+        .cta-primary {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: #fff;
+            border: none;
+            box-shadow: 0 4px 20px rgba(37, 99, 235, 0.3);
+        }
+        .cta-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(37, 99, 235, 0.4);
+        }
+        
+        /* Navigation */
+        .nav { 
+            position: fixed; 
+            bottom: 24px; 
+            left: 50%; 
+            transform: translateX(-50%); 
+            display: flex; 
+            gap: 10px; 
+            z-index: 100; 
+            padding: 8px 16px;
+            background: rgba(0,0,0,0.5);
+            backdrop-filter: blur(10px);
+            border-radius: 30px;
+            border: 1px solid var(--border);
+        }
+        .dot { 
+            width: 10px; 
+            height: 10px; 
+            border-radius: 50%; 
+            background: rgba(255,255,255,0.2); 
+            cursor: pointer; 
+            transition: 0.3s; 
+        }
+        .dot.active { 
+            background: var(--accent); 
+            transform: scale(1.3); 
+            box-shadow: 0 0 10px var(--accent);
+        }
+        .counter { 
+            position: fixed; 
+            top: 24px; 
+            right: 32px; 
+            font-size: 14px; 
+            color: rgba(255,255,255,0.3); 
+            font-family: 'Inter', monospace; 
+            z-index: 100; 
+        }
+        
+        /* Animations */
+        .slide.active .title { animation: slideUp 0.8s ease-out; }
+        .slide.active .subtitle { animation: slideUp 0.8s ease-out 0.15s both; }
+        .slide.active .tag { animation: slideUp 0.8s ease-out 0.3s both; }
+        .slide.active .stat-card { animation: fadeIn 0.6s ease-out both; }
+        .slide.active .stat-card:nth-child(1) { animation-delay: 0.2s; }
+        .slide.active .stat-card:nth-child(2) { animation-delay: 0.3s; }
+        .slide.active .stat-card:nth-child(3) { animation-delay: 0.4s; }
+        .slide.active .feature-item { animation: fadeIn 0.5s ease-out both; }
+        .slide.active .feature-item:nth-child(1) { animation-delay: 0.2s; }
+        .slide.active .feature-item:nth-child(2) { animation-delay: 0.3s; }
+        .slide.active .feature-item:nth-child(3) { animation-delay: 0.4s; }
+        
+        @keyframes slideUp { 
+            from { opacity: 0; transform: translateY(30px); } 
+            to { opacity: 1; transform: translateY(0); } 
+        }
+        @keyframes fadeIn { 
+            from { opacity: 0; transform: scale(0.95); } 
+            to { opacity: 1; transform: scale(1); } 
+        }
+        
+        /* Page Number Badge */
+        .page-badge {
+            position: absolute;
+            bottom: 24px;
+            right: 32px;
+            padding: 6px 14px;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            z-index: 10;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <div class="viewport">
+            <div class="canvas">
+                <!-- Background Layers -->
+                <div class="bg-layer bg-gradient"></div>
+                <div class="bg-layer bg-mesh"></div>
+                <div class="bg-layer bg-grid"></div>
+                <div class="bg-layer bg-noise"></div>
+                <div class="float-orb orb-1"></div>
+                <div class="float-orb orb-2"></div>
+                
+                <!-- Slide 1: Cover -->
+                <div class="slide" :class="{active:cur===0}">
+                    <div class="content">
+                        <p class="tag">📋 项目介绍 · 合作伙伴专版</p>
+                        <h1 class="title">AHL</h1>
+                        <p class="title" style="font-size: clamp(1.8rem,4vw,3rem); margin-top: -0.5rem;">去中心化旅行平台</p>
+                        <p class="subtitle">用AI重新定义旅行预订 · 让酒店与旅行者直接连接</p>
+                        <div class="cta-group">
+                            <span class="cta-btn cta-primary">探索合作机会</span>
+                        </div>
+                    </div>
+                    <div class="page-badge">01</div>
+                </div>
+                
+                <!-- Slide 2: Pain Points -->
+                <div class="slide" :class="{active:cur===1}">
+                    <div class="content">
+                        <p class="tag">😰 行业痛点</p>
+                        <h1 class="title">酒店业的三大困境</h1>
+                        <div class="feature-list">
+                            <div class="feature-item">
+                                <div class="feature-icon">💸</div>
+                                <div class="feature-text">OTA佣金 <span class="feature-highlight">15-25%</span>，辛苦赚的钱大半给了平台</div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">🔒</div>
+                                <div class="feature-text">客户数据 <span class="feature-highlight">被平台掌控</span>，无法直接联系客人</div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">📈</div>
+                                <div class="feature-text">流量成本 <span class="feature-highlight">越来越高</span>，利润空间被压缩</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="page-badge">02</div>
+                </div>
+                
+                <!-- Slide 3: Solution -->
+                <div class="slide" :class="{active:cur===2}">
+                    <div class="content">
+                        <p class="tag">💡 AHL解决方案</p>
+                        <h1 class="title-gradient">用AI打破垄断</h1>
+                        <div class="stats-grid">
+                            <div class="stat-card">
+                                <div class="stat-num">2-3%</div>
+                                <div class="stat-label">技术费率 · 仅OTA的1/8</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-num">95%</div>
+                                <div class="stat-label">AI匹配准确率</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-num">80%</div>
+                                <div class="stat-label">运营成本节省</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="page-badge">03</div>
+                </div>
+                
+                <!-- Slide 4: Tech -->
+                <div class="slide" :class="{active:cur===3}">
+                    <div class="content">
+                        <p class="tag">⚡ 核心技术</p>
+                        <h1 class="title">四层智能架构</h1>
+                        <div class="feature-list">
+                            <div class="feature-item">
+                                <div class="feature-icon" style="background: linear-gradient(135deg,#6366f1,#8b5cf6)">4</div>
+                                <div class="feature-text">应用交互层 · 消费者端 + 商家管理端 + 开发者平台</div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon" style="background: linear-gradient(135deg,#8b5cf6,#d946ef)">3</div>
+                                <div class="feature-text">双AGENT智能层 · C端AI管家 + B端AI运营官</div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon" style="background: linear-gradient(135deg,#06b6d4,#14b8a6)">2</div>
+                                <div class="feature-text">AGENT集群层 · 9大AGENT × 87个专业SKILL</div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon" style="background: linear-gradient(135deg,#14b8a6,#22c55e)">1</div>
+                                <div class="feature-text">数据协议层 · 向量数据库 + 标准/非标数据</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="page-badge">04</div>
+                </div>
+                
+                <!-- Slide 5: Agents -->
+                <div class="slide" :class="{active:cur===4}">
+                    <div class="content">
+                        <p class="tag">🎯 9大AGENT能力矩阵</p>
+                        <h1 class="title">全流程AI赋能</h1>
+                        <div class="stats-grid" style="grid-template-columns: repeat(3,1fr); gap: 1rem;">
+                            <div class="stat-card" style="padding: 1rem;">
+                                <div class="feature-text">🏢 运营</div>
+                                <div class="feature-text" style="font-size:0.8rem;color:#9ca3af">客房/餐饮/客服</div>
+                            </div>
+                            <div class="stat-card" style="padding: 1rem;">
+                                <div class="feature-text">📢 营销</div>
+                                <div class="feature-text" style="font-size:0.8rem;color:#9ca3af">内容/社媒/活动</div>
+                            </div>
+                            <div class="stat-card" style="padding: 1rem;">
+                                <div class="feature-text">💰 收益</div>
+                                <div class="feature-text" style="font-size:0.8rem;color:#9ca3af">定价/库存优化</div>
+                            </div>
+                            <div class="stat-card" style="padding: 1rem;">
+                                <div class="feature-text">🔧 工程</div>
+                                <div class="feature-text" style="font-size:0.8rem;color:#9ca3af">设备/能耗监控</div>
+                            </div>
+                            <div class="stat-card" style="padding: 1rem;">
+                                <div class="feature-text">🛡️ 安防</div>
+                                <div class="feature-text" style="font-size:0.8rem;color:#9ca3af">安全/预警</div>
+                            </div>
+                            <div class="stat-card" style="padding: 1rem;">
+                                <div class="feature-text">🎪 宴会</div>
+                                <div class="feature-text" style="font-size:0.8rem;color:#9ca3af">婚宴/会议/活动</div>
+                            </div>
+                            <div class="stat-card" style="padding: 1rem;">
+                                <div class="feature-text">📊 财务</div>
+                                <div class="feature-text" style="font-size:0.8rem;color:#9ca3af">对账/报表/税务</div>
+                            </div>
+                            <div class="stat-card" style="padding: 1rem;">
+                                <div class="feature-text">👥 人资</div>
+                                <div class="feature-text" style="font-size:0.8rem;color:#9ca3af">排班/招聘</div>
+                            </div>
+                            <div class="stat-card" style="padding: 1rem;">
+                                <div class="feature-text">📦 供应</div>
+                                <div class="feature-text" style="font-size:0.8rem;color:#9ca3af">采购/库存管理</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="page-badge">05</div>
+                </div>
+                
+                <!-- Slide 6: Compare -->
+                <div class="slide" :class="{active:cur===5}">
+                    <div class="content">
+                        <p class="tag">⚖️ 商业模式对比</p>
+                        <h1 class="title">AHL vs OTA</h1>
+                        <div class="compare-grid">
+                            <div class="compare-card compare-ota">
+                                <p class="compare-title">❌ OTA</p>
+                                <p class="compare-item">佣金 15-25%</p>
+                                <p class="compare-item">数据平台掌控</p>
+                                <p class="compare-item">流量越来越贵</p>
+                                <p class="compare-item">客户关系归平台</p>
+                                <p class="compare-item">运营支持有限</p>
+                            </div>
+                            <div class="compare-card compare-ahl">
+                                <p class="compare-title">✅ AHL</p>
+                                <p class="compare-item" style="color:#22c55e">技术费 2-3%</p>
+                                <p class="compare-item" style="color:#22c55e">数据商户自有</p>
+                                <p class="compare-item" style="color:#22c55e">AI精准匹配</p>
+                                <p class="compare-item" style="color:#22c55e">客户关系自主</p>
+                                <p class="compare-item" style="color:#22c55e">AI全流程赋能</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="page-badge">06</div>
+                </div>
+                
+                <!-- Slide 7: Roadmap -->
+                <div class="slide" :class="{active:cur===6}">
+                    <div class="content">
+                        <p class="tag">📈 发展路线</p>
+                        <h1 class="title">三年规划</h1>
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <p class="timeline-phase">🌱 种子期</p>
+                                <p class="timeline-time">M1-M3</p>
+                                <p class="timeline-count">50家</p>
+                            </div>
+                            <div class="timeline-item">
+                                <p class="timeline-phase">🚀 爆发期</p>
+                                <p class="timeline-time">M4-M9</p>
+                                <p class="timeline-count">500家</p>
+                            </div>
+                            <div class="timeline-item">
+                                <p class="timeline-phase">🏆 平台期</p>
+                                <p class="timeline-time">M10-M18</p>
+                                <p class="timeline-count">5000家</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="page-badge">07</div>
+                </div>
+                
+                <!-- Slide 8: Funding -->
+                <div class="slide" :class="{active:cur===7}">
+                    <div class="content">
+                        <p class="tag">💰 融资计划</p>
+                        <h1 class="title">种子轮</h1>
+                        <div class="stats-grid" style="grid-template-columns: repeat(2,1fr); max-width:600px;">
+                            <div class="stat-card">
+                                <div class="stat-num" style="font-size:clamp(1.8rem,3.5vw,3rem)">500-800万</div>
+                                <div class="stat-label">人民币</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-num" style="font-size:clamp(1.8rem,3.5vw,3rem)">15-20%</div>
+                                <div class="stat-label">出让股份</div>
+                            </div>
+                        </div>
+                        <p class="subtitle" style="margin-top:1rem">投后估值 3000-5000万</p>
+                        <div class="feature-list" style="margin-top:1rem; gap:0.5rem;">
+                            <div class="feature-item" style="padding:0.8rem 1rem;">
+                                <div class="feature-text" style="font-size:0.9rem">技术团队 40% · 数据体系 30% · 市场拓展 20% · 合规储备 10%</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="page-badge">08</div>
+                </div>
+                
+                <!-- Slide 9: Value -->
+                <div class="slide" :class="{active:cur===8}">
+                    <div class="content">
+                        <p class="tag">🤝 合作价值</p>
+                        <h1 class="title">加入AHL生态</h1>
+                        <div class="feature-list">
+                            <div class="feature-item">
+                                <div class="feature-icon">💎</div>
+                                <div class="feature-text">超低技术费率 <span class="feature-highlight">2-3%</span></div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">🔓</div>
+                                <div class="feature-text">获取<span class="feature-highlight">100%</span>自有客户数据</div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">🤖</div>
+                                <div class="feature-text">AI全流程<span class="feature-highlight">降本增效</span></div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">📜</div>
+                                <div class="feature-text">参与<span class="feature-highlight">行业标准</span>制定</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="page-badge">09</div>
+                </div>
+                
+                <!-- Slide 10: End -->
+                <div class="slide" :class="{active:cur===9}">
+                    <div class="content">
+                        <h1 class="title-gradient">感谢关注</h1>
+                        <p class="subtitle" style="margin-top:1rem">AHL · AI去中心化旅行服务平台</p>
+                        <p class="tag tag-warm" style="margin-top:2rem">让旅行更直接 · 让酒店更自主</p>
+                    </div>
+                    <div class="page-badge">10</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Navigation -->
+        <div class="nav">
+            <div v-for="i in 10" :key="i" class="dot" :class="{active:cur===i-1}" @click="cur=i-1"></div>
+        </div>
+        <div class="counter">{{cur+1}} / 10</div>
+    </div>
+    
+    <script>
+        const {createApp, ref} = Vue;
+        createApp({
+            setup() {
+                const cur = ref(0);
+                window.addEventListener('keydown', e => {
+                    if (e.key === 'ArrowRight' || e.key === ' ' || e.key === 'ArrowDown') {
+                        if (cur.value < 9) cur.value++;
+                    }
+                    if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+                        if (cur.value > 0) cur.value--;
+                    }
+                });
+                return {cur};
+            }
+        }).mount('#app');
+    </script>
+</body>
+</html>

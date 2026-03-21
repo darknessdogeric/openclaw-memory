@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AHL Partner V4 - Luxury Elite</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+    <style>
+        :root {
+            --gold: #d4af37;
+            --gold-light: #f4d03f;
+            --gold-dark: #b8860b;
+            --black: #000;
+            --charcoal: #1a1a1a;
+            --text: #fff;
+            --text-muted: #a0a0a0;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Noto Sans SC', 'Playfair Display', sans-serif; background: var(--black); color: var(--text); overflow: hidden; }
+        
+        .viewport { width: 100vw; height: 100vh; display: flex; justify-content: center; align-items: center; background: var(--black); }
+        .canvas { position: relative; width: 100vw; height: 56.25vw; max-height: 100vh; max-width: 177.78vh; overflow: hidden; background: linear-gradient(180deg, #0a0a0a 0%, #1a1a1a 100%); }
+        
+        /* Luxury Background */
+        .lux-bg {
+            position: absolute;
+            inset: 0;
+            background: 
+                radial-gradient(ellipse at 30% 20%, rgba(212,175,55,0.08) 0%, transparent 50%),
+                radial-gradient(ellipse at 70% 80%, rgba(212,175,55,0.05) 0%, transparent 50%),
+                linear-gradient(180deg, #0a0a0a 0%, #151515 50%, #0a0a0a 100%);
+        }
+        
+        /* Gold Lines */
+        .gold-lines {
+            position: absolute;
+            inset: 0;
+            overflow: hidden;
+            opacity: 0.1;
+        }
+        .gold-line {
+            position: absolute;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--gold), transparent);
+        }
+        
+        /* Geometric Pattern */
+        .geo-pattern {
+            position: absolute;
+            inset: 0;
+            background-image: 
+                linear-gradient(45deg, rgba(212,175,55,0.02) 25%, transparent 25%),
+                linear-gradient(-45deg, rgba(212,175,55,0.02) 25%, transparent 25%),
+                linear-gradient(45deg, transparent 75%, rgba(212,175,55,0.02) 75%),
+                linear-gradient(-45deg, transparent 75%, rgba(212,175,55,0.02) 75%);
+            background-size: 60px 60px;
+        }
+        
+        /* Border Frame */
+        .frame {
+            position: absolute;
+            inset: 24px;
+            border: 1px solid rgba(212,175,55,0.2);
+            pointer-events: none;
+            z-index: 5;
+        }
+        .frame::before, .frame::after {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            border: 1px solid var(--gold);
+        }
+        .frame::before { top: -1px; left: -1px; border-right: none; border-bottom: none; }
+        .frame::after { bottom: -1px; right: -1px; border-left: none; border-top: none; }
+        
+        /* Corner Accents */
+        .corner {
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            border: 1px solid rgba(212,175,55,0.3);
+            z-index: 5;
+        }
+        .corner-tl { top: 40px; left: 40px; border-right: none; border-bottom: none; }
+        .corner-tr { top: 40px; right: 40px; border-left: none; border-bottom: none; }
+        .corner-bl { bottom: 40px; left: 40px; border-right: none; border-top: none; }
+        .corner-br { bottom: 40px; right: 40px; border-left: none; border-top: none; }
+        
+        /* Slides */
+        .slide { 
+            position: absolute; 
+            inset: 0; 
+            display: flex; 
+            flex-direction: column; 
+            justify-content: center; 
+            align-items: center; 
+            text-align: center; 
+            opacity: 0; 
+            pointer-events: none; 
+            transition: opacity 1s cubic-bezier(0.4, 0, 0.2, 1); 
+        }
+        .slide.active { opacity: 1; pointer-events: auto; }
+        
+        /* Content */
+        .content { 
+            position: relative; 
+            z-index: 10; 
+            padding: 0 10%; 
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            gap: 1.5rem; 
+        }
+        
+        /* Typography */
+        .overline { 
+            font-size: clamp(0.5rem, 0.8vw, 0.7rem); 
+            letter-spacing: 0.4em; 
+            text-transform: uppercase; 
+            color: var(--gold); 
+            font-weight: 500;
+        }
+        
+        .display { 
+            font-family: 'Playfair Display', serif;
+            font-weight: 700; 
+            font-size: clamp(3rem, 7vw, 6rem); 
+            line-height: 1.1; 
+            letter-spacing: -0.02em; 
+            color: var(--text);
+        }
+        .display-gold {
+            background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold) 50%, var(--gold-dark) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .lead { 
+            font-size: clamp(1rem, 1.6vw, 1.35rem); 
+            color: var(--text-muted); 
+            line-height: 1.7; 
+            max-width: 600px;
+        }
+        
+        /* Luxury Cards */
+        .lux-cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            width: 100%;
+            max-width: 850px;
+        }
+        .lux-card {
+            padding: 1.8rem 1.2rem;
+            background: linear-gradient(180deg, rgba(212,175,55,0.03) 0%, transparent 100%);
+            border: 1px solid rgba(212,175,55,0.15);
+            border-radius: 4px;
+            text-align: center;
+            position: relative;
+        }
+        .lux-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 40px;
+            height: 2px;
+            background: var(--gold);
+        }
+        .lux-metric {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2rem, 4vw, 3.2rem);
+            font-weight: 700;
+            color: var(--gold);
+            margin-bottom: 0.3rem;
+        }
+        .lux-label {
+            font-size: clamp(0.7rem, 0.9vw, 0.85rem);
+            color: var(--text-muted);
+            letter-spacing: 0.1em;
+        }
+        
+        /* Feature List */
+        .feature-stack {
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+            width: 100%;
+            max-width: 650px;
+        }
+        .feature-row {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem 1.5rem;
+            border-left: 2px solid var(--gold);
+            background: linear-gradient(90deg, rgba(212,175,55,0.05), transparent);
+            text-align: left;
+        }
+        .feature-icon {
+            width: 40px;
+            height: 40px;
+            border: 1px solid var(--gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gold);
+            font-size: 1rem;
+            flex-shrink: 0;
+        }
+        .feature-text {
+            font-size: clamp(0.9rem, 1.3vw, 1.15rem);
+            color: var(--text);
+        }
+        .feature-highlight {
+            color: var(--gold);
+            font-weight: 600;
+        }
+        
+        /* Timeline */
+        .roadmap-lux {
+            display: flex;
+            gap: 0;
+            width: 100%;
+            max-width: 900px;
+            position: relative;
+        }
+        .roadmap-lux::before {
+            content: '';
+            position: absolute;
+            top: 45px;
+            left: 10%;
+            right: 10%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--gold), transparent);
+        }
+        .roadmap-step {
+            flex: 1;
+            text-align: center;
+            position: relative;
+            padding-top: 30px;
+        }
+        .step-dot {
+            position: absolute;
+            top: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 12px;
+            height: 12px;
+            background: var(--gold);
+            border-radius: 50%;
+            box-shadow: 0 0 20px var(--gold);
+        }
+        .step-label {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            font-size: 1rem;
+            color: var(--gold);
+            margin-bottom: 0.3rem;
+        }
+        .step-time {
+            font-size: 0.7rem;
+            color: var(--text-muted);
+            letter-spacing: 0.1em;
+            margin-bottom: 0.5rem;
+        }
+        .step-count {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--text);
+        }
+        
+        /* Comparison */
+        .compare-lux {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            width: 100%;
+            max-width: 800px;
+        }
+        .compare-side {
+            padding: 2rem;
+            border-radius: 4px;
+        }
+        .compare-ota {
+            background: rgba(255,255,255,0.02);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        .compare-ahl {
+            background: linear-gradient(180deg, rgba(212,175,55,0.08) 0%, rgba(212,175,55,0.02) 100%);
+            border: 1px solid rgba(212,175,55,0.2);
+        }
+        .compare-head {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .compare-ota .compare-head { color: #ef4444; }
+        .compare-ahl .compare-head { color: var(--gold); }
+        .compare-row {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            padding: 0.5rem 0;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+        .compare-ahl .compare-row { color: var(--text); }
+        
+        /* CTA */
+        .cta-lux {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.8rem;
+            padding: 1rem 2.5rem;
+            background: transparent;
+            border: 1px solid var(--gold);
+            color: var(--gold);
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            font-size: 1rem;
+            letter-spacing: 0.1em;
+            cursor: pointer;
+            transition: 0.4s;
+            position: relative;
+            overflow: hidden;
+        }
+        .cta-lux::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: var(--gold);
+            transform: translateX(-100%);
+            transition: 0.4s;
+            z-index: -1;
+        }
+        .cta-lux:hover {
+            color: var(--black);
+        }
+        .cta-lux:hover::before {
+            transform: translateX(0);
+        }
+        
+        /* Nav */
+        .nav { 
+            position: fixed; 
+            bottom: 30px; 
+            left: 50%; 
+            transform: translateX(-50%); 
+            display: flex; 
+            gap: 10px; 
+            z-index: 100; 
+            padding: 12px 24px;
+            background: rgba(0,0,0,0.8);
+            border: 1px solid rgba(212,175,55,0.2);
+            border-radius: 30px;
+        }
+        .dot { 
+            width: 8px; 
+            height: 8px; 
+            border-radius: 50%; 
+            background: rgba(255,255,255,0.2); 
+            cursor: pointer; 
+            transition: 0.4s; 
+        }
+        .dot.active { 
+            background: var(--gold); 
+            transform: scale(1.4); 
+            box-shadow: 0 0 15px var(--gold);
+        }
+        .counter { 
+            position: fixed; 
+            top: 30px; 
+            right: 40px; 
+            font-size: 12px; 
+            color: rgba(212,175,55,0.5); 
+            font-family: 'Playfair Display', serif; 
+            letter-spacing: 0.2em;
+            z-index: 100; 
+        }
+        
+        /* Animations */
+        .slide.active .display { animation: luxReveal 1s cubic-bezier(0.4, 0, 0.2, 1); }
+        .slide.active .lead { animation: fadeUp 1s ease-out 0.3s both; }
+        .slide.active .overline { animation: fadeUp 1s ease-out 0.2s both; }
+        .slide.active .lux-card { animation: luxCardIn 0.6s ease-out both; }
+        .slide.active .lux-card:nth-child(1) { animation-delay: 0.2s; }
+        .slide.active .lux-card:nth-child(2) { animation-delay: 0.35s; }
+        .slide.active .lux-card:nth-child(3) { animation-delay: 0.5s; }
+        .slide.active .feature-row { animation: fadeIn 0.5s ease-out both; }
+        .slide.active .feature-row:nth-child(1) { animation-delay: 0.2s; }
+        .slide.active .feature-row:nth-child(2) { animation-delay: 0.3s; }
+        .slide.active .feature-row:nth-child(3) { animation-delay: 0.4s; }
+        
+        @keyframes luxReveal { 
+            from { opacity: 0; transform: translateY(40px); } 
+            to { opacity: 1; transform: translateY(0); } 
+        }
+        @keyframes fadeUp { 
+            from { opacity: 0; transform: translateY(30px); } 
+            to { opacity: 1; transform: translateY(0); } 
+        }
+        @keyframes fadeIn { 
+            from { opacity: 0; transform: translateX(-20px); } 
+            to { opacity: 1; transform: translateX(0); } 
+        }
+        @keyframes luxCardIn { 
+            from { opacity: 0; transform: translateY(20px); } 
+            to { opacity: 1; transform: translateY(0); } 
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <div class="viewport">
+            <div class="canvas">
+                <!-- Luxury Background -->
+                <div class="lux-bg"></div>
+                <div class="geo-pattern"></div>
+                <div class="gold-lines">
+                    <div class="gold-line" style="top:20%;width:100%"></div>
+                    <div class="gold-line" style="top:40%;width:60%;left:20%"></div>
+                    <div class="gold-line" style="top:60%;width:80%"></div>
+                    <div class="gold-line" style="top:80%;width:40%;left:30%"></div>
+                </div>
+                
+                <!-- Frame -->
+                <div class="frame"></div>
+                <div class="corner corner-tl"></div>
+                <div class="corner corner-tr"></div>
+                <div class="corner corner-bl"></div>
+                <div class="corner corner-br"></div>
+                
+                <!-- Slide 1: Cover -->
+                <div class="slide" :class="{active:cur===0}">
+                    <div class="content">
+                        <p class="overline">Project Introduction · Exclusive Preview</p>
+                        <h1 class="display display-gold">AHL</h1>
+                        <p class="display" style="font-size: clamp(1.5rem,3vw,2.5rem); font-weight:400; color:#888;">AI去中心化旅行服务平台</p>
+                        <p class="lead" style="margin-top:1rem">打破垄断 · 重新定义旅行预订</p>
+                        <div style="margin-top:2rem">
+                            <span class="cta-lux">探索合作机会</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Slide 2: Problem -->
+                <div class="slide" :class="{active:cur===1}">
+                    <div class="content">
+                        <p class="overline">Industry Challenges</p>
+                        <h1 class="display">酒店业的困境</h1>
+                        <div class="feature-stack" style="margin-top:1.5rem">
+                            <div class="feature-row">
+                                <div class="feature-icon">💸</div>
+                                <div class="feature-text">OTA佣金 <span class="feature-highlight">15-25%</span> · 利润被抽走</div>
+                            </div>
+                            <div class="feature-row">
+                                <div class="feature-icon">🔒</div>
+                                <div class="feature-text">客户数据 <span class="feature-highlight">被平台掌控</span></div>
+                            </div>
+                            <div class="feature-row">
+                                <div class="feature-icon">📈</div>
+                                <div class="feature-text">流量成本 <span class="feature-highlight">越来越高</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Slide 3: Solution -->
+                <div class="slide" :class="{active:cur===2}">
+                    <div class="content">
+                        <p class="overline">Our Solution</p>
+                        <h1 class="display display-gold">用AI打破垄断</h1>
+                        <div class="lux-cards" style="margin-top:1.5rem">
+                            <div class="lux-card">
+                                <div class="lux-metric">2-3%</div>
+                                <div class="lux-label">技术费率</div>
+                            </div>
+                            <div class="lux-card">
+                                <div class="lux-metric">95%</div>
+                                <div class="lux-label">AI匹配率</div>
+                            </div>
+                            <div class="lux-card">
+                                <div class="lux-metric">80%</div>
+                                <div class="lux-label">成本节省</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Slide 4: Tech -->
+                <div class="slide" :class="{active:cur===3}">
+                    <div class="content">
+                        <p class="overline">Technology</p>
+                        <h1 class="display">核心架构</h1>
+                        <p class="lead" style="margin-top:0.5rem">9大AGENT × 87个专业SKILL</p>
+                        <div class="feature-stack" style="margin-top:1.5rem">
+                            <div class="feature-row">
+                                <div class="feature-icon" style="border-color:#666;color:#888">4</div>
+                                <div class="feature-text">应用交互层 · 消费者端 + 商家端</div>
+                            </div>
+                            <div class="feature-row">
+                                <div class="feature-icon" style="border-color:#666;color:#888">3</div>
+                                <div class="feature-text">双AGENT智能层 · C端管家 + B端运营官</div>
+                            </div>
+                            <div class="feature-row">
+                                <div class="feature-icon" style="border-color:#666;color:#888">2</div>
+                                <div class="feature-text">AGENT集群 · 9大AGENT × 87SKILL</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Slide 5: Roadmap -->
+                <div class="slide" :class="{active:cur===4}">
+                    <div class="content">
+                        <p class="overline">Growth Trajectory</p>
+                        <h1 class="display">三年规划</h1>
+                        <div class="roadmap-lux" style="margin-top:2rem">
+                            <div class="roadmap-step">
+                                <div class="step-dot"></div>
+                                <p class="step-label">种子期</p>
+                                <p class="step-time">M1-M3</p>
+                                <p class="step-count">50家</p>
+                            </div>
+                            <div class="roadmap-step">
+                                <div class="step-dot"></div>
+                                <p class="step-label">爆发期</p>
+                                <p class="step-time">M4-M9</p>
+                                <p class="step-count">500家</p>
+                            </div>
+                            <div class="roadmap-step">
+                                <div class="step-dot"></div>
+                                <p class="step-label">平台期</p>
+                                <p class="step-time">M10-M18</p>
+                                <p class="step-count">5000家</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Slide 6: Compare -->
+                <div class="slide" :class="{active:cur===5}">
+                    <div class="content">
+                        <p class="overline">Business Model</p>
+                        <h1 class="display">AHL vs OTA</h1>
+                        <div class="compare-lux" style="margin-top:1.5rem">
+                            <div class="compare-side compare-ota">
+                                <p class="compare-head">❌ OTA</p>
+                                <p class="compare-row">佣金 15-25%</p>
+                                <p class="compare-row">数据平台掌控</p>
+                                <p class="compare-row">流量越来越贵</p>
+                            </div>
+                            <div class="compare-side compare-ahl">
+                                <p class="compare-head">✓ AHL</p>
+                                <p class="compare-row">技术费 2-3%</p>
+                                <p class="compare-row">数据商户自有</p>
+                                <p class="compare-row">AI精准匹配</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Slide 7: Funding -->
+                <div class="slide" :class="{active:cur===6}">
+                    <div class="content">
+                        <p class="overline">Investment Opportunity</p>
+                        <h1 class="display display-gold">种子轮</h1>
+                        <p class="lead" style="margin-top:0.5rem">500-800万 · 出让15-20%</p>
+                        <p class="lead" style="margin-top:0.5rem; color:var(--gold)">投后估值 3000-5000万</p>
+                    </div>
+                </div>
+                
+                <!-- Slide 8: Value -->
+                <div class="slide" :class="{active:cur===7}">
+                    <div class="content">
+                        <p class="overline">Partnership</p>
+                        <h1 class="display">合作价值</h1>
+                        <div class="feature-stack" style="margin-top:1.5rem">
+                            <div class="feature-row">
+                                <div class="feature-icon">💎</div>
+                                <div class="feature-text"><span class="feature-highlight">2-3%</span> 超低技术费率</div>
+                            </div>
+                            <div class="feature-row">
+                                <div class="feature-icon">🔓</div>
+                                <div class="feature-text"><span class="feature-highlight">100%</span> 客户数据自有</div>
+                            </div>
+                            <div class="feature-row">
+                                <div class="feature-icon">🤖</div>
+                                <div class="feature-text">AI赋能 <span class="feature-highlight">降本增效</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Slide 9: End -->
+                <div class="slide" :class="{active:cur===8}">
+                    <div class="content">
+                        <h1 class="display display-gold">Thank You</h1>
+                        <p class="lead" style="margin-top:1rem">AHL · AI去中心化旅行服务平台</p>
+                        <p class="overline" style="margin-top:2rem">让旅行更直接 · 让酒店更自主</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Navigation -->
+        <div class="nav">
+            <div v-for="i in 9" :key="i" class="dot" :class="{active:cur===i-1}" @click="cur=i-1"></div>
+        </div>
+        <div class="counter">{{String(cur+1).padStart(2,'0')}} / 09</div>
+    </div>
+    
+    <script>
+        const {createApp, ref} = Vue;
+        createApp({
+            setup() {
+                const cur = ref(0);
+                window.addEventListener('keydown', e => {
+                    if (e.key === 'ArrowRight' || e.key === ' ' || e.key === 'ArrowDown') {
+                        if (cur.value < 8) cur.value++;
+                    }
+                    if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+                        if (cur.value > 0) cur.value--;
+                    }
+                });
+                return {cur};
+            }
+        }).mount('#app');
+    </script>
+</body>
+</html>
