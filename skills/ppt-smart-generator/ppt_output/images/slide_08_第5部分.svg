@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1920" height="1080" xmlns="http://www.w3.org/2000/svg">
+  <rect width="100%" height="100%" fill="#7c3aed"/>
+  <text x="50%" y="45%" font-family="Arial" font-size="48" 
+        fill="white" text-anchor="middle" opacity="0.3">
+    Slide 8
+  </text>
+  <text x="50%" y="55%" font-family="Arial" font-size="32" 
+        fill="white" text-anchor="middle" opacity="0.5">
+    第5部分
+  </text>
+</svg>

@@ -1,0 +1,22 @@
+# PPT智能生成器配置
+
+# 默认模板
+default_template: premium
+
+# 默认配图风格
+default_style: business
+
+# 输出目录
+output_dir: ppt_output
+
+# 配图设置
+image:
+  count_per_section: 1
+  size: "1920x1080"
+  format: "png"
+
+# PPT设置
+ppt:
+  slide_width: 13.333
+  slide_height: 7.5
+  default_slides: 10
