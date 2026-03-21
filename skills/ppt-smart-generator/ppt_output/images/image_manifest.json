@@ -2,11 +2,11 @@
   {
     "slide_num": 1,
     "title": "封面",
-    "prompt": "handshake deal, high quality, professional, 16:9 aspect ratio",
+    "prompt": "skyscraper view, high quality, professional, 16:9 aspect ratio",
     "style": "business",
     "status": "placeholder",
     "path": "ppt_output/images\\slide_01_封面.svg",
-    "generated_at": "2026-03-21T13:42:48.635854"
+    "generated_at": "2026-03-21T13:47:27.084307"
   },
   {
     "slide_num": 2,
@@ -15,78 +15,78 @@
     "style": "business",
     "status": "placeholder",
     "path": "ppt_output/images\\slide_02_目录.svg",
-    "generated_at": "2026-03-21T13:42:48.635876"
+    "generated_at": "2026-03-21T13:47:27.084329"
   },
   {
     "slide_num": 3,
     "title": "第0部分",
-    "prompt": "skyscraper view, high quality, professional, 16:9 aspect ratio",
+    "prompt": "office interior, high quality, professional, 16:9 aspect ratio",
     "style": "business",
     "status": "placeholder",
     "path": "ppt_output/images\\slide_03_第0部分.svg",
-    "generated_at": "2026-03-21T13:42:48.635881"
+    "generated_at": "2026-03-21T13:47:27.084333"
   },
   {
     "slide_num": 4,
     "title": "第1部分",
-    "prompt": "corporate team, high quality, professional, 16:9 aspect ratio",
+    "prompt": "business person working, high quality, professional, 16:9 aspect ratio",
     "style": "business",
     "status": "placeholder",
     "path": "ppt_output/images\\slide_04_第1部分.svg",
-    "generated_at": "2026-03-21T13:42:48.635884"
+    "generated_at": "2026-03-21T13:47:27.084336"
   },
   {
     "slide_num": 5,
     "title": "第2部分",
-    "prompt": "corporate team, high quality, professional, 16:9 aspect ratio",
+    "prompt": "business person working, high quality, professional, 16:9 aspect ratio",
     "style": "business",
     "status": "placeholder",
     "path": "ppt_output/images\\slide_05_第2部分.svg",
-    "generated_at": "2026-03-21T13:42:48.635886"
+    "generated_at": "2026-03-21T13:47:27.084338"
   },
   {
     "slide_num": 6,
     "title": "第3部分",
-    "prompt": "office interior, high quality, professional, 16:9 aspect ratio",
+    "prompt": "meeting room, high quality, professional, 16:9 aspect ratio",
     "style": "business",
     "status": "placeholder",
     "path": "ppt_output/images\\slide_06_第3部分.svg",
-    "generated_at": "2026-03-21T13:42:48.635889"
+    "generated_at": "2026-03-21T13:47:27.084340"
   },
   {
     "slide_num": 7,
     "title": "第4部分",
-    "prompt": "modern office building, high quality, professional, 16:9 aspect ratio",
+    "prompt": "handshake deal, high quality, professional, 16:9 aspect ratio",
     "style": "business",
     "status": "placeholder",
     "path": "ppt_output/images\\slide_07_第4部分.svg",
-    "generated_at": "2026-03-21T13:42:48.635891"
+    "generated_at": "2026-03-21T13:47:27.084343"
   },
   {
     "slide_num": 8,
     "title": "第5部分",
-    "prompt": "corporate team, high quality, professional, 16:9 aspect ratio",
+    "prompt": "handshake deal, high quality, professional, 16:9 aspect ratio",
     "style": "business",
     "status": "placeholder",
     "path": "ppt_output/images\\slide_08_第5部分.svg",
-    "generated_at": "2026-03-21T13:42:48.635893"
+    "generated_at": "2026-03-21T13:47:27.084345"
   },
   {
-    "slide_num": 9,
+    "slide_num": 13,
     "title": "总结",
-    "prompt": "meeting room, high quality, professional, 16:9 aspect ratio",
+    "prompt": "skyscraper view, high quality, professional, 16:9 aspect ratio",
     "style": "business",
     "status": "placeholder",
-    "path": "ppt_output/images\\slide_09_总结.svg",
-    "generated_at": "2026-03-21T13:42:48.635895"
+    "path": "ppt_output/images\\slide_13_总结.svg",
+    "generated_at": "2026-03-21T13:47:27.084347"
   },
   {
-    "slide_num": 10,
+    "slide_num": 14,
     "title": "结尾",
-    "prompt": "corporate team, high quality, professional, 16:9 aspect ratio",
+    "prompt": "business person working, high quality, professional, 16:9 aspect ratio",
     "style": "business",
     "status": "placeholder",
-    "path": "ppt_output/images\\slide_10_结尾.svg",
-    "generated_at": "2026-03-21T13:42:48.635898"
+    "path": "ppt_output/images\\slide_14_结尾.svg",
+    "generated_at": "2026-03-21T13:47:27.084350"
   }
 ]

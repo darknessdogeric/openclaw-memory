@@ -1,0 +1,165 @@
+{
+  "generated_at": "2026-03-21T13:47:27.120522",
+  "outline": {
+    "title": "演示文稿",
+    "sections": [
+      {
+        "num": 1,
+        "title": "封面",
+        "content": "主题"
+      },
+      {
+        "num": 2,
+        "title": "目录",
+        "content": "内容概览"
+      },
+      {
+        "num": 3,
+        "title": "第0部分",
+        "content": "关键内容"
+      },
+      {
+        "num": 4,
+        "title": "第1部分",
+        "content": "关键内容"
+      },
+      {
+        "num": 5,
+        "title": "第2部分",
+        "content": "关键内容"
+      },
+      {
+        "num": 6,
+        "title": "第3部分",
+        "content": "关键内容"
+      },
+      {
+        "num": 7,
+        "title": "第4部分",
+        "content": "关键内容"
+      },
+      {
+        "num": 8,
+        "title": "第5部分",
+        "content": "关键内容"
+      },
+      {
+        "num": 13,
+        "title": "总结",
+        "content": "核心要点"
+      },
+      {
+        "num": 14,
+        "title": "结尾",
+        "content": "感谢"
+      }
+    ],
+    "keywords": [
+      "3%",
+      "二、行业痛点",
+      "80%",
+      "1200亿",
+      "30%",
+      "95%",
+      "B端AI运营官：产品封装、动态定价、智能",
+      "向量匹配技术：准确率大于95%，检索延迟"
+    ],
+    "style": "general",
+    "color_theme": "default"
+  },
+  "images": [
+    {
+      "slide_num": 1,
+      "title": "封面",
+      "prompt": "skyscraper view, high quality, professional, 16:9 aspect ratio",
+      "style": "business",
+      "status": "placeholder",
+      "path": "ppt_output/images\\slide_01_封面.svg",
+      "generated_at": "2026-03-21T13:47:27.084307"
+    },
+    {
+      "slide_num": 2,
+      "title": "目录",
+      "prompt": "modern office building, high quality, professional, 16:9 aspect ratio",
+      "style": "business",
+      "status": "placeholder",
+      "path": "ppt_output/images\\slide_02_目录.svg",
+      "generated_at": "2026-03-21T13:47:27.084329"
+    },
+    {
+      "slide_num": 3,
+      "title": "第0部分",
+      "prompt": "office interior, high quality, professional, 16:9 aspect ratio",
+      "style": "business",
+      "status": "placeholder",
+      "path": "ppt_output/images\\slide_03_第0部分.svg",
+      "generated_at": "2026-03-21T13:47:27.084333"
+    },
+    {
+      "slide_num": 4,
+      "title": "第1部分",
+      "prompt": "business person working, high quality, professional, 16:9 aspect ratio",
+      "style": "business",
+      "status": "placeholder",
+      "path": "ppt_output/images\\slide_04_第1部分.svg",
+      "generated_at": "2026-03-21T13:47:27.084336"
+    },
+    {
+      "slide_num": 5,
+      "title": "第2部分",
+      "prompt": "business person working, high quality, professional, 16:9 aspect ratio",
+      "style": "business",
+      "status": "placeholder",
+      "path": "ppt_output/images\\slide_05_第2部分.svg",
+      "generated_at": "2026-03-21T13:47:27.084338"
+    },
+    {
+      "slide_num": 6,
+      "title": "第3部分",
+      "prompt": "meeting room, high quality, professional, 16:9 aspect ratio",
+      "style": "business",
+      "status": "placeholder",
+      "path": "ppt_output/images\\slide_06_第3部分.svg",
+      "generated_at": "2026-03-21T13:47:27.084340"
+    },
+    {
+      "slide_num": 7,
+      "title": "第4部分",
+      "prompt": "handshake deal, high quality, professional, 16:9 aspect ratio",
+      "style": "business",
+      "status": "placeholder",
+      "path": "ppt_output/images\\slide_07_第4部分.svg",
+      "generated_at": "2026-03-21T13:47:27.084343"
+    },
+    {
+      "slide_num": 8,
+      "title": "第5部分",
+      "prompt": "handshake deal, high quality, professional, 16:9 aspect ratio",
+      "style": "business",
+      "status": "placeholder",
+      "path": "ppt_output/images\\slide_08_第5部分.svg",
+      "generated_at": "2026-03-21T13:47:27.084345"
+    },
+    {
+      "slide_num": 13,
+      "title": "总结",
+      "prompt": "skyscraper view, high quality, professional, 16:9 aspect ratio",
+      "style": "business",
+      "status": "placeholder",
+      "path": "ppt_output/images\\slide_13_总结.svg",
+      "generated_at": "2026-03-21T13:47:27.084347"
+    },
+    {
+      "slide_num": 14,
+      "title": "结尾",
+      "prompt": "business person working, high quality, professional, 16:9 aspect ratio",
+      "style": "business",
+      "status": "placeholder",
+      "path": "ppt_output/images\\slide_14_结尾.svg",
+      "generated_at": "2026-03-21T13:47:27.084350"
+    }
+  ],
+  "template": "premium",
+  "image_style": "business",
+  "output": "ppt_output\\AHL-Partner-Intro.pptx"
+}
