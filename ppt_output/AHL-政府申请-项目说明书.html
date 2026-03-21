@@ -7,7 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
     <style>
-        :root { --primary: #1e3a5f; --primary-light: #2d5a87; --accent: #c9a227; --gold: #d4af37; --success: #2e7d32; --bg: #0a0f1a; --text: #fff; --text-muted: #b0c4de; --card: rgba(255,255,255,0.06); --border: rgba(201,162,39,0.2); }
+        :root { --primary: #1e3a5f; --primary-light: #2d5a87; --gold: #d4af37; --text: #fff; --text-muted: #b0c4de; --card: rgba(255,255,255,0.06); --border: rgba(201,162,39,0.2); }
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Noto Sans SC', sans-serif; background: #000; color: var(--text); overflow: hidden; }
         .viewport { width: 100vw; height: 100vh; display: flex; justify-content: center; align-items: center; background: #000; }
@@ -28,7 +28,6 @@
         .subtitle { font-size: clamp(0.8rem,1.2vw,1rem); color: var(--text-muted); max-width: 750px; line-height: 1.5; }
         .cards-3 { display: grid; grid-template-columns: repeat(3,1fr); gap: 0.8rem; width: 100%; max-width: 900px; }
         .cards-4 { display: grid; grid-template-columns: repeat(4,1fr); gap: 0.7rem; width: 100%; max-width: 950px; }
-        .cards-2 { display: grid; grid-template-columns: repeat(2,1fr); gap: 1rem; width: 100%; max-width: 800px; }
         .card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 1rem; text-align: center; transition: 0.3s; }
         .card:hover { border-color: var(--gold); transform: translateY(-2px); }
         .card-icon { font-size: 1.6rem; margin-bottom: 0.3rem; }
@@ -77,9 +76,6 @@
         .dot { width: 6px; height: 6px; border-radius: 50%; background: rgba(255,255,255,0.2); cursor: pointer; transition: 0.3s; }
         .dot.active { background: var(--gold); transform: scale(1.4); box-shadow: 0 0 8px var(--gold); }
         .counter { position: fixed; top: 20px; right: 28px; font-size: 12px; color: rgba(255,255,255,0.3); z-index: 100; }
-        .slide.active .title { animation: slideUp 0.7s ease-out; }
-        .slide.active .tag { animation: slideUp 0.7s ease-out 0.15s both; }
-        @keyframes slideUp { from{opacity:0;transform:translateY(25px)} to{opacity:1;transform:translateY(0)} }
         .section-num { position: absolute; top: 30px; left: 40px; font-size: 3rem; font-weight: 900; color: rgba(201,162,39,0.1); z-index: 0; }
     </style>
 </head>
@@ -92,7 +88,6 @@
                 <div class="corner tl"></div><div class="corner tr"></div>
                 <div class="corner bl"></div><div class="corner br"></div>
                 
-                <!-- Slide 1: Cover -->
                 <div class="slide" :class="{active:cur===0}">
                     <div class="content">
                         <p class="tag">政府专项申请项目</p>
@@ -105,7 +100,6 @@
                     </div>
                 </div>
                 
-                <!-- Slide 2: 项目概述 -->
                 <div class="slide" :class="{active:cur===1}">
                     <span class="section-num">01</span>
                     <div class="content">
@@ -120,7 +114,6 @@
                     </div>
                 </div>
                 
-                <!-- Slide 3: 行业痛点 -->
                 <div class="slide" :class="{active:cur===2}">
                     <span class="section-num">02</span>
                     <div class="content">
@@ -135,7 +128,6 @@
                     </div>
                 </div>
                 
-                <!-- Slide 4: 模式对比 -->
                 <div class="slide" :class="{active:cur===3}">
                     <span class="section-num">03</span>
                     <div class="content">
@@ -143,24 +135,23 @@
                         <h1 class="title">范式革命</h1>
                         <div class="compare" style="margin-top:1rem">
                             <div class="compare-col compare-old">
-                                <p class="compare-title">❌ 旧范式：OTA货架模式</p>
+                                <p class="compare-title">❌ OTA货架模式</p>
                                 <p class="compare-item">• 商家把产品摆到货架</p>
                                 <p class="compare-item">• 消费者自己挑选</p>
                                 <p class="compare-item">• 信息过载、匹配低效</p>
-                                <p class="compare-item">• 三方博弈、佣金高昂</p>
+                                <p class="compare-item">• 佣金20-30%</p>
                             </div>
                             <div class="compare-col compare-new">
-                                <p class="compare-title">✓ 新范式：AHL客户模式</p>
+                                <p class="compare-title">✓ AHL客户模式</p>
                                 <p class="compare-item">• AI理解双方需求</p>
                                 <p class="compare-item">• 主动精准匹配</p>
-                                <p class="compare-item">• 自然对话、双向匹配</p>
-                                <p class="compare-item">• 三方共赢、效率费3-5%</p>
+                                <p class="compare-item">• 双向智能匹配</p>
+                                <p class="compare-item">• 效率费3-5%</p>
                             </div>
                         </div>
                     </div>
                 </div>
                 
-                <!-- Slide 5: 技术架构 -->
                 <div class="slide" :class="{active:cur===4}">
                     <span class="section-num">04</span>
                     <div class="content">
@@ -182,7 +173,6 @@
                     </div>
                 </div>
                 
-                <!-- Slide 6: 交易流程 -->
                 <div class="slide" :class="{active:cur===5}">
                     <span class="section-num">05</span>
                     <div class="content">
@@ -198,7 +188,6 @@
                     </div>
                 </div>
                 
-                <!-- Slide 7: 里程碑 -->
                 <div class="slide" :class="{active:cur===6}">
                     <span class="section-num">06</span>
                     <div class="content">
@@ -219,7 +208,6 @@
                     </div>
                 </div>
                 
-                <!-- Slide 8: 团队 -->
                 <div class="slide" :class="{active:cur===7}">
                     <span class="section-num">07</span>
                     <div class="content">
@@ -234,7 +222,6 @@
                     </div>
                 </div>
                 
-                <!-- Slide 9: 申请支持 -->
                 <div class="slide" :class="{active:cur===8}">
                     <span class="section-num">08</span>
                     <div class="content">
@@ -260,7 +247,6 @@
                     </div>
                 </div>
                 
-                <!-- Slide 10: 经济效益 -->
                 <div class="slide" :class="{active:cur===9}">
                     <span class="section-num">09</span>
                     <div class="content">
@@ -282,7 +268,6 @@
                     </div>
                 </div>
                 
-                <!-- Slide 11: 社会效益 -->
                 <div class="slide" :class="{active:cur===10}">
                     <span class="section-num">10</span>
                     <div class="content">
@@ -296,7 +281,6 @@
                     </div>
                 </div>
                 
-                <!-- Slide 12: 投资预算 -->
                 <div class="slide" :class="{active:cur===11}">
                     <span class="section-num">11</span>
                     <div class="content">
@@ -322,7 +306,6 @@
                     </div>
                 </div>
                 
-                <!-- Slide 13: 风险 -->
                 <div class="slide" :class="{active:cur===12}">
                     <span class="section-num">12</span>
                     <div class="content">
@@ -339,11 +322,24 @@
                     </div>
                 </div>
                 
-                <!-- Slide 14: 结尾 -->
                 <div class="slide" :class="{active:cur===13}">
                     <div class="content">
                         <h1 class="title title-gold">恳请政府支持</h1>
                         <p class="subtitle" style="margin-top:1rem">打造全球领先的AI交易协议<br>推动住宿业数字化转型</p>
                         <div style="margin-top:1.5rem;padding:1rem 1.5rem;background:var(--card);border:1px solid var(--border);border-radius:8px">
                             <p style="font-size:0.8rem;color:var(--gold)">联系人：张实</p>
-                            <p style="font-size:0.75rem;color:var(--text-muted);margin-top:0.3rem">电话/微信：177
+                            <p style="font-size:0.75rem;color:var(--text-muted);margin-top:0.3rem">电话/微信：17760348653 | 邮箱：ericzhangshi@163.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="nav"><div v-for="i in 14" :key="i" class="dot" :class="{active:cur===i-1}" @click="cur=i-1"></div></div>
+        <div class="counter">{{cur+1}} / 14</div>
+    </div>
+    <script>
+        const {createApp, ref} = Vue;
+        createApp({setup(){const cur = ref(0);window.addEventListener('keydown',e=>{if(e.key==='ArrowRight'||e.key===' '||e.key==='ArrowDown'){if(cur.value<13)cur.value++}if(e.key==='ArrowLeft'||e.key==='ArrowUp'){if(cur.value>0)cur.value--}});return{cur}}}).mount('#app');
+    </script>
+</body>
+</html>
