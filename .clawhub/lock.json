@@ -28,6 +28,10 @@
     "cli-anything": {
       "version": "0.1.0",
       "installedAt": 1773665767407
+    },
+    "notebooklm-prompts": {
+      "version": "1.0.0",
+      "installedAt": 1774072380020
     }
   }
 }
