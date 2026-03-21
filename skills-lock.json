@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "skills": {
+    "scrapling-official": {
+      "source": "d4vinci/scrapling",
+      "sourceType": "github",
+      "computedHash": "341b6008f4af45bde7df19d8603be7d184d6d1d01d74a97fb73cb3766fda705a"
+    }
+  }
+}

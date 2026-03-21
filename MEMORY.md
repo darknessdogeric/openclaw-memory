@@ -463,3 +463,39 @@ OTA运营成功公式 = 流量 × 转化率 × 客单价 × 复购率
 - Phase 4 (12月+): 飞轮层 - 数据自运转
 
 **展开清单**: 23个维度展开项 + 6个技术架构项 (按需激活)
+
+---
+
+### PPT制作能力 V1.0 (2026-03-21)
+**技能**: ppt-deck-builder-pro  
+**版本**: v1.0.0  
+**定位**: 专业PPT演示文稿生成，支持12种行业模板风格
+
+**12种模板风格**:
+| 模板 | 场景 | 特点 |
+|------|------|------|
+| startup_roadshow 🌟 | 融资路演 | 紫橙渐变，动感活力 |
+| corporate_pro 🌟 | 企业提案 | 海军蓝，专业稳重 |
+| dark_blue_business | 商务演示 | 钴蓝，玻璃质感 |
+| light_consulting | 咨询报告 | 浅色背景，清晰易读 |
+| minimal_white 🌟 | 极简设计 | 纯白黑字，less is more |
+| gradient_modern 🌟 | 科技产品 | 蓝紫粉渐变，3D元素 |
+| elegant_chinese 🌟 | 国风文化 | 朱红金绿，水墨纹理 |
+| data_viz_pro 🌟 | 数据报告 | 蓝绿专业色，图表清晰 |
+| creative_playful 🌟 | 创意趣味 | 多彩鲜艳，手绘风格 |
+| luxury_premium 🌟 | 高端奢华 | 黑金配色，尊贵典雅 |
+| green_nature 🌟 | 环保健康 | 自然绿色，清新舒适 |
+| whiteboard_handdrawn | 培训讲解 | 白板手绘，现场感强 |
+
+**使用方式**:
+1. 告诉B166ER场景（如"融资路演"、"企业提案"）
+2. B166ER自动推荐合适模板
+3. 生成5个差异化版本供选择
+4. 组合成最终PPT
+
+**文件位置**:
+- 模板定义: `skills/ppt-deck-builder-pro/references/style-presets.md`
+- 快速选择: `skills/ppt-deck-builder-pro/references/template-selector.md`
+- 模板预览: `skills/ppt-deck-builder-pro/assets/templates/preview.html`
+
+**对标能力**: Kimi PPT模板 / 豆包PPT模板 / NotebookLM

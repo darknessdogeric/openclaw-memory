@@ -1,0 +1,550 @@
+version: '2.0'
+last_updated: '2026-03-18'
+data_sources:
+  national_bureau_statistics:
+    name: 国家统计局
+    name_en: National Bureau of Statistics
+    url: https://www.stats.gov.cn
+    tier: 重要数据
+    type: 官方数据
+    data_types:
+    - GDP
+    - CPI
+    - 社零总额
+    - 居民收入
+    update_frequency: 月度/季度/年度
+    collection_method: api
+    status: active
+  ministry_culture_tourism:
+    name: 文化和旅游部
+    name_en: Ministry of Culture and Tourism
+    url: https://www.mct.gov.cn
+    tier: 重要数据
+    type: 官方数据
+    data_types:
+    - 国内旅游人次
+    - 旅游收入
+    - 出境游数据
+    update_frequency: 季度/年度
+    collection_method: scraper
+    status: active
+  ministry_transport:
+    name: 交通运输部
+    name_en: Ministry of Transport
+    url: https://www.mot.gov.cn
+    tier: 核心数据
+    type: 官方数据
+    data_types:
+    - 跨区域人员流动
+    - 铁路客运
+    - 公路客运
+    - 航空客运
+    update_frequency: 日度/月度
+    collection_method: scraper
+    status: active
+  civil_aviation_administration:
+    name: 民航局
+    name_en: CAAC
+    url: http://www.caac.gov.cn
+    tier: 核心数据
+    type: 官方数据
+    data_types:
+    - 航班量
+    - 旅客吞吐量
+    - 机场排名
+    update_frequency: 月度/年度
+    collection_method: scraper
+    status: active
+  str_global:
+    name: STR Global
+    name_en: STR Global
+    url: https://str.com
+    tier: 核心数据
+    type: 国际数据
+    data_types:
+    - OCC
+    - ADR
+    - RevPAR
+    - 酒店业绩
+    update_frequency: 周度/月度
+    collection_method: api
+    status: active
+  unwto:
+    name: 世界旅游组织
+    name_en: UNWTO
+    url: https://www.unwto.org
+    tier: 重要数据
+    type: 国际数据
+    data_types:
+    - 全球旅游数据
+    - 入境游统计
+    update_frequency: 季度/年度
+    collection_method: scraper
+    status: active
+  wttc:
+    name: 世界旅行与旅游理事会
+    name_en: WTTC
+    url: https://wttc.org
+    tier: 重要数据
+    type: 国际数据
+    data_types:
+    - 旅游业经济贡献
+    - 就业数据
+    update_frequency: 年度
+    collection_method: scraper
+    status: active
+  air_china:
+    name: 中国国航
+    name_en: Air China
+    url: https://www.airchina.com.cn
+    tier: 重要数据
+    type: 平台数据
+    data_types:
+    - 航线网络
+    - 客座率
+    - 客运量
+    update_frequency: 月度/季度
+    collection_method: scraper
+    status: active
+  china_southern:
+    name: 南方航空
+    name_en: China Southern
+    url: https://www.csair.com
+    tier: 重要数据
+    type: 平台数据
+    data_types:
+    - 航线网络
+    - 客座率
+    - 客运量
+    update_frequency: 月度/季度
+    collection_method: scraper
+    status: active
+  china_eastern:
+    name: 东方航空
+    name_en: China Eastern
+    url: https://www.ceair.com
+    tier: 重要数据
+    type: 平台数据
+    data_types:
+    - 航线网络
+    - 客座率
+    - 客运量
+    update_frequency: 月度/季度
+    collection_method: scraper
+    status: active
+  iata:
+    name: 国际航空运输协会
+    name_en: IATA
+    url: https://www.iata.org
+    tier: 重要数据
+    type: 国际数据
+    data_types:
+    - 全球航空客运量
+    - 航线数据
+    update_frequency: 月度
+    collection_method: scraper
+    status: active
+  china_railway:
+    name: 国铁集团
+    name_en: China Railway
+    url: https://www.china-railway.com.cn
+    tier: 核心数据
+    type: 官方数据
+    data_types:
+    - 铁路客运量
+    - 高铁网络
+    - 热门线路
+    update_frequency: 日度/月度
+    collection_method: scraper
+    status: active
+  '12306':
+    name: '12306'
+    name_en: '12306'
+    url: https://www.12306.cn
+    tier: 核心数据
+    type: 平台数据
+    data_types:
+    - 票务数据
+    - 热门线路
+    - 余票信息
+    update_frequency: 实时
+    collection_method: scraper
+    status: active
+  amap:
+    name: 高德地图
+    name_en: Amap
+    url: https://www.amap.com
+    tier: 核心数据
+    type: 平台数据
+    data_types:
+    - 拥堵指数
+    - 出行热度
+    - 迁徙数据
+    update_frequency: 实时/日度
+    collection_method: api
+    status: active
+  baidu_map:
+    name: 百度地图
+    name_en: Baidu Map
+    url: https://map.baidu.com
+    tier: 核心数据
+    type: 平台数据
+    data_types:
+    - 迁徙数据
+    - 出行热度
+    - POI数据
+    update_frequency: 日度
+    collection_method: api
+    status: active
+  huazhu_group:
+    name: 华住集团
+    name_en: Huazhu Group
+    url: https://ir.huazhu.com
+    tier: 核心数据
+    type: 金融数据
+    data_types:
+    - 财报
+    - 经营数据
+    - 开店数据
+    update_frequency: 季度
+    collection_method: scraper
+    status: active
+  jinjiang_hotels:
+    name: 锦江酒店
+    name_en: Jinjiang Hotels
+    url: http://www.jinjianghotels.com.cn
+    tier: 核心数据
+    type: 金融数据
+    data_types:
+    - 财报
+    - 经营数据
+    - 品牌数据
+    update_frequency: 季度
+    collection_method: scraper
+    status: active
+  btg_hotels:
+    name: 首旅酒店
+    name_en: BTG Hotels
+    url: http://www.bthhotels.com
+    tier: 核心数据
+    type: 金融数据
+    data_types:
+    - 财报
+    - 经营数据
+    - 如家数据
+    update_frequency: 季度
+    collection_method: scraper
+    status: active
+  atour_group:
+    name: 亚朵集团
+    name_en: Atour Group
+    url: https://ir.atour.com
+    tier: 核心数据
+    type: 金融数据
+    data_types:
+    - 财报
+    - 经营数据
+    - 零售数据
+    update_frequency: 季度
+    collection_method: scraper
+    status: active
+  ctrip_group:
+    name: 携程集团
+    name_en: Trip.com Group
+    url: https://ir.trip.com
+    tier: 核心数据
+    type: 金融数据
+    data_types:
+    - 财报
+    - 平台数据
+    - 行业洞察
+    update_frequency: 季度
+    collection_method: scraper
+    status: active
+  meituan:
+    name: 美团
+    name_en: Meituan
+    url: https://about.meituan.com
+    tier: 核心数据
+    type: 金融数据
+    data_types:
+    - 财报
+    - 酒旅数据
+    - 本地生活
+    update_frequency: 季度
+    collection_method: scraper
+    status: active
+  ctrip_research:
+    name: 携程研究院
+    name_en: Ctrip Research
+    url: https://www.ctrip.com
+    tier: 核心数据
+    type: 平台数据
+    data_types:
+    - 预订量
+    - 搜索热度
+    - 价格数据
+    - 行业报告
+    update_frequency: 周度/月度
+    collection_method: scraper
+    status: active
+  meituan_research:
+    name: 美团研究院
+    name_en: Meituan Research
+    url: https://about.meituan.com/research
+    tier: 核心数据
+    type: 平台数据
+    data_types:
+    - 本地住宿
+    - 餐饮
+    - 玩乐
+    - 消费趋势
+    update_frequency: 月度
+    collection_method: scraper
+    status: active
+  fliggy:
+    name: 飞猪
+    name_en: Fliggy
+    url: https://www.fliggy.com
+    tier: 核心数据
+    type: 平台数据
+    data_types:
+    - 年轻客群
+    - 出境游
+    - 度假数据
+    update_frequency: 月度
+    collection_method: scraper
+    status: active
+  qunar:
+    name: 去哪儿
+    name_en: Qunar
+    url: https://www.qunar.com
+    tier: 核心数据
+    type: 平台数据
+    data_types:
+    - 价格敏感客群
+    - 机票酒店
+    - 搜索数据
+    update_frequency: 周度
+    collection_method: scraper
+    status: active
+  mafengwo:
+    name: 马蜂窝
+    name_en: Mafengwo
+    url: https://www.mafengwo.cn
+    tier: 重要数据
+    type: 平台数据
+    data_types:
+    - 攻略
+    - 自由行
+    - 目的地热度
+    update_frequency: 月度
+    collection_method: scraper
+    status: active
+  xiaohongshu:
+    name: 小红书
+    name_en: Xiaohongshu
+    url: https://www.xiaohongshu.com
+    tier: 重要数据
+    type: 社交数据
+    data_types:
+    - 种草
+    - 打卡
+    - 生活方式
+    update_frequency: 实时
+    collection_method: api
+    status: active
+  douyin:
+    name: 抖音
+    name_en: Douyin
+    url: https://www.douyin.com
+    tier: 重要数据
+    type: 社交数据
+    data_types:
+    - 短视频
+    - 直播
+    - POI数据
+    update_frequency: 实时
+    collection_method: api
+    status: active
+  meadin:
+    name: 迈点研究院
+    name_en: Meadin Research
+    url: https://www.meadin.com
+    tier: 核心数据
+    type: 行业数据
+    data_types:
+    - MBI指数
+    - 行业报告
+    - 品牌榜单
+    - 市场研究
+    update_frequency: 日度/周度/月度
+    collection_method: scraper
+    status: active
+  traveldaily:
+    name: 环球旅讯
+    name_en: TravelDaily
+    url: https://www.traveldaily.cn
+    tier: 核心数据
+    type: 行业数据
+    data_types:
+    - 行业新闻
+    - 深度分析
+    - 研究报告
+    - 数据周报
+    update_frequency: 日度/周度
+    collection_method: scraper
+    status: active
+  hangyan:
+    name: 小牛行研
+    name_en: Hangyan Research
+    url: https://www.hangyan.co
+    tier: 核心数据
+    type: 行业数据
+    data_types:
+    - 酒店周度数据
+    - OCC/ADR/RevPAR
+    - 行业图表
+    update_frequency: 周度
+    collection_method: scraper
+    status: active
+  hotelgaocan:
+    name: 酒店高参
+    name_en: Hotel GaoCan
+    url: https://www.hotelgaocan.com
+    tier: 重要数据
+    type: 行业数据
+    data_types:
+    - 行业新闻
+    - 深度报道
+    - 人物专访
+    update_frequency: 日度
+    collection_method: scraper
+    status: active
+  shiji:
+    name: 石基信息
+    name_en: Shiji Group
+    url: https://www.shijigroup.com
+    tier: 重要数据
+    type: 行业数据
+    data_types:
+    - 酒店数字化报告
+    - 技术趋势
+    - 白皮书
+    update_frequency: 季度
+    collection_method: scraper
+    status: active
+  horwath:
+    name: 浩华
+    name_en: HVS
+    url: https://www.horwathhtl.com
+    tier: 重要数据
+    type: 国际数据
+    data_types:
+    - 酒店估值
+    - 投资分析
+    - 市场报告
+    update_frequency: 季度/年度
+    collection_method: scraper
+    status: active
+  iresearch:
+    name: 艾瑞咨询
+    name_en: iResearch
+    url: https://www.iresearch.com.cn
+    tier: 重要数据
+    type: 行业数据
+    data_types:
+    - 互联网研究报告
+    - 在线旅游
+    - 用户研究
+    update_frequency: 月度/季度
+    collection_method: scraper
+    status: active
+  analysys:
+    name: 易观分析
+    name_en: Analysys
+    url: https://www.analysys.cn
+    tier: 重要数据
+    type: 行业数据
+    data_types:
+    - 互联网研究报告
+    - APP数据
+    - 用户分析
+    update_frequency: 月度/季度
+    collection_method: scraper
+    status: active
+  pedaily:
+    name: 投中网
+    name_en: PE Daily
+    url: https://www.pedaily.cn
+    tier: 重要数据
+    type: 金融数据
+    data_types:
+    - 投融资事件
+    - PE/VC数据
+    - 并购数据
+    update_frequency: 日度
+    collection_method: scraper
+    status: active
+  jll:
+    name: 仲量联行
+    name_en: JLL
+    url: https://www.jll.com.cn
+    tier: 重要数据
+    type: 国际数据
+    data_types:
+    - 酒店投资报告
+    - 地产数据
+    - 市场研究
+    update_frequency: 季度/年度
+    collection_method: scraper
+    status: active
+  cbre:
+    name: 世邦魏理仕
+    name_en: CBRE
+    url: https://www.cbre.com.cn
+    tier: 重要数据
+    type: 国际数据
+    data_types:
+    - 酒店市场研究
+    - 投资数据
+    - 地产报告
+    update_frequency: 季度/年度
+    collection_method: scraper
+    status: active
+collection_schedule:
+  daily:
+  - ministry_transport
+  - china_railway
+  - amap
+  - baidu_map
+  weekly:
+  - str_global
+  - hangyan
+  - meadin
+  - traveldaily
+  - ctrip_research
+  - qunar
+  monthly:
+  - national_bureau_statistics
+  - ministry_culture_tourism
+  - civil_aviation_administration
+  - meituan_research
+  - fliggy
+  - mafengwo
+  - iresearch
+  - analysys
+  quarterly:
+  - huazhu_group
+  - jinjiang_hotels
+  - btg_hotels
+  - atour_group
+  - ctrip_group
+  - meituan
+  - shiji
+  - horwath
+  - jll
+  - cbre
+  annual:
+  - unwto
+  - wttc

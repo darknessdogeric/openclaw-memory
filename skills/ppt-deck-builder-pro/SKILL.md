@@ -1,7 +1,16 @@
 ---
 name: ppt-deck-builder
-description: Use when building or revising a PPT/演示文稿 in a portable, self-contained workflow folder, especially when the job spans storyline design, page briefs, page-level text compression, fixed-text image prompts, style-selectable slide image generation, sample-pack generation, page repair, and PPTX packaging without depending on repo files outside this skill folder.
-version: 0.3.0
+description: |
+  PPT/演示文稿生成工具 - 支持12种专业模板风格！
+  
+  一键生成融资路演、企业提案、数据报告、科技产品、培训课件、国风文化等场景的专业PPT。
+  
+  12种模板: startup_roadshow | corporate_pro | dark_blue_business | light_consulting | 
+  minimal_white | gradient_modern | elegant_chinese | data_viz_pro | creative_playful | 
+  luxury_premium | green_nature | whiteboard_handdrawn
+  
+  使用方式: 告诉B166ER你的场景(v路演/企业提案/数据报告等)，自动推荐合适模板
+version: 1.0.0
 metadata:
   openclaw:
     requires:
