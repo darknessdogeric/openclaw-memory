@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AHL商业计划书 - 完整版</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+SC:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+    <style>
+        :root { --primary: #2563eb; --accent: #06b6d4; --success: #10b981; --warning: #f59e0b; --danger: #ef4444; --bg-dark: #0a0a0f; --bg-card: rgba(255,255,255,0.03); --border: rgba(255,255,255,0.08); --text: #fff; --text-muted: #9ca3af; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Noto Sans SC', 'Inter', sans-serif; background: #000; color: var(--text); overflow: hidden; }
+        .viewport { width: 100vw; height: 100vh; display: flex; justify-content: center; align-items: center; background: #000; }
+        .canvas { position: relative; width: 100vw; height: 56.25vw; max-height: 100vh; max-width: 177.78vh; overflow: hidden; }
+        .bg { position: absolute; inset: 0; background: linear-gradient(135deg, #0a0a0f 0%, #1a1a2e 50%, #0f0f1a 100%); }
+        .bg::before { content: ''; position: absolute; inset: 0; background: radial-gradient(at 40% 20%, rgba(37,99,235,0.15) 0%, transparent 50%), radial-gradient(at 80% 0%, rgba(6,182,212,0.1) 0%, transparent 50%); }
+        .orb { position: absolute; border-radius: 50%; filter: blur(80px); animation: float 20s ease-in-out infinite; }
+        .orb-1 { width: 350px; height: 350px; background: rgba(37,99,235,0.25); top: -80px; left: -80px; }
+        .orb-2 { width: 250px; height: 250px; background: rgba(6,182,212,0.2); bottom: -50px; right: -50px; animation-delay: -10s; }
+        @keyframes float { 0%,100%{transform:translate(0,0)} 25%{transform:translate(20px,-20px)} 50%{transform:translate(-10px,10px)} 75%{transform:translate(15px,15px)} }
+        .slide { position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; opacity: 0; pointer-events: none; transition: opacity 0.8s ease; z-index: 1; padding: 0 5%; }
+        .slide.active { opacity: 1; pointer-events: auto; }
+        .content { position: relative; z-index: 10; display: flex; flex-direction: column; align-items: center; gap: 1rem; }
+        .tag { font-size: clamp(0.5rem,0.8rem,0.75rem); letter-spacing: 0.25em; text-transform: uppercase; color: var(--accent); font-weight: 600; }
+        .title { font-weight: 800; font-size: clamp(2rem,4.5vw,4rem); line-height: 1.1; }
+        .title-gradient { background: linear-gradient(135deg, #fff, var(--accent)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .subtitle { font-size: clamp(0.9rem,1.4vw,1.2rem); color: var(--text-muted); max-width: 700px; line-height: 1.6; }
+        
+        /* Cards */
+        .cards-3 { display: grid; grid-template-columns: repeat(3,1fr); gap: 1rem; width: 100%; max-width: 900px; }
+        .card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 14px; padding: 1.2rem; text-align: center; transition: 0.3s; }
+        .card:hover { border-color: var(--primary); transform: translateY(-3px); }
+        .card-icon { font-size: 2rem; margin-bottom: 0.5rem; }
+        .card-title { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.3rem; }
+        .card-desc { font-size: 0.8rem; color: var(--text-muted); }
+        
+        /* Stats */
+        .stats-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 1rem; width: 100%; max-width: 900px; }
+        .stat-box { background: var(--bg-card); border: 1px solid var(--border); border-radius: 14px; padding: 1.2rem; text-align: center; }
+        .stat-num { font-size: 1.8rem; font-weight: 800; background: linear-gradient(135deg, var(--primary), var(--accent)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .stat-label { font-size: 0.75rem; color: var(--text-muted); margin-top: 0.3rem; }
+        
+        /* List */
+        .list-box { display: flex; flex-direction: column; gap: 0.6rem; width: 100%; max-width: 600px; }
+        .list-item { display: flex; align-items: center; gap: 0.8rem; padding: 0.8rem 1rem; background: var(--bg-card); border-radius: 10px; text-align: left; }
+        .list-icon { font-size: 1.2rem; }
+        
+        /* Comparison */
+        .compare { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; width: 100%; max-width: 800px; }
+        .compare-col { padding: 1.5rem; border-radius: 14px; }
+        .compare-ota { background: rgba(239,68,68,0.1); border: 1px solid rgba(239,68,68,0.2); }
+        .compare-ahl { background: rgba(16,185,129,0.1); border: 1px solid rgba(16,185,129,0.2); }
+        .compare-title { font-weight: 700; font-size: 1.2rem; margin-bottom: 0.8rem; }
+        .compare-ota .compare-title { color: var(--danger); }
+        .compare-ahl .compare-title { color: var(--success); }
+        .compare-item { font-size: 0.85rem; color: var(--text-muted); padding: 0.3rem 0; }
+        
+        /* Process */
+        .process { display: flex; align-items: center; justify-content: center; gap: 0.5rem; width: 100%; flex-wrap: wrap; }
+        .process-step { padding: 1rem 1.2rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; text-align: center; min-width: 120px; }
+        .process-step h4 { font-size: 0.9rem; color: var(--accent); margin-bottom: 0.3rem; }
+        .process-step p { font-size: 0.7rem; color: var(--text-muted); }
+        .process-arrow { font-size: 1.5rem; color: var(--primary); }
+        
+        /* Timeline */
+        .timeline { display: flex; justify-content: space-between; width: 100%; max-width: 900px; position: relative; }
+        .timeline::before { content: ''; position: absolute; top: 20px; left: 10%; right: 10%; height: 2px; background: linear-gradient(90deg, var(--primary), var(--accent)); }
+        .timeline-item { display: flex; flex-direction: column; align-items: center; position: relative; z-index: 1; }
+        .timeline-dot { width: 16px; height: 16px; background: var(--primary); border-radius: 50%; box-shadow: 0 0 15px var(--primary); }
+        .timeline-content { text-align: center; margin-top: 1rem; }
+        .timeline-phase { font-weight: 700; font-size: 0.9rem; }
+        .timeline-time { font-size: 0.7rem; color: var(--text-muted); }
+        .timeline-count { font-size: 1.3rem; font-weight: 700; margin-top: 0.3rem; }
+        
+        /* Table */
+        .data-table { width: 100%; max-width: 800px; border-collapse: collapse; font-size: 0.85rem; }
+        .data-table th, .data-table td { padding: 0.8rem; text-align: center; border: 1px solid var(--border); }
+        .data-table th { background: var(--bg-card); color: var(--accent); font-weight: 600; }
+        .data-table td { color: var(--text-muted); }
+        
+        /* Fund pie */
+        .fund-pie { display: flex; align-items: center; gap: 2rem; justify-content: center; }
+        .pie-visual { width: 150px; height: 150px; border-radius: 50%; background: conic-gradient(var(--primary) 0% 40%, var(--accent) 40% 70%, var(--success) 70% 90%, var(--warning) 90% 100%); }
+        .pie-legend { display: flex; flex-direction: column; gap: 0.5rem; text-align: left; font-size: 0.8rem; }
+        .legend-item { display: flex; align-items: center; gap: 0.5rem; }
+        .legend-dot { width: 10px; height: 10px; border-radius: 50%; }
+        
+        /* Nav */
+        .nav { position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%); display: flex; gap: 6px; z-index: 100; padding: 10px 18px; background: rgba(0,0,0,0.7); backdrop-filter: blur(10px); border-radius: 30px; border: 1px solid var(--border); }
+        .dot { width: 7px; height: 7px; border-radius: 50%; background: rgba(255,255,255,0.2); cursor: pointer; transition: 0.3s; }
+        .dot.active { background: var(--accent); transform: scale(1.4); box-shadow: 0 0 10px var(--accent); }
+        .counter { position: fixed; top: 24px; right: 32px; font-size: 14px; color: rgba(255,255,255,0.3); z-index: 100; }
+        
+        .slide.active .title { animation: slideUp 0.8s ease-out; }
+        .slide.active .tag { animation: slideUp 0.8s ease-out 0.2s both; }
+        @keyframes slideUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <div class="viewport">
+            <div class="canvas">
+                <div class="bg"></div>
+                <div class="orb orb-1"></div>
+                <div class="orb orb-2"></div>
+                
+                <!-- Slide 1: Cover -->
+                <div class="slide" :class="{active:cur===0}">
+                    <div class="content">
+                        <p class="tag">商业计划书 · V2.0</p>
+                        <h1 class="title title-gradient">AHL</h1>
+                        <p style="font-size:clamp(1.2rem,2vw,1.8rem);margin-top:0.3rem">AI去中心化旅行服务平台</p>
+                        <p class="subtitle" style="margin-top:1rem">让酒店与旅行者直接连接 · 打破OTA垄断</p>
+                    </div>
+                </div>
+                
+                <!-- Slide 2: Pain Points -->
+                <div class="slide" :class="{active:cur===1}">
+                    <div class="content">
+                        <p class="tag">😰 行业痛点</p>
+                        <h1 class="title">酒店业三大困境</h1>
+                        <div class="cards-3" style="margin-top:1rem">
+                            <div class="card"><div class="card-icon">💸</div><div class="card-title">佣金高昂</div><div class="card-desc">OTA收取15-25%<br>年抽走¥750亿</div></div>
+                            <div class="card"><div class="card-icon">🔒</div><div class="card-title">数据流失</div><div class="card-desc">客户数据被平台掌控<br>无法主动触达</div></div>
+                            <div class="card"><div class="card-icon">📈</div><div class="card-title">流量昂贵</div><div class="card-desc">获客成本涨260%<br>利润空间压缩</div></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Slide 3: Solution -->
+                <div class="slide" :class="{active:cur===2}">
+                    <div class="content">
+                        <p class="tag">💡 解决方案</p>
+                        <h1 class="title">AHL核心优势</h1>
+                        <div class="stats-grid" style="margin-top:1rem">
+                            <div class="stat-box"><div class="stat-num">2-3%</div><div class="stat-label">技术费率</div></div>
+                            <div class="stat-box"><div class="stat-num">95%</div><div class="stat-label">AI匹配率</div></div>
+                            <div class="stat-box"><div class="stat-num">100%</div><div class="stat-label">数据自有</div></div>
+                            <div class="stat-box"><div class="stat-num">9×87</div><div class="stat-label">AGENT×SKILL</div></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Slide 4: Market -->
+                <div class="slide" :class="{active:cur===3}">
+                    <div class="content">
+                        <p class="tag">📊 市场规模</p>
+                        <h1 class="title">市场机会</h1>
+                        <div class="stats-grid" style="margin-top:1rem">
+                            <div class="stat-box"><div class="stat-num">¥5000亿</div><div class="stat-label">酒店市场规模</div></div>
+                            <div class="stat-box"><div class="stat-num">¥750亿</div><div class="stat-label">年佣金池</div></div>
+                            <div class="stat-box"><div class="stat-num">45万+</div><div class="stat-label">酒店数量</div></div>
+                            <div class="stat-box"><div class="stat-num">5%</div><div class="stat-label">目标份额</div></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Slide 5: Compare -->
+                <div class="slide" :class="{active:cur===4}">
+                    <div class="content">
+                        <p class="tag">⚖️ 商业模式对比</p>
+                        <h1 class="title">AHL vs OTA</h1>
+                        <div class="compare" style="margin-top:1rem">
+                            <div class="compare-col compare-ota">
+                                <p class="compare-title">❌ OTA</p>
+                                <p class="compare-item">佣金 15-25%</p>
+                                <p class="compare-item">数据平台掌控</p>
+                                <p class="compare-item">流量越来越贵</p>
+                                <p class="compare-item">有限AI能力</p>
+                            </div>
+                            <div class="compare-col compare-ahl">
+                                <p class="compare-title">✓ AHL</p>
+                                <p class="compare-item">技术费 2-3%</p>
+                                <p class="compare-item">数据商户自有</p>
+                                <p class="compare-item">AI精准匹配</p>
+                                <p class="compare-item">全流程智能化</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Slide 6: Tech -->
+                <div class="slide" :class="{active:cur===5}">
+                    <div class="content">
+                        <p class="tag">⚙️ 技术架构</p>
+                        <h1 class="title">四层智能架构</h1>
+                        <div class="list-box" style="margin-top:1rem">
+                            <div class="list-item"><span class="list-icon">📱</span> Layer 4: 应用交互层 (消费者端 + 商家端 + 开发者平台)</div>
+                            <div class="list-item"><span class="list-icon">🤖</span> Layer 3: 双AGENT智能层 (C端管家 + B端运营官)</div>
+                            <div class="list-item"><span class="list-icon">🧩</span> Layer 2: AGENT集群层 (9大AGENT × 87个SKILL)</div>
+                            <div class="list-item"><span class="list-icon">💾</span> Layer 1: 数据协议层 (向量数据库 + 标准/非标数据)</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Slide 7: Agents -->
+                <div class="slide" :class="{active:cur===6}">
+                    <div class="content">
+                        <p class="tag">🎯 9大AGENT</p>
+                        <h1 class="title">全流程AI赋能</h1>
+                        <div class="cards-3" style="margin-top:1rem;grid-template-columns:repeat(3,1fr)">
+                            <div class="card"><div class="card-title">🏢 运营</div><div class="card-desc">客房/餐饮/客服</div></div>
+                            <div class="card"><div class="card-title">📢 营销</div><div class="card-desc">内容/社媒/活动</div></div>
+                            <div class="card"><div class="card-title">💰 收益</div><div class="card-desc">动态定价/库存</div></div>
+                            <div class="card"><div class="card-title">🔧 工程</div><div class="card-desc">设备/能耗</div></div>
+                            <div class="card"><div class="card-title">🛡️ 安防</div><div class="card-desc">监控/预警</div></div>
+                            <div class="card"><div class="card-title">🎪 宴会</div><div class="card-desc">婚宴/会议</div></div>
+                            <div class="card"><div class="card-title">📊 财务</div><div class="card-desc">对账/报表</div></div>
+                            <div class="card"><div class="card-title">👥 人资</div><div class="card-desc">排班/招聘</div></div>
+                            <div class="card"><div class="card-title">📦 供应</div><div class="card-desc">采购/库存</div></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Slide 8: Roadmap -->
+                <div class="slide" :class="{active:cur===7}">
+                    <div class="content">
+                        <p class="tag">📈 发展路线</p>
+                        <h1 class="title">三年规划</h1>
+                        <div class="timeline" style="margin-top:1.5rem">
+                            <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-content"><p class="timeline-phase">种子期</p><p class="timeline-time">M1-M3</p><p class="timeline-count">50家</p></div></div>
+                            <div class="timeline-item"><div class="timeline-dot" style="background:var(--accent)"></div><div class="timeline-content"><p class="timeline-phase">爆发期</p><p class="timeline-time">M4-M9</p><p class="timeline-count">500家</p></div></div>
+                            <div class="timeline-item"><div class="timeline-dot" style="background:var(--success)"></div><div class="timeline-content"><p class="timeline-phase">平台期</p><p class="timeline-time">M10-M18</p><p class="timeline-count">5000家</p></div></div>
+                            <div class="timeline-item"><div class="timeline-dot" style="background:var(--warning)"></div><div class="timeline-content"><p class="timeline-phase">标准期</p><p class="timeline-time">M19-M36</p><p class="timeline-count">30%份额</p></div></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Slide 9: Revenue -->
+                <div class="slide" :class="{active:cur===8}">
+                    <div class="content">
+                        <p class="tag">💰 盈利预测</p>
+                        <h1 class="title">收入模型</h1>
+                        <table class="data-table" style="margin-top:1rem">
+                            <tr><th>年份</th><th>GMV</th><th>技术服务</th><th>AI增值</th><th>净利润</th></tr>
+                            <tr><td>2026</td><td>¥1亿</td><td>¥250万</td><td>¥100万</td><td style="color:var(--danger)">-¥200万</td></tr>
+                            <tr><td>2027</td><td>¥10亿</td><td>¥2000万</td><td>¥500万</td><td style="color:var(--success)">¥800万</td></tr>
+                            <tr><td>2028</td><td>¥50亿</td><td>¥1亿</td><td>¥2000万</td><td style="color:var(--success)">¥5000万</td></tr>
+                        </table>
+                    </div>
+                </div>
+                
+                <!-- Slide 10: Funding -->
+                <div class="slide" :class="{active:cur===9}">
+                    <div class="content">
+                        <p class="tag">🎯 融资计划</p>
+                        <h1 class="title">种子轮</h1>
+                        <div class="stats-grid" style="margin-top:1rem;grid-template-columns:repeat(2,1fr);max-width:500px">
+                            <div class="stat-box"><div class="stat-num">500-800万</div><div class="stat-label">融资规模</div></div>
+                            <div class="stat-box"><div class="stat-num">15-20%</div><div class="stat-label">出让股份</div></div>
+                        </div>
+                        <p class="subtitle" style="margin-top:1rem">投后估值 3000-5000万</p>
+                    </div>
+                </div>
+                
+                <!-- Slide 11: Use of Funds -->
+                <div class="slide" :class="{active:cur===10}">
+                    <div class="content">
+                        <p class="tag">📊 资金用途</p>
+                        <h1 class="title">资金分配</h1>
+                        <div class="fund-pie" style="margin-top:1rem">
+                            <div class="pie-visual"></div>
+                            <div class="pie-legend">
+                                <div class="legend-item"><span class="legend-dot" style="background:var(--primary)"></span> 技术团队 40%</div>
+                                <div class="legend-item"><span class="legend-dot" style="background:var(--accent)"></span> 数据体系 30%</div>
+                                <div class="legend-item"><span class="legend-dot" style="background:var(--success)"></span> 市场拓展 20%</div>
+                                <div class="legend-item"><span class="legend-dot" style="background:var(--warning)"></span> 合规储备 10%</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Slide 12: Process -->
+                <div class="slide" :class="{active:cur===11}">
+                    <div class="content">
+                        <p class="tag">⚙️ 运营流程</p>
+                        <h1 class="title">标准化服务流程</h1>
+                        <div class="process" style="margin-top:1rem">
+                            <div class="process-step"><h4>1.入驻</h4><p>资料提交</p></div>
+                            <span class="process-arrow">→</span>
+                            <div class="process-step"><h4>2.审核</h4><p>1-3天</p></div>
+                            <span class="process-arrow">→</span>
+                            <div class="process-step"><h4>3.配置</h4><p>AI初始化</p></div>
+                            <span class="process-arrow">→</span>
+                            <div class="process-step"><h4>4.上线</h4><p>开始运营</p></div>
+                            <span class="process-arrow">→</span>
+                            <div class="process-step"><h4>5.优化</h4><p>持续迭代</p></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Slide 13: Contact -->
+                <div class="slide" :class="{active:cur===12}">
+                    <div class="content">
+                        <p class="tag">🤝 合作邀请</p>
+                        <h1 class="title">加入AHL生态</h1>
+                        <div class="list-box" style="margin-top:1rem">
+                            <div class="list-item"><span class="list-icon">🏨</span> 酒店/民宿商户 - 享受2-3%超低费率</div>
+                            <div class="list-item"><span class="list-icon">🤝</span> 渠道合作伙伴 - 旅行社、会展公司</div>
+                            <div class="list-item"><span class="list-icon">💻</span> 技术合作伙伴 - AI公司、数据服务商</div>
+                            <div class="list-item"><span class="list-icon">💰</span> 投资人 - 种子轮投资机会</div>
+                        </div>
+                        <p class="subtitle" style="margin-top:1.5rem">联系人: 张实 | 17760348653</p>
+                    </div>
+                </div>
+                
+                <!-- Slide 14: End -->
+                <div class="slide" :class="{active:cur===13}">
+                    <div class="content">
+                        <h1 class="title-gradient">感谢关注</h1>
+                        <p class="subtitle" style="margin-top:1rem">AHL · AI去中心化旅行服务平台</p>
+                        <p class="tag" style="margin-top:2rem">让旅行更直接 · 让酒店更自主</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="nav"><div v-for="i in 14" :key="i" class="dot" :class="{active:cur===i-1}" @click="cur=i-1"></div></div>
+        <div class="counter">{{cur+1}} / 14</div>
+    </div>
+    <script>
+        const {createApp, ref} = Vue;
+        createApp({setup(){const cur = ref(0);window.addEventListener('keydown',e=>{if(e.key==='ArrowRight'||e.key===' '||e.key==='ArrowDown'){if(cur.value<13)cur.value++}if(e.key==='ArrowLeft'||e.key==='ArrowUp'){if(cur.value>0)cur.value--}});return{cur}}}).mount('#app');
+    </script>
+</body>
+</html>
