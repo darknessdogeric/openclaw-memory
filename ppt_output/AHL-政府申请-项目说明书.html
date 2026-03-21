@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AHL去中心化住宿业交易生态协议 - 政府申请</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+    <style>
+        :root { --primary: #1e3a5f; --primary-light: #2d5a87; --accent: #c9a227; --gold: #d4af37; --success: #2e7d32; --bg: #0a0f1a; --text: #fff; --text-muted: #b0c4de; --card: rgba(255,255,255,0.06); --border: rgba(201,162,39,0.2); }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Noto Sans SC', sans-serif; background: #000; color: var(--text); overflow: hidden; }
+        .viewport { width: 100vw; height: 100vh; display: flex; justify-content: center; align-items: center; background: #000; }
+        .canvas { position: relative; width: 100vw; height: 56.25vw; max-height: 100vh; max-width: 177.78vh; overflow: hidden; background: linear-gradient(145deg, #0a0f1a 0%, #1a2332 50%, #0d1520 100%); }
+        .bg { position: absolute; inset: 0; background: radial-gradient(ellipse at 10% 20%, rgba(30,58,95,0.4) 0%, transparent 50%), radial-gradient(ellipse at 90% 80%, rgba(201,162,39,0.15) 0%, transparent 40%); }
+        .grid { position: absolute; inset: 0; background-image: linear-gradient(rgba(201,162,39,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(201,162,39,0.03) 1px, transparent 1px); background-size: 40px 40px; }
+        .corner { position: absolute; width: 80px; height: 80px; border: 2px solid var(--gold); opacity: 0.3; }
+        .corner.tl { top: 20px; left: 20px; border-right: none; border-bottom: none; }
+        .corner.tr { top: 20px; right: 20px; border-left: none; border-bottom: none; }
+        .corner.bl { bottom: 20px; left: 20px; border-right: none; border-top: none; }
+        .corner.br { bottom: 20px; right: 20px; border-left: none; border-top: none; }
+        .slide { position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; opacity: 0; pointer-events: none; transition: opacity 0.6s ease; z-index: 1; padding: 0 5%; }
+        .slide.active { opacity: 1; pointer-events: auto; }
+        .content { position: relative; z-index: 10; display: flex; flex-direction: column; align-items: center; gap: 0.8rem; }
+        .tag { font-size: clamp(0.45rem,0.7vw,0.7rem); letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold); font-weight: 600; margin-bottom: 0.3rem; }
+        .title { font-weight: 800; font-size: clamp(1.8rem,3.8vw,3.2rem); line-height: 1.15; }
+        .title-gold { background: linear-gradient(135deg, #fff 0%, var(--gold) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .subtitle { font-size: clamp(0.8rem,1.2vw,1rem); color: var(--text-muted); max-width: 750px; line-height: 1.5; }
+        .cards-3 { display: grid; grid-template-columns: repeat(3,1fr); gap: 0.8rem; width: 100%; max-width: 900px; }
+        .cards-4 { display: grid; grid-template-columns: repeat(4,1fr); gap: 0.7rem; width: 100%; max-width: 950px; }
+        .cards-2 { display: grid; grid-template-columns: repeat(2,1fr); gap: 1rem; width: 100%; max-width: 800px; }
+        .card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 1rem; text-align: center; transition: 0.3s; }
+        .card:hover { border-color: var(--gold); transform: translateY(-2px); }
+        .card-icon { font-size: 1.6rem; margin-bottom: 0.3rem; }
+        .card-title { font-size: 0.95rem; font-weight: 700; margin-bottom: 0.2rem; }
+        .card-desc { font-size: 0.7rem; color: var(--text-muted); line-height: 1.4; }
+        .stats-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 0.7rem; width: 100%; max-width: 920px; }
+        .stat-box { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 1rem; text-align: center; }
+        .stat-num { font-size: 1.5rem; font-weight: 800; background: linear-gradient(135deg, var(--gold), var(--primary-light)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .stat-label { font-size: 0.65rem; color: var(--text-muted); margin-top: 0.25rem; }
+        .list-box { display: flex; flex-direction: column; gap: 0.5rem; width: 100%; max-width: 680px; }
+        .list-item { display: flex; align-items: flex-start; gap: 0.6rem; padding: 0.6rem 0.8rem; background: var(--card); border-radius: 8px; text-align: left; }
+        .list-icon { font-size: 1rem; min-width: 1.2rem; }
+        .list-text { font-size: 0.8rem; line-height: 1.4; }
+        .data-table { width: 100%; max-width: 850px; border-collapse: collapse; font-size: 0.75rem; }
+        .data-table th, .data-table td { padding: 0.5rem 0.6rem; text-align: center; border: 1px solid var(--border); }
+        .data-table th { background: var(--card); color: var(--gold); font-weight: 600; font-size: 0.7rem; }
+        .data-table td { color: var(--text-muted); }
+        .timeline { display: flex; justify-content: space-between; width: 100%; max-width: 920px; position: relative; }
+        .timeline::before { content: ''; position: absolute; top: 15px; left: 8%; right: 8%; height: 2px; background: linear-gradient(90deg, var(--primary), var(--gold)); }
+        .timeline-item { display: flex; flex-direction: column; align-items: center; position: relative; z-index: 1; flex: 1; }
+        .timeline-dot { width: 12px; height: 12px; background: var(--gold); border-radius: 50%; box-shadow: 0 0 12px var(--gold); }
+        .timeline-content { text-align: center; margin-top: 0.8rem; }
+        .timeline-phase { font-weight: 700; font-size: 0.75rem; }
+        .timeline-time { font-size: 0.6rem; color: var(--text-muted); margin-top: 0.2rem; }
+        .timeline-desc { font-size: 0.6rem; color: var(--gold); margin-top: 0.2rem; }
+        .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; width: 100%; max-width: 850px; }
+        .col-box { padding: 1rem; background: var(--card); border: 1px solid var(--border); border-radius: 10px; }
+        .col-title { font-weight: 700; font-size: 0.9rem; margin-bottom: 0.6rem; color: var(--gold); }
+        .req-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 0.8rem; width: 100%; max-width: 900px; }
+        .req-box { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 0.8rem; text-align: center; }
+        .req-title { font-weight: 700; font-size: 0.85rem; color: var(--gold); margin-bottom: 0.4rem; }
+        .req-val { font-size: 1.2rem; font-weight: 800; }
+        .compare { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; width: 100%; max-width: 780px; }
+        .compare-col { padding: 1rem; border-radius: 10px; }
+        .compare-old { background: rgba(183,28,28,0.15); border: 1px solid rgba(183,28,28,0.3); }
+        .compare-new { background: rgba(46,125,50,0.15); border: 1px solid rgba(46,125,50,0.3); }
+        .compare-title { font-weight: 700; font-size: 1rem; margin-bottom: 0.5rem; }
+        .compare-old .compare-title { color: #ef5350; }
+        .compare-new .compare-title { color: #66bb6a; }
+        .compare-item { font-size: 0.7rem; color: var(--text-muted); padding: 0.2rem 0; }
+        .flow { display: flex; align-items: center; justify-content: center; gap: 0.3rem; flex-wrap: wrap; width: 100%; max-width: 850px; }
+        .flow-step { padding: 0.6rem 0.8rem; background: var(--card); border: 1px solid var(--border); border-radius: 8px; text-align: center; min-width: 90px; }
+        .flow-step h4 { font-size: 0.7rem; color: var(--gold); }
+        .flow-arrow { font-size: 1.2rem; color: var(--gold); }
+        .nav { position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); display: flex; gap: 5px; z-index: 100; padding: 8px 14px; background: rgba(0,0,0,0.8); backdrop-filter: blur(10px); border-radius: 25px; border: 1px solid var(--border); }
+        .dot { width: 6px; height: 6px; border-radius: 50%; background: rgba(255,255,255,0.2); cursor: pointer; transition: 0.3s; }
+        .dot.active { background: var(--gold); transform: scale(1.4); box-shadow: 0 0 8px var(--gold); }
+        .counter { position: fixed; top: 20px; right: 28px; font-size: 12px; color: rgba(255,255,255,0.3); z-index: 100; }
+        .slide.active .title { animation: slideUp 0.7s ease-out; }
+        .slide.active .tag { animation: slideUp 0.7s ease-out 0.15s both; }
+        @keyframes slideUp { from{opacity:0;transform:translateY(25px)} to{opacity:1;transform:translateY(0)} }
+        .section-num { position: absolute; top: 30px; left: 40px; font-size: 3rem; font-weight: 900; color: rgba(201,162,39,0.1); z-index: 0; }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <div class="viewport">
+            <div class="canvas">
+                <div class="bg"></div>
+                <div class="grid"></div>
+                <div class="corner tl"></div><div class="corner tr"></div>
+                <div class="corner bl"></div><div class="corner br"></div>
+                
+                <!-- Slide 1: Cover -->
+                <div class="slide" :class="{active:cur===0}">
+                    <div class="content">
+                        <p class="tag">政府专项申请项目</p>
+                        <h1 class="title title-gold">AHL去中心化住宿业<br>交易生态协议</h1>
+                        <p style="font-size:clamp(1rem,1.5vw,1.3rem);margin-top:0.5rem;color:var(--text-muted)">人工智能 + Web3.0 融合创新项目</p>
+                        <div style="margin-top:1.5rem;padding:0.8rem 1.5rem;background:var(--card);border:1px solid var(--border);border-radius:8px">
+                            <p style="font-size:0.8rem;color:var(--gold)">申请单位：AHL智能科技有限公司（筹）</p>
+                            <p style="font-size:0.75rem;color:var(--text-muted);margin-top:0.3rem">项目负责人：张实 | 电话：17760348653</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Slide 2: 项目概述 -->
+                <div class="slide" :class="{active:cur===1}">
+                    <span class="section-num">01</span>
+                    <div class="content">
+                        <p class="tag">项目概述</p>
+                        <h1 class="title">核心定位</h1>
+                        <p class="subtitle" style="margin-top:0.8rem">构建全球首个基于大语言模型的去中心化住宿业交易生态协议</p>
+                        <div class="cards-3" style="margin-top:1rem">
+                            <div class="card"><div class="card-icon">🔄</div><div class="card-title">范式革命</div><div class="card-desc">从"货架经济"到"客户经济"<br>从"人找货"到"双向智能匹配"</div></div>
+                            <div class="card"><div class="card-icon">🌐</div><div class="card-title">协议标准</div><div class="card-desc">全球首个住宿业AI交易协议<br>去中心化C2B交易协议</div></div>
+                            <div class="card"><div class="card-icon">💰</div><div class="card-title">成本革命</div><div class="card-desc">交易成本从20%降至3-5%<br>年节省行业费用¥1000亿+</div></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Slide 3: 行业痛点 -->
+                <div class="slide" :class="{active:cur===2}">
+                    <span class="section-num">02</span>
+                    <div class="content">
+                        <p class="tag">行业痛点与变革机遇</p>
+                        <h1 class="title">三大顽疾</h1>
+                        <div class="stats-grid" style="margin-top:1rem">
+                            <div class="stat-box"><div class="stat-num">20-30%</div><div class="stat-label">OTA垄断佣金</div></div>
+                            <div class="stat-box"><div class="stat-num">¥1200亿</div><div class="stat-label">年损失佣金</div></div>
+                            <div class="stat-box"><div class="stat-num">&lt;3%</div><div class="stat-label">匹配转化率</div></div>
+                            <div class="stat-box"><div class="stat-num">¥600亿</div><div class="stat-label">营销浪费</div></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Slide 4: 模式对比 -->
+                <div class="slide" :class="{active:cur===3}">
+                    <span class="section-num">03</span>
+                    <div class="content">
+                        <p class="tag">新旧模式对比</p>
+                        <h1 class="title">范式革命</h1>
+                        <div class="compare" style="margin-top:1rem">
+                            <div class="compare-col compare-old">
+                                <p class="compare-title">❌ 旧范式：OTA货架模式</p>
+                                <p class="compare-item">• 商家把产品摆到货架</p>
+                                <p class="compare-item">• 消费者自己挑选</p>
+                                <p class="compare-item">• 信息过载、匹配低效</p>
+                                <p class="compare-item">• 三方博弈、佣金高昂</p>
+                            </div>
+                            <div class="compare-col compare-new">
+                                <p class="compare-title">✓ 新范式：AHL客户模式</p>
+                                <p class="compare-item">• AI理解双方需求</p>
+                                <p class="compare-item">• 主动精准匹配</p>
+                                <p class="compare-item">• 自然对话、双向匹配</p>
+                                <p class="compare-item">• 三方共赢、效率费3-5%</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Slide 5: 技术架构 -->
+                <div class="slide" :class="{active:cur===4}">
+                    <span class="section-num">04</span>
+                    <div class="content">
+                        <p class="tag">技术架构</p>
+                        <h1 class="title">双AGENT+多SKILL协议栈</h1>
+                        <div class="flow" style="margin-top:1rem">
+                            <div class="flow-step"><h4>C端AI管家</h4><p style="font-size:0.6rem;color:var(--text-muted)">客户需求理解</p></div>
+                            <span class="flow-arrow">→</span>
+                            <div class="flow-step"><h4>匹配引擎</h4><p style="font-size:0.6rem;color:var(--text-muted)">向量语义匹配</p></div>
+                            <span class="flow-arrow">→</span>
+                            <div class="flow-step"><h4>B端AI运营官</h4><p style="font-size:0.6rem;color:var(--text-muted)">商家服务响应</p></div>
+                        </div>
+                        <div class="cards-4" style="margin-top:0.8rem">
+                            <div class="card"><div class="card-title">9大AGENT</div><div class="card-desc">运营/营销/收益/宴会/工程/安防/财务/人资/供应</div></div>
+                            <div class="card"><div class="card-title">87个SKILL</div><div class="card-desc">可插拔模块<br>按需订阅</div></div>
+                            <div class="card"><div class="card-title">向量匹配</div><div class="card-desc">准确率>95%<br>检索&lt;100ms</div></div>
+                            <div class="card"><div class="card-title">LLM底座</div><div class="card-desc">DeepSeek<br>中文优化</div></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Slide 6: 交易流程 -->
+                <div class="slide" :class="{active:cur===5}">
+                    <span class="section-num">05</span>
+                    <div class="content">
+                        <p class="tag">C2B直连交易闭环</p>
+                        <h1 class="title">交易流程</h1>
+                        <div class="list-box" style="margin-top:1rem">
+                            <div class="list-item"><span class="list-icon">1️⃣</span><span class="list-text"><b>需求表达</b>：客户自然语言描述需求</span></div>
+                            <div class="list-item"><span class="list-icon">2️⃣</span><span class="list-text"><b>AI理解</b>：意图识别+实体提取+向量化</span></div>
+                            <div class="list-item"><span class="list-icon">3️⃣</span><span class="list-text"><b>向量匹配</b>：检索Top-10匹配商家</span></div>
+                            <div class="list-item"><span class="list-icon">4️⃣</span><span class="list-text"><b>智能响应</b>：实时房态+动态报价</span></div>
+                            <div class="list-item"><span class="list-icon">5️⃣</span><span class="list-text"><b>支付确认</b>：直连支付，智能合约保障</span></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Slide 7: 里程碑 -->
+                <div class="slide" :class="{active:cur===6}">
+                    <span class="section-num">06</span>
+                    <div class="content">
+                        <p class="tag">建设方案</p>
+                        <h1 class="title">四年发展规划</h1>
+                        <div class="timeline" style="margin-top:1.2rem">
+                            <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-content"><p class="timeline-phase">Phase 1</p><p class="timeline-time">0-6月</p><p class="timeline-desc">协议核心研发</p></div></div>
+                            <div class="timeline-item"><div class="timeline-dot" style="background:var(--primary-light)"></div><div class="timeline-content"><p class="timeline-phase">Phase 2</p><p class="timeline-time">6-12月</p><p class="timeline-desc">AGENT矩阵</p></div></div>
+                            <div class="timeline-item"><div class="timeline-dot" style="background:var(--primary-light)"></div><div class="timeline-content"><p class="timeline-phase">Phase 3</p><p class="timeline-time">12-24月</p><p class="timeline-desc">生态规模化</p></div></div>
+                            <div class="timeline-item"><div class="timeline-dot" style="background:var(--primary-light)"></div><div class="timeline-content"><p class="timeline-phase">Phase 4</p><p class="timeline-time">24-36月</p><p class="timeline-desc">全球化</p></div></div>
+                        </div>
+                        <div class="cards-4" style="margin-top:1rem">
+                            <div class="card"><div class="card-title">100家</div><div class="card-desc">Phase 2商家</div></div>
+                            <div class="card"><div class="card-title">500家</div><div class="card-desc">Phase 3商家</div></div>
+                            <div class="card"><div class="card-title">¥5000万</div><div class="card-desc">月GMV目标</div></div>
+                            <div class="card"><div class="card-title">行业标准</div><div class="card-desc">协议影响力</div></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Slide 8: 团队 -->
+                <div class="slide" :class="{active:cur===7}">
+                    <span class="section-num">07</span>
+                    <div class="content">
+                        <p class="tag">核心团队</p>
+                        <h1 class="title">黄金三角</h1>
+                        <div class="cards-3" style="margin-top:1rem">
+                            <div class="card"><div class="card-icon">👤</div><div class="card-title">张实</div><div class="card-desc">项目总控/发起人<br>24年酒店业老兵<br>战略/资源/政府关系</div></div>
+                            <div class="card"><div class="card-icon">👤</div><div class="card-title">CTO [待补充]</div><div class="card-desc">AI技术架构构建者<br>华科AI博士<br>10年+AI研发经验</div></div>
+                            <div class="card"><div class="card-icon">👤</div><div class="card-title">CSO [待补充]</div><div class="card-desc">战略与生态推动者<br>世界500强高管<br>PE/VC投资经验</div></div>
+                        </div>
+                        <p class="subtitle" style="margin-top:1rem">产业+技术+资本，覆盖从0到1到10到100</p>
+                    </div>
+                </div>
+                
+                <!-- Slide 9: 申请支持 -->
+                <div class="slide" :class="{active:cur===8}">
+                    <span class="section-num">08</span>
+                    <div class="content">
+                        <p class="tag">申请支持事项</p>
+                        <h1 class="title">三大支持</h1>
+                        <div class="req-grid" style="margin-top:1rem">
+                            <div class="req-box">
+                                <p class="req-title">💻 算力支持</p>
+                                <p class="req-val" style="color:var(--gold)">¥800万/年</p>
+                                <p style="font-size:0.65rem;color:var(--text-muted);margin-top:0.3rem">GPU集群74台<br>智算中心入驻/算力券</p>
+                            </div>
+                            <div class="req-box">
+                                <p class="req-title">🏢 办公场地</p>
+                                <p class="req-val" style="color:var(--gold)">¥108万</p>
+                                <p style="font-size:0.65rem;color:var(--text-muted);margin-top:0.3rem">500-800㎡<br>数字经济产业园</p>
+                            </div>
+                            <div class="req-box">
+                                <p class="req-title">🖥️ 硬件设备</p>
+                                <p class="req-val" style="color:var(--gold)">¥575万</p>
+                                <p style="font-size:0.65rem;color:var(--text-muted);margin-top:0.3rem">A100服务器/存储<br>设备购置补贴50%</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Slide 10: 经济效益 -->
+                <div class="slide" :class="{active:cur===9}">
+                    <span class="section-num">09</span>
+                    <div class="content">
+                        <p class="tag">经济社会效益</p>
+                        <h1 class="title">经济效益预测</h1>
+                        <table class="data-table" style="margin-top:1rem">
+                            <tr><th>年份</th><th>GMV</th><th>平台收入</th><th>为行业节省</th><th>净利润</th></tr>
+                            <tr><td>Year 1</td><td>¥5,000万</td><td>¥250万</td><td>-</td><td style="color:#ef5350">-¥500万</td></tr>
+                            <tr><td>Year 2</td><td>¥3亿</td><td>¥1,500万</td><td>¥150万</td><td style="color:#66bb6a">¥300万</td></tr>
+                            <tr><td>Year 3</td><td>¥10亿</td><td>¥5,000万</td><td>¥600万</td><td style="color:#66bb6a">¥1,500万</td></tr>
+                            <tr><td>Year 4</td><td>¥50亿</td><td>¥2.5亿</td><td>¥3,000万</td><td style="color:#66bb6a">¥8,000万</td></tr>
+                        </table>
+                        <div class="cards-4" style="margin-top:0.8rem">
+                            <div class="card"><div class="card-title">¥1000亿+</div><div class="card-desc">年节省OTA佣金</div></div>
+                            <div class="card"><div class="card-title">¥500亿</div><div class="card-desc">数据资产估值</div></div>
+                            <div class="card"><div class="card-title">100人</div><div class="card-desc">直接就业</div></div>
+                            <div class="card"><div class="card-title">500人</div><div class="card-desc">带动产业链</div></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Slide 11: 社会效益 -->
+                <div class="slide" :class="{active:cur===10}">
+                    <span class="section-num">10</span>
+                    <div class="content">
+                        <p class="tag">社会效益</p>
+                        <h1 class="title">核心价值</h1>
+                        <div class="cards-3" style="margin-top:1rem">
+                            <div class="card"><div class="card-icon">🏆</div><div class="card-title">产业变革</div><div class="card-desc">打破OTA垄断<br>建立公平透明交易环境<br>推动平台经济向协议经济转型</div></div>
+                            <div class="card"><div class="card-icon">💡</div><div class="card-title">技术创新</div><div class="card-desc">全球首个住宿业AI交易协议<br>AI+Web3.0融合创新标杆</div></div>
+                            <div class="card"><div class="card-icon">🔒</div><div class="card-title">数据安全</div><div class="card-desc">商家数据自主可控<br>打破平台数据垄断<br>建立行业数据确权标准</div></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Slide 12: 投资预算 -->
+                <div class="slide" :class="{active:cur===11}">
+                    <span class="section-num">11</span>
+                    <div class="content">
+                        <p class="tag">投资预算</p>
+                        <h1 class="title">四年总投入 ¥8000万</h1>
+                        <div class="two-col" style="margin-top:1rem">
+                            <div class="col-box">
+                                <p class="col-title">资金用途</p>
+                                <div class="list-item" style="margin-bottom:0.3rem"><span>💰</span><span style="font-size:0.75rem">算力成本 ¥3000万 (38%)</span></div>
+                                <div class="list-item" style="margin-bottom:0.3rem"><span>💰</span><span style="font-size:0.75rem">研发投入 ¥2000万 (25%)</span></div>
+                                <div class="list-item" style="margin-bottom:0.3rem"><span>💰</span><span style="font-size:0.75rem">硬件设备 ¥1150万 (14%)</span></div>
+                                <div class="list-item" style="margin-bottom:0.3rem"><span>💰</span><span style="font-size:0.75rem">市场推广 ¥800万 (10%)</span></div>
+                                <div class="list-item"><span>💰</span><span style="font-size:0.75rem">运营+生态 ¥1050万 (13%)</span></div>
+                            </div>
+                            <div class="col-box">
+                                <p class="col-title">资金筹措</p>
+                                <div class="list-item" style="margin-bottom:0.3rem"><span>🏦</span><span style="font-size:0.75rem">天使轮 ¥800万</span></div>
+                                <div class="list-item" style="margin-bottom:0.3rem"><span>🏦</span><span style="font-size:0.75rem">Pre-A轮 ¥2000万</span></div>
+                                <div class="list-item" style="margin-bottom:0.3rem"><span>🏦</span><span style="font-size:0.75rem">A轮 ¥5000万</span></div>
+                                <div class="list-item"><span>🏛️</span><span style="font-size:0.75rem">政府支持 ¥1500万等值</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Slide 13: 风险 -->
+                <div class="slide" :class="{active:cur===12}">
+                    <span class="section-num">12</span>
+                    <div class="content">
+                        <p class="tag">风险分析与对策</p>
+                        <h1 class="title">主要风险</h1>
+                        <table class="data-table" style="margin-top:1rem">
+                            <tr><th>风险类型</th><th>风险描述</th><th>等级</th><th>应对措施</th></tr>
+                            <tr><td>技术风险</td><td>大模型效果不达预期</td><td style="color:#ffa726">中</td><td>多模型融合、人工兜底</td></tr>
+                            <tr><td>市场风险</td><td>商家接受度低</td><td style="color:#ffa726">中</td><td>免费试用、效果保障</td></tr>
+                            <tr><td>竞争风险</td><td>OTA巨头反击</td><td style="color:#ef5350">高</td><td>差异化定位、生态联盟</td></tr>
+                            <tr><td>政策风险</td><td>数据监管趋严</td><td style="color:#66bb6a">低</td><td>合规先行、本地化部署</td></tr>
+                            <tr><td>资金风险</td><td>融资不及预期</td><td style="color:#ffa726">中</td><td>控制烧钱、多元化融资</td></tr>
+                        </table>
+                    </div>
+                </div>
+                
+                <!-- Slide 14: 结尾 -->
+                <div class="slide" :class="{active:cur===13}">
+                    <div class="content">
+                        <h1 class="title title-gold">恳请政府支持</h1>
+                        <p class="subtitle" style="margin-top:1rem">打造全球领先的AI交易协议<br>推动住宿业数字化转型</p>
+                        <div style="margin-top:1.5rem;padding:1rem 1.5rem;background:var(--card);border:1px solid var(--border);border-radius:8px">
+                            <p style="font-size:0.8rem;color:var(--gold)">联系人：张实</p>
+                            <p style="font-size:0.75rem;color:var(--text-muted);margin-top:0.3rem">电话/微信：177
