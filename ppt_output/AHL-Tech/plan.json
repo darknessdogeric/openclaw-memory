@@ -1,0 +1,441 @@
+{
+  "title": "AHL-LLM去中心化旅行平台 技术项目说明",
+  "total_slides": 14,
+  "style_preset": "gradient_modern",
+  "style_goal": "科技感强的AI项目技术说明PPT，渐变蓝紫粉，多层毛玻璃，浮动3D元素，现代技术风格。",
+  "style_anchor_strategy": "sample_first_then_full_batch",
+  "image_provider": "runninghub_g31",
+  "provider_options": {
+    "model": "rhart-image-n-g31-flash"
+  },
+  "resolution": "4k",
+  "aspect_ratio": "16:9",
+  "slides": [
+    {
+      "slide_number": 1,
+      "page_type": "cover",
+      "style_preset": "gradient_modern",
+      "page_goal": "封面页，展示AHL技术项目名称",
+      "page_identity": "Generate a 16:9 Chinese tech project PPT cover page with gradient modern style.",
+      "content": "封面",
+      "native_structure_lock": "Keep as cover page.",
+      "reading_path": "top to bottom",
+      "style_notes": "Use gradient blue-purple-pink, glassmorphism, floating 3D elements, futuristic tech feel.",
+      "text_density": "low",
+      "approved_text_lines": [
+        "AHL-LLM",
+        "去中心化旅行平台",
+        "技术项目说明",
+        "住宿业首个"大模型+双AGENT"智能托管平台",
+        "基于DeepSeek/Qwen开源模型微调"
+      ],
+      "text_regions": [
+        "title zone: AHL-LLM",
+        "subtitle zone: 去中心化旅行平台",
+        "description zone: 技术项目说明"
+      ],
+      "must_keep_elements": [
+        "gradient blue-purple-pink",
+        "glassmorphism",
+        "floating 3D elements"
+      ],
+      "prompt_override": "Generate a 16:9 Chinese tech project PPT cover page, not a poster. Page type: cover. Reading path: top to bottom. Composition: large title zone with tech feel. Style: gradient modern, blue purple pink gradient, glassmorphism, floating 3D elements, futuristic tech, modern software style, dark background with colorful glows. Text rule: only show the following text, each line once only. 【页面文字】\nAHL-LLM\n去中心化旅行平台\n技术项目说明\n住宿业首个"大模型+双AGENT"智能托管平台\n基于DeepSeek/Qwen开源模型微调"
+    },
+    {
+      "slide_number": 2,
+      "page_type": "overview",
+      "style_preset": "gradient_modern",
+      "page_goal": "项目概述，展示AHL的核心定位和技术架构",
+      "page_identity": "Generate a 16:9 Chinese tech PPT overview page showing core positioning and tech architecture.",
+      "content": "项目概述",
+      "native_structure_lock": "Keep as overview page.",
+      "reading_path": "top to bottom",
+      "style_notes": "Use gradient modern, tech diagram style.",
+      "text_density": "medium",
+      "approved_text_lines": [
+        "项目概述",
+        "一句话定位",
+        "AHL是住宿业首个'大模型+双AGENT'智能托管平台",
+        "核心技术栈",
+        "DeepSeek/Qwen开源大模型微调",
+        "12,000+字PP&SOP知识库",
+        "80+专业SKILLs可插拔体系",
+        "向量匹配算法<3秒响应",
+        "7×24h全天候无间断服务"
+      ],
+      "text_regions": [
+        "title zone: 项目概述",
+        "main content zone: 技术栈描述"
+      ],
+      "prompt_override": "Generate a 16:9 Chinese tech PPT overview page. Page type: overview. Reading path: top to bottom. Composition: title zone at top, content cards below. Style: gradient modern, blue purple pink gradient, glassmorphism, floating 3D elements, futuristic tech. Text rule: only show the following text, each line once only. 【页面文字】\n项目概述\n一句话定位\nAHL是住宿业首个"大模型+双AGENT"智能托管平台\n核心技术栈\nDeepSeek/Qwen开源大模型微调\n12,000+字PP&SOP知识库\n80+专业SKILLs可插拔体系\n向量匹配算法<3秒响应\n7×24h全天候无间断服务"
+    },
+    {
+      "slide_number": 3,
+      "page_type": "architecture",
+      "style_preset": "gradient_modern",
+      "page_goal": "展示四层技术架构图",
+      "page_identity": "Generate a 16:9 Chinese tech PPT architecture page showing the 4-layer tech stack.",
+      "content": "四层技术架构",
+      "native_structure_lock": "Keep as architecture diagram.",
+      "reading_path": "top to bottom",
+      "style_notes": "Use gradient modern, tech diagram style with clear layer separation.",
+      "text_density": "medium",
+      "approved_text_lines": [
+        "四层技术架构",
+        "第一层：大模型层 (AHL-LLM)",
+        "基于DeepSeek/Qwen开源模型微调",
+        "注入酒店行业知识库",
+        "第二层：AGENT层",
+        "C端AI管家 | B端AI运营官",
+        "第三层：SKILL层",
+        "80+可插拔专业SKILLs",
+        "第四层：向量匹配引擎",
+        "<3秒响应 | 95%+匹配准确率"
+      ],
+      "text_regions": [
+        "title zone: 四层技术架构",
+        "layer 1: 大模型层",
+        "layer 2: AGENT层",
+        "layer 3: SKILL层",
+        "layer 4: 向量匹配引擎"
+      ],
+      "prompt_override": "Generate a 16:9 Chinese tech PPT architecture page. Page type: architecture diagram. Reading path: top to bottom. Composition: title at top, 4 horizontal layers stacked vertically with clear separation. Style: gradient modern, blue purple pink gradient, glassmorphism, floating 3D elements, futuristic tech, tech diagram feel. Text rule: only show the following text, each line once only. 【页面文字】\n四层技术架构\n第一层：大模型层 (AHL-LLM)\n基于DeepSeek/Qwen开源模型微调\n注入酒店行业知识库\n第二层：AGENT层\nC端AI管家 | B端AI运营官\n第三层：SKILL层\n80+可插拔专业SKILLs\n第四层：向量匹配引擎\n<3秒响应 | 95%+匹配准确率"
+    },
+    {
+      "slide_number": 4,
+      "page_type": "detail",
+      "style_preset": "gradient_modern",
+      "page_goal": "展示C端AI管家功能详情",
+      "page_identity": "Generate a 16:9 Chinese tech PPT detail page for C-end AI Butler.",
+      "content": "C端AI管家",
+      "native_structure_lock": "Keep as feature detail page.",
+      "reading_path": "left to right",
+      "style_notes": "Use gradient modern, feature cards layout.",
+      "text_density": "medium",
+      "approved_text_lines": [
+        "C端AI管家",
+        "消费者的7×24小时智能旅行助手",
+        "智能预订",
+        "自然语言交互，3分钟完成预订",
+        "行程规划",
+        "基于偏好个性化推荐，实时调整",
+        "客房服务",
+        "语音控制，一键触达酒店服务",
+        "本地向导",
+        "美食推荐，景点介绍，在地体验",
+        "会员运营",
+        "积分管理，优惠推送，个性化关怀"
+      ],
+      "text_regions": [
+        "title zone: C端AI管家",
+        "feature cards: 4 cards showing key functions"
+      ],
+      "prompt_override": "Generate a 16:9 Chinese tech PPT detail page. Page type: feature cards. Reading path: left to right. Composition: title at top, 4 feature cards in grid layout. Style: gradient modern, blue purple pink gradient, glassmorphism, floating 3D elements, futuristic tech. Text rule: only show the following text, each line once only. 【页面文字】\nC端AI管家\n消费者的7×24小时智能旅行助手\n智能预订\n自然语言交互，3分钟完成预订\n行程规划\n基于偏好个性化推荐，实时调整\n客房服务\n语音控制，一键触达酒店服务\n本地向导\n美食推荐，景点介绍，在地体验\n会员运营\n积分管理，优惠推送，个性化关怀"
+    },
+    {
+      "slide_number": 5,
+      "page_type": "detail",
+      "style_preset": "gradient_modern",
+      "page_goal": "展示B端AI运营官功能详情",
+      "page_identity": "Generate a 16:9 Chinese tech PPT detail page for B-end AI Operations Officer.",
+      "content": "B端AI运营官",
+      "native_structure_lock": "Keep as feature detail page.",
+      "reading_path": "left to right",
+      "style_notes": "Use gradient modern, feature cards layout.",
+      "text_density": "medium",
+      "approved_text_lines": [
+        "B端AI运营官",
+        "酒店/民宿的自主运营大脑",
+        "收益管理",
+        "动态定价算法 RevPAR提升15-30%",
+        "渠道运营",
+        "OTA优化+私域导流 降低佣金50%+",
+        "客户服务",
+        "智能客服，投诉处理 人工减少30%",
+        "营销推广",
+        "AI内容生成 获客成本降低40%",
+        "数据分析",
+        "经营报表，竞品监控"
+      ],
+      "text_regions": [
+        "title zone: B端AI运营官",
+        "feature cards: 4 cards showing key functions"
+      ],
+      "prompt_override": "Generate a 16:9 Chinese tech PPT detail page. Page type: feature cards. Reading path: left to right. Composition: title at top, 4 feature cards in grid layout. Style: gradient modern, blue purple pink gradient, glassmorphism, floating 3D elements, futuristic tech. Text rule: only show the following text, each line once only. 【页面文字】\nB端AI运营官\n酒店/民宿的自主运营大脑\n收益管理\n动态定价算法 RevPAR提升15-30%\n渠道运营\nOTA优化+私域导流 降低佣金50%+客户服务\n智能客服，投诉处理 人工减少30%\n营销推广\nAI内容生成 获客成本降低40%\n数据分析\n经营报表，竞品监控"
+    },
+    {
+      "slide_number": 6,
+      "page_type": "skill",
+      "style_preset": "gradient_modern",
+      "page_goal": "展示80+SKILLs可插拔体系",
+      "page_identity": "Generate a 16:9 Chinese tech PPT page showing the 80+ SKILL system.",
+      "content": "SKILLs体系",
+      "native_structure_lock": "Keep as SKILL system overview.",
+      "reading_path": "top to bottom",
+      "style_notes": "Use gradient modern, modular display.",
+      "text_density": "medium",
+      "approved_text_lines": [
+        "SKILLs可插拔体系",
+        "像乐高一样灵活组合",
+        "C端AI管家 SKILL群",
+        "客房服务7个 | 餐饮服务13个 | 宴会服务6个 | 前厅礼宾6个 | 第四空间5个",
+        "B端AI运营官 SKILL群",
+        "收益管理5个 | 前厅运营5个 | 客房管理5个 | 餐饮运营8个 | 市场营销5个",
+        "80+",
+        "细分SKILLs",
+        "95%+",
+        "匹配准确率",
+        "<3秒",
+        "响应速度"
+      ],
+      "text_regions": [
+        "title zone: SKILLs可插拔体系",
+        "C-end SKILLs zone",
+        "B-end SKILLs zone",
+        "stats zone: 80+/95%/<3s"
+      ],
+      "prompt_override": "Generate a 16:9 Chinese tech PPT SKILL system page. Page type: modular display. Reading path: top to bottom. Composition: title at top, two SKILL groups in middle, stats at bottom. Style: gradient modern, blue purple pink gradient, glassmorphism, floating 3D elements, futuristic tech. Text rule: only show the following text, each line once only. 【页面文字】\nSKILLs可插拔体系\n像乐高一样灵活组合\nC端AI管家 SKILL群\n客房服务7个 | 餐饮服务13个 | 宴会服务6个 | 前厅礼宾6个 | 第四空间5个\nB端AI运营官 SKILL群\n收益管理5个 | 前厅运营5个 | 客房管理5个 | 餐饮运营8个 | 市场营销5个\n80+\n细分SKILLs\n95%+\n匹配准确率\n<3秒\n响应速度"
+    },
+    {
+      "slide_number": 7,
+      "page_type": "knowledge",
+      "style_preset": "gradient_modern",
+      "page_goal": "展示PP&SOP知识库架构",
+      "page_identity": "Generate a 16:9 Chinese tech PPT page showing the PP&SOP knowledge base architecture.",
+      "content": "PP&SOP知识库",
+      "native_structure_lock": "Keep as knowledge base overview.",
+      "reading_path": "top to bottom",
+      "style_notes": "Use gradient modern, structured knowledge display.",
+      "text_density": "medium",
+      "approved_text_lines": [
+        "PP&SOP知识库",
+        "AHL的核心数据底座",
+        "行业知识库",
+        "酒店全景知识库：77个文档，2000+KB",
+        "12层全景架构体系",
+        "运营SOP：前厅/客房/餐饮/营销/采购/质检/工程/安保/财务/人力",
+        "品牌标准：万豪/希尔顿/洲际/华住/锦江等10+品牌",
+        "法律法规：消防/食品/卫生/劳动/工商税务",
+        "场景知识",
+        "12种客户群体 | 10种产品服务 | 10种运营模式",
+        "AHL事实双向向量数据维度框架",
+        "通用维度+特异化维度+实时动态系数"
+      ],
+      "text_regions": [
+        "title zone: PP&SOP知识库",
+        "industry knowledge zone",
+        "scenario knowledge zone"
+      ],
+      "prompt_override": "Generate a 16:9 Chinese tech PPT knowledge base page. Page type: structured display. Reading path: top to bottom. Composition: title at top, two knowledge sections below. Style: gradient modern, blue purple pink gradient, glassmorphism, floating 3D elements, futuristic tech. Text rule: only show the following text, each line once only. 【页面文字】\nPP&SOP知识库\nAHL的核心数据底座\n行业知识库\n酒店全景知识库：77个文档，2000+KB\n12层全景架构体系\n运营SOP：前厅/客房/餐饮/营销/采购/质检/工程/安保/财务/人力\n品牌标准：万豪/希尔顿/洲际/华住/锦江等10+品牌\n法律法规：消防/食品/卫生/劳动/工商税务\n场景知识\n12种客户群体 | 10种产品服务 | 10种运营模式\nAHL事实双向向量数据维度框架\n通用维度+特异化维度+实时动态系数"
+    },
+    {
+      "slide_number": 8,
+      "page_type": "comparison",
+      "style_preset": "gradient_modern",
+      "page_goal": "对比传统方案vs AHL方案",
+      "page_identity": "Generate a 16:9 Chinese tech PPT comparison page: Traditional vs AHL.",
+      "content": "传统方案 vs AHL",
+      "native_structure_lock": "Keep as comparison layout.",
+      "reading_path": "left to right",
+      "style_notes": "Use gradient modern, comparison layout.",
+      "text_density": "medium",
+      "approved_text_lines": [
+        "传统方案 vs AHL",
+        "传统OTA平台",
+        "15-25%高佣金剥削",
+        "数据孤岛，无法协同",
+        "被动响应，效率低下",
+        "单一功能，无法适配",
+        "AHL去中心化平台",
+        "仅2%技术服务费",
+        "数据互联，智能协同",
+        "7×24h主动服务",
+        "80+SKILLs灵活组合"
+      ],
+      "text_regions": [
+        "title zone: 传统方案 vs AHL",
+        "traditional side: left",
+        "AHL side: right"
+      ],
+      "prompt_override": "Generate a 16:9 Chinese tech PPT comparison page. Page type: comparison. Reading path: left to right. Composition: title at top, two sides comparison below. Style: gradient modern, blue purple pink gradient, glassmorphism, floating 3D elements, futuristic tech. Text rule: only show the following text, each line once only. 【页面文字】\n传统方案 vs AHL\n传统OTA平台\n15-25%高佣金剥削\n数据孤岛，无法协同\n被动响应，效率低下\n单一功能，无法适配\nAHL去中心化平台\n仅2%技术服务费\n数据互联，智能协同\n7×24h主动服务\n80+SKILLs灵活组合"
+    },
+    {
+      "slide_number": 9,
+      "page_type": "flow",
+      "style_preset": "gradient_modern",
+      "page_goal": "展示AHL技术流程图",
+      "page_identity": "Generate a 16:9 Chinese tech PPT flow page showing AHL tech flow.",
+      "content": "技术流程",
+      "native_structure_lock": "Keep as flow diagram.",
+      "reading_path": "left to right",
+      "style_notes": "Use gradient modern, flow diagram style.",
+      "text_density": "low",
+      "approved_text_lines": [
+        "AHL技术流程",
+        "用户需求输入",
+        "自然语言处理",
+        "意图识别 & 实体提取",
+        "向量匹配引擎",
+        "SKILL检索 & 选择",
+        "AGENT执行",
+        "C端管家/B端运营官",
+        "结果输出 & 学习反馈"
+      ],
+      "text_regions": [
+        "title zone: AHL技术流程",
+        "flow zones: 5 steps from left to right"
+      ],
+      "prompt_override": "Generate a 16:9 Chinese tech PPT flow page. Page type: flow diagram. Reading path: left to right. Composition: title at top, horizontal flow with 5 steps. Style: gradient modern, blue purple pink gradient, glassmorphism, floating 3D elements, futuristic tech. Text rule: only show the following text, each line once only. 【页面文字】\nAHL技术流程\n用户需求输入\n自然语言处理\n意图识别 & 实体提取\n向量匹配引擎\nSKILL检索 & 选择\nAGENT执行\nC端管家/B端运营官\n结果输出 & 学习反馈"
+    },
+    {
+      "slide_number": 10,
+      "page_type": "performance",
+      "style_preset": "gradient_modern",
+      "page_goal": "展示核心性能指标",
+      "page_identity": "Generate a 16:9 Chinese tech PPT performance metrics page.",
+      "content": "核心性能指标",
+      "native_structure_lock": "Keep as metrics dashboard.",
+      "reading_path": "top to bottom",
+      "style_notes": "Use gradient modern, data visualization style.",
+      "text_density": "medium",
+      "approved_text_lines": [
+        "核心性能指标",
+        "<3秒",
+        "响应速度",
+        "95%+",
+        "匹配准确率",
+        "7×24h",
+        "全天候服务",
+        "80+",
+        "专业SKILLs",
+        "15-30%",
+        "RevPAR提升",
+        "50%+",
+        "佣金成本降低",
+        "30%",
+        "人工成本降低"
+      ],
+      "text_regions": [
+        "title zone: 核心性能指标",
+        "metrics zone: 6 big numbers with labels"
+      ],
+      "prompt_override": "Generate a 16:9 Chinese tech PPT performance metrics page. Page type: metrics dashboard. Reading path: top to bottom. Composition: title at top, 6 large metric cards in grid. Style: gradient modern, blue purple pink gradient, glassmorphism, floating 3D elements, futuristic tech, data visualization. Text rule: only show the following text, each line once only. 【页面文字】\n核心性能指标\n<3秒\n响应速度\n95%+\n匹配准确率\n7×24h\n全天候服务\n80+\n专业SKILLs\n15-30%\nRevPAR提升\n50%+\n佣金成本降低\n30%\n人工成本降低"
+    },
+    {
+      "slide_number": 11,
+      "page_type": "implementation",
+      "style_preset": "gradient_modern",
+      "page_goal": "展示实施路径",
+      "page_identity": "Generate a 16:9 Chinese tech PPT implementation path page.",
+      "content": "实施路径",
+      "native_structure_lock": "Keep as implementation path.",
+      "reading_path": "left to right",
+      "style_notes": "Use gradient modern, path/roadmap style.",
+      "text_density": "low",
+      "approved_text_lines": [
+        "实施路径",
+        "Phase 1",
+        "核心SKILL开发",
+        "客房预订+收益管理",
+        "Phase 2",
+        "场景SKILL扩展",
+        "餐饮+宴会+B2B",
+        "Phase 3",
+        "生态开放",
+        "SKILL市场+第三方接入"
+      ],
+      "text_regions": [
+        "title zone: 实施路径",
+        "phase zones: 3 phases from left to right"
+      ],
+      "prompt_override": "Generate a 16:9 Chinese tech PPT implementation path page. Page type: roadmap path. Reading path: left to right. Composition: title at top, 3 phase blocks horizontally. Style: gradient modern, blue purple pink gradient, glassmorphism, floating 3D elements, futuristic tech. Text rule: only show the following text, each line once only. 【页面文字】\n实施路径\nPhase 1\n核心SKILL开发\n客房预订+收益管理\nPhase 2\n场景SKILL扩展\n餐饮+宴会+B2B\nPhase 3\n生态开放\nSKILL市场+第三方接入"
+    },
+    {
+      "slide_number": 12,
+      "page_type": "team",
+      "style_preset": "gradient_modern",
+      "page_goal": "展示核心技术团队",
+      "page_identity": "Generate a 16:9 Chinese tech PPT team page for core tech members.",
+      "content": "核心技术团队",
+      "native_structure_lock": "Keep as team introduction.",
+      "reading_path": "left to right",
+      "style_notes": "Use gradient modern, team cards layout.",
+      "text_density": "medium",
+      "approved_text_lines": [
+        "核心技术团队",
+        "张实",
+        "项目总控/发起人",
+        "24年酒店业深耕",
+        "产业洞察+战略把控",
+        "李源",
+        "首席技术官 (CTO)",
+        "华中科技大学AI博士",
+        "10年+AI技术研发",
+        "20+AI工程落地",
+        "陈思序",
+        "首席战略与生态官 (CSO)",
+        "世界500强战略高管",
+        "PE/VC投资背景"
+      ],
+      "text_regions": [
+        "title zone: 核心技术团队",
+        "team cards: 3 cards"
+      ],
+      "prompt_override": "Generate a 16:9 Chinese tech PPT team page. Page type: team cards. Reading path: left to right. Composition: title at top, 3 team member cards below. Style: gradient modern, blue purple pink gradient, glassmorphism, floating 3D elements, futuristic tech. Text rule: only show the following text, each line once only. 【页面文字】\n核心技术团队\n张实\n项目总控/发起人\n24年酒店业深耕\n产业洞察+战略把控\n李源\n首席技术官 (CTO)\n华中科技大学AI博士\n10年+AI技术研发\n20+AI工程落地\n陈思序\n首席战略与生态官 (CSO)\n世界500强战略高管\nPE/VC投资背景"
+    },
+    {
+      "slide_number": 13,
+      "page_type": "summary",
+      "style_preset": "gradient_modern",
+      "page_goal": "总结页，回顾核心价值",
+      "page_identity": "Generate a 16:9 Chinese tech PPT summary page.",
+      "content": "总结",
+      "native_structure_lock": "Keep as summary page.",
+      "reading_path": "top to bottom",
+      "style_notes": "Use gradient modern, summary style.",
+      "text_density": "low",
+      "approved_text_lines": [
+        "AHL核心价值",
+        "对C端",
+        "7×24h个性化AI管家，革新旅行体验",
+        "对B端",
+        "自主运营AGENT，降本增效",
+        "对平台",
+        "去中心化2%vs OTA 15%，构建新范式",
+        "技术壁垒",
+        "大模型+知识库+SKILLs三位一体"
+      ],
+      "text_regions": [
+        "title zone: AHL核心价值",
+        "value cards: 3 main values"
+      ],
+      "prompt_override": "Generate a 16:9 Chinese tech PPT summary page. Page type: summary. Reading path: top to bottom. Composition: title at top, 3 value cards below. Style: gradient modern, blue purple pink gradient, glassmorphism, floating 3D elements, futuristic tech. Text rule: only show the following text, each line once only. 【页面文字】\nAHL核心价值\n对C端\n7×24h个性化AI管家，革新旅行体验\n对B端\n自主运营AGENT，降本增效\n对平台\n去中心化2%vs OTA 15%，构建新范式\n技术壁垒\n大模型+知识库+SKILLs三位一体"
+    },
+    {
+      "slide_number": 14,
+      "page_type": "contact",
+      "style_preset": "gradient_modern",
+      "page_goal": "结束页/联系方式",
+      "page_identity": "Generate a 16:9 Chinese tech PPT closing page with contact info.",
+      "content": "联系我们",
+      "native_structure_lock": "Keep as closing page.",
+      "reading_path": "top to bottom",
+      "style_notes": "Use gradient modern, contact page style.",
+      "text_density": "low",
+      "approved_text_lines": [
+        "联系我们",
+        "开启住宿业的AI新纪元",
+        "张实 (Eric Zhang)",
+        "项目总控",
+        "17760348653",
+        "ericzhangshi@163.com",
+        "AHL团队"
+      ],
+      "text_regions": [
+        "title zone: 联系我们",
+        "contact info zone"
+      ],
+      "prompt_override": "Generate a 16:9 Chinese tech PPT closing page. Page type: contact. Reading path: top to bottom. Composition: title at top, contact info centered. Style: gradient modern, blue purple pink gradient, glassmorphism, floating 3D elements, futuristic tech. Text rule: only show the following text, each line once only. 【页面文字】\n联系我们\n开启住宿业的AI新纪元\n张实 (Eric Zhang)\n项目总控\n17760348653\nericzhangshi@163.com\nAHL团队"
+    }
+  ]
+}

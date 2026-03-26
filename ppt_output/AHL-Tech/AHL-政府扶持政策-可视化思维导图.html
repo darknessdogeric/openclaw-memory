@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AHL政府扶持政策思维导图</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { 
+    font-family: -apple-system, BlinkMacSystemFont, 'Microsoft YaHei', sans-serif;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    min-height: 100vh;
+    padding: 20px;
+    color: #fff;
+  }
+  .container { max-width: 1400px; margin: 0 auto; }
+  h1 { 
+    text-align: center; 
+    color: #fff; 
+    font-size: 28px;
+    margin-bottom: 10px;
+    text-shadow: 0 0 20px rgba(79, 172, 254, 0.5);
+  }
+  .subtitle {
+    text-align: center;
+    color: #94a3b8;
+    margin-bottom: 30px;
+    font-size: 14px;
+  }
+  .mindmap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .root {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 20px 40px;
+    border-radius: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    box-shadow: 0 10px 40px rgba(102, 126, 234, 0.4);
+    text-align: center;
+  }
+  .root span { font-size: 12px; opacity: 0.9; display: block; margin-top: 5px; }
+  .level1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    width: 100%;
+    margin-top: 20px;
+  }
+  .level1-item {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    padding: 15px 20px;
+    border-radius: 12px;
+    min-width: 200px;
+    max-width: 280px;
+    box-shadow: 0 5px 20px rgba(79, 172, 254, 0.3);
+  }
+  .level1-item.green { background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%); box-shadow: 0 5px 20px rgba(56, 239, 125, 0.3); }
+  .level1-item.orange { background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); box-shadow: 0 5px 20px rgba(245, 87, 108, 0.3); }
+  .level1-item.purple { background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%); color: #333; box-shadow: 0 5px 20px rgba(168, 237, 234, 0.3); }
+  .level1-item h3 { font-size: 14px; margin-bottom: 10px; border-bottom: 1px solid rgba(255,255,255,0.3); padding-bottom: 8px; }
+  .level1-item.green h3, .level1-item.orange h3 { border-color: rgba(255,255,255,0.3); }
+  .level1-item ul { list-style: none; font-size: 12px; }
+  .level1-item li { padding: 4px 0; opacity: 0.95; }
+  .level1-item li .tag {
+    display: inline-block;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 10px;
+    margin-right: 5px;
+  }
+  .tag-p0 { background: #ef4444; }
+  .tag-p1 { background: #f97316; }
+  .tag-p2 { background: #eab308; color: #333; }
+  .tag-star { background: #22c55e; }
+  .level2-section { margin-top: 15px; }
+  .level2-title {
+    background: rgba(255,255,255,0.15);
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 12px;
+    margin-bottom: 8px;
+  }
+  .level2-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 8px;
+  }
+  .level2-card {
+    background: rgba(255,255,255,0.1);
+    padding: 8px 10px;
+    border-radius: 6px;
+    font-size: 11px;
+  }
+  .level2-card .stars { color: #fbbf24; font-size: 10px; }
+  .level2-card .amount { color: #4ade80; font-size: 10px; }
+  .level2-card .time { color: #94a3b8; font-size: 10px; }
+  .priority-section {
+    margin-top: 30px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 16px;
+    padding: 25px;
+  }
+  .priority-section h2 { font-size: 18px; margin-bottom: 15px; color: #fff; }
+  .priority-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 15px;
+  }
+  .priority-card {
+    background: rgba(255,255,255,0.08);
+    border-radius: 12px;
+    padding: 15px;
+    border-left: 4px solid;
+  }
+  .priority-card.p0 { border-color: #ef4444; }
+  .priority-card.p1 { border-color: #f97316; }
+  .priority-card.p2 { border-color: #eab308; }
+  .priority-card h4 { font-size: 13px; margin-bottom: 8px; }
+  .priority-card h4 span { font-size: 10px; padding: 2px 6px; border-radius: 4px; margin-left: 8px; }
+  .priority-card.p0 h4 span { background: #ef4444; }
+  .priority-card.p1 h4 span { background: #f97316; }
+  .priority-card.p2 h4 span { background: #eab308; color: #333; }
+  .priority-card ul { list-style: none; font-size: 11px; }
+  .priority-card li { padding: 3px 0; color: #cbd5e1; }
+  .action-section {
+    margin-top: 30px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 16px;
+    padding: 25px;
+  }
+  .action-section h2 { font-size: 18px; margin-bottom: 15px; }
+  .action-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+  }
+  .action-card {
+    background: rgba(255,255,255,0.15);
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+  }
+  .action-card h4 { font-size: 14px; margin-bottom: 8px; }
+  .action-card ul { list-style: none; font-size: 11px; text-align: left; }
+  .action-card li { padding: 3px 0; }
+  .match-section {
+    margin-top: 30px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 16px;
+    padding: 25px;
+  }
+  .match-section h2 { font-size: 18px; margin-bottom: 15px; }
+  .match-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 10px;
+  }
+  .match-card {
+    background: rgba(255,255,255,0.08);
+    border-radius: 8px;
+    padding: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .match-card .feature { font-size: 12px; }
+  .match-card .stars { color: #fbbf24; font-size: 12px; }
+  footer {
+    text-align: center;
+    margin-top: 40px;
+    color: #64748b;
+    font-size: 12px;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>🗺️ AHL项目政府扶持政策全景思维导图</h1>
+  <p class="subtitle">当前位置: 四川省成都市 | 编制日期: 2026年3月24日</p>
+  
+  <div class="mindmap">
+    <!-- Root Node -->
+    <div class="root">
+      🏛️ AHL政府扶持政策
+      <span>能报尽报 · 匹配度全量化</span>
+    </div>
+    
+    <!-- Level 1: 4 Main Categories -->
+    <div class="level1">
+      <!-- 国家级政策 -->
+      <div class="level1-item">
+        <h3>🏛️ 国家级政策</h3>
+        <ul>
+          <li><span class="tag tag-star">⭐</span>科技部</li>
+          <li><span class="tag tag-star">⭐</span>工信部</li>
+          <li><span class="tag tag-star">⭐</span>文旅部</li>
+          <li><span class="tag tag-star">⭐</span>发改委</li>
+        </ul>
+        <div class="level2-section">
+          <div class="level2-title">📌 核心政策</div>
+          <div class="level2-grid">
+            <div class="level2-card">
+              <div>高新技术企业认定</div>
+              <div class="stars">⭐⭐⭐⭐⭐</div>
+              <div class="amount">所得税15%</div>
+              <div class="time">4/7/10月</div>
+            </div>
+            <div class="level2-card">
+              <div>AI大模型专项</div>
+              <div class="stars">⭐⭐⭐⭐⭐</div>
+              <div class="amount">算力+¥500万+</div>
+              <div class="time">Q2-Q3</div>
+            </div>
+            <div class="level2-card">
+              <div>文旅科技创新工程</div>
+              <div class="stars">⭐⭐⭐⭐⭐</div>
+              <div class="amount">¥100-500万</div>
+              <div class="time">3-4月</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- 四川省政策 -->
+      <div class="level1-item green">
+        <h3>🎯 四川省政策 (当前)</h3>
+        <ul>
+          <li>📍 省级 + 成都市</li>
+          <li>📍 高新区 + 天府新区</li>
+        </ul>
+        <div class="level2-section">
+          <div class="level2-title">📌 核心政策</div>
+          <div class="level2-grid">
+            <div class="level2-card">
+              <div>成都市科技计划</div>
+              <div class="stars">⭐⭐⭐⭐⭐</div>
+              <div class="amount">¥20-200万</div>
+              <div class="time">4-5月</div>
+            </div>
+            <div class="level2-card">
+              <div>成都高新区AI专项</div>
+              <div class="stars">⭐⭐⭐⭐⭐</div>
+              <div class="amount">¥100-1000万</div>
+              <div class="time">Q2-Q3</div>
+            </div>
+            <div class="level2-card">
+              <div>天府新区产业扶持</div>
+              <div class="stars">⭐⭐⭐⭐⭐</div>
+              <div class="amount">场地+资金</div>
+              <div class="time">全年</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- 全国省级 -->
+      <div class="level1-item orange">
+        <h3>🗾 全国省级政策</h3>
+        <ul>
+          <li>📍 西南/华东/华北</li>
+          <li>📍 华南/华中/西北/东北</li>
+        </ul>
+        <div class="level2-section">
+          <div class="level2-title">📌 重点省份</div>
+          <div class="level2-grid">
+            <div class="level2-card">
+              <div>江苏/浙江</div>
+              <div class="stars">政策力度最强</div>
+              <div class="amount">¥50-1000万</div>
+            </div>
+            <div class="level2-card">
+              <div>北京/上海</div>
+              <div class="stars">中关村/张江</div>
+              <div class="amount">¥50-2000万</div>
+            </div>
+            <div class="level2-card">
+              <div>广东/深圳</div>
+              <div class="stars">大湾区专项</div>
+              <div class="amount">¥100-2000万</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- AHL匹配度 -->
+      <div class="level1-item purple">
+        <h3>🎯 AHL核心特征</h3>
+        <ul>
+          <li>🤖 AI大模型应用</li>
+          <li>🏨 文旅产业赋能</li>
+          <li>💻 住宿业平台</li>
+          <li>🔬 科技创新属性</li>
+        </ul>
+        <div class="level2-section">
+          <div class="level2-title">📌 匹配度</div>
+          <div class="level2-grid">
+            <div class="level2-card">
+              <div>AI大模型</div>
+              <div class="stars">⭐⭐⭐⭐⭐</div>
+            </div>
+            <div class="level2-card">
+              <div>文旅产业</div>
+              <div class="stars">⭐⭐⭐⭐⭐</div>
+            </div>
+            <div class="level2-card">
+              <div>科技创新</div>
+              <div class="stars">⭐⭐⭐⭐⭐</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Priority Section -->
+  <div class="priority-section">
+    <h2>📊 申报优先级</h2>
+    <div class="priority-grid">
+      <div class="priority-card p0">
+        <h4>P0 - 立即申报 <span>入场资质</span></h4>
+        <ul>
+          <li>• 高新技术企业认定</li>
+          <li>• 科技型中小企业认定</li>
+          <li>• 软件企业认证</li>
+        </ul>
+      </div>
+      <div class="priority-card p1">
+        <h4>P1 - 重点申报 <span>本月集中</span></h4>
+        <ul>
+          <li>• 成都市科技计划 (4-5月)</li>
+          <li>• 成都高新区AI专项</li>
+          <li>• 文旅部科技创新工程 (3-4月)</li>
+          <li>• 四川省AI产业专项</li>
+        </ul>
+      </div>
+      <div class="priority-card p2">
+        <h4>P2 - 积极申报 <span>3个月内</span></h4>
+        <ul>
+          <li>• 工信部AI大模型专项</li>
+          <li>• 专精特新中小企业</li>
+          <li>• 数字化转型专项行动</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Action Section -->
+  <div class="action-section">
+    <h2>✅ 立即行动</h2>
+    <div class="action-grid">
+      <div class="action-card">
+        <h4>📅 本周</h4>
+        <ul>
+          <li>• 开始四川公司注册</li>
+          <li>• 准备科技型中小企业材料</li>
+          <li>• 联系成都高新区咨询</li>
+        </ul>
+      </div>
+      <div class="action-card">
+        <h4>📅 4月</h4>
+        <ul>
+          <li>• 完成科技型中小企业认定</li>
+          <li>• 申报成都市科技计划</li>
+          <li>• 跟进高新企业第一批</li>
+        </ul>
+      </div>
+      <div class="action-card">
+        <h4>📅 5-6月</h4>
+        <ul>
+          <li>• 申报四川省AI专项</li>
+          <li>• 申报四川省文旅专项</li>
+          <li>• 申报成都高新区AI专项</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Match Section -->
+  <div class="match-section">
+    <h2>🎯 AHL特征与政策匹配</h2>
+    <div class="match-grid">
+      <div class="match-card">
+        <span class="feature">AI大模型应用</span>
+        <span class="stars">⭐⭐⭐⭐⭐</span>
+      </div>
+      <div class="match-card">
+        <span class="feature">文旅产业赋能</span>
+        <span class="stars">⭐⭐⭐⭐⭐</span>
+      </div>
+      <div class="match-card">
+        <span class="feature">住宿业平台</span>
+        <span class="stars">⭐⭐⭐⭐</span>
+      </div>
+      <div class="match-card">
+        <span class="feature">科技创新属性</span>
+        <span class="stars">⭐⭐⭐⭐⭐</span>
+      </div>
+      <div class="match-card">
+        <span class="feature">创业阶段</span>
+        <span class="stars">⭐⭐⭐⭐</span>
+      </div>
+      <div class="match-card">
+        <span class="feature">带动就业</span>
+        <span class="stars">⭐⭐⭐</span>
+      </div>
+    </div>
+  </div>
+  
+  <footer>
+    <p>编制人: B166ER AI助手 | 编制日期: 2026年3月24日 | 版本: V3.0</p>
+  </footer>
+</div>
+</body>
+</html>
