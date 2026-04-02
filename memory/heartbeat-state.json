@@ -1,9 +1,10 @@
 {
   "lastChecks": {
-    "project": 1743120000,
-    "skills": null,
-    "industry": null
+    "project": 1743146100,
+    "skills": 1743480648,
+    "industry": null,
+    "chrome-mcp": "configured"
   },
-  "lastHeartbeat": 1743120000,
-  "notes": "2026-03-28 07:36 - 周六早晨检查， Lottery today, AHL 33 days left"
+  "lastHeartbeat": 1743480648,
+  "notes": "2026-04-01 08:50 - 技能扫描: 发现hotel-search(google-hotels,121安装)、hotel-finder(43安装); AI agent技能pexo-agent(16K安装)高人气但与现有能力重叠, 无重大新变化"
 }

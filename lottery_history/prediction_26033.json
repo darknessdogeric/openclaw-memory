@@ -1,0 +1,31 @@
+{
+  "issue": "26033",
+  "generated_at": "2026-03-30 18:17:31",
+  "source": "用户截图 - 微信图片_20260330181731_823_67.png",
+  "predictions": [
+    {"no": 1, "front": [3, 12, 16, 22, 35], "back": [6, 9], "sum": 88, "span": 32, "odd_even": [2, 3], "big_small": [2, 3]},
+    {"no": 2, "front": [7, 14, 21, 26, 32], "back": [8, 11], "sum": 100, "span": 25, "odd_even": [2, 3], "big_small": [3, 2]},
+    {"no": 3, "front": [3, 14, 17, 23, 32], "back": [3, 11], "sum": 89, "span": 29, "odd_even": [3, 2], "big_small": [2, 3]},
+    {"no": 4, "front": [3, 14, 21, 26, 31], "back": [6, 8], "sum": 95, "span": 28, "odd_even": [3, 2], "big_small": [2, 3]},
+    {"no": 5, "front": [7, 14, 16, 23, 35], "back": [2, 5], "sum": 95, "span": 28, "odd_even": [3, 2], "big_small": [2, 3]}
+  ],
+  "actual": {
+    "issue": "26033",
+    "date": "2026-03-30",
+    "front": [3, 5, 7, 9, 18],
+    "back": [2, 10]
+  },
+  "model_version": "V1.1",
+  "review": {
+    "total_front_hits": 5,
+    "total_back_hits": 2,
+    "prizes": [
+      {"set": 1, "front_hits": 1, "back_hits": 0, "total": 1, "prize": "谢谢参与"},
+      {"set": 2, "front_hits": 1, "back_hits": 0, "total": 1, "prize": "谢谢参与"},
+      {"set": 3, "front_hits": 1, "back_hits": 0, "total": 1, "prize": "谢谢参与"},
+      {"set": 4, "front_hits": 1, "back_hits": 0, "total": 1, "prize": "谢谢参与"},
+      {"set": 5, "front_hits": 1, "back_hits": 1, "total": 2, "prize": "七等奖(1+1)"}
+    ],
+    "note": "V1.1模型问题：遗漏05,09,18三个冷转热号；后区10完全未预测到"
+  }
+}

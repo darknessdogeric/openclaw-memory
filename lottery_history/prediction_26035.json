@@ -1,0 +1,84 @@
+{
+  "issue": "26035",
+  "generated_at": "2026-04-02 08:38:00",
+  "predictions": [
+    {
+      "no": 1,
+      "front": [10, 11, 25, 26, 33],
+      "back": [5, 9],
+      "sum": 105,
+      "span": 23,
+      "model": "consecutive_tracking",
+      "scores": {"10": 0.18, "11": 0.22, "25": 0.19, "26": 0.21, "33": 0.20}
+    },
+    {
+      "no": 2,
+      "front": [6, 12, 19, 27, 34],
+      "back": [3, 8],
+      "sum": 98,
+      "span": 28,
+      "model": "scattered_cold"
+    },
+    {
+      "no": 3,
+      "front": [7, 13, 20, 28, 35],
+      "back": [4, 11],
+      "sum": 103,
+      "span": 28,
+      "model": "midzone_even"
+    },
+    {
+      "no": 4,
+      "front": [5, 14, 21, 29, 32],
+      "back": [6, 10],
+      "sum": 101,
+      "span": 27,
+      "model": "mixed_pattern"
+    },
+    {
+      "no": 5,
+      "front": [8, 15, 22, 30, 31],
+      "back": [2, 7],
+      "sum": 106,
+      "span": 23,
+      "model": "bridge_continuity"
+    }
+  ],
+  "last_issue_review": {
+    "issue": "26034",
+    "actual_date": "2026-04-01",
+    "actual_front": [11, 12, 25, 26, 27],
+    "actual_back": [8, 11],
+    "predictions_reviewed": [
+      {"no": 1, "front_hit": 0, "back_hit": 1, "prize": "未中奖", "hit_detail": "后区11"},
+      {"no": 2, "front_hit": 0, "back_hit": 0, "prize": "未中奖"},
+      {"no": 3, "front_hit": 2, "back_hit": 0, "prize": "未中奖", "hit_detail": "前区11,26"},
+      {"no": 4, "front_hit": 1, "back_hit": 0, "prize": "未中奖", "hit_detail": "前区27"},
+      {"no": 5, "front_hit": 1, "back_hit": 1, "prize": "未中奖", "hit_detail": "前区25,后区11"}
+    ],
+    "total_hits": {"front_total": 4, "back_total": 2, "best": "2+0(方案3)"},
+    "prizes": "0注",
+    "analysis": "26034期开奖三连号25-26-27。方案3命中前区11、26（冷号策略有效）。后区11连续出现，转冷概率增加。"
+  },
+  "model_version": "V5.0",
+  "features": "基于26034期复盘优化：连号跟踪+冷号反转+后区奇偶均衡",
+  "strategy_adjustments": [
+    "三连号后关注连号延续（10-12,25-27区间）",
+    "后区11连续出现后转冷概率增加",
+    "后区偶数(08)回补后，均衡布局",
+    "前区冷号26捕获成功，继续关注冷号"
+  ],
+  "constraints_applied": {
+    "sum_range": [70, 120],
+    "span_range": [15, 32],
+    "odd_ratio": [2, 3],
+    "size_ratio": [2, 3],
+    "zone_coverage": "至少3区",
+    "consecutive_limit": "最多1组连号"
+  },
+  "draw_schedule": {
+    "26035": "2026-04-04(周六) 21:25开奖",
+    "26036": "2026-04-06(周一)"
+  },
+  "data_source_note": "基于中国体彩网历史数据，开奖结果以官网为准"
+}

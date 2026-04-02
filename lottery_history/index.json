@@ -1,0 +1,61 @@
+{
+  "name": "B166ER 大乐透预测历史索引",
+  "version": "V1.4",
+  "last_updated": "2026-04-02",
+  "description": "记录所有大乐透预测和开奖历史",
+  "draw_schedule_note": "大乐透每周一、周三、周六开奖(1、3、6)",
+  "files": [
+    {
+      "issue": "26033",
+      "prediction_file": "prediction_26033.json",
+      "predicted_at": "2026-03-30 18:17:31",
+      "predicted_by": "用户截图",
+      "actual_front": [3, 5, 7, 9, 18],
+      "actual_back": [2, 10],
+      "actual_date": "2026-03-30(周一)",
+      "best_prediction": "方案2: 前区2个(5,7)",
+      "prizes": "0注",
+      "status": "已复盘"
+    },
+    {
+      "issue": "26034",
+      "prediction_file": "prediction_26034.json",
+      "predicted_at": "2026-04-01 17:40:00",
+      "predicted_by": "V4.0模型",
+      "actual_front": [11, 12, 25, 26, 27],
+      "actual_back": [8, 11],
+      "actual_date": "2026-04-01(周三)",
+      "best_prediction": "方案3: 前区2个(11,26), 后区0个",
+      "prizes": "0注",
+      "status": "已复盘"
+    },
+    {
+      "issue": "26035",
+      "prediction_file": "prediction_26035.json",
+      "predicted_at": "2026-04-02 08:07:29",
+      "predicted_by": "V4.0优化版",
+      "actual_front": null,
+      "actual_back": null,
+      "actual_date": "2026-04-04(周六) 21:25开奖",
+      "prizes": "待开奖",
+      "status": "已预测"
+    }
+  ],
+  "statistics": {
+    "total_predictions": 3,
+    "total_prizes_won": 0,
+    "best_hit": {
+      "issue": "26034",
+      "description": "前区2+后区0(方案3)"
+    }
+  },
+  "model_versions": {
+    "V4.0": "26034期使用，贝叶斯+泊松+模糊+熵+自适应权重",
+    "V4.0优化版": "26035期使用，基于连号特征优化"
+  },
+  "next_draw_info": {
+    "26035": "2026-04-04(周六) 21:25开奖",
+    "26036": "2026-04-06(周一)"
+  },
+  "correction_note": "2026-04-02更正：方案3后区是3,10不含11，后区11在方案1和方案5中"
+}

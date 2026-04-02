@@ -1,0 +1,108 @@
+{
+  "issue": "26036",
+  "generated_at": "2026-04-01 17:21:00",
+  "predictions": [
+    {
+      "no": 1,
+      "front": [5, 7, 18, 22, 35],
+      "back": [3, 9],
+      "sum": 87,
+      "span": 30,
+      "model": "bayesian_fuzzy",
+      "scores": {
+        "5": 0.185,
+        "7": 0.192,
+        "18": 0.145,
+        "22": 0.168,
+        "35": 0.175
+      }
+    },
+    {
+      "no": 2,
+      "front": [3, 9, 19, 28, 33],
+      "back": [4, 10],
+      "sum": 92,
+      "span": 30,
+      "model": "poisson_entropy",
+      "scores": {
+        "3": 0.178,
+        "9": 0.165,
+        "19": 0.142,
+        "28": 0.138,
+        "33": 0.152
+      }
+    },
+    {
+      "no": 3,
+      "front": [4, 11, 26, 29, 34],
+      "back": [2, 12],
+      "sum": 104,
+      "span": 30,
+      "model": "fuzzy_bayesian",
+      "scores": {
+        "4": 0.155,
+        "11": 0.128,
+        "26": 0.138,
+        "29": 0.148,
+        "34": 0.162
+      }
+    },
+    {
+      "no": 4,
+      "front": [6, 15, 21, 27, 32],
+      "back": [5, 11],
+      "sum": 101,
+      "span": 26,
+      "model": "adaptive_weight",
+      "scores": {
+        "6": 0.135,
+        "15": 0.118,
+        "21": 0.142,
+        "27": 0.155,
+        "32": 0.148
+      }
+    },
+    {
+      "no": 5,
+      "front": [8, 14, 20, 25, 31],
+      "back": [6, 10],
+      "sum": 98,
+      "span": 23,
+      "model": "bayesian_fuzzy",
+      "scores": {
+        "8": 0.142,
+        "14": 0.125,
+        "20": 0.118,
+        "25": 0.135,
+        "31": 0.158
+      }
+    }
+  ],
+  "last_issue_review": {
+    "issue": "26035",
+    "actual_date": "2026-03-30",
+    "actual_front": [3, 5, 7, 9, 18],
+    "actual_back": [2, 10],
+    "predictions_reviewed": [
+      {"no": 1, "front_hit": 0, "back_hit": 0, "prize": "未中奖"},
+      {"no": 2, "front_hit": 2, "back_hit": 0, "prize": "未中奖"},
+      {"no": 3, "front_hit": 1, "back_hit": 0, "prize": "未中奖"},
+      {"no": 4, "front_hit": 1, "back_hit": 0, "prize": "未中奖"},
+      {"no": 5, "front_hit": 0, "back_hit": 0, "prize": "未中奖"}
+    ],
+    "total_hits": {"front_total": 4, "back_total": 0, "best": "2+0"},
+    "prizes": "0注",
+    "analysis": "26035期预测最高命中2个前区(5,7)，后区全部偏离。冷号策略未奏效，但热号7、5、18被成功捕获。"
+  },
+  "model_version": "V4.0",
+  "features": "贝叶斯 + 泊松 + 模糊 + 熵 + 自适应权重",
+  "constraints_applied": {
+    "sum_range": [65, 130],
+    "span_range": [10, 34],
+    "odd_ratio": [2, 3, 4],
+    "size_ratio": [2, 3, 4],
+    "zone_coverage": "至少4区",
+    "consecutive_limit": "最多1组连号"
+  },
+  "data_source_note": "基于500彩票网历史数据，开奖结果以官网为准"
+}

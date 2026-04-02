@@ -155,7 +155,9 @@
 | 日期 | 发现技能 | 行动 | 结果 |
 |------|---------|------|------|
 | 2026-03-03 | 创建监控系统 | 建立清单 | ✅ 完成 |
-| | | | |
+| 2026-03-28 | hotel相关skills（clawhub）：daolv-hotel/ai-hotel/star-hotel | 观望 | 通用酒店工具，非OpenClaw专用 |
+| 2026-03-28 | PPT skills：ppt-generator(3.827)/dragon-ppt/zeelin | 关注 | ppt-generator可能增强PPT能力 |
+| 2026-03-28 | Document skills：document-pro(3.569)/document-summary | 观望 | 可辅助知识库建设 |
 
 ---
 

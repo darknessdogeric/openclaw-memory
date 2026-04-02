@@ -1,0 +1,180 @@
+{
+  "title": "AHL去中心化旅行平台 商业计划书",
+  "total_slides": 14,
+  "style_preset": "gradient_modern",
+  "style_goal": "AI科技感创业路演风格，蓝紫粉渐变，玻璃质感，动态粒子，适合融资路演",
+  "style_anchor_strategy": "gradient_modern",
+  "image_provider": "builtin",
+  "resolution": "2K",
+  "aspect_ratio": "16:9",
+  "slides": [
+    {
+      "slide_number": 1,
+      "page_type": "cover",
+      "content": "AHL去中心化旅行平台",
+      "subtitle": "AI驱动 × 协议直连 × 智能运营",
+      "tagline": "让每一家酒店都拥有AI时代的智能运营能力",
+      "prompt_override": "Generate a 16:9 Chinese startup pitch deck COVER page, not a poster. Style: gradient_modern with blue-purple-pink gradient, glassmorphism, floating 3D geometric particles, futuristic tech atmosphere, dark background with colorful glow. Page type: cover. Title must be large, bold, centered. Subtitle readable below. No poster look, no giant hero figure, no watermark, no blurry text. Text only: 【AHL去中心化旅行平台】on one line, 【AI驱动 × 协议直连 × 智能运营】below, 【让每一家酒店都拥有AI时代的智能运营能力】as tagline at bottom."
+    },
+    {
+      "slide_number": 2,
+      "page_type": "problem",
+      "content": "酒店业的四低困境",
+      "points": [
+        {"label": "低议价", "detail": "OTA佣金20%+，净利润压缩至5%以下"},
+        {"label": "低效率", "detail": "销售人均日拜访<3家，错失30%需求"},
+        {"label": "低复购", "detail": "会员次留率<15%，60%沉睡"},
+        {"label": "低洞察", "detail": "无法预测客户需求，依赖经验决策"}
+      ],
+      "prompt_override": "Generate a 16:9 Chinese startup pitch deck PROBLEM page. Style: gradient_modern, blue-purple gradient, dark background, glassmorphism cards, professional tech aesthetic. Page type: 4-quadrant problem diagnosis. Title top: 【酒店业的四低困境】. Four cards in 2x2 grid, each card has bold label and one-line detail. Cards: 1)低议价 - OTA佣金20%+净利润<5%, 2)低效率-日均拜访<3家错失30%需求, 3)低复购-次留率<15%沉睡率60%, 4)低洞察-无法预测需求依赖经验. Keep text sharp, readable, Chinese only. No extra English labels. No watermark."
+    },
+    {
+      "slide_number": 3,
+      "page_type": "solution",
+      "content": "AHL：一站式AI解决方案",
+      "architecture": "三层架构：LLM协议层 + 双AGENT引擎 + 可插拔SKILL",
+      "modules": [
+        {"name": "C端AI管家", "desc": "自然语言交互、个性化推荐、行程管理"},
+        {"name": "B端AI运营官", "desc": "收益管理、智能销售、协议生命周期"},
+        {"name": "AHL协议", "desc": "去中心化标准、隐私保护、开放生态"}
+      ],
+      "prompt_override": "Generate a 16:9 Chinese startup pitch deck SOLUTION OVERVIEW page. Style: gradient_modern, blue-purple-pink gradient, dark background, glassmorphism, floating 3D elements, tech startup aesthetic. Page type: three-column architecture overview. Title: 【AHL：一站式AI解决方案】at top. Three vertical cards below: left card with 【C端AI管家】and sub-point, middle card with 【B端AI运营官】and sub-point, right card with 【AHL协议层】and sub-point. Cards should look like modern SaaS product UI. Chinese text only. Sharp readable text. No watermark."
+    },
+    {
+      "slide_number": 4,
+      "page_type": "concept",
+      "content": "AHL协议：行业基础设施",
+      "definition": "AI Hotel Language - 用LLM协议重构民宿/酒店交易结构",
+      "features": [
+        "自然语言协议：酒店用自然语言描述服务，C端用自然语言表达需求",
+        "智能匹配引擎：需求↔供给的精准双向匹配",
+        "隐私保护：数据最小化原则，用户自主控制",
+        "开放生态：任何PMS、OTA可无感接入"
+      ],
+      "prompt_override": "Generate a 16:9 Chinese startup pitch deck PRODUCT DEEP-DIVE page. Style: gradient_modern, blue-purple gradient, dark background, glassmorphism cards, tech product aesthetic. Title: 【AHL协议：行业基础设施】at top. Below: definition line in slightly larger text. Then 4 feature blocks with icons implied by visual treatment. Features: 1)自然语言协议-酒店用自然语言描述服务C端用自然语言表达需求, 2)智能匹配引擎-需求与供给的精准双向向量匹配, 3)隐私保护-数据最小化原则用户自主控制, 4)开放生态-任何PMS和OTA可无感接入. Modern SaaS card layout. Chinese only. Sharp text. No watermark."
+    },
+    {
+      "slide_number": 5,
+      "page_type": "architecture",
+      "content": "技术架构",
+      "stack": "大模型(Kimi/DeepSeek/Gemini) + LangGraph工作流 + 双AGENT编排 + 可插拔SKILL",
+      "layers": [
+        {"layer": "交互层", "items": "Web / APP / 微信 / 飞书"},
+        {"layer": "协议层", "items": "AHL自然语言协议 / 向量匹配引擎"},
+        {"layer": "AGENT层", "items": "C端AI管家 / B端AI运营官"},
+        {"layer": "SKILL层", "items": "80+可插拔场景技能"},
+        {"layer": "数据层", "items": "酒店知识库 / 用户画像 / 行为轨迹"}
+      ],
+      "prompt_override": "Generate a 16:9 Chinese startup pitch deck TECHNOLOGY ARCHITECTURE page. Style: gradient_modern, dark tech background, blue-purple gradient, clean layered diagram look, tech startup aesthetic. Title: 【技术架构】at top left. Show 5 horizontal architecture layers stacked vertically, each layer labeled on the left with items described on the right. Layers from top to bottom: 交互层-Web/APP/微信/飞书, 协议层-AHL自然语言协议向量匹配引擎, AGENT层-C端AI管家B端AI运营官, SKILL层-80+可插拔场景技能, 数据层-酒店知识库用户画像行为轨迹. Clean tech diagram style. Chinese text only. Sharp readable text. No watermark."
+    },
+    {
+      "slide_number": 6,
+      "page_type": "feature",
+      "content": "C端体验：AI管家",
+      "scenarios": [
+        {"scene": "预订场景", "detail": "「下周要去成都，想住宽窄巷子附近，早点入住」→ AI自动推荐+一键预订"},
+        {"scene": "入住场景", "detail": "「我到了，房间可以提前吗？」→ AI协调PMS，实时响应"},
+        {"scene": "服务场景", "detail": "「明天早起，帮我约个洗衣」→ AI自动分发至服务SKILL执行"}
+      ],
+      "prompt_override": "Generate a 16:9 Chinese startup pitch deck PRODUCT FEATURE page. Style: gradient_modern, blue-purple gradient, dark background, glassmorphism conversation bubbles, AI chat interface aesthetic. Title: 【C端体验：AI管家】at top. Show 3 chat/conversation style cards stacked or arranged to illustrate: Scene 1-预订场景-dialognatural language requesting hotel near宽窄巷子, Scene 2-入住场景-asking to check in early, Scene 3-服务场景-requesting laundry service. Each card shows a brief dialog exchange with AI response. Modern messaging UI look. Chinese text. Sharp readable. No watermark."
+    },
+    {
+      "slide_number": 7,
+      "page_type": "feature",
+      "content": "B端能力：AI运营官",
+      "modules": [
+        {"name": "智能获客", "desc": "地理围栏+企业挖掘，30秒找到高价值客户"},
+        {"name": "协议生命周期", "desc": "签-管-续签全流程，续签率+20%"},
+        {"name": "RFP智能应答", "desc": "一键生成标书，7天→1天"},
+        {"name": "动态收益管理", "desc": "AI实时定价，RevPAR+15%"}
+      ],
+      "prompt_override": "Generate a 16:9 Chinese startup pitch deck B2B CAPABILITY page. Style: gradient_modern, blue-purple gradient, dark background, glassmorphism cards, dashboard widget aesthetic. Title: 【B端能力：AI运营官】at top. Four large cards in 2x2 grid, each with bold module name and one-line description. Cards: 1)智能获客-地理围栏企业挖掘30秒找到高价值客户, 2)协议生命周期-签管续签全流程续签率提升20%, 3)RFP智能应答-一键生成标书7天压缩到1天, 4)动态收益管理-AI实时定价RevPAR提升15%. Modern SaaS dashboard style. Chinese text. Sharp readable. No watermark."
+    },
+    {
+      "slide_number": 8,
+      "page_type": "market",
+      "content": "市场规模与机会",
+      "stats": [
+        {"number": "1.2万亿", "label": "中国酒店市场规模"},
+        {"number": "2300万间", "label": "存量客房"},
+        {"number": "10万+", "label": "单体酒店"},
+        {"number": "47%", "label": "OTA获客成本3年涨幅"}
+      ],
+      "highlight": "存量市场 + AI赋能 = 千亿级蓝海",
+      "prompt_override": "Generate a 16:9 Chinese startup pitch deck MARKET OPPORTUNITY page. Style: gradient_modern, blue-purple gradient, dark background, large bold stat numbers, glassmorphism stat cards, data visualization aesthetic. Title: 【市场规模与机会】at top. Four large stat cards showing: 1)1.2万亿-中国酒店市场规模, 2)2300万间-存量客房, 3)10万+-单体酒店数量, 4)47%-OTA获客成本3年涨幅. Bottom: highlight line in accent color showing: 存量市场+AI赋能=千亿级蓝海. Large numbers should be very prominent. Chinese text. Sharp readable. No watermark."
+    },
+    {
+      "slide_number": 9,
+      "page_type": "business",
+      "content": "商业模式",
+      "revenue_streams": [
+        {"stream": "SaaS订阅费", "detail": "3.98-9.98万/年/酒店", "icon": "按年"},
+        {"stream": "交易佣金", "detail": "协议客户/OTA订单抽5%", "icon": "按笔"},
+        {"stream": "增值服务", "detail": "智能获客/RFP/营销自动化", "icon": "按模块"}
+      ],
+      "target": "首年1000家 → 年GMV 5亿+",
+      "prompt_override": "Generate a 16:9 Chinese startup pitch deck BUSINESS MODEL page. Style: gradient_modern, blue-purple gradient, dark background, glassmorphism cards, revenue model aesthetic. Title: 【商业模式】at top. Three revenue stream cards side by side: Card1-SaaS订阅费-3.98到9.98万元每年每酒店, Card2-交易佣金-协议客户OTA订单抽取5%, Card3-增值服务-智能获客RFP应答营销自动化按模块收费. Bottom highlight: 首年目标1000家酒店年GMV超过5亿元. Clean revenue model layout. Chinese text. Sharp readable. No watermark."
+    },
+    {
+      "slide_number": 10,
+      "page_type": "competition",
+      "content": "竞争格局",
+      "players": [
+        {"type": "OTA巨头", "names": "携程/美团/飞猪", "weakness": "中心化平台，佣金高，不赋能酒店"},
+        {"type": "酒店集团", "names": "华住/锦江/首旅", "weakness": "只服务自有品牌，不开放"},
+        {"type": "传统SaaS", "names": "石基/绿云/别样红", "weakness": "功能固定，无AI能力"},
+        {"type": "AHL", "names": "去中心化协议+AI", "advantage": "赋能所有酒店，AI原生，开放生态"}
+      ],
+      "prompt_override": "Generate a 16:9 Chinese startup pitch deck COMPETITIVE LANDSCAPE page. Style: gradient_modern, blue-purple gradient, dark background, comparison matrix aesthetic. Title: 【竞争格局】at top. Show 4 rows representing 4 competitors, each with type label, names, and a weakness or advantage note. Rows: 1)OTA巨头-携程美团飞猪-中心化平台佣金高不赋能酒店, 2)酒店集团-华住锦江首旅-只服务自有品牌不开放, 3)传统SaaS-石基绿云别样红-功能固定无AI能力, 4)AHL(highlighted with accent color)-去中心化协议加AI原生-赋能所有酒店开放生态(标注为差异化优势). Clean comparison table layout. Chinese text. Sharp readable. No watermark."
+    },
+    {
+      "slide_number": 11,
+      "page_type": "roadmap",
+      "content": "发展路线图",
+      "phases": [
+        {"phase": "Phase 1", "timeline": "0-6个月", "goal": "种子轮+MVP开发", "target": "签约50家试点酒店"},
+        {"phase": "Phase 2", "timeline": "6-18个月", "goal": "产品打磨+渠道铺设", "target": "扩展至500家酒店"},
+        {"phase": "Phase 3", "timeline": "18-36个月", "goal": "规模化+生态构建", "target": "覆盖2000家酒店"}
+      ],
+      "prompt_override": "Generate a 16:9 Chinese startup pitch deck ROADMAP page. Style: gradient_modern, blue-purple gradient, dark background, timeline roadmap aesthetic, horizontal 3-phase flow with connecting arrows. Title: 【发展路线图】at top. Show 3 phases connected left to right by arrows: Phase1-label, 0-6个月, 种子轮加MVP开发, 签约50家试点酒店; Phase2-label, 6-18个月, 产品打磨加渠道铺设, 扩展至500家酒店; Phase3-label, 18-36个月, 规模化加生态构建, 覆盖2000家酒店. Clean roadmap layout with clear phase progression. Chinese text. Sharp readable. No watermark."
+    },
+    {
+      "slide_number": 12,
+      "page_type": "team",
+      "content": "核心团队",
+      "members": [
+        {"role": "创始人/CEO", "name": "张实", "background": "24年酒店行业老兵，前远途酒店管理创始人"},
+        {"role": "AI技术负责人", "name": "[待招募]", "background": "大模型/LLM架构专家，有SaaS经验"},
+        {"role": "酒店运营顾问", "name": "[待邀请]", "background": "头部酒店集团前高管，深度行业资源"},
+        {"role": "AI助手", "name": "B166ER", "background": "AHL项目的AI大脑，全天候智能协同"}
+      ],
+      "prompt_override": "Generate a 16:9 Chinese startup pitch deck TEAM page. Style: gradient_modern, blue-purple gradient, dark background, profile card aesthetic, modern team showcase layout. Title: 【核心团队】at top. Show 4 team member cards in 2x2 grid or 4-column layout. Cards show: 1)创始人CEO-张实-24年酒店行业老兵前远途酒店管理创始人, 2)AI技术负责人-待招募-大模型LLM架构专家有SaaS经验, 3)酒店运营顾问-待邀请-头部酒店集团前高管深度行业资源, 4)AI助手-B166ER-AHL项目的AI大脑全天候智能协同. Clean modern team page. Chinese text. Sharp readable. No watermark."
+    },
+    {
+      "slide_number": 13,
+      "page_type": "funding",
+      "content": "融资计划",
+      "round": "种子轮 Seed Round",
+      "amount": "500-800万",
+      "deadline": "截止：2026年4月30日",
+      "use_of_funds": [
+        {"item": "MVP开发", "pct": "40%", "desc": "核心AGENT+SKILL开发"},
+        {"item": "市场推广", "pct": "30%", "desc": "种子用户+品牌建设"},
+        {"item": "团队扩张", "pct": "20%", "desc": "技术+运营核心岗位"},
+        {"item": "运营储备", "pct": "10%", "desc": "日常行政+合规"}
+      ],
+      "roi": "单酒店ROI>35倍（年增收350万/投入10万）",
+      "prompt_override": "Generate a 16:9 Chinese startup pitch deck FUNDING ASK page. Style: gradient_modern, blue-purple gradient, dark background, bold funding numbers, glassmorphism funding breakdown aesthetic. Title: 【融资计划】at top. Large prominent text showing: 种子轮Seed Round-目标500到800万人民币-截止2026年4月30日. Below: 4 funding allocation bars or cards showing: MVP开发40%核心AGENT和SKILL开发, 市场推广30%种子用户和品牌建设, 团队扩张20%技术和运营核心岗位, 运营储备10%日常行政合规. Bottom ROI highlight: 单酒店投资回报率超过35倍年增收350万投入10万. Bold funding numbers. Chinese text. Sharp readable. No watermark."
+    },
+    {
+      "slide_number": 14,
+      "page_type": "closing",
+      "content": "开启酒店业的智能新纪元",
+      "cta": "合作联系",
+      "contact": "邮箱：ericzhangshi@163.com | 电话：17760348653",
+      "website": "AHL - AI Hotel Language",
+      "tagline": "让AI成为酒店最好的员工",
+      "prompt_override": "Generate a 16:9 Chinese startup pitch deck THANK YOU / CLOSING page. Style: gradient_modern, blue-purple-pink gradient, dark background, glowing particles, glassmorphism, futuristic elegant closing aesthetic. Page type: closing slide. Large centered title: 【开启酒店业的智能新纪元】. Below tagline: 让AI成为酒店最好的员工. Bottom section with contact info: 合作联系-邮箱ericzhangshi@163.com电话17760348653. Small website line: AHL-AI Hotel Language. Elegant closing page. Chinese text. Sharp readable. No watermark."
+    }
+  ]
+}

@@ -32,6 +32,18 @@
     "notebooklm-prompts": {
       "version": "1.0.0",
       "installedAt": 1774072380020
+    },
+    "powerpoint-pptx": {
+      "version": "1.0.1",
+      "installedAt": 1774713661307
+    },
+    "tiangong-wps-ppt-automation": {
+      "version": "0.1.0",
+      "installedAt": 1774713722222
+    },
+    "getnote": {
+      "version": "1.5.7",
+      "installedAt": 1774747753467
     }
   }
 }
