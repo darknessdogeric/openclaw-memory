@@ -41,6 +41,7 @@
 | 博弈论与决策 | `game-theory-decision-knowledge-base-v3.md` | 42KB | V3 | ✅ 已内化 |
 | 大乐透彩票 | `lottery-knowledge-base-v2.md` | 38KB | V2 | ✅ 完善 |
 | 创业融资 | `startup-fundraising-knowledge-base-v2.md` | 24KB | V2 | ✅ 完善 |
+| **跨境贸易** | `跨境贸易知识库V1.0.md` | 6.5KB | V1 | 🆕 新建 |
 
 ### 2.2 酒店行业垂直
 
