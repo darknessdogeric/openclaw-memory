@@ -36,6 +36,7 @@
 | 知识库 | 文件 | 大小 | 版本 | 状态 |
 |--------|------|------|------|------|
 | 酒店行业全景 | `hotel-industry-knowledge-base-v7.md` | 360KB | V7 | ✅ 核心 |
+| **商旅TMC** | `商旅TMC知识库V1.0.md` | 8.4KB | V1 | 🆕 新建 |
 | 金融证券 | `finance-securities-knowledge-base.md` | 53KB | V1 | ✅ 完善 |
 | AI/LLM技术 | `ai-llm-knowledge-base-v2.md` | 90KB | V2 | ✅ 完善 |
 | 博弈论与决策 | `game-theory-decision-knowledge-base-v3.md` | 42KB | V3 | ✅ 已内化 |
