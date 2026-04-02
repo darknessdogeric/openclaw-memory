@@ -38,11 +38,11 @@ Skills are shared. Your setup is yours. Keeping them apart means you can update 
 ---
 
 ### OpenViking - AI Agent 上下文数据库 ✅
-**位置**: `C:\Users\Administrator\.openclaw\workspace\skills\openviking\`
+**位置**: `C:\Users\ericz\.openviking\`
 **来源**: https://github.com/volcengine/OpenViking
-**版本**: v0.2.9
+**版本**: v0.2.9 (服务器) / v0.2.6 (CLI)
 **功能**: 字节跳动火山引擎开源的 AI Agent 上下文数据库
-**状态**: ✅ 已安装，待配置 API Key 后启动
+**状态**: ✅ **完全配置完成，向量能力已解锁**
 
 **核心能力**:
 - 🗂️ **文件系统管理范式** - 统一组织记忆、资源、技能
@@ -62,22 +62,24 @@ pip install openviking  # v0.2.9 已安装
 ov --version            # 0.2.6
 ```
 
-**配置状态**: ✅ 已完成并运行中
-- 配置文件: `C:\Users\Administrator\.openviking\ov.conf`
-- 环境变量: `OPENVIKING_CONFIG_FILE` 已设置
-- 服务器: http://127.0.0.1:1933 ✅ 运行中
-- 工作目录: `C:\openviking_data`
-- VLM 模型: Kimi (moonshot-v1-8k) ✅ 正常
-- Embedding: Jina (需有效 API Key) ⚠️ 待配置
+**配置状态**: ✅ 完全配置完成
+- 配置文件: `C:\Users\ericz\.openviking\ov.conf`
+- 服务器: http://127.0.0.1:1933 ✅ **运行中 (PID: 26728)**
+- VLM 模型: MiniMax-M2.5 ✅ 正常
+- **Embedding: Jina v4 ✅ 已配置并启用**
+  - API Key: `jina_1aa1bc0d83484f47abe4716e6264794f6lXPMkPMA0YrtBvWCPEMnuE73JoI`
+  - Model: jina-embeddings-v4
+  - Dimension: 1024
 
-**配置步骤**:
-1. ✅ 配置文件: `C:\Users\Administrator\.openviking\ov.conf`
-2. ✅ 环境变量: `$env:OPENVIKING_CONFIG_FILE`
-3. ✅ 启动服务器: `openviking-server` (已在后台运行)
+**向量能力已解锁**: 完整的语义搜索和向量检索功能
 
-**待解决问题**:
-- Embedding API 需要有效的 Jina API Key
-- 获取地址: https://jina.ai/api-dashboard/key-manager
+**重启命令** (如需):
+```bash
+# 清理PID
+Remove-Item -Force 'C:\Users\ericz\.openviking\data2\.openviking.pid'
+# 启动
+Start-Process 'C:\Users\ericz\AppData\Local\Programs\Python\Python314\Scripts\openviking-server.exe' -ArgumentList '--config','C:\Users\ericz\.openviking\ov.conf','--port','1933'
+```
 - 免费额度: 每月 100万 tokens
 
 **当前可用功能**:
