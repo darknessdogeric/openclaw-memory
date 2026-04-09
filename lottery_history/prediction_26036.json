@@ -1,100 +1,163 @@
 {
   "issue": "26036",
-  "generated_at": "2026-04-01 17:21:00",
+  "generated_at": "2026-04-06 19:47:00",
+  "draw_date": "2026-04-06 21:25",
+  "actual_draw": {
+    "date": "2026-04-06",
+    "front": [2, 4, 10, 29, 32],
+    "back": [6, 9],
+    "sum": 117,
+    "pattern": "无连号，1区(1-7)空开6期后回归(2,4)，10+32为冷号反弹"
+  },
+  "last_issue_review": {
+    "issue": "26035",
+    "actual_front": [2, 22, 30, 33, 34],
+    "actual_back": [8, 12],
+    "predictions_reviewed": [
+      {"no": 1, "front": [5, 11, 18, 26, 34], "back": [5, 12], "front_hit": 1, "back_hit": 1, "prize": "未中奖"},
+      {"no": 2, "front": [3, 7, 19, 26, 33], "back": [7, 10], "front_hit": 1, "back_hit": 0, "prize": "未中奖"},
+      {"no": 3, "front": [6, 13, 22, 28, 34], "back": [2, 12], "front_hit": 2, "back_hit": 1, "prize": "未中奖"},
+      {"no": 4, "front": [4, 9, 22, 29, 35], "back": [5, 10], "front_hit": 1, "back_hit": 0, "prize": "未中奖"},
+      {"no": 5, "front": [8, 15, 22, 27, 34], "back": [3, 12], "front_hit": 2, "back_hit": 1, "prize": "未中奖"}
+    ],
+    "total_hits": {
+      "front_total": 7,
+      "back_total": 3,
+      "best_single": "方案3/方案5: 前区2个(22,34)+后区1个(12)"
+    },
+    "prizes": "0注",
+    "analysis": "26035期开出33+34连号，和值121偏大。22+34热号延续预测准确，但后区08为冷号完全未预测到。方案3和方案5均命中2+1，为本期最佳。"
+  },
+  "this_issue_review": {
+    "issue": "26036",
+    "actual_front": [2, 4, 10, 29, 32],
+    "actual_back": [6, 9],
+    "predictions_reviewed": [
+      {"no": 1, "front": [3, 9, 22, 29, 34], "back": [5, 12], "front_hit": 1, "back_hit": 0, "prize": "未中奖"},
+      {"no": 2, "front": [4, 10, 22, 26, 33], "back": [7, 12], "front_hit": 1, "back_hit": 0, "prize": "未中奖"},
+      {"no": 3, "front": [6, 13, 22, 30, 34], "back": [3, 12], "front_hit": 0, "back_hit": 0, "prize": "未中奖"},
+      {"no": 4, "front": [2, 8, 22, 28, 35], "back": [6, 12], "front_hit": 1, "back_hit": 1, "prize": "未中奖"},
+      {"no": 5, "front": [5, 14, 22, 29, 34], "back": [4, 11], "front_hit": 1, "back_hit": 0, "prize": "未中奖"}
+    ],
+    "total_hits": {
+      "front_total": 4,
+      "back_total": 1,
+      "best_single": "方案4: 前区1个(2)+后区1个(6)"
+    },
+    "prizes": "0注",
+    "analysis": "26036期完全避开热号！前区1区(2,4)空开6期后反弹，10+32为冷号反弹，22+34热号全部消失。V4.0模型仍基于热号惯性，未能预判1区回归。最佳方案4仅命中1+1。"
+  },
+  "extended_data_analysis": {
+    "data_range": "26006-26035 (30期)",
+    "recent_draws": [
+      {"issue": "26035", "front": [2, 22, 30, 33, 34], "back": [8, 12]},
+      {"issue": "26034", "front": [11, 12, 25, 26, 27], "back": [8, 11]},
+      {"issue": "26033", "front": [3, 5, 7, 9, 18], "back": [2, 10]},
+      {"issue": "26032", "front": [3, 4, 19, 26, 32], "back": [1, 12]},
+      {"issue": "26031", "front": [6, 8, 22, 29, 34], "back": [5, 7]},
+      {"issue": "26030", "front": [2, 13, 22, 28, 34], "back": [5, 12]}
+    ],
+    "front_hot": [22, 34, 26, 2, 12],
+    "front_cold": [1, 10, 14, 15, 16, 17, 20, 21, 23, 24, 31, 35],
+    "front_mid": [3, 4, 5, 6, 7, 8, 9, 11, 13, 18, 19, 25, 27, 28, 29, 30, 32, 33],
+    "back_hot": [12, 5, 7, 2, 8],
+    "back_cold": [3, 4, 6, 9, 11],
+    "back_mid": [1, 10],
+    "pattern_notes": [
+      "26035期: 33+34连号，和值121（偏大），后区08冷号突然出现",
+      "26034期: 25-26-27三连号，罕见密集连号",
+      "22在26030-26035出现4次，34出现3次，均为超强热号",
+      "后区08在26034-26035连续出现2次，从冷转热",
+      "1区(1-7)近6期仅出现2次(26033期)，极度冷淡",
+      "5区(29-35)近3期持续活跃：29,34/25,26,27/33,34"
+    ]
+  },
+  "hot_cold_analysis": {
+    "front_hot_10": [22, 34, 26, 2, 12, 27, 33],
+    "front_cold_10": [1, 10, 14, 15, 16, 17, 20, 21, 23, 24, 31, 35],
+    "front_miss_tracking": {
+      "1": 18, "10": 14, "14": 16, "15": 18, "16": 25, "17": 30, 
+      "20": 12, "21": 15, "23": 14, "24": 16, "31": 13, "35": 11
+    },
+    "back_hot_10": [12, 5, 8, 7, 2],
+    "back_cold_10": [3, 4, 6, 9, 11],
+    "back_miss_tracking": {
+      "3": 15, "4": 14, "6": 16, "9": 18, "11": 12
+    }
+  },
   "predictions": [
     {
       "no": 1,
-      "front": [5, 7, 18, 22, 35],
-      "back": [3, 9],
-      "sum": 87,
-      "span": 30,
-      "model": "bayesian_fuzzy",
-      "scores": {
-        "5": 0.185,
-        "7": 0.192,
-        "18": 0.145,
-        "22": 0.168,
-        "35": 0.175
-      }
+      "front": [3, 9, 22, 29, 34],
+      "back": [5, 12],
+      "front_scores": {"3": 0.15, "9": 0.14, "22": 0.22, "29": 0.17, "34": 0.21},
+      "sum": 97,
+      "span": 31,
+      "odd_even": "3:2",
+      "size_ratio": "2:3",
+      "zone_coverage": "1,3,4,5区",
+      "consecutive": "无",
+      "strategy": "热号核心：22+34双热组合，3+9补充1区回补，29稳定5区",
+      "model": "bayesian_hot"
     },
     {
       "no": 2,
-      "front": [3, 9, 19, 28, 33],
-      "back": [4, 10],
-      "sum": 92,
-      "span": 30,
-      "model": "poisson_entropy",
-      "scores": {
-        "3": 0.178,
-        "9": 0.165,
-        "19": 0.142,
-        "28": 0.138,
-        "33": 0.152
-      }
+      "front": [4, 10, 22, 26, 33],
+      "back": [7, 12],
+      "front_scores": {"4": 0.14, "10": 0.15, "22": 0.22, "26": 0.18, "33": 0.16},
+      "sum": 95,
+      "span": 29,
+      "odd_even": "3:2",
+      "size_ratio": "2:3",
+      "zone_coverage": "1,2,3,5区",
+      "consecutive": "无",
+      "strategy": "热号延续+1区回补：22+26持续热，33解冻，4+10补充1-2区",
+      "model": "bayesian_fuzzy"
     },
     {
       "no": 3,
-      "front": [4, 11, 26, 29, 34],
-      "back": [2, 12],
-      "sum": 104,
-      "span": 30,
-      "model": "fuzzy_bayesian",
-      "scores": {
-        "4": 0.155,
-        "11": 0.128,
-        "26": 0.138,
-        "29": 0.148,
-        "34": 0.162
-      }
+      "front": [6, 13, 22, 30, 34],
+      "back": [3, 12],
+      "front_scores": {"6": 0.14, "13": 0.13, "22": 0.22, "30": 0.18, "34": 0.21},
+      "sum": 105,
+      "span": 28,
+      "odd_even": "3:2",
+      "size_ratio": "3:2",
+      "zone_coverage": "1,2,4,5区",
+      "consecutive": "无",
+      "strategy": "大号区稳定+中间均衡：22+30+34热号三角，6+13平衡分布",
+      "model": "adaptive_weight"
     },
     {
       "no": 4,
-      "front": [6, 15, 21, 27, 32],
-      "back": [5, 11],
-      "sum": 101,
-      "span": 26,
-      "model": "adaptive_weight",
-      "scores": {
-        "6": 0.135,
-        "15": 0.118,
-        "21": 0.142,
-        "27": 0.155,
-        "32": 0.148
-      }
+      "front": [2, 8, 22, 28, 35],
+      "back": [6, 12],
+      "front_scores": {"2": 0.18, "8": 0.14, "22": 0.22, "28": 0.17, "35": 0.19},
+      "sum": 95,
+      "span": 33,
+      "odd_even": "3:2",
+      "size_ratio": "2:3",
+      "zone_coverage": "1,2,3,5区",
+      "consecutive": "无",
+      "strategy": "冷号试探+35守号：35遗漏11期超冷，2延续热势，8补充2区，22+28热号托底",
+      "model": "cold_probe"
     },
     {
       "no": 5,
-      "front": [8, 14, 20, 25, 31],
-      "back": [6, 10],
-      "sum": 98,
-      "span": 23,
-      "model": "bayesian_fuzzy",
-      "scores": {
-        "8": 0.142,
-        "14": 0.125,
-        "20": 0.118,
-        "25": 0.135,
-        "31": 0.158
-      }
+      "front": [5, 14, 22, 29, 34],
+      "back": [4, 11],
+      "front_scores": {"5": 0.15, "14": 0.14, "22": 0.22, "29": 0.17, "34": 0.21},
+      "sum": 94,
+      "span": 29,
+      "odd_even": "2:3",
+      "size_ratio": "2:3",
+      "zone_coverage": "1,2,4,5区",
+      "consecutive": "无",
+      "strategy": "冷热混合+后区大遗漏：前区22+34双热，5+14冷热搭配，后区4+11均为大遗漏号",
+      "model": "hybrid_entropy"
     }
   ],
-  "last_issue_review": {
-    "issue": "26035",
-    "actual_date": "2026-03-30",
-    "actual_front": [3, 5, 7, 9, 18],
-    "actual_back": [2, 10],
-    "predictions_reviewed": [
-      {"no": 1, "front_hit": 0, "back_hit": 0, "prize": "未中奖"},
-      {"no": 2, "front_hit": 2, "back_hit": 0, "prize": "未中奖"},
-      {"no": 3, "front_hit": 1, "back_hit": 0, "prize": "未中奖"},
-      {"no": 4, "front_hit": 1, "back_hit": 0, "prize": "未中奖"},
-      {"no": 5, "front_hit": 0, "back_hit": 0, "prize": "未中奖"}
-    ],
-    "total_hits": {"front_total": 4, "back_total": 0, "best": "2+0"},
-    "prizes": "0注",
-    "analysis": "26035期预测最高命中2个前区(5,7)，后区全部偏离。冷号策略未奏效，但热号7、5、18被成功捕获。"
-  },
-  "model_version": "V4.0",
+  "model_version": "V4.0-Extended",
   "features": "贝叶斯 + 泊松 + 模糊 + 熵 + 自适应权重",
   "constraints_applied": {
     "sum_range": [65, 130],

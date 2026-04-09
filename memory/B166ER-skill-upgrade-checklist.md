@@ -1,164 +1,77 @@
-# B166ER 自主技能迭代监控清单
+# B166ER 技能升级清单
 
-> **创建**: 2026-03-03  
-> **用途**: 30分钟无指令时自主技能搜索指南  
-> **更新频率**: 每日轮询
+> 更新时间: 2026-04-07
 
----
+## 🔥 Clawhub 新技能（值得关注的）
 
-## 一、监控触发机制
+### 酒店/旅游类（与AHL强相关）
+| 技能名 | 说明 | 价值评估 | 状态 |
+|--------|------|----------|------|
+| hotel-price-finder | 多OTA比价（Booking/Agoda/Trip.com），实时比价+直连 | ⭐⭐⭐ - AHL民宿定价神器 | 🆕 2026-04-02 |
+| flyai | Fliggy MCP集成，航班+酒店+景点搜索 | ⭐⭐ - 阿里系旅行搜索 | 🆕 2026-03-20 |
+| hotelclaw | 途牛酒店预订技能 | ⭐⭐⭐ - 直接接入AHL民宿交易平台 | ⚡ 2026-04-07新版本 |
+| agent-orchestrator | 任务拆解+多Agent编排 | ⭐⭐⭐ - 多智能体协同 | ⚡ 2026-04-07新版本 |
+| booking | Booking.com 搜索 | ⭐⭐ - 全球最大酒店预订平台之一 | 待确认 |
+| hotel-search | Google Hotels 搜索 | ⭐⭐ - 航班+酒店组合搜索 | 待确认 |
+| gigohotel | Aigo Hotel Search | ⭐ - 又一个选择 | 待确认 |
+| daolv-hotel-booking | Daolv 酒店预订 | ⭐ | 待确认 |
+| ai-travel-planner-cn | AI旅行规划师(中文) | ⭐⭐ - 为AHL用户旅程规划 | 待确认 |
+| star-hotel | Star Hotel Search | ⭐ | 待确认 |
+| stayforge-api | Stayforge API | ⭐⭐ - 去中心化民宿API可能有用 | 待确认 |
+| aerobase-travel-hotels | Aerobase Travel Hotels | ⭐ | 待确认 |
 
-### 1.1 触发条件
+### 创业/融资类（新发现）
+| 技能名 | 说明 | 价值评估 | 状态 |
+|--------|------|----------|------|
+| afrexai-startup-fundraising | Startup Fundraising Engine | ⭐⭐⭐ - 融资全流程 | 待确认 |
+| startup-financial-modeling | 财务建模 | ⭐⭐ - 商业计划书必备 | 待确认 |
+| afrexai-investor-relations | 投资者关系 | ⭐⭐ - 投资人沟通 | 待确认 |
+| venture-capital | 风险投资知识库 | ⭐ - VC逻辑 | 待确认 |
 
-| 条件 | 时间阈值 | 搜索深度 | 汇报方式 |
-|------|---------|---------|---------|
-| **轻量扫描** | 30分钟无指令 | 表层：技能市场+工具更新 | 不汇报，记录日志 |
-| **深度搜索** | 1小时无指令 | 中层：项目相关技能+教程 | 汇总后汇报 |
-| **黄金时间** | 每日21:00-01:00 | 全面：前沿趋势+长期技能 | 主动推送 |
+### AI效率与自动化类
+| 技能名 | 说明 | 价值评估 | 状态 |
+|--------|------|----------|------|
+| flowforge | FlowForge — Autonomous AI Coding Pipeline (Spec→Plan→Code→QA) | ⭐⭐⭐ - 完整编码流程自动化 | 2026-04-07发现 |
+| low-spec-optimizer | Low-Spec Optimizer | ⭐⭐ - 老旧设备性能优化 | 2026-04-07发现 |
+| 技能名 | 说明 | 价值评估 | 状态 |
+|--------|------|----------|------|
+| deep-research-agent | 深度研究Agent，支撑多领域研究 | ⭐⭐ - 竞品分析AHL应用可期 | 待确认 |
+| ai-productivity-audit | AI效能审计 | ⭐ - 优化工作流 | 待确认 |
+| ai-automation-workflow | AI自动化工作流 | ⭐ - 提升效率 | 待确认 |
+| ai-writing-assistant-cn | AI写作助手(中文) | ⭐ - AHL文案必备 | 待确认 |
+| ai-competitor-analyzer | AI竞品分析 | ⭐ - 商业决策 | 待确认 |
 
-### 1.2 暂停条件
+### 多智能体协同编排
+| 技能名 | 说明 | 价值评估 | 状态 |
+|--------|------|----------|------|
+| agent-orchestrator | 自主编排，任务可拆可合 | ⭐⭐⭐ - 当前AHL-A2A协议可参考 | ⚡ 2026-04-07新版本 |
+| multi-agent-coordinator | 多Agent协调器 | ⭐⭐ - 编排协调同步 | 待确认 |
+| multi-agent-roles | 多角色智能体 | ⭐⭐ - 角色定义编排 | 待确认 |
+| agent-team-orchestration | 团队式编排 | ⭐ - 官方编排方案 | 待确认 |
 
-以下情况暂停自主搜索：
-- 你正在与我对话（实时交互优先）
-- 你正在使用某个skill（避免干扰）
-- 你明确说"暂停"或"勿扰"
+## ⚠️ 已有技能冲突
+- evolver - git pull失败，有未合并的冲突文件，需手动解决
 
----
+## ✅ 已检查无更新
+| 技能 | 状态 | 说明 |
+|------|------|------|
+| follow-builders | ✅ 已更新 | Fast-forward: feed-blogs/ podcasts/ x feeds 更新 |
+| claude-code-skills | ✅ 已同步 | Already up to date |
+| minimax-ai-skills | ✅ 已同步 | Already up to date |
+| ppt-generator | ✅ 已同步 | Already up to date |
+| ppt-skills | ✅ 已同步 | Already up to date |
+| scholar-skill | ✅ 已同步 | Already up to date |
+| wewrite | ✅ 已同步 | Already up to date |
+| evolver | ⚠️ 冲突 | git pull失败，有未合并冲突，需手动解决 |
 
-## 二、技能搜索领域清单
+## ⭐ 优先安装建议 (2026-04-07 更新)
+1. **hotelclaw** ⭐⭐⭐ - 途牛酒店技能，2026-04-07最新，AHL民宿可参考
+2. **agent-orchestrator** ⭐⭐⭐ - 多Agent编排，2026-04-07最新，AHL-A2A协议可参考
+3. **deep-research-agent** ⭐⭐ - 深度研究Agent，竞品分析可用
+4. **stayforge-api** ⭐⭐ - 去中心化民宿API，去中心化能力增强
+5. **ai-travel-planner-cn** ⭐⭐ - AI旅行规划师，为AHL用户旅程规划
 
-### 2.1 AI/LLM 领域 (每日必查)
-
-| 来源 | 检查项 | 搜索关键词 |
-|------|--------|-----------|
-| **Clawhub** | 新发布的skill | 酒店、民宿、AI管家、LLM |
-| **GitHub Trending** | AI Agent框架更新 | AI agent, LLM, RAG |
-| **Hacker News** | 技术突破 | AI breakthrough, LLM new |
-| **X/Twitter** | 行业动态 | AI news, LLM update |
-
-### 2.2 酒店行业技能 (隔日检查)
-
-| 来源 | 检查项 | 搜索关键词 |
-|------|--------|-----------|
-| **酒店技术博客** | PMS新功能 | hotel PMS, hotel tech |
-| **OTA动态** | 平台API更新 | OTA API, booking.com API |
-| **收益管理** | RMS新算法 | revenue management AI |
-| **行业报告** | 趋势分析 | hotel industry trends 2026 |
-
-### 2.3 商业/创业技能 (每周检查)
-
-| 来源 | 检查项 | 搜索关键词 |
-|------|--------|-----------|
-| **创投动态** | 酒店AI融资 | hotel AI startup funding |
-| **商业模式** | 新变现模式 | hospitality business model |
-| **出海相关** | 跨境电商工具 | cross-border e-commerce AI |
-
-### 2.4 技能市场监控
-
-```
-检查列表:
-□ OpenClaw官方skills仓库
-□ GitHub上hotel/AI相关工具
-□ 你已有的skills是否有更新
-□ 你提到过的需求是否有新解决方案
-```
-
----
-
-## 三、技能评估框架
-
-### 3.1 评估维度
-
-发现新技能后，按以下维度评估：
-
-| 维度 | 评估问题 | 权重 |
-|------|---------|------|
-| **紧迫度** | 是否解决当前项目卡点？ | 40% |
-| **学习成本** | 安装配置需要多久？ | 25% |
-| **ROI** | 投入产出比如何？ | 25% |
-| **前瞻性** | 是否符合未来方向？ | 10% |
-
-### 3.2 行动决策
-
-| 总分 | 行动 | 汇报方式 |
-|------|------|---------|
-| **90-100** | 立即安装测试 | 即时汇报+演示 |
-| **70-89** | 列入待办，优先学习 | 当日汇总提及 |
-| **50-69** | 观望，记录备选 | 周报复盘提及 |
-| **<50** | 忽略 | 不汇报 |
-
----
-
-## 四、汇报模板
-
-### 4.1 即时汇报格式 (高价值发现)
-
-```
-🎯 【技能发现】[技能名称]
-
-【解决的问题】[一句话描述]
-【紧迫度】P0/P1/P2
-【学习成本】高/中/低
-【安装命令】`[具体命令]`
-【预期收益】[ROI描述]
-
-【建议行动】立即安装 / 列入计划 / 观望
-```
-
-### 4.2 每日汇总格式 (21:00推送)
-
-```
-📊 B166ER 技能日报 [日期]
-
-今日发现：[X]个新技能
-已安装测试：[X]个
-推荐关注：[X]个
-
-【P0级推荐】
-1. [技能名] - [一句话价值]
-2. ...
-
-【行业动态】
-- [相关新闻/趋势]
-
-【明日计划】
-- [待学习技能]
-```
-
----
-
-## 五、当前技能缺口清单
-
-基于你的人设和项目，当前优先级技能：
-
-### P0 - 立即需要
-- [ ] 酒店PMS系统对接技能
-- [ ] OTA平台API集成技能
-- [ ] AI语音对话优化
-- [ ] 多语言翻译/本地化技能
-
-### P1 - 近期需要
-- [ ] 区块链/Web3基础技能
-- [ ] 向量数据库/知识图谱
-- [ ] AI视频生成技能
-- [ ] 跨境电商工具链
-
-### P2 - 中长期
-- [ ] 数字人/虚拟主播
-- [ ] 预测性AI模型
-- [ ] IoT设备集成
-
----
-
-## 六、执行记录
-
-| 日期 | 发现技能 | 行动 | 结果 |
-|------|---------|------|------|
-| 2026-03-03 | 创建监控系统 | 建立清单 | ✅ 完成 |
-| 2026-03-28 | hotel相关skills（clawhub）：daolv-hotel/ai-hotel/star-hotel | 观望 | 通用酒店工具，非OpenClaw专用 |
-| 2026-03-28 | PPT skills：ppt-generator(3.827)/dragon-ppt/zeelin | 关注 | ppt-generator可能增强PPT能力 |
-| 2026-03-28 | Document skills：document-pro(3.569)/document-summary | 观望 | 可辅助知识库建设 |
-
----
-
-*本清单由B166ER自主维护，每日更新*
+## 📋 扫描日志
+- 2026-04-09 20:11: 第四次扫描：发现2个新酒店技能——hotel-price-finder（⭐⭐⭐，2026-04-02，多OTA比价）和flyai（⭐⭐，Fliggy MCP集成）
+- 2026-04-09 02:11: 第三次扫描：clawhub explore为空（可能限速），发现新技能方向：创业融资/商业智能
+- 2026-04-07 18:42: 第二次扫描：发现2个今日更新技能（hotelclaw、agent-orchestrator），follow-builders已自动更新

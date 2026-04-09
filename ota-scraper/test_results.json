@@ -1,0 +1,62 @@
+[
+  {
+    "name": "Ctrip-Leshan-hotel-search",
+    "url": "https://you.ctrip.com/hotel/leshan34.html",
+    "status": 404,
+    "title": "携程旅行网",
+    "final_url": "https://you.ctrip.com/hotel/leshan34.html",
+    "bot_blocked": false,
+    "hotel_name": "",
+    "price": "",
+    "score": "",
+    "ok": false
+  },
+  {
+    "name": "Ctrip-JJJZ-hotel-detail",
+    "url": "https://you.ctrip.com/hotel/leshan34/138411.html",
+    "status": 404,
+    "title": "携程旅行网",
+    "final_url": "https://you.ctrip.com/hotel/leshan34/138411.html",
+    "bot_blocked": false,
+    "hotel_name": "",
+    "price": "",
+    "score": "",
+    "ok": false
+  },
+  {
+    "name": "Qunar-home",
+    "url": "https://www.qunar.com/hotel/",
+    "status": 404,
+    "title": "非常抱歉，您访问的页面不存在。",
+    "final_url": "https://www.qunar.com/hotel/",
+    "bot_blocked": false,
+    "hotel_name": "",
+    "price": "",
+    "score": "",
+    "ok": false
+  },
+  {
+    "name": "Meituan-hotel",
+    "url": "https://hotel.meituan.com/",
+    "status": 403,
+    "title": "403 Forbidden",
+    "final_url": "https://hotel.meituan.com/",
+    "bot_blocked": false,
+    "hotel_name": "",
+    "price": "",
+    "score": "",
+    "ok": false
+  },
+  {
+    "name": "Fliggy-hotel",
+    "url": "https://hotel.fliggy.com/",
+    "status": 200,
+    "title": "飞机票查询-机票预订、酒店预订查询、客栈民宿、旅游度假、门票签证【飞猪旅行】",
+    "final_url": "https://www.fliggy.com/jiudian/",
+    "bot_blocked": false,
+    "hotel_name": "",
+    "price": "",
+    "score": "",
+    "ok": true
+  }
+]

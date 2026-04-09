@@ -1,0 +1,4 @@
+wing: mempalace_test
+rooms:
+- name: general
+  description: All project files

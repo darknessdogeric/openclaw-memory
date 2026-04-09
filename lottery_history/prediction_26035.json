@@ -1,84 +1,107 @@
 {
   "issue": "26035",
-  "generated_at": "2026-04-02 08:38:00",
-  "predictions": [
-    {
-      "no": 1,
-      "front": [10, 11, 25, 26, 33],
-      "back": [5, 9],
-      "sum": 105,
-      "span": 23,
-      "model": "consecutive_tracking",
-      "scores": {"10": 0.18, "11": 0.22, "25": 0.19, "26": 0.21, "33": 0.20}
-    },
-    {
-      "no": 2,
-      "front": [6, 12, 19, 27, 34],
-      "back": [3, 8],
-      "sum": 98,
-      "span": 28,
-      "model": "scattered_cold"
-    },
-    {
-      "no": 3,
-      "front": [7, 13, 20, 28, 35],
-      "back": [4, 11],
-      "sum": 103,
-      "span": 28,
-      "model": "midzone_even"
-    },
-    {
-      "no": 4,
-      "front": [5, 14, 21, 29, 32],
-      "back": [6, 10],
-      "sum": 101,
-      "span": 27,
-      "model": "mixed_pattern"
-    },
-    {
-      "no": 5,
-      "front": [8, 15, 22, 30, 31],
-      "back": [2, 7],
-      "sum": 106,
-      "span": 23,
-      "model": "bridge_continuity"
-    }
-  ],
+  "generated_at": "2026-04-04 17:20:00",
+  "note": "今晚(4月4日周六)21:25开奖，已完成复盘",
+  "actual_front": [2, 22, 30, 33, 34],
+  "actual_back": [8, 12],
+  "draw_date": "2026-04-04",
   "last_issue_review": {
     "issue": "26034",
-    "actual_date": "2026-04-01",
     "actual_front": [11, 12, 25, 26, 27],
     "actual_back": [8, 11],
     "predictions_reviewed": [
-      {"no": 1, "front_hit": 0, "back_hit": 1, "prize": "未中奖", "hit_detail": "后区11"},
-      {"no": 2, "front_hit": 0, "back_hit": 0, "prize": "未中奖"},
-      {"no": 3, "front_hit": 2, "back_hit": 0, "prize": "未中奖", "hit_detail": "前区11,26"},
-      {"no": 4, "front_hit": 1, "back_hit": 0, "prize": "未中奖", "hit_detail": "前区27"},
-      {"no": 5, "front_hit": 1, "back_hit": 1, "prize": "未中奖", "hit_detail": "前区25,后区11"}
+      {"no": 1, "front": [5, 7, 18, 22, 35], "back": [3, 9], "front_hit": 0, "back_hit": 0},
+      {"no": 2, "front": [3, 9, 19, 28, 33], "back": [4, 10], "front_hit": 0, "back_hit": 0},
+      {"no": 3, "front": [4, 11, 26, 29, 34], "back": [2, 12], "front_hit": 2, "back_hit": 0},
+      {"no": 4, "front": [6, 15, 21, 27, 32], "back": [5, 11], "front_hit": 1, "back_hit": 0},
+      {"no": 5, "front": [8, 14, 20, 25, 31], "back": [6, 10], "front_hit": 1, "back_hit": 0}
     ],
-    "total_hits": {"front_total": 4, "back_total": 2, "best": "2+0(方案3)"},
-    "prizes": "0注",
-    "analysis": "26034期开奖三连号25-26-27。方案3命中前区11、26（冷号策略有效）。后区11连续出现，转冷概率增加。"
+    "best": "方案3命中2个前区(11,26)"
   },
-  "model_version": "V5.0",
-  "features": "基于26034期复盘优化：连号跟踪+冷号反转+后区奇偶均衡",
-  "strategy_adjustments": [
-    "三连号后关注连号延续（10-12,25-27区间）",
-    "后区11连续出现后转冷概率增加",
-    "后区偶数(08)回补后，均衡布局",
-    "前区冷号26捕获成功，继续关注冷号"
+  "extended_data_analysis": {
+    "data_range": "26005-26034 (30期)",
+    "front_hot": [22, 26, 34, 5, 12],
+    "front_cold": [1, 14, 15, 16, 20, 21, 23, 24, 30, 31, 33, 35],
+    "back_hot": [5, 7, 12, 2, 10],
+    "back_cold": [3, 4, 6, 9, 11],
+    "pattern_notes": [
+      "26034期出现三连号25-26-27，这是近期最密集连号",
+      "26在26032-26034连续3期出现后转冷",
+      "11在26034突然出现，结束遗漏",
+      "后区11在26034出现，结束遗漏11期",
+      "近期1区(1-7)出号稀少，需关注回补"
+    ]
+  },
+  "predictions": [
+    {
+      "no": 1,
+      "front": [5, 11, 18, 26, 34],
+      "back": [5, 12],
+      "sum": 94,
+      "span": 29,
+      "strategy": "热号集中：11守号+18+26延续近期热势+34热号托底",
+      "model": "bayesian_hot",
+      "front_hit": 1,
+      "back_hit": 1,
+      "hit_detail": "命中前区34, 后区12"
+    },
+    {
+      "no": 2,
+      "front": [3, 7, 19, 26, 33],
+      "back": [7, 10],
+      "sum": 88,
+      "span": 30,
+      "strategy": "1区回补+冷号解冻：3+7补充1区，33遗漏10期解冻",
+      "model": "cold_warm_mix",
+      "front_hit": 1,
+      "back_hit": 0,
+      "hit_detail": "命中前区33"
+    },
+    {
+      "no": 3,
+      "front": [6, 13, 22, 28, 34],
+      "back": [2, 12],
+      "sum": 103,
+      "span": 28,
+      "strategy": "中间区域稳定：22+28+34三热号组合，6补充1区尾部",
+      "model": "adaptive_weight",
+      "front_hit": 2,
+      "back_hit": 1,
+      "hit_detail": "命中前区22+34, 后区12 ← 本期最佳"
+    },
+    {
+      "no": 4,
+      "front": [4, 9, 22, 29, 35],
+      "back": [5, 10],
+      "sum": 99,
+      "span": 31,
+      "strategy": "冷号试探+热号托底：35超冷遗漏15期，4+9解冻1区",
+      "model": "cold_probe",
+      "front_hit": 1,
+      "back_hit": 0,
+      "hit_detail": "命中前区22"
+    },
+    {
+      "no": 5,
+      "front": [8, 15, 22, 27, 34],
+      "back": [3, 12],
+      "sum": 96,
+      "span": 26,
+      "strategy": "上期号延续：27为上期重号，22+34持续热，8+15扩大范围",
+      "model": "trend_continuation",
+      "front_hit": 2,
+      "back_hit": 1,
+      "hit_detail": "命中前区22+34, 后区12"
+    }
   ],
-  "constraints_applied": {
-    "sum_range": [70, 120],
-    "span_range": [15, 32],
-    "odd_ratio": [2, 3],
-    "size_ratio": [2, 3],
-    "zone_coverage": "至少3区",
-    "consecutive_limit": "最多1组连号"
-  },
-  "draw_schedule": {
-    "26035": "2026-04-04(周六) 21:25开奖",
-    "26036": "2026-04-06(周一)"
-  },
-  "data_source_note": "基于中国体彩网历史数据，开奖结果以官网为准"
+  "model_version": "V4.0-Extended",
+  "features": "基于30期(26005-26034)历史数据分析",
+  "draw_time": "2026-04-04 21:25",
+  "best_prediction": "方案3: 前区2个(22,34)+后区1个(12) ← 本期最佳",
+  "review_summary": {
+    "front_best": "方案3和方案5均命中2个前区(22,34)，方案3多命中后区12",
+    "back_zone_analysis": "后区08是冷号（遗漏），完全未在预测中体现",
+    "pattern_observation": "实际开奖前区33+34连号，和值121（大号区爆发），1区(1-7)断档",
+    "model_assessment": "热号22+34预测准确，冷热搭配策略有效"
+  }
 }

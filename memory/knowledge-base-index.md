@@ -1,185 +1,223 @@
-# B166ER 知识库索引 V2.0
+# B166ER 知识库索引 V3.0
 
 > 创建日期: 2026-03-31
-> 更新: 2026-04-02
-> 版本: V2.0
+> 更新: 2026-04-06
+> 版本: V3.0
 
 ---
 
-## 核心原则
+## 核心架构 (V3.0)
 
-**知识库定位**：
-- SOUL.md / MEMORY.md / IDENTITY.md → **底层人格**，始终加载
-- 知识库 → **按需调用**，非始终加载
-- 操作框架 → **可执行标准**，内化后调用
-
-**版本管理**：
-- 同类文件只保留最新版本
-- 旧版本移动到 `archive/` 目录
+```
+┌─────────────────────────────────────────────────────────┐
+│                   调度层 (Router)                        │
+│  skills/knowledge-base/SKILL.md                          │
+│  语义识别 → 路由决策 → Skill/KB调用                      │
+├─────────────────────────────────────────────────────────┤
+│                   知识层 (Knowledge)                     │
+│  kb_router.py - TF-IDF + SQLite                        │
+│  155+ 文档已索引                                         │
+├─────────────────────────────────────────────────────────┤
+│                   执行层 (Execution)                     │
+│  kb_maintenance.py - 自动迭代维护                        │
+│  self-improving - 自反思系统                            │
+└─────────────────────────────────────────────────────────┘
+```
 
 ---
 
-## 一、底层人格设定（始终内化）
+## 一、路由决策表 (V3.0)
 
+| 类别 | 知识库 | 触发词 |
+|------|---------|--------|
+| 审美 | `aesthetic-knowledge-base.md` | 审美/设计/品位/气韵/意境/排版/海报 |
+| 博弈 | `game-theory-decision-knowledge-base-v3.md` | 博弈/谈判/策略/纳什均衡/投资人 |
+| 酒店 | `hotel-industry-knowledge-base-v7.md` | 酒店/民宿/收益/ADR/OCC/OTA/携程 |
+| AI技术 | `ai-llm-knowledge-base-v2.md` | AI/LLM/AGENT/Prompt/RAG/大模型 |
+| 创业融资 | `startup-fundraising-knowledge-base-v2.md` | 融资/股权/YC/路演/BP/VC |
+| 大乐透 | `lottery-knowledge-base-v3.md` | 大乐透/彩票/预测/V5.0/量化/Gemini |
+| 金融 | `finance-securities-knowledge-base.md` | 金融/证券/投资/股票/REITs |
+| 跨境 | `跨境贸易知识库V1.0.md` | 跨境/选品/亚马逊/出海 |
+| 收益管理 | `hotel-revenue-management-knowledge-base-v4.md` + `appendix-math.md` + `star-report-deep-dive.md` + `china-ota-strategy.md` + `implementation-v5.md` | 收益管理/动态定价/RevPAR/STR指数/OTA博弈/Python实现 |
+| 私域会员 | `hotel-private-domain-membership-knowledge-base.md` | 私域/会员/RFM/复购 |
+| 新媒体 | `hotel-new-media-marketing-knowledge-base-v2.md` | 新媒体/抖音/小红书/社群 |
+| 智能化 | `hotel-ai-applications-knowledge-base.md` | 智能化/AI获客/PMS/数字化 |
+| 目标管理 | `goal-management-knowledge-base.md` | OKR/目标/复盘 |
+| AHL项目 | `ahl-*.md` (项目目录) | AHL/去中心化/AGENT |
+
+---
+
+## 二、核心知识库
+
+### 底层人格 (始终内化)
 | 文件 | 内容 | 说明 |
 |------|------|------|
 | `SOUL.md` | 人格特质 | 审美+博弈论+工作原则 |
 | `MEMORY.md` | 长期记忆 | 核心记忆+偏好+项目状态 |
 | `IDENTITY.md` | 身份定义 | 我是谁+核心特质 |
 
----
-
-## 二、核心知识库（按需加载）
-
-### 2.1 专业领域
-
-| 知识库 | 文件 | 大小 | 版本 | 状态 |
-|--------|------|------|------|------|
-| 酒店行业全景 | `hotel-industry-knowledge-base-v7.md` | 360KB | V7 | ✅ 核心 |
-| **商旅TMC** | `商旅TMC知识库V1.0.md` | 8.4KB | V1 | 🆕 新建 |
-| 金融证券 | `finance-securities-knowledge-base.md` | 53KB | V1 | ✅ 完善 |
-| AI/LLM技术 | `ai-llm-knowledge-base-v2.md` | 90KB | V2 | ✅ 完善 |
-| 博弈论与决策 | `game-theory-decision-knowledge-base-v3.md` | 42KB | V3 | ✅ 已内化 |
-| 大乐透彩票 | `lottery-knowledge-base-v2.md` | 38KB | V2 | ✅ 完善 |
-| 创业融资 | `startup-fundraising-knowledge-base-v2.md` | 24KB | V2 | ✅ 完善 |
-| **跨境贸易** | `跨境贸易知识库V1.0.md` | 6.5KB | V1 | ✅ 基础 |
-| 跨境贸易-选品 | `跨境贸易-选品实战专项V1.0.md` | 12.5KB | V1 | 🆕 新增 |
-| 跨境贸易-亚马逊 | `跨境贸易-亚马逊运营专项V1.0.md` | 8.4KB | V1 | 🆕 新增 |
-
-### 2.2 酒店行业垂直
-
-| 知识库 | 文件 | 大小 | 版本 | 状态 |
-|--------|------|------|------|------|
-| 酒店收益管理 | `hotel-revenue-management-knowledge-base-v4.md` | 16KB | V4 | ✅ 最新 |
-| 酒店私域会员 | `hotel-private-domain-membership-knowledge-base.md` | 25KB | V1 | ✅ 完善 |
-| 酒店新媒体运营 | `hotel-new-media-marketing-knowledge-base-v2.md` | 29KB | V2 | ✅ 更新 |
-| 酒店智能化 | `hotel-ai-applications-knowledge-base.md` | 17KB | V1.1 | ✅ 完善 |
-| 目标管理体系 | `goal-management-knowledge-base.md` | 30KB | V1 | ✅ 完善 |
-| 审美与品位 | `aesthetic-knowledge-base.md` | 260KB | V3.1 | ✅ **已内化** |
-
-### 2.3 行业报告（2026年）
-
-| 报告 | 文件 | 大小 | 状态 |
-|------|------|------|------|
-| Q1新闻简报 | `hotel-industry-report-q1-2026.md` | 5KB | ✅ |
-| 上市企业财报 | `hotel-industry-listed-companies-2026.md` | 4KB | ✅ |
-| 地域城市数据 | `hotel-industry-regional-city-data-2026.md` | 9KB | ✅ |
-| 趋势分析 | `hotel-industry-trends-analysis-2026.md` | 6KB | ✅ |
-| 年度汇总报告 | `hotel-industry-annual-report-2026.md` | 3KB | ✅ |
+### 专业领域 (按需加载)
+| 知识库 | 大小 | 版本 | 状态 |
+|--------|------|------|------|
+| 审美与品位 | 260KB | V3.1 | ✅ 已内化 |
+| 酒店行业全景 | 360KB | V7 | ✅ 核心 |
+| 酒店行业中国深度（市场博弈+资产估值） | 6KB | V1 | ✅ 新增-博弈视角 |
+| 酒店项目投资测算实战框架 | 6KB | V1 | ✅ 新增-决策工具 |
+| 单体vs连锁决策框架 | 4KB | V1 | ✅ 新增-AHL核心问题 |
+| 酒店资产管理全流程 | 5KB | V1 | ✅ 新增-投到退闭环 |
+| 酒店投诉处理与客户恢复实战圣经 | 6KB | V1 | ✅ 新增-运营核心 |
+| 酒店总经理每日工作手册 | 6KB | V1 | ✅ 新增-GM实战 |
+| 酒店危机管理实战手册 | 5KB | V1 | ✅ 新增-SOP最缺 |
+| AI/LLM技术 | 90KB | V2 | ✅ 完善 |
+| 博弈论与决策 | 42KB | V3 | ✅ 已内化 |
+| 创业融资 | 24KB | V2 | ✅ 完善 |
+| 大乐透彩票 | 38KB | V2 | ✅ 完善 |
+| 金融证券 | 53KB | V1 | ✅ 完善 |
+| 酒店收益管理 | 16KB | V4 | ✅ 最新 |
+| 酒店私域会员 | 25KB | V1 | ✅ 完善 |
+| 酒店新媒体运营 | 29KB | V2 | ✅ 更新 |
+| 酒店智能化 | 17KB | V1.1 | ✅ 完善 |
+| 目标管理体系 | 30KB | V1 | ✅ 完善 |
+| 跨境贸易 | 27KB | V1 | ✅ 完善 |
 
 ---
 
-## 三、可执行操作框架
+## 三、调用标准
 
-| 框架 | 文件 | 状态 | 说明 |
-|------|------|------|------|
-| 审美判断框架 | `docs/审美判断操作框架.md` | ✅ V1.0 | 七维度+场景系数+AI输出 |
-| 博弈论操作框架 | `docs/博弈论操作框架.md` | ✅ V1.0 | 四步法+信息博弈+商业专项 |
-| 大乐透复盘预测 | `docs/大乐透复盘预测工作流.md` | ✅ V2.0 | 完整统计+数学+博弈模型 |
+### 任务执行标准流程
+
+```
+1. 语义识别 → 确定路由类别
+2. 路由决策 → 加载对应KB
+3. 执行任务 → 调用Skill/工具
+4. 结果整合 → 输出结论
+5. 自反思 → 评估是否需要更新KB/规则
+```
+
+### 任务完成后自反思清单
+```
+□ 是否有新规律发现？
+□ 是否有错误需要记录？
+□ 是否需要更新KB？
+□ 是否需要固化到MEMORY.md？
+□ 是否需要创建新Skill？
+```
 
 ---
 
-## 四、项目专项知识
+## 四、自动迭代机制
 
-### 4.1 AHL去中心化旅行平台
+### Cron维护 (每周一 10:00)
+- Cron ID: `958343f6-4572-4846-9541-6e833e86b86b`
+- 执行: `kb_maintenance.py`
+- 内容: KB统计/索引检查/归档/行动项
 
-| 文档 | 文件 | 说明 |
+### 自迭代规则
+```
+发现规律 → self-improving/corrections.md
+3次重复 → 提升为规则 → 更新 MEMORY.md
+跨领域规律 → 更新知识库索引
+```
+
+---
+
+## 五、工具链
+
+| 工具 | 文件 | 用途 |
 |------|------|------|
-| 产品方案 | `AHL-产品模式顶层设计-V1.0.md` | 核心架构 |
-| SKILL体系 | `AHL场景SKILL化架构方案V4.0.docx` | 80个细分SKILL |
-| 向量数据框架 | `ahl-vector-data-framework.md` | 数据维度设计 |
-| 商业计划书 | `AHL项目商业计划书-全文.md` | 路演版 |
+| 路由引擎 | `kb_router.py` | 语义路由 + KB检索 |
+| 维护脚本 | `kb_maintenance.py` | 自动迭代维护 |
+| CLI测试 | `kb_router.py route\|index\|stats\|search` | 调试用 |
 
-### 4.2 酒店SOP知识库
+---
 
-| 文档 | 文件 | 说明 |
+## 六、自动纳入机制 (V3.0核心原则)
+
+**核心原则: 主动发现新内容，自动纳入体系，而非被动等待**
+
+```
+新KB文件创建
+    ↓
+自动扫描发现 (kb_autoreg.py)
+    ↓
+解析元数据 (名称/类别/触发词)
+    ↓
+自动索引到SQLite
+    ↓
+自动关联到路由表
+    ↓
+自动纳入调度体系
+```
+
+### 自动纳入标准
+
+所有新建知识库文件必须遵循: 
+
+| 字段 | 位置 | 示例 |
 |------|------|------|
-| 八大部门SOP | `hotel-sop-eight-department-v1.md` | 部门级SOP |
-| SOP深化 | `hotel-sop-deepened-v1.md` | 工程/安保/财务深度 |
-| 品牌对比 | `hotel-sop-brand-comparison-v2.md` | 品牌差异分析 |
+| 名称 | 首行标题 | `# 酒店行业全景知识库` |
+| 类别 | 前30行 | `**分类**: 酒店行业` |
+| 触发词 | 前30行 | `触发词: 酒店/民宿/收益/ADR` |
+| 版本 | 内容中 | `V1.0` / `v2.3` |
 
----
+### 自动纳入流程
 
-## 五、知识库调用优先级
+```bash
+# 每周一10:00 Cron自动执行
+python kb_autoreg.py
 
-### 高频调用（始终可用）
-```
-SOUL.md / MEMORY.md / IDENTITY.md
-审美判断操作框架
-博弈论操作框架
-```
-
-### 按需调用（项目相关）
-```
-AHL项目 → AHL相关文档 + 酒店行业 + 博弈论
-酒店咨询 → 酒店行业 + 收益管理 + 智能化
-创业融资 → 创业融资 + 金融证券 + 博弈论
-AI技术 → AI/LLM知识库
+# 检查内容:
+# 1. 扫描新KB文件
+# 2. 解析元数据
+# 3. 索引到KB
+# 4. 更新路由表
 ```
 
-### 低频调用（特定场景）
-```
-彩票预测 → 大乐透知识库 + 复盘预测工作流
-行业报告 → 2026年报告系列
-```
-
----
-
-## 六、版本清理记录
-
-### 已归档（移至archive/）
-- ❌ `hotel-industry-knowledge-base.md` → 旧版，已归档
-- ❌ `hotel-industry-knowledge-base-v2.md` → 旧版，已归档
-- ❌ `hotel-industry-knowledge-base-v3.md` → 旧版，已归档
-- ❌ `hotel-industry-knowledge-base-v4.md` → 旧版，已归档
-- ❌ `hotel-industry-knowledge-base-v5.md` → 旧版，已归档
-- ❌ `hotel-industry-knowledge-base-v6.md` → 旧版，已归档
-- ❌ `hotel-revenue-management-knowledge-base.md` → 旧版，已归档
-- ❌ `hotel-revenue-management-knowledge-base-v2.md` → 旧版，已归档
-- ❌ `hotel-revenue-management-knowledge-base-v3.md` → 旧版，已归档
-- ❌ `game-theory-decision-knowledge-base.md` → 旧版，已归档
-- ❌ `game-theory-decision-knowledge-base-v2.md` → 旧版，已归档
-- ❌ `hotel-new-media-marketing-knowledge-base.md` → 旧版，已归档
-
----
-
-## 七、知识库维护规则
+### 命名规范
 
 ```
-新增知识库：
-  1. 评估是否需要（是否有重复？）
-  2. 命名规范：领域-具体内容-版本.md
-  3. 更新本索引
-
-版本更新：
-  1. 旧版本移至archive/
-  2. 新版本替换
-  3. 更新索引
-
-删除知识库：
-  1. 确认无引用
-  2. 移至archive/（不直接删除）
-  3. 更新索引
+领域-具体内容-V版本.md
+示例:
+  hotel-industry-v7.md
+  lottery-knowledge-base-v2.md
+  aesthetic-knowledge-base-v3.1.md
 ```
 
 ---
 
-## 八、知识库质量自检
+## 七、进化机制 (V3.0新增)
 
 ```
-□ 文件名规范？
-□ 有版本号？
-□ 有创建/更新日期？
-□ 有核心内容摘要？
-□ 有索引引用？
-□ 无乱码？
-□ 无重复内容？
-□ 在正确的目录（memory/ vs docs/）？
+数据驱动迭代循环:
+  路由执行 → 记录反馈 → 准确率评估 → 优化路由
 ```
 
----
+### 核心指标
+| 指标 | 目标 | 当前 |
+|------|------|------|
+| 路由准确率 | >80% | 待积累数据 |
+| 反馈收集 | 每日 | 手动/自动 |
+| 规律固化 | 每周 | Cron触发 |
 
-**版本历史**:
+### 工具
+- `evolve_kb.py` - 准确率评估 + 改进建议
+- `kb_feedback.py` - 快速记录路由反馈
+- `iterations/evolution_*.json` - 迭代报告
+
+## 八、版本历史
+
 - V1.0 (2026-03-31): 初始版本
-- V1.4 (2026-04-01): 新增报告体系
-- V2.0 (2026-04-02): 整合+归档冗余版本+新增操作框架索引
+- V2.0 (2026-04-02): 整合+归档冗余版本
+- V3.0 (2026-04-06): **三层架构确立**，路由决策表，自动迭代机制，进化系统，自动纳入机制
+
+---
+
+**当前状态**: 
+- ✅ KB文档数: **1359个** (今夜+1184)
+- ✅ 扫描文件: 2402个
+- ✅ 纳入率: ~57% (主要排除JSON/二进制)
+- ✅ 路由决策表: 14个类别
+- ✅ 自动维护Cron: 已建立
+- ✅ 进化系统: 已建立
+- ✅ **自动纳入机制**: 已确立（核心原则）
+- 🔄 路由准确率: 待积累数据

@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1080, height=1920">
+<title>产品一页纸</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 1080px; height: 1920px;
+    font-family: "Noto Sans SC", "Microsoft YaHei", "SimHei", sans-serif;
+    background: #F5F7FA;
+    position: relative; overflow: hidden;
+  }
+
+  /* Header */
+  .header {
+    background: linear-gradient(135deg, #0D1E38 0%, #0A1628 100%);
+    padding: 70px 60px 50px;
+    position: relative;
+  }
+  .header::after {
+    content: '';
+    position: absolute;
+    bottom: -40px; left: 0; right: 0;
+    height: 40px;
+    background: linear-gradient(180deg, rgba(0,0,0,0.15) 0%, transparent 100%);
+  }
+  .header-top {
+    display: flex; justify-content: space-between; align-items: flex-start;
+    margin-bottom: 40px;
+  }
+  .brand-row { display: flex; align-items: center; gap: 16px; }
+  .brand-icon {
+    width: 70px; height: 70px; border-radius: 16px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 36px; font-weight: 900;
+  }
+  .brand-A { background: rgba(255,255,255,0.08); color: #fff; border: 1px solid rgba(255,255,255,0.12); }
+  .brand-H { background: rgba(0,212,255,0.12); color: #00D4FF; border: 1px solid rgba(0,212,255,0.25); }
+  .brand-L { background: rgba(255,184,0,0.08); color: rgba(255,184,0,0.9); border: 1px solid rgba(255,184,0,0.2); }
+  .brand-name { font-size: 24px; font-weight: 700; color: #fff; letter-spacing: 3px; }
+  .brand-en { font-size: 12px; letter-spacing: 5px; color: rgba(0,212,255,0.5); text-transform: uppercase; }
+  .header-badge {
+    background: rgba(0,212,255,0.1);
+    border: 1px solid rgba(0,212,255,0.2);
+    border-radius: 100px;
+    padding: 8px 20px;
+    font-size: 13px; color: rgba(0,212,255,0.8);
+    letter-spacing: 2px;
+  }
+
+  .header-title {
+    font-size: 52px; font-weight: 800;
+    color: #fff; letter-spacing: 4px; line-height: 1.2;
+    margin-bottom: 16px;
+  }
+  .header-sub {
+    font-size: 22px; color: rgba(0,212,255,0.6);
+    letter-spacing: 3px;
+  }
+
+  /* Content */
+  .content { padding: 60px 50px; }
+
+  /* Section: Problem + Solution */
+  .ps-row { display: flex; gap: 20px; margin-bottom: 40px; }
+  .ps-card {
+    flex: 1; border-radius: 20px; padding: 30px 24px;
+    position: relative; overflow: hidden;
+  }
+  .ps-problem {
+    background: rgba(239,68,68,0.06);
+    border: 1px solid rgba(239,68,68,0.12);
+  }
+  .ps-solution {
+    background: rgba(0,212,255,0.06);
+    border: 1px solid rgba(0,212,255,0.12);
+  }
+  .ps-label {
+    font-size: 12px; letter-spacing: 4px; text-transform: uppercase;
+    margin-bottom: 14px; font-weight: 600;
+  }
+  .ps-problem .ps-label { color: rgba(239,68,68,0.8); }
+  .ps-solution .ps-label { color: rgba(0,212,255,0.8); }
+  .ps-title { font-size: 22px; font-weight: 700; color: #1a1a2e; margin-bottom: 12px; }
+  .ps-text { font-size: 15px; color: rgba(26,26,46,0.6); line-height: 1.7; }
+  .ps-arrow {
+    position: absolute; right: 20px; top: 50%; transform: translateY(-50%);
+    font-size: 24px; color: rgba(0,212,255,0.3);
+  }
+
+  /* Section: Core Value */
+  .section-title {
+    font-size: 13px; letter-spacing: 5px;
+    color: rgba(0,212,255,0.7); text-transform: uppercase;
+    margin-bottom: 20px;
+    display: flex; align-items: center; gap: 12px;
+  }
+  .section-title::after {
+    content: ''; flex: 1; height: 1px;
+    background: linear-gradient(90deg, rgba(0,212,255,0.2), transparent);
+  }
+
+  .value-grid { display: flex; flex-direction: column; gap: 12px; margin-bottom: 40px; }
+  .value-row { display: flex; gap: 12px; }
+  .value-card {
+    flex: 1; background: #fff; border-radius: 16px;
+    padding: 24px 20px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    border: 1px solid rgba(0,0,0,0.04);
+    position: relative; overflow: hidden;
+  }
+  .value-card::before {
+    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+  }
+  .v1::before { background: linear-gradient(90deg, #00D4FF, #0066FF); }
+  .v2::before { background: linear-gradient(90deg, #FFB800, #FF6B00); }
+  .v3::before { background: linear-gradient(90deg, #00C9A7, #00D4FF); }
+  .v4::before { background: linear-gradient(90deg, #7C3AED, #A855F7); }
+  .value-icon { font-size: 28px; margin-bottom: 10px; }
+  .value-num { font-size: 36px; font-weight: 800; color: #0D1E38; line-height: 1; margin-bottom: 4px; }
+  .value-label { font-size: 13px; color: rgba(13,30,56,0.5); letter-spacing: 1px; }
+  .value-desc { font-size: 14px; color: rgba(13,30,56,0.55); margin-top: 8px; line-height: 1.6; }
+
+  /* Section: How it works */
+  .flow-row { display: flex; gap: 12px; margin-bottom: 40px; }
+  .flow-step {
+    flex: 1; background: linear-gradient(135deg, #0D1E38, #0A1628);
+    border-radius: 16px; padding: 24px 18px;
+    text-align: center; position: relative;
+  }
+  .flow-num {
+    width: 36px; height: 36px; border-radius: 50%;
+    background: rgba(0,212,255,0.15);
+    border: 1px solid rgba(0,212,255,0.3);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 14px; font-weight: 700;
+    color: #00D4FF; margin: 0 auto 12px;
+  }
+  .flow-title { font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 8px; }
+  .flow-desc { font-size: 12px; color: rgba(255,255,255,0.45); line-height: 1.6; }
+  .flow-arrow {
+    position: absolute; right: -14px; top: 50%; transform: translateY(-50%);
+    font-size: 18px; color: rgba(0,212,255,0.4); z-index: 2;
+  }
+
+  /* Bottom CTA */
+  .cta-area {
+    background: linear-gradient(135deg, #0D1E38, #0A2A48);
+    border-radius: 20px; padding: 36px 30px;
+    text-align: center; margin-bottom: 30px;
+  }
+  .cta-title { font-size: 26px; font-weight: 700; color: #fff; margin-bottom: 8px; }
+  .cta-sub { font-size: 15px; color: rgba(255,255,255,0.45); margin-bottom: 20px; }
+  .cta-contact {
+    display: inline-flex; align-items: center; gap: 10px;
+    background: rgba(0,212,255,0.12);
+    border: 1px solid rgba(0,212,255,0.25);
+    border-radius: 100px;
+    padding: 12px 28px;
+    font-size: 16px; color: #00D4FF;
+    letter-spacing: 2px;
+  }
+
+  /* Footer */
+  .footer {
+    padding: 20px 50px;
+    display: flex; justify-content: space-between; align-items: center;
+    border-top: 1px solid rgba(0,0,0,0.06);
+  }
+  .footer-text { font-size: 12px; color: rgba(13,30,56,0.3); letter-spacing: 1px; }
+  .footer-org { font-size: 13px; color: rgba(0,212,255,0.5); letter-spacing: 2px; }
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<div class="header">
+  <div class="header-top">
+    <div class="brand-row">
+      <div class="brand-icon brand-A">A</div>
+      <div class="brand-icon brand-H">H</div>
+      <div class="brand-icon brand-L">L</div>
+      <div>
+        <div class="brand-name">AHL</div>
+        <div class="brand-en">AI Hotel Language</div>
+      </div>
+    </div>
+    <div class="header-badge">AI驱动的酒店交易平台</div>
+  </div>
+  <div class="header-title">用数字员工重新定义酒店服务</div>
+  <div class="header-sub">去中心化交易重塑行业价值链</div>
+</div>
+
+<!-- Content -->
+<div class="content">
+
+  <!-- Problem / Solution -->
+  <div class="ps-row">
+    <div class="ps-card ps-problem">
+      <div class="ps-label">传统OTA痛点</div>
+      <div class="ps-title">15-25%高佣金</div>
+      <div class="ps-text">平台抽佣过高，酒店利润被严重挤压；流量红利见顶，获客成本持续上升</div>
+      <div class="ps-arrow">→</div>
+    </div>
+    <div class="ps-card ps-solution">
+      <div class="ps-label">AHL解决方案</div>
+      <div class="ps-title">仅收2%服务费</div>
+      <div class="ps-text">去中心化直连，AI精准匹配，供需双方降本增效，收益大幅提升</div>
+      <div class="ps-arrow">✓</div>
+    </div>
+  </div>
+
+  <!-- Value Propositions -->
+  <div class="section-title">核心数据</div>
+  <div class="value-grid">
+    <div class="value-row">
+      <div class="value-card v1">
+        <div class="value-icon">⚡</div>
+        <div class="value-num">95%+</div>
+        <div class="value-label">AI匹配准确率</div>
+        <div class="value-desc">基于向量语义理解，精准匹配客户需求</div>
+      </div>
+      <div class="value-card v2">
+        <div class="value-icon">💰</div>
+        <div class="value-num">节省50%+</div>
+        <div class="value-label">佣金成本</div>
+        <div class="value-desc">技术服务费仅2%，对比OTA 15-25%</div>
+      </div>
+    </div>
+    <div class="value-row">
+      <div class="value-card v3">
+        <div class="value-icon">🤖</div>
+        <div class="value-num">87个</div>
+        <div class="value-label">细分场景SKILL</div>
+        <div class="value-desc">覆盖客房、餐饮、收益、营销等全运营场景</div>
+      </div>
+      <div class="value-card v4">
+        <div class="value-icon">🔗</div>
+        <div class="value-num">7×24</div>
+        <div class="value-label">全天候AI服务</div>
+        <div class="value-desc">数字员工不疲倦，24小时智能运营</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- How it works -->
+  <div class="section-title">运作方式</div>
+  <div class="flow-row">
+    <div class="flow-step">
+      <div class="flow-num">1</div>
+      <div class="flow-title">客户描述需求</div>
+      <div class="flow-desc">用自然语言表达出行计划</div>
+      <div class="flow-arrow">→</div>
+    </div>
+    <div class="flow-step">
+      <div class="flow-num">2</div>
+      <div class="flow-title">AI精准匹配</div>
+      <div class="flow-desc">向量数据库匹配最优酒店方案</div>
+      <div class="flow-arrow">→</div>
+    </div>
+    <div class="flow-step">
+      <div class="flow-num">3</div>
+      <div class="flow-title">智能交易</div>
+      <div class="flow-desc">去中心化合约，保障双方权益</div>
+      <div class="flow-arrow">→</div>
+    </div>
+    <div class="flow-step">
+      <div class="flow-num">4</div>
+      <div class="flow-title">数字员工运营</div>
+      <div class="flow-desc">AI管家+AI运营官全程协同</div>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="cta-area">
+    <div class="cta-title">立即体验AI酒店新时代</div>
+    <div class="cta-sub">种子轮融资进行中，欢迎洽谈合作</div>
+    <div class="cta-contact">📞 电话/微信：17760348653</div>
+  </div>
+
+</div>
+
+<!-- Footer -->
+<div class="footer">
+  <div class="footer-text">© 2026 AHL · AI Hotel Language</div>
+  <div class="footer-org">ahlprotocol.ai</div>
+</div>
+
+</body>
+</html>

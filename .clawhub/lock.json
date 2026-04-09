@@ -44,6 +44,78 @@
     "getnote": {
       "version": "1.5.7",
       "installedAt": 1774747753467
+    },
+    "md2wechat": {
+      "version": "2.0.7",
+      "installedAt": 1775405477330
+    },
+    "google-scholar-search": {
+      "version": "1.0.0",
+      "installedAt": 1775405642641
+    },
+    "cost-governor": {
+      "version": "1.0.1",
+      "installedAt": 1775405663095
+    },
+    "security-auditor": {
+      "version": "1.0.0",
+      "installedAt": 1775405708595
+    },
+    "evoclaw": {
+      "version": "1.0.1",
+      "installedAt": 1775405963733
+    },
+    "relayplane": {
+      "version": "4.1.0",
+      "installedAt": 1775406002701
+    },
+    "clawsec": {
+      "version": "1.0.0",
+      "installedAt": 1775406012377
+    },
+    "gstack-openclaw-office-hours": {
+      "version": "1.0.0",
+      "installedAt": 1775442481535
+    },
+    "gstack-openclaw-ceo-review": {
+      "version": "1.0.0",
+      "installedAt": 1775442495602
+    },
+    "gstack-openclaw-investigate": {
+      "version": "1.0.0",
+      "installedAt": 1775442541383
+    },
+    "gstack-openclaw-retro": {
+      "version": "1.0.0",
+      "installedAt": 1775442560791
+    },
+    "superdesign": {
+      "version": "1.0.0",
+      "installedAt": 1775484901122
+    },
+    "frontend-design-pro": {
+      "version": "1.0.0",
+      "installedAt": 1775442610466
+    },
+    "article-to-infographic": {
+      "version": "1.0.0",
+      "installedAt": 1775455201285
+    },
+    "china-poster-studio": {
+      "version": "1.0.3",
+      "installedAt": 1775455261708
+    },
+    "canva-automation": {
+      "version": "0.1.0",
+      "installedAt": 1775484853061
+    },
+    "lh-html-to-image": {
+      "version": "1.0.1",
+      "installedAt": 1775484960964
+    },
+    "openclaw-tavily-search": {
+      "version": "0.1.0",
+      "installedAt": 1775608261722
     }
   }
 }

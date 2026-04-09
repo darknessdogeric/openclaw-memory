@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1920, height=1080">
+<title>融资路演封面</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 1920px; height: 1080px;
+    font-family: "Noto Sans SC", "Microsoft YaHei", "SimHei", sans-serif;
+    background: #040D1F;
+    position: relative; overflow: hidden;
+  }
+
+  /* Background */
+  .bg-gradient {
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse 80% 60% at 50% 0%, #0D2340 0%, #040D1F 50%, #020810 100%);
+  }
+  .bg-glow-left {
+    position: absolute; width: 600px; height: 600px;
+    top: 50%; left: -100px;
+    transform: translateY(-50%);
+    background: radial-gradient(circle, rgba(0,180,255,0.07) 0%, transparent 70%);
+  }
+  .bg-glow-right {
+    position: absolute; width: 400px; height: 400px;
+    top: 10%; right: 50px;
+    background: radial-gradient(circle, rgba(255,184,0,0.06) 0%, transparent 70%);
+  }
+  .bg-grid {
+    position: absolute; inset: 0;
+    background-image:
+      linear-gradient(rgba(0,212,255,0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0,212,255,0.04) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+
+  /* Top bar */
+  .top-bar {
+    position: absolute; top: 0; left: 0; right: 0; height: 3px;
+    background: linear-gradient(90deg, rgba(0,212,255,0.6), rgba(0,212,255,0.2), rgba(255,184,0,0.2), rgba(255,184,0,0.6));
+  }
+
+  /* Logo area */
+  .logo-area {
+    position: absolute;
+    top: 60px; left: 80px;
+    display: flex; align-items: center; gap: 20px;
+  }
+  .logo-icon {
+    width: 80px; height: 80px;
+    border-radius: 18px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 40px; font-weight: 900;
+    position: relative; overflow: hidden;
+  }
+  .logo-A { background: rgba(255,255,255,0.08); color: #fff; border: 1px solid rgba(255,255,255,0.12); }
+  .logo-H { background: rgba(0,212,255,0.12); color: #00D4FF; border: 1px solid rgba(0,212,255,0.25); }
+  .logo-L { background: rgba(255,184,0,0.08); color: rgba(255,184,0,0.9); border: 1px solid rgba(255,184,0,0.2); }
+  .logo-text-group { display: flex; flex-direction: column; gap: 4px; }
+  .logo-en { font-size: 13px; letter-spacing: 10px; color: rgba(0,212,255,0.5); text-transform: uppercase; }
+  .logo-cn { font-size: 26px; font-weight: 700; color: #fff; letter-spacing: 6px; }
+
+  /* Right badge */
+  .round-badge {
+    position: absolute; top: 70px; right: 80px;
+    background: rgba(0,212,255,0.06);
+    border: 1px solid rgba(0,212,255,0.2);
+    border-radius: 100px;
+    padding: 10px 24px;
+    font-size: 14px;
+    color: rgba(0,212,255,0.7);
+    letter-spacing: 3px;
+  }
+
+  /* Center content */
+  .center-area {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 1200px;
+  }
+
+  /* LLM badge */
+  .llm-badge {
+    display: inline-flex; flex-direction: column; align-items: center; gap: 6px;
+    background: rgba(0,212,255,0.06);
+    border: 1px solid rgba(0,212,255,0.18);
+    border-radius: 16px;
+    padding: 14px 40px;
+    margin-bottom: 40px;
+  }
+  .llm-label { font-size: 11px; letter-spacing: 6px; color: rgba(0,212,255,0.4); text-transform: uppercase; }
+  .llm-title { font-size: 28px; font-weight: 800; color: #fff; letter-spacing: 3px; }
+  .llm-sub { font-size: 13px; color: rgba(0,212,255,0.5); letter-spacing: 1px; }
+
+  /* Main title */
+  .main-title {
+    font-size: 88px; font-weight: 900;
+    color: #fff; letter-spacing: 16px;
+    line-height: 1.1;
+    margin-bottom: 30px;
+    text-shadow: 0 0 60px rgba(0,212,255,0.15);
+  }
+
+  /* Subtitle */
+  .sub-title {
+    font-size: 28px; font-weight: 400;
+    color: rgba(0,212,255,0.6);
+    letter-spacing: 8px;
+    margin-bottom: 50px;
+  }
+
+  /* Divider */
+  .divider {
+    width: 80px; height: 2px;
+    background: linear-gradient(90deg, transparent, rgba(0,212,255,0.5), transparent);
+    margin: 0 auto 50px;
+  }
+
+  /* Stats row */
+  .stats-row {
+    display: flex; justify-content: center; gap: 60px;
+  }
+  .stat-item { text-align: center; }
+  .stat-num {
+    font-size: 48px; font-weight: 800;
+    background: linear-gradient(135deg, #00D4FF, #fff);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    line-height: 1;
+  }
+  .stat-unit { font-size: 14px; color: rgba(0,212,255,0.5); letter-spacing: 1px; margin-top: 6px; }
+  .stat-label { font-size: 15px; color: rgba(255,255,255,0.4); letter-spacing: 2px; margin-top: 4px; }
+
+  /* Connector lines from stats */
+  .stats-connector {
+    display: flex; justify-content: center; gap: 60px;
+    margin-top: 20px;
+  }
+  .conn-dot {
+    width: 5px; height: 5px; border-radius: 50%;
+    background: rgba(0,212,255,0.3);
+  }
+
+  /* Bottom */
+  .bottom-area {
+    position: absolute; bottom: 0; left: 0; right: 0;
+    padding: 50px 80px;
+    background: linear-gradient(0deg, rgba(0,0,0,0.7) 0%, transparent 100%);
+    display: flex; justify-content: space-between; align-items: flex-end;
+  }
+  .bottom-left { display: flex; flex-direction: column; gap: 8px; }
+  .bottom-tag {
+    font-size: 16px; letter-spacing: 4px;
+    color: rgba(255,255,255,0.5);
+  }
+  .bottom-contact {
+    font-size: 18px; color: rgba(0,212,255,0.6);
+    letter-spacing: 3px;
+  }
+  .bottom-right { text-align: right; }
+  .bottom-qr-hint {
+    font-size: 13px; color: rgba(255,255,255,0.25);
+    letter-spacing: 2px;
+  }
+  .bottom-org {
+    font-size: 15px; color: rgba(255,255,255,0.3);
+    letter-spacing: 2px; margin-top: 6px;
+  }
+
+  /* Corner decorations */
+  .corner-tl, .corner-tr, .corner-bl, .corner-br {
+    position: absolute; width: 40px; height: 40px;
+  }
+  .corner-tl { top: 20px; left: 20px; border-top: 1.5px solid rgba(0,212,255,0.2); border-left: 1.5px solid rgba(0,212,255,0.2); }
+  .corner-tr { top: 20px; right: 20px; border-top: 1.5px solid rgba(0,212,255,0.2); border-right: 1.5px solid rgba(0,212,255,0.2); }
+  .corner-bl { bottom: 20px; left: 20px; border-bottom: 1px solid rgba(255,184,0,0.15); border-left: 1px solid rgba(255,184,0,0.15); }
+  .corner-br { bottom: 20px; right: 20px; border-bottom: 1px solid rgba(255,184,0,0.15); border-right: 1px solid rgba(255,184,0,0.15); }
+
+  /* Subtle animation lines */
+  .anim-line {
+    position: absolute;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(0,212,255,0.15), transparent);
+    animation: scan 6s ease-in-out infinite;
+  }
+  .anim-line-1 { top: 30%; left: 5%; right: 5%; animation-delay: 0s; }
+  .anim-line-2 { top: 70%; left: 10%; right: 10%; animation-delay: 3s; }
+  @keyframes scan {
+    0%, 100% { opacity: 0.3; transform: scaleX(0.8); }
+    50% { opacity: 0.8; transform: scaleX(1); }
+  }
+</style>
+</head>
+<body>
+
+<!-- Backgrounds -->
+<div class="bg-gradient"></div>
+<div class="bg-glow-left"></div>
+<div class="bg-glow-right"></div>
+<div class="bg-grid"></div>
+<div class="top-bar"></div>
+<div class="corner-tl"></div>
+<div class="corner-tr"></div>
+<div class="corner-bl"></div>
+<div class="corner-br"></div>
+<div class="anim-line anim-line-1"></div>
+<div class="anim-line anim-line-2"></div>
+
+<!-- Logo -->
+<div class="logo-area">
+  <div class="logo-icon logo-A">A</div>
+  <div class="logo-icon logo-H">H</div>
+  <div class="logo-icon logo-L">L</div>
+  <div class="logo-text-group">
+    <div class="logo-en">AI Hotel Language</div>
+    <div class="logo-cn">住宿业范式革命</div>
+  </div>
+</div>
+
+<!-- Round badge -->
+<div class="round-badge">种子轮融资</div>
+
+<!-- Center -->
+<div class="center-area">
+  <div class="llm-badge">
+    <div class="llm-label">大模型基座驱动</div>
+    <div class="llm-title">住宿业垂直大模型</div>
+    <div class="llm-sub">DeepSeek · Qwen · 向量数据库</div>
+  </div>
+
+  <div class="main-title">用AI重新定义酒店交易</div>
+  <div class="sub-title">去中心化交易 · 双AGENT协同 · 87个细分场景</div>
+  <div class="divider"></div>
+
+  <div class="stats-row">
+    <div class="stat-item">
+      <div class="stat-num">2%</div>
+      <div class="stat-unit">VS OTA 15-25%</div>
+      <div class="stat-label">技术服务费</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">95%+</div>
+      <div class="stat-unit">精准匹配</div>
+      <div class="stat-label">向量语义理解</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">500-800</div>
+      <div class="stat-unit">万元</div>
+      <div class="stat-label">本轮融资目标</div>
+    </div>
+  </div>
+</div>
+
+<!-- Bottom -->
+<div class="bottom-area">
+  <div class="bottom-left">
+    <div class="bottom-tag">AI HOTEL LANGUAGE · AHL去中心化旅行平台</div>
+    <div class="bottom-contact">电话/微信：17760348653</div>
+  </div>
+  <div class="bottom-right">
+    <div class="bottom-qr-hint">扫码了解更多</div>
+    <div class="bottom-org">ahlprotocol.ai</div>
+  </div>
+</div>
+
+</body>
+</html>

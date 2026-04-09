@@ -1,0 +1,133 @@
+[
+  {
+    "name": "Ctrip-pattern1",
+    "url": "https://you.ctrip.com/hotel/leshan38.html",
+    "status": 404,
+    "title": "携程旅行网",
+    "final_url": "https://you.ctrip.com/hotel/leshan38.html",
+    "bot_blocked": false,
+    "hotel_urls_found": [
+      "http://pages.ctrip.com/public/copyright.htm",
+      "http://pages.ctrip.com/public/ctripab/abctrip.htm"
+    ],
+    "body_preview": "Copyright©1999-2026, ctrip.com. all rights reserved.",
+    "ok": false
+  },
+  {
+    "name": "Ctrip-pattern2",
+    "url": "https://hotels.ctrip.com/hotel/leshan38.html",
+    "status": 200,
+    "title": "贵阳酒店,贵阳酒店预订查询,贵阳宾馆住宿【携程酒店】",
+    "final_url": "https://hotels.ctrip.com/hotel/leshan38.html",
+    "bot_blocked": false,
+    "hotel_urls_found": [
+      "https://passport.ctrip.com/user/login?BackUrl=https%3A%2F%2Fhotels.ctrip.com%2Fhotel%2Fleshan38.html#ctm_ref=c_ph_login_buttom",
+      "https://passport.ctrip.com/user/reg/home ",
+      "https://my.ctrip.com/myinfo/home",
+      "https://sinfo.ctrip.com/MyInfo/AccountCenter/UserInfoUpdate.aspx",
+      "https://sinfo.ctrip.com/MyInfo/AccountCenter/MineMileage.aspx "
+    ],
+    "body_preview": "让旅行更幸福\n Language \n网站无障碍\n您好，请登录\n免费注册\n消息\n我的携程 \n我的订单 \n客服中心\n携程旅行网\n境内：95010\n（或）400-830-6666\n首页\n酒店\n国内酒店\n海外酒店\n酒店订单 >\n旅游\n跟团游\n自由行\n机票\n火车\n汽车 · 船\n用车\n门票\n攻略\n全球购\n礼品卡\n商旅\n邮轮\n目的地\n金融\n更多\n目的地/酒店名称\n入住时间\n1晚\n退房时间\n房间及住客\n\n1间, ",
+    "ok": true
+  },
+  {
+    "name": "Ctrip-pattern3",
+    "url": "https://you.ctrip.com/hotel/china/leshan/leshan38.html",
+    "status": 404,
+    "title": "携程旅行网",
+    "final_url": "https://you.ctrip.com/hotel/china/leshan/leshan38.html",
+    "bot_blocked": false,
+    "hotel_urls_found": [
+      "http://pages.ctrip.com/public/copyright.htm",
+      "http://pages.ctrip.com/public/ctripab/abctrip.htm"
+    ],
+    "body_preview": "Copyright©1999-2026, ctrip.com. all rights reserved.",
+    "ok": false
+  },
+  {
+    "name": "Qunar-pattern1",
+    "url": "https://www.qunar.com/hotel/leshan/",
+    "status": 404,
+    "title": "非常抱歉，您访问的页面不存在。",
+    "final_url": "https://www.qunar.com/hotel/leshan/",
+    "bot_blocked": false,
+    "hotel_urls_found": [
+      "http://www.qunar.com/",
+      "http://flight.qunar.com/",
+      "http://hotel.qunar.com/",
+      "http://tuan.qunar.com/",
+      "http://package.qunar.com/"
+    ],
+    "body_preview": "非常抱歉，您访问的页面不存在。\n您可以：\n1. 返回至刚才的页面。\n2. 直接查看：机票|酒店|团购|度假|火车票|攻略|旅图|门票",
+    "ok": false
+  },
+  {
+    "name": "Qunar-pattern2",
+    "url": "https://hotel.qunar.com/city/leshan/",
+    "status": 200,
+    "title": "【去哪儿网】机票查询预订，酒店预订，旅游团购，度假搜索，门票预订-去哪儿网Qunar.com",
+    "final_url": "https://www.qunar.com/",
+    "bot_blocked": false,
+    "hotel_urls_found": [
+      "https://www.qunar.com/site/zh/Qunar.in.China_1.2.shtml",
+      "https://www.qunar.com/site/zh/Cooperate_4.shtml",
+      "https://app.mokahr.com/social-recruitment/qunar/37562#/",
+      "http://help.qunar.com/#/suggestion",
+      "https://security.qunar.com/"
+    ],
+    "body_preview": "首页\n关于去哪儿\n业务合作\n加入我们\n整治举报\n安全中心\n旅游快讯\n星骆驼公益\nAbout Us\nTrip.com Group\nCopyright © Qunar.com京公网安备11010802030542京ICP备05021087号京ICP证060856号营业执照信息互联网药品信息服务资格证：(京)-非经营性-2016-0110去哪儿网投诉、咨询热线电话95117举报、投诉邮箱: tousu@",
+    "ok": true
+  },
+  {
+    "name": "Fliggy-pattern1",
+    "url": "https://hotel.fliggy.com/hotel/list.htm?city=leshan",
+    "status": 200,
+    "title": "淘宝网 - 淘！我喜欢",
+    "final_url": "https://error.taobao.com/app/tbhome/common/error.html",
+    "bot_blocked": false,
+    "hotel_urls_found": [
+      "https://www.fliggy.com/"
+    ],
+    "body_preview": "亲，请登录\n免费注册\n网页无障碍\n淘宝网首页\n已买到的宝贝\n我的淘宝\n\n\n购物车\n\n收藏夹\n\n免费开店\n\n千牛卖家中心\n\n帮助中心\n\n淘宝网\n\n抱歉！页面无法访问……\n\n可能因为：\n\n网址有错误>请检查地址是否完整或存在多余字符\n网址已失效>可能页面已删除，活动已下线等\n\n或者逛逛：淘宝首页|我的淘宝|搜宝贝/店铺 \n\n规则协议\n淘宝规则\n平台服务协议\n新手上路\n0元开店\n天猫开店\n",
+    "ok": true
+  },
+  {
+    "name": "Fliggy-pattern2",
+    "url": "https://www.fliggy.com/hotel/leshan/",
+    "error": "Page.goto: Timeout 20000ms exceeded.\nCall log:\n  - navigating to \"https://www.fliggy.com/hotel/leshan/\", waiting until \"domcontentloaded\"\n",
+    "ok": false
+  },
+  {
+    "name": "Meituan-pattern1",
+    "url": "https://hotel.meituan.com/leshan/",
+    "status": 403,
+    "title": "403 Forbidden",
+    "final_url": "https://hotel.meituan.com/leshan/",
+    "bot_blocked": false,
+    "hotel_urls_found": [],
+    "body_preview": "403 Forbidden\nopenresty",
+    "ok": false
+  },
+  {
+    "name": "Meituan-pattern2",
+    "url": "https://hotel.meituan.com/api/hotel/list?cityId=2384",
+    "status": 403,
+    "title": "403 Forbidden",
+    "final_url": "https://hotel.meituan.com/api/hotel/list?cityId=2384",
+    "bot_blocked": false,
+    "hotel_urls_found": [],
+    "body_preview": "403 Forbidden\nopenresty",
+    "ok": false
+  },
+  {
+    "name": "Baidu-search",
+    "url": "https://www.baidu.com/s?wd=%E9%87%91%E6%B1%9F%E5%98%89%E5%B7%9E%E9%A5%AD%E9%A6%86+%E6%90%BA%E7%A8%8B",
+    "status": 200,
+    "title": "金江嘉州饭馆 携程_百度搜索",
+    "final_url": "https://www.baidu.com/s?wd=%E9%87%91%E6%B1%9F%E5%98%89%E5%B7%9E%E9%A5%AD%E9%A6%86+%E6%90%BA%E7%A8%8B",
+    "bot_blocked": false,
+    "hotel_urls_found": [],
+    "body_preview": "百度一下\n百度首页设置登录\n网页\n图片\n资讯\n视频\n笔记\n地图\n贴吧\n文库\n更多\n搜索工具\n相关搜索\n泸州江畔大饭店\n东江海鲜酒家\n东江酒家\n金山嘉都酒店\n金大陆海鲜酒楼\n九江浔瑞轩餐厅\n\n换一换\n热搜榜成都榜民生榜财经榜\n\n天地英雄气\n1\n3岁孙女第一次见到“29岁”爷爷热\n2\n威力巨大！传说中的武器来了热\n3\n清明之际 追思公安英烈\n4\n何小鹏：不碰10万元以下的汽车热\n5\n王艺迪vs",
+    "ok": true
+  }
+]
