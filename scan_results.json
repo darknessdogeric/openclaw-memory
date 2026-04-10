@@ -1,0 +1,857 @@
+[
+  {
+    "name": "Windows-MCP",
+    "type": "dir",
+    "has_skill": false,
+    "file_count": 17,
+    "size_kb": 263.8
+  },
+  {
+    "name": "advanced-skills",
+    "type": "dir",
+    "has_skill": false,
+    "file_count": 2,
+    "size_kb": 155.2
+  },
+  {
+    "name": "agency-agents",
+    "type": "dir",
+    "has_skill": true,
+    "file_count": 9,
+    "size_kb": 24.0
+  },
+  {
+    "name": "agent-council",
+    "type": "dir",
+    "has_skill": true,
+    "file_count": 5,
+    "size_kb": 29.2
+  },
+  {
+    "name": "agenticflow-skill",
+    "type": "dir",
+    "has_skill": true,
+    "file_count": 4,
+    "size_kb": 3.1
+  },
+  {
+    "name": "aisa-twitter-api",
+    "type": "dir",
+    "has_skill": true,
+    "file_count": 4,
+    "size_kb": 6.6
+  },
+  {
+    "name": "apify-mcp",
+    "type": "dir",
+    "has_skill": false,
+    "file_count": 37,
+    "size_kb": 649.5
+  },
+  {
+    "name": "article-to-infographic",
+    "type": "dir",
+    "has_skill": true,
+    "file_count": 7,
+    "size_kb": 19.9
+  },
+  {
+    "name": "audiobook",
+    "type": "dir",
+    "has_skill": true,
+    "file_count": 15,
+    "size_kb": 54.3
+  },
+  {
+    "name": "automation-workflows",
+    "type": "dir",
+    "has_skill": false,
+    "file_count": 13,
+    "size_kb": 9.0
+  },
+  {
+    "name": "autoresearch",
+    "type": "dir",
+    "has_skill": true,
+    "file_count": 4,
+    "size_kb": 16.5
+  },
+  {
+    "name": "business-design",
+    "type": "dir",
+    "has_skill": true,
+    "file_count": 3,
+    "size_kb": 0.9
+  },
+  {
+    "name": "business-intelligence",
+    "type": "dir",
+    "has_skill": true,
+    "file_count": 1,
+    "size_kb": 12.8
+  },
+  {
+    "name": "calendar",
+    "type": "dir",
+    "has_skill": true,
+    "file_count": 2,
+    "size_kb": 1.4
+  },
+  {
+    "name": "canva-automation",
+    "type": "dir",
+    "has_skill": true,
+    "file_count": 3,
+    "size_kb": 8.3
+  },
+  {
+    "name": "china-poster-studio",
+    "type": "dir",
+    "has_skill": true,
+    "file_count": 4,
+    "size_kb": 9.9
+  },
+  {
+    "name": "claude-code-skills",
+    "type": "dir",
+    "has_skill": false,
+    "file_count": 0,
+    "size_kb": 0.0
+  },
+  {
+    "name": "clawsec",
+    "type": "dir",
+    "has_skill": true,
+    "file_count": 3,
+    "size_kb": 6.7
+  },
+  {
+    "name": "cli-anything",
+    "type": "dir",
+    "has_skill": true,
+    "file_count": 5,
+    "size_kb": 5.3
+  },
+  {
+    "name": "cost-governor",
+    "type": "dir",
+    "has_skill": true,
+    "file_count": 4,
+    "size_kb": 12.0
+  },
+  {
+    "name": "course-creator",
+    "type": "dir",
+    "has_skill": false,
+    "file_count": 0,
+    "size_kb": 0.0
+  },
+  {
+    "name": "crawl4ai",
+    "type": "dir",
+    "has_skill": false,
+    "file_count": 0,
+    "size_kb": 0.0
+  },
+  {
+    "name": "crawl4ai_local",
+    "type": "dir",
+    "has_skill": false,
+    "file_count": 0,
+    "size_kb": 0.0
+  },
+  {
+    "name": "cross-border-trade",
+    "type": "dir",
+    "has_skill": true,
+    "file_count": 4,
+    "size_kb": 33.1
+  },
+  {
+    "name": "data-acquisition",
+    "type": "dir",
+    "has_skill": true,
+    "file_count": 1,
+    "size_kb": 1.1
+  },
+  {
+    "name": "doc-reader",
+    "type": "dir",
+    "has_skill": true,
+    "file_count": 2,
+    "size_kb": 1.7
+  },
+  {
+    "name": "document-pdf",
+    "type": "dir",
+    "has_skill": true,
+    "file_count": 1,
+    "size_kb": 7.2
+  },
+  {
+    "name": "elevenlabs",
+    "type": "dir",
+    "has_skill": false,
+    "file_count": 0,
+    "size_kb": 0.0
+  },
+  {
+    "name": "email",
+    "type": "dir",
+    "has_skill": true,
+    "file_count": 2,
+    "size_kb": 1.5
+  },
+  {
+    "name": "evoclaw",
+    "type": "dir",
+    "has_skill": true,
+    "file_count": 9,
+    "size_kb": 86.5
+  },
+  {
+    "name": "evolver",
+    "type": "dir",
+    "has_skill": false,
+    "file_count": 0,
+    "size_kb": 0.0
+  },
+  {
+    "name": "file-manager",
+    "type": "dir",
+    "has_skill": true,
+    "file_count": 1,
+    "size_kb": 0.8
+  },
+  {
+    "name": "find-skills",
+    "type": "dir",
+    "has_skill": true,
+    "file_count": 3,
+    "size_kb": 4.7
+  },
+  {
+    "name": "firecrawl-skill",
+    "type": "dir",
+    "has_skill": true,
+    "file_count": 6,
+    "size_kb": 19.1
+  },
+  {
+    "name": "follow-builders",
+    "type": "dir",
+    "has_skill": false,
+    "file_count": 0,
+    "size_kb": 0.0
+  },
+  {
+    "name": "frontend-design-pro",
+    "type": "dir",
+    "has_skill": true,
+    "file_count": 3,
+    "size_kb": 4.8
+  },
+  {
+    "name": "getnote",
+    "type": "dir",
+    "has_skill": true,
+    "file_count": 7,
+    "size_kb": 11.5
+  },
+  {
+    "name": "github",
+    "type": "dir",
+    "has_skill": true,
+    "file_count": 2,
+    "size_kb": 1.2
+  },
+  {
+    "name": "goal-management",
+    "type": "dir",
+    "has_skill": true,
+    "file_count": 1,
+    "size_kb": 4.7
+  },
+  {
+    "name": "google-scholar-search",
+    "type": "dir",
+    "has_skill": true,
+    "file_count": 7,
+    "size_kb": 7.1
+  },
+  {
+    "name": "gstack-openclaw-ceo-review",
+    "type": "dir",
+    "has_skill": true,
+    "file_count": 3,
+    "size_kb": 10.9
+  },
+  {
+    "name": "gstack-openclaw-investigate",
+    "type": "dir",
+    "has_skill": true,
+    "file_count": 3,
+    "size_kb": 5.8
+  },
+  {
+    "name": "gstack-openclaw-office-hours",
+    "type": "dir",
+    "has_skill": true,
+    "file_count": 3,
+    "size_kb": 17.4
+  },
+  {
+    "name": "gstack-openclaw-retro",
+    "type": "dir",
+    "has_skill": true,
+    "file_count": 3,
+    "size_kb": 10.0
+  },
+  {
+    "name": "gworkspace",
+    "type": "dir",
+    "has_skill": true,
+    "file_count": 4,
+    "size_kb": 11.9
+  },
+  {
+    "name": "hotel-new-media",
+    "type": "dir",
+    "has_skill": true,
+    "file_count": 2,
+    "size_kb": 3.5
+  },
+  {
+    "name": "hotel-private-domain",
+    "type": "dir",
+    "has_skill": true,
+    "file_count": 2,
+    "size_kb": 3.5
+  },
+  {
+    "name": "hotel-report",
+    "type": "dir",
+    "has_skill": true,
+    "file_count": 4,
+    "size_kb": 19.6
+  },
+  {
+    "name": "hotel-revenue-management",
+    "type": "dir",
+    "has_skill": true,
+    "file_count": 2,
+    "size_kb": 4.8
+  },
+  {
+    "name": "image-gen",
+    "type": "dir",
+    "has_skill": true,
+    "file_count": 3,
+    "size_kb": 12.3
+  },
+  {
+    "name": "jina-reader",
+    "type": "dir",
+    "has_skill": true,
+    "file_count": 1,
+    "size_kb": 0.5
+  },
+  {
+    "name": "knowledge-base",
+    "type": "dir",
+    "has_skill": true,
+    "file_count": 2,
+    "size_kb": 12.0
+  },
+  {
+    "name": "larry-skill",
+    "type": "dir",
+    "has_skill": false,
+    "file_count": 0,
+    "size_kb": 0.0
+  },
+  {
+    "name": "last30days",
+    "type": "dir",
+    "has_skill": true,
+    "file_count": 24,
+    "size_kb": 153.1
+  },
+  {
+    "name": "lh-html-to-image",
+    "type": "dir",
+    "has_skill": true,
+    "file_count": 3,
+    "size_kb": 2.6
+  },
+  {
+    "name": "linkedin",
+    "type": "dir",
+    "has_skill": true,
+    "file_count": 1,
+    "size_kb": 1.1
+  },
+  {
+    "name": "lottery-analyst",
+    "type": "dir",
+    "has_skill": true,
+    "file_count": 2,
+    "size_kb": 4.0
+  },
+  {
+    "name": "md-to-pdf",
+    "type": "dir",
+    "has_skill": true,
+    "file_count": 11,
+    "size_kb": 155.1
+  },
+  {
+    "name": "md2all-converter",
+    "type": "dir",
+    "has_skill": true,
+    "file_count": 3,
+    "size_kb": 22.4
+  },
+  {
+    "name": "md2pdf-converter",
+    "type": "dir",
+    "has_skill": true,
+    "file_count": 1,
+    "size_kb": 1.6
+  },
+  {
+    "name": "md2ppt",
+    "type": "dir",
+    "has_skill": true,
+    "file_count": 3,
+    "size_kb": 35.9
+  },
+  {
+    "name": "md2wechat",
+    "type": "dir",
+    "has_skill": true,
+    "file_count": 3,
+    "size_kb": 9.1
+  },
+  {
+    "name": "memu-engine",
+    "type": "dir",
+    "has_skill": false,
+    "file_count": 15,
+    "size_kb": 80.1
+  },
+  {
+    "name": "minimax-ai-skills",
+    "type": "dir",
+    "has_skill": false,
+    "file_count": 0,
+    "size_kb": 0.0
+  },
+  {
+    "name": "minimax-docx",
+    "type": "dir",
+    "has_skill": true,
+    "file_count": 6,
+    "size_kb": 16.8
+  },
+  {
+    "name": "minimax-multimodal-toolkit",
+    "type": "dir",
+    "has_skill": true,
+    "file_count": 3,
+    "size_kb": 30.8
+  },
+  {
+    "name": "minimax-pdf",
+    "type": "dir",
+    "has_skill": true,
+    "file_count": 4,
+    "size_kb": 17.2
+  },
+  {
+    "name": "minimax-xlsx",
+    "type": "dir",
+    "has_skill": true,
+    "file_count": 4,
+    "size_kb": 8.3
+  },
+  {
+    "name": "multi-ota-price-tool",
+    "type": "dir",
+    "has_skill": true,
+    "file_count": 5,
+    "size_kb": 31.4
+  },
+  {
+    "name": "music-aesthetic-judgment",
+    "type": "dir",
+    "has_skill": true,
+    "file_count": 1,
+    "size_kb": 8.2
+  },
+  {
+    "name": "nano-banana-pdf",
+    "type": "dir",
+    "has_skill": true,
+    "file_count": 7,
+    "size_kb": 10.6
+  },
+  {
+    "name": "nano-pdf",
+    "type": "dir",
+    "has_skill": false,
+    "file_count": 1,
+    "size_kb": 0.0
+  },
+  {
+    "name": "notebooklm",
+    "type": "dir",
+    "has_skill": true,
+    "file_count": 4,
+    "size_kb": 22.1
+  },
+  {
+    "name": "notebooklm-prompts",
+    "type": "dir",
+    "has_skill": true,
+    "file_count": 4,
+    "size_kb": 2.4
+  },
+  {
+    "name": "notion",
+    "type": "dir",
+    "has_skill": true,
+    "file_count": 1,
+    "size_kb": 0.9
+  },
+  {
+    "name": "ontology",
+    "type": "dir",
+    "has_skill": true,
+    "file_count": 12,
+    "size_kb": 15.2
+  },
+  {
+    "name": "openclaw-tavily-search",
+    "type": "dir",
+    "has_skill": true,
+    "file_count": 4,
+    "size_kb": 1.7
+  },
+  {
+    "name": "openviking",
+    "type": "dir",
+    "has_skill": true,
+    "file_count": 33,
+    "size_kb": 1491.8
+  },
+  {
+    "name": "playwright-mcp",
+    "type": "dir",
+    "has_skill": false,
+    "file_count": 11,
+    "size_kb": 186.3
+  },
+  {
+    "name": "podcastfy",
+    "type": "dir",
+    "has_skill": true,
+    "file_count": 6,
+    "size_kb": 10.8
+  },
+  {
+    "name": "powerpoint-pptx",
+    "type": "dir",
+    "has_skill": true,
+    "file_count": 3,
+    "size_kb": 7.1
+  },
+  {
+    "name": "ppt-deck-builder-pro",
+    "type": "dir",
+    "has_skill": true,
+    "file_count": 6,
+    "size_kb": 12.3
+  },
+  {
+    "name": "ppt-deep-generator",
+    "type": "dir",
+    "has_skill": true,
+    "file_count": 1,
+    "size_kb": 1.4
+  },
+  {
+    "name": "ppt-generator",
+    "type": "dir",
+    "has_skill": false,
+    "file_count": 0,
+    "size_kb": 0.0
+  },
+  {
+    "name": "ppt-skills",
+    "type": "dir",
+    "has_skill": false,
+    "file_count": 0,
+    "size_kb": 0.0
+  },
+  {
+    "name": "ppt-smart-generator",
+    "type": "dir",
+    "has_skill": true,
+    "file_count": 8,
+    "size_kb": 28.7
+  },
+  {
+    "name": "pptx-generator",
+    "type": "dir",
+    "has_skill": true,
+    "file_count": 2,
+    "size_kb": 8.0
+  },
+  {
+    "name": "price-comparison",
+    "type": "dir",
+    "has_skill": true,
+    "file_count": 18,
+    "size_kb": 184.9
+  },
+  {
+    "name": "proactive-agent",
+    "type": "dir",
+    "has_skill": true,
+    "file_count": 3,
+    "size_kb": 18.4
+  },
+  {
+    "name": "proactive-agent-1-2-4",
+    "type": "dir",
+    "has_skill": true,
+    "file_count": 6,
+    "size_kb": 15.0
+  },
+  {
+    "name": "relayplane",
+    "type": "dir",
+    "has_skill": true,
+    "file_count": 5,
+    "size_kb": 9.7
+  },
+  {
+    "name": "rss-reader",
+    "type": "dir",
+    "has_skill": true,
+    "file_count": 1,
+    "size_kb": 1.1
+  },
+  {
+    "name": "scholar-skill",
+    "type": "dir",
+    "has_skill": false,
+    "file_count": 0,
+    "size_kb": 0.0
+  },
+  {
+    "name": "scrapling-official",
+    "type": "dir",
+    "has_skill": true,
+    "file_count": 4,
+    "size_kb": 21.1
+  },
+  {
+    "name": "second-brain",
+    "type": "dir",
+    "has_skill": true,
+    "file_count": 1,
+    "size_kb": 0.8
+  },
+  {
+    "name": "secondbrain-note",
+    "type": "dir",
+    "has_skill": true,
+    "file_count": 2,
+    "size_kb": 3.2
+  },
+  {
+    "name": "security-auditor",
+    "type": "dir",
+    "has_skill": true,
+    "file_count": 3,
+    "size_kb": 11.3
+  },
+  {
+    "name": "self-improving",
+    "type": "dir",
+    "has_skill": true,
+    "file_count": 12,
+    "size_kb": 25.9
+  },
+  {
+    "name": "seo-audit",
+    "type": "dir",
+    "has_skill": false,
+    "file_count": 7,
+    "size_kb": 18.4
+  },
+  {
+    "name": "seo-audit-install-log.md",
+    "type": "file"
+  },
+  {
+    "name": "skill-creator",
+    "type": "dir",
+    "has_skill": false,
+    "file_count": 1,
+    "size_kb": 0.0
+  },
+  {
+    "name": "skill-installation-report.md",
+    "type": "file"
+  },
+  {
+    "name": "skill-vetter",
+    "type": "dir",
+    "has_skill": true,
+    "file_count": 4,
+    "size_kb": 5.5
+  },
+  {
+    "name": "slack",
+    "type": "dir",
+    "has_skill": true,
+    "file_count": 1,
+    "size_kb": 0.9
+  },
+  {
+    "name": "startup-fundraising",
+    "type": "dir",
+    "has_skill": true,
+    "file_count": 2,
+    "size_kb": 4.5
+  },
+  {
+    "name": "strategic-decision-making",
+    "type": "dir",
+    "has_skill": true,
+    "file_count": 2,
+    "size_kb": 4.7
+  },
+  {
+    "name": "summarize",
+    "type": "dir",
+    "has_skill": true,
+    "file_count": 5,
+    "size_kb": 17.7
+  },
+  {
+    "name": "superdesign",
+    "type": "dir",
+    "has_skill": true,
+    "file_count": 3,
+    "size_kb": 6.4
+  },
+  {
+    "name": "task-manager",
+    "type": "dir",
+    "has_skill": true,
+    "file_count": 1,
+    "size_kb": 0.9
+  },
+  {
+    "name": "tavily-search",
+    "type": "dir",
+    "has_skill": true,
+    "file_count": 1,
+    "size_kb": 0.8
+  },
+  {
+    "name": "temp_crawl4ai",
+    "type": "dir",
+    "has_skill": false,
+    "file_count": 0,
+    "size_kb": 0.0
+  },
+  {
+    "name": "tiangong-wps-ppt-automation",
+    "type": "dir",
+    "has_skill": true,
+    "file_count": 4,
+    "size_kb": 3.0
+  },
+  {
+    "name": "twitter",
+    "type": "dir",
+    "has_skill": true,
+    "file_count": 2,
+    "size_kb": 1.3
+  },
+  {
+    "name": "ultimate-search",
+    "type": "dir",
+    "has_skill": true,
+    "file_count": 7,
+    "size_kb": 22.0
+  },
+  {
+    "name": "validate-idea",
+    "type": "dir",
+    "has_skill": true,
+    "file_count": 1,
+    "size_kb": 3.2
+  },
+  {
+    "name": "vision-analysis",
+    "type": "dir",
+    "has_skill": true,
+    "file_count": 1,
+    "size_kb": 5.5
+  },
+  {
+    "name": "weather",
+    "type": "dir",
+    "has_skill": true,
+    "file_count": 1,
+    "size_kb": 0.8
+  },
+  {
+    "name": "web-search",
+    "type": "dir",
+    "has_skill": true,
+    "file_count": 1,
+    "size_kb": 0.6
+  },
+  {
+    "name": "wewrite",
+    "type": "dir",
+    "has_skill": false,
+    "file_count": 0,
+    "size_kb": 0.0
+  },
+  {
+    "name": "x-research",
+    "type": "dir",
+    "has_skill": true,
+    "file_count": 8,
+    "size_kb": 33.3
+  },
+  {
+    "name": "xiaohongshu",
+    "type": "dir",
+    "has_skill": true,
+    "file_count": 15,
+    "size_kb": 283.9
+  },
+  {
+    "name": "youtube",
+    "type": "dir",
+    "has_skill": true,
+    "file_count": 1,
+    "size_kb": 0.9
+  },
+  {
+    "name": "zsxq-pdf",
+    "type": "dir",
+    "has_skill": true,
+    "file_count": 8,
+    "size_kb": 25.6
+  }
+]
