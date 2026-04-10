@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AHL Agent & SKILL 技术团队完整说明书</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: "Microsoft YaHei", "PingFang SC", "Hiragino Sans GB", sans-serif;
+            background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 100%);
+            color: #e2e8f0;
+            line-height: 1.8;
+            padding: 40px 20px;
+        }
+        
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        
+        /* Header */
+        .header {
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(180deg, rgba(0,212,255,0.15) 0%, transparent 100%);
+            border-radius: 24px;
+            margin-bottom: 40px;
+            border: 1px solid rgba(0,212,255,0.2);
+        }
+        
+        .logo {
+            font-size: 72px;
+            font-weight: bold;
+            color: #ffd700;
+            text-shadow: 0 0 30px rgba(255,215,0,0.3);
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            font-size: 28px;
+            color: #00d4ff;
+            margin-bottom: 20px;
+        }
+        
+        .tagline {
+            font-size: 16px;
+            color: rgba(255,255,255,0.7);
+            background: rgba(0,212,255,0.1);
+            padding: 12px 30px;
+            border-radius: 30px;
+            display: inline-block;
+            border: 1px solid rgba(0,212,255,0.3);
+        }
+        
+        .version {
+            font-size: 14px;
+            color: rgba(255,255,255,0.5);
+            margin-top: 15px;
+        }
+        
+        /* Section */
+        .section {
+            background: rgba(255,255,255,0.03);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            border: 1px solid rgba(255,255,255,0.08);
+        }
+        
+        .section-title {
+            font-size: 26px;
+            color: #ffd700;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid rgba(255,215,0,0.3);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .section-title::before {
+            content: "◆";
+            color: #00d4ff;
+        }
+        
+        h3 {
+            color: #00d4ff;
+            font-size: 18px;
+            margin: 30px 0 15px;
+            padding-left: 15px;
+            border-left: 3px solid #00d4ff;
+        }
+        
+        h4 {
+            color: #fff;
+            font-size: 16px;
+            margin: 20px 0 10px;
+        }
+        
+        /* Architecture */
+        .arch-diagram {
+            background: rgba(0,0,0,0.3);
+            border-radius: 16px;
+            padding: 25px;
+            font-family: "Courier New", monospace;
+            font-size: 13px;
+            overflow-x: auto;
+            white-space: pre;
+            color: #a0aec0;
+            border: 1px solid rgba(0,212,255,0.2);
+            margin: 15px 0;
+        }
+        
+        /* Tables */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            font-size: 13px;
+        }
+        
+        th, td {
+            padding: 10px 12px;
+            text-align: left;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        th {
+            background: rgba(0,212,255,0.1);
+            color: #00d4ff;
+            font-weight: 600;
+        }
+        
+        tr:hover {
+            background: rgba(0,212,255,0.05);
+        }
+        
+        .skill-id {
+            color: #ffd700;
+            font-weight: bold;
+            font-family: monospace;
+        }
+        
+        /* Stats */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .stat-card {
+            background: rgba(0,212,255,0.1);
+            border: 1px solid rgba(0,212,255,0.3);
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 32px;
+            font-weight: bold;
+            color: #ffd700;
+        }
+        
+        .stat-label {
+            font-size: 13px;
+            color: rgba(255,255,255,0.7);
+            margin-top: 8px;
+        }
+        
+        /* Code */
+        pre, code {
+            background: rgba(0,0,0,0.4);
+            border-radius: 8px;
+            font-family: "Courier New", monospace;
+            font-size: 12px;
+        }
+        
+        pre {
+            padding: 20px;
+            overflow-x: auto;
+            margin: 15px 0;
+            border: 1px solid rgba(0,212,255,0.2);
+        }
+        
+        code {
+            padding: 2px 6px;
+            color: #a0aec0;
+        }
+        
+        .yaml-block {
+            color: #a0aec0;
+        }
+        
+        /* Phase */
+        .phase {
+            background: rgba(255,215,0,0.05);
+            border-left: 4px solid #ffd700;
+            padding: 15px 20px;
+            margin: 15px 0;
+            border-radius: 0 10px 10px 0;
+        }
+        
+        .phase-title {
+            font-size: 16px;
+            color: #ffd700;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+        
+        .phase-time {
+            font-size: 13px;
+            color: #00d4ff;
+            margin-bottom: 10px;
+        }
+        
+        /* Comparison */
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .comp-card {
+            background: rgba(255,255,255,0.05);
+            border-radius: 12px;
+            padding: 20px;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .comp-title {
+            font-size: 15px;
+            color: #fff;
+            font-weight: bold;
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .comp-item {
+            font-size: 13px;
+            color: rgba(255,255,255,0.8);
+            padding: 5px 0;
+        }
+        
+        /* Highlight */
+        .highlight {
+            color: #ffd700;
+            font-weight: bold;
+        }
+        
+        .cyan {
+            color: #00d4ff;
+        }
+        
+        .green {
+            color: #68d391;
+        }
+        
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 40px;
+            color: rgba(255,255,255,0.4);
+            font-size: 14px;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header {
+                padding: 40px 15px;
+            }
+            .logo {
+                font-size: 48px;
+            }
+            table {
+                font-size: 11px;
+            }
+            th, td {
+                padding: 8px 6px;
+            }
+            .section {
+                padding: 25px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <div class="logo">AHL</div>
+            <div class="subtitle">去中心化旅行平台</div>
+            <div class="tagline">Agent & SKILL 技术团队完整说明书</div>
+            <div class="version">版本 V2.0 | 2026-04-06 | 面向技术团队</div>
+        </div>
+        
+        <!-- Overview -->
+        <div class="section">
+            <div class="section-title">一、项目概述</div>
+            
+            <h3>1.1 一句话定义</h3>
+            <p style="font-size:16px; margin:15px 0;">
+                <span class="highlight">AHL = 住宿业从"货架经济"到"客户经济"的AI驱动革命</span>
+            </p>
+            
+            <h3>1.2 核心问题与解决方案</h3>
+            <table>
+                <tr><th>行业痛点</th><th>AHL解决方案</th></tr>
+                <tr><td>旅客找房难（信息过载）</td><td>C端AI管家理解真实需求，精准推荐Top3</td></tr>
+                <tr><td>民宿获客难（百万列表中淹没）</td><td>B端AI运营官主动运营，精准推送</td></tr>
+                <tr><td>OTA佣金高（15-25%）</td><td>订阅费+TOKEN模式，成本降低80%</td></tr>
+            </table>
+            
+            <h3>1.3 技术指标</h3>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">>95%</div>
+                    <div class="stat-label">向量匹配准确率</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number"><3秒</div>
+                    <div class="stat-label">响应速度</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">87+</div>
+                    <div class="stat-label">SKILL总数</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">95%+</div>
+                    <div class="stat-label">中文NLP准确率</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Architecture -->
+        <div class="section">
+            <div class="section-title">二、技术架构</div>
+            
+            <h3>2.1 五层架构</h3>
+            <div class="arch-diagram">┌─────────────────────────────────────────────────────────────┐
+│  Layer 5: 应用层                                             │
+│  客人小程序  │  员工APP  │  管理后台Web  │  企业客户端       │
+└─────────────────────────────────────────────────────────────┘
+                              │
+┌─────────────────────────────────────────────────────────────┐
+│  Layer 4: API网关层                                          │
+│  认证  │  限流  │  路由  │  监控  │  日志  │  缓存          │
+└─────────────────────────────────────────────────────────────┘
+                              │
+┌─────────────────────────────────────────────────────────────┐
+│  Layer 3: 平台层 (AHL核心)                                    │
+│  C端AI管家 ⟷ B端AI运营官  +  运营AGENT集群                  │
+│  前厅/客房/销售/市场/餐饮/B2B  +  多AGENT协作引擎            │
+└─────────────────────────────────────────────────────────────┘
+                              │
+┌─────────────────────────────────────────────────────────────┐
+│  Layer 2: 数据层                                             │
+│  PostgreSQL  │  Chroma/Pinecone  │  Redis  │  RabbitMQ      │
+└─────────────────────────────────────────────────────────────┘
+                              │
+┌─────────────────────────────────────────────────────────────┐
+│  Layer 1: 基础设施层                                         │
+│  LLM(Kimi/GPT/Claude)  │  嵌入模型  │  监控告警  │ CI/CD     │
+└─────────────────────────────────────────────────────────────┘</div>
+            
+            <h3>2.2 双AGENT基础架构</h3>
+            <div class="arch-diagram">┌─────────────────────────────────────────────────────────────┐
+│                    AHL 去中心化平台                          │
+└─────────────────────────────────────────────────────────────┘
+                              │
+        ┌─────────────────────┴─────────────────────┐
+        ▼                                           ▼
+┌──────────────────────────┐        ┌──────────────────────────┐
+│    C端 - AI旅行管家       │◄─────►│    B端 - AI运营官        │
+│   Guest AI Concierge     │        │   Host AI Operator       │
+├──────────────────────────┤        ├──────────────────────────┤
+│ 核心职责:                │        │ 核心职责:                │
+│ • 预订咨询与转化         │        │ • 智能动态定价           │
+│ • 入住/退房服务          │        │ • 房态与库存管理         │
+│ • 客房服务响应           │        │ • 内容自动生成           │
+│ • 本地向导推荐           │        │ • 评价智能管理           │
+│ • 问题处理与投诉         │        │ • 营销自动化            │
+│ • 评价引导与复购         │        │ • 运营数据分析         │
+└──────────────────────────┘        └──────────────────────────┘</div>
+            
+            <h3>2.3 多AGENT协作模式</h3>
+            <div class="comp-card">
+                <div class="comp-title">模式1: 主从协作</div>
+                <div class="comp-item">场景: C端AI管家协调各运营AGENT</div>
+                <div class="comp-item">流程: 接收请求 → 分析需要的AGENT → 并行/串行调用 → 整合结果</div>
+            </div>
+            <div class="comp-card">
+                <div class="comp-title">模式2: 流水线协作</div>
+                <div class="comp-item">场景: 预订流程（查询→预订→支付→确认）</div>
+                <div class="comp-item">流程: AGENT A处理 → AGENT B接收继续 → AGENT C完成最终</div>
+            </div>
+            <div class="comp-card">
+                <div class="comp-title">模式3: 投票协作</div>
+                <div class="comp-item">场景: 复杂决策（定价策略、投诉处理）</div>
+                <div class="comp-item">流程: 多AGENT并行 → 收集建议 → 投票决策 → 输出结果</div>
+            </div>
+        </div>
+        
+        <!-- Industry Layers -->
+        <div class="section">
+            <div class="section-title">三、业态分层与AGENT扩展</div>
+            
+            <h3>3.1 七大业态分层</h3>
+            <table>
+                <tr><th>业态</th><th>房间规模</th><th>AGENT数量</th><th>SKILL数量</th><th>部署周期</th><th>成本</th></tr>
+                <tr><td>民宿</td><td>10-30间</td><td>2个</td><td>16个</td><td>2周</td><td>¥6-10万</td></tr>
+                <tr><td>精品酒店</td><td>30-80间</td><td>6个</td><td>48个</td><td>4周</td><td>¥20-35万</td></tr>
+                <tr><td>商务酒店</td><td>80-200间</td><td>8个</td><td>78个</td><td>6周</td><td>¥40-60万</td></tr>
+                <tr><td>度假酒店</td><td>-</td><td>6-8个</td><td>80+</td><td>-</td><td>-</td></tr>
+                <tr><td>会议酒店</td><td>-</td><td>6-8个</td><td>85+</td><td>-</td><td>-</td></tr>
+                <tr><td>康养酒店</td><td>-</td><td>6-8个</td><td>80+</td><td>-</td><td>-</td></tr>
+                <tr><td>服务公寓</td><td>-</td><td>6-8个</td><td>78+</td><td>-</td><td>-</td></tr>
+            </table>
+            
+            <h3>3.2 运营AGENT集群配置</h3>
+            <table>
+                <tr><th>业态</th><th>运营AGENT集群</th><th>AGENT数量</th></tr>
+                <tr><td>民宿</td><td>无</td><td>0</td></tr>
+                <tr><td>精品酒店</td><td>前厅/客房/销售/市场</td><td>4个</td></tr>
+                <tr><td>商务酒店</td><td>前厅/客房/销售/市场/餐饮/B2B</td><td>6个</td></tr>
+                <tr><td>度假酒店</td><td>+康乐/活动</td><td>6-8个</td></tr>
+                <tr><td>会议酒店</td><td>+宴会/MICE</td><td>6-8个</td></tr>
+                <tr><td>康养酒店</td><td>+康养/医疗</td><td>6-8个</td></tr>
+                <tr><td>服务公寓</td><td>+长住/企业</td><td>6-8个</td></tr>
+            </table>
+        </div>
+        
+        <!-- SKILL System -->
+        <div class="section">
+            <div class="section-title">四、SKILL体系完整定义</div>
+            
+            <h3>4.1 SKILL分层架构</h3>
+            <div class="arch-diagram">Level 1: 基础SKILL (所有业态通用)
+├── C端基础: 预订/入住/服务/向导/问题/评价/语言/社交
+└── B端基础: 定价/房态/内容/评价/营销/分析/保洁/供应链
+
+Level 2: 进阶SKILL (精品酒店+)
+├── C端进阶: 个性化/文化/社区/场景
+└── B端进阶: 细分/会员/品牌/渠道
+
+Level 3: 专业SKILL (商务酒店+)
+├── C端专业: 商务通道/会议/交通/生活/报销
+└── B端专业: 协议开发/维护/账期/市场/团体
+
+Level 4: 业态专属SKILL (按业态定制)
+├── 餐饮: 早餐/套餐/宴会/菜单/成本
+├── B2B: 雷达/谈判/TMC/RFP/MICE
+├── 康乐: SPA/健身/活动/亲子
+├── 会议: 会场/设备/茶歇/接待
+└── 康养: 健康/康复/餐饮/活动</div>
+            
+            <h3>4.2 C端AI管家 SKILL清单（41个）</h3>
+            <table>
+                <tr><th>类别</th><th>编号</th><th>SKILL名称</th><th>功能</th></tr>
+                <tr><td rowspan="7">客房服务(7)</td><td class="skill-id">C-R001</td><td>智能预订咨询</td><td>处理预订咨询、房型推荐、价格查询</td></tr>
+                <tr><td class="skill-id">C-R002</td><td>自助入住引导</td><td>发送入住指南、门锁密码、位置导航</td></tr>
+                <tr><td class="skill-id">C-R003</td><td>房型控制</td><td>智能换房、升级处理</td></tr>
+                <tr><td class="skill-id">C-R004</td><td>客房服务响应</td><td>处理服务请求（用品、清洁、维修）</td></tr>
+                <tr><td class="skill-id">C-R005</td><td>退房办理</td><td>自助退房、发票处理</td></tr>
+                <tr><td class="skill-id">C-R006</td><td>延住处理</td><td>续住确认与价格确认</td></tr>
+                <tr><td class="skill-id">C-R007</td><td>换房服务</td><td>换房需求分析与匹配</td></tr>
+                <tr><td rowspan="13">餐饮服务(13)</td><td class="skill-id">C-F001</td><td>餐厅顾问</td><td>餐饮推荐、预订、取消</td></tr>
+                <tr><td class="skill-id">C-F002</td><td>菜品推荐</td><td>基于口味偏好推荐菜品</td></tr>
+                <tr><td class="skill-id">C-F003</td><td>宴请策划</td><td>商务/家庭宴请整体方案</td></tr>
+                <tr><td class="skill-id">C-F004</td><td>酒水管家</td><td>配酒建议、侍酒服务</td></tr>
+                <tr><td class="skill-id">C-F005</td><td>早餐顾问</td><td>早餐体验优化建议</td></tr>
+                <tr><td class="skill-id">C-F006</td><td>特殊饮食</td><td>过敏/宗教饮食处理</td></tr>
+                <tr><td class="skill-id">C-F007</td><td>用餐反馈</td><td>收集餐饮满意度</td></tr>
+                <tr><td class="skill-id">C-F008</td><td>套餐推荐</td><td>适合场景的套餐建议</td></tr>
+                <tr><td class="skill-id">C-F009</td><td>座位偏好</td><td>靠窗/包间/露台等</td></tr>
+                <tr><td class="skill-id">C-F010</td><td>等位处理</td><td>排队通知、时间预估</td></tr>
+                <tr><td class="skill-id">C-F011</td><td>外卖推荐</td><td>周边餐饮/外卖选项</td></tr>
+                <tr><td class="skill-id">C-F012</td><td>下午茶</td><td>甜点/饮品推荐</td></tr>
+                <tr><td class="skill-id">C-F013</td><td>宵夜服务</td><td>深夜餐饮需求处理</td></tr>
+                <tr><td rowspan="6">礼宾服务(6)</td><td class="skill-id">C-C001</td><td>本地向导</td><td>景点/美食/交通本地推荐</td></tr>
+                <tr><td class="skill-id">C-C002</td><td>交通管家</td><td>接送机/租车/路线规划</td></tr>
+                <tr><td class="skill-id">C-C003</td><td>票务预订</td><td>门票/演出/活动门票</td></tr>
+                <tr><td class="skill-id">C-C004</td><td>商务中心</td><td>打印/传真/会议室</td></tr>
+                <tr><td class="skill-id">C-C005</td><td>应急服务</td><td>医疗/公安/消防协助</td></tr>
+                <tr><td class="skill-id">C-C006</td><td>旅程关怀</td><td>生日/纪念日/特殊惊喜</td></tr>
+                <tr><td rowspan="5">零售服务(5)</td><td class="skill-id">C-RL001</td><td>睡眠好物</td><td>枕头/床垫/床品零售</td></tr>
+                <tr><td class="skill-id">C-RL002</td><td>洗浴用品</td><td>高端洗浴产品推荐</td></tr>
+                <tr><td class="skill-id">C-RL003</td><td>茶饮精选</td><td>地方茶叶/茶具推荐</td></tr>
+                <tr><td class="skill-id">C-RL004</td><td>阅读空间</td><td>书籍/杂志/文创推荐</td></tr>
+                <tr><td class="skill-id">C-RL005</td><td>穿搭建议</td><td>当地穿搭/伴手礼推荐</td></tr>
+                <tr><td rowspan="10">需求理解(10)</td><td class="skill-id">C-U001</td><td>需求解析</td><td>提取时间/地点/人数/预算</td></tr>
+                <tr><td class="skill-id">C-U002</td><td>偏好提取</td><td>安静/干净/早餐好/有院子</td></tr>
+                <tr><td class="skill-id">C-U003</td><td>向量生成</td><td>生成需求向量</td></tr>
+                <tr><td class="skill-id">C-U004</td><td>Top-K匹配</td><td>匹配最佳商家</td></tr>
+                <tr><td class="skill-id">C-U005</td><td>解释生成</td><td>生成推荐理由</td></tr>
+                <tr><td class="skill-id">C-U006</td><td>模糊澄清</td><td>"大概"、"差不多"</td></tr>
+                <tr><td class="skill-id">C-U007</td><td>二次确认</td><td>确认预订意向</td></tr>
+                <tr><td class="skill-id">C-U008</td><td>取消处理</td><td>取消预订</td></tr>
+                <tr><td class="skill-id">C-U009</td><td>改期处理</td><td>修改日期</td></tr>
+                <tr><td class="skill-id">C-U010</td><td>评价引导</td><td>离店后引导评价</td></tr>
+            </table>
+            
+            <h3>4.3 B端AI运营官 SKILL清单（46个）</h3>
+            <table>
+                <tr><th>类别</th><th>编号</th><th>SKILL名称</th><th>功能</th></tr>
+                <tr><td rowspan="5">收益管理(5)</td><td class="skill-id">B-R001</td><td>动态定价</td><td>需求×竞争×时间系数模型</td></tr>
+                <tr><td class="skill-id">B-R002</td><td>库存优化</td><td>房态管理、超售预防</td></tr>
+                <tr><td class="skill-id">B-R003</td><td>渠道管理</td><td>OTA/官网/私域渠道平衡</td></tr>
+                <tr><td class="skill-id">B-R004</td><td>细分定价</td><td>周末/节假日/长住特殊定价</td></tr>
+                <tr><td class="skill-id">B-R005</td><td>餐饮收益</td><td>翻台率/客单价优化</td></tr>
+                <tr><td rowspan="5">前厅运营(5)</td><td class="skill-id">B-F001</td><td>智能排房</td><td>基于客人偏好匹配房间</td></tr>
+                <tr><td class="skill-id">B-F002</td><td>夜班值守</td><td>夜间紧急需求处理</td></tr>
+                <tr><td class="skill-id">B-F003</td><td>客诉处理</td><td>投诉分级与响应SOP</td></tr>
+                <tr><td class="skill-id">B-F004</td><td>VIP识别</td><td>重要客人识别与服务预判</td></tr>
+                <tr><td class="skill-id">B-F005</td><td>失物管理</td><td>遗失物品登记与认领</td></tr>
+                <tr><td rowspan="5">客房管理(5)</td><td class="skill-id">B-H001</td><td>智能排班</td><td>基于入住率的保洁排班</td></tr>
+                <tr><td class="skill-id">B-H002</td><td>客房检查</td><td>退房检查/物品盘点</td></tr>
+                <tr><td class="skill-id">B-H003</td><td>布草管理</td><td>客房布草更换周期</td></tr>
+                <tr><td class="skill-id">B-H004</td><td>维保触发</td><td>设备故障自动报修</td></tr>
+                <tr><td class="skill-id">B-H005</td><td>Minibar管理</td><td>客房吧台补货提醒</td></tr>
+                <tr><td rowspan="5">营销(5)</td><td class="skill-id">B-M001</td><td>内容生成</td><td>小红书/抖音/朋友圈文案</td></tr>
+                <tr><td class="skill-id">B-M002</td><td>社媒运营</td><td>多平台发布与互动</td></tr>
+                <tr><td class="skill-id">B-M003</td><td>会员运营</td><td>积分/等级/复购激励</td></tr>
+                <tr><td class="skill-id">B-M004</td><td>活动运营</td><td>节日促销/主题活动</td></tr>
+                <tr><td class="skill-id">B-M005</td><td>KOL合作</td><td>达人建联与内容投放</td></tr>
+                <tr><td rowspan="6">宴会(6)</td><td class="skill-id">B-B001</td><td>婚宴销售</td><td>婚宴全案策划与报价</td></tr>
+                <tr><td class="skill-id">B-B002</td><td>商务宴会</td><td>会议/团建/发布会方案</td></tr>
+                <tr><td class="skill-id">B-B003</td><td>生日宴</td><td>寿宴/宝宝宴/升学宴</td></tr>
+                <tr><td class="skill-id">B-B004</td><td>宴会LTV</td><td>全生命周期客户价值管理</td></tr>
+                <tr><td class="skill-id">B-B005</td><td>宴会菜单</td><td>定制化菜单设计</td></tr>
+                <tr><td class="skill-id">B-B006</td><td>宴会场地</td><td>最佳桌数/场地推荐</td></tr>
+                <tr><td rowspan="5">财务(5)</td><td class="skill-id">B-FA001</td><td>自动对账</td><td>OTA订单自动核对</td></tr>
+                <tr><td class="skill-id">B-FA002</td><td>收入审计</td><td>收入完整性检查</td></tr>
+                <tr><td class="skill-id">B-FA003</td><td>成本分析</td><td>餐饮/人力/能耗成本分析</td></tr>
+                <tr><td class="skill-id">B-FA004</td><td>报表生成</td><td>日报/周报/月报自动生成</td></tr>
+                <tr><td class="skill-id">B-FA005</td><td>税务合规</td><td>发票管理/税务申报辅助</td></tr>
+                <tr><td rowspan="4">工程(4)</td><td class="skill-id">B-E001</td><td>智能温控</td><td>空调/暖气自动调节</td></tr>
+                <tr><td class="skill-id">B-E002</td><td>照明优化</td><td>公区/客房照明节能</td></tr>
+                <tr><td class="skill-id">B-E003</td><td>用水监控</td><td>水表异常检测</td></tr>
+                <tr><td class="skill-id">B-E004</td><td>能耗报表</td><td>月度/年度能耗分析</td></tr>
+                <tr><td rowspan="4">人力(4)</td><td class="skill-id">B-P001</td><td>智能排班</td><td>人力成本优化</td></tr>
+                <tr><td class="skill-id">B-P002</td><td>绩效管理</td><td>KPI追踪</td></tr>
+                <tr><td class="skill-id">B-P003</td><td>培训管理</td><td>新员工培训</td></tr>
+                <tr><td class="skill-id">B-P004</td><td>招聘辅助</td><td>JD生成</td></tr>
+                <tr><td rowspan="2">供应链(2)</td><td class="skill-id">B-S001</td><td>采购管理</td><td>供应商比价</td></tr>
+                <tr><td class="skill-id">B-S002</td><td>库存预警</td><td>低库存提醒</td></tr>
+            </table>
+        </div>
+        
+        <!-- SKILL Implementation -->
+        <div class="section">
+            <div class="section-title">五、SKILL技术实现</div>
+            
+            <h3>5.1 SKILL标准规范</h3>
+            <pre class="yaml-block">SKILL规范:
+  
+  元数据:
+    id: skill_unique_id          # 唯一标识
+    name: SKILL名称              # 显示名称
+    version: 版本号               # 语义化版本
+    category: 分类                # C端/B端/运营
+    description: 功能描述         # 一句话说明
+  
+  接口定义:
+    input_schema:                # 输入参数JSON Schema
+      type: object
+      properties:
+        param1: { type: string, description: 说明 }
+      required: [param1]
+    
+    output_schema:                # 输出结果JSON Schema
+      type: object
+      properties:
+        success: { type: boolean }
+        data: { type: object }
+        error: { type: string }
+  
+  执行配置:
+    timeout: 30                   # 超时时间(秒)
+    retry: 3                      # 重试次数
+    async: false                  # 是否异步
+    cache: true                   # 是否缓存结果</pre>
+            
+            <h3>5.2 SKILL实现示例</h3>
+            <pre>from ahl_sdk import Skill, SkillContext
+
+class BookingConsultationSkill(Skill):
+    """预订咨询SKILL"""
+    
+    def __init__(self):
+        super().__init__(
+            id="booking-consultation",
+            name="智能预订咨询",
+            version="1.0.0",
+            category="guest-service"
+        )
+    
+    async def execute(self, context: SkillContext) -> dict:
+        # 1. 解析输入
+        check_in = context.get_param("check_in")
+        check_out = context.get_param("check_out")
+        guests = context.get_param("guests")
+        preferences = context.get_param("preferences", {})
+        
+        # 2. 查询可用房态
+        available_rooms = await self.query_availability(
+            check_in, check_out, guests
+        )
+        
+        # 3. 智能推荐
+        recommendations = self.recommend_rooms(
+            available_rooms, preferences
+        )
+        
+        # 4. 返回结果
+        return {
+            "success": True,
+            "data": {
+                "recommendations": recommendations
+            }
+        }</pre>
+        </div>
+        
+        <!-- Data Architecture -->
+        <div class="section">
+            <div class="section-title">六、数据架构</div>
+            
+            <h3>6.1 核心数据模型</h3>
+            <div class="arch-diagram">用户数据: 客人档案 │ 企业客户 │ 员工账号
+业务数据: 房源信息 │ 预订记录 │ 订单数据 │ 支付记录
+运营数据: 房态日历 │ 价格策略 │ 评价数据 │ 营销数据
+AI数据:   对话历史 │ 知识库 │ 向量嵌入 │ AGENT状态</div>
+            
+            <h3>6.2 向量数据库设计</h3>
+            <table>
+                <tr><th>集合</th><th>维度</th><th>用途</th></tr>
+                <tr><td>knowledge_base</td><td>1536</td><td>知识库文档向量</td></tr>
+                <tr><td>guest_profiles</td><td>1536</td><td>客人画像向量</td></tr>
+                <tr><td>room_features</td><td>1536</td><td>房源特征向量</td></tr>
+                <tr><td>demand_vectors</td><td>1536</td><td>需求向量</td></tr>
+            </table>
+        </div>
+        
+        <!-- Integration -->
+        <div class="section">
+            <div class="section-title">七、集成架构</div>
+            
+            <h3>7.1 OTA平台对接</h3>
+            <div class="comp-card">
+                <div class="comp-title">支持的OTA平台</div>
+                <div class="comp-item">国内: 美团民宿/酒店、携程酒店/民宿、飞猪酒店、同程艺龙</div>
+                <div class="comp-item">国际: Booking.com、Airbnb</div>
+            </div>
+            
+            <h3>7.2 PMS系统对接</h3>
+            <div class="comp-card">
+                <div class="comp-title">支持的PMS系统</div>
+                <div class="comp-item">国内: 绿云、西软、别样红、订单来了、云掌柜</div>
+                <div class="comp-item">国际: Opera PMS、Protel、Mews</div>
+            </div>
+            
+            <h3>7.3 B2B系统集成</h3>
+            <div class="comp-card">
+                <div class="comp-title">企业差旅平台</div>
+                <div class="comp-item">携程商旅、美团商旅、阿里商旅、企业自建平台</div>
+            </div>
+            <div class="comp-card">
+                <div class="comp-title">TMC对接</div>
+                <div class="comp-item">国旅运通、中航服、锦江TMC、企业指定TMC</div>
+            </div>
+            <div class="comp-card">
+                <div class="comp-title">财务系统</div>
+                <div class="comp-item">SAP、Oracle、用友、金蝶</div>
+            </div>
+        </div>
+        
+        <!-- Deployment -->
+        <div class="section">
+            <div class="section-title">八、部署指南</div>
+            
+            <h3>8.1 环境准备</h3>
+            <pre class="yaml-block"># 云服务器 (推荐阿里云/腾讯云)
+规格: 8核16G × 3台 (高可用)
+系统: Ubuntu 22.04 / CentOS 8
+
+# 数据库
+- PostgreSQL 15+ (主数据库)
+- Redis 7+ (缓存)
+- Chroma / Pinecone (向量数据库)
+
+# 大模型API
+- 通义千问API / Kimi API</pre>
+            
+            <h3>8.2 部署步骤</h3>
+            <pre># 1. 克隆代码仓库
+git clone https://github.com/ahl-project/ahl-core.git
+cd ahl-core
+
+# 2. 配置环境变量
+cp .env.example .env
+vim .env
+
+# 3. 启动服务
+docker-compose up -d
+
+# 4. 验证服务
+curl http://localhost:8080/health</pre>
+            
+            <h3>8.3 分阶段部署</h3>
+            <div class="phase">
+                <div class="phase-title">Phase 1 (Month 1): 核心双AGENT</div>
+                <div class="phase-time">民宿/小型住宿支持</div>
+                <div>C端+B端基础功能 │ 散客服务流程</div>
+            </div>
+            <div class="phase">
+                <div class="phase-title">Phase 2 (Month 2): 运营AGENT集群</div>
+                <div class="phase-time">精品酒店支持</div>
+                <div>前厅/客房/销售/市场 │ 餐饮服务AGENT</div>
+            </div>
+            <div class="phase">
+                <div class="phase-title">Phase 3 (Month 3): B2B功能</div>
+                <div class="phase-time">商务酒店支持</div>
+                <div>协议客户系统 │ TMC对接 │ 企业客户端</div>
+            </div>
+        </div>
+        
+        <!-- Expected Results -->
+        <div class="section">
+            <div class="section-title">九、预期效果</div>
+            
+            <h3>9.1 效率提升</h3>
+            <table>
+                <tr><th>指标</th><th>传统方式</th><th>AI架构</th><th>提升</th></tr>
+                <tr><td>客服响应时间</td><td>15分钟</td><td>即时</td><td class="green">99%</td></tr>
+                <tr><td>入住办理时间</td><td>10分钟</td><td>3分钟</td><td class="green">70%</td></tr>
+                <tr><td>定价调整频率</td><td>每周1次</td><td>每日多次</td><td class="green">500%</td></tr>
+                <tr><td>前厅人效</td><td>1人/30间</td><td>1人/60间</td><td class="green">100%</td></tr>
+                <tr><td>销售人效</td><td>1人/50间</td><td>1人/100间</td><td class="green">100%</td></tr>
+            </table>
+            
+            <h3>9.2 ROI分析</h3>
+            <table>
+                <tr><th>业态</th><th>投资</th><th>年增收</th><th>ROI</th><th>回收期</th></tr>
+                <tr><td>民宿 (20间)</td><td>¥8万</td><td>¥12万</td><td class="highlight">150%</td><td>8个月</td></tr>
+                <tr><td>精品酒店 (50间)</td><td>¥30万</td><td>¥100万</td><td class="highlight">333%</td><td>3-4个月</td></tr>
+                <tr><td>商务酒店 (120间)</td><td>¥50万</td><td>¥250万</td><td class="highlight">500%</td><td>2-3个月</td></tr>
+            </table>
+        </div>
+        
+        <!-- Tech Stack -->
+        <div class="section">
+            <div class="section-title">十、技术栈汇总</div>
+            <table>
+                <tr><th>层级</th><th>技术选型</th><th>用途</th></tr>
+                <tr><td>LLM引擎</td><td>Kimi K2.5 / GPT-4 / Claude</td><td>核心推理能力</td></tr>
+                <tr><td>Agent框架</td><td>LangChain / AutoGen</td><td>Agent编排与协作</td></tr>
+                <tr><td>向量数据库</td><td>Chroma / Pinecone</td><td>知识检索与语义搜索</td></tr>
+                <tr><td>业务数据库</td><td>PostgreSQL</td><td>结构化数据存储</td></tr>
+                <tr><td>缓存</td><td>Redis</td><td>会话、热点数据</td></tr>
+                <tr><td>消息队列</td><td>RabbitMQ</td><td>异步任务处理</td></tr>
+                <tr><td>API网关</td><td>Kong / Nginx</td><td>流量管理与安全</td></tr>
+            </table>
+        </div>
+        
+        <!-- Team -->
+        <div class="section">
+            <div class="section-title">十一、核心团队</div>
+            <div class="comparison-grid">
+                <div class="comp-card">
+                    <div class="comp-title">张实 (Eric) - CEO</div>
+                    <div class="comp-item">24年酒店行业老兵</div>
+                    <div class="comp-item">BISU旅游管理</div>
+                    <div class="comp-item">战略总控、产业洞察</div>
+                </div>
+                <div class="comp-card">
+                    <div class="comp-title">李源 - CTO</div>
+                    <div class="comp-item">华中科技大学AI博士</div>
+                    <div class="comp-item">10年+AI研发经验</div>
+                    <div class="comp-item">技术架构、算法研发</div>
+                </div>
+                <div class="comp-card">
+                    <div class="comp-title">陈思序 - CSO</div>
+                    <div class="comp-item">中国农业大学</div>
+                    <div class="comp-item">世界500强背景</div>
+                    <div class="comp-item">战略规划、融资主导</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <div class="footer">
+            AHL 去中心化旅行平台<br>
+            Agent & SKILL 技术团队完整说明书 | V2.0<br>
+            Generated by B166ER @ 2026-04-06<br>
+            <span class="cyan">让对的客人，遇见对的书房源</span>
+        </div>
+    </div>
+</body>
+</html>

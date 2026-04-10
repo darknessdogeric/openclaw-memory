@@ -1,0 +1,77 @@
+{
+  "issue": "26037",
+  "generated_at": "2026-04-08 20:44:00",
+  "draw_date": "2026-04-08 21:25",
+  "model_version": "V5.0",
+  "model_note": "量化分析工作站 - Gemini增强版",
+  "five_layer_architecture": {
+    "layer1": "数据特征工程 (FeatureEngineering + MissTracker)",
+    "layer2": "混合预测引擎 (MarkovChain + InformationTheory)",
+    "layer3": "组合优化 (WheelingSystem + 约束过滤)",
+    "layer4": "博弈论过滤 (GameTheoryFilter)",
+    "layer5": "凯利公式 (KellyCriterion)"
+  },
+  "key_metrics": {
+    "history_periods": 30,
+    "mean_sum": 95.3,
+    "std_sum": 18.2,
+    "hurst_exponent": "0.42 (反持续性, 号码趋向均值回归)"
+  },
+  "predictions": [
+    {
+      "no": 1,
+      "front": [3, 15, 27, 31, 33],
+      "back": [11, 9],
+      "sum": 109,
+      "span": 30,
+      "gt_score": 40,
+      "strategy": "热号回归+博弈过滤"
+    },
+    {
+      "no": 2,
+      "front": [9, 15, 19, 26, 32],
+      "back": [4, 9],
+      "sum": 101,
+      "span": 23,
+      "gt_score": 43,
+      "strategy": "热号回归+博弈过滤"
+    },
+    {
+      "no": 3,
+      "front": [3, 16, 26, 28, 34],
+      "back": [9, 6],
+      "sum": 107,
+      "span": 31,
+      "gt_score": 45,
+      "strategy": "热号回归+博弈过滤"
+    },
+    {
+      "no": 4,
+      "front": [9, 15, 20, 26, 32],
+      "back": [11, 9],
+      "sum": 102,
+      "span": 23,
+      "gt_score": 48,
+      "strategy": "热号回归+博弈过滤"
+    },
+    {
+      "no": 5,
+      "front": [4, 10, 18, 26, 31],
+      "back": [4, 9],
+      "sum": 89,
+      "span": 27,
+      "gt_score": 50,
+      "strategy": "热号回归+博弈过滤"
+    }
+  ],
+  "v5_improvements": [
+    "信息熵分析 (Shannon Entropy)",
+    "赫斯特指数 (Hurst Exponent: 0.42 反持续性)",
+    "马尔可夫链状态转移矩阵",
+    "多维特征提取 (AC值/012路/区域分布)",
+    "博弈论过滤 (BIRTHDAY_ZONE/LUCKY7/DATE2026惩罚)",
+    "凯利公式资金管理",
+    "约束校验 (和值/跨度/奇偶比)"
+  ],
+  "script_file": "lottery_history/lottery_v5.py"
+}

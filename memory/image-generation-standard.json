@@ -1,0 +1,24 @@
+{
+  "standard": "专业海报/信息图生成标准",
+  "created": "2026-04-06",
+  "updated": "2026-04-06",
+  "trigger": "所有图片生成需求（海报/信息图/报告图/PPT素材）",
+  "method": "HTML模板 + Playwright全页面截图",
+  "requirements": {
+    "chinese": "100%准确渲染，禁止AI生图",
+    "size": "尺寸不固定，根据信息密度和信息丰富度动态调整，可生成长图",
+    "viewport": "宽度固定(1080)，高度根据内容自动延伸",
+    "font": "Microsoft YaHei / PingFang SC",
+    "style": "科技深色风，蓝金配色，参考西部酒店分析报告v2",
+    "output": "PNG文件，直接生成到桌面",
+    "quality": "专业排版，气韵优先，留白克制"
+  },
+  "workflow": [
+    "1. 理解需求，评估信息密度和丰富度",
+    "2. 确定尺寸（宽度固定1080，高度按需延伸，可生成长图）",
+    "3. 编写HTML模板（inline CSS）",
+    "4. Playwright chromium headless截图(full_page=True)",
+    "5. 输出到桌面，文件名含中文"
+  ],
+  "key_principle": "Eric的核心标准：专业排版+高质量+动态尺寸，不接受AI生图的中文乱码"
+}

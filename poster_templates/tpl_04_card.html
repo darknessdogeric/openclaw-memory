@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1920, height=1080">
+<title>商务名片</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 1920px; height: 1080px;
+    font-family: "Noto Sans SC", "Microsoft YaHei", "SimHei", sans-serif;
+    background: #040D1F;
+    position: relative; overflow: hidden;
+  }
+
+  /* Split layout: left info, right visual */
+  .left-panel {
+    position: absolute;
+    top: 0; left: 0; bottom: 0;
+    width: 55%;
+    background: linear-gradient(135deg, #060D1A 0%, #0A1628 100%);
+    padding: 100px 90px;
+    display: flex; flex-direction: column;
+    border-right: 1px solid rgba(0,212,255,0.08);
+  }
+  .right-panel {
+    position: absolute;
+    top: 0; right: 0; bottom: 0;
+    width: 45%;
+    background: radial-gradient(ellipse 80% 80% at 50% 50%, rgba(0,180,255,0.08) 0%, transparent 70%);
+    display: flex; align-items: center; justify-content: center;
+  }
+
+  /* Logo */
+  .logo-row { display: flex; align-items: center; gap: 16px; margin-bottom: 60px; }
+  .logo-chr {
+    width: 60px; height: 60px; border-radius: 14px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 30px; font-weight: 900;
+  }
+  .logo-A { background: rgba(255,255,255,0.07); color: #fff; border: 1px solid rgba(255,255,255,0.12); }
+  .logo-H { background: rgba(0,212,255,0.12); color: #00D4FF; border: 1px solid rgba(0,212,255,0.25); }
+  .logo-L { background: rgba(255,184,0,0.07); color: rgba(255,184,0,0.9); border: 1px solid rgba(255,184,0,0.2); }
+  .brand-name { font-size: 22px; font-weight: 700; color: #fff; letter-spacing: 4px; }
+  .brand-en { font-size: 11px; letter-spacing: 5px; color: rgba(0,212,255,0.4); text-transform: uppercase; margin-top: 3px; }
+
+  /* Person info */
+  .person-name { font-size: 72px; font-weight: 900; color: #fff; letter-spacing: 8px; margin-bottom: 12px; }
+  .person-title { font-size: 22px; color: rgba(0,212,255,0.7); letter-spacing: 4px; margin-bottom: 6px; }
+  .person-org { font-size: 16px; color: rgba(255,255,255,0.35); letter-spacing: 3px; }
+
+  /* Divider */
+  .divider {
+    width: 60px; height: 2px;
+    background: linear-gradient(90deg, rgba(0,212,255,0.5), transparent);
+    margin: 50px 0;
+  }
+
+  /* Contact details */
+  .contact-list { display: flex; flex-direction: column; gap: 20px; }
+  .contact-item {
+    display: flex; align-items: center; gap: 16px;
+  }
+  .contact-icon {
+    width: 44px; height: 44px; border-radius: 10px;
+    background: rgba(0,212,255,0.08);
+    border: 1px solid rgba(0,212,255,0.15);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 18px; flex-shrink: 0;
+  }
+  .contact-text { font-size: 18px; color: rgba(255,255,255,0.7); letter-spacing: 2px; }
+  .contact-label { font-size: 11px; color: rgba(0,212,255,0.4); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 2px; }
+
+  /* Right visual: Agent architecture icon */
+  .visual-content {
+    display: flex; flex-direction: column; align-items: center; gap: 20px;
+  }
+  .visual-ring {
+    width: 300px; height: 300px; border-radius: 50%;
+    border: 1.5px solid rgba(0,212,255,0.15);
+    background: radial-gradient(circle, rgba(0,180,255,0.06) 0%, rgba(4,13,31,0.9) 70%);
+    display: flex; align-items: center; justify-content: center;
+    position: relative;
+  }
+  .visual-ring::after {
+    content: ''; position: absolute; inset: -10px;
+    border-radius: 50%; border: 1px solid rgba(0,212,255,0.08);
+    animation: pulse 4s ease-in-out infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { transform: scale(1); opacity: 0.5; }
+    50% { transform: scale(1.05); opacity: 0.2; }
+  }
+  .visual-center {
+    width: 120px; height: 120px; border-radius: 50%;
+    background: rgba(0,212,255,0.1);
+    border: 1px solid rgba(0,212,255,0.2);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 50px;
+  }
+  .visual-label {
+    font-size: 14px; letter-spacing: 5px; color: rgba(0,212,255,0.5);
+    text-transform: uppercase; margin-top: 16px;
+  }
+  .visual-sub { font-size: 12px; color: rgba(255,255,255,0.25); letter-spacing: 3px; margin-top: 4px; }
+
+  /* Tag */
+  .visual-tags {
+    display: flex; gap: 10px; flex-wrap: wrap; justify-content: center;
+    margin-top: 10px;
+  }
+  .visual-tag {
+    font-size: 12px; padding: 5px 14px; border-radius: 100px;
+    background: rgba(0,212,255,0.06);
+    border: 1px solid rgba(0,212,255,0.12);
+    color: rgba(0,212,255,0.5);
+    letter-spacing: 1px;
+  }
+</style>
+</head>
+<body>
+
+<div class="left-panel">
+  <div class="logo-row">
+    <div class="logo-chr logo-A">A</div>
+    <div class="logo-chr logo-H">H</div>
+    <div class="logo-chr logo-L">L</div>
+    <div>
+      <div class="brand-name">AHL</div>
+      <div class="brand-en">AI Hotel Language</div>
+    </div>
+  </div>
+
+  <div class="person-name">张实 Eric</div>
+  <div class="person-title">创始人 / CEO</div>
+  <div class="person-org">AHL · 去中心化旅行平台</div>
+
+  <div class="divider"></div>
+
+  <div class="contact-list">
+    <div class="contact-item">
+      <div class="contact-icon">📱</div>
+      <div>
+        <div class="contact-label">电话 / 微信</div>
+        <div class="contact-text">17760348653</div>
+      </div>
+    </div>
+    <div class="contact-item">
+      <div class="contact-icon">✉️</div>
+      <div>
+        <div class="contact-label">邮箱</div>
+        <div class="contact-text">ericzhangshi@163.com</div>
+      </div>
+    </div>
+    <div class="contact-item">
+      <div class="contact-icon">🌐</div>
+      <div>
+        <div class="contact-label">官网</div>
+        <div class="contact-text">ahlprotocol.ai</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="right-panel">
+  <div class="visual-content">
+    <div class="visual-ring">
+      <div class="visual-center">⚡</div>
+    </div>
+    <div class="visual-label">大模型基座驱动</div>
+    <div class="visual-sub">双AGENT · 向量匹配 · 87 SKILL</div>
+    <div class="visual-tags">
+      <span class="visual-tag">AI管家</span>
+      <span class="visual-tag">AI运营官</span>
+      <span class="visual-tag">住宿业革命</span>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

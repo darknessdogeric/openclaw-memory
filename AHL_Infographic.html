@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AHL 去中心化旅行平台</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: "Microsoft YaHei", "PingFang SC", "Hiragino Sans GB", sans-serif;
+            background: linear-gradient(135deg, #1a365d 0%, #2d3748 100%);
+            min-height: 100vh;
+            padding: 40px;
+            color: #fff;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        /* Header */
+        .header {
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(180deg, rgba(49,151,149,0.3) 0%, transparent 100%);
+            border-radius: 20px;
+            margin-bottom: 40px;
+        }
+        
+        .logo {
+            font-size: 72px;
+            font-weight: bold;
+            color: #ffd700;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            font-size: 36px;
+            color: #fff;
+            margin-bottom: 20px;
+        }
+        
+        .tagline {
+            font-size: 24px;
+            color: #4fd1c5;
+            background: rgba(79,209,197,0.2);
+            padding: 10px 30px;
+            border-radius: 30px;
+            display: inline-block;
+        }
+        
+        /* Problem Section */
+        .section {
+            background: rgba(255,255,255,0.1);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .section-title {
+            font-size: 32px;
+            color: #ffd700;
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .section-title::before {
+            content: "";
+            width: 8px;
+            height: 40px;
+            background: #ffd700;
+            border-radius: 4px;
+        }
+        
+        .problem-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+        
+        .problem-card {
+            background: rgba(255,255,255,0.05);
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .problem-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .problem-icon {
+            font-size: 60px;
+            margin-bottom: 20px;
+        }
+        
+        .problem-text {
+            font-size: 20px;
+            color: #e2e8f0;
+            line-height: 1.6;
+        }
+        
+        /* Architecture Section */
+        .architecture {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+            padding: 40px;
+            flex-wrap: wrap;
+        }
+        
+        .agent-box {
+            background: linear-gradient(135deg, #319795, #2d3748);
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            min-width: 280px;
+            border: 2px solid #4fd1c5;
+        }
+        
+        .agent-title {
+            font-size: 28px;
+            color: #fff;
+            margin-bottom: 15px;
+        }
+        
+        .agent-desc {
+            font-size: 18px;
+            color: #a0aec0;
+        }
+        
+        .arrow {
+            font-size: 60px;
+            color: #ffd700;
+        }
+        
+        .match-center {
+            background: rgba(255,215,0,0.2);
+            border: 2px solid #ffd700;
+            border-radius: 50%;
+            width: 200px;
+            height: 200px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        
+        .match-title {
+            font-size: 24px;
+            color: #ffd700;
+            font-weight: bold;
+        }
+        
+        .match-sub {
+            font-size: 16px;
+            color: #fff;
+        }
+        
+        /* Comparison Table */
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        
+        .comparison-table th,
+        .comparison-table td {
+            padding: 20px;
+            text-align: center;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .comparison-table th {
+            background: rgba(79,209,197,0.2);
+            color: #4fd1c5;
+            font-size: 22px;
+        }
+        
+        .comparison-table td {
+            font-size: 18px;
+            color: #e2e8f0;
+        }
+        
+        .ota-col {
+            background: rgba(255,100,100,0.1);
+        }
+        
+        .ahl-col {
+            background: rgba(100,255,150,0.1);
+        }
+        
+        .highlight {
+            color: #ffd700;
+            font-weight: bold;
+        }
+        
+        .green {
+            color: #68d391;
+        }
+        
+        .red {
+            color: #fc8181;
+        }
+        
+        /* Pricing Section */
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 20px;
+        }
+        
+        .pricing-card {
+            background: rgba(255,255,255,0.05);
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            border: 2px solid transparent;
+            transition: all 0.3s;
+        }
+        
+        .pricing-card.featured {
+            border-color: #ffd700;
+            background: rgba(255,215,0,0.1);
+        }
+        
+        .pricing-name {
+            font-size: 24px;
+            color: #fff;
+            margin-bottom: 10px;
+        }
+        
+        .pricing-price {
+            font-size: 36px;
+            color: #ffd700;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .pricing-token {
+            font-size: 16px;
+            color: #a0aec0;
+            margin-bottom: 20px;
+        }
+        
+        .pricing-feature {
+            font-size: 16px;
+            color: #e2e8f0;
+            padding: 8px 0;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        /* Team Section */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+        
+        .team-card {
+            background: rgba(255,255,255,0.05);
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .team-avatar {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, #319795, #2d3748);
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 36px;
+        }
+        
+        .team-name {
+            font-size: 24px;
+            color: #fff;
+            margin-bottom: 10px;
+        }
+        
+        .team-role {
+            font-size: 18px;
+            color: #4fd1c5;
+            margin-bottom: 10px;
+        }
+        
+        .team-bg {
+            font-size: 14px;
+            color: #a0aec0;
+        }
+        
+        /* CTA Section */
+        .cta {
+            background: linear-gradient(135deg, rgba(255,215,0,0.2), rgba(79,209,197,0.2));
+            border-radius: 20px;
+            padding: 60px;
+            text-align: center;
+            border: 2px solid #ffd700;
+        }
+        
+        .cta-title {
+            font-size: 36px;
+            color: #ffd700;
+            margin-bottom: 20px;
+        }
+        
+        .cta-amount {
+            font-size: 48px;
+            color: #fff;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+        
+        .cta-contact {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            font-size: 20px;
+            color: #e2e8f0;
+        }
+        
+        .cta-contact span {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 40px;
+            color: #718096;
+            font-size: 14px;
+        }
+        
+        /* Print Styles */
+        @media print {
+            body {
+                background: #1a365d;
+                padding: 20px;
+            }
+            .section {
+                break-inside: avoid;
+            }
+        }
+        
+        /* Responsive */
+        @media (max-width: 900px) {
+            .problem-grid,
+            .pricing-grid,
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+            .architecture {
+                flex-direction: column;
+            }
+            .arrow {
+                transform: rotate(90deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <div class="logo">AHL</div>
+            <div class="subtitle">去中心化旅行平台</div>
+            <div class="tagline">大模型双AGENT + AI基础设施</div>
+        </div>
+        
+        <!-- Problem Section -->
+        <div class="section">
+            <div class="section-title">行业痛点</div>
+            <div class="problem-grid">
+                <div class="problem-card">
+                    <div class="problem-icon">😩</div>
+                    <div class="problem-text">旅客找房难<br/>信息过载，难以找到"对的那一家"</div>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-icon">🏨</div>
+                    <div class="problem-text">民宿获客难<br/>好房源淹没在OTA百万列表里</div>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-icon">💸</div>
+                    <div class="problem-text">OTA佣金高<br/>15-25%成交佣金，商家苦不堪言</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Architecture Section -->
+        <div class="section">
+            <div class="section-title">核心技术架构</div>
+            <div class="architecture">
+                <div class="agent-box">
+                    <div class="agent-title">C端AI管家</div>
+                    <div class="agent-desc">理解旅行者真实需求<br/>精准匹配推荐</div>
+                </div>
+                <div class="arrow">⟷</div>
+                <div class="match-center">
+                    <div class="match-title">向量匹配引擎</div>
+                    <div class="match-sub">精准推荐<br/>Top3 + 原因解释</div>
+                </div>
+                <div class="arrow">⟷</div>
+                <div class="agent-box">
+                    <div class="agent-title">B端AI运营官</div>
+                    <div class="agent-desc">理解商家独特价值<br/>主动运营分析</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Comparison Section -->
+        <div class="section">
+            <div class="section-title">收费模式对比</div>
+            <table class="comparison-table">
+                <tr>
+                    <th>对比维度</th>
+                    <th class="ota-col">传统OTA</th>
+                    <th class="ahl-col">AHL</th>
+                </tr>
+                <tr>
+                    <td>推荐逻辑</td>
+                    <td class="ota-col red">竞价排名</td>
+                    <td class="ahl-col green">价值匹配</td>
+                </tr>
+                <tr>
+                    <td>收费模式</td>
+                    <td class="ota-col red">15-25%佣金</td>
+                    <td class="ahl-col green">订阅费 + TOKEN</td>
+                </tr>
+                <tr>
+                    <td>用户体验</td>
+                    <td class="ota-col red">信息过载</td>
+                    <td class="ahl-col green">精准推荐</td>
+                </tr>
+                <tr>
+                    <td>数据归属</td>
+                    <td class="ota-col red">平台所有</td>
+                    <td class="ahl-col green">商家自有</td>
+                </tr>
+            </table>
+        </div>
+        
+        <!-- Pricing Section -->
+        <div class="section">
+            <div class="section-title">订阅方案</div>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-name">基础版</div>
+                    <div class="pricing-price">¥3,999/年</div>
+                    <div class="pricing-token">1万次/月 TOKEN</div>
+                    <div class="pricing-feature">自动接单</div>
+                    <div class="pricing-feature">智能定价</div>
+                    <div class="pricing-feature">基础客服</div>
+                </div>
+                <div class="pricing-card featured">
+                    <div class="pricing-name">专业版</div>
+                    <div class="pricing-price">¥6,999/年</div>
+                    <div class="pricing-token">3万次/月 TOKEN</div>
+                    <div class="pricing-feature">+ 收益管理</div>
+                    <div class="pricing-feature">+ 竞品监控</div>
+                    <div class="pricing-feature">+ 数据报表</div>
+                </div>
+                <div class="pricing-card">
+                    <div class="pricing-name">旗舰版</div>
+                    <div class="pricing-price">¥9,980/年</div>
+                    <div class="pricing-token">10万次/月 TOKEN</div>
+                    <div class="pricing-feature">+ 专属训练</div>
+                    <div class="pricing-feature">+ API对接</div>
+                    <div class="pricing-feature">+ 优先支持</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Team Section -->
+        <div class="section">
+            <div class="section-title">核心团队</div>
+            <div class="team-grid">
+                <div class="team-card">
+                    <div class="team-avatar">👨‍💼</div>
+                    <div class="team-name">张实</div>
+                    <div class="team-role">CEO / 创始人</div>
+                    <div class="team-bg">24年酒店行业老兵<br/>BISU旅游管理<br/>岷山→远途→维景→CTG</div>
+                </div>
+                <div class="team-card">
+                    <div class="team-avatar">🤖</div>
+                    <div class="team-name">李源</div>
+                    <div class="team-role">CTO</div>
+                    <div class="team-bg">华中科技大学AI博士<br/>10年+AI研发经验<br/>上海市AI行业协会专家</div>
+                </div>
+                <div class="team-card">
+                    <div class="team-avatar">📊</div>
+                    <div class="team-name">陈思序</div>
+                    <div class="team-role">CSO</div>
+                    <div class="team-bg">中国农业大学<br/>世界500强背景<br/>PE/VC/IPO全流程</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- CTA Section -->
+        <div class="cta">
+            <div class="cta-title">融资目标</div>
+            <div class="cta-amount">¥500-800万 种子轮</div>
+            <div class="cta-contact">
+                <span>📱 微信：17760348653</span>
+                <span>📧 ericzhangshi@163.com</span>
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <div class="footer">
+            AHL 去中心化旅行平台 | 让对的客人，遇见对的书房源<br/>
+            Generated by B166ER @ 2026-04-06
+        </div>
+    </div>
+</body>
+</html>

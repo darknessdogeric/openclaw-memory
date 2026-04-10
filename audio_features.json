@@ -1,0 +1,337 @@
+{
+  "analyzed": 50,
+  "features": {
+    "Alvin Lee - The Bluest Blues (1)": {
+      "duration_sec": 447.71,
+      "sample_rate": 44100,
+      "tempo_bpm": 152.0,
+      "estimated_key": "A",
+      "brightness_avg": 2065.06,
+      "texture_score": 0.0432,
+      "energy_avg": 0.1328
+    },
+    "Alvin Lee - The Bluest Blues": {
+      "duration_sec": 447.71,
+      "sample_rate": 44100,
+      "tempo_bpm": 152.0,
+      "estimated_key": "A",
+      "brightness_avg": 2065.06,
+      "texture_score": 0.0432,
+      "energy_avg": 0.1328
+    },
+    "Amos Milburn - Let Me Go Home, Whiskey (1)": {
+      "duration_sec": 165.77,
+      "sample_rate": 44100,
+      "tempo_bpm": 120.19,
+      "estimated_key": "A#",
+      "brightness_avg": 1193.16,
+      "texture_score": 0.0239,
+      "energy_avg": 0.0925
+    },
+    "Amos Milburn - Let Me Go Home, Whiskey": {
+      "duration_sec": 165.77,
+      "sample_rate": 44100,
+      "tempo_bpm": 120.19,
+      "estimated_key": "A#",
+      "brightness_avg": 1193.16,
+      "texture_score": 0.0239,
+      "energy_avg": 0.0925
+    },
+    "Andrea Oliva,Angela Hewitt - Sonata In E Flat, BWV": {
+      "duration_sec": 129.39,
+      "sample_rate": 44100,
+      "tempo_bpm": 206.72,
+      "estimated_key": "D",
+      "brightness_avg": 953.07,
+      "texture_score": 0.0271,
+      "energy_avg": 0.0382
+    },
+    "Andrea Oliva,Angela Hewitt - Sonata In G Minor, BW": {
+      "duration_sec": 252.63,
+      "sample_rate": 44100,
+      "tempo_bpm": 191.41,
+      "estimated_key": "A#",
+      "brightness_avg": 962.78,
+      "texture_score": 0.0298,
+      "energy_avg": 0.047
+    },
+    "Angela Hewitt - The Well-Tempered Clavier, Book 1N": {
+      "duration_sec": 95.41,
+      "sample_rate": 44100,
+      "tempo_bpm": 132.51,
+      "estimated_key": "C",
+      "brightness_avg": 706.71,
+      "texture_score": 0.0191,
+      "energy_avg": 0.0444
+    },
+    "Antonio Pinto - Little Odessa": {
+      "duration_sec": 170.63,
+      "sample_rate": 44100,
+      "tempo_bpm": 172.27,
+      "estimated_key": "C",
+      "brightness_avg": 1530.65,
+      "texture_score": 0.0318,
+      "energy_avg": 0.1034
+    },
+    "Ayhan Sicimolu - Istanbul Pas Constantinople (1)": {
+      "duration_sec": 272.48,
+      "sample_rate": 44100,
+      "tempo_bpm": 90.67,
+      "estimated_key": "A",
+      "brightness_avg": 2850.21,
+      "texture_score": 0.0604,
+      "energy_avg": 0.2483
+    },
+    "Ayhan Sicimolu - Istanbul Pas Constantinople": {
+      "duration_sec": 272.48,
+      "sample_rate": 44100,
+      "tempo_bpm": 90.67,
+      "estimated_key": "A",
+      "brightness_avg": 2850.21,
+      "texture_score": 0.0604,
+      "energy_avg": 0.2483
+    },
+    "Black Box Recorder - Seasons in the Sun (1)": {
+      "duration_sec": 160.27,
+      "sample_rate": 44100,
+      "tempo_bpm": 103.36,
+      "estimated_key": "C#",
+      "brightness_avg": 1994.77,
+      "texture_score": 0.0365,
+      "energy_avg": 0.2149
+    },
+    "Black Box Recorder - Seasons in the Sun": {
+      "duration_sec": 160.27,
+      "sample_rate": 44100,
+      "tempo_bpm": 103.36,
+      "estimated_key": "C#",
+      "brightness_avg": 1994.77,
+      "texture_score": 0.0365,
+      "energy_avg": 0.2149
+    },
+    "Blues Saraceno - Carry Me Back Home (1)": {
+      "duration_sec": 196.08,
+      "sample_rate": 44100,
+      "tempo_bpm": 161.5,
+      "estimated_key": "A",
+      "brightness_avg": 2003.53,
+      "texture_score": 0.0328,
+      "energy_avg": 0.1836
+    },
+    "Blues Saraceno - Carry Me Back Home": {
+      "duration_sec": 196.08,
+      "sample_rate": 44100,
+      "tempo_bpm": 161.5,
+      "estimated_key": "A",
+      "brightness_avg": 2003.53,
+      "texture_score": 0.0328,
+      "energy_avg": 0.1836
+    },
+    "Carmen Cuesta - Loeb - While My Guitar Gently weep": {
+      "duration_sec": 270.5,
+      "sample_rate": 44100,
+      "tempo_bpm": 129.2,
+      "estimated_key": "C#",
+      "brightness_avg": 3048.35,
+      "texture_score": 0.0512,
+      "energy_avg": 0.18
+    },
+    "Caro Emerald - Bad Romance (1)": {
+      "duration_sec": 257.81,
+      "sample_rate": 44100,
+      "tempo_bpm": 126.05,
+      "estimated_key": "A",
+      "brightness_avg": 3545.43,
+      "texture_score": 0.0768,
+      "energy_avg": 0.1735
+    },
+    "Caro Emerald - Bad Romance": {
+      "duration_sec": 257.81,
+      "sample_rate": 44100,
+      "tempo_bpm": 126.05,
+      "estimated_key": "A",
+      "brightness_avg": 3545.43,
+      "texture_score": 0.0768,
+      "energy_avg": 0.1735
+    },
+    "Cynthia Harrell - I Am The Wind (1)": {
+      "duration_sec": 277.11,
+      "sample_rate": 44100,
+      "tempo_bpm": 117.45,
+      "estimated_key": "D#",
+      "brightness_avg": 2609.92,
+      "texture_score": 0.053,
+      "energy_avg": 0.1477
+    },
+    "Cynthia Harrell - I Am The Wind": {
+      "duration_sec": 277.11,
+      "sample_rate": 44100,
+      "tempo_bpm": 117.45,
+      "estimated_key": "D#",
+      "brightness_avg": 2609.92,
+      "texture_score": 0.053,
+      "energy_avg": 0.1477
+    },
+    "Daniela Andrade - River of Gold (1)": {
+      "duration_sec": 192.34,
+      "sample_rate": 44100,
+      "tempo_bpm": 132.51,
+      "estimated_key": "C#",
+      "brightness_avg": 1417.58,
+      "texture_score": 0.0277,
+      "energy_avg": 0.188
+    },
+    "Daniela Andrade - River of Gold": {
+      "duration_sec": 192.34,
+      "sample_rate": 44100,
+      "tempo_bpm": 132.51,
+      "estimated_key": "C#",
+      "brightness_avg": 1417.58,
+      "texture_score": 0.0277,
+      "energy_avg": 0.188
+    },
+    "Danny Schmidt - Houses Sing (1)": {
+      "duration_sec": 256.41,
+      "sample_rate": 44100,
+      "tempo_bpm": 129.2,
+      "estimated_key": "C#",
+      "brightness_avg": 1827.97,
+      "texture_score": 0.0298,
+      "energy_avg": 0.1224
+    },
+    "Danny Schmidt - Houses Sing": {
+      "duration_sec": 256.41,
+      "sample_rate": 44100,
+      "tempo_bpm": 129.2,
+      "estimated_key": "C#",
+      "brightness_avg": 1827.97,
+      "texture_score": 0.0298,
+      "energy_avg": 0.1224
+    },
+    "Dario Marianelli - Anna Marches Into A Waltz (1)": {
+      "duration_sec": 58.33,
+      "sample_rate": 44100,
+      "tempo_bpm": 178.21,
+      "estimated_key": "E",
+      "brightness_avg": 1600.87,
+      "texture_score": 0.0377,
+      "energy_avg": 0.06
+    },
+    "Dario Marianelli - Anna Marches Into A Waltz": {
+      "duration_sec": 58.33,
+      "sample_rate": 44100,
+      "tempo_bpm": 178.21,
+      "estimated_key": "E",
+      "brightness_avg": 1600.87,
+      "texture_score": 0.0377,
+      "energy_avg": 0.06
+    },
+    "Dark Moor - Four Seasons.Winter": {
+      "duration_sec": 219.75,
+      "sample_rate": 44100,
+      "tempo_bpm": 139.67,
+      "estimated_key": "E",
+      "brightness_avg": 3014.53,
+      "texture_score": 0.0631,
+      "energy_avg": 0.2086
+    },
+    "David And The High Spirit - Zingarelah": {
+      "duration_sec": 215.63,
+      "sample_rate": 44100,
+      "tempo_bpm": 99.38,
+      "estimated_key": "G",
+      "brightness_avg": 3753.3,
+      "texture_score": 0.097,
+      "energy_avg": 0.1107
+    },
+    "Dmitri Shostakovich - VI. Waltz 2 from Jazz Suite ": {
+      "duration_sec": 224.07,
+      "sample_rate": 44100,
+      "tempo_bpm": 178.21,
+      "estimated_key": "G",
+      "brightness_avg": 1814.22,
+      "texture_score": 0.0496,
+      "energy_avg": 0.0611
+    },
+    "Edda Moser,Wolfgang Sawallisch - Mozart The Magic ": {
+      "duration_sec": 178.12,
+      "sample_rate": 44100,
+      "tempo_bpm": 147.66,
+      "estimated_key": "A",
+      "brightness_avg": 1853.04,
+      "texture_score": 0.0529,
+      "energy_avg": 0.108
+    },
+    "Elvana Gjata - Xheloz (1)": {
+      "duration_sec": 169.51,
+      "sample_rate": 44100,
+      "tempo_bpm": 103.36,
+      "estimated_key": "F",
+      "brightness_avg": 2857.43,
+      "texture_score": 0.0503,
+      "energy_avg": 0.2525
+    },
+    "Elvana Gjata - Xheloz": {
+      "duration_sec": 169.51,
+      "sample_rate": 44100,
+      "tempo_bpm": 103.36,
+      "estimated_key": "F",
+      "brightness_avg": 2857.43,
+      "texture_score": 0.0503,
+      "energy_avg": 0.2525
+    },
+    "Emi Fujita - Longer (1)": {
+      "duration_sec": 206.66,
+      "sample_rate": 44100,
+      "tempo_bpm": 147.66,
+      "estimated_key": "B",
+      "brightness_avg": 1479.91,
+      "texture_score": 0.0247,
+      "energy_avg": 0.1373
+    },
+    "Emi Fujita - Longer": {
+      "duration_sec": 206.66,
+      "sample_rate": 44100,
+      "tempo_bpm": 147.66,
+      "estimated_key": "B",
+      "brightness_avg": 1479.91,
+      "texture_score": 0.0247,
+      "energy_avg": 0.1373
+    },
+    "Emi Fujita - The Rose (1)": {
+      "duration_sec": 217.69,
+      "sample_rate": 44100,
+      "tempo_bpm": 132.51,
+      "estimated_key": "B",
+      "brightness_avg": 2164.25,
+      "texture_score": 0.0319,
+      "energy_avg": 0.1191
+    },
+    "Emi Fujita - The Rose": {
+      "duration_sec": 217.69,
+      "sample_rate": 44100,
+      "tempo_bpm": 132.51,
+      "estimated_key": "B",
+      "brightness_avg": 2164.25,
+      "texture_score": 0.0319,
+      "energy_avg": 0.1191
+    },
+    "Erin Lang - You¡¯re Better Off (1)": {
+      "duration_sec": 213.16,
+      "sample_rate": 44100,
+      "tempo_bpm": 184.57,
+      "estimated_key": "C#",
+      "brightness_avg": 1922.12,
+      "texture_score": 0.0231,
+      "energy_avg": 0.2328
+    },
+    "Erin Lang - You¡¯re Better Off": {
+      "duration_sec": 213.16,
+      "sample_rate": 44100,
+      "tempo_bpm": 184.57,
+      "estimated_key": "C#",
+      "brightness_avg": 1922.12,
+      "texture_score": 0.0231,
+      "energy_avg": 0.2328
+    },
+    

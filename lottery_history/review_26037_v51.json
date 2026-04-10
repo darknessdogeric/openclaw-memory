@@ -1,0 +1,24 @@
+{
+  "issue": "26037",
+  "draw_date": "2026-04-08",
+  "actual_front": [7, 12, 13, 28, 32],
+  "actual_back": [6, 8],
+  "actual_sum": 92,
+  "model_version": "V5.1",
+  "predictions_review": [
+    {"bet": 1, "front": [3, 20, 26, 29, 33], "back": [4, 9], "front_hit": 0, "back_hit": 0, "score": 0},
+    {"bet": 2, "front": [5, 14, 22, 27, 34], "back": [4, 6], "front_hit": 0, "back_hit": 1, "score": 5},
+    {"bet": 3, "front": [1, 16, 23, 26, 31], "back": [3, 9], "front_hit": 0, "back_hit": 0, "score": 0},
+    {"bet": 4, "front": [9, 13, 26, 30, 34], "back": [4, 11], "front_hit": 1, "back_hit": 0, "score": 10},
+    {"bet": 5, "front": [10, 20, 26, 31, 33], "back": [6, 9], "front_hit": 0, "back_hit": 1, "score": 5}
+  ],
+  "best_bet": {"bet": 4, "score": 10, "front_hit": 1, "back_hit": 0},
+  "total_bets_with_any_hit": 3,
+  "v51_analysis": {
+    "front_accuracy": "POOR - 0 full matches, max 1 number hit",
+    "back_accuracy": "POOR - 2/5 bets had 1 back hit",
+    "cold_number_insight": "26 was tracked as hot (9 times) but did NOT appear - model overweighted recent frequency",
+    "miss_tracking": "Back#6 appeared in actual result but was tracked as 14-period miss",
+    "root_cause": "Hot number strategy completely failed - recent frequency does not predict near-term results"
+  }
+}
