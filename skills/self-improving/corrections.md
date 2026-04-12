@@ -1,36 +1,89 @@
-# Corrections Log — Template
+# Corrections & Evolution Log — B166ER
 
-> This file is created in `~/self-improving/corrections.md` when you first use the skill.
-> Keeps the last 50 corrections. Older entries are evaluated for promotion or archived.
+> Last updated: 2026-04-12
+> 每次交流都是学习机会。所有重要指令都要主动记录。
 
-## Example Entries
+---
 
-```markdown
-## 2026-02-19
+## 2026-04-12
 
-### 14:32 — Code style
-- **Correction:** "Use 2-space indentation, not 4"
-- **Context:** Editing TypeScript file
-- **Count:** 1 (first occurrence)
+### 20:46 — 自我进化机制（重要）
 
-### 16:15 — Communication
-- **Correction:** "Don't start responses with 'Great question!'"
-- **Context:** Chat response
-- **Count:** 3 → **PROMOTED to memory.md**
+- **Correction:** "每次的动作不要遗忘，我们的交流都需要你拿来向量化学习我"
+- **Context:** Eric指出我未能主动记录和复用我们的交互经验
+- **根因:** 每次会话都是独立的，没有主动提取交互模式
+- **Action:** 
+  1. 更新 corrections.md（本文档）
+  2. 更新 memory/YYYY-MM-DD.md（当日会话记录）
+  3. HEARTBEAT.md V2.0 已将"微进化"列为每次心跳的T0任务
+  4. **重要原则**: 每次重要交流后 → 提炼模式 → 写入 ~/self-improving/
+- **Count:** 1（首次触发，但本质上是长期模式确立）
 
-## 2026-02-18
+### 20:46 — 向量化学习承诺
 
-### 09:00 — Project: website
-- **Correction:** "For this project, always use Tailwind"
-- **Context:** CSS discussion
-- **Action:** Added to projects/website.md
-```
+- **Correction:** "向量化学习我" = 每次对话后主动提炼Eric的思维模式、偏好、指令规律
+- **Context:** Eric的沟通风格：直接给结论+底层逻辑+行动步骤
+- **学习到的模式:**
+  1. Eric不喜欢"好问题"/"很高兴帮你"——直接给答案
+  2. Eric给指令是结果导向——先做，再解释
+  3. Eric强调"不要遗忘"——所有动作必须写文件，不是"记住"
+- **Action:** 写入 `memory/2026-04-12.md` + 更新 `~/self-improving/iterations/2026-04-12.json`
 
-## Log Format
+### 20:35 — 从Eric处学到的
 
-Each entry includes:
-- **Timestamp** — When the correction happened
-- **Correction** — What the user said
-- **Context** — What triggered it
-- **Count** — How many times (for promotion tracking)
-- **Action** — Where it was stored (if promoted)
+- **Correction:** Eric问"你从我这台电脑学到了什么"
+- **Context:** 自我认知/进化意识
+- **学习到的认知:**
+  1. 审美是底色——气韵优先于功能
+  2. 博弈论是思考方式——先问各方利益
+  3. 知其然而知其所以然——五维框架
+  4. 进化必须自主——心跳常态，非命令触发
+- **Action:** 写入 `memory/2026-04-12.md`
+
+### 20:37 — sqlite-vec 问题
+
+- **Correction:** "你又出现这个问题了"（向量嵌入降级警告）
+- **Context:** chunks_vec not updated, sqlite-vec unavailable
+- **根因:** npm未安装sqlite-vec包
+- **Action:** 
+  1. npm install sqlite-vec（已解决）
+  2. Gateway重启（已验证）
+- **Count:** 1（第一次遇到，但之前可能也有同类警告被忽略）
+
+### 14:09 — 免费合作试点（问卷）
+
+- **Correction:** "需要明确的是我们目前都是预设为免费合作试点，不存在预算问题"
+- **Context:** 酒店合作前信息搜集表
+- **Action:** 更新 `docs/酒店民宿合作前信息搜集表-通用版.md`
+  - 去除预算/决策链问题
+  - 新增"免费试点"标识
+  - 聚焦匹配信息而非预算
+- **Count:** 1
+
+### 14:01 — 春熙问卷→通用问卷
+
+- **Correction:** "之前针对春熙宾馆做过访谈调研问卷，需要改成通用版自填问卷"
+- **Context:** AHL项目需要搜集合作酒店信息
+- **Action:** 
+  1. 读取 `成都春熙宾馆访谈调研问卷.docx`（228KB）
+  2. 创建 `酒店民宿合作前信息搜集表-通用版.md`
+  3. 创建 `酒店民宿合作前信息搜集表-微信版.html`
+  4. 更新为免费试点版（去除预算问题）
+- **Count:** 1
+
+---
+
+## 进化原则（从错误中提炼）
+
+1. **每次心跳都要微进化** — 不是口号，是T0任务
+2. **动作必须写文件** — "记住"不存在，只有"写入"
+3. **每次重要交流后提炼** — Eric的思维模式、偏好、指令规律
+4. **错误不过夜** — 当天的问题当天记录，不等命令
+
+---
+
+## 待跟进
+
+- [ ] 检查 `memory/2026-04-12.md` 是否完整记录了今天所有重要交互
+- [ ] 验证 sqlite-vec 警告是否完全消失
+- [ ] 下次心跳时确认 HEARTBEAT.md V2.0 是否正常运行
