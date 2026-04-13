@@ -91,6 +91,9 @@
 | AHL知识库 | `memory/ahl-knowledge-base-v1.md` | v1.0 | 2026-04-04 |
 | 张实全方位人格 | `memory/张实全方位人格侧写报告.md` | — | 2026-04-05 |
 | **TOKEN经济专题** | `memory/token-economy-research.md` | v1.0 | **2026-04-13** |
+| **AI Agent生产级应用** | `memory/ai-agent-production-knowledge-base-v1.md` | v1.0 | **2026-04-14** |
+| **中美跨境商业结构** | `memory/china-us-cross-border-structure-v1.md` | v1.0 | **2026-04-14** |
+| **决策思维框架** | `memory/mental-models-decision-frameworks-v1.md` | v1.0 | **2026-04-14** |
 
 ### 快速检索路由
 | 需要找什么 | 去哪里 |

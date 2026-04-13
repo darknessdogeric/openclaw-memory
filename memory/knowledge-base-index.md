@@ -1,7 +1,7 @@
 # B166ER 知识库索引 V3.0
 
 > 创建日期: 2026-03-31
-> 更新: 2026-04-06
+> 更新: 2026-04-14
 > 版本: V3.0
 
 ---
@@ -32,6 +32,9 @@
 |------|---------|--------|
 | 审美 | `aesthetic-knowledge-base.md` | 审美/设计/品位/气韵/意境/排版/海报 |
 | 博弈 | `game-theory-decision-knowledge-base-v3.md` | 博弈/谈判/策略/纳什均衡/投资人 |
+| AI Agent/商业化 | `ai-agent-production-knowledge-base-v1.md` | AI/AGENT/多AGENT/RAG/TOKEN计费/生产环境 |
+| 跨境结构 | `china-us-cross-border-structure-v1.md` | WFOE/VIE/ODI/美国公司/跨境资本/CFIUS |
+| 决策框架 | `mental-models-decision-frameworks-v1.md` | 决策/逆向思维/概率/第二层思维/认知偏见 |
 | 酒店 | `hotel-industry-knowledge-base-v7.md` | 酒店/民宿/收益/ADR/OCC/OTA/携程 |
 | AI技术 | `ai-llm-knowledge-base-v2.md` | AI/LLM/AGENT/Prompt/RAG/大模型 |
 | 创业融资 | `startup-fundraising-knowledge-base-v2.md` | 融资/股权/YC/路演/BP/VC |
@@ -79,6 +82,9 @@
 | 酒店智能化 | 17KB | V1.1 | ✅ 完善 |
 | 目标管理体系 | 30KB | V1 | ✅ 完善 |
 | 跨境贸易 | 27KB | V1 | ✅ 完善 |
+| AI Agent生产级应用 | 7KB | V1.0 | ✅ 新增-2026-04-14 |
+| 中美跨境商业结构 | 5KB | V1.0 | ✅ 新增-2026-04-14 |
+| 决策思维框架 | 5KB | V1.0 | ✅ 新增-2026-04-14 |
 
 ---
 
