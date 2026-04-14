@@ -87,6 +87,7 @@
 | 定价策略 | `memory/pricing-strategy-knowledge-base.md` | v1.0 | 2026-04-01 |
 | 金融证券 | `memory/finance-securities-knowledge-base.md` | **v2.0** | **2026-04-14** |
 | **量化交易** | `memory/quantitative-trading-knowledge-base-v1.md` | v1.0 | **2026-04-14** |
+| **研究报告标准范式** | `memory/research-report-standard-v1.md` | v1.0 | **2026-04-14** |
 | 创业融资 | `memory/startup-fundraising-knowledge-base-v2.md` | v2 | 2026-03-31 |
 | 大乐透预测 | `docs/大乐透预测SOP.md` | V4.0 | 2026-04-01 |
 | AHL知识库 | `memory/ahl-knowledge-base-v1.md` | v1.0 | 2026-04-04 |
