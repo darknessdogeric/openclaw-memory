@@ -64,10 +64,11 @@
 | wewrite | ✅ 已同步 | Already up to date |
 | evolver | ⚠️ 冲突 | git pull失败，有未合并冲突，需手动解决 |
 
-## ⭐ 优先安装建议 (2026-04-07 更新)
-1. **hotelclaw** ⭐⭐⭐ - 途牛酒店技能，2026-04-07最新，AHL民宿可参考
-2. **agent-orchestrator** ⭐⭐⭐ - 多Agent编排，2026-04-07最新，AHL-A2A协议可参考
-3. **deep-research-agent** ⭐⭐ - 深度研究Agent，竞品分析可用
+## ⭐ 优先安装建议 (2026-04-14 更新)
+1. **design-md** ⭐⭐⭐ - 59个品牌DESIGN.md规范，设计能力升级（已安装）
+2. **hotelclaw** ⭐⭐⭐ - 途牛酒店技能，AHL民宿可参考
+3. **agent-orchestrator** ⭐⭐⭐ - 多Agent编排，AHL-A2A协议可参考
+4. **deep-research-agent** ⭐⭐ - 深度研究Agent，竞品分析可用
 4. **stayforge-api** ⭐⭐ - 去中心化民宿API，去中心化能力增强
 5. **ai-travel-planner-cn** ⭐⭐ - AI旅行规划师，为AHL用户旅程规划
 

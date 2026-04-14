@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/darknessdogeric/openclaw-memory/issues"
   },
-  "homepage": "https://github.com/darknessdogeric/openclaw-memory#readme"
+  "homepage": "https://github.com/darknessdogeric/openclaw-memory#readme",
+  "dependencies": {
+    "sqlite-vec": "^0.1.9"
+  }
 }

@@ -116,6 +116,22 @@
     "openclaw-tavily-search": {
       "version": "0.1.0",
       "installedAt": 1775608261722
+    },
+    "blockchain": {
+      "version": "1.0.0",
+      "installedAt": 1776005823173
+    },
+    "amazon-fba": {
+      "version": "0.1.0",
+      "installedAt": 1776005823239
+    },
+    "afrexai-tokenomics": {
+      "version": "1.0.0",
+      "installedAt": 1776006303610
+    },
+    "amazon-fba-prep": {
+      "version": "1.0.0",
+      "installedAt": 1776006422346
     }
   }
 }

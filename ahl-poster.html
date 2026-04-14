@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AHL去中心化旅行平台 - 海报</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&family=Noto+Serif+SC:wght@600;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-primary: #0a0e1a;
+            --bg-card: #111827;
+            --text-primary: #f1f5f9;
+            --text-secondary: #94a3b8;
+            --text-muted: #64748b;
+            --accent-cyan: #00d4ff;
+            --accent-blue: #3b82f6;
+            --accent-gold: #f59e0b;
+            --accent-green: #10b981;
+            --accent-red: #ef4444;
+            --accent-purple: #8b5cf6;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            width: 1920px;
+            height: 1080px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(ellipse at 15% 20%, rgba(59, 130, 246, 0.2) 0%, transparent 50%),
+                radial-gradient(ellipse at 85% 80%, rgba(0, 212, 255, 0.15) 0%, transparent 50%),
+                radial-gradient(ellipse at 50% 50%, rgba(139, 92, 246, 0.08) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .poster {
+            width: 100%;
+            height: 100%;
+            display: grid;
+            grid-template-rows: auto 1fr auto;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            padding: 40px 50px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Header */
+        .header {
+            grid-column: 1 / -1;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .header-left {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .brand-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #00d4ff 0%, #3b82f6 100%);
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            font-weight: 900;
+            font-family: 'Noto Serif SC', serif;
+            color: #fff;
+        }
+
+        .brand-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .brand-name {
+            font-family: 'Noto Serif SC', serif;
+            font-size: 42px;
+            font-weight: 900;
+            background: linear-gradient(135deg, #00d4ff 0%, #3b82f6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: -1px;
+            line-height: 1;
+        }
+
+        .brand-sub {
+            font-size: 14px;
+            color: var(--text-muted);
+            letter-spacing: 2px;
+        }
+
+        .header-right {
+            text-align: right;
+        }
+
+        .team-tag {
+            display: inline-block;
+            background: rgba(245, 158, 11, 0.15);
+            border: 1px solid rgba(245, 158, 11, 0.4);
+            color: var(--accent-gold);
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-size: 13px;
+            font-weight: 500;
+        }
+
+        .team-names {
+            margin-top: 8px;
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+
+        /* Main Content */
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+        }
+
+        /* Left Column */
+        .left-col {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        /* Stats Row */
+        .stats-row {
+            display: flex;
+            gap: 16px;
+        }
+
+        .stat-box {
+            flex: 1;
+            background: rgba(17, 24, 39, 0.8);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 16px;
+            padding: 16px;
+            text-align: center;
+        }
+
+        .stat-number {
+            font-family: 'Noto Serif SC', serif;
+            font-size: 28px;
+            font-weight: 900;
+            background: linear-gradient(135deg, #00d4ff 0%, #3b82f6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .stat-label {
+            font-size: 11px;
+            color: var(--text-muted);
+            margin-top: 4px;
+        }
+
+        /* Architecture Block */
+        .arch-block {
+            flex: 1;
+            background: rgba(17, 24, 39, 0.8);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 20px;
+            padding: 20px;
+        }
+
+        .arch-title {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--accent-cyan);
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .arch-title::before {
+            content: '';
+            width: 3px;
+            height: 14px;
+            background: var(--accent-cyan);
+            border-radius: 2px;
+        }
+
+        .layers {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .layer-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .layer-badge {
+            width: 100px;
+            font-size: 11px;
+            font-weight: 600;
+            padding: 6px 10px;
+            border-radius: 8px;
+            text-align: center;
+            flex-shrink: 0;
+        }
+
+        .layer-app { background: rgba(0, 212, 255, 0.15); color: var(--accent-cyan); }
+        .layer-agent { background: rgba(245, 158, 11, 0.15); color: var(--accent-gold); }
+        .layer-cluster { background: rgba(139, 92, 246, 0.15); color: var(--accent-purple); }
+        .layer-data { background: rgba(16, 185, 129, 0.15); color: var(--accent-green); }
+
+        .layer-content {
+            flex: 1;
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .layer-tag {
+            background: rgba(255,255,255,0.05);
+            border-radius: 6px;
+            padding: 4px 10px;
+            font-size: 10px;
+            color: var(--text-secondary);
+        }
+
+        /* Right Column */
+        .right-col {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        /* Dual Agent Block */
+        .dual-block {
+            flex: 1;
+            background: rgba(17, 24, 39, 0.8);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 20px;
+            padding: 20px;
+        }
+
+        .dual-title {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--accent-purple);
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .dual-title::before {
+            content: '';
+            width: 3px;
+            height: 14px;
+            background: var(--accent-purple);
+            border-radius: 2px;
+        }
+
+        .agents {
+            display: flex;
+            gap: 12px;
+            align-items: stretch;
+        }
+
+        .agent-box {
+            flex: 1;
+            border-radius: 14px;
+            padding: 14px;
+        }
+
+        .agent-c {
+            background: rgba(0, 212, 255, 0.08);
+            border: 1px solid rgba(0, 212, 255, 0.2);
+        }
+
+        .agent-b {
+            background: rgba(245, 158, 11, 0.08);
+            border: 1px solid rgba(245, 158, 11, 0.2);
+        }
+
+        .agent-title {
+            font-size: 13px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .agent-c .agent-title { color: var(--accent-cyan); }
+        .agent-b .agent-title { color: var(--accent-gold); }
+
+        .agent-flow {
+            font-size: 10px;
+            color: var(--text-muted);
+            line-height: 1.7;
+        }
+
+        .agent-flow span {
+            color: var(--text-secondary);
+        }
+
+        .vs-engine {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 8px;
+        }
+
+        .engine-badge {
+            background: rgba(139, 92, 246, 0.15);
+            border: 1px solid var(--accent-purple);
+            border-radius: 10px;
+            padding: 10px 8px;
+            text-align: center;
+        }
+
+        .engine-name {
+            font-size: 9px;
+            font-weight: 700;
+            color: var(--accent-purple);
+        }
+
+        /* Cluster Block */
+        .cluster-block {
+            flex: 1;
+            background: rgba(17, 24, 39, 0.8);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 20px;
+            padding: 20px;
+        }
+
+        .cluster-title {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--accent-gold);
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .cluster-title::before {
+            content: '';
+            width: 3px;
+            height: 14px;
+            background: var(--accent-gold);
+            border-radius: 2px;
+        }
+
+        .cluster-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 8px;
+        }
+
+        .cluster-item {
+            background: rgba(245, 158, 11, 0.08);
+            border: 1px solid rgba(245, 158, 11, 0.2);
+            border-radius: 10px;
+            padding: 10px 6px;
+            text-align: center;
+        }
+
+        .cluster-item.core {
+            grid-column: span 2;
+            background: rgba(245, 158, 11, 0.15);
+            border-color: rgba(245, 158, 11, 0.4);
+        }
+
+        .cluster-icon {
+            font-size: 18px;
+            margin-bottom: 4px;
+        }
+
+        .cluster-name {
+            font-size: 10px;
+            font-weight: 600;
+        }
+
+        /* Quote Block */
+        .quote-block {
+            background: linear-gradient(135deg, rgba(0, 212, 255, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%);
+            border: 1px solid rgba(0, 212, 255, 0.2);
+            border-radius: 16px;
+            padding: 16px;
+        }
+
+        .quote-label {
+            font-size: 11px;
+            color: var(--accent-cyan);
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .quote-text {
+            font-size: 12px;
+            color: var(--text-secondary);
+            line-height: 1.7;
+            font-style: italic;
+        }
+
+        .quote-text strong {
+            color: var(--accent-cyan);
+            font-style: normal;
+        }
+
+        .quote-result {
+            margin-top: 8px;
+            font-size: 11px;
+            color: var(--text-muted);
+        }
+
+        /* Footer */
+        .footer {
+            grid-column: 1 / -1;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 16px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .vs-section {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .vs-box {
+            border-radius: 12px;
+            padding: 12px 16px;
+            min-width: 200px;
+        }
+
+        .vs-ota {
+            background: rgba(239, 68, 68, 0.1);
+            border: 1px solid rgba(239, 68, 68, 0.3);
+        }
+
+        .vs-ahl {
+            background: rgba(0, 212, 255, 0.1);
+            border: 1px solid rgba(0, 212, 255, 0.3);
+        }
+
+        .vs-label {
+            font-size: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 4px;
+        }
+
+        .vs-ota .vs-label { color: var(--accent-red); }
+        .vs-ahl .vs-label { color: var(--accent-cyan); }
+
+        .vs-name {
+            font-family: 'Noto Serif SC', serif;
+            font-size: 16px;
+            font-weight: 700;
+        }
+
+        .vs-metrics {
+            font-size: 11px;
+            color: var(--text-muted);
+        }
+
+        .vs-metrics strong {
+            font-weight: 700;
+        }
+
+        .vs-ahl .vs-metrics strong { color: var(--accent-cyan); }
+
+        .vs-divider {
+            font-family: 'Noto Serif SC', serif;
+            font-size: 24px;
+            font-weight: 900;
+            color: var(--text-muted);
+        }
+
+        .nl-tag {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 12px;
+            color: var(--text-muted);
+        }
+
+        .nl-item {
+            background: rgba(255,255,255,0.05);
+            border-radius: 20px;
+            padding: 6px 14px;
+        }
+
+        .nl-highlight {
+            background: rgba(0, 212, 255, 0.15);
+            border: 1px solid rgba(0, 212, 255, 0.3);
+            color: var(--accent-cyan);
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div class="poster">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-left">
+                <div class="brand">
+                    <div class="brand-icon">A</div>
+                    <div class="brand-text">
+                        <div class="brand-name">AHL</div>
+                        <div class="brand-sub">去中心化旅行平台</div>
+                    </div>
+                </div>
+            </div>
+            <div class="header-right">
+                <div class="team-tag">AI驱动的住宿业范式革命</div>
+                <div class="team-names">张实(What) × 李源CTO(How) × 陈思序CSO(When)</div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Left Column -->
+            <div class="left-col">
+                <!-- Stats -->
+                <div class="stats-row">
+                    <div class="stat-box">
+                        <div class="stat-number">95%+</div>
+                        <div class="stat-label">向量匹配准确率</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-number">87个</div>
+                        <div class="stat-label">垂直领域SKILL</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-number">&lt;3秒</div>
+                        <div class="stat-label">智能响应速度</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-number">2-3%</div>
+                        <div class="stat-label">vs OTA 20-30%</div>
+                    </div>
+                </div>
+
+                <!-- Architecture Layers -->
+                <div class="arch-block">
+                    <div class="arch-title">四层架构</div>
+                    <div class="layers">
+                        <div class="layer-item">
+                            <div class="layer-badge layer-app">应用层</div>
+                            <div class="layer-content">
+                                <span class="layer-tag">C端AI管家对话入口</span>
+                                <span class="layer-tag">B端AI运营官</span>
+                            </div>
+                        </div>
+                        <div class="layer-item">
+                            <div class="layer-badge layer-agent">双AGENT层</div>
+                            <div class="layer-content">
+                                <span class="layer-tag">C端管家理解意图</span>
+                                <span class="layer-tag">B端运营官封装产品</span>
+                                <span class="layer-tag">向量引擎精准匹配</span>
+                            </div>
+                        </div>
+                        <div class="layer-item">
+                            <div class="layer-badge layer-cluster">集群层</div>
+                            <div class="layer-content">
+                                <span class="layer-tag">核心AGENT</span>
+                                <span class="layer-tag">营销/收益/工程/安防</span>
+                                <span class="layer-tag">宴会/财务/人力/供应链</span>
+                            </div>
+                        </div>
+                        <div class="layer-item">
+                            <div class="layer-badge layer-data">数据层</div>
+                            <div class="layer-content">
+                                <span class="layer-tag">标准向量数据</span>
+                                <span class="layer-tag">深水非标向量（OTA采不到）</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column -->
+            <div class="right-col">
+                <!-- Dual Agent -->
+                <div class="dual-block">
+                    <div class="dual-title">双AGENT核心引擎</div>
+                    <div class="agents">
+                        <div class="agent-box agent-c">
+                            <div class="agent-title">👤 C端AI管家</div>
+                            <div class="agent-flow">
+                                <span>自然语言理解</span> → <span>提取需求实体</span><br>
+                                <span>生成需求向量</span> → <span>Top-K精准匹配</span><br>
+                                <span>多轮对话澄清</span> → <span>直接预订</span>
+                            </div>
+                        </div>
+                        <div class="vs-engine">
+                            <div class="engine-badge">
+                                <div class="engine-name">⚡ 向量</div>
+                                <div class="engine-name">匹配引擎</div>
+                            </div>
+                        </div>
+                        <div class="agent-box agent-b">
+                            <div class="agent-title">🏨 B端AI运营官</div>
+                            <div class="agent-flow">
+                                <span>产品向量化封装</span> → <span>动态定价</span><br>
+                                <span>客户洞察分析</span> → <span>精准营销</span><br>
+                                <span>集群协同运营</span> → <span>主动出击</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cluster Grid -->
+                <div class="cluster-block">
+                    <div class="cluster-title">9大AGENT集群 × 87个SKILL</div>
+                    <div class="cluster-grid">
+                        <div class="cluster-item core">
+                            <div class="cluster-icon">🎯</div>
+                            <div class="cluster-name">核心AGENT</div>
+                        </div>
+                        <div class="cluster-item">
+                            <div class="cluster-icon">📢</div>
+                            <div class="cluster-name">营销</div>
+                        </div>
+                        <div class="cluster-item">
+                            <div class="cluster-icon">💰</div>
+                            <div class="cluster-name">收益</div>
+                        </div>
+                        <div class="cluster-item">
+                            <div class="cluster-icon">🔧</div>
+                            <div class="cluster-name">工程</div>
+                        </div>
+                        <div class="cluster-item">
+                            <div class="cluster-icon">🔒</div>
+                            <div class="cluster-name">安防</div>
+                        </div>
+                        <div class="cluster-item">
+                            <div class="cluster-icon">🍽️</div>
+                            <div class="cluster-name">宴会</div>
+                        </div>
+                        <div class="cluster-item">
+                            <div class="cluster-icon">💳</div>
+                            <div class="cluster-name">财务</div>
+                        </div>
+                        <div class="cluster-item">
+                            <div class="cluster-icon">👥</div>
+                            <div class="cluster-name">人力</div>
+                        </div>
+                        <div class="cluster-item">
+                            <div class="cluster-icon">🔗</div>
+                            <div class="cluster-name">供应链</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quote -->
+                <div class="quote-block">
+                    <div class="quote-label">💬 自然语言交互示意</div>
+                    <div class="quote-text">
+                        「我想住大理古城带院子的民宿，喜欢有故事的老房子，预算500」<br>
+                        <strong>→ AI理解：</strong>位置 | 房型 | 调性 | 预算 → <strong>精准匹配3家最优民宿</strong>
+                    </div>
+                    <div class="quote-result">87%用户偏好自然语言交互 · 语音/文字/多轮澄清</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="vs-section">
+                <div class="vs-box vs-ota">
+                    <div class="vs-label">传统OTA</div>
+                    <div class="vs-name">携程 / 美团</div>
+                    <div class="vs-metrics">佣金 15-30% · 搜索比价 · 数据垄断</div>
+                </div>
+                <div class="vs-divider">VS</div>
+                <div class="vs-box vs-ahl">
+                    <div class="vs-label">AHL平台</div>
+                    <div class="vs-name">去中心化旅行</div>
+                    <div class="vs-metrics"><strong>仅2-3%</strong>技术服务费 · AI精准推荐 · 数据自有</div>
+                </div>
+            </div>
+            <div class="nl-tag">
+                <span class="nl-item nl-highlight">🎤 语音输入</span>
+                <span class="nl-item">📝 文字对话</span>
+                <span class="nl-item">🔄 多轮澄清</span>
+                <span class="nl-item">⚡ 即时响应</span>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

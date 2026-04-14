@@ -2,6 +2,13 @@
 
 > 创建日期: 2026-03-31
 > 更新: 2026-04-14
+
+## 九、设计技能（2026-04-14新增）
+
+| 技能 | 位置 | 说明 |
+|------|------|------|
+| design-md | `skills/design-md/` | 59个品牌DESIGN.md规范库（Stripe/Vercel/Airbnb/Linear等） |
+| article-to-infographic | `skills/article-to-infographic/` | 文字→信息图，支持多布局多风格PNG导出 |
 > 版本: V3.0
 
 ---

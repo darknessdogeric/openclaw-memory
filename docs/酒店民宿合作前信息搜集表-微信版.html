@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>酒店合作前信息搜集表 - 免费试点版</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif; background: #f0f2f5; color: #333; max-width: 680px; margin: 0 auto; padding: 12px; font-size: 14px; }
+  .header { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); color: #fff; padding: 20px 16px; border-radius: 12px; text-align: center; margin-bottom: 14px; }
+  .header h1 { font-size: 18px; font-weight: 600; margin-bottom: 6px; }
+  .header p { font-size: 12px; opacity: 0.85; }
+  .intro { background: #fff; border-radius: 10px; padding: 14px; margin-bottom: 12px; box-shadow: 0 1px 4px rgba(0,0,0,0.06); font-size: 13px; line-height: 1.6; }
+  .card { background: #fff; border-radius: 10px; padding: 14px; margin-bottom: 12px; box-shadow: 0 1px 4px rgba(0,0,0,0.06); }
+  .section-title { font-size: 14px; font-weight: 700; color: #1a1a2e; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 2px solid #f0f2f5; display: flex; align-items: center; gap: 6px; }
+  .section-title .num { background: #1a1a2e; color: #fff; width: 22px; height: 22px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-size: 11px; flex-shrink: 0; }
+  .q-label { font-size: 13px; font-weight: 600; color: #333; margin-bottom: 8px; margin-top: 12px; }
+  .q-note { font-size: 11px; color: #999; margin-bottom: 8px; }
+  .option-row { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 6px; }
+  .chip { padding: 5px 10px; background: #f5f5f5; border-radius: 16px; font-size: 12px; cursor: pointer; border: 1px solid #e0e0e0; transition: all 0.2s; }
+  .chip:hover { background: #e8e8e8; }
+  .chip.selected { background: #1a1a2e; color: #fff; border-color: #1a1a2e; }
+  .chip input { display: none; }
+  .text-input { width: 100%; border: 1px solid #e0e0e0; border-radius: 8px; padding: 8px 10px; font-size: 13px; min-height: 36px; transition: border-color 0.2s; }
+  .text-input:focus { outline: none; border-color: #1a1a2e; }
+  .text-area { width: 100%; border: 1px solid #e0e0e0; border-radius: 8px; padding: 8px 10px; font-size: 13px; min-height: 70px; resize: vertical; font-family: inherit; }
+  .text-area:focus { outline: none; border-color: #1a1a2e; }
+  .row-2 { display: flex; gap: 8px; }
+  .row-2 .field { flex: 1; }
+  .row-3 { display: flex; gap: 8px; }
+  .row-3 .field { flex: 1; }
+  .divider { border: none; border-top: 1px dashed #eee; margin: 12px 0; }
+  .table-box { border: 1px solid #eee; border-radius: 8px; overflow: hidden; font-size: 12px; }
+  .table-box table { width: 100%; border-collapse: collapse; }
+  .table-box th { background: #f5f5f5; padding: 8px 6px; text-align: left; font-weight: 600; border-bottom: 1px solid #eee; font-size: 11px; }
+  .table-box td { padding: 6px 6px; border-bottom: 1px solid #f5f5f5; }
+  .table-box tr:last-child td { border-bottom: none; }
+  .table-box input.text-input { min-height: 28px; padding: 4px 6px; font-size: 12px; border-radius: 4px; }
+  .contact-row { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  .submit-btn { display: block; width: 100%; background: linear-gradient(135deg, #1a1a2e, #16213e); color: #fff; border: none; padding: 14px; border-radius: 10px; font-size: 15px; font-weight: 600; cursor: pointer; margin-top: 16px; margin-bottom: 30px; }
+  .submit-btn:hover { opacity: 0.9; }
+  .footer { text-align: center; font-size: 11px; color: #aaa; padding-bottom: 40px; }
+  .highlight-bar { background: #fff9e6; border-left: 3px solid #ffc107; padding: 10px 12px; border-radius: 0 8px 8px 0; font-size: 12px; color: #666; margin-bottom: 14px; line-height: 1.6; }
+  .pain-box { background: #fff; border: 1px solid #eee; border-radius: 8px; padding: 12px; margin-bottom: 10px; }
+  .pain-header { font-weight: 600; font-size: 13px; margin-bottom: 8px; color: #1a1a2e; }
+  .free-badge { display: inline-block; background: #4caf50; color: #fff; padding: 2px 8px; border-radius: 10px; font-size: 11px; margin-left: 6px; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>🏨 酒店/民宿 合作前信息搜集表 <span class="free-badge">免费试点</span></h1>
+  <p>自填版 | 通用所有酒店/民宿 | 预计填写10-15分钟</p>
+</div>
+
+<div class="highlight-bar">
+  <strong>说明：</strong>我们目前所有合作均为<strong>免费试点</strong>，不收取任何费用。合作前只需要了解您的基本情况，以便判断我们能否帮到您，以及如何落地。本表所有信息严格保密。
+</div>
+
+<!-- 合作方向选择 -->
+<div class="card">
+  <div class="section-title">
+    <span class="num">🎯</span>
+    合作方向（请选择您感兴趣的，可多选）
+  </div>
+  <div class="option-row">
+    <label class="chip" onclick="toggleChip(this)"><input type="checkbox"> 收益管理（动态定价/ADR优化）</label>
+    <label class="chip" onclick="toggleChip(this)"><input type="checkbox"> OTA维护自动化</label>
+    <label class="chip" onclick="toggleChip(this)"><input type="checkbox"> 销售雷达（竞品监控）</label>
+    <label class="chip" onclick="toggleChip(this)"><input type="checkbox"> 私域维护（会员/复购）</label>
+  </div>
+</div>
+
+<!-- 第一部分：基本信息 -->
+<div class="card">
+  <div class="section-title"><span class="num">1</span> 基本信息</div>
+  
+  <div class="q-label">酒店名称</div>
+  <input class="text-input" type="text" placeholder="请填写酒店全称或简称">
+
+  <div class="row-2" style="margin-top:8px;">
+    <div class="field">
+      <div class="q-label">地址/商圈</div>
+      <input class="text-input" type="text" placeholder="如：成都春熙路商圈">
+    </div>
+    <div class="field">
+      <div class="q-label">总房间数</div>
+      <input class="text-input" type="text" placeholder="间">
+    </div>
+  </div>
+
+  <div class="row-3" style="margin-top:8px;">
+    <div class="field">
+      <div class="q-label">距最近地铁</div>
+      <input class="text-input" type="text" placeholder="约___米">
+    </div>
+    <div class="field">
+      <div class="q-label">开业时间</div>
+      <input class="text-input" type="text" placeholder="年">
+    </div>
+    <div class="field">
+      <div class="q-label">最近装修</div>
+      <input class="text-input" type="text" placeholder="年">
+    </div>
+  </div>
+
+  <div class="q-label" style="margin-top:12px;">档次定位</div>
+  <div class="option-row">
+    <label class="chip" onclick="selectOnly(this, 'level')"><input type="radio" name="level" value="经济型"> 经济型</label>
+    <label class="chip" onclick="selectOnly(this, 'level')"><input type="radio" name="level" value="中档"> 中档</label>
+    <label class="chip" onclick="selectOnly(this, 'level')"><input type="radio" name="level" value="中高档"> 中高档</label>
+    <label class="chip" onclick="selectOnly(this, 'level')"><input type="radio" name="level" value="高端"> 高端/精品</label>
+    <label class="chip" onclick="selectOnly(this, 'level')"><input type="radio" name="level" value="民宿"> 民宿/客栈</label>
+  </div>
+
+  <div class="q-label" style="margin-top:12px;">客群结构（大致比例）</div>
+  <div class="table-box">
+    <table>
+      <tr><th>客群类型</th><th>占比</th><th>来源/简要</th></tr>
+      <tr><td>商务客</td><td><input class="text-input" type="text" placeholder="___%"></td><td><input class="text-input" type="text" placeholder=""></td></tr>
+      <tr><td>旅游客</td><td><input class="text-input" type="text" placeholder="___%"></td><td><input class="text-input" type="text" placeholder=""></td></tr>
+      <tr><td>本地客</td><td><input class="text-input" type="text" placeholder="___%"></td><td><input class="text-input" type="text" placeholder=""></td></tr>
+    </table>
+  </div>
+</div>
+
+<!-- 第二部分：核心数据 -->
+<div class="card">
+  <div class="section-title"><span class="num">2</span> 核心经营数据</div>
+  
+  <div class="q-note">请尽量填写，数据越准确，方案越贴合实际</div>
+  <div class="table-box">
+    <table>
+      <tr><th>指标</th><th>淡季</th><th>旺季</th><th>全年平均</th></tr>
+      <tr><td>入住率(OCC)</td><td><input class="text-input" type="text" placeholder="___%"></td><td><input class="text-input" type="text" placeholder="___%"></td><td><input class="text-input" type="text" placeholder="___%"></td></tr>
+      <tr><td>平均房价(ADR)</td><td><input class="text-input" type="text" placeholder="___元"></td><td><input class="text-input" type="text" placeholder="___元"></td><td><input class="text-input" type="text" placeholder="___元"></td></tr>
+    </table>
+  </div>
+
+  <div class="q-label" style="margin-top:12px;">年营收规模（不精确也行，估一个量级）</div>
+  <div class="option-row">
+    <label class="chip" onclick="toggleChip(this)"><input type="checkbox"> 百万级（<500万）</label>
+    <label class="chip" onclick="toggleChip(this)"><input type="checkbox"> 千万级（500万-2000万）</label>
+    <label class="chip" onclick="toggleChip(this)"><input type="checkbox"> 两千万以上</label>
+  </div>
+</div>
+
+<!-- 第三部分：OTA -->
+<div class="card">
+  <div class="section-title"><span class="num">3</span> OTA渠道情况</div>
+  
+  <div class="q-label">各渠道订单占比（%之和约100%）</div>
+  <div class="table-box">
+    <table>
+      <tr><th>渠道</th><th>订单占比</th><th>佣金率</th></tr>
+      <tr><td>携程</td><td><input class="text-input" type="text" placeholder="___%"></td><td><input class="text-input" type="text" placeholder="___%"></td></tr>
+      <tr><td>美团</td><td><input class="text-input" type="text" placeholder="___%"></td><td><input class="text-input" type="text" placeholder="___%"></td></tr>
+      <tr><td>去哪儿/飞猪</td><td><input class="text-input" type="text" placeholder="___%"></td><td><input class="text-input" type="text" placeholder="___%"></td></tr>
+      <tr><td>官网/直销</td><td><input class="text-input" type="text" placeholder="___%"></td><td>—</td></tr>
+      <tr><td>会员/回头客</td><td><input class="text-input" type="text" placeholder="___%"></td><td>—</td></tr>
+      <tr><td>walk-in散客</td><td><input class="text-input" type="text" placeholder="___%"></td><td>—</td></tr>
+    </table>
+  </div>
+
+  <div class="q-label" style="margin-top:12px;">OTA维护现状</div>
+  <div class="option-row">
+    <label class="chip" onclick="toggleChip(this)"><input type="checkbox"> 多平台手工维护，很花时间</label>
+    <label class="chip" onclick="toggleChip(this)"><input type="checkbox"> 有一台电脑专门维护</label>
+    <label class="chip" onclick="toggleChip(this)"><input type="checkbox"> 有专人负责OTA</label>
+    <label class="chip" onclick="toggleChip(this)"><input type="checkbox"> 不怎么管，顺其自然</label>
+  </div>
+</div>
+
+<!-- 第四部分：收益管理 -->
+<div class="card">
+  <div class="section-title"><span class="num">4</span> 收益管理现状</div>
+  
+  <div class="q-label">目前房价是怎么定的？</div>
+  <div class="option-row">
+    <label class="chip" onclick="toggleChip(this)"><input type="checkbox"> 老板/店长凭经验</label>
+    <label class="chip" onclick="toggleChip(this)"><input type="checkbox"> 参考竞品手动调</label>
+    <label class="chip" onclick="toggleChip(this)"><input type="checkbox"> 参考OTA数据</label>
+    <label class="chip" onclick="toggleChip(this)"><input type="checkbox"> 有收益管理系统</label>
+    <label class="chip" onclick="toggleChip(this)"><input type="checkbox"> 固定价格不动</label>
+  </div>
+
+  <div class="q-label" style="margin-top:12px;">收益管理最大痛点（选1-2个最痛的）</div>
+  <div class="option-row">
+    <label class="chip" onclick="toggleChip(this)"><input type="checkbox"> 入住率低，淡季难</label>
+    <label class="chip" onclick="toggleChip(this)"><input type="checkbox"> 不敢定高价</label>
+    <label class="chip" onclick="toggleChip(this)"><input type="checkbox"> 旺季不知道涨多少</label>
+    <label class="chip" onclick="toggleChip(this)"><input type="checkbox"> 竞品价格不透明</label>
+    <label class="chip" onclick="toggleChip(this)"><input type="checkbox"> 预测靠经验不准</label>
+    <label class="chip" onclick="toggleChip(this)"><input type="checkbox"> 各渠道价格不一致</label>
+  </div>
+</div>
+
+<!-- 第五部分：销售与私域 -->
+<div class="card">
+  <div class="section-title"><span class="num">5</span> 销售与私域维护</div>
+  
+  <div class="q-label">协议客户（企业客户）管理方式</div>
+  <div class="option-row">
+    <label class="chip" onclick="toggleChip(this)"><input type="checkbox"> 有专门销售维护</label>
+    <label class="chip" onclick="toggleChip(this)"><input type="checkbox"> 前台顺便维护，没系统</label>
+    <label class="chip" onclick="toggleChip(this)"><input type="checkbox"> 有名单但没维护</label>
+    <label class="chip" onclick="toggleChip(this)"><input type="checkbox"> 还没这块业务</label>
+  </div>
+
+  <div class="q-label" style="margin-top:12px;">会员/回头客体系</div>
+  <div class="option-row">
+    <label class="chip" onclick="toggleChip(this)"><input type="checkbox"> 有会员体系</label>
+    <label class="chip" onclick="toggleChip(this)"><input type="checkbox"> 有积分但没系统</label>
+    <label class="chip" onclick="toggleChip(this)"><input type="checkbox"> 没有会员体系</label>
+    <label class="chip" onclick="toggleChip(this)"><input type="checkbox"> 有但不知道怎么激活</label>
+  </div>
+
+  <div class="q-label" style="margin-top:12px;">私域运营现状</div>
+  <div class="option-row">
+    <label class="chip" onclick="toggleChip(this)"><input type="checkbox"> 已做私域（微信群/企微）</label>
+    <label class="chip" onclick="toggleChip(this)"><input type="checkbox"> 刚起步不太会</label>
+    <label class="chip" onclick="toggleChip(this)"><input type="checkbox"> 知道重要但没做</label>
+    <label class="chip" onclick="toggleChip(this)"><input type="checkbox"> 没考虑过</label>
+  </div>
+</div>
+
+<!-- 第六部分：核心痛点 -->
+<div class="card">
+  <div class="section-title"><span class="num">6</span> 核心痛点（最重要）</div>
+  
+  <div class="pain-box">
+    <div class="pain-header">🔴 痛点一（最希望解决的问题）</div>
+    <div class="q-label">问题描述</div>
+    <textarea class="text-area" placeholder="请详细描述问题..."></textarea>
+    <div class="q-label" style="margin-top:8px;">造成的影响</div>
+    <div class="option-row">
+      <label class="chip" onclick="toggleChip(this)"><input type="checkbox"> 营收下降</label>
+      <label class="chip" onclick="toggleChip(this)"><input type="checkbox"> 客人流失/复购降</label>
+      <label class="chip" onclick="toggleChip(this)"><input type="checkbox"> 员工流失加剧</label>
+      <label class="chip" onclick="toggleChip(this)"><input type="checkbox"> 口碑评分下降</label>
+    </div>
+    <div class="q-label" style="margin-top:8px;">已经尝试过的解决方法（简述）</div>
+    <textarea class="text-area" placeholder="方案1/方案2/方案3 及效果..."></textarea>
+  </div>
+
+  <div class="pain-box">
+    <div class="pain-header">🟡 痛点二</div>
+    <div class="q-label">问题描述</div>
+    <textarea class="text-area" placeholder=""></textarea>
+  </div>
+
+  <div class="pain-box">
+    <div class="pain-header">🟢 痛点三</div>
+    <div class="q-label">问题描述</div>
+    <textarea class="text-area" placeholder=""></textarea>
+  </div>
+</div>
+
+<!-- 第七部分：IT现状 -->
+<div class="card">
+  <div class="section-title"><span class="num">7</span> IT与技术现状</div>
+  
+  <div class="table-box">
+    <table>
+      <tr><th>系统</th><th>是否有</th><th>满意度</th></tr>
+      <tr><td>PMS（酒店管理系统）</td><td>
+        <select class="text-input" style="min-height:28px;"><option>请选择</option><option>有</option><option>无</option></select>
+      </td><td>
+        <select class="text-input" style="min-height:28px;"><option>选择</option><option>满意</option><option>一般</option><option>不满意</option></select>
+      </td></tr>
+      <tr><td>会员系统</td><td>
+        <select class="text-input" style="min-height:28px;"><option>请选择</option><option>有</option><option>无</option></select>
+      </td><td>
+        <select class="text-input" style="min-height:28px;"><option>选择</option><option>满意</option><option>一般</option><option>不满意</option></select>
+      </td></tr>
+      <tr><td>智能门锁/客控</td><td>
+        <select class="text-input" style="min-height:28px;"><option>请选择</option><option>有</option><option>无</option></select>
+      </td><td>
+        <select class="text-input" style="min-height:28px;"><option>选择</option><option>满意</option><option>一般</option><option>不满意</option></select>
+      </td></tr>
+    </table>
+  </div>
+
+  <div class="q-label" style="margin-top:12px;">数据开放意愿</div>
+  <div class="option-row">
+    <label class="chip" onclick="toggleChip(this)"><input type="checkbox"> 愿意API对接</label>
+    <label class="chip" onclick="toggleChip(this)"><input type="checkbox"> 愿意导出Excel</label>
+    <label class="chip" onclick="toggleChip(this)"><input type="checkbox"> 可以看不导出</label>
+    <label class="chip" onclick="toggleChip(this)"><input type="checkbox"> 数据不开放</label>
+  </div>
+</div>
+
+<!-- 第八部分：合作期待 -->
+<div class="card">
+  <div class="section-title"><span class="num">8</span> 合作期待</div>
+  
+  <div class="q-label">对这次免费合作试点，您最关心什么？</div>
+  <div class="option-row">
+    <label class="chip" onclick="toggleChip(this)"><input type="checkbox"> 能不能真的解决问题</label>
+    <label class="chip" onclick="toggleChip(this)"><input type="checkbox"> 需要我配合什么</label>
+    <label class="chip" onclick="toggleChip(this)"><input type="checkbox"> 试点效果怎么评估</label>
+    <label class="chip" onclick="toggleChip(this)"><input type="checkbox"> 效果好了长期怎么算</label>
+  </div>
+
+  <div class="q-label" style="margin-top:12px;">负责人/老板对AI酒店的态度</div>
+  <div class="option-row">
+    <label class="chip" onclick="selectOnly(this, 'ai')"><input type="radio" name="ai-attitude" value="很有兴趣"> 很有兴趣</label>
+    <label class="chip" onclick="selectOnly(this, 'ai')"><input type="radio" name="ai-attitude" value="有点兴趣"> 有点兴趣</label>
+    <label class="chip" onclick="selectOnly(this, 'ai')"><input type="radio" name="ai-attitude" value="中立"> 中立</label>
+    <label class="chip" onclick="selectOnly(this, 'ai')"><input type="radio" name="ai-attitude" value="怀疑"> 有点怀疑</label>
+  </div>
+
+  <div class="q-label" style="margin-top:12px;">希望试点周期多长？</div>
+  <div class="option-row">
+    <label class="chip" onclick="selectOnly(this, 'trial')"><input type="radio" name="trial" value="1个月"> 1个月试试</label>
+    <label class="chip" onclick="selectOnly(this, 'trial')"><input type="radio" name="trial" value="3个月"> 3个月看效果</label>
+    <label class="chip" onclick="selectOnly(this, 'trial')"><input type="radio" name="trial" value="6个月"> 6个月评估</label>
+    <label class="chip" onclick="selectOnly(this, 'trial')"><input type="radio" name="trial" value="不确定"> 看情况再说</label>
+  </div>
+
+  <div class="q-label" style="margin-top:12px;">您最想从这次试点合作中获得什么？</div>
+  <textarea class="text-area" placeholder=""></textarea>
+</div>
+
+<!-- 第九部分：开放问题 -->
+<div class="card">
+  <div class="section-title"><span class="num">9</span> 开放问题</div>
+  
+  <div class="q-label">您觉得我们最需要了解什么？</div>
+  <textarea class="text-area" placeholder=""></textarea>
+</div>
+
+<!-- 联系方式 -->
+<div class="card">
+  <div class="section-title"><span class="num">📞</span> 联系方式（选填）</div>
+  <div class="contact-row">
+    <div class="field">
+      <div class="q-label">填表人姓名</div>
+      <input class="text-input" type="text" placeholder="">
+    </div>
+    <div class="field">
+      <div class="q-label">职位</div>
+      <input class="text-input" type="text" placeholder="">
+    </div>
+  </div>
+  <div class="row-2" style="margin-top:8px;">
+    <div class="field">
+      <div class="q-label">联系电话</div>
+      <input class="text-input" type="tel" placeholder="">
+    </div>
+    <div class="field">
+      <div class="q-label">方便联系时间</div>
+      <input class="text-input" type="text" placeholder="如：工作日白天">
+    </div>
+  </div>
+</div>
+
+<button class="submit-btn" onclick="handleSubmit()">提交信息表</button>
+
+<div class="footer">
+  <p>感谢您的配合！我们会尽快与您联系</p>
+  <p style="margin-top:4px;">AHL 智能酒店团队 | 免费试点合作 | 版本 V1.0 | 2026-04-12</p>
+</div>
+
+<script>
+function toggleChip(el) {
+  const label = el.closest('.chip');
+  if (el.type === 'checkbox') {
+    label.classList.toggle('selected', el.checked);
+  }
+}
+
+function selectOnly(label, groupName) {
+  const chips = label.closest('.option-row').querySelectorAll('.chip');
+  chips.forEach(c => {
+    const radios = c.querySelectorAll('input[type="radio"][name="' + groupName + '"]');
+    radios.forEach(r => r.checked = false);
+    c.classList.remove('selected');
+  });
+  const input = label.querySelector('input');
+  input.checked = true;
+  label.classList.add('selected');
+}
+
+function handleSubmit() {
+  const directions = [];
+  document.querySelectorAll('input[name="direction"]:checked').forEach(el => directions.push(el.value));
+  const level = document.querySelector('input[name="level"]:checked')?.value;
+  const aiAttitude = document.querySelector('input[name="ai-attitude"]:checked')?.value;
+  const trial = document.querySelector('input[name="trial"]:checked')?.value;
+
+  let msg = '感谢填写！\n\n您选择的方向：' + (directions.length ? directions.join('、') : '未选');
+  if (level) msg += '\n档次：' + level;
+  if (aiAttitude) msg += '\n对AI态度：' + aiAttitude;
+  if (trial) msg += '\n试点周期：' + trial;
+  msg += '\n\n我们已收到您的信息，会尽快联系您！';
+  
+  alert(msg);
+}
+</script>
+
+</body>
+</html>

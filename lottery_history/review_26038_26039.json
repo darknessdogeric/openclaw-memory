@@ -1,0 +1,44 @@
+{
+  "description": "26038期和26039期复盘结果",
+  "26038": {
+    "issue": "26038",
+    "draw_date": "2026-04-11 (周六)",
+    "actual_front": [8, 17, 21, 33, 35],
+    "actual_back": [6, 7],
+    "actual_sum": 114,
+    "model_version": "V5.2",
+    "predictions_review": [
+      {"bet": 1, "front": [7, 15, 20, 25, 32], "back": [4, 6], "front_hit": 0, "back_hit": 1, "score": 5, "front_hit_nums": [], "back_hit_nums": [6]},
+      {"bet": 2, "front": [7, 18, 24, 27, 32], "back": [4, 11], "front_hit": 0, "back_hit": 0, "score": 0, "front_hit_nums": [], "back_hit_nums": []},
+      {"bet": 3, "front": [7, 15, 20, 26, 34], "back": [9, 3], "front_hit": 0, "back_hit": 0, "score": 0, "front_hit_nums": [], "back_hit_nums": []},
+      {"bet": 4, "front": [3, 7, 24, 27, 34], "back": [9, 3], "front_hit": 0, "back_hit": 0, "score": 0, "front_hit_nums": [], "back_hit_nums": []},
+      {"bet": 5, "front": [9, 20, 24, 27, 33], "back": [9, 8], "front_hit": 1, "back_hit": 0, "score": 10, "front_hit_nums": [33], "back_hit_nums": []}
+    ],
+    "best_bet": {"bet": 5, "score": 10, "front_hit": 1, "back_hit": 0},
+    "total_bets_with_any_hit": 2,
+    "analysis": "V5.2放弃热号策略，但前区预测极差。实际开奖全集中于17-35高区段，预测分布偏低。方案5命中33为最佳，但仍偏离。模型需要改进区域分布策略。"
+  },
+  "26039": {
+    "issue": "26039",
+    "draw_date": "2026-04-13 (周一)",
+    "actual_front": [9, 11, 20, 26, 27],
+    "actual_back": [6, 9],
+    "actual_sum": 93,
+    "model_version": "V5.3",
+    "predictions_review": [
+      {"bet": 1, "front": [6, 14, 22, 33, 35], "back": [7, 12], "front_hit": 0, "back_hit": 0, "score": 0, "front_hit_nums": [], "back_hit_nums": []},
+      {"bet": 2, "front": [5, 13, 21, 31, 34], "back": [6, 8], "front_hit": 0, "back_hit": 1, "score": 5, "front_hit_nums": [], "back_hit_nums": [6]},
+      {"bet": 3, "front": [4, 12, 20, 30, 35], "back": [3, 7], "front_hit": 1, "back_hit": 0, "score": 10, "front_hit_nums": [20], "back_hit_nums": []},
+      {"bet": 4, "front": [8, 15, 23, 32, 34], "back": [6, 12], "front_hit": 0, "back_hit": 1, "score": 5, "front_hit_nums": [], "back_hit_nums": [6]},
+      {"bet": 5, "front": [3, 18, 25, 33, 35], "back": [8, 10], "front_hit": 0, "back_hit": 0, "score": 0, "front_hit_nums": [], "back_hit_nums": []}
+    ],
+    "best_bet": {"bet": 3, "score": 10, "front_hit": 1, "back_hit": 0},
+    "total_bets_with_any_hit": 3,
+    "analysis": "V5.3版本依然低效。后区09是亮点（方案未预测到09），但前区预测偏差极大。实际前区全部分布在9-27中小区域，预测偏向大号区域。"
+  },
+  "v5_summary": {
+    "连续两期0前区命中": "V5系列模型对前区分布判断系统性偏差",
+    "后区命中改善": "后区略有改善(2/5和3/5方案有后区命中)",
+    "根本问题": "前区号码区域分布预测失准，模型低估了中小号区域"
+  }
+}

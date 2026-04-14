@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1080, height=1920, initial-scale=1.0">
+    <title>AHL架构图</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html, body { width: 1080px; min-height: 1920px; overflow-x: hidden; }
+        body {
+            font-family: 'Microsoft YaHei', 'PingFang SC', 'Noto Sans SC', sans-serif;
+            background: #f4f5f7;
+            color: #1a1a1a;
+            width: 1080px;
+            min-height: 1920px;
+        }
+        .page {
+            width: 1080px;
+            padding: 40px 36px;
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+
+        /* ===== HEADER ===== */
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 6px;
+        }
+        .brand { display: flex; align-items: center; gap: 16px; }
+        .brand-icon {
+            width: 72px; height: 72px;
+            background: linear-gradient(135deg, #1d4ed8, #3b82f6);
+            border-radius: 16px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 36px; font-weight: 900; color: #fff;
+            flex-shrink: 0;
+        }
+        .brand-text {}
+        .brand-name { font-size: 48px; font-weight: 900; color: #1d4ed8; line-height: 1; }
+        .brand-sub { font-size: 13px; color: #64748b; letter-spacing: 3px; margin-top: 4px; }
+        .tag {
+            background: #fef3c7;
+            border: 2px solid #f59e0b;
+            color: #92400e;
+            padding: 8px 18px;
+            border-radius: 30px;
+            font-size: 13px; font-weight: 700;
+            white-space: nowrap;
+        }
+
+        /* ===== SUBTITLE ===== */
+        .subtitle {
+            text-align: center;
+            font-size: 13px;
+            color: #64748b;
+            padding: 0 20px;
+            letter-spacing: 1px;
+        }
+
+        /* ===== STATS ===== */
+        .stats-row {
+            display: flex;
+            gap: 12px;
+        }
+        .stat {
+            flex: 1;
+            border-radius: 14px;
+            padding: 16px 8px;
+            text-align: center;
+        }
+        .stat.n1 { background: #dbeafe; }
+        .stat.n2 { background: #ede9fe; }
+        .stat.n3 { background: #d1fae5; }
+        .stat.n4 { background: #fef3c7; }
+        .stat-num { font-size: 28px; font-weight: 900; color: #1e40af; }
+        .stat-lbl { font-size: 10px; color: #64748b; margin-top: 4px; }
+
+        /* ===== LAYER ===== */
+        .layer {}
+        .layer-head {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+        .layer-dot {
+            width: 12px; height: 12px;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+        .layer-name {
+            font-size: 14px; font-weight: 700; color: #1e293b;
+        }
+        .layer-body {
+            border-radius: 16px;
+            padding: 16px;
+        }
+        .layer-body.bl1 { background: #dbeafe; border: 2px solid #93c5fd; }
+        .layer-body.bl2 { background: #ffedd5; border: 2px solid #fdba74; }
+        .layer-body.bl3 { background: #ede9fe; border: 2px solid #c4b5fd; }
+        .layer-body.bl4 { background: #d1fae5; border: 2px solid #6ee7b7; }
+
+        /* ===== ARCH FLOW ===== */
+        .arch-flow {
+            display: flex;
+            gap: 10px;
+            align-items: stretch;
+            margin-bottom: 10px;
+        }
+        .arch-flow:last-child { margin-bottom: 0; }
+        .arch-badge {
+            width: 80px;
+            border-radius: 12px;
+            padding: 10px 6px;
+            text-align: center;
+            flex-shrink: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .arch-badge.app { background: #1d4ed8; }
+        .arch-badge.agent { background: #ea580c; }
+        .arch-badge.cluster { background: #7c3aed; }
+        .arch-badge.data { background: #059669; }
+        .arch-badge-name { font-size: 12px; font-weight: 700; color: #fff; }
+        .arch-badge-sub { font-size: 9px; color: rgba(255,255,255,0.75); margin-top: 2px; }
+        .arch-content {
+            flex: 1;
+            background: #fff;
+            border-radius: 12px;
+            padding: 10px 14px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 4px;
+            border: 1.5px solid #e2e8f0;
+        }
+        .arch-line { font-size: 11px; color: #475569; line-height: 1.5; }
+        .arch-line strong { color: #1e293b; font-weight: 700; }
+
+        /* Connector */
+        .connector {
+            text-align: center;
+            font-size: 20px;
+            color: #cbd5e1;
+            padding: 2px 0;
+            letter-spacing: 2px;
+        }
+
+        /* ===== DUAL AGENT ===== */
+        .dual-head {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+        .dual-dot { width: 12px; height: 12px; border-radius: 50%; background: #7c3aed; flex-shrink: 0; }
+        .dual-name { font-size: 14px; font-weight: 700; color: #1e293b; }
+
+        .dual-grid {
+            display: flex;
+            gap: 10px;
+            align-items: stretch;
+            margin-bottom: 10px;
+        }
+        .dual-card {
+            flex: 1;
+            border-radius: 14px;
+            padding: 14px;
+        }
+        .dual-card.c { background: #dbeafe; border: 2px solid #93c5fd; }
+        .dual-card.b { background: #ffedd5; border: 2px solid #fdba74; }
+        .dual-title { font-size: 14px; font-weight: 700; margin-bottom: 8px; }
+        .dual-card.c .dual-title { color: #1d4ed8; }
+        .dual-card.b .dual-title { color: #ea580c; }
+        .dual-steps { font-size: 10px; color: #475569; line-height: 1.9; }
+        .dual-steps strong { color: #1e293b; font-weight: 600; }
+        .dual-center {
+            width: 64px;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .dual-engine {
+            background: #fef3c7;
+            border: 2px solid #f59e0b;
+            border-radius: 12px;
+            padding: 10px 6px;
+            text-align: center;
+        }
+        .dual-engine-name { font-size: 9px; font-weight: 700; color: #92400e; line-height: 1.4; }
+
+        .quote-box {
+            background: #fff;
+            border: 2px solid #93c5fd;
+            border-radius: 14px;
+            padding: 14px;
+        }
+        .quote-label { font-size: 11px; font-weight: 700; color: #1d4ed8; margin-bottom: 6px; }
+        .quote-text { font-size: 11px; color: #475569; line-height: 1.7; }
+        .quote-text strong { color: #1e293b; }
+        .quote-result { font-size: 10px; color: #64748b; margin-top: 6px; }
+        .quote-result strong { color: #1d4ed8; }
+
+        /* ===== CLUSTER ===== */
+        .cluster-head {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+        .cluster-dot { width: 12px; height: 12px; border-radius: 50%; background: #7c3aed; flex-shrink: 0; }
+        .cluster-name { font-size: 14px; font-weight: 700; color: #1e293b; }
+
+        .cluster-body {
+            background: #ede9fe;
+            border: 2px solid #c4b5fd;
+            border-radius: 16px;
+            padding: 16px;
+        }
+        .cluster-subtitle {
+            font-size: 11px; color: #7c3aed; font-weight: 700;
+            margin-bottom: 12px;
+        }
+        .cluster-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .cluster-item {
+            background: #fff;
+            border-radius: 10px;
+            padding: 10px 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            border: 1.5px solid #e2e8f0;
+        }
+        .cluster-item.core {
+            background: #fef3c7;
+            border-color: #f59e0b;
+        }
+        .cluster-icon { font-size: 18px; }
+        .cluster-label { font-size: 11px; font-weight: 700; color: #1e293b; }
+
+        /* ===== VS ===== */
+        .vs-head {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+        .vs-dot { width: 12px; height: 12px; border-radius: 50%; background: #ef4444; flex-shrink: 0; }
+        .vs-name-label { font-size: 14px; font-weight: 700; color: #1e293b; }
+
+        .vs-row {
+            display: flex;
+            gap: 10px;
+            align-items: stretch;
+            margin-bottom: 10px;
+        }
+        .vs-card {
+            flex: 1;
+            border-radius: 14px;
+            padding: 14px;
+        }
+        .vs-card.ota { background: #fee2e2; border: 2px solid #fca5a5; }
+        .vs-card.ahl { background: #dbeafe; border: 2px solid #93c5fd; }
+        .vs-label { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 4px; }
+        .vs-card.ota .vs-label { color: #dc2626; }
+        .vs-card.ahl .vs-label { color: #1d4ed8; }
+        .vs-card-name { font-size: 16px; font-weight: 800; color: #1e293b; }
+        .vs-metric { font-size: 10px; color: #64748b; margin-top: 6px; line-height: 1.6; }
+        .vs-metric strong { font-weight: 700; }
+        .vs-card.ahl .vs-metric strong { color: #1d4ed8; }
+        .vs-divider {
+            width: 40px; flex-shrink: 0;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 20px; font-weight: 900; color: #cbd5e1;
+        }
+
+        .nl-row {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+        .nl-tag {
+            background: #f1f5f9;
+            border-radius: 20px;
+            padding: 6px 16px;
+            font-size: 11px; color: #64748b;
+        }
+        .nl-tag.main {
+            background: #dbeafe;
+            color: #1d4ed8;
+            font-weight: 700;
+        }
+
+        /* ===== FOOTER ===== */
+        .footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 14px;
+            border-top: 2px solid #e2e8f0;
+        }
+        .footer-brand { font-size: 20px; font-weight: 900; color: #1d4ed8; }
+        .footer-team { font-size: 11px; color: #64748b; }
+        .footer-team strong { color: #1e293b; }
+    </style>
+</head>
+<body>
+<div class="page">
+
+    <!-- HEADER -->
+    <div class="header">
+        <div class="brand">
+            <div class="brand-icon">A</div>
+            <div class="brand-text">
+                <div class="brand-name">AHL</div>
+                <div class="brand-sub">去中心化旅行平台</div>
+            </div>
+        </div>
+        <div class="tag">AI住宿业革命</div>
+    </div>
+
+    <div class="subtitle">双AGENT智能层 × 87个SKILL集群 × 向量匹配引擎</div>
+
+    <!-- STATS -->
+    <div class="stats-row">
+        <div class="stat n1">
+            <div class="stat-num">95%+</div>
+            <div class="stat-lbl">向量匹配准确率</div>
+        </div>
+        <div class="stat n2">
+            <div class="stat-num">87个</div>
+            <div class="stat-lbl">垂直领域SKILL</div>
+        </div>
+        <div class="stat n3">
+            <div class="stat-num">&lt;3秒</div>
+            <div class="stat-lbl">智能响应速度</div>
+        </div>
+        <div class="stat n4">
+            <div class="stat-num">2-3%</div>
+            <div class="stat-lbl">vs OTA 20-30%</div>
+        </div>
+    </div>
+
+    <!-- LAYER 1: 应用层 -->
+    <div class="layer">
+        <div class="layer-head">
+            <div class="layer-dot" style="background:#1d4ed8"></div>
+            <div class="layer-name">应用层 — 用户与AI的对话入口</div>
+        </div>
+        <div class="layer-body bl1">
+            <div class="arch-flow">
+                <div class="arch-badge app">
+                    <div class="arch-badge-name">应用层</div>
+                    <div class="arch-badge-sub">交互入口</div>
+                </div>
+                <div class="arch-content">
+                    <div class="arch-line"><strong>C端用户：</strong>"我想住大理古城带院子的民宿，预算500"</div>
+                    <div class="arch-line"><strong>B端商家：</strong>自然语言描述服务，AI自动封装产品</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="connector">↓ ↓ ↓</div>
+
+    <!-- LAYER 2: 双AGENT层 -->
+    <div class="layer">
+        <div class="layer-head">
+            <div class="layer-dot" style="background:#ea580c"></div>
+            <div class="layer-name">双AGENT智能层 — 核心引擎</div>
+        </div>
+        <div class="layer-body bl2">
+            <div class="arch-flow">
+                <div class="arch-badge agent">
+                    <div class="arch-badge-name">双AGENT</div>
+                    <div class="arch-badge-sub">核心引擎</div>
+                </div>
+                <div class="arch-content">
+                    <div class="arch-line"><strong>C管家：</strong>理解意图 → 生成向量 → Top-K精准匹配</div>
+                    <div class="arch-line"><strong>B运营官：</strong>产品封装 → 动态定价 → 精准营销触达</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="connector">↓ ↓ ↓</div>
+
+    <!-- LAYER 3: 集群层 -->
+    <div class="layer">
+        <div class="layer-head">
+            <div class="layer-dot" style="background:#7c3aed"></div>
+            <div class="layer-name">AGENT集群层 — 9大能力域</div>
+        </div>
+        <div class="layer-body bl3">
+            <div class="arch-flow">
+                <div class="arch-badge cluster">
+                    <div class="arch-badge-name">集群层</div>
+                    <div class="arch-badge-sub">87个SKILL</div>
+                </div>
+                <div class="arch-content">
+                    <div class="arch-line">核心AGENT · 营销 · 收益 · 工程 · 安防</div>
+                    <div class="arch-line">宴会 · 财务 · 人力 · 供应链</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="connector">↓ ↓ ↓</div>
+
+    <!-- LAYER 4: 数据层 -->
+    <div class="layer">
+        <div class="layer-head">
+            <div class="layer-dot" style="background:#059669"></div>
+            <div class="layer-name">数据协议层 — 向量数据库</div>
+        </div>
+        <div class="layer-body bl4">
+            <div class="arch-flow">
+                <div class="arch-badge data">
+                    <div class="arch-badge-name">数据层</div>
+                    <div class="arch-badge-sub">向量数据库</div>
+                </div>
+                <div class="arch-content">
+                    <div class="arch-line"><strong>标准向量：</strong>房型 / 价格 / 位置 / 评分</div>
+                    <div class="arch-line"><strong>深水数据：</strong>光照指数 · 噪音分贝 · 主理人语义（OTA采不到）</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- DUAL AGENT DETAIL -->
+    <div class="layer">
+        <div class="dual-head">
+            <div class="dual-dot"></div>
+            <div class="dual-name">双AGENT核心引擎 — 对话即服务</div>
+        </div>
+        <div class="dual-grid">
+            <div class="dual-card c">
+                <div class="dual-title">👤 C端AI管家</div>
+                <div class="dual-steps">
+                    <strong>理解意图</strong> → <strong>提取需求向量</strong><br>
+                    <strong>Top-K匹配</strong> → <strong>多轮对话澄清</strong><br>
+                    <strong>直接预订</strong>，无中间商
+                </div>
+            </div>
+            <div class="dual-center">
+                <div class="dual-engine">
+                    <div class="dual-engine-name">⚡ 向量<br>匹配<br>引擎</div>
+                </div>
+            </div>
+            <div class="dual-card b">
+                <div class="dual-title">🏨 B端AI运营官</div>
+                <div class="dual-steps">
+                    <strong>产品封装</strong> → <strong>动态定价</strong><br>
+                    <strong>客户洞察</strong> → <strong>精准营销</strong><br>
+                    <strong>集群协同</strong> → 主动出击
+                </div>
+            </div>
+        </div>
+        <div class="quote-box">
+            <div class="quote-label">💬 自然语言交互示意</div>
+            <div class="quote-text">
+                「大理古城 · 带院子 · 民宿 · 预算500」<br>
+                → <strong>AI理解：</strong>位置 | 房型 | 调性 | 预算<br>
+                → <strong>精准匹配3家最优民宿</strong>
+            </div>
+            <div class="quote-result">87%用户偏好自然语言交互 · <strong>语音/文字/多轮澄清</strong></div>
+        </div>
+    </div>
+
+    <!-- CLUSTER GRID -->
+    <div class="layer">
+        <div class="cluster-head">
+            <div class="cluster-dot"></div>
+            <div class="cluster-name">9大AGENT集群 × 87个SKILL — 全场景覆盖</div>
+        </div>
+        <div class="cluster-body">
+            <div class="cluster-grid">
+                <div class="cluster-item core">
+                    <div class="cluster-icon">🎯</div>
+                    <div class="cluster-label">核心AGENT</div>
+                </div>
+                <div class="cluster-item">
+                    <div class="cluster-icon">📢</div>
+                    <div class="cluster-label">营销AGENT</div>
+                </div>
+                <div class="cluster-item">
+                    <div class="cluster-icon">💰</div>
+                    <div class="cluster-label">收益AGENT</div>
+                </div>
+                <div class="cluster-item">
+                    <div class="cluster-icon">🔧</div>
+                    <div class="cluster-label">工程AGENT</div>
+                </div>
+                <div class="cluster-item">
+                    <div class="cluster-icon">🔒</div>
+                    <div class="cluster-label">安防AGENT</div>
+                </div>
+                <div class="cluster-item">
+                    <div class="cluster-icon">🍽️</div>
+                    <div class="cluster-label">宴会AGENT</div>
+                </div>
+                <div class="cluster-item">
+                    <div class="cluster-icon">💳</div>
+                    <div class="cluster-label">财务AGENT</div>
+                </div>
+                <div class="cluster-item">
+                    <div class="cluster-icon">👥</div>
+                    <div class="cluster-label">人力AGENT</div>
+                </div>
+                <div class="cluster-item">
+                    <div class="cluster-icon">🔗</div>
+                    <div class="cluster-label">供应链AGENT</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- VS -->
+    <div class="layer">
+        <div class="vs-head">
+            <div class="vs-dot"></div>
+            <div class="vs-name-label">核心优势对比</div>
+        </div>
+        <div class="vs-row">
+            <div class="vs-card ota">
+                <div class="vs-label">传统OTA</div>
+                <div class="vs-card-name">携程 / 美团</div>
+                <div class="vs-metric">
+                    佣金 15-30%<br>
+                    搜索比价，信息过载<br>
+                    平台垄断数据<br>
+                    商家被动等待
+                </div>
+            </div>
+            <div class="vs-divider">VS</div>
+            <div class="vs-card ahl">
+                <div class="vs-label">AHL平台</div>
+                <div class="vs-card-name">去中心化旅行</div>
+                <div class="vs-metric">
+                    技术服务费 <strong>仅2-3%</strong><br>
+                    对话式AI精准推荐<br>
+                    商家数据自有<br>
+                    最合适的双向匹配
+                </div>
+            </div>
+        </div>
+        <div class="nl-row">
+            <div class="nl-tag main">🎤 语音输入</div>
+            <div class="nl-tag">📝 文字对话</div>
+            <div class="nl-tag">🔄 多轮澄清</div>
+            <div class="nl-tag">⚡ 即时响应</div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer">
+        <div class="footer-brand">AHL</div>
+        <div class="footer-team">张实<strong>(What)</strong> × 李源<strong>(How)</strong> × 陈思序<strong>(When)</strong></div>
+    </div>
+
+</div>
+</body>
+</html>

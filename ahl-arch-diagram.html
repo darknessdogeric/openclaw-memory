@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1080, height=1920, initial-scale=1.0">
+    <title>AHL架构图</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #0b0f1a;
+            --card: #111827;
+            --text: #f1f5f9;
+            --muted: #94a3b8;
+            --dim: #475569;
+            --cyan: #00d4ff;
+            --orange: #f59e0b;
+            --purple: #8b5cf6;
+            --green: #10b981;
+            --red: #ef4444;
+            --blue: #3b82f6;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html, body { width: 1080px; min-height: 1920px; }
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            width: 1080px;
+            min-height: 1920px;
+            overflow-y: auto;
+            position: relative;
+        }
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background:
+                radial-gradient(ellipse at 20% 5%, rgba(0,212,255,0.12) 0%, transparent 55%),
+                radial-gradient(ellipse at 80% 95%, rgba(139,92,246,0.1) 0%, transparent 55%);
+            pointer-events: none;
+            z-index: 0;
+        }
+        .page {
+            position: relative;
+            z-index: 1;
+            padding: 36px 32px 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            width: 1080px;
+        }
+
+        /* ===== HEADER ===== */
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 4px;
+        }
+        .brand { display: flex; align-items: center; gap: 14px; }
+        .brand-icon {
+            width: 68px; height: 68px;
+            background: linear-gradient(135deg, var(--cyan) 0%, var(--blue) 100%);
+            border-radius: 16px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 34px; font-weight: 900; color: #fff;
+            flex-shrink: 0;
+        }
+        .brand-name { font-size: 48px; font-weight: 900; color: var(--cyan); line-height: 1; }
+        .brand-sub { font-size: 12px; color: var(--muted); letter-spacing: 2px; margin-top: 3px; }
+        .tag {
+            background: rgba(245,158,11,0.15);
+            border: 1px solid rgba(245,158,11,0.4);
+            color: var(--orange);
+            padding: 7px 16px; border-radius: 30px;
+            font-size: 12px; font-weight: 600;
+        }
+
+        /* ===== HERO STATS ===== */
+        .stats {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 4px;
+        }
+        .stat {
+            flex: 1;
+            background: var(--card);
+            border: 1px solid rgba(255,255,255,0.06);
+            border-radius: 12px;
+            padding: 14px 6px;
+            text-align: center;
+        }
+        .stat-num {
+            font-size: 26px; font-weight: 900;
+            background: linear-gradient(135deg, var(--cyan), var(--blue));
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+        }
+        .stat-lbl { font-size: 10px; color: var(--muted); margin-top: 3px; }
+
+        /* ===== SECTION ===== */
+        .sec {}
+        .sec-label {
+            font-size: 12px; font-weight: 700;
+            color: var(--muted);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            padding-left: 6px;
+        }
+
+        /* ===== ARCH BLOCK ===== */
+        .arch-block {
+            background: var(--card);
+            border: 1px solid rgba(255,255,255,0.06);
+            border-radius: 18px;
+            padding: 16px;
+            margin-bottom: 12px;
+        }
+        .arch-row {
+            display: flex;
+            gap: 10px;
+            align-items: stretch;
+            margin-bottom: 10px;
+        }
+        .arch-row:last-child { margin-bottom: 0; }
+        .arch-badge {
+            width: 88px; flex-shrink: 0;
+            border-radius: 12px;
+            padding: 12px 6px;
+            text-align: center;
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
+        }
+        .arch-badge.app { background: rgba(0,212,255,0.15); border: 1.5px solid rgba(0,212,255,0.35); }
+        .arch-badge.agent { background: rgba(245,158,11,0.15); border: 1.5px solid rgba(245,158,11,0.35); }
+        .arch-badge.cluster { background: rgba(139,92,246,0.15); border: 1.5px solid rgba(139,92,246,0.35); }
+        .arch-badge.data { background: rgba(16,185,129,0.15); border: 1.5px solid rgba(16,185,129,0.35); }
+        .arch-badge-name { font-size: 13px; font-weight: 700; }
+        .arch-badge-sub { font-size: 9px; opacity: 0.7; margin-top: 2px; }
+        .arch-badge.app .arch-badge-name { color: var(--cyan); }
+        .arch-badge.agent .arch-badge-name { color: var(--orange); }
+        .arch-badge.cluster .arch-badge-name { color: var(--purple); }
+        .arch-badge.data .arch-badge-name { color: var(--green); }
+
+        .arch-content {
+            flex: 1;
+            background: rgba(255,255,255,0.03);
+            border-radius: 10px;
+            padding: 10px 14px;
+            display: flex; flex-direction: column; justify-content: center; gap: 5px;
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+        .arch-line { font-size: 11px; color: var(--muted); line-height: 1.5; }
+        .arch-line strong { color: var(--text); font-weight: 600; }
+
+        /* Down arrows */
+        .arch-arrows {
+            text-align: center;
+            font-size: 18px;
+            color: rgba(255,255,255,0.2);
+            letter-spacing: 4px;
+            padding: 3px 0;
+        }
+
+        /* ===== DUAL AGENT BLOCK ===== */
+        .dual-block {
+            background: var(--card);
+            border: 1px solid rgba(255,255,255,0.06);
+            border-radius: 18px;
+            padding: 16px;
+            margin-bottom: 12px;
+        }
+        .agents {
+            display: flex;
+            gap: 10px;
+            align-items: stretch;
+            margin-bottom: 12px;
+        }
+        .agent-card {
+            flex: 1;
+            border-radius: 14px;
+            padding: 14px;
+        }
+        .agent-card.c { background: rgba(0,212,255,0.1); border: 1.5px solid rgba(0,212,255,0.25); }
+        .agent-card.b { background: rgba(245,158,11,0.1); border: 1.5px solid rgba(245,158,11,0.25); }
+        .agent-title { font-size: 14px; font-weight: 700; margin-bottom: 8px; display: flex; align-items: center; gap: 6px; }
+        .agent-card.c .agent-title { color: var(--cyan); }
+        .agent-card.b .agent-title { color: var(--orange); }
+        .agent-flow { font-size: 10px; color: var(--muted); line-height: 1.9; }
+        .agent-flow strong { color: var(--text); font-weight: 600; }
+        .vs-col {
+            width: 60px; flex-shrink: 0;
+            display: flex; align-items: center; justify-content: center;
+        }
+        .vs-badge {
+            background: rgba(139,92,246,0.15);
+            border: 1.5px solid rgba(139,92,246,0.4);
+            border-radius: 12px;
+            padding: 10px 4px;
+            text-align: center;
+        }
+        .vs-badge-name { font-size: 9px; font-weight: 700; color: var(--purple); line-height: 1.3; }
+
+        /* Quote */
+        .quote-box {
+            background: rgba(0,212,255,0.06);
+            border: 1.5px solid rgba(0,212,255,0.15);
+            border-radius: 12px;
+            padding: 12px;
+        }
+        .quote-label { font-size: 11px; font-weight: 700; color: var(--cyan); margin-bottom: 5px; }
+        .quote-flow { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+        .quote-chip {
+            background: rgba(255,255,255,0.06);
+            border-radius: 8px;
+            padding: 5px 12px;
+            font-size: 10px; color: var(--text);
+        }
+        .quote-arrow { font-size: 14px; color: var(--cyan); }
+        .quote-result { font-size: 10px; color: var(--muted); margin-top: 6px; }
+        .quote-result strong { color: var(--cyan); }
+
+        /* ===== CLUSTER BLOCK ===== */
+        .cluster-block {
+            background: var(--card);
+            border: 1px solid rgba(255,255,255,0.06);
+            border-radius: 18px;
+            padding: 16px;
+            margin-bottom: 12px;
+        }
+        .cluster-head {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 12px;
+        }
+        .cluster-head-l { display: flex; align-items: center; gap: 8px; }
+        .cluster-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--purple); }
+        .cluster-head-name { font-size: 12px; font-weight: 700; color: var(--purple); }
+        .cluster-head-sub { font-size: 10px; color: var(--muted); }
+        .cluster-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .cluster-item {
+            background: rgba(139,92,246,0.1);
+            border: 1px solid rgba(139,92,246,0.25);
+            border-radius: 10px;
+            padding: 8px 12px;
+            display: flex; align-items: center; gap: 6px;
+        }
+        .cluster-item.core {
+            background: rgba(245,158,11,0.1);
+            border-color: rgba(245,158,11,0.35);
+        }
+        .cluster-icon { font-size: 16px; }
+        .cluster-name { font-size: 11px; font-weight: 700; color: var(--text); }
+        .cluster-item.core .cluster-name { color: var(--orange); }
+
+        /* ===== VS BLOCK ===== */
+        .vs-block {
+            background: var(--card);
+            border: 1px solid rgba(255,255,255,0.06);
+            border-radius: 18px;
+            padding: 16px;
+            margin-bottom: 12px;
+        }
+        .vs-row {
+            display: flex;
+            gap: 10px;
+            align-items: stretch;
+            margin-bottom: 12px;
+        }
+        .vs-card {
+            flex: 1;
+            border-radius: 14px;
+            padding: 14px;
+        }
+        .vs-card.ota { background: rgba(239,68,68,0.1); border: 1.5px solid rgba(239,68,68,0.25); }
+        .vs-card.ahl { background: rgba(0,212,255,0.1); border: 1.5px solid rgba(0,212,255,0.25); }
+        .vs-label { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 4px; }
+        .vs-card.ota .vs-label { color: var(--red); }
+        .vs-card.ahl .vs-label { color: var(--cyan); }
+        .vs-name { font-size: 16px; font-weight: 800; color: var(--text); }
+        .vs-metric { font-size: 10px; color: var(--muted); margin-top: 6px; line-height: 1.8; }
+        .vs-metric strong { font-weight: 700; }
+        .vs-card.ahl .vs-metric strong { color: var(--cyan); }
+        .vs-divider { width: 36px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 900; color: rgba(255,255,255,0.15); }
+        .nl-row { display: flex; justify-content: center; gap: 8px; }
+        .nl-tag { background: rgba(255,255,255,0.05); border-radius: 20px; padding: 5px 14px; font-size: 11px; color: var(--muted); }
+        .nl-tag.main { background: rgba(0,212,255,0.1); color: var(--cyan); font-weight: 600; }
+
+        /* ===== FOOTER ===== */
+        .footer {
+            display: flex; justify-content: space-between; align-items: center;
+            padding-top: 12px;
+            border-top: 1px solid rgba(255,255,255,0.06);
+        }
+        .footer-brand { font-size: 18px; font-weight: 900; color: var(--cyan); }
+        .footer-team { font-size: 11px; color: var(--muted); }
+        .footer-team strong { color: var(--text); font-weight: 500; }
+    </style>
+</head>
+<body>
+<div class="page">
+
+    <!-- HEADER -->
+    <div class="header">
+        <div class="brand">
+            <div class="brand-icon">A</div>
+            <div>
+                <div class="brand-name">AHL</div>
+                <div class="brand-sub">去中心化旅行平台</div>
+            </div>
+        </div>
+        <div class="tag">AI住宿业革命</div>
+    </div>
+
+    <!-- STATS -->
+    <div class="stats">
+        <div class="stat"><div class="stat-num">95%+</div><div class="stat-lbl">匹配准确率</div></div>
+        <div class="stat"><div class="stat-num">87个</div><div class="stat-lbl">SKILL</div></div>
+        <div class="stat"><div class="stat-num">&lt;3秒</div><div class="stat-lbl">响应速度</div></div>
+        <div class="stat"><div class="stat-num">2-3%</div><div class="stat-lbl">技术服务费</div></div>
+    </div>
+
+    <!-- 四层架构图示 -->
+    <div class="sec">
+        <div class="sec-label">四层架构</div>
+        <div class="arch-block">
+            <!-- 应用层 -->
+            <div class="arch-row">
+                <div class="arch-badge app">
+                    <div class="arch-badge-name">应用层</div>
+                    <div class="arch-badge-sub">交互入口</div>
+                </div>
+                <div class="arch-content">
+                    <div class="arch-line"><strong>C端用户</strong> 对话 → 需求表达</div>
+                    <div class="arch-line"><strong>B端商家</strong> 描述 → AI封装</div>
+                </div>
+            </div>
+            <div class="arch-arrows">↓ ↓ ↓</div>
+            <!-- 双AGENT层 -->
+            <div class="arch-row">
+                <div class="arch-badge agent">
+                    <div class="arch-badge-name">双AGENT</div>
+                    <div class="arch-badge-sub">核心引擎</div>
+                </div>
+                <div class="arch-content">
+                    <div class="arch-line"><strong>C管家</strong> 理解意图 → 向量生成 → Top-K匹配</div>
+                    <div class="arch-line"><strong>B运营官</strong> 产品封装 → 动态定价 → 精准营销</div>
+                </div>
+            </div>
+            <div class="arch-arrows">↓ ↓ ↓</div>
+            <!-- 集群层 -->
+            <div class="arch-row">
+                <div class="arch-badge cluster">
+                    <div class="arch-badge-name">集群层</div>
+                    <div class="arch-badge-sub">87个SKILL</div>
+                </div>
+                <div class="arch-content">
+                    <div class="arch-line">核心 · 营销 · 收益 · 工程 · 安防</div>
+                    <div class="arch-line">宴会 · 财务 · 人力 · 供应链</div>
+                </div>
+            </div>
+            <div class="arch-arrows">↓ ↓ ↓</div>
+            <!-- 数据层 -->
+            <div class="arch-row" style="margin-bottom:0">
+                <div class="arch-badge data">
+                    <div class="arch-badge-name">数据层</div>
+                    <div class="arch-badge-sub">向量数据库</div>
+                </div>
+                <div class="arch-content">
+                    <div class="arch-line"><strong>标准向量</strong>：房型 / 价格 / 位置 / 评分</div>
+                    <div class="arch-line"><strong>深水数据</strong>：光照 · 噪音 · 主理人语义（OTA采不到）</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 双AGENT核心引擎 -->
+    <div class="sec">
+        <div class="sec-label">双AGENT核心引擎</div>
+        <div class="dual-block">
+            <div class="agents">
+                <div class="agent-card c">
+                    <div class="agent-title">👤 C端AI管家</div>
+                    <div class="agent-flow">
+                        <strong>理解意图</strong> → <strong>提取向量</strong><br>
+                        <strong>Top-K匹配</strong> → <strong>多轮澄清</strong><br>
+                        <strong>直接预订</strong> 无中间商
+                    </div>
+                </div>
+                <div class="vs-col">
+                    <div class="vs-badge">
+                        <div class="vs-badge-name">⚡ 向量<br>匹配<br>引擎</div>
+                    </div>
+                </div>
+                <div class="agent-card b">
+                    <div class="agent-title">🏨 B端AI运营官</div>
+                    <div class="agent-flow">
+                        <strong>产品封装</strong> → <strong>动态定价</strong><br>
+                        <strong>客户洞察</strong> → <strong>精准营销</strong><br>
+                        <strong>集群协同</strong> → 主动出击
+                    </div>
+                </div>
+            </div>
+            <div class="quote-box">
+                <div class="quote-label">💬 自然语言 → 精准匹配示意</div>
+                <div class="quote-flow">
+                    <div class="quote-chip">大理古城</div>
+                    <div class="quote-chip">带院子</div>
+                    <div class="quote-chip">民宿</div>
+                    <div class="quote-chip">预算500</div>
+                    <div class="quote-arrow">→</div>
+                    <div class="quote-chip" style="background:rgba(0,212,255,0.15);color:var(--cyan)">3家最优匹配</div>
+                </div>
+                <div class="quote-result">87%用户偏好 · <strong>语音/文字/多轮</strong> 即时响应</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 9大AGENT集群 -->
+    <div class="sec">
+        <div class="sec-label">9大AGENT集群</div>
+        <div class="cluster-block">
+            <div class="cluster-head">
+                <div class="cluster-head-l">
+                    <div class="cluster-dot"></div>
+                    <div class="cluster-head-name">酒店运营全场景覆盖</div>
+                </div>
+                <div class="cluster-head-sub">× 87个专业SKILL</div>
+            </div>
+            <div class="cluster-grid">
+                <div class="cluster-item core">
+                    <div class="cluster-icon">🎯</div>
+                    <div class="cluster-name">核心</div>
+                </div>
+                <div class="cluster-item">
+                    <div class="cluster-icon">📢</div>
+                    <div class="cluster-name">营销</div>
+                </div>
+                <div class="cluster-item">
+                    <div class="cluster-icon">💰</div>
+                    <div class="cluster-name">收益</div>
+                </div>
+                <div class="cluster-item">
+                    <div class="cluster-icon">🔧</div>
+                    <div class="cluster-name">工程</div>
+                </div>
+                <div class="cluster-item">
+                    <div class="cluster-icon">🔒</div>
+                    <div class="cluster-name">安防</div>
+                </div>
+                <div class="cluster-item">
+                    <div class="cluster-icon">🍽️</div>
+                    <div class="cluster-name">宴会</div>
+                </div>
+                <div class="cluster-item">
+                    <div class="cluster-icon">💳</div>
+                    <div class="cluster-name">财务</div>
+                </div>
+                <div class="cluster-item">
+                    <div class="cluster-icon">👥</div>
+                    <div class="cluster-name">人力</div>
+                </div>
+                <div class="cluster-item">
+                    <div class="cluster-icon">🔗</div>
+                    <div class="cluster-name">供应链</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- VS -->
+    <div class="sec">
+        <div class="sec-label">核心优势</div>
+        <div class="vs-block">
+            <div class="vs-row">
+                <div class="vs-card ota">
+                    <div class="vs-label">传统OTA</div>
+                    <div class="vs-name">携程 / 美团</div>
+                    <div class="vs-metric">
+                        佣金 15-30%<br>
+                        搜索比价<br>
+                        数据平台垄断<br>
+                        商家被动等待
+                    </div>
+                </div>
+                <div class="vs-divider">VS</div>
+                <div class="vs-card ahl">
+                    <div class="vs-label">AHL平台</div>
+                    <div class="vs-name">去中心化旅行</div>
+                    <div class="vs-metric">
+                        技术服务费 <strong>仅2-3%</strong><br>
+                        AI精准推荐<br>
+                        数据商家自有<br>
+                        双向精准匹配
+                    </div>
+                </div>
+            </div>
+            <div class="nl-row">
+                <div class="nl-tag main">🎤 语音</div>
+                <div class="nl-tag">📝 文字</div>
+                <div class="nl-tag">🔄 多轮</div>
+                <div class="nl-tag">⚡ 即时</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer">
+        <div class="footer-brand">AHL</div>
+        <div class="footer-team">张实<strong>(What)</strong> × 李源<strong>(How)</strong> × 陈思序<strong>(When)</strong></div>
+    </div>
+
+</div>
+</body>
+</html>

@@ -46,9 +46,56 @@
       "issue": "26036",
       "prediction_file": "prediction_26036.json",
       "predicted_at": "2026-04-04 17:15:00",
-      "predicted_by": "V4.0模型（最新）",
-      "note": "周一开奖，预测5注",
-      "status": "已预测，待开奖"
+      "predicted_by": "V4.0模型",
+      "actual_front": [4, 7, 16, 26, 32],
+      "actual_back": [5, 8],
+      "actual_date": "2026-04-06(周一)",
+      "status": "已复盘",
+      "review_note": "热号全灭，最佳方案4仅1+1"
+    },
+    {
+      "issue": "26037",
+      "prediction_file": "prediction_26037_v51.json",
+      "predicted_at": "2026-04-08",
+      "predicted_by": "V5.1模型",
+      "actual_front": [7, 12, 13, 28, 32],
+      "actual_back": [6, 8],
+      "actual_date": "2026-04-08(周三)",
+      "status": "已复盘",
+      "review_file": "review_26037_v51.json",
+      "review_note": "热号策略完全失败，26被追踪为热号但未出现"
+    },
+    {
+      "issue": "26038",
+      "prediction_file": "prediction_26038_v52.json",
+      "predicted_at": "2026-04-09",
+      "predicted_by": "V5.2模型",
+      "actual_front": [8, 17, 21, 33, 35],
+      "actual_back": [6, 7],
+      "actual_date": "2026-04-11(周六)",
+      "best_bet": "方案5: 前区1个(33)+后区0个",
+      "status": "已复盘",
+      "review_file": "review_26038_26039.json",
+      "review_note": "V5.2前区预测极差，实际全中高位号段17-35，预测偏低"
+    },
+    {
+      "issue": "26039",
+      "prediction_file": "prediction_26039_v5.json",
+      "predicted_at": "2026-04-13",
+      "predicted_by": "V5.3模型",
+      "actual_front": [9, 11, 20, 26, 27],
+      "actual_back": [6, 9],
+      "actual_date": "2026-04-13(周一)",
+      "best_bet": "方案3: 前区1个(20)+后区0个",
+      "status": "已复盘",
+      "review_file": "review_26038_26039.json",
+      "review_note": "V5系列前区预测系统性偏差，需改进区域分布策略"
+    },
+    {
+      "issue": "26040",
+      "draw_date": "2026-04-15(周三)",
+      "status": "待预测",
+      "note": "明日周三开奖，需要在4月15日前生成预测"
     }
   ],
   "statistics": {
@@ -64,9 +111,25 @@
       "26035": "前区2+后区1 (最佳)"
     }
   },
+  "statistics": {
+    "total_predictions": 6,
+    "total_prizes_won": 0,
+    "best_hit": {
+      "issue": "26035",
+      "description": "前区2+后区1(方案3)"
+    },
+    "recent_form": {
+      "26037": "前区0个，后区1个(6)，冷号26追踪失败",
+      "26038": "前区1个(33)，V5.2分布策略失误",
+      "26039": "前区1个(20)，V5.3依然低效"
+    }
+  },
   "model_versions": {
     "V4.0": "26034期使用，贝叶斯+泊松+模糊+熵+自适应权重",
-    "V4.0优化版": "26035期使用，基于连号特征优化"
+    "V4.0优化版": "26035期使用，基于连号特征优化",
+    "V5.1": "26037期，放弃热号策略",
+    "V5.2": "26038期，区域均衡+遗漏追踪",
+    "V5.3": "26039期，后区聚焦07-08区"
   },
   "next_draw_info": {
     "26036": "2026-04-06(周一) 21:25开奖 — 今晚开奖!",
