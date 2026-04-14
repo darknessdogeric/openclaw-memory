@@ -162,6 +162,15 @@
 | scrap_tools.py | ✅ 可用 | 静态页面+JS渲染 |
 | selenium-stealth | ✅ 已安装 | 绕过反爬 |
 
+### Hermes Agent竞品
+- 位置: `D:\hermes-agent\`
+- 来源: NousResearch开源
+- 核心: 自我进化AI Agent（Built-in Learning Loop）
+- 竞品: OpenClaw对标产品，有OpenClaw迁移工具
+- 消息平台: Telegram/Discord/Slack/WhatsApp/Signal/Email/CLI
+- 模型: 200+（OpenRouter）/ Kimi/Moonshot/MiniMax
+- 文档: `D:\hermes-agent\SKILL.md`
+
 ### OpenViking（需手动重启）
 - 状态：⚠️ 需重启
 - 重启命令：`Remove-Item -Force data2\.openviking.pid` → 重启服务
