@@ -95,6 +95,7 @@
 | **TOKEN经济专题** | `memory/token-economy-research.md` | v1.0 | **2026-04-13** |
 | **AI Agent生产级应用** | `memory/ai-agent-production-knowledge-base-v1.md` | v1.0 | **2026-04-14** |
 | **中美跨境商业结构** | `memory/china-us-cross-border-structure-v1.md` | v1.0 | **2026-04-14** |
+| **B166ER底层理论架构** | `memory/theoretical-framework-v2.md` | **V2.0** | **2026-04-30** |
 | **决策思维框架** | `memory/mental-models-decision-frameworks-v1.md` | v1.0 | **2026-04-14** |
 
 ### 快速检索路由
@@ -104,7 +105,7 @@
 | AHL技术架构 | `memory/ahl-knowledge-base-v1.md` |
 | 携程/OTA运营 | `memory/ota-skill-v1.md` |
 | 收益管理/定价 | `memory/hotel-revenue-management-knowledge-base-v4.md` |
-| 博弈论分析 | `memory/game-theory-decision-knowledge-base-v3.md` |
+| 决策/博弈论/贝叶斯 | `memory/theoretical-framework-v2.md` / `memory/game-theory-decision-knowledge-base-v3.md` |
 | 融资估值/股权 | `memory/startup-fundraising-knowledge-base-v2.md` |
 | Eric音乐审美 | `memory/张实全方位人格侧写报告.md` |
 | 具体项目文件 | `C:\Users\ericz\Desktop\张实项目总控\` |
