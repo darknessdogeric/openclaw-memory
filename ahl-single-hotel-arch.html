@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>AHL 单店架构图</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#080c1f; --cyan:#00c8ff; --orange:#ff6b35; --green:#4ade80;
+  --text:#dde4f0; --dim:rgba(180,195,220,0.6); --muted:rgba(140,160,190,0.3);
+}
+body{
+  width:390px;height:693px;overflow:hidden;
+  background:var(--bg);
+  background-image:
+    linear-gradient(rgba(0,200,255,0.015) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(0,200,255,0.015) 1px,transparent 1px);
+  background-size:32px 32px;
+  font-family:'Inter',-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;
+  color:var(--text);padding:14px 16px;display:flex;flex-direction:column;
+}
+
+/* Title */
+h1{
+  text-align:center;font-size:16px;font-weight:800;letter-spacing:-0.01em;
+  background:linear-gradient(135deg,#fff,var(--cyan),var(--orange));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+  margin-bottom:2px;
+}
+.sub{text-align:center;font-size:9px;color:var(--dim);margin-bottom:14px;letter-spacing:2px}
+
+/* Core flow area */
+.core{flex:1;display:flex;flex-direction:column;gap:6px}
+
+/* Row: symmetric two items */
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+
+/* Row: symmetric three items */
+.row3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px}
+
+/* Box */
+.box{
+  background:rgba(14,23,55,0.6);border:1px solid rgba(0,200,255,0.08);
+  border-radius:10px;padding:8px 10px;text-align:center;
+  position:relative;overflow:hidden;
+}
+.box::before{content:'';position:absolute;top:0;left:10%;right:10%;height:1px;background:linear-gradient(90deg,transparent,var(--cyan),transparent);opacity:0.3}
+.box-c{border-color:rgba(0,200,255,0.2)} .box-c .lbl{color:var(--cyan)}
+.box-o{border-color:rgba(255,107,53,0.2)} .box-o .lbl{color:var(--orange)}
+.box-g{border-color:rgba(74,222,128,0.18)} .box-g .lbl{color:var(--green)}
+.box .lbl{font-size:8px;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:3px}
+.box .hd{font-size:12px;font-weight:700;margin-bottom:2px}
+.box .txt{font-size:9px;color:var(--dim);line-height:1.4}
+
+/* Engine */
+.engine{
+  background:linear-gradient(135deg,rgba(0,200,255,0.08),rgba(255,107,53,0.04));
+  border:1px solid rgba(0,200,255,0.2);border-radius:10px;
+  padding:10px 16px;text-align:center;position:relative;overflow:hidden;
+}
+.engine::before{content:'';position:absolute;top:0;left:5%;right:5%;height:1px;background:linear-gradient(90deg,transparent,var(--cyan),var(--orange),transparent))}
+.engine .lbl{font-size:8px;letter-spacing:2px;color:var(--cyan);margin-bottom:3px}
+.engine .hd{font-size:14px;font-weight:800;color:var(--cyan);margin-bottom:2px}
+.engine .txt{font-size:9px;color:var(--dim)}
+.engine .stats{display:flex;justify-content:center;gap:16px;margin-top:6px}
+.engine .stat{font-size:9px;color:var(--dim)}
+.engine .stat b{color:var(--orange)}
+
+/* Arrow */
+.arr{text-align:center;font-size:8px;color:var(--muted);padding:1px 0;letter-spacing:1px}
+
+/* Tags */
+.tags{display:flex;flex-wrap:wrap;justify-content:center;gap:3px;margin-top:4px}
+.tag{
+  font-size:8px;padding:2px 6px;border-radius:4px;
+  border:1px solid rgba(0,200,255,0.1);color:var(--dim);
+  background:rgba(0,200,255,0.03);
+}
+
+/* Grid items */
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:4px}
+.grid3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:3px}
+.gitem{
+  background:rgba(255,255,255,0.02);border:1px solid rgba(0,200,255,0.06);
+  border-radius:6px;padding:4px 6px;text-align:center;font-size:8px;color:var(--dim);
+}
+
+/* Paradigm comparison */
+.paradigm{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-bottom:6px}
+.pcol{background:rgba(14,23,55,0.5);border-radius:8px;padding:8px 10px;text-align:center}
+.pcol.old{border:1px solid rgba(255,60,60,0.1)}
+.pcol.new{border:1px solid rgba(0,200,255,0.15)}
+.pcol .plbl{font-size:8px;letter-spacing:1px;margin-bottom:4px}
+.pcol.old .plbl{color:rgba(255,100,100,0.6)}
+.pcol.new .plbl{color:var(--cyan)}
+.pcol .pline{font-size:9px;color:var(--dim);line-height:1.5}
+
+/* Bottom bar */
+.bottombar{
+  display:flex;justify-content:space-between;align-items:center;
+  border-top:1px solid rgba(0,200,255,0.08);padding-top:8px;margin-top:6px;
+}
+.bottombar .save{font-size:9px;color:var(--cyan)}
+.bottombar .oldcost{font-size:9px;color:rgba(255,100,100,0.5);text-decoration:line-through}
+</style>
+</head>
+<body>
+
+<h1>AHL 单店部署架构</h1>
+<div class="sub">单体酒店 · AI全栈运营 · 48h上线</div>
+
+<div class="core">
+
+<!-- PARADIGM -->
+<div class="paradigm">
+  <div class="pcol old">
+    <div class="plbl">❌ 传统OTA模式</div>
+    <div class="pline">商家被动上架 · 客人翻100页<br>佣金 15-25% · 数据归平台</div>
+  </div>
+  <div class="pcol new">
+    <div class="plbl">✅ AHL客户模式</div>
+    <div class="pline">AI理解需求 · 向量精准匹配<br>技术费 2-3% · 数据归商户</div>
+  </div>
+</div>
+
+<!-- GUEST ENTRY -->
+<div class="box box-c">
+  <div class="lbl">C端入口</div>
+  <div class="tags">
+    <span class="tag">微信对话</span>
+    <span class="tag">小程序</span>
+    <span class="tag">抖音私信</span>
+    <span class="tag">语音</span>
+    <span class="tag">官网</span>
+  </div>
+</div>
+
+<div class="arr">▼</div>
+
+<!-- ENGINE -->
+<div class="engine">
+  <div class="lbl">AHL 智能引擎</div>
+  <div class="hd">向量匹配 · 意图理解</div>
+  <div class="txt">自然语言 → 语义向量 → Top-K匹配 → 多轮澄清</div>
+  <div class="stats">
+    <div class="stat">匹配率 <b>>95%</b></div>
+    <div class="stat">响应 <b><3s</b></div>
+    <div class="stat">SKILL <b>87</b></div>
+  </div>
+</div>
+
+<div class="arr">▼</div>
+
+<!-- DUAL AGENT -->
+<div class="row2">
+  <div class="box box-c">
+    <div class="lbl">C端 · AI管家</div>
+    <div class="tags">
+      <span class="tag">需求理解</span>
+      <span class="tag">智能推荐</span>
+      <span class="tag">预订引导</span>
+      <span class="tag">7×24客服</span>
+    </div>
+  </div>
+  <div class="box box-o">
+    <div class="lbl">B端 · AI运营官</div>
+    <div class="tags">
+      <span class="tag">动态定价</span>
+      <span class="tag">库存管理</span>
+      <span class="tag">客户洞察</span>
+      <span class="tag">精准营销</span>
+    </div>
+  </div>
+</div>
+
+<div class="arr">▼</div>
+
+<!-- 9 AGENTS -->
+<div class="box box-o">
+  <div class="lbl">9大 AGENT 集群</div>
+  <div class="grid3">
+    <div class="gitem">核心</div><div class="gitem">营销</div><div class="gitem">收益</div>
+    <div class="gitem">工程</div><div class="gitem">安防</div><div class="gitem">宴会</div>
+    <div class="gitem">财务</div><div class="gitem">人力</div><div class="gitem">供应链</div>
+  </div>
+</div>
+
+<div class="arr">▼</div>
+
+<!-- PMS -->
+<div class="box box-g">
+  <div class="lbl">酒店 PMS</div>
+  <div class="grid2">
+    <div class="gitem">Opera / 西软</div><div class="gitem">绿云 / 别样红</div>
+  </div>
+</div>
+
+<div class="arr">▼</div>
+
+<!-- DATA LAYER -->
+<div class="row2">
+  <div class="box box-c">
+    <div class="lbl">标准向量</div>
+    <div class="txt">房型 · 价格<br>设施 · 位置</div>
+  </div>
+  <div class="box box-o">
+    <div class="lbl">深水数据</div>
+    <div class="txt">噪音 · 光照<br>主理人语义</div>
+  </div>
+</div>
+
+<!-- BOTTOM -->
+<div class="bottombar">
+  <span class="save">AHL技术费 2-3%</span>
+  <span style="font-size:9px;color:var(--dim)">零系统改造 · 即插即用</span>
+  <span class="oldcost">OTA佣金 15-25%</span>
+</div>
+
+</div>
+</body>
+</html>

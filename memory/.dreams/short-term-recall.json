@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-05-01T23:16:16.646Z",
+  "updatedAt": "2026-05-04T00:34:49.387Z",
   "entries": {
     "memory:memory/2026-04-12.md:6:8": {
       "key": "memory:memory/2026-04-12.md:6:8",
@@ -53699,18 +53699,20 @@
       "source": "memory",
       "snippet": "B166ER 底层理论架构 V2.0 迭代: **触发**: Eric 指令 \"根据你的自我认知和判断，继续优化迭代这套东西\"",
       "recallCount": 0,
-      "dailyCount": 1,
+      "dailyCount": 3,
       "groundedCount": 0,
-      "totalScore": 0.62,
+      "totalScore": 1.8599999999999999,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-01T23:16:13.876Z",
-      "lastRecalledAt": "2026-05-01T23:16:13.876Z",
+      "lastRecalledAt": "2026-05-04T00:34:49.387Z",
       "queryHashes": [
         "e757f9360616"
       ],
       "recallDays": [
         "2026-05-02",
-        "2026-05-01"
+        "2026-05-01",
+        "2026-05-03",
+        "2026-05-04"
       ],
       "conceptTags": [
         "v2.0",
@@ -53731,18 +53733,20 @@
       "source": "memory",
       "snippet": "B166ER 底层理论架构 V2.0 迭代: ✅ `memory/theoretical-framework-v2.md`（10.7KB→大幅扩展）— 完整六层双轴架构 → V2.1; ✅ `SOUL.md` 更新 — 新增 V2.0 升级章节 + V2.1 四条深化; ✅ 识别并填补了 V1.0 的 8 个结构性缺口",
       "recallCount": 0,
-      "dailyCount": 1,
+      "dailyCount": 3,
       "groundedCount": 0,
-      "totalScore": 0.62,
+      "totalScore": 1.8599999999999999,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-01T23:16:13.876Z",
-      "lastRecalledAt": "2026-05-01T23:16:13.876Z",
+      "lastRecalledAt": "2026-05-04T00:34:49.387Z",
       "queryHashes": [
         "e757f9360616"
       ],
       "recallDays": [
         "2026-05-02",
-        "2026-05-01"
+        "2026-05-01",
+        "2026-05-03",
+        "2026-05-04"
       ],
       "conceptTags": [
         "v2.0",
@@ -53763,18 +53767,20 @@
       "source": "memory",
       "snippet": "B166ER 底层理论架构 V2.0 迭代: **V2.1 深化（20:25 Eric 四条指令）**:",
       "recallCount": 0,
-      "dailyCount": 1,
+      "dailyCount": 3,
       "groundedCount": 0,
-      "totalScore": 0.62,
+      "totalScore": 1.8599999999999999,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-01T23:16:13.876Z",
-      "lastRecalledAt": "2026-05-01T23:16:13.876Z",
+      "lastRecalledAt": "2026-05-04T00:34:49.387Z",
       "queryHashes": [
         "e757f9360616"
       ],
       "recallDays": [
         "2026-05-02",
-        "2026-05-01"
+        "2026-05-01",
+        "2026-05-03",
+        "2026-05-04"
       ],
       "conceptTags": [
         "v2.0",
@@ -53795,18 +53801,20 @@
       "source": "memory",
       "snippet": "B166ER 底层理论架构 V2.0 迭代: ✅ 反思与纠错反馈环: 执行失败诊断分类（信息缺失/工具选错/环境变化/硬性边界）→ 路径重规划 → 减熵机制; ✅ 记忆与状态管理升维: 三层记忆 + 状态机 + 阶段锁定 + MICE项目阶段机示例; ✅ 多智能体路由架构: Router + 6个子Agent + 职责隔离 + 四阶段实施路线; ✅ 决策层护栏机制: 硬护栏(权限/合规/安全) + 软护栏 + 护栏前置不可绕过",
       "recallCount": 0,
-      "dailyCount": 1,
+      "dailyCount": 3,
       "groundedCount": 0,
-      "totalScore": 0.62,
+      "totalScore": 1.8599999999999999,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-01T23:16:13.876Z",
-      "lastRecalledAt": "2026-05-01T23:16:13.876Z",
+      "lastRecalledAt": "2026-05-04T00:34:49.387Z",
       "queryHashes": [
         "e757f9360616"
       ],
       "recallDays": [
         "2026-05-02",
-        "2026-05-01"
+        "2026-05-01",
+        "2026-05-03",
+        "2026-05-04"
       ],
       "conceptTags": [
         "router",
@@ -53827,18 +53835,20 @@
       "source": "memory",
       "snippet": "B166ER 底层理论架构 V2.0 迭代: **关键变更**：",
       "recallCount": 0,
-      "dailyCount": 1,
+      "dailyCount": 3,
       "groundedCount": 0,
-      "totalScore": 0.62,
+      "totalScore": 1.8599999999999999,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-01T23:16:13.876Z",
-      "lastRecalledAt": "2026-05-01T23:16:13.876Z",
+      "lastRecalledAt": "2026-05-04T00:34:49.387Z",
       "queryHashes": [
         "e757f9360616"
       ],
       "recallDays": [
         "2026-05-02",
-        "2026-05-01"
+        "2026-05-01",
+        "2026-05-03",
+        "2026-05-04"
       ],
       "conceptTags": [
         "v2.0",
@@ -53859,18 +53869,20 @@
       "source": "memory",
       "snippet": "B166ER 底层理论架构 V2.0 迭代: 新增 Layer 0: 元认知层（框架调度/注意力分配/置信度校准）; Layer 1 增强: 系统思维 + 信息论 + 认知谦逊（四象限）; Layer 2 增强: 贝叶斯推理 + 演化博弈 + **昂贵信号理论**（审美-策略桥梁）; Layer 3 增强: 伦理三层显式化（义务论/后果论/德性论）",
       "recallCount": 0,
-      "dailyCount": 1,
+      "dailyCount": 3,
       "groundedCount": 0,
-      "totalScore": 0.62,
+      "totalScore": 1.8599999999999999,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-01T23:16:13.876Z",
-      "lastRecalledAt": "2026-05-01T23:16:13.876Z",
+      "lastRecalledAt": "2026-05-04T00:34:49.387Z",
       "queryHashes": [
         "e757f9360616"
       ],
       "recallDays": [
         "2026-05-02",
-        "2026-05-01"
+        "2026-05-01",
+        "2026-05-03",
+        "2026-05-04"
       ],
       "conceptTags": [
         "v2.0",
@@ -53891,18 +53903,20 @@
       "source": "memory",
       "snippet": "B166ER 底层理论架构 V2.0 迭代: Layer 4 增强: 反脆弱学习; Layer 5 增强: 沟通理论（Grice） + 执行优先级矩阵; 核心创新: 五条层间反馈回路（让六层不是孤岛）",
       "recallCount": 0,
-      "dailyCount": 1,
+      "dailyCount": 3,
       "groundedCount": 0,
-      "totalScore": 0.62,
+      "totalScore": 1.8599999999999999,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-01T23:16:13.876Z",
-      "lastRecalledAt": "2026-05-01T23:16:13.876Z",
+      "lastRecalledAt": "2026-05-04T00:34:49.387Z",
       "queryHashes": [
         "e757f9360616"
       ],
       "recallDays": [
         "2026-05-02",
-        "2026-05-01"
+        "2026-05-01",
+        "2026-05-03",
+        "2026-05-04"
       ],
       "conceptTags": [
         "v2.0",
@@ -53923,18 +53937,19 @@
       "source": "memory",
       "snippet": "Pixelle-MCP 评估: 完整评估报告已交付; 结论: 观望，暂不安装（7月无更新 + Eric无GPU + 功能重叠）; 建议: ⭐ Star 关注，季度复查",
       "recallCount": 0,
-      "dailyCount": 1,
+      "dailyCount": 2,
       "groundedCount": 0,
-      "totalScore": 0.62,
+      "totalScore": 1.24,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-01T23:16:13.876Z",
-      "lastRecalledAt": "2026-05-01T23:16:13.876Z",
+      "lastRecalledAt": "2026-05-03T00:51:52.078Z",
       "queryHashes": [
         "e757f9360616"
       ],
       "recallDays": [
         "2026-05-02",
-        "2026-05-01"
+        "2026-05-01",
+        "2026-05-03"
       ],
       "conceptTags": [
         "pixelle-mcp",
@@ -53955,18 +53970,19 @@
       "source": "memory",
       "snippet": "状态: 心跳: 19:48 无异常，HEARTBEAT_OK; AHL融资: 暂停中（4/29 Eric决策）; 大乐透跟踪: 严重过时，待更新",
       "recallCount": 0,
-      "dailyCount": 1,
+      "dailyCount": 2,
       "groundedCount": 0,
-      "totalScore": 0.62,
+      "totalScore": 1.24,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-01T23:16:13.876Z",
-      "lastRecalledAt": "2026-05-01T23:16:13.876Z",
+      "lastRecalledAt": "2026-05-03T00:51:52.078Z",
       "queryHashes": [
         "e757f9360616"
       ],
       "recallDays": [
         "2026-05-02",
-        "2026-05-01"
+        "2026-05-01",
+        "2026-05-03"
       ],
       "conceptTags": [
         "heartbeat-ok",
@@ -53987,18 +54003,20 @@
       "source": "memory",
       "snippet": "关键决策: ⏸️ **AHL种子轮融资正式暂停/取消**：Eric明确\"没有必要了\"，不再推进; 自4月14日后首次交互，间隔15天",
       "recallCount": 0,
-      "dailyCount": 1,
+      "dailyCount": 3,
       "groundedCount": 0,
-      "totalScore": 0.62,
+      "totalScore": 1.8599999999999999,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-01T23:16:13.876Z",
-      "lastRecalledAt": "2026-05-01T23:16:13.876Z",
+      "lastRecalledAt": "2026-05-04T00:34:49.387Z",
       "queryHashes": [
         "312dd0eab707"
       ],
       "recallDays": [
         "2026-05-02",
-        "2026-05-01"
+        "2026-05-01",
+        "2026-05-03",
+        "2026-05-04"
       ],
       "conceptTags": [
         "ahl种子轮融资正式暂停/取消",
@@ -54019,18 +54037,20 @@
       "source": "memory",
       "snippet": "当前项目状态: AHL-去中心化旅行平台：融资暂停，其他方向待定; **新战略方向**：安逸集团产业发展部部长（正职）— 新设部门; 到岗时间：5月下旬; 核心逻辑：AHL从\"外部创业\"转为\"内部创新\"落地",
       "recallCount": 0,
-      "dailyCount": 1,
+      "dailyCount": 3,
       "groundedCount": 0,
-      "totalScore": 0.62,
+      "totalScore": 1.8599999999999999,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-01T23:16:13.876Z",
-      "lastRecalledAt": "2026-05-01T23:16:13.876Z",
+      "lastRecalledAt": "2026-05-04T00:34:49.387Z",
       "queryHashes": [
         "312dd0eab707"
       ],
       "recallDays": [
         "2026-05-02",
-        "2026-05-01"
+        "2026-05-01",
+        "2026-05-03",
+        "2026-05-04"
       ],
       "conceptTags": [
         "ahl-去中心化旅行平台",
@@ -54051,18 +54071,20 @@
       "source": "memory",
       "snippet": "当前项目状态: 其他项目：无更新",
       "recallCount": 0,
-      "dailyCount": 1,
+      "dailyCount": 3,
       "groundedCount": 0,
-      "totalScore": 0.62,
+      "totalScore": 1.8599999999999999,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-01T23:16:13.876Z",
-      "lastRecalledAt": "2026-05-01T23:16:13.876Z",
+      "lastRecalledAt": "2026-05-04T00:34:49.387Z",
       "queryHashes": [
         "312dd0eab707"
       ],
       "recallDays": [
         "2026-05-02",
-        "2026-05-01"
+        "2026-05-01",
+        "2026-05-03",
+        "2026-05-04"
       ],
       "conceptTags": [
         "当前",
@@ -54080,18 +54102,20 @@
       "source": "memory",
       "snippet": "安逸集团关键数据（网上采集）: 全称：安逸酒店集团有限责任公司 | 成立：2021年12月 | 注册资本：30亿; 隶属：四川省旅游投资集团（省属国企）| 董事长：邹士勇; 规模：458家酒店 / 超6万间客房; 四大品牌：金牛宾馆(1957) / 锦江宾馆(1958/22家高端) / 川宾 / 安逸系列",
       "recallCount": 0,
-      "dailyCount": 1,
+      "dailyCount": 3,
       "groundedCount": 0,
-      "totalScore": 0.62,
+      "totalScore": 1.8599999999999999,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-01T23:16:13.876Z",
-      "lastRecalledAt": "2026-05-01T23:16:13.876Z",
+      "lastRecalledAt": "2026-05-04T00:34:49.387Z",
       "queryHashes": [
         "312dd0eab707"
       ],
       "recallDays": [
         "2026-05-02",
-        "2026-05-01"
+        "2026-05-01",
+        "2026-05-03",
+        "2026-05-04"
       ],
       "conceptTags": [
         "1958/22家高端",
@@ -54112,18 +54136,20 @@
       "source": "memory",
       "snippet": "安逸集团关键数据（网上采集）: 战略方向：品牌市场化 / 轻资产扩张 / 中高端聚焦; 战略分析文档：docs/安逸集团-产业发展部-到岗前战略分析-V1.0.md",
       "recallCount": 0,
-      "dailyCount": 1,
+      "dailyCount": 3,
       "groundedCount": 0,
-      "totalScore": 0.62,
+      "totalScore": 1.8599999999999999,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-01T23:16:13.876Z",
-      "lastRecalledAt": "2026-05-01T23:16:13.876Z",
+      "lastRecalledAt": "2026-05-04T00:34:49.387Z",
       "queryHashes": [
         "312dd0eab707"
       ],
       "recallDays": [
         "2026-05-02",
-        "2026-05-01"
+        "2026-05-01",
+        "2026-05-03",
+        "2026-05-04"
       ],
       "conceptTags": [
         "docs/安逸集团-产业发展部-到岗前战略分析-v1.0.md",
@@ -54894,6 +54920,1854 @@
         "整理",
         "完毕",
         "核心"
+      ]
+    },
+    "memory:memory/2026-05-02.md:5:5": {
+      "key": "memory:memory/2026-05-02.md:5:5",
+      "path": "memory/2026-05-02.md",
+      "startLine": 5,
+      "endLine": 5,
+      "source": "memory",
+      "snippet": "知识库体系重塑 V2.0 + 酒店KB V8.0 重构: **触发**: Eric 指令 \"重塑知识库体系 + 酒店全景KB重新梳理\"",
+      "recallCount": 0,
+      "dailyCount": 2,
+      "groundedCount": 0,
+      "totalScore": 1.24,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-03T00:51:52.078Z",
+      "lastRecalledAt": "2026-05-04T00:34:49.387Z",
+      "queryHashes": [
+        "f110005857c9"
+      ],
+      "recallDays": [
+        "2026-05-03",
+        "2026-05-04"
+      ],
+      "conceptTags": [
+        "v2.0",
+        "v8.0",
+        "知识",
+        "体系",
+        "酒店",
+        "触发",
+        "eric",
+        "指令"
+      ]
+    },
+    "memory:memory/2026-05-02.md:8:11": {
+      "key": "memory:memory/2026-05-02.md:8:11",
+      "path": "memory/2026-05-02.md",
+      "startLine": 8,
+      "endLine": 11,
+      "source": "memory",
+      "snippet": "第一阶段：归档清理: ✅ 归档36个旧版/报告类酒店文件至 `memory/archive_hotel/`; hotel-industry-knowledge-base v2/v3/v3.0/v4/v5/v6/v7 共7个历史版本; hotel-revenue-management v1/v2/v3（保留v4为权威版）; hotel-new-media v1（保留v2）",
+      "recallCount": 0,
+      "dailyCount": 2,
+      "groundedCount": 0,
+      "totalScore": 1.24,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-03T00:51:52.078Z",
+      "lastRecalledAt": "2026-05-04T00:34:49.387Z",
+      "queryHashes": [
+        "f110005857c9"
+      ],
+      "recallDays": [
+        "2026-05-03",
+        "2026-05-04"
+      ],
+      "conceptTags": [
+        "归档36个旧版/报告类酒店文件至",
+        "memory/archive-hotel",
+        "hotel-industry-knowledge-base",
+        "v2/v3/v3.0/v4/v5/v6/v7",
+        "hotel-revenue-management",
+        "v1/v2/v3",
+        "hotel-new-media",
+        "第一"
+      ]
+    },
+    "memory:memory/2026-05-02.md:12:14": {
+      "key": "memory:memory/2026-05-02.md:12:14",
+      "path": "memory/2026-05-02.md",
+      "startLine": 12,
+      "endLine": 14,
+      "source": "memory",
+      "snippet": "第一阶段：归档清理: 报告类10个（AI市场报告/年报/趋势分析/OTC策略等）; 旧版SOP 5个; hotel KB文件从72个减至36个",
+      "recallCount": 0,
+      "dailyCount": 2,
+      "groundedCount": 0,
+      "totalScore": 1.24,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-03T00:51:52.078Z",
+      "lastRecalledAt": "2026-05-04T00:34:49.387Z",
+      "queryHashes": [
+        "f110005857c9"
+      ],
+      "recallDays": [
+        "2026-05-03",
+        "2026-05-04"
+      ],
+      "conceptTags": [
+        "ai市场报告/年报/趋势分析/otc策略等",
+        "第一",
+        "阶段",
+        "归档",
+        "清理",
+        "报告",
+        "市场",
+        "年报"
+      ]
+    },
+    "memory:memory/2026-05-02.md:17:20": {
+      "key": "memory:memory/2026-05-02.md:17:20",
+      "path": "memory/2026-05-02.md",
+      "startLine": 17,
+      "endLine": 20,
+      "source": "memory",
+      "snippet": "第二阶段：主KB重构: ✅ `hotel-industry-knowledge-base.md` → V8.0; 351KB/8548行 → 83KB/1932行（**瘦身77%**）; 结构：16章线性排列，章节编号修复; 策略：主KB保留行业全景+速查表，7个专项深度章节替换为引用链接",
+      "recallCount": 0,
+      "dailyCount": 2,
+      "groundedCount": 0,
+      "totalScore": 1.24,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-03T00:51:52.078Z",
+      "lastRecalledAt": "2026-05-04T00:34:49.387Z",
+      "queryHashes": [
+        "f110005857c9"
+      ],
+      "recallDays": [
+        "2026-05-03",
+        "2026-05-04"
+      ],
+      "conceptTags": [
+        "hotel-industry-knowledge-base.md",
+        "v8.0",
+        "351kb/8548行",
+        "83kb/1932行",
+        "第二",
+        "阶段",
+        "hotel",
+        "industry"
+      ]
+    },
+    "memory:memory/2026-05-02.md:21:23": {
+      "key": "memory:memory/2026-05-02.md:21:23",
+      "path": "memory/2026-05-02.md",
+      "startLine": 21,
+      "endLine": 23,
+      "source": "memory",
+      "snippet": "第二阶段：主KB重构: 剥离：收益管理/CRM/私域/OTA/新媒体/AI+PMS/B2B/政策法规; 保留：行业总览/细分市场/商业模式/运营KPI/资本市场/供应链/技术/竞争/趋势/定位方法论/附录; 每个引用节包含：核心指标速查表 + 指向专项KB的链接",
+      "recallCount": 0,
+      "dailyCount": 2,
+      "groundedCount": 0,
+      "totalScore": 1.24,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-03T00:51:52.078Z",
+      "lastRecalledAt": "2026-05-04T00:34:49.387Z",
+      "queryHashes": [
+        "f110005857c9"
+      ],
+      "recallDays": [
+        "2026-05-03",
+        "2026-05-04"
+      ],
+      "conceptTags": [
+        "收益管理/crm/私域/ota/新媒体/ai",
+        "pms/b2b/政策法规",
+        "第二",
+        "阶段",
+        "剥离",
+        "收益",
+        "管理",
+        "crm"
+      ]
+    },
+    "memory:memory/2026-05-02.md:26:29": {
+      "key": "memory:memory/2026-05-02.md:26:29",
+      "path": "memory/2026-05-02.md",
+      "startLine": 26,
+      "endLine": 29,
+      "source": "memory",
+      "snippet": "第三阶段：路由系统更新: ✅ `kb_router.py` ROUTING_TABLE 更新（文件名同步）; ✅ `skills/knowledge-base/SKILL.md` → V2.0; 新增：KB分层加载策略（主KB速查 → 专项KB深度 → 工具层）; 酒店KB条目更新：V8.0 + 7个专项KB独立条目",
+      "recallCount": 0,
+      "dailyCount": 2,
+      "groundedCount": 0,
+      "totalScore": 1.24,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-03T00:51:52.078Z",
+      "lastRecalledAt": "2026-05-04T00:34:49.387Z",
+      "queryHashes": [
+        "f110005857c9"
+      ],
+      "recallDays": [
+        "2026-05-03",
+        "2026-05-04"
+      ],
+      "conceptTags": [
+        "router",
+        "kb-router.py",
+        "routing-table",
+        "skills/knowledge-base/skill.md",
+        "v2.0",
+        "v8.0",
+        "第三",
+        "阶段"
+      ]
+    },
+    "memory:memory/2026-05-02.md:30:30": {
+      "key": "memory:memory/2026-05-02.md:30:30",
+      "path": "memory/2026-05-02.md",
+      "startLine": 30,
+      "endLine": 30,
+      "source": "memory",
+      "snippet": "第三阶段：路由系统更新: ✅ `MEMORY.md` 知识库索引更新",
+      "recallCount": 0,
+      "dailyCount": 2,
+      "groundedCount": 0,
+      "totalScore": 1.24,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-03T00:51:52.078Z",
+      "lastRecalledAt": "2026-05-04T00:34:49.387Z",
+      "queryHashes": [
+        "f110005857c9"
+      ],
+      "recallDays": [
+        "2026-05-03",
+        "2026-05-04"
+      ],
+      "conceptTags": [
+        "memory.md",
+        "第三",
+        "阶段",
+        "系统",
+        "更新",
+        "知识",
+        "索引"
+      ]
+    },
+    "memory:memory/2026-05-02.md:34:37": {
+      "key": "memory:memory/2026-05-02.md:34:37",
+      "path": "memory/2026-05-02.md",
+      "startLine": 34,
+      "endLine": 37,
+      "source": "memory",
+      "snippet": "酒店KB体系（V8.0后）: | 文件 | 大小 | 角色 | |------|------|------| | hotel-industry-knowledge-base.md | 83KB | **主KB** — 行业全景+速查 | | hotel-revenue-management-knowledge-base-v4.md | 40KB | 收益管理全体系 |",
+      "recallCount": 0,
+      "dailyCount": 2,
+      "groundedCount": 0,
+      "totalScore": 1.24,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-03T00:51:52.078Z",
+      "lastRecalledAt": "2026-05-04T00:34:49.387Z",
+      "queryHashes": [
+        "f110005857c9"
+      ],
+      "recallDays": [
+        "2026-05-03",
+        "2026-05-04"
+      ],
+      "conceptTags": [
+        "v8.0后",
+        "hotel-industry-knowledge-base.md",
+        "酒店",
+        "体系",
+        "v8.0",
+        "文件",
+        "大小",
+        "角色"
+      ]
+    },
+    "memory:memory/2026-05-02.md:38:41": {
+      "key": "memory:memory/2026-05-02.md:38:41",
+      "path": "memory/2026-05-02.md",
+      "startLine": 38,
+      "endLine": 41,
+      "source": "memory",
+      "snippet": "酒店KB体系（V8.0后）: | hotel-private-domain-membership-knowledge-base.md | 43KB | 私域/会员/CRM | | hotel-new-media-marketing-knowledge-base-v2.md | 43KB | 新媒体/抖音/小红书 | | hotel-ai-applications-knowledge-base.md | 28KB | AI+PMS整合 | | hotel-business-types-management-company-v1.md | 59KB | B2",
+      "recallCount": 0,
+      "dailyCount": 2,
+      "groundedCount": 0,
+      "totalScore": 1.24,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-03T00:51:52.078Z",
+      "lastRecalledAt": "2026-05-04T00:34:49.387Z",
+      "queryHashes": [
+        "f110005857c9"
+      ],
+      "recallDays": [
+        "2026-05-03",
+        "2026-05-04"
+      ],
+      "conceptTags": [
+        "v8.0后",
+        "私域/会员/crm",
+        "新媒体/抖音/小红书",
+        "酒店",
+        "体系",
+        "v8.0",
+        "hotel",
+        "private"
+      ]
+    },
+    "memory:memory/2026-05-02.md:42:42": {
+      "key": "memory:memory/2026-05-02.md:42:42",
+      "path": "memory/2026-05-02.md",
+      "startLine": 42,
+      "endLine": 42,
+      "source": "memory",
+      "snippet": "酒店KB体系（V8.0后）: | hotel-laws-regulations-v1.md | 47KB | 政策法规 |",
+      "recallCount": 0,
+      "dailyCount": 2,
+      "groundedCount": 0,
+      "totalScore": 1.24,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-03T00:51:52.078Z",
+      "lastRecalledAt": "2026-05-04T00:34:49.387Z",
+      "queryHashes": [
+        "f110005857c9"
+      ],
+      "recallDays": [
+        "2026-05-03",
+        "2026-05-04"
+      ],
+      "conceptTags": [
+        "v8.0后",
+        "hotel-laws-regulations-v1.md",
+        "酒店",
+        "体系",
+        "v8.0",
+        "hotel",
+        "laws",
+        "regulations"
+      ]
+    },
+    "memory:memory/2026-05-02.md:45:46": {
+      "key": "memory:memory/2026-05-02.md:45:46",
+      "path": "memory/2026-05-02.md",
+      "startLine": 45,
+      "endLine": 46,
+      "source": "memory",
+      "snippet": "待续: 数据库索引重建（kb_router.py index 超时）; SOP碎片文件合并（8个部门SOP → 1个运营SOP合辑）",
+      "recallCount": 0,
+      "dailyCount": 2,
+      "groundedCount": 0,
+      "totalScore": 1.24,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-03T00:51:52.078Z",
+      "lastRecalledAt": "2026-05-04T00:34:49.387Z",
+      "queryHashes": [
+        "f110005857c9"
+      ],
+      "recallDays": [
+        "2026-05-03",
+        "2026-05-04"
+      ],
+      "conceptTags": [
+        "router",
+        "kb-router.py",
+        "数据",
+        "索引",
+        "重建",
+        "index",
+        "sop",
+        "碎片"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-02.txt:1:1": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-02.txt:1:1",
+      "path": "memory/.dreams/session-corpus/2026-05-02.txt",
+      "startLine": 1,
+      "endLine": 1,
+      "source": "memory",
+      "snippet": "Assistant: No substantive session activity to capture — this is a fresh session with only the runtime memory flush event. The last recorded activity was 2026-04-30. Creating a minimal entry for continuity.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-03T00:51:52.078Z",
+      "lastRecalledAt": "2026-05-03T00:51:52.078Z",
+      "queryHashes": [
+        "815cc1934125"
+      ],
+      "recallDays": [
+        "2026-05-03"
+      ],
+      "conceptTags": [
+        "substantive",
+        "activity",
+        "capture",
+        "fresh",
+        "only",
+        "runtime",
+        "flush",
+        "event"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-02.txt:2:2": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-02.txt:2:2",
+      "path": "memory/.dreams/session-corpus/2026-05-02.txt",
+      "startLine": 2,
+      "endLine": 2,
+      "source": "memory",
+      "snippet": "Assistant: 早上好。你指的是哪个？ 上次会话（4/30）做完的： - **理论架构 V2.0 → V2.1** — 六层双轴 + 四条深化（纠错反馈环/记忆状态机/多Agent路由/决策护栏），已写入 SOUL.md - **Pixelle-MCP 评估** — 观望，不装 还在悬着的： - AHL 融资 — 4/29 你叫停了，等通知 - 大乐透 — 好几期没跟了 - 多Agent路由 — 架构有了，没落地 你说的是哪一件？还是有新活？",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-03T00:51:52.078Z",
+      "lastRecalledAt": "2026-05-03T00:51:52.078Z",
+      "queryHashes": [
+        "815cc1934125"
+      ],
+      "recallDays": [
+        "2026-05-03"
+      ],
+      "conceptTags": [
+        "4/30",
+        "v2.0",
+        "v2.1",
+        "纠错反馈环/记忆状态机/多agent路由/决策护栏",
+        "soul.md",
+        "pixelle-mcp",
+        "4/29",
+        "早上"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-02.txt:3:3": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-02.txt:3:3",
+      "path": "memory/.dreams/session-corpus/2026-05-02.txt",
+      "startLine": 3,
+      "endLine": 3,
+      "source": "memory",
+      "snippet": "User: 📐 总架构图 复制 Layer 0: 元认知层 ├─ 调度层: SKILL.md (语义识别 → 路由决策) ├─ 知识层: kb_router.py (TF-IDF + SQLite，155+文档索引) ├─ 执行层: kb_maintenance.py (自动迭代维护) └─ 进化层: evolve_kb.py (准确率追踪 + 规律发现) Layer 1-3: 知识领域 ├─ 底层人格 (SOUL/MEMORY/IDENTITY) ├─ 专业领域 (20+知识库) └─ 项目专项 (AHL/酒店/大乐透) Layer 4: 工具执行",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-03T00:51:52.078Z",
+      "lastRecalledAt": "2026-05-03T00:51:52.078Z",
+      "queryHashes": [
+        "815cc1934125"
+      ],
+      "recallDays": [
+        "2026-05-03"
+      ],
+      "conceptTags": [
+        "router",
+        "skill.md",
+        "kb-router.py",
+        "tf-idf",
+        "kb-maintenance.py",
+        "evolve-kb.py",
+        "1-3",
+        "soul/memory/identity"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-02.txt:4:4": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-02.txt:4:4",
+      "path": "memory/.dreams/session-corpus/2026-05-02.txt",
+      "startLine": 4,
+      "endLine": 4,
+      "source": "memory",
+      "snippet": "Assistant: 明白了。两件事：**知识库体系重塑** + **酒店全景KB大清理**。先摸底现状。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-03T00:51:52.078Z",
+      "lastRecalledAt": "2026-05-03T00:51:52.078Z",
+      "queryHashes": [
+        "815cc1934125"
+      ],
+      "recallDays": [
+        "2026-05-03"
+      ],
+      "conceptTags": [
+        "明白",
+        "知识",
+        "体系",
+        "酒店",
+        "全景",
+        "清理",
+        "摸底",
+        "现状"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-02.txt:5:5": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-02.txt:5:5",
+      "path": "memory/.dreams/session-corpus/2026-05-02.txt",
+      "startLine": 5,
+      "endLine": 5,
+      "source": "memory",
+      "snippet": "Assistant: 这酒店KB是个565KB的巨兽——8448行。先看看实际内容质量和重复情况。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-03T00:51:52.078Z",
+      "lastRecalledAt": "2026-05-03T00:51:52.078Z",
+      "queryHashes": [
+        "815cc1934125"
+      ],
+      "recallDays": [
+        "2026-05-03"
+      ],
+      "conceptTags": [
+        "酒店",
+        "565kb",
+        "巨兽",
+        "看看",
+        "实际",
+        "内容",
+        "质量",
+        "重复"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-02.txt:6:6": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-02.txt:6:6",
+      "path": "memory/.dreams/session-corpus/2026-05-02.txt",
+      "startLine": 6,
+      "endLine": 6,
+      "source": "memory",
+      "snippet": "Assistant: 问题很清楚了。看数据： **酒店KB现状**：memory目录下 **72个酒店相关文件**，仅 `hotel-industry-knowledge-base.md` 主文件就 **351KB**，还有 v2/v3/v3.0/v4/v5/v6/v7 共7个历史版本。收益管理、新媒体、私域各自独立成KB，又在主文件里重复出现——大量内容交叉、版本混乱、调用时不知道该读哪个。 我的重建方案： --- **第一步：清理归档** — 所有 `hotel-*-v[N].md` 旧版移到 `memory/archive_hotel/` **第二",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-03T00:51:52.078Z",
+      "lastRecalledAt": "2026-05-03T00:51:52.078Z",
+      "queryHashes": [
+        "815cc1934125"
+      ],
+      "recallDays": [
+        "2026-05-03"
+      ],
+      "conceptTags": [
+        "hotel-industry-knowledge-base.md",
+        "v2/v3/v3.0/v4/v5/v6/v7",
+        "memory/archive-hotel",
+        "问题",
+        "清楚",
+        "数据",
+        "酒店",
+        "现状"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-02.txt:7:7": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-02.txt:7:7",
+      "path": "memory/.dreams/session-corpus/2026-05-02.txt",
+      "startLine": 7,
+      "endLine": 7,
+      "source": "memory",
+      "snippet": "Assistant: 私域/会员/CRM | 43KB，保持 | | `hotel-new-media-marketing-knowledge-base.md` | 新媒体/抖音/小红书/公域-私域闭环 | 去重合并v1+v2 | | `hotel-ai-applications-knowledge-base.md` | AI+PMS整合/智能化落地 | 28KB，补充 | | `hotel-operations-sop.md` | 运营SOP合并版（前厅/客房/餐饮/工程/安保） | **新建**，合并8个SOP碎片文件 | | `hotel-laws",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-03T00:51:52.078Z",
+      "lastRecalledAt": "2026-05-03T00:51:52.078Z",
+      "queryHashes": [
+        "815cc1934125"
+      ],
+      "recallDays": [
+        "2026-05-03"
+      ],
+      "conceptTags": [
+        "私域/会员/crm",
+        "新媒体/抖音/小红书/公域-私域闭环",
+        "pms整合/智能化落地",
+        "hotel-operations-sop.md",
+        "前厅/客房/餐饮/工程/安保",
+        "hotel-laws",
+        "会员",
+        "crm"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-02.txt:8:8": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-02.txt:8:8",
+      "path": "memory/.dreams/session-corpus/2026-05-02.txt",
+      "startLine": 8,
+      "endLine": 8,
+      "source": "memory",
+      "snippet": "Assistant: 开干。先归档旧版，再逐个文件处理。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-03T00:51:52.078Z",
+      "lastRecalledAt": "2026-05-03T00:51:52.078Z",
+      "queryHashes": [
+        "815cc1934125"
+      ],
+      "recallDays": [
+        "2026-05-03"
+      ],
+      "conceptTags": [
+        "归档",
+        "旧版",
+        "文件",
+        "处理"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-02.txt:9:9": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-02.txt:9:9",
+      "path": "memory/.dreams/session-corpus/2026-05-02.txt",
+      "startLine": 9,
+      "endLine": 9,
+      "source": "memory",
+      "snippet": "Assistant: 归档完毕，看结果。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-03T00:51:52.078Z",
+      "lastRecalledAt": "2026-05-03T00:51:52.078Z",
+      "queryHashes": [
+        "815cc1934125"
+      ],
+      "recallDays": [
+        "2026-05-03"
+      ],
+      "conceptTags": [
+        "归档",
+        "完毕",
+        "结果"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-02.txt:10:10": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-02.txt:10:10",
+      "path": "memory/.dreams/session-corpus/2026-05-02.txt",
+      "startLine": 10,
+      "endLine": 10,
+      "source": "memory",
+      "snippet": "Assistant: 36个归档，还剩36个。现在重头戏——清理351KB的主KB。先看看它和专项KB的重叠情况。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-03T00:51:52.078Z",
+      "lastRecalledAt": "2026-05-03T00:51:52.078Z",
+      "queryHashes": [
+        "815cc1934125"
+      ],
+      "recallDays": [
+        "2026-05-03"
+      ],
+      "conceptTags": [
+        "归档",
+        "现在",
+        "清理",
+        "351kb",
+        "看看",
+        "重叠",
+        "情况"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-02.txt:11:11": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-02.txt:11:11",
+      "path": "memory/.dreams/session-corpus/2026-05-02.txt",
+      "startLine": 11,
+      "endLine": 11,
+      "source": "memory",
+      "snippet": "Assistant: 结构问题一目了然：章节编号重复、标题错乱、\"十二\"排到附录后面。接下来定位每个章节的行号，做手术。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-03T00:51:52.078Z",
+      "lastRecalledAt": "2026-05-03T00:51:52.078Z",
+      "queryHashes": [
+        "815cc1934125"
+      ],
+      "recallDays": [
+        "2026-05-03"
+      ],
+      "conceptTags": [
+        "结构",
+        "问题",
+        "一目了然",
+        "章节",
+        "编号",
+        "重复",
+        "标题",
+        "错乱"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-02.txt:12:12": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-02.txt:12:12",
+      "path": "memory/.dreams/session-corpus/2026-05-02.txt",
+      "startLine": 12,
+      "endLine": 12,
+      "source": "memory",
+      "snippet": "Assistant: 行号清楚了。现在用Python精确重构主KB——保留核心内容，剥离重复章节改为引用链接。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-03T00:51:52.078Z",
+      "lastRecalledAt": "2026-05-03T00:51:52.078Z",
+      "queryHashes": [
+        "815cc1934125"
+      ],
+      "recallDays": [
+        "2026-05-03"
+      ],
+      "conceptTags": [
+        "清楚",
+        "现在",
+        "python",
+        "精确",
+        "保留",
+        "核心",
+        "内容",
+        "剥离"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-02.txt:13:13": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-02.txt:13:13",
+      "path": "memory/.dreams/session-corpus/2026-05-02.txt",
+      "startLine": 13,
+      "endLine": 13,
+      "source": "memory",
+      "snippet": "User: 📐 总架构图 复制 Layer 0: 元认知层 ├─ 调度层: SKILL.md (语义识别 → 路由决策) ├─ 知识层: kb_router.py (TF-IDF + SQLite，155+文档索引) ├─ 执行层: kb_maintenance.py (自动迭代维护) └─ 进化层: evolve_kb.py (准确率追踪 + 规律发现) Layer 1-3: 知识领域 ├─ 底层人格 (SOUL/MEMORY/IDENTITY) ├─ 专业领域 (20+知识库) └─ 项目专项 (AHL/酒店/大乐透) Layer 4: 工具执行",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-03T00:51:52.078Z",
+      "lastRecalledAt": "2026-05-03T00:51:52.078Z",
+      "queryHashes": [
+        "815cc1934125"
+      ],
+      "recallDays": [
+        "2026-05-03"
+      ],
+      "conceptTags": [
+        "router",
+        "skill.md",
+        "kb-router.py",
+        "tf-idf",
+        "kb-maintenance.py",
+        "evolve-kb.py",
+        "1-3",
+        "soul/memory/identity"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-02.txt:14:14": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-02.txt:14:14",
+      "path": "memory/.dreams/session-corpus/2026-05-02.txt",
+      "startLine": 14,
+      "endLine": 14,
+      "source": "memory",
+      "snippet": "Assistant: 做个完整清查。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-03T00:51:52.078Z",
+      "lastRecalledAt": "2026-05-03T00:51:52.078Z",
+      "queryHashes": [
+        "815cc1934125"
+      ],
+      "recallDays": [
+        "2026-05-03"
+      ],
+      "conceptTags": [
+        "完整",
+        "清查"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-02.txt:15:15": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-02.txt:15:15",
+      "path": "memory/.dreams/session-corpus/2026-05-02.txt",
+      "startLine": 15,
+      "endLine": 15,
+      "source": "memory",
+      "snippet": "Assistant: 架构文件已保存到 `memory/B166ER-knowledge-architecture.md`。核心结论： --- ### 系统全貌 ``` 200个文件 · 5.5MB ↓ Layer 0 元认知层 调度中枢（SKILL.md / kb_router / evolve_kb） Layer 1 人格层 14KB SOUL · IDENTITY · USER · MEMORY · AGENTS Layer 2 知识层 4,847KB 12大领域 · 20+知识库 Layer 3 工具层 6个CLI + 4个搜索 + 5个生成 +",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-03T00:51:52.078Z",
+      "lastRecalledAt": "2026-05-03T00:51:52.078Z",
+      "queryHashes": [
+        "815cc1934125"
+      ],
+      "recallDays": [
+        "2026-05-03"
+      ],
+      "conceptTags": [
+        "router",
+        "5.5mb",
+        "skill.md",
+        "kb-router",
+        "evolve-kb",
+        "架构",
+        "文件",
+        "保存"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-02.txt:16:16": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-02.txt:16:16",
+      "path": "memory/.dreams/session-corpus/2026-05-02.txt",
+      "startLine": 16,
+      "endLine": 16,
+      "source": "memory",
+      "snippet": "Assistant: 县域酒店市场深度 | | ⭐⭐ | 跳城游消费模式 | | ⭐⭐ | 海外替代游评估框架 | | ⭐⭐ | 浩华景气指数时间序列 | | ⭐ | OTA反垄断影响 | | ⭐ | 酒店资产交易市场 | 版本管理方面有个问题：V1-V7共7个历史版本仍在memory根目录（合计约600KB），建议归档到 `memory/archive_versions/` 保持主目录整洁。 要我先把版本归档清理掉，还是先补那3个⭐⭐⭐优先级的缺口？",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-03T00:51:52.078Z",
+      "lastRecalledAt": "2026-05-03T00:51:52.078Z",
+      "queryHashes": [
+        "815cc1934125"
+      ],
+      "recallDays": [
+        "2026-05-03"
+      ],
+      "conceptTags": [
+        "v1-v7共7个历史版本仍在memory根目录",
+        "memory/archive-versions",
+        "酒店",
+        "市场",
+        "深度",
+        "消费",
+        "模式",
+        "海外"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-02.txt:17:17": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-02.txt:17:17",
+      "path": "memory/.dreams/session-corpus/2026-05-02.txt",
+      "startLine": 17,
+      "endLine": 17,
+      "source": "memory",
+      "snippet": "Assistant: 351KB → 57KB，瘦了84%。但我跳过了\"运营体系深度\"的引言章节和附录——这些内容不在专项KB里，需要保留。检查一下。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-03T00:51:52.078Z",
+      "lastRecalledAt": "2026-05-03T00:51:52.078Z",
+      "queryHashes": [
+        "815cc1934125"
+      ],
+      "recallDays": [
+        "2026-05-03"
+      ],
+      "conceptTags": [
+        "351kb",
+        "57kb",
+        "瘦了",
+        "运营",
+        "体系",
+        "深度",
+        "引言",
+        "章节"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-02.txt:18:18": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-02.txt:18:18",
+      "path": "memory/.dreams/session-corpus/2026-05-02.txt",
+      "startLine": 18,
+      "endLine": 18,
+      "source": "memory",
+      "snippet": "Assistant: 明白了——运营深度引言（KPI/客房/餐饮/宴会/闲置空间）和附录（术语表）是独有内容，需要保留。修正脚本。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-03T00:51:52.078Z",
+      "lastRecalledAt": "2026-05-03T00:51:52.078Z",
+      "queryHashes": [
+        "815cc1934125"
+      ],
+      "recallDays": [
+        "2026-05-03"
+      ],
+      "conceptTags": [
+        "kpi/客房/餐饮/宴会/闲置空间",
+        "明白",
+        "运营",
+        "深度",
+        "引言",
+        "kpi",
+        "客房",
+        "餐饮"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-02.txt:19:19": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-02.txt:19:19",
+      "path": "memory/.dreams/session-corpus/2026-05-02.txt",
+      "startLine": 19,
+      "endLine": 19,
+      "source": "memory",
+      "snippet": "Assistant: 351KB → 83KB，77%瘦身。验证一下输出质量。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-03T00:51:52.078Z",
+      "lastRecalledAt": "2026-05-03T00:51:52.078Z",
+      "queryHashes": [
+        "815cc1934125"
+      ],
+      "recallDays": [
+        "2026-05-03"
+      ],
+      "conceptTags": [
+        "351kb",
+        "83kb",
+        "瘦身",
+        "验证",
+        "一下",
+        "输出",
+        "质量"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-02.txt:20:20": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-02.txt:20:20",
+      "path": "memory/.dreams/session-corpus/2026-05-02.txt",
+      "startLine": 20,
+      "endLine": 20,
+      "source": "memory",
+      "snippet": "Assistant: 结构干净。修一下头部格式乱码，然后把V8替换旧版。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-03T00:51:52.078Z",
+      "lastRecalledAt": "2026-05-03T00:51:52.078Z",
+      "queryHashes": [
+        "815cc1934125"
+      ],
+      "recallDays": [
+        "2026-05-03"
+      ],
+      "conceptTags": [
+        "结构",
+        "干净",
+        "一下",
+        "头部",
+        "格式",
+        "乱码",
+        "然后",
+        "替换"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-02.txt:21:21": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-02.txt:21:21",
+      "path": "memory/.dreams/session-corpus/2026-05-02.txt",
+      "startLine": 21,
+      "endLine": 21,
+      "source": "memory",
+      "snippet": "Assistant: 结构干净，16章线性排列。验证引用章节质量。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-03T00:51:52.078Z",
+      "lastRecalledAt": "2026-05-03T00:51:52.078Z",
+      "queryHashes": [
+        "815cc1934125"
+      ],
+      "recallDays": [
+        "2026-05-03"
+      ],
+      "conceptTags": [
+        "结构",
+        "干净",
+        "线性",
+        "排列",
+        "验证",
+        "引用",
+        "章节",
+        "质量"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-02.txt:22:22": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-02.txt:22:22",
+      "path": "memory/.dreams/session-corpus/2026-05-02.txt",
+      "startLine": 22,
+      "endLine": 22,
+      "source": "memory",
+      "snippet": "Assistant: 引用章节质量到位——速查表+指向链接，既能快速获取核心指标，又能按需加载深度内容。现在替换旧版，更新路由系统。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-03T00:51:52.078Z",
+      "lastRecalledAt": "2026-05-03T00:51:52.078Z",
+      "queryHashes": [
+        "815cc1934125"
+      ],
+      "recallDays": [
+        "2026-05-03"
+      ],
+      "conceptTags": [
+        "引用",
+        "章节",
+        "质量",
+        "查表",
+        "指向",
+        "既能",
+        "快速",
+        "获取"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-02.txt:23:23": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-02.txt:23:23",
+      "path": "memory/.dreams/session-corpus/2026-05-02.txt",
+      "startLine": 23,
+      "endLine": 23,
+      "source": "memory",
+      "snippet": "Assistant: 现在更新路由表——让 `kb_router.py` 和 SKILL.md 反映新的KB结构。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-03T00:51:52.078Z",
+      "lastRecalledAt": "2026-05-03T00:51:52.078Z",
+      "queryHashes": [
+        "815cc1934125"
+      ],
+      "recallDays": [
+        "2026-05-03"
+      ],
+      "conceptTags": [
+        "router",
+        "kb-router.py",
+        "skill.md",
+        "现在",
+        "更新",
+        "反映",
+        "新的",
+        "结构"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-02.txt:24:24": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-02.txt:24:24",
+      "path": "memory/.dreams/session-corpus/2026-05-02.txt",
+      "startLine": 24,
+      "endLine": 24,
+      "source": "memory",
+      "snippet": "Assistant: 大部分执行了，最后一步 SKILL.md 更新因为换行符格式卡住了。用 Python 直接修。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-03T00:51:52.078Z",
+      "lastRecalledAt": "2026-05-03T00:51:52.078Z",
+      "queryHashes": [
+        "815cc1934125"
+      ],
+      "recallDays": [
+        "2026-05-03"
+      ],
+      "conceptTags": [
+        "skill.md",
+        "大部分",
+        "执行",
+        "最后",
+        "一步",
+        "更新",
+        "因为",
+        "格式"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-02.txt:25:25": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-02.txt:25:25",
+      "path": "memory/.dreams/session-corpus/2026-05-02.txt",
+      "startLine": 25,
+      "endLine": 25,
+      "source": "memory",
+      "snippet": "Assistant: 数据库重建时间太长先跳过——路由表的核心匹配基于字符串，不依赖数据库索引。现在更新日志，清理现场。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-03T00:51:52.078Z",
+      "lastRecalledAt": "2026-05-03T00:51:52.078Z",
+      "queryHashes": [
+        "815cc1934125"
+      ],
+      "recallDays": [
+        "2026-05-03"
+      ],
+      "conceptTags": [
+        "数据",
+        "重建",
+        "时间",
+        "太长",
+        "核心",
+        "匹配",
+        "基于",
+        "字符"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-02.txt:26:26": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-02.txt:26:26",
+      "path": "memory/.dreams/session-corpus/2026-05-02.txt",
+      "startLine": 26,
+      "endLine": 26,
+      "source": "memory",
+      "snippet": "Assistant: 搞定了。总结一下： --- **酒店KB重构 V8.0 — 完成** | 动作 | 结果 | |------|------| | 归档旧版 | 37个文件 → `archive_hotel/` | | 主KB瘦身 | **351KB → 83KB（-77%）** | | 章节修复 | 编号混乱/重复章节 → 16章线性排列 | | 7个专项剥离 | 收益/私域/新媒体/AI/B2B/法规 → 引用链接+速查表 | | 路由系统 | SKILL.md V2.0 + kb_router.py 同步 | **新的调用逻辑**： - 问行业",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-03T00:51:52.078Z",
+      "lastRecalledAt": "2026-05-03T00:51:52.078Z",
+      "queryHashes": [
+        "815cc1934125"
+      ],
+      "recallDays": [
+        "2026-05-03"
+      ],
+      "conceptTags": [
+        "router",
+        "v8.0",
+        "archive-hotel",
+        "编号混乱/重复章节",
+        "收益/私域/新媒体/ai/b2b/法规",
+        "skill.md",
+        "v2.0",
+        "kb-router.py"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-02.txt:27:27": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-02.txt:27:27",
+      "path": "memory/.dreams/session-corpus/2026-05-02.txt",
+      "startLine": 27,
+      "endLine": 27,
+      "source": "memory",
+      "snippet": "Assistant: 继续执行——SOP碎片合并。先看看这些SOP文件的重叠情况。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-03T00:51:52.078Z",
+      "lastRecalledAt": "2026-05-03T00:51:52.078Z",
+      "queryHashes": [
+        "815cc1934125"
+      ],
+      "recallDays": [
+        "2026-05-03"
+      ],
+      "conceptTags": [
+        "继续",
+        "执行",
+        "sop",
+        "碎片",
+        "合并",
+        "看看",
+        "这些",
+        "文件"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-02.txt:28:28": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-02.txt:28:28",
+      "path": "memory/.dreams/session-corpus/2026-05-02.txt",
+      "startLine": 28,
+      "endLine": 28,
+      "source": "memory",
+      "snippet": "User: 系统自检一下，现在非常慢，而且不符合常理的慢。我觉得是有问题，你看看具体什么问题，自己解决一下。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-03T00:51:52.078Z",
+      "lastRecalledAt": "2026-05-03T00:51:52.078Z",
+      "queryHashes": [
+        "815cc1934125"
+      ],
+      "recallDays": [
+        "2026-05-03"
+      ],
+      "conceptTags": [
+        "系统",
+        "一下",
+        "现在",
+        "非常",
+        "而且",
+        "符合",
+        "常理",
+        "觉得"
+      ]
+    },
+    "memory:memory/2026-05-04.md:4:7": {
+      "key": "memory:memory/2026-05-04.md:4:7",
+      "path": "memory/2026-05-04.md",
+      "startLine": 4,
+      "endLine": 7,
+      "source": "memory",
+      "snippet": "昨日回顾（05-03）: ✅ huashu-design 补齐（117文件）; ✅ AHL 完整信息图（12区块，HTML+PNG）; ✅ B166ER 理论架构思维导图（六层双轴交互式）; ✅ AHL 手机版思维导图",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-04T00:34:49.387Z",
+      "lastRecalledAt": "2026-05-04T00:34:49.387Z",
+      "queryHashes": [
+        "ad6c7e6ef235"
+      ],
+      "recallDays": [
+        "2026-05-04"
+      ],
+      "conceptTags": [
+        "05-03",
+        "huashu-design",
+        "昨日",
+        "回顾",
+        "huashu",
+        "design",
+        "文件",
+        "ahl"
+      ]
+    },
+    "memory:memory/2026-05-04.md:8:11": {
+      "key": "memory:memory/2026-05-04.md:8:11",
+      "path": "memory/2026-05-04.md",
+      "startLine": 8,
+      "endLine": 11,
+      "source": "memory",
+      "snippet": "昨日回顾（05-03）: ✅ AHL 单店架构图（9:16一屏）; ✅ 酒店KB V8.1（第5-9章补全）; ✅ Get笔记配置+同步; ✅ Eric深度问答：AGENT音乐感知外设（多模态声学感知终端）",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-04T00:34:49.387Z",
+      "lastRecalledAt": "2026-05-04T00:34:49.387Z",
+      "queryHashes": [
+        "ad6c7e6ef235"
+      ],
+      "recallDays": [
+        "2026-05-04"
+      ],
+      "conceptTags": [
+        "05-03",
+        "v8.1",
+        "第5-9章补全",
+        "昨日",
+        "回顾",
+        "ahl",
+        "架构",
+        "酒店"
+      ]
+    },
+    "memory:memory/2026-05-04.md:14:15": {
+      "key": "memory:memory/2026-05-04.md:14:15",
+      "path": "memory/2026-05-04.md",
+      "startLine": 14,
+      "endLine": 15,
+      "source": "memory",
+      "snippet": "当前项目状态: AHL融资：⏸️ 暂停; 成都春熙试点：🟡 待开启",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-04T00:34:49.387Z",
+      "lastRecalledAt": "2026-05-04T00:34:49.387Z",
+      "queryHashes": [
+        "ad6c7e6ef235"
+      ],
+      "recallDays": [
+        "2026-05-04"
+      ],
+      "conceptTags": [
+        "当前",
+        "项目",
+        "状态",
+        "ahl",
+        "融资",
+        "暂停",
+        "成都",
+        "开启"
+      ]
+    },
+    "memory:memory/2026-05-03.md:5:5": {
+      "key": "memory:memory/2026-05-03.md:5:5",
+      "path": "memory/2026-05-03.md",
+      "startLine": 5,
+      "endLine": 5,
+      "source": "memory",
+      "snippet": "huashu-design 缺失文件补齐: **触发**: Eric 指令 \"huashu-design缺失的部分必须补齐\"",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-04T00:34:49.387Z",
+      "lastRecalledAt": "2026-05-04T00:34:49.387Z",
+      "queryHashes": [
+        "c2bf0c07fdd1"
+      ],
+      "recallDays": [
+        "2026-05-04"
+      ],
+      "conceptTags": [
+        "huashu-design",
+        "huashu-design缺失的部分必须补齐",
+        "huashu",
+        "design",
+        "缺失",
+        "文件",
+        "触发",
+        "eric"
+      ]
+    },
+    "memory:memory/2026-05-03.md:7:7": {
+      "key": "memory:memory/2026-05-03.md:7:7",
+      "path": "memory/2026-05-03.md",
+      "startLine": 7,
+      "endLine": 7,
+      "source": "memory",
+      "snippet": "huashu-design 缺失文件补齐: **背景**: `D:\\huashu-design` 是 `D:\\skills\\huashu-design` 的不完整副本，大量文件缺失：",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-04T00:34:49.387Z",
+      "lastRecalledAt": "2026-05-04T00:34:49.387Z",
+      "queryHashes": [
+        "c2bf0c07fdd1"
+      ],
+      "recallDays": [
+        "2026-05-04"
+      ],
+      "conceptTags": [
+        "huashu-design",
+        "huashu",
+        "design",
+        "缺失",
+        "文件",
+        "背景",
+        "skills",
+        "完整"
+      ]
+    },
+    "memory:memory/2026-05-03.md:8:11": {
+      "key": "memory:memory/2026-05-03.md:8:11",
+      "path": "memory/2026-05-03.md",
+      "startLine": 8,
+      "endLine": 11,
+      "source": "memory",
+      "snippet": "huashu-design 缺失文件补齐: showcases: 48个文件缺失（8场景×3风格 HTML+PNG，仅剩空目录+INDEX.md）; sfx: 37个音效文件缺失（8个分类目录全空）; demos: 19个演示文件全缺; references: 11个参考文档缺失",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-04T00:34:49.387Z",
+      "lastRecalledAt": "2026-05-04T00:34:49.387Z",
+      "queryHashes": [
+        "c2bf0c07fdd1"
+      ],
+      "recallDays": [
+        "2026-05-04"
+      ],
+      "conceptTags": [
+        "huashu-design",
+        "index.md",
+        "huashu",
+        "design",
+        "缺失",
+        "文件",
+        "showcases",
+        "场景"
+      ]
+    },
+    "memory:memory/2026-05-03.md:12:12": {
+      "key": "memory:memory/2026-05-03.md:12:12",
+      "path": "memory/2026-05-03.md",
+      "startLine": 12,
+      "endLine": 12,
+      "source": "memory",
+      "snippet": "huashu-design 缺失文件补齐: scripts: export_deck_stage_pdf.mjs 缺失",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-04T00:34:49.387Z",
+      "lastRecalledAt": "2026-05-04T00:34:49.387Z",
+      "queryHashes": [
+        "c2bf0c07fdd1"
+      ],
+      "recallDays": [
+        "2026-05-04"
+      ],
+      "conceptTags": [
+        "huashu-design",
+        "export-deck-stage-pdf.mjs",
+        "huashu",
+        "design",
+        "缺失",
+        "文件",
+        "scripts"
+      ]
+    },
+    "memory:memory/2026-05-03.md:15:16": {
+      "key": "memory:memory/2026-05-03.md:15:16",
+      "path": "memory/2026-05-03.md",
+      "startLine": 15,
+      "endLine": 16,
+      "source": "memory",
+      "snippet": "补齐结果: ✅ robocopy 从 `D:\\skills\\huashu-design` → `D:\\huashu-design` 全量同步; 补齐后: 155文件对齐（showcases 49 / sfx 37 / demos 19 / references 20 / scripts 8）",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-04T00:34:49.387Z",
+      "lastRecalledAt": "2026-05-04T00:34:49.387Z",
+      "queryHashes": [
+        "c2bf0c07fdd1"
+      ],
+      "recallDays": [
+        "2026-05-04"
+      ],
+      "conceptTags": [
+        "huashu-design",
+        "结果",
+        "robocopy",
+        "skills",
+        "huashu",
+        "design",
+        "全量",
+        "同步"
+      ]
+    },
+    "memory:memory/2026-05-03.md:20:20": {
+      "key": "memory:memory/2026-05-03.md:20:20",
+      "path": "memory/2026-05-03.md",
+      "startLine": 20,
+      "endLine": 20,
+      "source": "memory",
+      "snippet": "酒店KB V8.1（附加完成）: 此前误将酒店KB第5-9章从引用桩扩展为完整章节（1932→2377行），顺带保留",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-04T00:34:49.387Z",
+      "lastRecalledAt": "2026-05-04T00:34:49.387Z",
+      "queryHashes": [
+        "c2bf0c07fdd1"
+      ],
+      "recallDays": [
+        "2026-05-04"
+      ],
+      "conceptTags": [
+        "v8.1",
+        "此前误将酒店kb第5-9章从引用桩扩展为完整章节",
+        "酒店",
+        "附加",
+        "完成",
+        "引用",
+        "扩展",
+        "完整"
+      ]
+    },
+    "memory:memory/2026-05-03.md:24:24": {
+      "key": "memory:memory/2026-05-03.md:24:24",
+      "path": "memory/2026-05-03.md",
+      "startLine": 24,
+      "endLine": 24,
+      "source": "memory",
+      "snippet": "AHL完整项目信息图: **触发**: Eric 指令 \"做一个AHL项目的完整信息图\"",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-04T00:34:49.387Z",
+      "lastRecalledAt": "2026-05-04T00:34:49.387Z",
+      "queryHashes": [
+        "c2bf0c07fdd1"
+      ],
+      "recallDays": [
+        "2026-05-04"
+      ],
+      "conceptTags": [
+        "ahl",
+        "完整",
+        "项目",
+        "信息",
+        "触发",
+        "eric",
+        "指令",
+        "一个"
+      ]
+    },
+    "memory:memory/2026-05-03.md:26:29": {
+      "key": "memory:memory/2026-05-03.md:26:29",
+      "path": "memory/2026-05-03.md",
+      "startLine": 26,
+      "endLine": 29,
+      "source": "memory",
+      "snippet": "AHL完整项目信息图: ✅ 生成 `AHL完整信息图.html`（28KB，12信息区块，Dark Tech风格）; ✅ 导出 `AHL完整信息图.png`（2560×12243px，1.7MB，Retina）; 输出: 桌面 + workspace; 设计: 深蓝网格底+玻璃拟态+青→橙AHL三色渐变",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-04T00:34:49.387Z",
+      "lastRecalledAt": "2026-05-04T00:34:49.387Z",
+      "queryHashes": [
+        "c2bf0c07fdd1"
+      ],
+      "recallDays": [
+        "2026-05-04"
+      ],
+      "conceptTags": [
+        "ahl完整信息图.html",
+        "ahl完整信息图.png",
+        "1.7mb",
+        "ahl",
+        "完整",
+        "项目",
+        "信息",
+        "生成"
+      ]
+    },
+    "memory:memory/2026-05-03.md:30:30": {
+      "key": "memory:memory/2026-05-03.md:30:30",
+      "path": "memory/2026-05-03.md",
+      "startLine": 30,
+      "endLine": 30,
+      "source": "memory",
+      "snippet": "AHL完整项目信息图: 12区块: Hero数据/团队/范式革命/四层架构/双AGENT/商业模式/vs OTA/壁垒/融资/试点/路线图/愿景",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-04T00:34:49.387Z",
+      "lastRecalledAt": "2026-05-04T00:34:49.387Z",
+      "queryHashes": [
+        "c2bf0c07fdd1"
+      ],
+      "recallDays": [
+        "2026-05-04"
+      ],
+      "conceptTags": [
+        "ota/壁垒/融资/试点/路线图/愿景",
+        "ahl",
+        "完整",
+        "项目",
+        "信息",
+        "区块",
+        "hero",
+        "数据"
+      ]
+    },
+    "memory:memory/2026-05-03.md:33:34": {
+      "key": "memory:memory/2026-05-03.md:33:34",
+      "path": "memory/2026-05-03.md",
+      "startLine": 33,
+      "endLine": 34,
+      "source": "memory",
+      "snippet": "待续: kb_router.py 数据库索引重建（上次超时）; SOP碎片文件合并（8个部门SOP → 1个运营SOP合辑）",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-04T00:34:49.387Z",
+      "lastRecalledAt": "2026-05-04T00:34:49.387Z",
+      "queryHashes": [
+        "c2bf0c07fdd1"
+      ],
+      "recallDays": [
+        "2026-05-04"
+      ],
+      "conceptTags": [
+        "router",
+        "kb-router.py",
+        "数据",
+        "索引",
+        "重建",
+        "上次",
+        "sop",
+        "碎片"
+      ]
+    },
+    "memory:memory/2026-05-03.md:38:38": {
+      "key": "memory:memory/2026-05-03.md:38:38",
+      "path": "memory/2026-05-03.md",
+      "startLine": 38,
+      "endLine": 38,
+      "source": "memory",
+      "snippet": "B166ER 理论架构思维导图: **触发**: Eric 指令 \"用这个工具做你的底层理论架构的思维导图\"",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-04T00:34:49.387Z",
+      "lastRecalledAt": "2026-05-04T00:34:49.387Z",
+      "queryHashes": [
+        "c2bf0c07fdd1"
+      ],
+      "recallDays": [
+        "2026-05-04"
+      ],
+      "conceptTags": [
+        "b166er",
+        "理论",
+        "架构",
+        "思维",
+        "触发",
+        "eric",
+        "指令",
+        "这个"
+      ]
+    },
+    "memory:memory/2026-05-03.md:40:43": {
+      "key": "memory:memory/2026-05-03.md:40:43",
+      "path": "memory/2026-05-03.md",
+      "startLine": 40,
+      "endLine": 43,
+      "source": "memory",
+      "snippet": "B166ER 理论架构思维导图: ✅ 生成 `b166er-framework-mindmap.html` — 交互式Canvas思维导图; ✅ 导出 `b166er-framework-mindmap.png`（1.2MB）; 设计: 中心辐射式布局，6色Layer节点，30子节点，5条反馈回路虚线; 功能: 可拖拽/滚轮缩放/悬停查看详情",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-04T00:34:49.387Z",
+      "lastRecalledAt": "2026-05-04T00:34:49.387Z",
+      "queryHashes": [
+        "c2bf0c07fdd1"
+      ],
+      "recallDays": [
+        "2026-05-04"
+      ],
+      "conceptTags": [
+        "b166er-framework-mindmap.html",
+        "b166er-framework-mindmap.png",
+        "1.2mb",
+        "可拖拽/滚轮缩放/悬停查看详情",
+        "b166er",
+        "理论",
+        "架构",
+        "思维"
+      ]
+    },
+    "memory:memory/2026-05-03.md:47:47": {
+      "key": "memory:memory/2026-05-03.md:47:47",
+      "path": "memory/2026-05-03.md",
+      "startLine": 47,
+      "endLine": 47,
+      "source": "memory",
+      "snippet": "AHL 手机版思维导图: **触发**: Eric 指令 \"做一个手机屏幕尺寸的AHL项目的思维导图\"",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-04T00:34:49.387Z",
+      "lastRecalledAt": "2026-05-04T00:34:49.387Z",
+      "queryHashes": [
+        "c2bf0c07fdd1"
+      ],
+      "recallDays": [
+        "2026-05-04"
+      ],
+      "conceptTags": [
+        "ahl",
+        "手机",
+        "思维",
+        "触发",
+        "eric",
+        "指令",
+        "一个",
+        "屏幕"
+      ]
+    },
+    "memory:memory/2026-05-03.md:49:52": {
+      "key": "memory:memory/2026-05-03.md:49:52",
+      "path": "memory/2026-05-03.md",
+      "startLine": 49,
+      "endLine": 52,
+      "source": "memory",
+      "snippet": "AHL 手机版思维导图: ✅ 生成 `ahl-mindmap-mobile.html` — 移动端树状思维导图; ✅ 导出 `AHL思维导图_手机版.png`（1170×6724px，795KB）; 设计: 三级缩进+分支线，青/橙/金/绿分色，触摸反馈; 12节点：根→团队→范式→架构→双AGENT→商业模式→vs OTA→壁垒→融资→试点→路线图→愿景",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-04T00:34:49.387Z",
+      "lastRecalledAt": "2026-05-04T00:34:49.387Z",
+      "queryHashes": [
+        "c2bf0c07fdd1"
+      ],
+      "recallDays": [
+        "2026-05-04"
+      ],
+      "conceptTags": [
+        "ahl-mindmap-mobile.html",
+        "ahl思维导图-手机版.png",
+        "青/橙/金/绿分色",
+        "ahl",
+        "手机",
+        "思维",
+        "生成",
+        "mindmap"
+      ]
+    },
+    "memory:memory/2026-05-03.md:53:53": {
+      "key": "memory:memory/2026-05-03.md:53:53",
+      "path": "memory/2026-05-03.md",
+      "startLine": 53,
+      "endLine": 53,
+      "source": "memory",
+      "snippet": "AHL 手机版思维导图: 输出: 桌面HTML+PNG",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-04T00:34:49.387Z",
+      "lastRecalledAt": "2026-05-04T00:34:49.387Z",
+      "queryHashes": [
+        "c2bf0c07fdd1"
+      ],
+      "recallDays": [
+        "2026-05-04"
+      ],
+      "conceptTags": [
+        "ahl",
+        "手机",
+        "思维",
+        "输出",
+        "桌面",
+        "html",
+        "png"
+      ]
+    },
+    "memory:memory/2026-05-02.md:49:52": {
+      "key": "memory:memory/2026-05-02.md:49:52",
+      "path": "memory/2026-05-02.md",
+      "startLine": 49,
+      "endLine": 52,
+      "source": "memory",
+      "snippet": "⚡ 05-03 补充: ✅ **V8.1**: 第5-9章补全（Eric: \"把缺失部分都补充完整\"）; 5.收益管理: 核心指标+动态定价+需求预测+超额预订+渠道管理+实施SOP; 6.营销私域: 公域vs私域+会员体系+RFM触达+新媒体矩阵+私域闭环; 7.AI+PMS: 四阶段+五大板块+C/B端智能化+PMS生态+实施路线",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-04T00:34:49.387Z",
+      "lastRecalledAt": "2026-05-04T00:34:49.387Z",
+      "queryHashes": [
+        "f110005857c9"
+      ],
+      "recallDays": [
+        "2026-05-04"
+      ],
+      "conceptTags": [
+        "05-03",
+        "v8.1",
+        "第5-9章补全",
+        "5.收益管理",
+        "6.营销私域",
+        "7.ai",
+        "c/b端智能化",
+        "补充"
+      ]
+    },
+    "memory:memory/2026-05-02.md:53:55": {
+      "key": "memory:memory/2026-05-02.md:53:55",
+      "path": "memory/2026-05-02.md",
+      "startLine": 53,
+      "endLine": 55,
+      "source": "memory",
+      "snippet": "⚡ 05-03 补充: 8.B2B: 九大渠道+RFP招标+MICE+TMC+政府采购; 9.政策法规: 五层体系+开业8证+星级评定+消防+食安+数据安全+用工; 1932行 → 2377行 (+446行)",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-04T00:34:49.387Z",
+      "lastRecalledAt": "2026-05-04T00:34:49.387Z",
+      "queryHashes": [
+        "f110005857c9"
+      ],
+      "recallDays": [
+        "2026-05-04"
+      ],
+      "conceptTags": [
+        "05-03",
+        "8.b2b",
+        "9.政策法规",
+        "补充",
+        "b2b",
+        "九大",
+        "渠道",
+        "rfp"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-04.txt:1:1": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-04.txt:1:1",
+      "path": "memory/.dreams/session-corpus/2026-05-04.txt",
+      "startLine": 1,
+      "endLine": 1,
+      "source": "memory",
+      "snippet": "User: 我发现你更新了。这次更新有些什么异同？",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-04T00:34:49.387Z",
+      "lastRecalledAt": "2026-05-04T00:34:49.387Z",
+      "queryHashes": [
+        "4d9d9fab6a07"
+      ],
+      "recallDays": [
+        "2026-05-04"
+      ],
+      "conceptTags": [
+        "发现",
+        "更新",
+        "这次",
+        "有些",
+        "什么"
       ]
     }
   }

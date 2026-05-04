@@ -1,13 +1,30 @@
 ---
 name: B166ER Knowledge & Skill Router
 slug: kb-router
-version: 1.0
+version: 2.0
 created: 2026-04-06
+updated: 2026-05-02
 description: 语义路由 + 知识库调度 + Skill联动核心
 trigger: 所有任务/问题/分析
 ---
 
-# B166ER 知识与调度系统 V1.0
+# B166ER 知识与调度系统 V2.0
+
+> **V2.0 更新 (2026-05-02)**: 酒店KB V8.0瘦身重构（351KB→83KB），剥离7个专项章节至专题KB，路由表精准化
+
+## 架构
+
+```
+用户输入 → 语义识别 → 路由决策 → KB加载（主KB速查 → 专项KB深度）→ 结果整合 → 自反思
+```
+
+### KB分层加载策略
+
+| 层级 | 用途 | 示例 |
+|------|------|------|
+| **主KB（速查层）** | 快速获取核心概念/指标/框架 | hotel-industry-knowledge-base（83KB，全景+速查表） |
+| **专项KB（深度层）** | 按需加载完整方法论/SOP/案例 | hotel-revenue-management（40KB）、hotel-private-domain（43KB） |
+| **工具层** | CLI直接计算/分析 | game_theory_tool.py、aesthetic_tool.py |
 
 ## 架构
 

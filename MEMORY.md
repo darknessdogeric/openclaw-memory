@@ -82,7 +82,7 @@
 |--------|------|------|------|
 | 审美与品位 | `memory/aesthetic-knowledge-base.md` | V3.0 | 2026-04-02 |
 | 博弈论决策 | `memory/game-theory-decision-knowledge-base-v3.md` | v3 | 2026-03-31 |
-| 酒店行业全景 | `memory/hotel-industry-knowledge-base.md` | 主版(351KB) | 2026-03-28 |
+| 酒店行业全景 | `memory/hotel-industry-knowledge-base.md` | **V8.1** (~100KB) | **2026-05-03** |
 | 收益管理 | `memory/hotel-revenue-management-knowledge-base-v4.md` | v4 | 2026-03-21 |
 | 定价策略 | `memory/pricing-strategy-knowledge-base.md` | v1.0 | 2026-04-01 |
 | 金融证券 | `memory/finance-securities-knowledge-base.md` | **v2.0** | **2026-04-14** |

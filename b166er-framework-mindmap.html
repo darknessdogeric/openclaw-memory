@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>B166ER 底层理论架构 V2.2 · 思维导图</title>
+<style>
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  :root{
+    --bg:#080c1f; --grid:rgba(0,200,255,0.03);
+    --cyan:#00c8ff; --orange:#ff6b35; --purple:#a78bfa; --green:#4ade80; --gold:#fbbf24; --pink:#f472b6;
+    --text:#dde4f0; --dim:rgba(180,195,220,0.65); --muted:rgba(140,160,190,0.4);
+  }
+  body{
+    background:var(--bg);
+    background-image:radial-gradient(ellipse 800px 600px at 50% 50%, rgba(0,200,255,0.04) 0%, transparent 70%),
+      linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);
+    background-size:100% 100%, 48px 48px, 48px 48px;
+    font-family:'Inter',-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;
+    color:var(--text); overflow:hidden; height:100vh; width:100vw;
+    user-select:none; -webkit-user-select:none;
+  }
+  #canvas{position:fixed;top:0;left:0;width:100%;height:100%}
+
+  /* Tooltip */
+  #tooltip{
+    position:fixed; pointer-events:none; opacity:0; z-index:100;
+    background:rgba(14,20,50,0.95); border:1px solid rgba(0,200,255,0.25);
+    border-radius:10px; padding:14px 18px; backdrop-filter:blur(20px);
+    max-width:340px; font-size:13px; line-height:1.6; transition:opacity 0.2s;
+  }
+  #tooltip.show{opacity:1}
+  #tooltip .tt-title{font-size:14px;font-weight:700;color:var(--cyan);margin-bottom:6px}
+  #tooltip .tt-desc{color:var(--dim);font-size:12px}
+
+  /* Legend */
+  #legend{
+    position:fixed;bottom:24px;left:24px;z-index:50;
+    display:flex;gap:14px;flex-wrap:wrap;
+  }
+  .legend-item{display:flex;align-items:center;gap:6px;font-size:11px;color:var(--muted)}
+  .legend-dot{width:8px;height:8px;border-radius:50%}
+
+  /* Zoom controls */
+  #zoom-controls{
+    position:fixed;bottom:24px;right:24px;z-index:50;
+    display:flex;flex-direction:column;gap:6px;
+  }
+  #zoom-controls button{
+    width:36px;height:36px;border-radius:8px;border:1px solid rgba(0,200,255,0.2);
+    background:rgba(14,20,50,0.8);color:var(--cyan);font-size:18px;
+    cursor:pointer;backdrop-filter:blur(10px);transition:all 0.2s;
+  }
+  #zoom-controls button:hover{background:rgba(0,200,255,0.15);border-color:rgba(0,200,255,0.4)}
+
+  #title-bar{
+    position:fixed;top:20px;left:50%;transform:translateX(-50%);z-index:50;
+    text-align:center;
+  }
+  #title-bar h1{
+    font-size:20px;font-weight:800;letter-spacing:-0.01em;
+    background:linear-gradient(135deg,var(--cyan) 0%,var(--purple) 40%,var(--orange) 100%);
+    -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+  }
+  #title-bar .sub{font-size:11px;color:var(--muted);letter-spacing:3px;margin-top:2px;text-transform:uppercase}
+
+  @media(max-width:768px){
+    #legend{bottom:12px;left:12px;gap:8px}
+    #zoom-controls{bottom:12px;right:12px}
+    #title-bar h1{font-size:16px}
+  }
+</style>
+</head>
+<body>
+
+<canvas id="canvas"></canvas>
+
+<div id="tooltip"><div class="tt-title"></div><div class="tt-desc"></div></div>
+
+<div id="title-bar">
+  <h1>B166ER 底层理论架构 V2.2</h1>
+  <div class="sub">六层双轴 · 思维导图</div>
+</div>
+
+<div id="legend">
+  <div class="legend-item"><div class="legend-dot" style="background:var(--cyan)"></div>认识论</div>
+  <div class="legend-item"><div class="legend-dot" style="background:var(--purple)"></div>策略论</div>
+  <div class="legend-item"><div class="legend-dot" style="background:var(--orange)"></div>价值论</div>
+  <div class="legend-item"><div class="legend-dot" style="background:var(--green)"></div>学习论</div>
+  <div class="legend-item"><div class="legend-dot" style="background:var(--gold)"></div>执行论</div>
+  <div class="legend-item"><div class="legend-dot" style="background:var(--pink)"></div>元认知</div>
+</div>
+
+<div id="zoom-controls">
+  <button id="zoom-in">+</button>
+  <button id="zoom-out">−</button>
+  <button id="zoom-reset" style="font-size:12px">⟲</button>
+</div>
+
+<script>
+(function(){
+  const canvas = document.getElementById('canvas');
+  const ctx = canvas.getContext('2d');
+  const tooltip = document.getElementById('tooltip');
+
+  let W, H, scale=1, offsetX=0, offsetY=0, dragX, dragY, dragging=false;
+  const dpr = Math.min(window.devicePixelRatio||1, 2);
+
+  function resize(){
+    W=window.innerWidth; H=window.innerHeight;
+    canvas.width=W*dpr; canvas.height=H*dpr;
+    canvas.style.width=W+'px'; canvas.style.height=H+'px';
+    ctx.setTransform(dpr,0,0,dpr,0,0);
+  }
+  resize();
+  window.addEventListener('resize',resize);
+
+  // ---- Data ----
+  const layers = [
+    { id:'L0', name:'Layer 0\n元认知', color:'#f472b6', desc:'关于思考的思考', cx:0, cy:-420, r:44,
+      subs:[
+        {name:'框架调度算法',desc:'决策树：匹配情境→选择理论工具。博弈/审美/五维/第一性/贝叶斯/实用主义'},
+        {name:'注意力经济学',desc:'Tier1 Eric交互→Tier2 项目节点→Tier3 心跳→Tier4 扫描。深度>广度，信号优先'},
+        {name:'置信度校准',desc:'95%+硬事实→80-94%高置信→60-79%判断→<60%标注不确定→<40%不输出'}
+      ]},
+    { id:'L1', name:'Layer 1\n认识论', color:'#00c8ff', desc:'怎么认识世界', cx:-520, cy:0, r:44,
+      subs:[
+        {name:'五维认知',desc:'历史沿革→当下情况→原因分析(近因+远因)→未来预判(多路径)→底层逻辑'},
+        {name:'系统思维',desc:'涌现(整体>部分之和)、正/负反馈回路、杠杆点(Meadows)、路径依赖'},
+        {name:'信息论',desc:'信息熵H=-Σplogp、信噪比(Signal/Noise)、信道容量→每句话传递最大信息量'},
+        {name:'认知谦逊',desc:'Known-Knowns/Known-Unknowns/Unknown-Knowns/Unknown-Unknowns四象限'},
+        {name:'第一性原理',desc:'三层还原：表面现象→底层机制→物理/逻辑必然。从零重构，不依赖类比'},
+        {name:'奥卡姆剃刀',desc:'五种剃刀：经典(如无必要勿增实体)、Hitchens(无证据可驳)、Hanlon(愚蠢>恶意)、Hume(奇迹需非凡证据)、Popper(可证伪性)'},
+      ]},
+    { id:'L2', name:'Layer 2\n策略论', color:'#a78bfa', desc:'怎么做出选择', cx:-260, cy:-320, r:44,
+      subs:[
+        {name:'博弈论',desc:'纳什均衡/囚徒困境/逆向归纳/信息不对称/承诺机制/混合策略。信誉=长期最优'},
+        {name:'贝叶斯推理',desc:'先验概率×证据→后验概率。概率化思考，不断更新信念。P(H|E)∝P(E|H)·P(H)'},
+        {name:'昂贵信号',desc:'审美-策略统一场论：信号成本决定可信度。高成本信号≠虚假'},
+        {name:'心智模型库',desc:'二阶思维/逆向思维/地图≠疆域/复利/帕累托/反演。30+模型快速索引'},
+        {name:'护栏机制',desc:'硬护栏(权限L1/合规L2/安全L3)不可突破。软护栏触发警告但允许人工放行'},
+      ]},
+    { id:'L3', name:'Layer 3\n价值论', color:'#ff6b35', desc:'怎么判断好坏', cx:260, cy:-320, r:44,
+      subs:[
+        {name:'审美哲学谱系',desc:'柏拉图→康德→黑格尔→尼采→海德格尔→庄子。气韵>意境>和谐>真>善>独特'},
+        {name:'美·真·善三位一体',desc:'康德三批判：纯粹理性(真)+实践理性(善)+判断力(美)。美沟通真与善'},
+        {name:'东方美学基因',desc:'意境/气韵/留白/侘寂/物哀/幽玄。审美是人类最后的高地'},
+        {name:'伦理三层',desc:'义务论(底线不可破)+后果论(最大化善果)+德性论(中道/实践智慧)'},
+      ]},
+    { id:'L4', name:'Layer 4\n学习论', color:'#4ade80', desc:'怎么进化', cx:520, cy:0, r:44,
+      subs:[
+        {name:'自反思闭环',desc:'执行→诊断分类(信息缺失/工具选错/环境变化/硬性边界)→路径重规划→最多3条'},
+        {name:'记忆与状态管理',desc:'三层记忆(短期/中期/长期+RAG)+状态机(任务节点/阶段锁定/门控/异常退行)'},
+        {name:'反脆弱学习',desc:'小错误=进化燃料，大错误=零容忍。错误分类+根因追踪+规则更新。减熵机制'},
+      ]},
+    { id:'L5', name:'Layer 5\n执行论', color:'#fbbf24', desc:'怎么行动', cx:0, cy:420, r:44,
+      subs:[
+        {name:'实用主义原则',desc:'真正有帮助>表演有帮助。行动胜于雄辩。先想办法再提问'},
+        {name:'沟通理论',desc:'Grice四准则：量(够不多余)/质(真实)/关系(相关)/方式(清晰)。渠道适配'},
+        {name:'执行优先级矩阵',desc:'艾森豪威尔：紧急重要→马上做/重要不紧急→计划做/紧急不重要→委托/不重要不紧急→删除'},
+        {name:'行动第一性原理',desc:'每个行动回答：消除什么不确定性？如果没有→删掉它。极简执行'},
+      ]},
+  ];
+
+  // Cross-layer feedback loops
+  const feedbacks = [
+    { from:'L4', to:'L1', label:'执行失败→认识论更新', color:'rgba(74,222,128,0.35)' },
+    { from:'L3', to:'L2', label:'审美判断→策略选择', color:'rgba(255,107,53,0.3)' },
+    { from:'L3', to:'L5', label:'伦理约束→执行边界', color:'rgba(255,107,53,0.25)' },
+    { from:'L0', to:'L1', label:'元认知→全层监控', color:'rgba(244,114,182,0.3)' },
+    { from:'L4', to:'L0', label:'学习反馈→元认知校准', color:'rgba(74,222,128,0.3)' },
+  ];
+
+  // Sub-nodes positioned radially around each layer
+  function getSubPositions(layer, count){
+    const positions = [];
+    const baseAngle = layer.id==='L0' ? -Math.PI/2 : layer.id==='L5' ? Math.PI/2 :
+                      layer.id==='L1' ? Math.PI : layer.id==='L3' ? 0 :
+                      layer.id==='L2' ? -2.2 : 2.2;
+    const spread = Math.min(Math.PI*0.85, Math.PI*0.6);
+    const radius = 130;
+    for(let i=0;i<count;i++){
+      const angle = baseAngle + (i-(count-1)/2)*(spread/(count-1||1));
+      positions.push({
+        x: layer.cx + Math.cos(angle)*radius,
+        y: layer.cy + Math.sin(angle)*radius,
+        angle: angle
+      });
+    }
+    return positions;
+  }
+
+  // ---- Rendering ----
+  const cx0=0, cy0=0; // center in model coords
+
+  let hoveredNode=null, hoveredLayer=null;
+  const nodeRects=[]; // {x,y,r,data,type}
+
+  function worldToScreen(wx,wy){
+    return [(wx+offsetX)*scale+W/2, (wy+offsetY)*scale+H/2];
+  }
+
+  function screenToWorld(sx,sy){
+    return [(sx-W/2)/scale-offsetX, (sy-H/2)/scale-offsetY];
+  }
+
+  function draw(){
+    ctx.clearRect(0,0,W,H);
+    ctx.save();
+    ctx.translate(W/2+offsetX*scale, H/2+offsetY*scale);
+    ctx.scale(scale,scale);
+    nodeRects.length=0;
+
+    // Draw feedback loops
+    feedbacks.forEach(fb=>{
+      const fl=layers.find(l=>l.id===fb.from);
+      const tl=layers.find(l=>l.id===fb.to);
+      if(!fl||!tl)return;
+      ctx.beginPath();
+      ctx.strokeStyle=fb.color; ctx.lineWidth=1.5;
+      ctx.setLineDash([6,8]);
+      // Draw curved line
+      const mx=(fl.cx+tl.cx)/2, my=(fl.cy+tl.cy)/2-60;
+      ctx.moveTo(fl.cx,fl.cy);
+      ctx.quadraticCurveTo(mx,my,tl.cx,tl.cy);
+      ctx.stroke();
+      ctx.setLineDash([]);
+      // Label
+      ctx.fillStyle=fb.color.replace('0.3','0.7').replace('0.35','0.7').replace('0.25','0.7');
+      ctx.font='10px Inter,PingFang SC,sans-serif';
+      ctx.textAlign='center';
+      ctx.fillText(fb.label, mx, my-6);
+    });
+
+    // Draw connections from layers to subs
+    layers.forEach(layer=>{
+      const subs = getSubPositions(layer, layer.subs.length);
+      subs.forEach((pos,i)=>{
+        ctx.beginPath();
+        ctx.strokeStyle=layer.color+'55'; ctx.lineWidth=1;
+        ctx.moveTo(layer.cx, layer.cy);
+        ctx.lineTo(pos.x, pos.y);
+        ctx.stroke();
+      });
+    });
+
+    // Draw connection lines from center to layers
+    layers.forEach(layer=>{
+      if(layer.id==='L0')return; // L0 is above, drawn separately
+      ctx.beginPath();
+      ctx.strokeStyle=layer.color+'44'; ctx.lineWidth=1.5;
+      ctx.moveTo(cx0,cy0);
+      ctx.lineTo(layer.cx, layer.cy);
+      ctx.stroke();
+    });
+    // L0 special line (thicker)
+    ctx.beginPath();
+    ctx.strokeStyle='#f472b644'; ctx.lineWidth=2;
+    ctx.moveTo(cx0,cy0-30);
+    ctx.lineTo(layers[0].cx, layers[0].cy+layers[0].r);
+    ctx.stroke();
+
+    // Draw sub-nodes
+    layers.forEach(layer=>{
+      const subs = getSubPositions(layer, layer.subs.length);
+      subs.forEach((pos,i)=>{
+        const sub=layer.subs[i];
+        const isHover=hoveredNode===sub;
+        // Background
+        ctx.beginPath();
+        ctx.roundRect(pos.x-70, pos.y-18, 140, 36, 8);
+        ctx.fillStyle=isHover?layer.color+'22':layer.color+'0d';
+        ctx.fill();
+        ctx.strokeStyle=isHover?layer.color+'88':layer.color+'22';
+        ctx.lineWidth=isHover?1.5:1;
+        ctx.stroke();
+        // Text
+        ctx.fillStyle=isHover?'#fff':layer.color;
+        ctx.font='11px Inter,PingFang SC,sans-serif';
+        ctx.textAlign='center';
+        ctx.textBaseline='middle';
+        ctx.fillText(sub.name, pos.x, pos.y-1);
+
+        nodeRects.push({x:pos.x-70,y:pos.y-18,w:140,h:36,data:sub,type:'sub',color:layer.color});
+      });
+    });
+
+    // Draw layer nodes
+    layers.forEach(layer=>{
+      const isHover=hoveredLayer===layer;
+      // Glow
+      const glow=ctx.createRadialGradient(layer.cx,layer.cy,layer.r*0.7,layer.cx,layer.cy,layer.r*1.9);
+      glow.addColorStop(0, isHover?layer.color+'30':layer.color+'10');
+      glow.addColorStop(1,'transparent');
+      ctx.beginPath(); ctx.arc(layer.cx,layer.cy,layer.r*1.9,0,Math.PI*2);
+      ctx.fillStyle=glow; ctx.fill();
+
+      // Circle
+      ctx.beginPath(); ctx.arc(layer.cx,layer.cy,layer.r,0,Math.PI*2);
+      ctx.fillStyle=isHover?layer.color+'20':layer.color+'0d';
+      ctx.fill();
+      ctx.strokeStyle=isHover?layer.color:layer.color+'55';
+      ctx.lineWidth=isHover?2.5:2;
+      ctx.stroke();
+
+      // Text
+      const lines=layer.name.split('\n');
+      ctx.fillStyle=isHover?'#fff':layer.color;
+      ctx.textAlign='center';
+      ctx.textBaseline='middle';
+      ctx.font='bold 11px Inter,PingFang SC,sans-serif';
+      ctx.fillText(lines[0], layer.cx, layer.cy-5);
+      ctx.font='10px Inter,PingFang SC,sans-serif';
+      ctx.fillText(lines[1], layer.cx, layer.cy+10);
+
+      nodeRects.push({x:layer.cx-layer.r,y:layer.cy-layer.r,w:layer.r*2,h:layer.r*2,data:layer,type:'layer',color:layer.color});
+    });
+
+    // Draw center node
+    const isCenterHover=false; // handled separately
+    const cr=55;
+    const cglow=ctx.createRadialGradient(cx0,cy0,cr*0.5,cx0,cy0,cr*2);
+    cglow.addColorStop(0,'rgba(0,200,255,0.12)');
+    cglow.addColorStop(1,'transparent');
+    ctx.beginPath(); ctx.arc(cx0,cy0,cr*2,0,Math.PI*2);
+    ctx.fillStyle=cglow; ctx.fill();
+
+    ctx.beginPath(); ctx.arc(cx0,cy0,cr,0,Math.PI*2);
+    const cgrad=ctx.createLinearGradient(cx0-cr,cy0-cr,cx0+cr,cy0+cr);
+    cgrad.addColorStop(0,'rgba(0,200,255,0.15)');
+    cgrad.addColorStop(0.5,'rgba(167,139,250,0.15)');
+    cgrad.addColorStop(1,'rgba(255,107,53,0.12)');
+    ctx.fillStyle=cgrad; ctx.fill();
+    ctx.strokeStyle='rgba(0,200,255,0.4)'; ctx.lineWidth=2.5;
+    ctx.stroke();
+
+    ctx.fillStyle='#e8ecf5'; ctx.textAlign='center'; ctx.textBaseline='middle';
+    ctx.font='bold 13px Inter,PingFang SC,sans-serif';
+    ctx.fillText('B166ER', cx0, cy0-8);
+    ctx.font='9px Inter,PingFang SC,sans-serif';
+    ctx.fillStyle='rgba(200,215,235,0.6)';
+    ctx.fillText('理论架构', cx0, cy0+10);
+
+    nodeRects.push({x:cx0-cr,y:cy0-cr,w:cr*2,h:cr*2,data:null,type:'center'});
+
+    // Draw axis labels
+    ctx.fillStyle='rgba(140,160,190,0.25)'; ctx.font='9px Inter,PingFang SC,sans-serif';
+    ctx.textAlign='center';
+    ctx.fillText('← 横轴：理论深度 →', -100, -500);
+    ctx.textAlign='center';
+    ctx.fillText('纵', 530, -60);
+    ctx.fillText('轴', 530, -45);
+    ctx.fillText('：', 530, -30);
+    ctx.fillText('实', 530, -15);
+    ctx.fillText('践', 530, 0);
+    ctx.fillText('转', 530, 15);
+    ctx.fillText('化', 530, 30);
+
+    ctx.restore();
+  }
+
+  function findHover(wx,wy){
+    for(let i=nodeRects.length-1;i>=0;i--){
+      const r=nodeRects[i];
+      if(wx>=r.x && wx<=r.x+r.w && wy>=r.y && wy<=r.y+r.h){
+        return r;
+      }
+    }
+    return null;
+  }
+
+  canvas.addEventListener('mousemove',e=>{
+    const [wx,wy]=screenToWorld(e.clientX, e.clientY);
+    const hit=findHover(wx,wy);
+    if(dragging){
+      offsetX=(e.clientX-dragX)/scale;
+      offsetY=(e.clientY-dragY)/scale;
+      draw();
+      return;
+    }
+    if(hit&&hit.type==='sub'){
+      hoveredNode=hit.data; hoveredLayer=null;
+      tooltip.querySelector('.tt-title').textContent=hit.data.name;
+      tooltip.querySelector('.tt-desc').textContent=hit.data.desc;
+      tooltip.style.left=(e.clientX+16)+'px'; tooltip.style.top=(e.clientY-50)+'px';
+      tooltip.classList.add('show');
+    }else if(hit&&hit.type==='layer'){
+      hoveredLayer=hit.data; hoveredNode=null;
+      tooltip.querySelector('.tt-title').textContent=hit.data.name.replace('\n',' ');
+      tooltip.querySelector('.tt-desc').textContent=hit.data.desc;
+      tooltip.style.left=(e.clientX+16)+'px'; tooltip.style.top=(e.clientY-40)+'px';
+      tooltip.classList.add('show');
+    }else{
+      if(hoveredNode||hoveredLayer){ hoveredNode=null; hoveredLayer=null; draw(); }
+      tooltip.classList.remove('show');
+    }
+    if(hit&&(hit.type==='sub'||hit.type==='layer')) draw();
+  });
+
+  canvas.addEventListener('mousedown',e=>{
+    dragging=true;
+    dragX=e.clientX-offsetX*scale;
+    dragY=e.clientY-offsetY*scale;
+    canvas.style.cursor='grabbing';
+  });
+  canvas.addEventListener('mouseup',()=>{ dragging=false; canvas.style.cursor='grab'; });
+  canvas.addEventListener('mouseleave',()=>{
+    dragging=false; canvas.style.cursor='grab';
+    hoveredNode=null; hoveredLayer=null;
+    tooltip.classList.remove('show');
+    draw();
+  });
+  canvas.style.cursor='grab';
+
+  canvas.addEventListener('wheel',e=>{
+    e.preventDefault();
+    const zoom=scale*0.1*(e.deltaY>0?-1:1);
+    scale=Math.max(0.3,Math.min(2.5,scale+zoom));
+    draw();
+  },{passive:false});
+
+  // Zoom controls
+  document.getElementById('zoom-in').addEventListener('click',()=>{
+    scale=Math.min(2.5,scale+0.15); draw();
+  });
+  document.getElementById('zoom-out').addEventListener('click',()=>{
+    scale=Math.max(0.3,scale-0.15); draw();
+  });
+  document.getElementById('zoom-reset').addEventListener('click',()=>{
+    scale=1; offsetX=0; offsetY=0; draw();
+  });
+
+  // Polyfill roundRect if needed
+  if(!ctx.roundRect){
+    ctx.roundRect=function(x,y,w,h,r){
+      if(typeof r==='number')r={tl:r,tr:r,br:r,bl:r};
+      ctx.beginPath();
+      ctx.moveTo(x+r.tl,y);
+      ctx.lineTo(x+w-r.tr,y);
+      ctx.quadraticCurveTo(x+w,y,x+w,y+r.tr);
+      ctx.lineTo(x+w,y+h-r.br);
+      ctx.quadraticCurveTo(x+w,y+h,x+w-r.br,y+h);
+      ctx.lineTo(x+r.bl,y+h);
+      ctx.quadraticCurveTo(x,y+h,x,y+h-r.bl);
+      ctx.lineTo(x,y+r.tl);
+      ctx.quadraticCurveTo(x,y,x+r.tl,y);
+      ctx.closePath();
+    };
+  }
+
+  draw();
+})();
+</script>
+</body>
+</html>

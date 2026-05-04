@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>AHL 去中心化旅行平台 — 完整项目信息图</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  :root{
+    --bg-deep:#0a0e27; --bg-mid:#131836; --bg-card:rgba(20,30,70,0.55);
+    --cyan:#00c8ff; --cyan-dim:rgba(0,200,255,0.18); --cyan-glow:rgba(0,200,255,0.35);
+    --orange:#ff6b35; --orange-dim:rgba(255,107,53,0.15);
+    --white:#e8ecf5; --text-dim:rgba(200,210,230,0.7); --text-muted:rgba(160,175,200,0.5);
+    --border:rgba(0,200,255,0.10); --border-strong:rgba(0,200,255,0.18);
+    --radius-sm:8px; --radius-md:14px; --radius-lg:22px;
+    --grid-color:rgba(0,200,255,0.04);
+  }
+  body{
+    background:var(--bg-deep);
+    background-image:
+      linear-gradient(rgba(0,200,255,0.015) 1px,transparent 1px),
+      linear-gradient(90deg,rgba(0,200,255,0.015) 1px,transparent 1px);
+    background-size:60px 60px;
+    font-family:'Inter',-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;
+    color:var(--white); line-height:1.6;
+    display:flex; justify-content:center; padding:60px 0 80px;
+  }
+  .container{width:1200px;max-width:100%;padding:0 40px}
+
+  /* Hero */
+  .hero{text-align:center;padding:80px 0 60px;position:relative}
+  .hero::after{
+    content:''; position:absolute; top:-200px; left:50%; transform:translateX(-50%);
+    width:800px;height:400px;background:radial-gradient(ellipse,var(--cyan-dim) 0%,transparent 70%);
+    pointer-events:none; z-index:0;
+  }
+  .hero>*{position:relative;z-index:1}
+  .hero-tag{
+    display:inline-block; font-size:13px; letter-spacing:4px; text-transform:uppercase;
+    color:var(--cyan); border:1px solid var(--border-strong); padding:6px 20px; border-radius:20px;
+    margin-bottom:28px; backdrop-filter:blur(10px);
+  }
+  .hero h1{
+    font-size:56px; font-weight:800; letter-spacing:-0.02em; line-height:1.15;
+    background:linear-gradient(135deg, var(--white) 0%, var(--cyan) 40%, var(--orange) 100%);
+    -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;
+    margin-bottom:16px;
+  }
+  .hero .subtitle{font-size:20px; color:var(--text-dim); font-weight:400; max-width:700px; margin:0 auto 48px}
+  .hero-stats{display:flex;justify-content:center;gap:48px;flex-wrap:wrap}
+  .hero-stat{text-align:center;min-width:140px}
+  .hero-stat .val{font-size:48px;font-weight:800;color:var(--cyan);line-height:1;margin-bottom:6px}
+  .hero-stat .val.orange{color:var(--orange)}
+  .hero-stat .label{font-size:13px;color:var(--text-muted);text-transform:uppercase;letter-spacing:1px}
+
+  /* Section */
+  .section{padding:50px 0;position:relative}
+  .section-label{
+    display:inline-flex;align-items:center;gap:10px;font-size:12px;letter-spacing:3px;
+    color:var(--cyan);text-transform:uppercase;margin-bottom:20px;
+  }
+  .section-label::before{content:'';width:20px;height:1px;background:var(--cyan)}
+  .section h2{font-size:32px;font-weight:700;margin-bottom:32px;letter-spacing:-0.01em}
+  .section h3{font-size:22px;font-weight:600;margin-bottom:16px;color:var(--cyan)}
+
+  /* Cards */
+  .card{
+    background:var(--bg-card); backdrop-filter:blur(20px);
+    border:1px solid var(--border); border-radius:var(--radius-lg);
+    padding:32px; margin-bottom:28px;
+    position:relative; overflow:hidden;
+  }
+  .card::before{
+    content:'';position:absolute;top:0;left:0;right:0;height:1px;
+    background:linear-gradient(90deg,transparent,var(--cyan-dim),transparent);
+  }
+  .card-cyan{border-color:rgba(0,200,255,0.22)}
+  .card-orange{border-color:rgba(255,107,53,0.22)}
+
+  /* Tables */
+  table{width:100%;border-collapse:collapse;font-size:14px}
+  thead th{
+    font-size:11px;text-transform:uppercase;letter-spacing:1.5px;
+    color:var(--cyan);font-weight:600;padding:10px 16px;text-align:left;
+    border-bottom:1px solid var(--border-strong);
+  }
+  tbody td{padding:12px 16px;border-bottom:1px solid var(--border);color:var(--text-dim)}
+  tbody tr:hover td{background:rgba(0,200,255,0.03);color:var(--white)}
+  .highlight{color:var(--cyan);font-weight:600}
+  .highlight-orange{color:var(--orange);font-weight:600}
+
+  /* Comparison */
+  .compare-grid{display:grid;grid-template-columns:1fr auto 1fr;gap:0;align-items:stretch}
+  .compare-col{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-lg);padding:28px}
+  .compare-col.bad{border-color:rgba(255,80,80,0.18);background:rgba(255,60,60,0.05)}
+  .compare-col.good{border-color:rgba(0,200,255,0.22);background:rgba(0,200,255,0.05)}
+  .compare-vs{
+    display:flex;align-items:center;justify-content:center;padding:0 28px;
+    font-size:14px;font-weight:800;color:var(--orange);letter-spacing:2px;
+    text-transform:uppercase;
+  }
+  .compare-col h4{font-size:15px;margin-bottom:12px;font-weight:600}
+  .compare-col.bad h4{color:rgba(255,80,80,0.8)}
+  .compare-col.good h4{color:var(--cyan)}
+  .compare-col p,.compare-col li{font-size:13px;color:var(--text-dim);margin-bottom:6px;line-height:1.7}
+  .compare-col ul{list-style:none;padding:0}
+
+  /* Architecture */
+  .arch-pyramid{position:relative;padding:20px 0 40px}
+  .arch-layer{display:flex;align-items:center;justify-content:center;margin-bottom:16px;position:relative;z-index:1}
+  .arch-box{
+    background:var(--bg-card);border:1px solid var(--border-strong);border-radius:var(--radius-md);
+    padding:18px 32px;text-align:center;backdrop-filter:blur(15px);
+  }
+  .arch-box.w1{width:240px;border-color:var(--cyan-dim)}
+  .arch-box.w2{width:400px;border-color:rgba(0,200,255,0.25)}
+  .arch-box.w3{width:560px;border-color:rgba(0,200,255,0.28)}
+  .arch-box.w4{width:720px;border-color:rgba(0,200,255,0.30)}
+  .arch-box .layer-num{font-size:11px;letter-spacing:2px;color:var(--text-muted);text-transform:uppercase}
+  .arch-box .layer-title{font-size:15px;font-weight:600;color:var(--cyan);margin:4px 0}
+  .arch-box .layer-desc{font-size:11px;color:var(--text-dim)}
+
+  /* Dual Agent */
+  .dual-agent{display:flex;align-items:center;justify-content:center;gap:48px;padding:20px 0}
+  .agent-card{
+    background:var(--bg-card);border:1px solid var(--border-strong);border-radius:var(--radius-lg);
+    padding:24px 28px;text-align:center;width:280px;backdrop-filter:blur(15px);
+  }
+  .agent-card.c-side{border-color:var(--cyan-dim)}
+  .agent-card.b-side{border-color:var(--orange-dim)}
+  .agent-card h4{font-size:15px;margin-bottom:4px}
+  .agent-card.c-side h4{color:var(--cyan)}
+  .agent-card.b-side h4{color:var(--orange)}
+  .agent-card p{font-size:12px;color:var(--text-dim)}
+  .agent-connector{
+    display:flex;align-items:center;gap:8px;flex-direction:column;
+  }
+  .agent-connector .dot{
+    width:10px;height:10px;background:var(--cyan);border-radius:50%;
+    box-shadow:0 0 20px var(--cyan-glow);
+  }
+  .agent-connector line{stroke:var(--cyan-dim);stroke-width:1.5}
+  .agent-connector .label{font-size:10px;color:var(--text-muted);letter-spacing:2px;text-transform:uppercase}
+
+  /* Stats Grid */
+  .stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+  .stat-card{
+    background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-md);
+    padding:24px;text-align:center;backdrop-filter:blur(15px);
+  }
+  .stat-card .num{font-size:36px;font-weight:800;color:var(--cyan);line-height:1.1}
+  .stat-card .desc{font-size:12px;color:var(--text-dim);margin-top:6px}
+
+  /* Revenue */
+  .revenue-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .rev-card{
+    background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-lg);
+    padding:28px;text-align:center;backdrop-filter:blur(15px);position:relative;overflow:hidden;
+  }
+  .rev-card::after{
+    content:'';position:absolute;top:-40px;right:-40px;width:120px;height:120px;
+    border-radius:50%;opacity:0.06;
+  }
+  .rev-card:nth-child(1)::after{background:var(--cyan)}
+  .rev-card:nth-child(2)::after{background:var(--orange)}
+  .rev-card:nth-child(3)::after{background:var(--cyan)}
+  .rev-card .icon{font-size:32px;margin-bottom:12px}
+  .rev-card h4{font-size:16px;color:var(--white);margin-bottom:8px}
+  .rev-card .rate{font-size:36px;font-weight:800;margin-bottom:4px}
+  .rev-card:nth-child(1) .rate{color:var(--cyan)}
+  .rev-card:nth-child(2) .rate{color:var(--orange)}
+  .rev-card:nth-child(3) .rate{color:var(--cyan)}
+  .rev-card .detail{font-size:12px;color:var(--text-dim);line-height:1.6}
+
+  /* Timeline */
+  .timeline{position:relative;padding-left:40px}
+  .timeline::before{
+    content:'';position:absolute;left:12px;top:0;bottom:0;
+    width:1px;background:linear-gradient(180deg,var(--cyan),var(--orange),transparent);
+  }
+  .tl-item{position:relative;margin-bottom:28px;padding-left:32px}
+  .tl-item::before{
+    content:'';position:absolute;left:-35px;top:4px;
+    width:10px;height:10px;background:var(--cyan);border-radius:50%;
+    box-shadow:0 0 12px var(--cyan-glow);
+  }
+  .tl-item .date{font-size:12px;color:var(--cyan);letter-spacing:2px;margin-bottom:4px}
+  .tl-item h4{font-size:15px;color:var(--white);margin-bottom:3px}
+  .tl-item p{font-size:13px;color:var(--text-dim)}
+
+  /* Moats */
+  .moat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+  .moat-item{
+    background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-md);
+    padding:24px;text-align:center;backdrop-filter:blur(15px);
+  }
+  .moat-item .icon{font-size:28px;margin-bottom:8px}
+  .moat-item h4{font-size:14px;color:var(--cyan);margin-bottom:6px}
+  .moat-item p{font-size:12px;color:var(--text-dim);line-height:1.5}
+
+  /* Footer */
+  .footer{text-align:center;padding:60px 0 20px;position:relative}
+  .footer::before{
+    content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);
+    width:200px;height:1px;background:linear-gradient(90deg,transparent,var(--cyan-dim),transparent);
+  }
+  .footer .vision{font-size:18px;color:var(--text-dim);font-weight:500;margin-bottom:16px;line-height:1.7}
+  .footer .brand{
+    font-size:28px;font-weight:800;
+    background:linear-gradient(90deg,var(--cyan),var(--orange));
+    -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+  }
+
+  /* Two col */
+  .two-col{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+  .bar-chart{display:flex;align-items:flex-end;gap:24px;height:160px;padding:0 8px}
+  .bar-group{flex:1;display:flex;flex-direction:column;align-items:center}
+  .bar{width:48px;background:linear-gradient(180deg,var(--cyan),rgba(0,200,255,0.2));border-radius:var(--radius-sm) var(--radius-sm) 0 0;position:relative;transition:height 0.6s}
+  .bar.orange-bg{background:linear-gradient(180deg,var(--orange),rgba(255,107,53,0.2))}
+  .bar .bar-val{position:absolute;top:-22px;left:50%;transform:translateX(-50%);font-size:13px;font-weight:700;color:var(--white)}
+  .bar-label{font-size:11px;color:var(--text-dim);margin-top:8px;text-align:center}
+
+  .team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .team-card{
+    background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-lg);
+    padding:28px;text-align:center;backdrop-filter:blur(15px);
+  }
+  .team-card .role{font-size:12px;letter-spacing:2px;color:var(--cyan);margin-bottom:8px}
+  .team-card .name{font-size:22px;font-weight:700;margin-bottom:4px}
+  .team-card .title{font-size:13px;color:var(--text-dim);margin-bottom:16px}
+  .team-card .value{font-size:12px;color:var(--text-muted);line-height:1.6;font-style:italic}
+
+  .pilot-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+  .pilot-card{
+    background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-md);
+    padding:20px;text-align:center;position:relative;
+  }
+  .pilot-card .status{font-size:11px;letter-spacing:2px;margin-bottom:8px}
+  .pilot-card .status.active{color:#4ade80}
+  .pilot-card .status.waiting{color:var(--orange)}
+  .pilot-card .status.paused{color:var(--text-muted)}
+  .pilot-card h4{font-size:14px;color:var(--white);margin-bottom:4px}
+  .pilot-card p{font-size:11px;color:var(--text-dim)}
+
+  /* Divider */
+  .divider{height:1px;background:linear-gradient(90deg,transparent,var(--border-strong),transparent);margin:10px 0 40px}
+
+  @media(max-width:900px){
+    .container{padding:0 20px}
+    .hero h1{font-size:34px}
+    .hero-stats{gap:24px}
+    .hero-stat .val{font-size:34px}
+    .stats-grid,.moat-grid{grid-template-columns:repeat(2,1fr)}
+    .revenue-grid,.team-grid,.pilot-grid{grid-template-columns:1fr}
+    .two-col{grid-template-columns:1fr}
+    .compare-grid{grid-template-columns:1fr}
+    .compare-vs{padding:16px 0}
+    .dual-agent{flex-direction:column;gap:16px}
+    .agent-card{width:100%}
+    .arch-box.w1{width:180px}.arch-box.w2{width:280px}
+    .arch-box.w3{width:380px}.arch-box.w4{width:480px}
+  }
+
+  @media print{
+    body{background:#0a0e27;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+    .container{max-width:1100px}
+    .section{page-break-inside:avoid}
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-tag">SEED ROUND · 2026</div>
+  <h1>AHL 去中心化旅行平台</h1>
+  <div class="subtitle">住宿业从「货架经济」到「客户经济」的范式革命者</div>
+  <div class="hero-stats">
+    <div class="hero-stat"><div class="val">2-3<small style="font-size:20px">%</small></div><div class="label">技术服务费 vs OTA 15-25%</div></div>
+    <div class="hero-stat"><div class="val orange">&gt;95<small style="font-size:20px">%</small></div><div class="label">AI 向量匹配准确率</div></div>
+    <div class="hero-stat"><div class="val">¥500-800<small style="font-size:20px">万</small></div><div class="label">种子轮融资目标</div></div>
+    <div class="hero-stat"><div class="val orange">87</div><div class="label">AGENT · SKILL 工具集</div></div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- SECTION 1: TEAM -->
+<section class="section">
+  <div class="section-label">· 核心团队 ·</div>
+  <h2>三人黄金三角</h2>
+  <div class="team-grid">
+    <div class="team-card">
+      <div class="role">发起人 / 项目总控</div>
+      <div class="name">张实 Eric</div>
+      <div class="title">BISU旅游管理 · 24年酒店业老兵</div>
+      <div class="value">"从基层干到总经理，他知道住宿业的每一个痛点"</div>
+    </div>
+    <div class="team-card">
+      <div class="role">CTO 首席技术官</div>
+      <div class="name">李源</div>
+      <div class="title">华科AI博士 · 10年+研发</div>
+      <div class="value">"能让AI真正理解'我喜欢有故事的老房子'"</div>
+    </div>
+    <div class="team-card">
+      <div class="role">CSO 首席战略官</div>
+      <div class="name">陈思序</div>
+      <div class="title">世界500强高管 · PE/VC+IPO全流程</div>
+      <div class="value">"知道如何把一个好想法变成改变行业的现实"</div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- SECTION 2: PARADIGM SHIFT -->
+<section class="section">
+  <div class="section-label">· 范式革命 ·</div>
+  <h2>从「货架经济」到「客户经济」</h2>
+  <div class="compare-grid">
+    <div class="compare-col bad">
+      <h4>❌ 旧范式 · 货架经济</h4>
+      <ul>
+        <li>商家被动等待，放上OTA货架</li>
+        <li>消费者翻100页，随便选一个</li>
+        <li>信息过载，供需错配</li>
+        <li>佣金 20-30%，利润被抽空</li>
+        <li>数据归平台，商户无积累</li>
+      </ul>
+    </div>
+    <div class="compare-vs">VS</div>
+    <div class="compare-col good">
+      <h4>✅ 新范式 · 客户经济</h4>
+      <ul>
+        <li>AI管家自然语言理解需求</li>
+        <li>向量匹配 Top-3，讲清为什么</li>
+        <li>精准匹配，双向价值最大化</li>
+        <li>技术费 2-3%，节省 80% 成本</li>
+        <li>数据归商户，持续积累资产</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- SECTION 3: ARCHITECTURE -->
+<section class="section">
+  <div class="section-label">· 产品架构 ·</div>
+  <h2>四层金字塔 + 双 AGENT 引擎</h2>
+
+  <!-- Pyramid -->
+  <div class="arch-pyramid">
+    <div class="arch-layer"><div class="arch-box w1">
+      <div class="layer-num">LAYER 04</div>
+      <div class="layer-title">应用层</div>
+      <div class="layer-desc">消费者自然语言交互 · 商家 AGENT 运营决策</div>
+    </div></div>
+    <div class="arch-layer"><div class="arch-box w2">
+      <div class="layer-num">LAYER 03</div>
+      <div class="layer-title">双 AGENT 智能层</div>
+      <div class="layer-desc">C端AI管家 ↔ 向量匹配引擎 ↔ B端AI运营官</div>
+    </div></div>
+    <div class="arch-layer"><div class="arch-box w3">
+      <div class="layer-num">LAYER 02</div>
+      <div class="layer-title">AGENT 集群层 <span style="color:var(--orange)">9×87 SKILL</span></div>
+      <div class="layer-desc">核心 · 营销 · 收益 · 工程 · 安防 · 宴会 · 财务 · 人力 · 供应链</div>
+    </div></div>
+    <div class="arch-layer"><div class="arch-box w4">
+      <div class="layer-num">LAYER 01</div>
+      <div class="layer-title">数据协议层</div>
+      <div class="layer-desc">标准向量数据（房型/价格/设施） + 非标向量数据（噪音/光照/主理人语义/深水数据）</div>
+    </div></div>
+  </div>
+
+  <!-- Dual Agent -->
+  <div class="dual-agent" style="margin-top:20px">
+    <div class="agent-card c-side">
+      <h4>🤖 C 端 · AI 管家</h4>
+      <p>自然语言理解需求<br>实体提取 → 需求向量<br>多轮澄清 → 精准匹配<br>直连预订，零中间商</p>
+    </div>
+    <div class="agent-connector">
+      <div class="dot"></div>
+      <svg width="80" height="40"><line x1="0" y1="20" x2="80" y2="20" stroke="rgba(0,200,255,0.25)" stroke-width="1.5" stroke-dasharray="4 6"/></svg>
+      <div class="dot" style="background:var(--orange);box-shadow:0 0 20px rgba(255,107,53,0.35)"></div>
+      <div class="label">向量引擎</div>
+      <div class="dot" style="background:var(--cyan);box-shadow:0 0 20px rgba(0,200,255,0.35)"></div>
+      <svg width="80" height="40"><line x1="0" y1="20" x2="80" y2="20" stroke="rgba(0,200,255,0.25)" stroke-width="1.5" stroke-dasharray="4 6"/></svg>
+      <div class="dot"></div>
+    </div>
+    <div class="agent-card b-side">
+      <h4>🏨 B 端 · AI 运营官</h4>
+      <p>产品向量化封装<br>动态定价 · 库存管理<br>客户洞察 · 精准营销<br>多 AGENT 集群协同</p>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- SECTION 4: BUSINESS MODEL -->
+<section class="section">
+  <div class="section-label">· 商业模式 ·</div>
+  <h2>三层收入结构</h2>
+  <div class="revenue-grid">
+    <div class="rev-card">
+      <div class="icon">⚡</div>
+      <h4>技术服务费（核心）</h4>
+      <div class="rate">2-3%</div>
+      <div class="detail">按成交 GMV 收取<br>vs OTA 15-25%<br>商户节省 <b style="color:var(--cyan)">80%</b> 佣金成本</div>
+    </div>
+    <div class="rev-card">
+      <div class="icon">📦</div>
+      <h4>AI 订阅费</h4>
+      <div class="rate">¥3,999-9,980<small style="font-size:14px">/年</small></div>
+      <div class="detail">基础版 → 专业版 → 旗舰版<br>AI客服 · 收益管理 · 专属训练<br>覆盖从单体到连锁全场景</div>
+    </div>
+    <div class="rev-card">
+      <div class="icon">🔌</div>
+      <h4>数据路由费</h4>
+      <div class="rate">¥0.05-0.1<small style="font-size:14px">/次</small></div>
+      <div class="detail">大模型平台 API 调用<br>协议层向上连接 LLM<br>边际成本趋近于零</div>
+    </div>
+  </div>
+
+  <div class="card card-cyan" style="margin-top:24px">
+    <h3>单位经济模型</h3>
+    <div class="stats-grid" style="margin-top:16px">
+      <div class="stat-card">
+        <div class="num">¥8,000<small style="font-size:16px">万</small></div>
+        <div class="desc">盈亏平衡 GMV / 年</div>
+      </div>
+      <div class="stat-card">
+        <div class="num" style="color:var(--orange)">18</div>
+        <div class="desc">个月达到平衡</div>
+      </div>
+      <div class="stat-card">
+        <div class="num">≈0</div>
+        <div class="desc">边际成本（技术平台）</div>
+      </div>
+      <div class="stat-card">
+        <div class="num" style="color:var(--orange)">-80%</div>
+        <div class="desc">商户佣金节省率</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- SECTION 5: AHL vs OTA -->
+<section class="section">
+  <div class="section-label">· 竞争优势 ·</div>
+  <h2>AHL vs OTA 五维碾压</h2>
+  <div class="card card-cyan">
+    <table>
+      <thead><tr><th>维度</th><th>AHL</th><th>OTA（携程/美团）</th></tr></thead>
+      <tbody>
+        <tr><td><b>收费模式</b></td><td class="highlight">技术费 2-3%</td><td style="color:rgba(255,100,100,0.8)">佣金 15-25%</td></tr>
+        <tr><td><b>数据归属</b></td><td class="highlight">商户自有，持续积累</td><td style="color:rgba(255,100,100,0.8)">平台垄断，商户无积累</td></tr>
+        <tr><td><b>用户交互</b></td><td class="highlight">对话式 AI，自然语言</td><td style="color:rgba(255,100,100,0.8)">搜索比价，翻100页</td></tr>
+        <tr><td><b>商户关系</b></td><td class="highlight">赋能型 · 伙伴关系</td><td style="color:rgba(255,100,100,0.8)">抽成型 · 流量入口控制</td></tr>
+        <tr><td><b>技术路线</b></td><td class="highlight">AI 原生 · 向量匹配</td><td style="color:rgba(255,100,100,0.8)">传统互联网 · 搜索排序</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3 style="margin-top:32px">四大核心壁垒</h3>
+  <div class="moat-grid">
+    <div class="moat-item">
+      <div class="icon">🔍</div>
+      <h4>深水数据</h4>
+      <p>噪音分贝 · 光照指数<br>主理人语义画像<br>OTA 采集不到的维度</p>
+    </div>
+    <div class="moat-item">
+      <div class="icon">🧠</div>
+      <h4>垂类模型 AHL-LLM</h4>
+      <p>懂住宿业的非标需求<br>"有故事的老房子"<br>中文 NLP 准确率 95%+</p>
+    </div>
+    <div class="moat-item">
+      <div class="icon">🔗</div>
+      <h4>协议层</h4>
+      <p>向上连接通用大模型<br>向下连接 PMS 系统<br>成为行业基础设施</p>
+    </div>
+    <div class="moat-item">
+      <div class="icon">🌐</div>
+      <h4>网络效应</h4>
+      <p>商户越多 → 匹配越准<br>→ 用户越多 → 商户越多<br>双边飞轮加速</p>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- SECTION 6: FINANCING -->
+<section class="section">
+  <div class="section-label">· 种子轮融资 ·</div>
+  <h2>¥500-800 万 · 资金用途分布</h2>
+  <div class="two-col">
+    <div class="card card-cyan">
+      <h3>资金分配</h3>
+      <div class="bar-chart" style="margin-top:20px">
+        <div class="bar-group">
+          <div class="bar" style="height:128px"><div class="bar-val">40%</div></div>
+          <div class="bar-label">产品研发<br>¥240万</div>
+        </div>
+        <div class="bar-group">
+          <div class="bar orange-bg" style="height:96px"><div class="bar-val">30%</div></div>
+          <div class="bar-label">市场拓展<br>¥180万</div>
+        </div>
+        <div class="bar-group">
+          <div class="bar" style="height:64px"><div class="bar-val">20%</div></div>
+          <div class="bar-label">团队建设<br>¥120万</div>
+        </div>
+        <div class="bar-group">
+          <div class="bar orange-bg" style="height:32px"><div class="bar-val">10%</div></div>
+          <div class="bar-label">运营储备<br>¥60万</div>
+        </div>
+      </div>
+    </div>
+    <div class="card card-orange">
+      <h3>里程碑路线</h3>
+      <div class="timeline" style="margin-top:16px">
+        <div class="tl-item">
+          <div class="date">2026.06 · MONTH 1-6</div>
+          <h4>MVP 完成 · 首批 10 家接入</h4>
+          <p>双AGENT核心引擎上线、垂直模型训练、乐山/成都试点启动</p>
+        </div>
+        <div class="tl-item">
+          <div class="date">2026.12 · MONTH 7-12</div>
+          <h4>模式验证 · 100 家商户</h4>
+          <p>GMV 突破 ¥500万、人均匹配率 >95%、开始收费验证</p>
+        </div>
+        <div class="tl-item">
+          <div class="date">2027.06 · MONTH 13-18</div>
+          <h4>Pre-A 轮 · 规模化扩张</h4>
+          <p>盈亏平衡或接近、500家商户、跨区域复制、Pre-A融资启动</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- SECTION 7: PILOTS -->
+<section class="section">
+  <div class="section-label">· 试点布局 ·</div>
+  <h2>四大试点 · 梯度推进</h2>
+  <div class="pilot-grid">
+    <div class="pilot-card" style="border-color:var(--cyan-dim)">
+      <div class="status active">● P0 第一优先级</div>
+      <h4>成都春熙宾馆</h4>
+      <p>成都文旅已确认<br>AI客服+收益管理+数字人<br>首站试点验证</p>
+    </div>
+    <div class="pilot-card">
+      <div class="status waiting">● 待推进</div>
+      <h4>乐山锦江嘉州宾馆</h4>
+      <p>150间 · 携程4.7分<br>三江交汇景观<br>数据已核实，春熙后启动</p>
+    </div>
+    <div class="pilot-card" style="border-color:rgba(74,222,128,0.18)">
+      <div class="status active">● 方案就绪</div>
+      <h4>苏州酒管公司</h4>
+      <p>62个SKILL方案V1.0<br>AGENT集群已方案化<br>B端管理深度验证</p>
+    </div>
+    <div class="pilot-card">
+      <div class="status paused">● 暂停</div>
+      <h4>大理 0 号实验室</h4>
+      <p>概念级体验空间<br>待进一步明确<br>中长期孵化</p>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- SECTION 8: ROADMAP -->
+<section class="section">
+  <div class="section-label">· 愿景路线 ·</div>
+  <h2>三年成为住宿业基础设施</h2>
+  <div class="stats-grid">
+    <div class="stat-card" style="border-color:var(--cyan-dim)">
+      <div class="num" style="font-size:20px;color:var(--text-dim)">6 个月</div>
+      <h4 style="color:var(--cyan);margin:8px 0;font-size:14px">证明范式可行</h4>
+      <p style="font-size:12px;color:var(--text-dim)">50家商户接入<br>1000消费者体验</p>
+    </div>
+    <div class="stat-card" style="border-color:rgba(0,200,255,0.25)">
+      <div class="num" style="font-size:20px;color:var(--text-dim)">12 个月</div>
+      <h4 style="color:var(--cyan);margin:8px 0;font-size:14px">建立范式认知</h4>
+      <p style="font-size:12px;color:var(--text-dim)">500家商户主动接入<br>GMV突破¥5000万</p>
+    </div>
+    <div class="stat-card" style="border-color:rgba(0,200,255,0.28)">
+      <div class="num" style="font-size:20px;color:var(--text-dim)">36 个月</div>
+      <h4 style="color:var(--cyan);margin:8px 0;font-size:14px">成为行业标准</h4>
+      <p style="font-size:12px;color:var(--text-dim)">AHL协议=行业基础设施<br>住宿业的TCP/IP</p>
+    </div>
+    <div class="stat-card">
+      <div class="num" style="font-size:20px;color:var(--text-dim)">长期</div>
+      <h4 style="color:var(--orange);margin:8px 0;font-size:14px">全品类扩展</h4>
+      <p style="font-size:12px;color:var(--text-dim)">从住宿到餐饮·体验·出行<br>旅行产业的AI协议层</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<section class="footer">
+  <p class="vision">"2026年将是住宿业的转折点。<br>从这一年开始，行业将从货架经济走向客户经济。<br>而我们，是这个转折点的创造者。"</p>
+  <div style="margin-top:32px">
+    <div class="brand" style="display:inline-block">AHL</div>
+    <div style="font-size:12px;color:var(--text-muted);margin-top:8px">去中心化旅行平台 · AI向量匹配 · 住宿业范式革命</div>
+    <div style="font-size:11px;color:rgba(160,175,200,0.3);margin-top:40px">AHL COMPLETE PROJECT INFOGRAPHIC · V1.0 · MAY 2026</div>
+  </div>
+</section>
+
+</div>
+</body>
+</html>

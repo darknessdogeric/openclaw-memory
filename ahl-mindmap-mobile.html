@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+<title>AHL 项目思维导图</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#080c1f; --cyan:#00c8ff; --orange:#ff6b35; --gold:#fbbf24; --green:#4ade80;
+  --text:#dde4f0; --dim:rgba(180,195,220,0.65); --muted:rgba(140,160,190,0.35);
+  --card-bg:rgba(14,23,55,0.8); --border:rgba(0,200,255,0.12);
+  --cyan-dim:rgba(0,200,255,0.08); --orange-dim:rgba(255,107,53,0.08);
+}
+body{
+  background:var(--bg);
+  background-image:radial-gradient(ellipse 300px 400px at 50% 10%, rgba(0,200,255,0.05) 0%, transparent 70%),
+    linear-gradient(rgba(0,200,255,0.015) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(0,200,255,0.015) 1px,transparent 1px);
+  background-size:100% 100%, 32px 32px, 32px 32px;
+  font-family:'Inter',-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;
+  color:var(--text); min-height:100vh; padding:16px;
+  display:flex; flex-direction:column; align-items:center;
+}
+.container{width:100%;max-width:420px}
+
+/* Header */
+.header{text-align:center;padding:32px 0 24px;position:relative}
+.header::after{
+  content:'';position:absolute;top:-80px;left:50%;transform:translateX(-50%);
+  width:280px;height:140px;background:radial-gradient(ellipse,var(--cyan-dim) 0%,transparent 70%);
+}
+.header>*{position:relative;z-index:1}
+.header .tag{
+  display:inline-block;font-size:10px;letter-spacing:3px;color:var(--cyan);
+  border:1px solid rgba(0,200,255,0.2);padding:4px 14px;border-radius:12px;margin-bottom:12px;
+}
+.header h1{
+  font-size:22px;font-weight:800;letter-spacing:-0.01em;line-height:1.2;
+  background:linear-gradient(135deg,#fff 0%,var(--cyan) 35%,var(--orange) 100%);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+}
+.header .sub{font-size:12px;color:var(--dim);margin-top:6px}
+
+/* Mind map tree */
+.tree{padding:0 0 40px;position:relative}
+
+.node{
+  background:var(--card-bg);border:1px solid var(--border);
+  border-radius:16px;padding:16px;margin-bottom:10px;
+  backdrop-filter:blur(12px);position:relative;overflow:hidden;
+}
+.node::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:1px;
+  background:linear-gradient(90deg,transparent,var(--cyan-dim),transparent);
+}
+.node-root{
+  border-color:rgba(0,200,255,0.25);
+  background:linear-gradient(135deg,rgba(0,200,255,0.08) 0%,rgba(255,107,53,0.04) 100%);
+}
+.node .label{
+  font-size:10px;letter-spacing:2px;text-transform:uppercase;margin-bottom:6px;
+}
+.node .title{font-size:15px;font-weight:700;margin-bottom:4px}
+.node .desc{font-size:11px;color:var(--dim);line-height:1.55}
+
+/* Branch colors */
+.b-cyan .label,.b-cyan .title{color:var(--cyan)} .b-cyan{border-color:rgba(0,200,255,0.15)}
+.b-orange .label,.b-orange .title{color:var(--orange)} .b-orange{border-color:rgba(255,107,53,0.15)}
+.b-gold .label,.b-gold .title{color:var(--gold)} .b-gold{border-color:rgba(251,191,36,0.15)}
+.b-green .label,.b-green .title{color:var(--green)} .b-green{border-color:rgba(74,222,128,0.15)}
+.b-mix .label{color:var(--cyan)}
+.b-mix .title{background:linear-gradient(135deg,var(--cyan),var(--orange));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+
+/* Indent levels */
+.l1{margin-left:0}
+.l2{margin-left:20px;position:relative}
+.l2::before{
+  content:'';position:absolute;left:-16px;top:0;bottom:0;
+  width:1px;background:linear-gradient(180deg,var(--cyan-dim),transparent 80%);
+}
+.l2::after{
+  content:'';position:absolute;left:-16px;top:24px;
+  width:12px;height:1px;background:var(--cyan-dim);
+}
+.l3{margin-left:40px;position:relative}
+.l3::before{
+  content:'';position:absolute;left:-32px;top:0;bottom:0;
+  width:1px;background:linear-gradient(180deg,var(--orange-dim),transparent 80%);
+}
+.l3::after{
+  content:'';position:absolute;left:-32px;top:20px;
+  width:28px;height:1px;background:var(--orange-dim);
+}
+
+/* Stat chips */
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.chip{
+  font-size:10px;padding:5px 10px;border-radius:6px;
+  border:1px solid var(--border);background:rgba(0,200,255,0.04);
+  color:var(--dim);white-space:nowrap;
+}
+.chip .val{color:var(--cyan);font-weight:700}
+.chip .val-o{color:var(--orange);font-weight:700}
+
+/* Mini bullet list */
+.bullets{margin-top:8px;display:flex;flex-direction:column;gap:4px}
+.bullet{
+  font-size:10px;color:var(--dim);display:flex;align-items:flex-start;gap:6px;line-height:1.5;
+}
+.bullet::before{content:'·';color:var(--cyan);font-weight:700;flex-shrink:0}
+
+/* Compare row */
+.compare-row{display:grid;grid-template-columns:1fr auto 1fr;gap:8px;align-items:center;margin-top:8px}
+.compare-old,.compare-new{
+  font-size:10px;padding:8px;border-radius:8px;line-height:1.5;
+}
+.compare-old{background:rgba(255,60,60,0.06);border:1px solid rgba(255,60,60,0.12);color:rgba(255,130,130,0.8)}
+.compare-new{background:rgba(0,200,255,0.06);border:1px solid rgba(0,200,255,0.12);color:rgba(0,200,255,0.85)}
+.compare-vs{font-size:10px;font-weight:800;color:var(--orange)}
+
+/* Footer */
+.footer{text-align:center;padding:20px 0 40px}
+.footer .logo{
+  font-size:28px;font-weight:800;
+  background:linear-gradient(90deg,var(--cyan),var(--orange));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+}
+.footer .line{font-size:10px;color:var(--muted);margin-top:4px}
+
+/* Touch feedback */
+.node:active{transform:scale(0.985);transition:transform 0.1s}
+
+/* Animation */
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(12px)}
+  to{opacity:1;transform:translateY(0)}
+}
+.node{animation:fadeUp 0.5s ease-out backwards}
+.node:nth-child(2){animation-delay:0.05s}
+.node:nth-child(3){animation-delay:0.1s}
+.node:nth-child(4){animation-delay:0.15s}
+.node:nth-child(5){animation-delay:0.2s}
+.node:nth-child(6){animation-delay:0.25s}
+.node:nth-child(7){animation-delay:0.3s}
+.node:nth-child(8){animation-delay:0.35s}
+.node:nth-child(9){animation-delay:0.4s}
+</style>
+</head>
+<body>
+<div class="container">
+
+<!-- HEADER -->
+<div class="header">
+  <div class="tag">SEED ROUND · 2026</div>
+  <h1>AHL 去中心化旅行平台</h1>
+  <div class="sub">思维导图 · 完整项目架构</div>
+</div>
+
+<!-- TREE -->
+<div class="tree">
+
+<!-- ROOT -->
+<div class="node node-root l1">
+  <div class="label">ROOT</div>
+  <div class="title">AHL = 住宿业从「货架经济」到「客户经济」的范式革命</div>
+  <div class="desc">不是OTA替代品。用AI向量匹配重构住宿业交易底层逻辑的新协议。</div>
+  <div class="chips">
+    <div class="chip"><span class="val">2-3%</span> 技术费</div>
+    <div class="chip"><span class="val-o">>95%</span> 匹配率</div>
+    <div class="chip"><span class="val">87</span> SKILL</div>
+    <div class="chip"><span class="val-o">¥500-800万</span> 种子轮</div>
+  </div>
+</div>
+
+<!-- 1. TEAM -->
+<div class="node b-cyan l2">
+  <div class="label">01 · 核心团队</div>
+  <div class="title">三人黄金三角</div>
+  <div class="bullets">
+    <div class="bullet"><b style="color:var(--cyan)">张实 Eric</b> · 发起人/总控 · 24年酒店老兵 · 判断"做什么"</div>
+    <div class="bullet"><b style="color:var(--orange)">李源</b> · CTO · 华科AI博士 · 10年研发 · 判断"怎么做"</div>
+    <div class="bullet"><b style="color:var(--gold)">陈思序</b> · CSO · 世界500强+PE/VC · 判断"何时做"</div>
+  </div>
+</div>
+
+<!-- 2. PARADIGM -->
+<div class="node b-mix l2">
+  <div class="label">02 · 范式革命</div>
+  <div class="title">货架经济 → 客户经济</div>
+  <div class="compare-row">
+    <div class="compare-old">
+      ❌ 旧范式<br>
+      商家被动上OTA货架<br>
+      消费者翻100页<br>
+      佣金 20-30%<br>
+      数据归平台
+    </div>
+    <div class="compare-vs">VS</div>
+    <div class="compare-new">
+      ✅ 新范式<br>
+      AI管家理解需求<br>
+      向量匹配 Top-3<br>
+      技术费 2-3%<br>
+      数据归商户
+    </div>
+  </div>
+</div>
+
+<!-- 3. ARCHITECTURE -->
+<div class="node b-cyan l2">
+  <div class="label">03 · 产品架构</div>
+  <div class="title">四层金字塔 + 双AGENT引擎</div>
+  <div class="bullets">
+    <div class="bullet"><b style="color:var(--cyan)">L4 应用层</b> · 消费者自然语言交互 + 商家AGENT决策</div>
+    <div class="bullet"><b style="color:var(--cyan)">L3 双AGENT层</b> · C端AI管家 ↔ 向量引擎 ↔ B端AI运营官</div>
+    <div class="bullet"><b style="color:var(--orange)">L2 集群层</b> · 9大AGENT × 87 SKILL：核心/营销/收益/工程/安防/宴会/财务/人力/供应链</div>
+    <div class="bullet"><b style="color:var(--dim)">L1 数据层</b> · 标准向量 + 非标深水数据（噪音/光照/主理人语义）</div>
+  </div>
+</div>
+
+<!-- 4. DUAL AGENT detail -->
+<div class="node b-orange l3">
+  <div class="label">3.1 · 双AGENT详解</div>
+  <div class="title">C端AI管家 ↔ B端AI运营官</div>
+  <div class="bullets">
+    <div class="bullet"><b style="color:var(--cyan)">C端管家</b>：NLP理解→实体提取→需求向量→多轮澄清→Top-K匹配→直连预订</div>
+    <div class="bullet"><b style="color:var(--orange)">B端运营官</b>：产品向量化→动态定价→库存管理→客户洞察→精准营销→集群协同</div>
+    <div class="bullet"><b style="color:var(--gold)">引擎</b>：匹配准确率>95% · 响应<3秒 · 中文NLP 95%+ · 87%偏好语音</div>
+  </div>
+</div>
+
+<!-- 5. BUSINESS MODEL -->
+<div class="node b-cyan l2">
+  <div class="label">04 · 商业模式</div>
+  <div class="title">三层收入 · 零边际成本</div>
+  <div class="bullets">
+    <div class="bullet"><b style="color:var(--cyan)">技术服务费 2-3%</b>（核心）· 按GMV收取 · vs OTA 15-25% · 节省80%</div>
+    <div class="bullet"><b style="color:var(--orange)">AI订阅 ¥3,999-9,980/年</b> · 基础版→专业版→旗舰版</div>
+    <div class="bullet"><b style="color:var(--gold)">数据路由费 ¥0.05-0.1/次</b> · 大模型API调用</div>
+  </div>
+  <div class="chips">
+    <div class="chip">盈亏平衡 <span class="val">¥8000万 GMV</span></div>
+    <div class="chip">达到平衡 <span class="val-o">18个月</span></div>
+    <div class="chip">边际成本 <span class="val">≈0</span></div>
+  </div>
+</div>
+
+<!-- 6. VS OTA -->
+<div class="node b-orange l2">
+  <div class="label">05 · 竞争优势</div>
+  <div class="title">AHL vs OTA 五维碾压</div>
+  <div class="bullets">
+    <div class="bullet"><b>收费</b> | <span style="color:var(--cyan)">2-3%技术费</span> vs <span style="color:rgba(255,100,100,0.7)">15-25%佣金</span></div>
+    <div class="bullet"><b>数据</b> | <span style="color:var(--cyan)">商户自有</span> vs <span style="color:rgba(255,100,100,0.7)">平台垄断</span></div>
+    <div class="bullet"><b>交互</b> | <span style="color:var(--cyan)">对话式AI</span> vs <span style="color:rgba(255,100,100,0.7)">搜索比价</span></div>
+    <div class="bullet"><b>关系</b> | <span style="color:var(--cyan)">赋能伙伴</span> vs <span style="color:rgba(255,100,100,0.7)">抽成控制</span></div>
+    <div class="bullet"><b>路线</b> | <span style="color:var(--cyan)">AI原生</span> vs <span style="color:rgba(255,100,100,0.7)">传统互联网</span></div>
+  </div>
+</div>
+
+<!-- 7. MOATS -->
+<div class="node b-green l2">
+  <div class="label">06 · 四大核心壁垒</div>
+  <div class="title">OTA无法复制的护城河</div>
+  <div class="bullets">
+    <div class="bullet"><b style="color:var(--cyan)">深水数据</b> · 噪音分贝/光照指数/主理人语义 · OTA采集不到</div>
+    <div class="bullet"><b style="color:var(--orange)">AHL-LLM</b> · 懂住宿业非标需求的垂类模型 · "有故事的老房子"</div>
+    <div class="bullet"><b style="color:var(--gold)">协议层</b> · 上接通用大模型 下接PMS · 成为行业基础设施</div>
+    <div class="bullet"><b style="color:var(--green)">网络效应</b> · 商户↑→匹配准→用户↑→商户↑ · 双边飞轮</div>
+  </div>
+</div>
+
+<!-- 8. FINANCING -->
+<div class="node b-orange l2">
+  <div class="label">07 · 种子轮融资</div>
+  <div class="title">¥500-800万 · 四大用途</div>
+  <div class="bullets">
+    <div class="bullet"><b style="color:var(--cyan)">40% 产品研发</b> · ¥240万 · 垂直模型训练/双AGENT/SKILL打磨</div>
+    <div class="bullet"><b style="color:var(--orange)">30% 市场拓展</b> · ¥180万 · 大理0号实验室/首批标杆/地推</div>
+    <div class="bullet"><b style="color:var(--gold)">20% 团队建设</b> · ¥120万 · 技术人才/行业顾问</div>
+    <div class="bullet"><b style="color:var(--green)">10% 运营储备</b> · ¥60万 · 18个月runway</div>
+  </div>
+</div>
+
+<!-- 9. PILOTS -->
+<div class="node b-gold l2">
+  <div class="label">08 · 试点布局</div>
+  <div class="title">四大试点 · 梯度推进</div>
+  <div class="bullets">
+    <div class="bullet"><b>🟢 P0 成都春熙宾馆</b> · 成都文旅已确认 · AI客服+收益管理+数字人</div>
+    <div class="bullet"><b>🟡 乐山锦江嘉州</b> · 150间/4.7分 · 数据已核实 · 春熙后启动</div>
+    <div class="bullet"><b>🟢 苏州酒管</b> · 62个SKILL V1.0 · 方案就绪</div>
+    <div class="bullet"><b>⏸️ 大理0号实验室</b> · 概念空间 · 中长期孵化</div>
+  </div>
+</div>
+
+<!-- 10. ROADMAP -->
+<div class="node b-cyan l2">
+  <div class="label">09 · 路线图</div>
+  <div class="title">三年成为住宿业基础设施</div>
+  <div class="bullets">
+    <div class="bullet"><b style="color:var(--cyan)">6个月</b> · MVP完成 · 10家接入 · 证明范式可行</div>
+    <div class="bullet"><b style="color:var(--orange)">12个月</b> · 100家商户 · GMV¥500万 · Pre-A准备</div>
+    <div class="bullet"><b style="color:var(--gold)">18个月</b> · 盈亏平衡 · 500家 · Pre-A融资</div>
+    <div class="bullet"><b style="color:var(--green)">36个月</b> · AHL协议=行业标准 · 住宿业的TCP/IP</div>
+  </div>
+</div>
+
+<!-- 11. VISION -->
+<div class="node b-mix l2">
+  <div class="label">10 · 愿景</div>
+  <div class="title">核心信念</div>
+  <div class="desc" style="font-size:12px;color:var(--dim);font-style:italic;margin-top:4px">
+    "2026年将是住宿业的转折点。<br>
+    从这一年开始，行业将从货架经济走向客户经济。<br>
+    而我们，是这个转折点的创造者。"
+  </div>
+</div>
+
+</div>
+
+<div class="footer">
+  <div class="logo">AHL</div>
+  <div class="line">去中心化旅行平台 · AI向量匹配 · 范式革命</div>
+</div>
+
+</div>
+</body>
+</html>
