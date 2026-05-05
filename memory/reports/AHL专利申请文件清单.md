@@ -22,6 +22,8 @@
 | 9 | AHL-LLM 住宿业交易协议方案.pdf | 217KB | AHL-LLM协议设计 | AHL项目 |
 | 10 | ahl-knowledge-base-v1.md | 10KB | AHL项目知识库完整版 | 我整理 |
 | 11 | 住宿业垂直大模型与双AGENT智能托管系统.docx | 26KB | 核心技术方案 | AHL项目 |
+| 12 | **toolbox/scrape_matrix.py** | 17KB | **爬虫技能矩阵V1.0（4工具编排）** | B166ER |
+| 13 | **toolbox/obscura/** | 49MB | **Obscura无头浏览器（含反检测）** | GitHub |
 
 **PDF文件共2个**：
 - AHL全SKILL目录V1.0_1.pdf

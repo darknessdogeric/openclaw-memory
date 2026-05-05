@@ -131,14 +131,14 @@ class ScrapToolsAdapter(BaseScraperAdapter):
 
     def _fetch(self, url: str) -> str:
         cmd = [sys.executable, _SCRAPE_TOOLS, "fetch", url]
-        r = subprocess.run(cmd, capture_output=True, timeout=30,
+        r = subprocess.run(cmd, capture_output=True, timeout=120,
                           errors="replace")
         return (r.stdout or "") + (r.stderr or "")
 
 
     def _dynamic(self, url: str) -> str:
         cmd = [sys.executable, _SCRAPE_TOOLS, "dynamic", url]
-        r = subprocess.run(cmd, capture_output=True, timeout=60,
+        r = subprocess.run(cmd, capture_output=True, timeout=120,
                           errors="replace")
         return (r.stdout or "") + (r.stderr or "")
 
