@@ -188,3 +188,12 @@
 | 竖版9:16手机海报 | ✅ 掌握 | 2160×3840 Retina，4次迭代 |
 | 参考图风格复现 | ✅ 掌握 | 玻璃拟态/扁平/深色科技全风格 |
 | AHL海报 | ✅ 完成 | 4版本（AHL树形架构图） |
+
+## Promoted From Short-Term Memory (2026-05-05)
+
+<!-- openclaw-memory-promotion:memory:memory/2026-04-30.md:5:5 -->
+- **触发**: Eric 指令 "根据你的自我认知和判断，继续优化迭代这套东西" [score=0.837 recalls=0 avg=0.620 source=memory/2026-04-30.md:5-5]
+<!-- openclaw-memory-promotion:memory:memory/2026-04-30.md:12:12 -->
+- **V2.1 深化（20:25 Eric 四条指令）**: [score=0.837 recalls=0 avg=0.620 source=memory/2026-04-30.md:12-12]
+<!-- openclaw-memory-promotion:memory:memory/2026-04-30.md:18:18 -->
+- **关键变更**： [score=0.837 recalls=0 avg=0.620 source=memory/2026-04-30.md:18-18]
