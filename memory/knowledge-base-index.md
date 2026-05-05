@@ -9,7 +9,13 @@
 |------|------|------|
 | design-md | `skills/design-md/` | 59个品牌DESIGN.md规范库（Stripe/Vercel/Airbnb/Linear等） |
 | article-to-infographic | `skills/article-to-infographic/` | 文字→信息图，支持多布局多风格PNG导出 |
-> 版本: V3.0
+> 版本: V3.1（2026-05-05 B166ER自进化）
+
+## ⚡ 快速路由（新增）
+
+> **KB热加载索引**: `knowledge-base-hot-reload.md` — 情境→KB章节的精确映射
+> **原则**: 按需加载KB章节（offset定位），避免全文加载浪费token
+> **HOT KB**: 理论架构V2.2（1-120行）/ 审美KB（1-80行）/ 博弈论V3（1-60行）— 始终加载核心章节
 
 ---
 

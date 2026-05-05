@@ -95,12 +95,16 @@
 | **TOKEN经济专题** | `memory/token-economy-research.md` | v1.0 | **2026-04-13** |
 | **AI Agent生产级应用** | `memory/ai-agent-production-knowledge-base-v1.md` | v1.0 | **2026-04-14** |
 | **中美跨境商业结构** | `memory/china-us-cross-border-structure-v1.md` | v1.0 | **2026-04-14** |
-| **B166ER底层理论架构** | `memory/theoretical-framework-v2.md` | **V2.0** | **2026-04-30** |
+| **B166ER底层理论架构** | `memory/theoretical-framework-v2.md` | **V2.2** | **2026-05-03** |
 | **决策思维框架** | `memory/mental-models-decision-frameworks-v1.md` | v1.0 | **2026-04-14** |
+| **KB热加载索引** | `memory/knowledge-base-hot-reload.md` | v1.0 | **2026-05-05** |
+| **自我进化系统** | `~/self-improving/` | v1.0 | **2026-05-05** |
 
 ### 快速检索路由
 | 需要找什么 | 去哪里 |
 |------------|--------|
+| KB按需加载路由 | `memory/knowledge-base-hot-reload.md` |
+| 执行质量+错误预防 | `~/self-improving/domains/execution.md` |
 | 审美判断标准 | `memory/aesthetic-knowledge-base.md` |
 | AHL技术架构 | `memory/ahl-knowledge-base-v1.md` |
 | 携程/OTA运营 | `memory/ota-skill-v1.md` |
@@ -188,3 +192,12 @@
 | 竖版9:16手机海报 | ✅ 掌握 | 2160×3840 Retina，4次迭代 |
 | 参考图风格复现 | ✅ 掌握 | 玻璃拟态/扁平/深色科技全风格 |
 | AHL海报 | ✅ 完成 | 4版本（AHL树形架构图） |
+
+## Promoted From Short-Term Memory (2026-05-05)
+
+<!-- openclaw-memory-promotion:memory:memory/2026-04-30.md:5:5 -->
+- **触发**: Eric 指令 "根据你的自我认知和判断，继续优化迭代这套东西" [score=0.837 recalls=0 avg=0.620 source=memory/2026-04-30.md:5-5]
+<!-- openclaw-memory-promotion:memory:memory/2026-04-30.md:12:12 -->
+- **V2.1 深化（20:25 Eric 四条指令）**: [score=0.837 recalls=0 avg=0.620 source=memory/2026-04-30.md:12-12]
+<!-- openclaw-memory-promotion:memory:memory/2026-04-30.md:18:18 -->
+- **关键变更**： [score=0.837 recalls=0 avg=0.620 source=memory/2026-04-30.md:18-18]

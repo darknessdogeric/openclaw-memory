@@ -14,6 +14,12 @@
              5. 发现高价值技能 → 主动汇报
 ```
 
+## 自我进化维护
+
+- [ ] 检查 ~/self-improving/corrections.md 是否有待升级的模式
+- [ ] 检查 ~/self-improving/memory.md 行数（≤100行）
+- [ ] 归档超过90天未使用的模式 → archive/
+
 ## 常驻任务
 
 | # | 任务 | 频率 | 说明 |
