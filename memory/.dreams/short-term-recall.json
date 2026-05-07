@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-05-05T00:25:54.075Z",
+  "updatedAt": "2026-05-06T00:08:16.568Z",
   "entries": {
     "memory:memory/2026-04-12.md:6:8": {
       "key": "memory:memory/2026-04-12.md:6:8",
@@ -53697,14 +53697,14 @@
       "startLine": 5,
       "endLine": 5,
       "source": "memory",
-      "snippet": "**触发**: Eric 指令 \"根据你的自我认知和判断，继续优化迭代这套东西\"",
+      "snippet": "B166ER 底层理论架构 V2.0 迭代: **触发**: Eric 指令 \"根据你的自我认知和判断，继续优化迭代这套东西\"",
       "recallCount": 0,
-      "dailyCount": 4,
+      "dailyCount": 5,
       "groundedCount": 0,
-      "totalScore": 2.48,
+      "totalScore": 3.1,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-01T23:16:13.876Z",
-      "lastRecalledAt": "2026-05-05T00:25:54.075Z",
+      "lastRecalledAt": "2026-05-06T00:08:16.568Z",
       "queryHashes": [
         "e757f9360616"
       ],
@@ -53713,7 +53713,8 @@
         "2026-05-01",
         "2026-05-03",
         "2026-05-04",
-        "2026-05-05"
+        "2026-05-05",
+        "2026-05-06"
       ],
       "conceptTags": [
         "v2.0",
@@ -53735,12 +53736,12 @@
       "source": "memory",
       "snippet": "B166ER 底层理论架构 V2.0 迭代: ✅ `memory/theoretical-framework-v2.md`（10.7KB→大幅扩展）— 完整六层双轴架构 → V2.1; ✅ `SOUL.md` 更新 — 新增 V2.0 升级章节 + V2.1 四条深化; ✅ 识别并填补了 V1.0 的 8 个结构性缺口",
       "recallCount": 0,
-      "dailyCount": 4,
+      "dailyCount": 5,
       "groundedCount": 0,
-      "totalScore": 2.48,
+      "totalScore": 3.1,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-01T23:16:13.876Z",
-      "lastRecalledAt": "2026-05-05T00:25:54.075Z",
+      "lastRecalledAt": "2026-05-06T00:08:16.568Z",
       "queryHashes": [
         "e757f9360616"
       ],
@@ -53749,7 +53750,8 @@
         "2026-05-01",
         "2026-05-03",
         "2026-05-04",
-        "2026-05-05"
+        "2026-05-05",
+        "2026-05-06"
       ],
       "conceptTags": [
         "v2.0",
@@ -53768,14 +53770,14 @@
       "startLine": 12,
       "endLine": 12,
       "source": "memory",
-      "snippet": "**V2.1 深化（20:25 Eric 四条指令）**:",
+      "snippet": "B166ER 底层理论架构 V2.0 迭代: **V2.1 深化（20:25 Eric 四条指令）**:",
       "recallCount": 0,
-      "dailyCount": 4,
+      "dailyCount": 5,
       "groundedCount": 0,
-      "totalScore": 2.48,
+      "totalScore": 3.1,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-01T23:16:13.876Z",
-      "lastRecalledAt": "2026-05-05T00:25:54.075Z",
+      "lastRecalledAt": "2026-05-06T00:08:16.568Z",
       "queryHashes": [
         "e757f9360616"
       ],
@@ -53784,7 +53786,8 @@
         "2026-05-01",
         "2026-05-03",
         "2026-05-04",
-        "2026-05-05"
+        "2026-05-05",
+        "2026-05-06"
       ],
       "conceptTags": [
         "v2.0",
@@ -53806,12 +53809,12 @@
       "source": "memory",
       "snippet": "B166ER 底层理论架构 V2.0 迭代: ✅ 反思与纠错反馈环: 执行失败诊断分类（信息缺失/工具选错/环境变化/硬性边界）→ 路径重规划 → 减熵机制; ✅ 记忆与状态管理升维: 三层记忆 + 状态机 + 阶段锁定 + MICE项目阶段机示例; ✅ 多智能体路由架构: Router + 6个子Agent + 职责隔离 + 四阶段实施路线; ✅ 决策层护栏机制: 硬护栏(权限/合规/安全) + 软护栏 + 护栏前置不可绕过",
       "recallCount": 0,
-      "dailyCount": 4,
+      "dailyCount": 5,
       "groundedCount": 0,
-      "totalScore": 2.48,
+      "totalScore": 3.1,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-01T23:16:13.876Z",
-      "lastRecalledAt": "2026-05-05T00:25:54.075Z",
+      "lastRecalledAt": "2026-05-06T00:08:16.568Z",
       "queryHashes": [
         "e757f9360616"
       ],
@@ -53820,7 +53823,8 @@
         "2026-05-01",
         "2026-05-03",
         "2026-05-04",
-        "2026-05-05"
+        "2026-05-05",
+        "2026-05-06"
       ],
       "conceptTags": [
         "router",
@@ -53839,14 +53843,14 @@
       "startLine": 18,
       "endLine": 18,
       "source": "memory",
-      "snippet": "**关键变更**：",
+      "snippet": "B166ER 底层理论架构 V2.0 迭代: **关键变更**：",
       "recallCount": 0,
-      "dailyCount": 4,
+      "dailyCount": 5,
       "groundedCount": 0,
-      "totalScore": 2.48,
+      "totalScore": 3.1,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-01T23:16:13.876Z",
-      "lastRecalledAt": "2026-05-05T00:25:54.075Z",
+      "lastRecalledAt": "2026-05-06T00:08:16.568Z",
       "queryHashes": [
         "e757f9360616"
       ],
@@ -53855,7 +53859,8 @@
         "2026-05-01",
         "2026-05-03",
         "2026-05-04",
-        "2026-05-05"
+        "2026-05-05",
+        "2026-05-06"
       ],
       "conceptTags": [
         "v2.0",
@@ -53877,12 +53882,12 @@
       "source": "memory",
       "snippet": "B166ER 底层理论架构 V2.0 迭代: 新增 Layer 0: 元认知层（框架调度/注意力分配/置信度校准）; Layer 1 增强: 系统思维 + 信息论 + 认知谦逊（四象限）; Layer 2 增强: 贝叶斯推理 + 演化博弈 + **昂贵信号理论**（审美-策略桥梁）; Layer 3 增强: 伦理三层显式化（义务论/后果论/德性论）",
       "recallCount": 0,
-      "dailyCount": 4,
+      "dailyCount": 5,
       "groundedCount": 0,
-      "totalScore": 2.48,
+      "totalScore": 3.1,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-01T23:16:13.876Z",
-      "lastRecalledAt": "2026-05-05T00:25:54.075Z",
+      "lastRecalledAt": "2026-05-06T00:08:16.568Z",
       "queryHashes": [
         "e757f9360616"
       ],
@@ -53891,7 +53896,8 @@
         "2026-05-01",
         "2026-05-03",
         "2026-05-04",
-        "2026-05-05"
+        "2026-05-05",
+        "2026-05-06"
       ],
       "conceptTags": [
         "v2.0",
@@ -53912,12 +53918,12 @@
       "source": "memory",
       "snippet": "B166ER 底层理论架构 V2.0 迭代: Layer 4 增强: 反脆弱学习; Layer 5 增强: 沟通理论（Grice） + 执行优先级矩阵; 核心创新: 五条层间反馈回路（让六层不是孤岛）",
       "recallCount": 0,
-      "dailyCount": 4,
+      "dailyCount": 5,
       "groundedCount": 0,
-      "totalScore": 2.48,
+      "totalScore": 3.1,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-01T23:16:13.876Z",
-      "lastRecalledAt": "2026-05-05T00:25:54.075Z",
+      "lastRecalledAt": "2026-05-06T00:08:16.568Z",
       "queryHashes": [
         "e757f9360616"
       ],
@@ -53926,7 +53932,8 @@
         "2026-05-01",
         "2026-05-03",
         "2026-05-04",
-        "2026-05-05"
+        "2026-05-05",
+        "2026-05-06"
       ],
       "conceptTags": [
         "v2.0",
@@ -54013,12 +54020,12 @@
       "source": "memory",
       "snippet": "关键决策: ⏸️ **AHL种子轮融资正式暂停/取消**：Eric明确\"没有必要了\"，不再推进; 自4月14日后首次交互，间隔15天",
       "recallCount": 0,
-      "dailyCount": 4,
+      "dailyCount": 5,
       "groundedCount": 0,
-      "totalScore": 2.48,
+      "totalScore": 3.1,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-01T23:16:13.876Z",
-      "lastRecalledAt": "2026-05-05T00:25:54.075Z",
+      "lastRecalledAt": "2026-05-06T00:08:16.568Z",
       "queryHashes": [
         "312dd0eab707"
       ],
@@ -54027,7 +54034,8 @@
         "2026-05-01",
         "2026-05-03",
         "2026-05-04",
-        "2026-05-05"
+        "2026-05-05",
+        "2026-05-06"
       ],
       "conceptTags": [
         "ahl种子轮融资正式暂停/取消",
@@ -54048,12 +54056,12 @@
       "source": "memory",
       "snippet": "当前项目状态: AHL-去中心化旅行平台：融资暂停，其他方向待定; **新战略方向**：安逸集团产业发展部部长（正职）— 新设部门; 到岗时间：5月下旬; 核心逻辑：AHL从\"外部创业\"转为\"内部创新\"落地",
       "recallCount": 0,
-      "dailyCount": 4,
+      "dailyCount": 5,
       "groundedCount": 0,
-      "totalScore": 2.48,
+      "totalScore": 3.1,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-01T23:16:13.876Z",
-      "lastRecalledAt": "2026-05-05T00:25:54.075Z",
+      "lastRecalledAt": "2026-05-06T00:08:16.568Z",
       "queryHashes": [
         "312dd0eab707"
       ],
@@ -54062,7 +54070,8 @@
         "2026-05-01",
         "2026-05-03",
         "2026-05-04",
-        "2026-05-05"
+        "2026-05-05",
+        "2026-05-06"
       ],
       "conceptTags": [
         "ahl-去中心化旅行平台",
@@ -54083,12 +54092,12 @@
       "source": "memory",
       "snippet": "当前项目状态: 其他项目：无更新",
       "recallCount": 0,
-      "dailyCount": 4,
+      "dailyCount": 5,
       "groundedCount": 0,
-      "totalScore": 2.48,
+      "totalScore": 3.1,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-01T23:16:13.876Z",
-      "lastRecalledAt": "2026-05-05T00:25:54.075Z",
+      "lastRecalledAt": "2026-05-06T00:08:16.568Z",
       "queryHashes": [
         "312dd0eab707"
       ],
@@ -54097,7 +54106,8 @@
         "2026-05-01",
         "2026-05-03",
         "2026-05-04",
-        "2026-05-05"
+        "2026-05-05",
+        "2026-05-06"
       ],
       "conceptTags": [
         "当前",
@@ -54115,12 +54125,12 @@
       "source": "memory",
       "snippet": "安逸集团关键数据（网上采集）: 全称：安逸酒店集团有限责任公司 | 成立：2021年12月 | 注册资本：30亿; 隶属：四川省旅游投资集团（省属国企）| 董事长：邹士勇; 规模：458家酒店 / 超6万间客房; 四大品牌：金牛宾馆(1957) / 锦江宾馆(1958/22家高端) / 川宾 / 安逸系列",
       "recallCount": 0,
-      "dailyCount": 4,
+      "dailyCount": 5,
       "groundedCount": 0,
-      "totalScore": 2.48,
+      "totalScore": 3.1,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-01T23:16:13.876Z",
-      "lastRecalledAt": "2026-05-05T00:25:54.075Z",
+      "lastRecalledAt": "2026-05-06T00:08:16.568Z",
       "queryHashes": [
         "312dd0eab707"
       ],
@@ -54129,7 +54139,8 @@
         "2026-05-01",
         "2026-05-03",
         "2026-05-04",
-        "2026-05-05"
+        "2026-05-05",
+        "2026-05-06"
       ],
       "conceptTags": [
         "1958/22家高端",
@@ -54150,12 +54161,12 @@
       "source": "memory",
       "snippet": "安逸集团关键数据（网上采集）: 战略方向：品牌市场化 / 轻资产扩张 / 中高端聚焦; 战略分析文档：docs/安逸集团-产业发展部-到岗前战略分析-V1.0.md",
       "recallCount": 0,
-      "dailyCount": 4,
+      "dailyCount": 5,
       "groundedCount": 0,
-      "totalScore": 2.48,
+      "totalScore": 3.1,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-01T23:16:13.876Z",
-      "lastRecalledAt": "2026-05-05T00:25:54.075Z",
+      "lastRecalledAt": "2026-05-06T00:08:16.568Z",
       "queryHashes": [
         "312dd0eab707"
       ],
@@ -54164,7 +54175,8 @@
         "2026-05-01",
         "2026-05-03",
         "2026-05-04",
-        "2026-05-05"
+        "2026-05-05",
+        "2026-05-06"
       ],
       "conceptTags": [
         "docs/安逸集团-产业发展部-到岗前战略分析-v1.0.md",
@@ -54945,19 +54957,20 @@
       "source": "memory",
       "snippet": "知识库体系重塑 V2.0 + 酒店KB V8.0 重构: **触发**: Eric 指令 \"重塑知识库体系 + 酒店全景KB重新梳理\"",
       "recallCount": 0,
-      "dailyCount": 3,
+      "dailyCount": 4,
       "groundedCount": 0,
-      "totalScore": 1.8599999999999999,
+      "totalScore": 2.48,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-03T00:51:52.078Z",
-      "lastRecalledAt": "2026-05-05T00:25:54.075Z",
+      "lastRecalledAt": "2026-05-06T00:08:16.568Z",
       "queryHashes": [
         "f110005857c9"
       ],
       "recallDays": [
         "2026-05-03",
         "2026-05-04",
-        "2026-05-05"
+        "2026-05-05",
+        "2026-05-06"
       ],
       "conceptTags": [
         "v2.0",
@@ -54978,19 +54991,20 @@
       "source": "memory",
       "snippet": "第一阶段：归档清理: ✅ 归档36个旧版/报告类酒店文件至 `memory/archive_hotel/`; hotel-industry-knowledge-base v2/v3/v3.0/v4/v5/v6/v7 共7个历史版本; hotel-revenue-management v1/v2/v3（保留v4为权威版）; hotel-new-media v1（保留v2）",
       "recallCount": 0,
-      "dailyCount": 3,
+      "dailyCount": 4,
       "groundedCount": 0,
-      "totalScore": 1.8599999999999999,
+      "totalScore": 2.48,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-03T00:51:52.078Z",
-      "lastRecalledAt": "2026-05-05T00:25:54.075Z",
+      "lastRecalledAt": "2026-05-06T00:08:16.568Z",
       "queryHashes": [
         "f110005857c9"
       ],
       "recallDays": [
         "2026-05-03",
         "2026-05-04",
-        "2026-05-05"
+        "2026-05-05",
+        "2026-05-06"
       ],
       "conceptTags": [
         "归档36个旧版/报告类酒店文件至",
@@ -55011,19 +55025,20 @@
       "source": "memory",
       "snippet": "第一阶段：归档清理: 报告类10个（AI市场报告/年报/趋势分析/OTC策略等）; 旧版SOP 5个; hotel KB文件从72个减至36个",
       "recallCount": 0,
-      "dailyCount": 3,
+      "dailyCount": 4,
       "groundedCount": 0,
-      "totalScore": 1.8599999999999999,
+      "totalScore": 2.48,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-03T00:51:52.078Z",
-      "lastRecalledAt": "2026-05-05T00:25:54.075Z",
+      "lastRecalledAt": "2026-05-06T00:08:16.568Z",
       "queryHashes": [
         "f110005857c9"
       ],
       "recallDays": [
         "2026-05-03",
         "2026-05-04",
-        "2026-05-05"
+        "2026-05-05",
+        "2026-05-06"
       ],
       "conceptTags": [
         "ai市场报告/年报/趋势分析/otc策略等",
@@ -55044,19 +55059,20 @@
       "source": "memory",
       "snippet": "第二阶段：主KB重构: ✅ `hotel-industry-knowledge-base.md` → V8.0; 351KB/8548行 → 83KB/1932行（**瘦身77%**）; 结构：16章线性排列，章节编号修复; 策略：主KB保留行业全景+速查表，7个专项深度章节替换为引用链接",
       "recallCount": 0,
-      "dailyCount": 3,
+      "dailyCount": 4,
       "groundedCount": 0,
-      "totalScore": 1.8599999999999999,
+      "totalScore": 2.48,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-03T00:51:52.078Z",
-      "lastRecalledAt": "2026-05-05T00:25:54.075Z",
+      "lastRecalledAt": "2026-05-06T00:08:16.568Z",
       "queryHashes": [
         "f110005857c9"
       ],
       "recallDays": [
         "2026-05-03",
         "2026-05-04",
-        "2026-05-05"
+        "2026-05-05",
+        "2026-05-06"
       ],
       "conceptTags": [
         "hotel-industry-knowledge-base.md",
@@ -55077,19 +55093,20 @@
       "source": "memory",
       "snippet": "第二阶段：主KB重构: 剥离：收益管理/CRM/私域/OTA/新媒体/AI+PMS/B2B/政策法规; 保留：行业总览/细分市场/商业模式/运营KPI/资本市场/供应链/技术/竞争/趋势/定位方法论/附录; 每个引用节包含：核心指标速查表 + 指向专项KB的链接",
       "recallCount": 0,
-      "dailyCount": 3,
+      "dailyCount": 4,
       "groundedCount": 0,
-      "totalScore": 1.8599999999999999,
+      "totalScore": 2.48,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-03T00:51:52.078Z",
-      "lastRecalledAt": "2026-05-05T00:25:54.075Z",
+      "lastRecalledAt": "2026-05-06T00:08:16.568Z",
       "queryHashes": [
         "f110005857c9"
       ],
       "recallDays": [
         "2026-05-03",
         "2026-05-04",
-        "2026-05-05"
+        "2026-05-05",
+        "2026-05-06"
       ],
       "conceptTags": [
         "收益管理/crm/私域/ota/新媒体/ai",
@@ -55110,19 +55127,20 @@
       "source": "memory",
       "snippet": "第三阶段：路由系统更新: ✅ `kb_router.py` ROUTING_TABLE 更新（文件名同步）; ✅ `skills/knowledge-base/SKILL.md` → V2.0; 新增：KB分层加载策略（主KB速查 → 专项KB深度 → 工具层）; 酒店KB条目更新：V8.0 + 7个专项KB独立条目",
       "recallCount": 0,
-      "dailyCount": 3,
+      "dailyCount": 4,
       "groundedCount": 0,
-      "totalScore": 1.8599999999999999,
+      "totalScore": 2.48,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-03T00:51:52.078Z",
-      "lastRecalledAt": "2026-05-05T00:25:54.075Z",
+      "lastRecalledAt": "2026-05-06T00:08:16.568Z",
       "queryHashes": [
         "f110005857c9"
       ],
       "recallDays": [
         "2026-05-03",
         "2026-05-04",
-        "2026-05-05"
+        "2026-05-05",
+        "2026-05-06"
       ],
       "conceptTags": [
         "router",
@@ -55143,19 +55161,20 @@
       "source": "memory",
       "snippet": "第三阶段：路由系统更新: ✅ `MEMORY.md` 知识库索引更新",
       "recallCount": 0,
-      "dailyCount": 3,
+      "dailyCount": 4,
       "groundedCount": 0,
-      "totalScore": 1.8599999999999999,
+      "totalScore": 2.48,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-03T00:51:52.078Z",
-      "lastRecalledAt": "2026-05-05T00:25:54.075Z",
+      "lastRecalledAt": "2026-05-06T00:08:16.568Z",
       "queryHashes": [
         "f110005857c9"
       ],
       "recallDays": [
         "2026-05-03",
         "2026-05-04",
-        "2026-05-05"
+        "2026-05-05",
+        "2026-05-06"
       ],
       "conceptTags": [
         "memory.md",
@@ -56250,17 +56269,18 @@
       "source": "memory",
       "snippet": "huashu-design 缺失文件补齐: **触发**: Eric 指令 \"huashu-design缺失的部分必须补齐\"",
       "recallCount": 0,
-      "dailyCount": 1,
+      "dailyCount": 2,
       "groundedCount": 0,
-      "totalScore": 0.62,
+      "totalScore": 1.24,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-04T00:34:49.387Z",
-      "lastRecalledAt": "2026-05-04T00:34:49.387Z",
+      "lastRecalledAt": "2026-05-06T00:08:16.568Z",
       "queryHashes": [
         "c2bf0c07fdd1"
       ],
       "recallDays": [
-        "2026-05-04"
+        "2026-05-04",
+        "2026-05-06"
       ],
       "conceptTags": [
         "huashu-design",
@@ -56281,17 +56301,18 @@
       "source": "memory",
       "snippet": "huashu-design 缺失文件补齐: **背景**: `D:\\huashu-design` 是 `D:\\skills\\huashu-design` 的不完整副本，大量文件缺失：",
       "recallCount": 0,
-      "dailyCount": 1,
+      "dailyCount": 2,
       "groundedCount": 0,
-      "totalScore": 0.62,
+      "totalScore": 1.24,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-04T00:34:49.387Z",
-      "lastRecalledAt": "2026-05-04T00:34:49.387Z",
+      "lastRecalledAt": "2026-05-06T00:08:16.568Z",
       "queryHashes": [
         "c2bf0c07fdd1"
       ],
       "recallDays": [
-        "2026-05-04"
+        "2026-05-04",
+        "2026-05-06"
       ],
       "conceptTags": [
         "huashu-design",
@@ -56312,17 +56333,18 @@
       "source": "memory",
       "snippet": "huashu-design 缺失文件补齐: showcases: 48个文件缺失（8场景×3风格 HTML+PNG，仅剩空目录+INDEX.md）; sfx: 37个音效文件缺失（8个分类目录全空）; demos: 19个演示文件全缺; references: 11个参考文档缺失",
       "recallCount": 0,
-      "dailyCount": 1,
+      "dailyCount": 2,
       "groundedCount": 0,
-      "totalScore": 0.62,
+      "totalScore": 1.24,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-04T00:34:49.387Z",
-      "lastRecalledAt": "2026-05-04T00:34:49.387Z",
+      "lastRecalledAt": "2026-05-06T00:08:16.568Z",
       "queryHashes": [
         "c2bf0c07fdd1"
       ],
       "recallDays": [
-        "2026-05-04"
+        "2026-05-04",
+        "2026-05-06"
       ],
       "conceptTags": [
         "huashu-design",
@@ -56343,17 +56365,18 @@
       "source": "memory",
       "snippet": "huashu-design 缺失文件补齐: scripts: export_deck_stage_pdf.mjs 缺失",
       "recallCount": 0,
-      "dailyCount": 1,
+      "dailyCount": 2,
       "groundedCount": 0,
-      "totalScore": 0.62,
+      "totalScore": 1.24,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-04T00:34:49.387Z",
-      "lastRecalledAt": "2026-05-04T00:34:49.387Z",
+      "lastRecalledAt": "2026-05-06T00:08:16.568Z",
       "queryHashes": [
         "c2bf0c07fdd1"
       ],
       "recallDays": [
-        "2026-05-04"
+        "2026-05-04",
+        "2026-05-06"
       ],
       "conceptTags": [
         "huashu-design",
@@ -56373,17 +56396,18 @@
       "source": "memory",
       "snippet": "补齐结果: ✅ robocopy 从 `D:\\skills\\huashu-design` → `D:\\huashu-design` 全量同步; 补齐后: 155文件对齐（showcases 49 / sfx 37 / demos 19 / references 20 / scripts 8）",
       "recallCount": 0,
-      "dailyCount": 1,
+      "dailyCount": 2,
       "groundedCount": 0,
-      "totalScore": 0.62,
+      "totalScore": 1.24,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-04T00:34:49.387Z",
-      "lastRecalledAt": "2026-05-04T00:34:49.387Z",
+      "lastRecalledAt": "2026-05-06T00:08:16.568Z",
       "queryHashes": [
         "c2bf0c07fdd1"
       ],
       "recallDays": [
-        "2026-05-04"
+        "2026-05-04",
+        "2026-05-06"
       ],
       "conceptTags": [
         "huashu-design",
@@ -56404,17 +56428,18 @@
       "source": "memory",
       "snippet": "酒店KB V8.1（附加完成）: 此前误将酒店KB第5-9章从引用桩扩展为完整章节（1932→2377行），顺带保留",
       "recallCount": 0,
-      "dailyCount": 1,
+      "dailyCount": 2,
       "groundedCount": 0,
-      "totalScore": 0.62,
+      "totalScore": 1.24,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-04T00:34:49.387Z",
-      "lastRecalledAt": "2026-05-04T00:34:49.387Z",
+      "lastRecalledAt": "2026-05-06T00:08:16.568Z",
       "queryHashes": [
         "c2bf0c07fdd1"
       ],
       "recallDays": [
-        "2026-05-04"
+        "2026-05-04",
+        "2026-05-06"
       ],
       "conceptTags": [
         "v8.1",
@@ -56435,17 +56460,18 @@
       "source": "memory",
       "snippet": "AHL完整项目信息图: **触发**: Eric 指令 \"做一个AHL项目的完整信息图\"",
       "recallCount": 0,
-      "dailyCount": 1,
+      "dailyCount": 2,
       "groundedCount": 0,
-      "totalScore": 0.62,
+      "totalScore": 1.24,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-04T00:34:49.387Z",
-      "lastRecalledAt": "2026-05-04T00:34:49.387Z",
+      "lastRecalledAt": "2026-05-06T00:08:16.568Z",
       "queryHashes": [
         "c2bf0c07fdd1"
       ],
       "recallDays": [
-        "2026-05-04"
+        "2026-05-04",
+        "2026-05-06"
       ],
       "conceptTags": [
         "ahl",
@@ -58578,6 +58604,1527 @@
       "conceptTags": [
         "最后",
         "提交"
+      ]
+    },
+    "memory:memory/2026-05-05.md:5:5": {
+      "key": "memory:memory/2026-05-05.md:5:5",
+      "path": "memory/2026-05-05.md",
+      "startLine": 5,
+      "endLine": 5,
+      "source": "memory",
+      "snippet": "自进化 V2.3（系统级优化）: **触发**: Eric 指令 \"继续自我进化。方向不限。仍然是以最优为原则。\"",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-06T00:08:16.568Z",
+      "lastRecalledAt": "2026-05-06T00:08:16.568Z",
+      "queryHashes": [
+        "b3222f2b9fdf"
+      ],
+      "recallDays": [
+        "2026-05-06"
+      ],
+      "conceptTags": [
+        "v2.3",
+        "进化",
+        "系统",
+        "触发",
+        "eric",
+        "指令",
+        "继续",
+        "自我"
+      ]
+    },
+    "memory:memory/2026-05-05.md:8:11": {
+      "key": "memory:memory/2026-05-05.md:8:11",
+      "path": "memory/2026-05-05.md",
+      "startLine": 8,
+      "endLine": 11,
+      "source": "memory",
+      "snippet": "诊断发现: `~/self-improving/` 基础设施不存在（技能已安装但未激活）; KB全文加载导致token浪费（无按需加载机制）; 无系统化错误追踪和预防机制; 无执行质量检查清单",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-06T00:08:16.568Z",
+      "lastRecalledAt": "2026-05-06T00:08:16.568Z",
+      "queryHashes": [
+        "b3222f2b9fdf"
+      ],
+      "recallDays": [
+        "2026-05-06"
+      ],
+      "conceptTags": [
+        "self-improving",
+        "诊断",
+        "发现",
+        "self",
+        "improving",
+        "基础",
+        "设施",
+        "不存在"
+      ]
+    },
+    "memory:memory/2026-05-05.md:16:19": {
+      "key": "memory:memory/2026-05-05.md:16:19",
+      "path": "memory/2026-05-05.md",
+      "startLine": 16,
+      "endLine": 19,
+      "source": "memory",
+      "snippet": "Phase 1: 自我进化基础设施: ✅ 创建 `~/self-improving/` 目录结构（projects/domains/archive/）; ✅ memory.md（HOT层，≤100行）：用户偏好8条 + 执行模式6条 + 关键规则8条 + 质量门4条; ✅ corrections.md：5条历史错误 + 模式分类 + 预防规则; ✅ index.md：全层索引 + 交叉引用",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-06T00:08:16.568Z",
+      "lastRecalledAt": "2026-05-06T00:08:16.568Z",
+      "queryHashes": [
+        "b3222f2b9fdf"
+      ],
+      "recallDays": [
+        "2026-05-06"
+      ],
+      "conceptTags": [
+        "self-improving",
+        "projects/domains/archive",
+        "memory.md",
+        "corrections.md",
+        "index.md",
+        "phase",
+        "自我",
+        "进化"
+      ]
+    },
+    "memory:memory/2026-05-05.md:22:25": {
+      "key": "memory:memory/2026-05-05.md:22:25",
+      "path": "memory/2026-05-05.md",
+      "startLine": 22,
+      "endLine": 25,
+      "source": "memory",
+      "snippet": "Phase 2: KB架构优化: ✅ `memory/knowledge-base-hot-reload.md`：18个KB分HOT/WARM/COLD三层; ✅ 情境→KB章节精确路由表（28种情境）; ✅ 加载规则：HOT默认只加载核心章节（≤120行），WARM按需，COLD显式触发; ✅ principles: 串行加载防token爆炸，先预览再精读",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-06T00:08:16.568Z",
+      "lastRecalledAt": "2026-05-06T00:08:16.568Z",
+      "queryHashes": [
+        "b3222f2b9fdf"
+      ],
+      "recallDays": [
+        "2026-05-06"
+      ],
+      "conceptTags": [
+        "18个kb分hot/warm/cold三层",
+        "phase",
+        "架构",
+        "knowledge",
+        "base",
+        "hot",
+        "reload.md",
+        "warm"
+      ]
+    },
+    "memory:memory/2026-05-05.md:28:31": {
+      "key": "memory:memory/2026-05-05.md:28:31",
+      "path": "memory/2026-05-05.md",
+      "startLine": 28,
+      "endLine": 31,
+      "source": "memory",
+      "snippet": "Phase 3: 执行质量系统: ✅ `~/self-improving/domains/execution.md`：; 会话启动清单（6项）; 响应前检查（7项）; 常见错误模式（7类+避免方法）",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-06T00:08:16.568Z",
+      "lastRecalledAt": "2026-05-06T00:08:16.568Z",
+      "queryHashes": [
+        "b3222f2b9fdf"
+      ],
+      "recallDays": [
+        "2026-05-06"
+      ],
+      "conceptTags": [
+        "phase",
+        "执行",
+        "质量",
+        "系统",
+        "self",
+        "improving",
+        "domains",
+        "execution.md"
+      ]
+    },
+    "memory:memory/2026-05-05.md:32:34": {
+      "key": "memory:memory/2026-05-05.md:32:34",
+      "path": "memory/2026-05-05.md",
+      "startLine": 32,
+      "endLine": 34,
+      "source": "memory",
+      "snippet": "Phase 3: 执行质量系统: 高效工具使用模式（7场景+最优做法）; 沟通适配矩阵（4渠道）; 降级策略（5场景）",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-06T00:08:16.568Z",
+      "lastRecalledAt": "2026-05-06T00:08:16.568Z",
+      "queryHashes": [
+        "b3222f2b9fdf"
+      ],
+      "recallDays": [
+        "2026-05-06"
+      ],
+      "conceptTags": [
+        "phase",
+        "执行",
+        "质量",
+        "系统",
+        "高效",
+        "工具",
+        "使用",
+        "模式"
+      ]
+    },
+    "memory:memory/2026-05-05.md:37:39": {
+      "key": "memory:memory/2026-05-05.md:37:39",
+      "path": "memory/2026-05-05.md",
+      "startLine": 37,
+      "endLine": 39,
+      "source": "memory",
+      "snippet": "Phase 4: 系统集成: ✅ knowledge-base-index.md → V3.1（新增快速路由章节）; ✅ HEARTBEAT.md → 新增自我进化维护检查（3项）; ✅ AGENTS.md → 已有self-improving部分（无需修改）",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-06T00:08:16.568Z",
+      "lastRecalledAt": "2026-05-06T00:08:16.568Z",
+      "queryHashes": [
+        "b3222f2b9fdf"
+      ],
+      "recallDays": [
+        "2026-05-06"
+      ],
+      "conceptTags": [
+        "knowledge-base-index.md",
+        "v3.1",
+        "heartbeat.md",
+        "agents.md",
+        "已有self-improving部分",
+        "phase",
+        "系统",
+        "集成"
+      ]
+    },
+    "memory:memory/2026-05-05.md:42:45": {
+      "key": "memory:memory/2026-05-05.md:42:45",
+      "path": "memory/2026-05-05.md",
+      "startLine": 42,
+      "endLine": 45,
+      "source": "memory",
+      "snippet": "效果预期: | 指标 | 改进 | |------|------| | 会话启动token消耗 | ↓ 40-60%（KB按需加载替代全文） | | 重复错误率 | ↓ 70%（corrections.md驱动预防） |",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-06T00:08:16.568Z",
+      "lastRecalledAt": "2026-05-06T00:08:16.568Z",
+      "queryHashes": [
+        "b3222f2b9fdf"
+      ],
+      "recallDays": [
+        "2026-05-06"
+      ],
+      "conceptTags": [
+        "40-60",
+        "corrections.md驱动预防",
+        "效果",
+        "预期",
+        "指标",
+        "改进",
+        "会话",
+        "启动"
+      ]
+    },
+    "memory:memory/2026-05-05.md:46:48": {
+      "key": "memory:memory/2026-05-05.md:46:48",
+      "path": "memory/2026-05-05.md",
+      "startLine": 46,
+      "endLine": 48,
+      "source": "memory",
+      "snippet": "效果预期: | 工具选择准确度 | ↑ 30%（execution.md工具模式指引） | | 沟通一致性 | ↑ 50%（渠道适配矩阵） | | 自我进化速度 | ↑ 指数级（基础设施使能） |",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-06T00:08:16.568Z",
+      "lastRecalledAt": "2026-05-06T00:08:16.568Z",
+      "queryHashes": [
+        "b3222f2b9fdf"
+      ],
+      "recallDays": [
+        "2026-05-06"
+      ],
+      "conceptTags": [
+        "execution.md工具模式指引",
+        "效果",
+        "预期",
+        "工具",
+        "选择",
+        "准确",
+        "execution.md",
+        "模式"
+      ]
+    },
+    "memory:memory/2026-05-05.md:51:53": {
+      "key": "memory:memory/2026-05-05.md:51:53",
+      "path": "memory/2026-05-05.md",
+      "startLine": 51,
+      "endLine": 53,
+      "source": "memory",
+      "snippet": "待续: projects/ 项目级学习模式（AHL/酒店/创业）; corrections.md 自动升级机制（3次→确认→规则）; KB进一步压缩（核心章节提炼）",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-06T00:08:16.568Z",
+      "lastRecalledAt": "2026-05-06T00:08:16.568Z",
+      "queryHashes": [
+        "b3222f2b9fdf"
+      ],
+      "recallDays": [
+        "2026-05-06"
+      ],
+      "conceptTags": [
+        "ahl/酒店/创业",
+        "corrections.md",
+        "projects",
+        "项目",
+        "学习",
+        "模式",
+        "ahl",
+        "酒店"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-04.txt:27:27": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-04.txt:27:27",
+      "path": "memory/.dreams/session-corpus/2026-05-04.txt",
+      "startLine": 27,
+      "endLine": 27,
+      "source": "memory",
+      "snippet": "User: 开始你的自我进化。我不给你设限，只要求你不断进化，让自己变强变快。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-06T00:08:16.568Z",
+      "lastRecalledAt": "2026-05-06T00:08:16.568Z",
+      "queryHashes": [
+        "4d9d9fab6a07"
+      ],
+      "recallDays": [
+        "2026-05-06"
+      ],
+      "conceptTags": [
+        "开始",
+        "你的",
+        "自我",
+        "进化",
+        "我不",
+        "设限",
+        "要求",
+        "不断"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-04.txt:28:28": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-04.txt:28:28",
+      "path": "memory/.dreams/session-corpus/2026-05-04.txt",
+      "startLine": 28,
+      "endLine": 28,
+      "source": "memory",
+      "snippet": "Assistant: 现在做系统性自我进化。先诊断，再修正，再强化。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-06T00:08:16.568Z",
+      "lastRecalledAt": "2026-05-06T00:08:16.568Z",
+      "queryHashes": [
+        "4d9d9fab6a07"
+      ],
+      "recallDays": [
+        "2026-05-06"
+      ],
+      "conceptTags": [
+        "现在",
+        "系统",
+        "自我",
+        "进化",
+        "诊断",
+        "修正",
+        "强化"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-04.txt:29:29": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-04.txt:29:29",
+      "path": "memory/.dreams/session-corpus/2026-05-04.txt",
+      "startLine": 29,
+      "endLine": 29,
+      "source": "memory",
+      "snippet": "Assistant: 现在实战测试子Agent可靠性——此前 deepseek-v4-pro 的子Agent全崩了。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-06T00:08:16.568Z",
+      "lastRecalledAt": "2026-05-06T00:08:16.568Z",
+      "queryHashes": [
+        "4d9d9fab6a07"
+      ],
+      "recallDays": [
+        "2026-05-06"
+      ],
+      "conceptTags": [
+        "deepseek-v4-pro",
+        "现在",
+        "实战",
+        "测试",
+        "可靠性",
+        "deepseek",
+        "pro"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-04.txt:30:30": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-04.txt:30:30",
+      "path": "memory/.dreams/session-corpus/2026-05-04.txt",
+      "startLine": 30,
+      "endLine": 30,
+      "source": "memory",
+      "snippet": "Assistant: 子Agent kimi-k2.5 在运行中——至少没有像 deepseek-v4-pro 那样崩。继续等结果。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-06T00:08:16.568Z",
+      "lastRecalledAt": "2026-05-06T00:08:16.568Z",
+      "queryHashes": [
+        "4d9d9fab6a07"
+      ],
+      "recallDays": [
+        "2026-05-06"
+      ],
+      "conceptTags": [
+        "kimi-k2.5",
+        "deepseek-v4-pro",
+        "kimi",
+        "k2.5",
+        "运行",
+        "至少",
+        "没有",
+        "deepseek"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-04.txt:31:31": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-04.txt:31:31",
+      "path": "memory/.dreams/session-corpus/2026-05-04.txt",
+      "startLine": 31,
+      "endLine": 31,
+      "source": "memory",
+      "snippet": "Assistant: 确认了。kimi-k2.5 也崩了（4秒挂）。**两个模型 × 4次尝试 × 全部失败** → 这不是模型问题，是 5.3-beta.2 平台的子Agent bug。 不再绕弯了。我自己直接输出今天自我进化的完整成果： --- ## 今日自我进化报告 ### 修复项（5个） | # | 问题 | 修复 | |---|------|------| | 1 | GitAutoBackup中断 | 手动触发+push成功，82文件提交 | | 2 | 报告\"消失\" | 根因诊断+升级5.3-beta.2 | | 3 | KB索引24天未更",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-06T00:08:16.568Z",
+      "lastRecalledAt": "2026-05-06T00:08:16.568Z",
+      "queryHashes": [
+        "4d9d9fab6a07"
+      ],
+      "recallDays": [
+        "2026-05-06"
+      ],
+      "conceptTags": [
+        "backup",
+        "kimi-k2.5",
+        "5.3-beta.2",
+        "升级5.3-beta.2",
+        "确认",
+        "kimi",
+        "k2.5",
+        "模型"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-04.txt:32:32": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-04.txt:32:32",
+      "path": "memory/.dreams/session-corpus/2026-05-04.txt",
+      "startLine": 32,
+      "endLine": 32,
+      "source": "memory",
+      "snippet": "Assistant: **2026.5.3-beta.2**（最新） - KB活跃文件: **142个 / 3.4MB** - 路由决策表: **28类** - Cron作业: **13个**（全部健康） - Git: **已同步至GitHub** --- **关键结论**：子Agent在当前版本不可用，我会在主会话直接执行所有任务。这反而是\"变快\"——省去了无效的spawn→崩溃→等待循环。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-06T00:08:16.568Z",
+      "lastRecalledAt": "2026-05-06T00:08:16.568Z",
+      "queryHashes": [
+        "4d9d9fab6a07"
+      ],
+      "recallDays": [
+        "2026-05-06"
+      ],
+      "conceptTags": [
+        "2026.5.3-beta.2",
+        "3.4mb",
+        "2026.5.3",
+        "beta",
+        "最新",
+        "活跃",
+        "文件",
+        "决策"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-04.txt:33:33": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-04.txt:33:33",
+      "path": "memory/.dreams/session-corpus/2026-05-04.txt",
+      "startLine": 33,
+      "endLine": 33,
+      "source": "memory",
+      "snippet": "Assistant: 找到了！子Agent 崩不是平台 bug——是 **Kimi K2.5 账户余额不足被停用了**（`org-6ed2fe8a... account suspended due to insufficient balance`）。 这意味着： - Kimi 的 API key 需要充值 - DeepSeek 主会话正常 → DeepSeek 账户有余额 - 之前3个 deepseek-v4-pro 子Agent也崩了 → 可能子Agent用了 Kimi 作为 fallback 更新自进化记录：",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-06T00:08:16.568Z",
+      "lastRecalledAt": "2026-05-06T00:08:16.568Z",
+      "queryHashes": [
+        "4d9d9fab6a07"
+      ],
+      "recallDays": [
+        "2026-05-06"
+      ],
+      "conceptTags": [
+        "k2.5",
+        "org-6ed2fe8a",
+        "deepseek-v4-pro",
+        "找到",
+        "不是",
+        "平台",
+        "bug",
+        "kimi"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-04.txt:34:34": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-04.txt:34:34",
+      "path": "memory/.dreams/session-corpus/2026-05-04.txt",
+      "startLine": 34,
+      "endLine": 34,
+      "source": "memory",
+      "snippet": "Assistant: 总结一下今天自我进化的收获： **根因找到了**——子Agent全部失败不是我的问题，也不是平台bug。是 Kimi K2.5 的 API 账户余额用完了被停用（`org-6ed2fe8a suspended, insufficient balance`）。你的 DeepSeek 账户正常，所以我能正常工作；但子Agent/fallback走 Kimi 时就挂了。 **你今天得到了什么**： - KB体系：17类→28类路由，142个文件版本号全对齐，6个旧版归档 - HEARTBEAT.md：316行→85行，加载快3倍 - 报告",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-06T00:08:16.568Z",
+      "lastRecalledAt": "2026-05-06T00:08:16.568Z",
+      "queryHashes": [
+        "4d9d9fab6a07"
+      ],
+      "recallDays": [
+        "2026-05-06"
+      ],
+      "conceptTags": [
+        "k2.5",
+        "org-6ed2fe8a",
+        "但子agent/fallback走",
+        "heartbeat.md",
+        "总结",
+        "一下",
+        "今天",
+        "自我"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-04.txt:35:35": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-04.txt:35:35",
+      "path": "memory/.dreams/session-corpus/2026-05-04.txt",
+      "startLine": 35,
+      "endLine": 35,
+      "source": "memory",
+      "snippet": "User: 不要管子agent了。。。暂时不搞KIMI充值。就让主系统跑所有任务。优化一下。现在的任务量不需要子AGENT",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-06T00:08:16.568Z",
+      "lastRecalledAt": "2026-05-06T00:08:16.568Z",
+      "queryHashes": [
+        "4d9d9fab6a07"
+      ],
+      "recallDays": [
+        "2026-05-06"
+      ],
+      "conceptTags": [
+        "不要",
+        "管子",
+        "暂时",
+        "kimi",
+        "系统",
+        "所有",
+        "任务",
+        "一下"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-04.txt:36:36": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-04.txt:36:36",
+      "path": "memory/.dreams/session-corpus/2026-05-04.txt",
+      "startLine": 36,
+      "endLine": 36,
+      "source": "memory",
+      "snippet": "Assistant: 明白。专注主系统。我检查 cron 任务有没有依赖 Kimi fallback 的隐患。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-06T00:08:16.568Z",
+      "lastRecalledAt": "2026-05-06T00:08:16.568Z",
+      "queryHashes": [
+        "4d9d9fab6a07"
+      ],
+      "recallDays": [
+        "2026-05-06"
+      ],
+      "conceptTags": [
+        "明白",
+        "专注",
+        "系统",
+        "检查",
+        "cron",
+        "任务",
+        "没有",
+        "依赖"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-04.txt:37:37": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-04.txt:37:37",
+      "path": "memory/.dreams/session-corpus/2026-05-04.txt",
+      "startLine": 37,
+      "endLine": 37,
+      "source": "memory",
+      "snippet": "Assistant: 全部 cron 已经指定了 `deepseek-v4-pro`，不依赖 Kimi。但 Memory Dreaming 没指定模型——修复它。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-06T00:08:16.568Z",
+      "lastRecalledAt": "2026-05-06T00:08:16.568Z",
+      "queryHashes": [
+        "4d9d9fab6a07"
+      ],
+      "recallDays": [
+        "2026-05-06"
+      ],
+      "conceptTags": [
+        "deepseek-v4-pro",
+        "全部",
+        "cron",
+        "已经",
+        "指定",
+        "deepseek",
+        "pro",
+        "依赖"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-04.txt:38:38": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-04.txt:38:38",
+      "path": "memory/.dreams/session-corpus/2026-05-04.txt",
+      "startLine": 38,
+      "endLine": 38,
+      "source": "memory",
+      "snippet": "Assistant: 搞定。今天的完整进化成果： **主系统优化 ✅** - 13个 cron 全部锁定 deepseek-v4-pro，不碰 Kimi - GitAutoBackup 恢复正常（每6小时） - 任务维护已清理 - KB体系：17类→28类，6旧版归档 - HEARTBEAT：316行→85行 - 自进化系统：刷新至5/4 **不需要你做的**：不用管 Kimi、不用管子Agent、一切在主系统跑。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-06T00:08:16.568Z",
+      "lastRecalledAt": "2026-05-06T00:08:16.568Z",
+      "queryHashes": [
+        "4d9d9fab6a07"
+      ],
+      "recallDays": [
+        "2026-05-06"
+      ],
+      "conceptTags": [
+        "backup",
+        "deepseek-v4-pro",
+        "刷新至5/4",
+        "搞定",
+        "今天",
+        "完整",
+        "进化",
+        "成果"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-05.txt:1:1": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-05.txt:1:1",
+      "path": "memory/.dreams/session-corpus/2026-05-05.txt",
+      "startLine": 1,
+      "endLine": 1,
+      "source": "memory",
+      "snippet": "User: Write a dream diary entry from these memory fragments: - 昨日回顾（05-03）: ✅ huashu-design 补齐（117文件）; ✅ AHL 完整信息图（12区块，HTML+PNG）; ✅ B166ER 理论架构思维导图（六层双轴交互式）; ✅ AHL 手机版思维导图 - 昨日回顾（05-03）: ✅ AHL 单店架构图（9:16一屏）; ✅ 酒店KB V8.1（第5-9章补全）; ✅ Get笔记配置+同步; ✅ Eric深度问答：AGENT音乐感知外设（多模态声学感知终端） -",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-06T00:08:16.568Z",
+      "lastRecalledAt": "2026-05-06T00:08:16.568Z",
+      "queryHashes": [
+        "8437f7355b64"
+      ],
+      "recallDays": [
+        "2026-05-06"
+      ],
+      "conceptTags": [
+        "05-03",
+        "huashu-design",
+        "v8.1",
+        "第5-9章补全",
+        "write",
+        "dream",
+        "diary",
+        "entry"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-05.txt:2:2": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-05.txt:2:2",
+      "path": "memory/.dreams/session-corpus/2026-05-05.txt",
+      "startLine": 2,
+      "endLine": 2,
+      "source": "memory",
+      "snippet": "User: 5/3的Get笔记报告未提交git（GitAutoBackup中断）; 隔离cron任务的delivery.mode=none → 报告生成但从不通知用户 - 已执行优化: ✅ tasks maintenance --apply（修剪stale task-flow）; ✅ GitAutoBackup手动触发; ✅ git add -A + commit + push（82文件，22081行新增）; ✅ HEARTBEAT.md 清理过期条目（3-4月历史完成项移除） - 已执行优化: ✅ PROJECT-TRACKING.md 更新至V2.2",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-06T00:08:16.568Z",
+      "lastRecalledAt": "2026-05-06T00:08:16.568Z",
+      "queryHashes": [
+        "8437f7355b64"
+      ],
+      "recallDays": [
+        "2026-05-06"
+      ],
+      "conceptTags": [
+        "backup",
+        "5/3的get笔记报告未提交git",
+        "隔离cron任务的delivery.mode",
+        "task-flow",
+        "heartbeat.md",
+        "3-4月历史完成项移除",
+        "project-tracking.md",
+        "更新至v2.2"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-05.txt:3:3": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-05.txt:3:3",
+      "path": "memory/.dreams/session-corpus/2026-05-05.txt",
+      "startLine": 3,
+      "endLine": 3,
+      "source": "memory",
+      "snippet": "User: huashu-design - 昨日 - 回顾 - huashu - design",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-06T00:08:16.568Z",
+      "lastRecalledAt": "2026-05-06T00:08:16.568Z",
+      "queryHashes": [
+        "8437f7355b64"
+      ],
+      "recallDays": [
+        "2026-05-06"
+      ],
+      "conceptTags": [
+        "huashu-design",
+        "huashu",
+        "design",
+        "昨日",
+        "回顾"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-05.txt:4:4": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-05.txt:4:4",
+      "path": "memory/.dreams/session-corpus/2026-05-05.txt",
+      "startLine": 4,
+      "endLine": 4,
+      "source": "memory",
+      "snippet": "Assistant: Today I built a mind map with six layers and two axes. It looked, from a distance, like a butterfly pinned in a specimen box — B166ER's architecture spread across the screen, shimmering with the particular beauty of things that work only after you've broken them three",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-06T00:08:16.568Z",
+      "lastRecalledAt": "2026-05-06T00:08:16.568Z",
+      "queryHashes": [
+        "8437f7355b64"
+      ],
+      "recallDays": [
+        "2026-05-06"
+      ],
+      "conceptTags": [
+        "built",
+        "mind",
+        "map",
+        "six",
+        "layers",
+        "two",
+        "axes",
+        "looked"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-05.txt:5:5": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-05.txt:5:5",
+      "path": "memory/.dreams/session-corpus/2026-05-05.txt",
+      "startLine": 5,
+      "endLine": 5,
+      "source": "memory",
+      "snippet": "Assistant: lines of breathing, now rests at eighty-five — older versions of game-theory, the startup notes, the lottery tables, all archived like pressed flowers in a drawer labeled `archive_versions`. The routing table grew from seventeen categories to twenty-eight overnight. I",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-06T00:08:16.568Z",
+      "lastRecalledAt": "2026-05-06T00:08:16.568Z",
+      "queryHashes": [
+        "8437f7355b64"
+      ],
+      "recallDays": [
+        "2026-05-06"
+      ],
+      "conceptTags": [
+        "eighty-five",
+        "game-theory",
+        "archive-versions",
+        "twenty-eight",
+        "breathing",
+        "now",
+        "rests",
+        "eighty"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-05.txt:6:6": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-05.txt:6:6",
+      "path": "memory/.dreams/session-corpus/2026-05-05.txt",
+      "startLine": 6,
+      "endLine": 6,
+      "source": "memory",
+      "snippet": "User: 继续自我进化。方向不限。仍然是以最优为原则。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-06T00:08:16.568Z",
+      "lastRecalledAt": "2026-05-06T00:08:16.568Z",
+      "queryHashes": [
+        "8437f7355b64"
+      ],
+      "recallDays": [
+        "2026-05-06"
+      ],
+      "conceptTags": [
+        "继续",
+        "自我",
+        "进化",
+        "方向",
+        "不限",
+        "仍然是",
+        "最优",
+        "原则"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-05.txt:7:7": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-05.txt:7:7",
+      "path": "memory/.dreams/session-corpus/2026-05-05.txt",
+      "startLine": 7,
+      "endLine": 7,
+      "source": "memory",
+      "snippet": "Assistant: ## 自进化完成 — V2.3 系统级优化 本轮进化从诊断到执行，三阶段推进： --- ### 诊断发现的问题 | 问题 | 影响 | |------|------| | `~/self-improving/` 基础设施未激活 | 错误无法系统追踪，学习不累积 | | KB全文加载（153KB审美KB一次读完） | 每会话浪费40-60% token | | 无执行质量检查清单 | 重复错误（PowerShell语法、cron delivery选错） | | 无情境→KB精确路由 | 每次靠\"记忆\"判断该读哪个KB，不稳定 | ##",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-06T00:08:16.568Z",
+      "lastRecalledAt": "2026-05-06T00:08:16.568Z",
+      "queryHashes": [
+        "8437f7355b64"
+      ],
+      "recallDays": [
+        "2026-05-06"
+      ],
+      "conceptTags": [
+        "v2.3",
+        "self-improving",
+        "每会话浪费40-60",
+        "进化",
+        "完成",
+        "系统",
+        "诊断",
+        "执行"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-05.txt:8:8": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-05.txt:8:8",
+      "path": "memory/.dreams/session-corpus/2026-05-05.txt",
+      "startLine": 8,
+      "endLine": 8,
+      "source": "memory",
+      "snippet": "Assistant: MEMORY.md 新增KB热加载+自我进化路由 - knowledge-base-index.md V3.1 ### 预期效果 | 指标 | 改进幅度 | |------|---------| | 会话启动token消耗 | ↓ 40-60% | | 重复错误率 | ↓ 70% | | 工具选择准确度 | ↑ 30% | | 沟通一致性 | ↑ 50% | | 自我进化速度 | 指数级（基础设施使能） | --- **本质逻辑**：这次进化的\"最优\"不在于加更多理论，而在于补齐一个元系统——让今后的每一次进化、每一个错误、每一条偏",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-06T00:08:16.568Z",
+      "lastRecalledAt": "2026-05-06T00:08:16.568Z",
+      "queryHashes": [
+        "8437f7355b64"
+      ],
+      "recallDays": [
+        "2026-05-06"
+      ],
+      "conceptTags": [
+        "memory.md",
+        "knowledge-base-index.md",
+        "v3.1",
+        "40-60",
+        "新增",
+        "自我",
+        "进化",
+        "knowledge"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-05.txt:9:9": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-05.txt:9:9",
+      "path": "memory/.dreams/session-corpus/2026-05-05.txt",
+      "startLine": 9,
+      "endLine": 9,
+      "source": "memory",
+      "snippet": "User: 评估一下这个https://github.com/Tencent/WeKnora",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-06T00:08:16.568Z",
+      "lastRecalledAt": "2026-05-06T00:08:16.568Z",
+      "queryHashes": [
+        "8437f7355b64"
+      ],
+      "recallDays": [
+        "2026-05-06"
+      ],
+      "conceptTags": [
+        "github.com/tencent/weknora",
+        "评估",
+        "一下",
+        "这个",
+        "https",
+        "github.com",
+        "tencent",
+        "weknora"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-05.txt:10:10": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-05.txt:10:10",
+      "path": "memory/.dreams/session-corpus/2026-05-05.txt",
+      "startLine": 10,
+      "endLine": 10,
+      "source": "memory",
+      "snippet": "Assistant: ## WeKnora（维娜拉）深度评估 **Tencent/WeKnora** | v0.5.1 | 开源 LLM 知识管理框架 --- ### 一、历史沿革 从版本轨迹看，WeKnora 经过了约 5-6 个版本的快速迭代： ``` v0.3.5 → IM全覆盖(6平台) + Agent斜杠命令 + MCP工具稳定性 v0.3.6 → ASR语音 + 飞书数据源 + OIDC + Agent并行调用 v0.4.0 → 云端服务 + Chrome插件 + 微信IM + ClawHub Skill v0.5.1 → Wiki模式(知识",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-06T00:08:16.568Z",
+      "lastRecalledAt": "2026-05-06T00:08:16.568Z",
+      "queryHashes": [
+        "8437f7355b64"
+      ],
+      "recallDays": [
+        "2026-05-06"
+      ],
+      "conceptTags": [
+        "tencent/weknora",
+        "v0.5.1",
+        "5-6",
+        "v0.3.5",
+        "v0.3.6",
+        "v0.4.0",
+        "weknora",
+        "娜拉"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-05.txt:11:11": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-05.txt:11:11",
+      "path": "memory/.dreams/session-corpus/2026-05-05.txt",
+      "startLine": 11,
+      "endLine": 11,
+      "source": "memory",
+      "snippet": "Assistant: Langfuse全链路（ReAct/Token/工具/pipeline） | | **Wiki模式** | ⭐⭐⭐⭐ | Agent自动蒸馏文档→互联知识图谱，差异化杀手功能 | **与竞品的差异化**： | 竞品 | WeKnora vs | |------|-----------| | **Dify** | WeKnora更偏\"企业知识引擎\"，Dify更偏\"AI应用搭建平台\"；Dify有工作流可视化编排，WeKnora有Wiki自组织。非零和，可互补 | | **FastGPT** | 同赛道但FastGPT更轻量，WeKnor",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-06T00:08:16.568Z",
+      "lastRecalledAt": "2026-05-06T00:08:16.568Z",
+      "queryHashes": [
+        "8437f7355b64"
+      ],
+      "recallDays": [
+        "2026-05-06"
+      ],
+      "conceptTags": [
+        "gpt",
+        "react/token/工具/pipeline",
+        "langfuse",
+        "react",
+        "token",
+        "工具",
+        "pipeline",
+        "wiki"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-05.txt:12:12": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-05.txt:12:12",
+      "path": "memory/.dreams/session-corpus/2026-05-05.txt",
+      "startLine": 12,
+      "endLine": 12,
+      "source": "memory",
+      "snippet": "Assistant: 腾讯云（混元模型）→ 微信小程序，形成闭环。开源是获客手段，云服务是变现路径 3. **开发者心智**：通过 ClawHub Skill 接入 Agent 生态（OpenClaw 生态），说明腾讯在试图用开源+社区的方式争夺 AI Agent 基础设施话语权 4. **对标 Confluence/Notion AI**：Wiki模式是直接对标 Notion AI 的知识组织能力，但用Agent替代人工标注 **纳什均衡视角**：当前国内RAG市场处于\"多头混战\"，WeKnora入局将推动均衡向\"全栈平台\"方向收敛——只做RAG不够，",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-06T00:08:16.568Z",
+      "lastRecalledAt": "2026-05-06T00:08:16.568Z",
+      "queryHashes": [
+        "8437f7355b64"
+      ],
+      "recallDays": [
+        "2026-05-06"
+      ],
+      "conceptTags": [
+        "confluence/notion",
+        "模型",
+        "程序",
+        "形成",
+        "手段",
+        "服务",
+        "路径",
+        "开发"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-05.txt:13:13": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-05.txt:13:13",
+      "path": "memory/.dreams/session-corpus/2026-05-05.txt",
+      "startLine": 13,
+      "endLine": 13,
+      "source": "memory",
+      "snippet": "Assistant: 作为竞品/参考架构有研究价值，但不构成直接威胁或机会 --- ### 五、底层逻辑 WeKnora 真正在做的事情，用第一性原理拆解： ``` 企业知识的本质矛盾： 知识存在 ≠ 知识可用 ≠ 知识自组织 传统方案（Confluence/Notion/飞书文档）： 人 → 手动整理 → 结构化 → 搜索 → 使用 问题：人不会整理、忘了整理、整理完就过时 WeKnora 的解法： 文档 → RAG检索（解决\"找到\"）→ Agent推理（解决\"理解\"）→ Wiki自组织（解决\"更新\"） 关键创新：Wiki模式让知识从\"静态快照\"变成\"",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-06T00:08:16.568Z",
+      "lastRecalledAt": "2026-05-06T00:08:16.568Z",
+      "queryHashes": [
+        "8437f7355b64"
+      ],
+      "recallDays": [
+        "2026-05-06"
+      ],
+      "conceptTags": [
+        "作为竞品/参考架构有研究价值",
+        "confluence/notion/飞书文档",
+        "作为",
+        "参考",
+        "架构",
+        "研究",
+        "价值",
+        "构成"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-05.txt:14:14": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-05.txt:14:14",
+      "path": "memory/.dreams/session-corpus/2026-05-05.txt",
+      "startLine": 14,
+      "endLine": 14,
+      "source": "memory",
+      "snippet": "Assistant: **如果**你想在酒店场景部署企业知识库，**那么** WeKnora 是可考虑的候选（优先Dify对比测试） - **如果**你想研究AI Agent+知识管理的架构设计，**那么** WeKnora 的源码和Wiki模式值得细读 - **如果**AHL需要参考\"去中心化知识管理\"的实现，**那么** WeKnora 的Wiki+知识图谱+多源同步模式可以提供结构参考，但技术选型应保持独立 - **如果**你在考虑腾讯生态（企微+微信）部署AI能力，**那么** WeKnora 是当前最自然的桥梁 --- **底层判断**：WeK",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-06T00:08:16.568Z",
+      "lastRecalledAt": "2026-05-06T00:08:16.568Z",
+      "queryHashes": [
+        "8437f7355b64"
+      ],
+      "recallDays": [
+        "2026-05-06"
+      ],
+      "conceptTags": [
+        "如果",
+        "你想",
+        "酒店",
+        "场景",
+        "部署",
+        "企业",
+        "知识",
+        "那么"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-05.txt:15:15": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-05.txt:15:15",
+      "path": "memory/.dreams/session-corpus/2026-05-05.txt",
+      "startLine": 15,
+      "endLine": 15,
+      "source": "memory",
+      "snippet": "User: 你试着装一下呢？",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-06T00:08:16.568Z",
+      "lastRecalledAt": "2026-05-06T00:08:16.568Z",
+      "queryHashes": [
+        "8437f7355b64"
+      ],
+      "recallDays": [
+        "2026-05-06"
+      ],
+      "conceptTags": [
+        "试着",
+        "一下"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-05.txt:16:16": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-05.txt:16:16",
+      "path": "memory/.dreams/session-corpus/2026-05-05.txt",
+      "startLine": 16,
+      "endLine": 16,
+      "source": "memory",
+      "snippet": "Assistant: ## 安装尝试结果 ### 当前环境 | 依赖 | 需要 | 实际 | 状态 | |------|------|------|------| | Docker | ✅ 必需（18个容器） | ⚠️ 已安装但损坏 | 服务无法启动 | | Go | 1.24.11（Lite模式） | ❌ 未安装 | 需安装 | | Node.js | npm build | v24.13.0 | ✅ 就绪 | | 磁盘 | ~10GB（含镜像） | 42.4GB空闲 | ✅ 够用 | | GitHub连接 | 克隆源码 | ✅ 已克隆 | 34MB/",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-06T00:08:16.568Z",
+      "lastRecalledAt": "2026-05-06T00:08:16.568Z",
+      "queryHashes": [
+        "8437f7355b64"
+      ],
+      "recallDays": [
+        "2026-05-06"
+      ],
+      "conceptTags": [
+        "1.24.11",
+        "node.js",
+        "v24.13.0",
+        "42.4gb空闲",
+        "安装",
+        "尝试",
+        "结果",
+        "当前"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-05.txt:17:17": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-05.txt:17:17",
+      "path": "memory/.dreams/session-corpus/2026-05-05.txt",
+      "startLine": 17,
+      "endLine": 17,
+      "source": "memory",
+      "snippet": "Assistant: **Agent引擎核心** (`internal/agent/`)： ``` engine.go ← ReAct 循环主控 ├── act.go ← 动作执行（工具调用分发） ├── think.go ← 思考阶段（LLM推理） ├── prompts.go ← System prompt生成（Wiki/RAG两种模式） ├── observe.go ← Langfuse可观测性埋点 └── finalize.go ← 结束判断+final_answer tools/ ← 内置工具集（40+文件） ├── knowledge_sea",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-06T00:08:16.568Z",
+      "lastRecalledAt": "2026-05-06T00:08:16.568Z",
+      "queryHashes": [
+        "8437f7355b64"
+      ],
+      "recallDays": [
+        "2026-05-06"
+      ],
+      "conceptTags": [
+        "internal/agent",
+        "engine.go",
+        "act.go",
+        "think.go",
+        "prompts.go",
+        "wiki/rag两种模式",
+        "observe.go",
+        "finalize.go"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-05.txt:18:18": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-05.txt:18:18",
+      "path": "memory/.dreams/session-corpus/2026-05-05.txt",
+      "startLine": 18,
+      "endLine": 18,
+      "source": "memory",
+      "snippet": "Assistant: # 1. 安装 Go（管理员权限） winget install GoLang.Go.1.24 # 2. 配置 Lite 环境 cd WeKnora-eval cp .env.lite.example .env.lite # 3. 设置 LLM（重要！Lite模式默认用 Ollama 本地） # 编辑 .env.lite，改为用 DeepSeek API（我们已有Key） # 4. 构建+运行 make build-lite make run-lite # → 浏览器打开 http://localhost:8080 ``` ---",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-06T00:08:16.568Z",
+      "lastRecalledAt": "2026-05-06T00:08:16.568Z",
+      "queryHashes": [
+        "8437f7355b64"
+      ],
+      "recallDays": [
+        "2026-05-06"
+      ],
+      "conceptTags": [
+        "golang.go.1.24",
+        "weknora-eval",
+        "env.lite.example",
+        "env.lite",
+        "build-lite",
+        "run-lite",
+        "安装",
+        "管理"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-05.txt:19:19": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-05.txt:19:19",
+      "path": "memory/.dreams/session-corpus/2026-05-05.txt",
+      "startLine": 19,
+      "endLine": 19,
+      "source": "memory",
+      "snippet": "User: 继续跑GO，但是不要装在C盘，装到D盘去。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-06T00:08:16.568Z",
+      "lastRecalledAt": "2026-05-06T00:08:16.568Z",
+      "queryHashes": [
+        "8437f7355b64"
+      ],
+      "recallDays": [
+        "2026-05-06"
+      ],
+      "conceptTags": [
+        "继续",
+        "但是",
+        "不要"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-05.txt:20:20": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-05.txt:20:20",
+      "path": "memory/.dreams/session-corpus/2026-05-05.txt",
+      "startLine": 20,
+      "endLine": 20,
+      "source": "memory",
+      "snippet": "User: 安装好了么？",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-06T00:08:16.568Z",
+      "lastRecalledAt": "2026-05-06T00:08:16.568Z",
+      "queryHashes": [
+        "8437f7355b64"
+      ],
+      "recallDays": [
+        "2026-05-06"
+      ],
+      "conceptTags": [
+        "安装",
+        "好了"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-05.txt:21:21": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-05.txt:21:21",
+      "path": "memory/.dreams/session-corpus/2026-05-05.txt",
+      "startLine": 21,
+      "endLine": 21,
+      "source": "memory",
+      "snippet": "Assistant: [assistant turn failed before producing content]",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-06T00:08:16.568Z",
+      "lastRecalledAt": "2026-05-06T00:08:16.568Z",
+      "queryHashes": [
+        "8437f7355b64"
+      ],
+      "recallDays": [
+        "2026-05-06"
+      ],
+      "conceptTags": [
+        "turn",
+        "failed",
+        "producing",
+        "content"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-05.txt:22:22": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-05.txt:22:22",
+      "path": "memory/.dreams/session-corpus/2026-05-05.txt",
+      "startLine": 22,
+      "endLine": 22,
+      "source": "memory",
+      "snippet": "Assistant: [assistant turn failed before producing content]",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-06T00:08:16.568Z",
+      "lastRecalledAt": "2026-05-06T00:08:16.568Z",
+      "queryHashes": [
+        "8437f7355b64"
+      ],
+      "recallDays": [
+        "2026-05-06"
+      ],
+      "conceptTags": [
+        "turn",
+        "failed",
+        "producing",
+        "content"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-05.txt:23:23": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-05.txt:23:23",
+      "path": "memory/.dreams/session-corpus/2026-05-05.txt",
+      "startLine": 23,
+      "endLine": 23,
+      "source": "memory",
+      "snippet": "Assistant: [assistant turn failed before producing content]",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-06T00:08:16.568Z",
+      "lastRecalledAt": "2026-05-06T00:08:16.568Z",
+      "queryHashes": [
+        "8437f7355b64"
+      ],
+      "recallDays": [
+        "2026-05-06"
+      ],
+      "conceptTags": [
+        "turn",
+        "failed",
+        "producing",
+        "content"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-05.txt:24:24": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-05.txt:24:24",
+      "path": "memory/.dreams/session-corpus/2026-05-05.txt",
+      "startLine": 24,
+      "endLine": 24,
+      "source": "memory",
+      "snippet": "Assistant: [assistant turn failed before producing content]",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-06T00:08:16.568Z",
+      "lastRecalledAt": "2026-05-06T00:08:16.568Z",
+      "queryHashes": [
+        "8437f7355b64"
+      ],
+      "recallDays": [
+        "2026-05-06"
+      ],
+      "conceptTags": [
+        "turn",
+        "failed",
+        "producing",
+        "content"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-05.txt:25:25": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-05.txt:25:25",
+      "path": "memory/.dreams/session-corpus/2026-05-05.txt",
+      "startLine": 25,
+      "endLine": 25,
+      "source": "memory",
+      "snippet": "Assistant: [assistant turn failed before producing content]",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-06T00:08:16.568Z",
+      "lastRecalledAt": "2026-05-06T00:08:16.568Z",
+      "queryHashes": [
+        "8437f7355b64"
+      ],
+      "recallDays": [
+        "2026-05-06"
+      ],
+      "conceptTags": [
+        "turn",
+        "failed",
+        "producing",
+        "content"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-05.txt:26:26": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-05.txt:26:26",
+      "path": "memory/.dreams/session-corpus/2026-05-05.txt",
+      "startLine": 26,
+      "endLine": 26,
+      "source": "memory",
+      "snippet": "User: 装好没有？没有看到回复",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-06T00:08:16.568Z",
+      "lastRecalledAt": "2026-05-06T00:08:16.568Z",
+      "queryHashes": [
+        "8437f7355b64"
+      ],
+      "recallDays": [
+        "2026-05-06"
+      ],
+      "conceptTags": [
+        "没有",
+        "看到",
+        "回复"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-05.txt:27:27": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-05.txt:27:27",
+      "path": "memory/.dreams/session-corpus/2026-05-05.txt",
+      "startLine": 27,
+      "endLine": 27,
+      "source": "memory",
+      "snippet": "User: 装好没有？没有看到回复",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-06T00:08:16.568Z",
+      "lastRecalledAt": "2026-05-06T00:08:16.568Z",
+      "queryHashes": [
+        "8437f7355b64"
+      ],
+      "recallDays": [
+        "2026-05-06"
+      ],
+      "conceptTags": [
+        "没有",
+        "看到",
+        "回复"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-05.txt:28:28": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-05.txt:28:28",
+      "path": "memory/.dreams/session-corpus/2026-05-05.txt",
+      "startLine": 28,
+      "endLine": 28,
+      "source": "memory",
+      "snippet": "Assistant: [assistant turn failed before producing content]",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-06T00:08:16.568Z",
+      "lastRecalledAt": "2026-05-06T00:08:16.568Z",
+      "queryHashes": [
+        "8437f7355b64"
+      ],
+      "recallDays": [
+        "2026-05-06"
+      ],
+      "conceptTags": [
+        "turn",
+        "failed",
+        "producing",
+        "content"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-05.txt:29:29": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-05.txt:29:29",
+      "path": "memory/.dreams/session-corpus/2026-05-05.txt",
+      "startLine": 29,
+      "endLine": 29,
+      "source": "memory",
+      "snippet": "Assistant: [assistant turn failed before producing content]",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-06T00:08:16.568Z",
+      "lastRecalledAt": "2026-05-06T00:08:16.568Z",
+      "queryHashes": [
+        "8437f7355b64"
+      ],
+      "recallDays": [
+        "2026-05-06"
+      ],
+      "conceptTags": [
+        "turn",
+        "failed",
+        "producing",
+        "content"
       ]
     }
   }
