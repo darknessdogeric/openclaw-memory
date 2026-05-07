@@ -27,3 +27,7 @@
 [main/sessions/main/e08fb607-040c-4a20-a3fd-8728d823668d.jsonl#L339] User: 装好没有？没有看到回复
 [main/sessions/main/e08fb607-040c-4a20-a3fd-8728d823668d.jsonl#L357] Assistant: [assistant turn failed before producing content]
 [main/sessions/main/e08fb607-040c-4a20-a3fd-8728d823668d.jsonl#L358] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/e08fb607-040c-4a20-a3fd-8728d823668d.jsonl.reset.2026-05-06T13-54-28.346Z#L359] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/e08fb607-040c-4a20-a3fd-8728d823668d.jsonl.reset.2026-05-06T13-54-28.346Z#L360] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/e08fb607-040c-4a20-a3fd-8728d823668d.jsonl.reset.2026-05-06T13-54-28.346Z#L403] Assistant: ## ✅ WeKnora Lite 安装成功！ ``` ┌─────────────────────────────────────────────────┐ │ WeKnora Lite v0.5.1 │ │ 📍 http://localhost:8080 │ │ 📋 Swagger: http://localhost:8080/swagger/... │ │ 💾 SQLite | 🧠 内存队列 | 🏠 本地存储 │ │ PID: 17312 | 内
+[main/sessions/main/e08fb607-040c-4a20-a3fd-8728d823668d.jsonl.reset.2026-05-06T13-54-28.346Z#L403] Assistant: CGO_CFLAGS 添加 include 路径 | | 4 | Windows 不支持 Setpgid/Kill | sandbox 用了 Unix 专属 syscall | 修改为 cmd.Process.Kill() | ### 当前限制 - **前端未构建**：LESS 编译超时（机器性能限制），目前仅 API + Swagger 可用 - **无 LLM 配置**：需在 Swagger UI 或 API 中配置 LLM provider（DeepSee

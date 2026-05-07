@@ -112,6 +112,7 @@
 | 决策/博弈论/贝叶斯 | `memory/theoretical-framework-v2.md` / `memory/game-theory-decision-knowledge-base-v3.md` |
 | 融资估值/股权 | `memory/startup-fundraising-knowledge-base-v2.md` |
 | Eric音乐审美 | `memory/张实全方位人格侧写报告.md` |
+| 酒店市场报告体系 | `reports/REPORTING-SYSTEM.md` |
 | 具体项目文件 | `C:\Users\ericz\Desktop\张实项目总控\` |
 
 ### 知识库清理记录（2026-04-08）
@@ -201,3 +202,8 @@
 - **V2.1 深化（20:25 Eric 四条指令）**: [score=0.837 recalls=0 avg=0.620 source=memory/2026-04-30.md:12-12]
 <!-- openclaw-memory-promotion:memory:memory/2026-04-30.md:18:18 -->
 - **关键变更**： [score=0.837 recalls=0 avg=0.620 source=memory/2026-04-30.md:18-18]
+
+## Promoted From Short-Term Memory (2026-05-07)
+
+<!-- openclaw-memory-promotion:memory:memory/2026-05-02.md:5:5 -->
+- **触发**: Eric 指令 "重塑知识库体系 + 酒店全景KB重新梳理" [score=0.861 recalls=0 avg=0.620 source=memory/2026-05-02.md:5-5]
