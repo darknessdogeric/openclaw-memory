@@ -114,6 +114,39 @@ gh repo view owner/repo                    # GitHub
 ### Apify MCP ✅
 **位置**: `skills/apify-mcp/` | **功能**: Apify actors MCP
 
+### 爬虫技能矩阵 ✅ **NEW**
+**位置**: `workspace/toolbox/scrape_matrix.py` | **版本**: V1.0
+**四工具编排**: scrap_tools + Obscura + Playwright + Tavily
+**用法**:
+```python
+import sys; sys.path.insert(0, 'workspace/toolbox')
+from scrape_matrix import scrape, scrape_search, matrix_report
+
+# 普通爬取（自动路由）
+r = scrape("https://www.ctrip.com")           # → Obscura
+r = scrape("https://www.xiaohongshu.com")    # → Obscura
+r = scrape("https://en.wikipedia.org/wiki/...")  # → scrap_tools
+
+# 强制类型
+r = scrape("url", task_type="dynamic")       # 强制JS渲染
+r = scrape("url", task_type="research")       # 强制Tavily搜索
+
+# 搜索快捷
+r = scrape_search("中国酒店行业2026趋势")
+
+# 矩阵状态
+print(matrix_report())
+```
+**优先级路由**:
+| 优先级 | 工具 | 擅长场景 | 状态 |
+|--------|------|---------|------|
+| 1 | scrap_tools | 静态页面（百科/新闻/政府） | ✅ |
+| 2 | **Obscura** | OTA强反爬/小红书/JS渲染 | ✅ |
+| 3 | Playwright | 复杂交互/登录态 | ✅ |
+| 4 | Tavily | 研究型搜索 | ✅ |
+**Obscura安装**: `workspace/toolbox/obscura/obscura.exe`（49MB，内置反检测）
+**已验证**: 携程✅ 小红书✅ Tavily搜索✅
+
 ---
 
 ## 增长工具
