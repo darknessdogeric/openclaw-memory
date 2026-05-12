@@ -207,3 +207,12 @@
 
 <!-- openclaw-memory-promotion:memory:memory/2026-05-02.md:5:5 -->
 - **触发**: Eric 指令 "重塑知识库体系 + 酒店全景KB重新梳理" [score=0.861 recalls=0 avg=0.620 source=memory/2026-05-02.md:5-5]
+
+## Promoted From Short-Term Memory (2026-05-11)
+
+<!-- openclaw-memory-promotion:memory:memory/2026-05-04.md:21:24 -->
+- | 项目 | 状态 | 详情 | |------|------|------| | OpenClaw版本 | 🟢 2026.5.2 | 5/4更新，最新 | | Gateway | 🟢 运行中 | 127.0.0.1:18789 loopback | [score=0.894 recalls=0 avg=0.620 source=memory/2026-05-04.md:21-24]
+<!-- openclaw-memory-promotion:memory:memory/2026-05-04.md:25:28 -->
+- | GitAutoBackup | 🔴→🟢 已修复 | 昨天因gateway重启中断，手动触发+push成功 | | 磁盘C | 🟡 43GB空闲 | 103GB已用，监控 | | Memory文件 | 🟢 162文件/8.8MB | 健康 | | 任务维护 | 🟢 已清理 | 修剪1个stale task-flow | [score=0.894 recalls=0 avg=0.620 source=memory/2026-05-04.md:25-28]
+<!-- openclaw-memory-promotion:memory:memory/2026-05-04.md:29:30 -->
+- | Cron作业 | 🟡 12个显示delivery警告 | 实际mode=none无影响，显示artifact | | 报告持久化 | 🔴→🟢 已修复 | 82文件已提交+push至GitHub | [score=0.894 recalls=0 avg=0.620 source=memory/2026-05-04.md:29-30]

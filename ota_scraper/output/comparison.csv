@@ -1,0 +1,43 @@
+﻿平台,酒店名称,星级,最低价,评分,评论数,地址,城市,数据质量
+booking,Hilton Garden Inn Beijing Daxing International Airport,,9004.0,4.65,1704,Beijing,,70%
+booking,Bvlgari Hotel Beijing,,,4.9,25,"Chaoyang, Beijing (Yansha)",,50%
+booking,Fairfield by Marriott Beijing Daxing Airport,,10524.0,4.55,1770,Beijing,,70%
+booking,Hilton Beijing Tongzhou,,15659.0,4.35,81,Beijing,,70%
+booking,Fairfield by Marriott Beijing Capital Airport,,10329.0,4.5,45,Beijing,,70%
+booking,Beijing Xingshe Youth Hostel,,2545.0,4.5,85,"Xicheng, Beijing",,70%
+booking,Beijing Shichahai Shadow Art Performance Courtyard,,8621.0,4.55,524,"Xicheng, Beijing (Houhai)",,70%
+booking,Holiday Inn Express Beijing Temple of Heaven by IHG,,9409.0,4.05,2250,"Xicheng, Beijing",,70%
+booking,"Mumian Beijing Daxing International Airport, part of Hyatt",,15776.0,4.7,1755,"Daxing, Beijing",,70%
+booking,"Dequan Railway Station Hotel, near SOLANA",,5078.0,4.25,36,"Chaoyang, Beijing",,70%
+booking,Holiday Inn Express Beijing Airport Zone by IHG,,7426.0,4.1,689,"Chaoyang, Beijing",,70%
+booking,Holiday Inn Express Beijing Dongzhimen by IHG,,12290.0,4.5,5036,"Sanlitun, Beijing (Sanlitun)",,70%
+booking,Zhong An Hotel Beijing Former Residence of Journalist Edgar Snow,,7435.0,4.45,3850,"Downtown Beijing, Beijing",,70%
+booking,SSAW Garden Hotel Beijing,,16653.0,4.45,322,"Dongcheng, Beijing",,70%
+booking,秋果S酒店北京新国展首都机场店 Qiuguo S Hotel,,13983.0,4.25,285,Beijing,,70%
+booking,Beijing Pagoda Light International Youth Hostel,,4122.0,4.05,77,"Xicheng, Beijing",,70%
+booking,Kempinski Hotel Beijing Yansha Center,,24179.0,4.4,750,"Chaoyang, Beijing (Yansha)",,70%
+booking,Beijing CSN Pearl Hotel,,7393.0,3.95,20,Beijing,,70%
+booking,Grand Hyatt Beijing,,34542.0,4.5,809,"Dongcheng, Beijing (Wangfujing Shopping Area)",,70%
+booking,Grand Millennium Beijing,,16723.0,4.2,789,"Chaoyang, Beijing (Central Business District)",,70%
+booking,Mercure Beijing Dongzhimen,,12038.0,4.0,2,"Sanlitun, Beijing (Sanlitun)",,70%
+booking,DoubleTree by Hilton Beijing,,15521.0,4.2,254,"Xicheng, Beijing",,70%
+booking,JI Hotel Beijing National Convention Center Bird's Nest,,10823.0,,,"Chaoyang, Beijing (Olympic Village)",,55%
+booking,Qianmen Courtyard Hotel,,5239.0,3.95,843,"Dongcheng, Beijing (Qianmen)",,70%
+booking,Jianguo Hotel,,12780.0,4.05,502,"Chaoyang, Beijing (Central Business District)",,70%
+booking,JW Marriott Hotel Beijing,,26482.0,4.4,173,"Chaoyang, Beijing (Central Business District)",,70%
+booking,"Kerry Hotel, Beijing by Shangri-La",,22545.0,4.6,517,"Chaoyang, Beijing (Central Business District)",,70%
+ctrip,三河燕郊开发区燕郊站亚朵酒店,4,,4.8,1165,三河 · 近燕郊站 · 福成喜悦温泉汇,,60%
+ctrip,北京东方君悦大酒店,5,,4.7,9526,近故宫博物院 · 中国国家博物馆,,60%
+ctrip,北京贵宾楼饭店,5,,4.8,5118,近天安门广场 · 王府井,,60%
+ctrip,北京大悦酒店,5,,4.7,11188,近西单大悦城 · 天安门广场,,60%
+ctrip,北京丽思卡尔顿酒店(华贸中心),5,,4.7,4032,近北京SKP · 大望路地铁站,,60%
+ctrip,北京长富宫饭店,5,,4.8,6421,近北京站 · 建国门地铁站,,60%
+ctrip,北京首都宾馆,5,,4.6,6378,近天安门广场 · 中国国家博物馆,,60%
+ctrip,北京丽晶酒店,5,,4.7,6810,近王府井 · 北京协和医院(东单院区),,60%
+ctrip,北京索菲特大酒店,5,,4.6,12596,近王府井 · 国贸CBD,,60%
+ctrip,北京三里屯CHAO酒店,5,,4.7,3062,近工人体育场地铁站 · 三里屯,,60%
+ctrip,北京璞瑄酒店,5,,4.7,2982,近王府井 · 中国美术馆地铁站,,60%
+ctrip,北京佳兆业铂域行政公寓,5,,4.8,3405,近北京SKP · 国贸CBD/朝阳大悦城,,60%
+ctrip,北京国二招宾馆,5,,4.8,5977,近北京北站 · 西直门地铁站,,60%
+ctrip,北京京都信苑饭店,5,,4.8,7245,近北京西站 · 中国人民革命军事博物馆,,60%
+ctrip,北京远航国际酒店(首都机场新国展店),4,,4.9,23730,近北京首都国际机场 · 中国国际展览中心(顺义馆),,60%

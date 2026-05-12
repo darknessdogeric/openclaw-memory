@@ -1,0 +1,618 @@
+[
+  {
+    "hotel_id": "",
+    "hotel_name": "Hilton Garden Inn Beijing Daxing International Airport",
+    "platform": "booking",
+    "address": "Beijing",
+    "city": "",
+    "district": "",
+    "star_rating": null,
+    "hotel_type": "",
+    "brand": "",
+    "prices": [
+      {
+        "lowest_price": 9004.0,
+        "currency": "CNY"
+      }
+    ],
+    "review_score": 4.65,
+    "review_count": 1704,
+    "latitude": null,
+    "longitude": null,
+    "data_quality": 0.7000000000000001,
+    "scraped_at": "2026-05-11T12:50:18.832835"
+  },
+  {
+    "hotel_id": "",
+    "hotel_name": "Bvlgari Hotel Beijing",
+    "platform": "booking",
+    "address": "Chaoyang, Beijing (Yansha)",
+    "city": "",
+    "district": "",
+    "star_rating": null,
+    "hotel_type": "",
+    "brand": "",
+    "prices": [],
+    "review_score": 4.9,
+    "review_count": 25,
+    "latitude": null,
+    "longitude": null,
+    "data_quality": 0.5,
+    "scraped_at": "2026-05-11T12:50:18.833772"
+  },
+  {
+    "hotel_id": "",
+    "hotel_name": "Fairfield by Marriott Beijing Daxing Airport",
+    "platform": "booking",
+    "address": "Beijing",
+    "city": "",
+    "district": "",
+    "star_rating": null,
+    "hotel_type": "",
+    "brand": "",
+    "prices": [
+      {
+        "lowest_price": 10524.0,
+        "currency": "CNY"
+      }
+    ],
+    "review_score": 4.55,
+    "review_count": 1770,
+    "latitude": null,
+    "longitude": null,
+    "data_quality": 0.7000000000000001,
+    "scraped_at": "2026-05-11T12:50:18.833813"
+  },
+  {
+    "hotel_id": "",
+    "hotel_name": "Hilton Beijing Tongzhou",
+    "platform": "booking",
+    "address": "Beijing",
+    "city": "",
+    "district": "",
+    "star_rating": null,
+    "hotel_type": "",
+    "brand": "",
+    "prices": [
+      {
+        "lowest_price": 15659.0,
+        "currency": "CNY"
+      }
+    ],
+    "review_score": 4.35,
+    "review_count": 81,
+    "latitude": null,
+    "longitude": null,
+    "data_quality": 0.7000000000000001,
+    "scraped_at": "2026-05-11T12:50:18.833858"
+  },
+  {
+    "hotel_id": "",
+    "hotel_name": "Fairfield by Marriott Beijing Capital Airport",
+    "platform": "booking",
+    "address": "Beijing",
+    "city": "",
+    "district": "",
+    "star_rating": null,
+    "hotel_type": "",
+    "brand": "",
+    "prices": [
+      {
+        "lowest_price": 10329.0,
+        "currency": "CNY"
+      }
+    ],
+    "review_score": 4.5,
+    "review_count": 45,
+    "latitude": null,
+    "longitude": null,
+    "data_quality": 0.7000000000000001,
+    "scraped_at": "2026-05-11T12:50:18.833896"
+  },
+  {
+    "hotel_id": "",
+    "hotel_name": "Beijing Xingshe Youth Hostel",
+    "platform": "booking",
+    "address": "Xicheng, Beijing",
+    "city": "",
+    "district": "",
+    "star_rating": null,
+    "hotel_type": "",
+    "brand": "",
+    "prices": [
+      {
+        "lowest_price": 2545.0,
+        "currency": "CNY"
+      }
+    ],
+    "review_score": 4.5,
+    "review_count": 85,
+    "latitude": null,
+    "longitude": null,
+    "data_quality": 0.7000000000000001,
+    "scraped_at": "2026-05-11T12:50:18.833925"
+  },
+  {
+    "hotel_id": "",
+    "hotel_name": "Beijing Shichahai Shadow Art Performance Courtyard",
+    "platform": "booking",
+    "address": "Xicheng, Beijing (Houhai)",
+    "city": "",
+    "district": "",
+    "star_rating": null,
+    "hotel_type": "",
+    "brand": "",
+    "prices": [
+      {
+        "lowest_price": 8621.0,
+        "currency": "CNY"
+      }
+    ],
+    "review_score": 4.55,
+    "review_count": 524,
+    "latitude": null,
+    "longitude": null,
+    "data_quality": 0.7000000000000001,
+    "scraped_at": "2026-05-11T12:50:18.833952"
+  },
+  {
+    "hotel_id": "",
+    "hotel_name": "Holiday Inn Express Beijing Temple of Heaven by IHG",
+    "platform": "booking",
+    "address": "Xicheng, Beijing",
+    "city": "",
+    "district": "",
+    "star_rating": null,
+    "hotel_type": "",
+    "brand": "",
+    "prices": [
+      {
+        "lowest_price": 9409.0,
+        "currency": "CNY"
+      }
+    ],
+    "review_score": 4.05,
+    "review_count": 2250,
+    "latitude": null,
+    "longitude": null,
+    "data_quality": 0.7000000000000001,
+    "scraped_at": "2026-05-11T12:50:18.833980"
+  },
+  {
+    "hotel_id": "",
+    "hotel_name": "Mumian Beijing Daxing International Airport, part of Hyatt",
+    "platform": "booking",
+    "address": "Daxing, Beijing",
+    "city": "",
+    "district": "",
+    "star_rating": null,
+    "hotel_type": "",
+    "brand": "",
+    "prices": [
+      {
+        "lowest_price": 15776.0,
+        "currency": "CNY"
+      }
+    ],
+    "review_score": 4.7,
+    "review_count": 1755,
+    "latitude": null,
+    "longitude": null,
+    "data_quality": 0.7000000000000001,
+    "scraped_at": "2026-05-11T12:50:18.834008"
+  },
+  {
+    "hotel_id": "",
+    "hotel_name": "Dequan Railway Station Hotel, near SOLANA",
+    "platform": "booking",
+    "address": "Chaoyang, Beijing",
+    "city": "",
+    "district": "",
+    "star_rating": null,
+    "hotel_type": "",
+    "brand": "",
+    "prices": [
+      {
+        "lowest_price": 5078.0,
+        "currency": "CNY"
+      }
+    ],
+    "review_score": 4.25,
+    "review_count": 36,
+    "latitude": null,
+    "longitude": null,
+    "data_quality": 0.7000000000000001,
+    "scraped_at": "2026-05-11T12:50:18.834035"
+  },
+  {
+    "hotel_id": "",
+    "hotel_name": "Holiday Inn Express Beijing Airport Zone by IHG",
+    "platform": "booking",
+    "address": "Chaoyang, Beijing",
+    "city": "",
+    "district": "",
+    "star_rating": null,
+    "hotel_type": "",
+    "brand": "",
+    "prices": [
+      {
+        "lowest_price": 7426.0,
+        "currency": "CNY"
+      }
+    ],
+    "review_score": 4.1,
+    "review_count": 689,
+    "latitude": null,
+    "longitude": null,
+    "data_quality": 0.7000000000000001,
+    "scraped_at": "2026-05-11T12:50:18.834061"
+  },
+  {
+    "hotel_id": "",
+    "hotel_name": "Holiday Inn Express Beijing Dongzhimen by IHG",
+    "platform": "booking",
+    "address": "Sanlitun, Beijing (Sanlitun)",
+    "city": "",
+    "district": "",
+    "star_rating": null,
+    "hotel_type": "",
+    "brand": "",
+    "prices": [
+      {
+        "lowest_price": 12290.0,
+        "currency": "CNY"
+      }
+    ],
+    "review_score": 4.5,
+    "review_count": 5036,
+    "latitude": null,
+    "longitude": null,
+    "data_quality": 0.7000000000000001,
+    "scraped_at": "2026-05-11T12:50:18.834090"
+  },
+  {
+    "hotel_id": "",
+    "hotel_name": "Zhong An Hotel Beijing Former Residence of Journalist Edgar Snow",
+    "platform": "booking",
+    "address": "Downtown Beijing, Beijing",
+    "city": "",
+    "district": "",
+    "star_rating": null,
+    "hotel_type": "",
+    "brand": "",
+    "prices": [
+      {
+        "lowest_price": 7435.0,
+        "currency": "CNY"
+      }
+    ],
+    "review_score": 4.45,
+    "review_count": 3850,
+    "latitude": null,
+    "longitude": null,
+    "data_quality": 0.7000000000000001,
+    "scraped_at": "2026-05-11T12:50:18.834117"
+  },
+  {
+    "hotel_id": "",
+    "hotel_name": "SSAW Garden Hotel Beijing",
+    "platform": "booking",
+    "address": "Dongcheng, Beijing",
+    "city": "",
+    "district": "",
+    "star_rating": null,
+    "hotel_type": "",
+    "brand": "",
+    "prices": [
+      {
+        "lowest_price": 16653.0,
+        "currency": "CNY"
+      }
+    ],
+    "review_score": 4.45,
+    "review_count": 322,
+    "latitude": null,
+    "longitude": null,
+    "data_quality": 0.7000000000000001,
+    "scraped_at": "2026-05-11T12:50:18.834145"
+  },
+  {
+    "hotel_id": "",
+    "hotel_name": "秋果S酒店北京新国展首都机场店 Qiuguo S Hotel",
+    "platform": "booking",
+    "address": "Beijing",
+    "city": "",
+    "district": "",
+    "star_rating": null,
+    "hotel_type": "",
+    "brand": "",
+    "prices": [
+      {
+        "lowest_price": 13983.0,
+        "currency": "CNY"
+      }
+    ],
+    "review_score": 4.25,
+    "review_count": 285,
+    "latitude": null,
+    "longitude": null,
+    "data_quality": 0.7000000000000001,
+    "scraped_at": "2026-05-11T12:50:18.834174"
+  },
+  {
+    "hotel_id": "",
+    "hotel_name": "Beijing Pagoda Light International Youth Hostel",
+    "platform": "booking",
+    "address": "Xicheng, Beijing",
+    "city": "",
+    "district": "",
+    "star_rating": null,
+    "hotel_type": "",
+    "brand": "",
+    "prices": [
+      {
+        "lowest_price": 4122.0,
+        "currency": "CNY"
+      }
+    ],
+    "review_score": 4.05,
+    "review_count": 77,
+    "latitude": null,
+    "longitude": null,
+    "data_quality": 0.7000000000000001,
+    "scraped_at": "2026-05-11T12:50:18.834202"
+  },
+  {
+    "hotel_id": "",
+    "hotel_name": "Kempinski Hotel Beijing Yansha Center",
+    "platform": "booking",
+    "address": "Chaoyang, Beijing (Yansha)",
+    "city": "",
+    "district": "",
+    "star_rating": null,
+    "hotel_type": "",
+    "brand": "",
+    "prices": [
+      {
+        "lowest_price": 24179.0,
+        "currency": "CNY"
+      }
+    ],
+    "review_score": 4.4,
+    "review_count": 750,
+    "latitude": null,
+    "longitude": null,
+    "data_quality": 0.7000000000000001,
+    "scraped_at": "2026-05-11T12:50:18.834228"
+  },
+  {
+    "hotel_id": "",
+    "hotel_name": "Beijing CSN Pearl Hotel",
+    "platform": "booking",
+    "address": "Beijing",
+    "city": "",
+    "district": "",
+    "star_rating": null,
+    "hotel_type": "",
+    "brand": "",
+    "prices": [
+      {
+        "lowest_price": 7393.0,
+        "currency": "CNY"
+      }
+    ],
+    "review_score": 3.95,
+    "review_count": 20,
+    "latitude": null,
+    "longitude": null,
+    "data_quality": 0.7000000000000001,
+    "scraped_at": "2026-05-11T12:50:18.834256"
+  },
+  {
+    "hotel_id": "",
+    "hotel_name": "Grand Hyatt Beijing",
+    "platform": "booking",
+    "address": "Dongcheng, Beijing (Wangfujing Shopping Area)",
+    "city": "",
+    "district": "",
+    "star_rating": null,
+    "hotel_type": "",
+    "brand": "",
+    "prices": [
+      {
+        "lowest_price": 34542.0,
+        "currency": "CNY"
+      }
+    ],
+    "review_score": 4.5,
+    "review_count": 809,
+    "latitude": null,
+    "longitude": null,
+    "data_quality": 0.7000000000000001,
+    "scraped_at": "2026-05-11T12:50:18.834281"
+  },
+  {
+    "hotel_id": "",
+    "hotel_name": "Grand Millennium Beijing",
+    "platform": "booking",
+    "address": "Chaoyang, Beijing (Central Business District)",
+    "city": "",
+    "district": "",
+    "star_rating": null,
+    "hotel_type": "",
+    "brand": "",
+    "prices": [
+      {
+        "lowest_price": 16723.0,
+        "currency": "CNY"
+      }
+    ],
+    "review_score": 4.2,
+    "review_count": 789,
+    "latitude": null,
+    "longitude": null,
+    "data_quality": 0.7000000000000001,
+    "scraped_at": "2026-05-11T12:50:18.834307"
+  },
+  {
+    "hotel_id": "",
+    "hotel_name": "Mercure Beijing Dongzhimen",
+    "platform": "booking",
+    "address": "Sanlitun, Beijing (Sanlitun)",
+    "city": "",
+    "district": "",
+    "star_rating": null,
+    "hotel_type": "",
+    "brand": "",
+    "prices": [
+      {
+        "lowest_price": 12038.0,
+        "currency": "CNY"
+      }
+    ],
+    "review_score": 4.0,
+    "review_count": 2,
+    "latitude": null,
+    "longitude": null,
+    "data_quality": 0.7000000000000001,
+    "scraped_at": "2026-05-11T12:50:18.834333"
+  },
+  {
+    "hotel_id": "",
+    "hotel_name": "DoubleTree by Hilton Beijing",
+    "platform": "booking",
+    "address": "Xicheng, Beijing",
+    "city": "",
+    "district": "",
+    "star_rating": null,
+    "hotel_type": "",
+    "brand": "",
+    "prices": [
+      {
+        "lowest_price": 15521.0,
+        "currency": "CNY"
+      }
+    ],
+    "review_score": 4.2,
+    "review_count": 254,
+    "latitude": null,
+    "longitude": null,
+    "data_quality": 0.7000000000000001,
+    "scraped_at": "2026-05-11T12:50:18.834361"
+  },
+  {
+    "hotel_id": "",
+    "hotel_name": "JI Hotel Beijing National Convention Center Bird's Nest",
+    "platform": "booking",
+    "address": "Chaoyang, Beijing (Olympic Village)",
+    "city": "",
+    "district": "",
+    "star_rating": null,
+    "hotel_type": "",
+    "brand": "",
+    "prices": [
+      {
+        "lowest_price": 10823.0,
+        "currency": "CNY"
+      }
+    ],
+    "review_score": null,
+    "review_count": 0,
+    "latitude": null,
+    "longitude": null,
+    "data_quality": 0.55,
+    "scraped_at": "2026-05-11T12:50:18.834757"
+  },
+  {
+    "hotel_id": "",
+    "hotel_name": "Qianmen Courtyard Hotel",
+    "platform": "booking",
+    "address": "Dongcheng, Beijing (Qianmen)",
+    "city": "",
+    "district": "",
+    "star_rating": null,
+    "hotel_type": "",
+    "brand": "",
+    "prices": [
+      {
+        "lowest_price": 5239.0,
+        "currency": "CNY"
+      }
+    ],
+    "review_score": 3.95,
+    "review_count": 843,
+    "latitude": null,
+    "longitude": null,
+    "data_quality": 0.7000000000000001,
+    "scraped_at": "2026-05-11T12:50:18.834792"
+  },
+  {
+    "hotel_id": "",
+    "hotel_name": "Jianguo Hotel",
+    "platform": "booking",
+    "address": "Chaoyang, Beijing (Central Business District)",
+    "city": "",
+    "district": "",
+    "star_rating": null,
+    "hotel_type": "",
+    "brand": "",
+    "prices": [
+      {
+        "lowest_price": 12780.0,
+        "currency": "CNY"
+      }
+    ],
+    "review_score": 4.05,
+    "review_count": 502,
+    "latitude": null,
+    "longitude": null,
+    "data_quality": 0.7000000000000001,
+    "scraped_at": "2026-05-11T12:50:18.834819"
+  },
+  {
+    "hotel_id": "",
+    "hotel_name": "JW Marriott Hotel Beijing",
+    "platform": "booking",
+    "address": "Chaoyang, Beijing (Central Business District)",
+    "city": "",
+    "district": "",
+    "star_rating": null,
+    "hotel_type": "",
+    "brand": "",
+    "prices": [
+      {
+        "lowest_price": 26482.0,
+        "currency": "CNY"
+      }
+    ],
+    "review_score": 4.4,
+    "review_count": 173,
+    "latitude": null,
+    "longitude": null,
+    "data_quality": 0.7000000000000001,
+    "scraped_at": "2026-05-11T12:50:18.834850"
+  },
+  {
+    "hotel_id": "",
+    "hotel_name": "Kerry Hotel, Beijing by Shangri-La",
+    "platform": "booking",
+    "address": "Chaoyang, Beijing (Central Business District)",
+    "city": "",
+    "district": "",
+    "star_rating": null,
+    "hotel_type": "",
+    "brand": "",
+    "prices": [
+      {
+        "lowest_price": 22545.0,
+        "currency": "CNY"
+      }
+    ],
+    "review_score": 4.6,
+    "review_count": 517,
+    "latitude": null,
+    "longitude": null,
+    "data_quality": 0.7000000000000001,
+    "scraped_at": "2026-05-11T12:50:18.834878"
+  }
+]
