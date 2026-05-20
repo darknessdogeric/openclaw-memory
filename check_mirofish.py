@@ -1,0 +1,13 @@
+import json, urllib.request
+d = json.loads(urllib.request.urlopen('https://api.github.com/repos/666ghj/MiroFish').read())
+print(f"Stars: {d['stargazers_count']}")
+print(f"Forks: {d['forks_count']}")
+print(f"Open Issues: {d['open_issues_count']}")
+print(f"License: {d.get('license',{}).get('spdx_id','N/A')}")
+print(f"Created: {d['created_at']}")
+print(f"Updated: {d['updated_at']}")
+print(f"Pushed: {d['pushed_at']}")
+print(f"Language: {d['language']}")
+print(f"Size: {d['size']} KB")
+print(f"Topics: {d.get('topics',[])}")
+print(f"Description: {d.get('description','')}")

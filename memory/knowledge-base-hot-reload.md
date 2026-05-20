@@ -15,8 +15,9 @@
 ### 🌡️ WARM — 项目/领域触发时加载
 | KB | 文件 | 触发情境 |
 |----|------|---------|
-| 酒店全景V8.1 | hotel-industry-knowledge-base.md | 酒店运营/管理/咨询 |
-| 收益管理V4 | hotel-revenue-management-knowledge-base-v4.md | ADR/OCC/定价分析 |
+| 酒店全景V9.0 | hotel-industry-knowledge-base.md | 酒店运营/管理/咨询 |
+| 多OTA运营V1 | multi-ota-operations-knowledge-base-v1.md | OTA/携程/美团/渠道管理 |
+| 收益管理V5 | hotel-revenue-management-knowledge-base-v5.md | ADR/OCC/定价分析 |
 | 创业融资V2 | startup-fundraising-knowledge-base-v2.md | 融资/BP/估值 |
 | AHL V1 | ahl-knowledge-base-v1.md | AHL项目讨论 |
 | 金融证券V2 | finance-securities-knowledge-base.md | 金融/证券分析 |
@@ -43,12 +44,13 @@
 | 用户输入情境 | 加载KB | 章节 |
 |-------------|--------|------|
 | "分析竞争格局" | 博弈论V3 | 核心框架+纳什均衡 |
-| "评估酒店价值" | 酒店全景V8.1 + 收益管理V4 | 运营指标+RevPAR |
+| "OTA/渠道运营" | 多OTA运营V1 + 收益管理V5 | 平台策略+渠道利润 |
+| "评估酒店价值" | 酒店全景V9.0 + 收益管理V5 | 运营指标+RevPAR |
 | "设计BP" | 创业融资V2 | 结构模板+估值方法 |
 | "分析商业模式" | 决策框架V1 + 博弈论V3 | 商业模式画布+囚徒困境 |
 | "AHL项目讨论" | AHL V1 + 创业融资V2 | 全部 |
 | "审美/设计判断" | 审美KB | 决策清单+东方美学 |
-| "定价策略" | 收益管理V4 + 定价策略 | 定价方法论+竞品分析 |
+| "定价策略" | 收益管理V5 + 定价策略 + 多OTA运营V1 | 定价方法论+竞品分析+渠道价差 |
 | "写研究报告" | 研究报告标准 + 金融V2 | 结构+方法论 |
 | "跨境贸易" | 中美跨境V1 | 结构+税务 |
 | "AI技术架构" | AI/LLM V2 + AI Agent生产 | 架构选型+部署 |

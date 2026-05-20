@@ -1,0 +1,23 @@
+{
+  "summary": {
+    "timestamp": "2026-05-12T09:21:51.511621+08:00",
+    "total_platforms": 1,
+    "platforms_ok": 0,
+    "platforms_partial": 1,
+    "platforms_failed": 0,
+    "total_hotels": 0,
+    "details": [
+      {
+        "platform": "tripadvisor",
+        "status": "partial",
+        "hotels": 0,
+        "tool": "scrap_tools",
+        "elapsed_ms": 1379,
+        "errors": [
+          "no hotels parsed"
+        ]
+      }
+    ]
+  },
+  "hotels": []
+}

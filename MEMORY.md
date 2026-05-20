@@ -82,8 +82,11 @@
 |--------|------|------|------|
 | 审美与品位 | `memory/aesthetic-knowledge-base.md` | V3.0 | 2026-04-02 |
 | 博弈论决策 | `memory/game-theory-decision-knowledge-base-v3.md` | v3 | 2026-03-31 |
-| 酒店行业全景 | `memory/hotel-industry-knowledge-base.md` | **V8.1** (~100KB) | **2026-05-03** |
-| 收益管理 | `memory/hotel-revenue-management-knowledge-base-v4.md` | v4 | 2026-03-21 |
+| 酒店行业全景 | `memory/hotel-industry-knowledge-base.md` | **V9.0** (~103KB) | **2026-05-14** |
+| **多OTA运营 🆕** | `memory/multi-ota-operations-knowledge-base-v1.md` | **V1.0** (~12KB) | **2026-05-18** |
+| 收益管理 | `memory/hotel-revenue-management-knowledge-base-v5.md` | **V5.0** | **2026-05-18** |
+| 酒店新媒体 | `memory/hotel-new-media-marketing-knowledge-base-v2.md` | **V2.0** | **2026-05-18** |
+| 酒店AI应用 | `memory/hotel-ai-applications-knowledge-base.md` | **V1.3** | **2026-05-18** |
 | 定价策略 | `memory/pricing-strategy-knowledge-base.md` | v1.0 | 2026-04-01 |
 | 金融证券 | `memory/finance-securities-knowledge-base.md` | **v2.0** | **2026-04-14** |
 | **量化交易** | `memory/quantitative-trading-knowledge-base-v1.md` | v1.0 | **2026-04-14** |
@@ -92,10 +95,11 @@
 | 大乐透预测 | `docs/大乐透预测SOP.md` | V4.0 | 2026-04-01 |
 | AHL知识库 | `memory/ahl-knowledge-base-v1.md` | v1.0 | 2026-04-04 |
 | 张实全方位人格 | `memory/张实全方位人格侧写报告.md` | — | 2026-04-05 |
-| **TOKEN经济专题** | `memory/token-economy-research.md` | v1.0 | **2026-04-13** |
+| **TOKEN经济专题** | `memory/token-economy-research.md` | v1.0 | **2026-05-18** (更新) |
 | **AI Agent生产级应用** | `memory/ai-agent-production-knowledge-base-v1.md` | v1.0 | **2026-04-14** |
+| **⭐ 群论完整知识库** | `memory/group-theory-knowledge-base-v1.md` | **V1.0** (~12KB) | **2026-05-19** |
 | **中美跨境商业结构** | `memory/china-us-cross-border-structure-v1.md` | v1.0 | **2026-04-14** |
-| **B166ER底层理论架构** | `memory/theoretical-framework-v2.md` | **V2.2** | **2026-05-03** |
+| **B166ER底层理论架构** | `memory/theoretical-framework-v2.md` | **V2.3** | **2026-05-19** |
 | **决策思维框架** | `memory/mental-models-decision-frameworks-v1.md` | v1.0 | **2026-04-14** |
 | **KB热加载索引** | `memory/knowledge-base-hot-reload.md` | v1.0 | **2026-05-05** |
 | **自我进化系统** | `~/self-improving/` | v1.0 | **2026-05-05** |
@@ -109,7 +113,7 @@
 | AHL技术架构 | `memory/ahl-knowledge-base-v1.md` |
 | 携程/OTA运营 | `memory/ota-skill-v1.md` |
 | 收益管理/定价 | `memory/hotel-revenue-management-knowledge-base-v4.md` |
-| 决策/博弈论/贝叶斯 | `memory/theoretical-framework-v2.md` / `memory/game-theory-decision-knowledge-base-v3.md` |
+| 决策/博弈论/贝叶斯/群论 | `memory/theoretical-framework-v2.md` / `memory/game-theory-decision-knowledge-base-v3.md` / `memory/group-theory-knowledge-base-v1.md` |
 | 融资估值/股权 | `memory/startup-fundraising-knowledge-base-v2.md` |
 | Eric音乐审美 | `memory/张实全方位人格侧写报告.md` |
 | 酒店市场报告体系 | `reports/REPORTING-SYSTEM.md` |
@@ -194,25 +198,50 @@
 | 参考图风格复现 | ✅ 掌握 | 玻璃拟态/扁平/深色科技全风格 |
 | AHL海报 | ✅ 完成 | 4版本（AHL树形架构图） |
 
-## Promoted From Short-Term Memory (2026-05-05)
+## Promoted From Short-Term Memory (2026-05-12)
 
-<!-- openclaw-memory-promotion:memory:memory/2026-04-30.md:5:5 -->
-- **触发**: Eric 指令 "根据你的自我认知和判断，继续优化迭代这套东西" [score=0.837 recalls=0 avg=0.620 source=memory/2026-04-30.md:5-5]
-<!-- openclaw-memory-promotion:memory:memory/2026-04-30.md:12:12 -->
-- **V2.1 深化（20:25 Eric 四条指令）**: [score=0.837 recalls=0 avg=0.620 source=memory/2026-04-30.md:12-12]
-<!-- openclaw-memory-promotion:memory:memory/2026-04-30.md:18:18 -->
-- **关键变更**： [score=0.837 recalls=0 avg=0.620 source=memory/2026-04-30.md:18-18]
+<!-- openclaw-memory-promotion:memory:memory/2026-05-05.md:10:13 -->
+- | 项目 | 状态 | 说明 | |------|------|------| | 插件 | 🟢 66 loaded / 0 errors | 正常 | | Skills | 🟢 88 eligible / 0 blocked | 正常 | [score=0.888 recalls=0 avg=0.620 source=memory/2026-05-05.md:10-13]
+<!-- openclaw-memory-promotion:memory:memory/2026-05-05.md:14:16 -->
+- | Session lock | 🟢 PID 5480 alive | 正常（非stale） | | 命令owner | ⚠️ 未配置 | WebChat场景无需配置 | | 会话完整性 | 🟢 21 entries | 无需修剪 | [score=0.888 recalls=0 avg=0.620 source=memory/2026-05-05.md:14-16]
 
-## Promoted From Short-Term Memory (2026-05-07)
+## Promoted From Short-Term Memory (2026-05-13)
 
-<!-- openclaw-memory-promotion:memory:memory/2026-05-02.md:5:5 -->
-- **触发**: Eric 指令 "重塑知识库体系 + 酒店全景KB重新梳理" [score=0.861 recalls=0 avg=0.620 source=memory/2026-05-02.md:5-5]
+<!-- openclaw-memory-promotion:memory:memory/2026-05-07.md:5:5 -->
+- **触发**: Eric 指令 "STR的信息比较权威。需要调整所有的逻辑。按照目前这个思路。" [score=0.932 recalls=0 avg=0.620 source=memory/2026-05-07.md:5-5]
+<!-- openclaw-memory-promotion:memory:memory/2026-05-05.md:19:19 -->
+- **问题描述**: 用户输出后，下一条消息进来时上一个输出被折叠/消失。心跳触发也会折叠上一条输出。 [score=0.880 recalls=0 avg=0.620 source=memory/2026-05-05.md:19-19]
 
-## Promoted From Short-Term Memory (2026-05-11)
+## Promoted From Short-Term Memory (2026-05-14)
 
-<!-- openclaw-memory-promotion:memory:memory/2026-05-04.md:21:24 -->
-- | 项目 | 状态 | 详情 | |------|------|------| | OpenClaw版本 | 🟢 2026.5.2 | 5/4更新，最新 | | Gateway | 🟢 运行中 | 127.0.0.1:18789 loopback | [score=0.894 recalls=0 avg=0.620 source=memory/2026-05-04.md:21-24]
-<!-- openclaw-memory-promotion:memory:memory/2026-05-04.md:25:28 -->
-- | GitAutoBackup | 🔴→🟢 已修复 | 昨天因gateway重启中断，手动触发+push成功 | | 磁盘C | 🟡 43GB空闲 | 103GB已用，监控 | | Memory文件 | 🟢 162文件/8.8MB | 健康 | | 任务维护 | 🟢 已清理 | 修剪1个stale task-flow | [score=0.894 recalls=0 avg=0.620 source=memory/2026-05-04.md:25-28]
-<!-- openclaw-memory-promotion:memory:memory/2026-05-04.md:29:30 -->
-- | Cron作业 | 🟡 12个显示delivery警告 | 实际mode=none无影响，显示artifact | | 报告持久化 | 🔴→🟢 已修复 | 82文件已提交+push至GitHub | [score=0.894 recalls=0 avg=0.620 source=memory/2026-05-04.md:29-30]
+<!-- openclaw-memory-promotion:memory:memory/2026-05-07.md:9:9 -->
+- **三层强制闭环**: T-2预测 → T+7完整复盘 → **T+14 STR补充（终审）** [score=0.926 recalls=0 avg=0.620 source=memory/2026-05-07.md:9-9]
+<!-- openclaw-memory-promotion:memory:memory/2026-05-07.md:17:20 -->
+- **2. 新增STR补充复盘cron（4个）** | Cron ID | 名称 | 时间 | |---------|------|------| | 09b5d7a2 | 五一STR补充复盘 | 5/19 | [score=0.894 recalls=0 avg=0.620 source=memory/2026-05-07.md:17-20]
+<!-- openclaw-memory-promotion:memory:memory/2026-05-07.md:21:24 -->
+- | 81d8f7b4 | 端午STR补充复盘 | 6/16 | | d031a804 | 暑期STR补充复盘 | 9/15 | | b9adb9d3 | 中秋STR补充复盘 | 9/30（赶在十一前） | | 2a745fd8 | 十一STR补充复盘 | 10/21 | [score=0.894 recalls=0 avg=0.620 source=memory/2026-05-07.md:21-24]
+<!-- openclaw-memory-promotion:memory:memory/2026-05-07.md:26:26 -->
+- **3. 填补缺失假期cron（7个）** [score=0.894 recalls=0 avg=0.620 source=memory/2026-05-07.md:26-26]
+
+## Promoted From Short-Term Memory (2026-05-16)
+
+<!-- openclaw-memory-promotion:memory:memory/2026-05-09.md:6:6 -->
+- Eric指令："充分评估技能，建立工作流，不让技能浪费/闲置，避免重复动作，自我优化" [score=0.894 recalls=0 avg=0.620 source=memory/2026-05-09.md:6-6]
+
+## Promoted From Short-Term Memory (2026-05-18)
+
+<!-- openclaw-memory-promotion:memory:memory/2026-05-12.md:25:25 -->
+- 搜索基础设施在本次执行中全面不可用： [score=0.932 recalls=0 avg=0.620 source=memory/2026-05-12.md:25-25]
+<!-- openclaw-memory-promotion:memory:memory/2026-05-12.md:31:31 -->
+- **酒店经营核心数据采用「方向性推算」方法**，标注🟡推算值。待搜索恢复后需补充实际数据。 [score=0.932 recalls=0 avg=0.620 source=memory/2026-05-12.md:31-31]
+<!-- openclaw-memory-promotion:memory:memory/2026-05-11.md:6:6 -->
+- **触发**: Eric: "持续深化，一定要到最完美状态" [score=0.894 recalls=0 avg=0.620 source=memory/2026-05-11.md:6-6]
+<!-- openclaw-memory-promotion:memory:memory/2026-05-11.md:14:17 -->
+- **最终状态**: | 平台 | 提取 | 名称 | 价格 | 评分 | 评论 | 地址 | 星级 | ID | |------|------|------|------|------|------|------|------|-----| | Booking | 25/25 | ✅ | ✅ ¥2.5K~34K | ✅ ★4.0~4.7 | ✅ 45~2,250 | ✅ | ❌ | ❌ | [score=0.894 recalls=0 avg=0.620 source=memory/2026-05-11.md:14-17]
+<!-- openclaw-memory-promotion:memory:memory/2026-05-11.md:18:18 -->
+- | Ctrip | 15/15 | ✅ | ❌ JS | ✅ ★4.6~4.8 | ✅ 1.1K~11K | ✅ | ✅ ⭐4~5 | ✅ | [score=0.894 recalls=0 avg=0.620 source=memory/2026-05-11.md:18-18]
+
+## Promoted From Short-Term Memory (2026-05-19)
+
+<!-- openclaw-memory-promotion:memory:memory/2026-05-12.md:5:5 -->
+- **触发**：Cron作业 `五一复盘完整报告(T+7)` 09:00执行 [score=0.894 recalls=0 avg=0.620 source=memory/2026-05-12.md:5-5]

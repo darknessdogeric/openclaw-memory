@@ -1,0 +1,427 @@
+{
+  "summary": {
+    "timestamp": "2026-05-12T09:25:39.464879+08:00",
+    "total_platforms": 1,
+    "platforms_ok": 1,
+    "platforms_partial": 0,
+    "platforms_failed": 0,
+    "total_hotels": 27,
+    "details": [
+      {
+        "platform": "tripadvisor",
+        "status": "success",
+        "hotels": 27,
+        "tool": "scrap_tools",
+        "elapsed_ms": 922,
+        "errors": []
+      }
+    ]
+  },
+  "hotels": [
+    {
+      "platform": "tripadvisor",
+      "hotel_name": "襄阳富力皇冠假日酒店（诸葛亮广场万达广场店）",
+      "price_min": 1080.0,
+      "price_max": 1736.0,
+      "rating": null,
+      "review_count": 121,
+      "room_available": true,
+      "scraped_at": "2026-05-12T09:25:39.463788+08:00",
+      "url": "https://www.tripadvisor.cn/Hotels-g494931-Hotels.html",
+      "raw_data": {
+        "rank": 1,
+        "city": "襄阳"
+      }
+    },
+    {
+      "platform": "tripadvisor",
+      "hotel_name": "襄阳共享国际大酒店",
+      "price_min": 1080.0,
+      "price_max": 1736.0,
+      "rating": null,
+      "review_count": 66,
+      "room_available": true,
+      "scraped_at": "2026-05-12T09:25:39.463840+08:00",
+      "url": "https://www.tripadvisor.cn/Hotels-g494931-Hotels.html",
+      "raw_data": {
+        "rank": 2,
+        "city": "襄阳"
+      }
+    },
+    {
+      "platform": "tripadvisor",
+      "hotel_name": "维也纳国际酒店(襄阳万达广场火车站店)",
+      "price_min": 1080.0,
+      "price_max": 1736.0,
+      "rating": null,
+      "review_count": 89,
+      "room_available": true,
+      "scraped_at": "2026-05-12T09:25:39.463872+08:00",
+      "url": "https://www.tripadvisor.cn/Hotels-g494931-Hotels.html",
+      "raw_data": {
+        "rank": 3,
+        "city": "襄阳"
+      }
+    },
+    {
+      "platform": "tripadvisor",
+      "hotel_name": "汉江国际大酒店",
+      "price_min": 1080.0,
+      "price_max": 1736.0,
+      "rating": null,
+      "review_count": 61,
+      "room_available": true,
+      "scraped_at": "2026-05-12T09:25:39.463900+08:00",
+      "url": "https://www.tripadvisor.cn/Hotels-g494931-Hotels.html",
+      "raw_data": {
+        "rank": 4,
+        "city": "襄阳"
+      }
+    },
+    {
+      "platform": "tripadvisor",
+      "hotel_name": "襄阳南湖宾馆",
+      "price_min": 1080.0,
+      "price_max": 1736.0,
+      "rating": null,
+      "review_count": 31,
+      "room_available": true,
+      "scraped_at": "2026-05-12T09:25:39.463927+08:00",
+      "url": "https://www.tripadvisor.cn/Hotels-g494931-Hotels.html",
+      "raw_data": {
+        "rank": 5,
+        "city": "襄阳"
+      }
+    },
+    {
+      "platform": "tripadvisor",
+      "hotel_name": "襄阳名人雅居禅意酒店（襄阳古城店）",
+      "price_min": 1080.0,
+      "price_max": 1736.0,
+      "rating": null,
+      "review_count": 43,
+      "room_available": true,
+      "scraped_at": "2026-05-12T09:25:39.463955+08:00",
+      "url": "https://www.tripadvisor.cn/Hotels-g494931-Hotels.html",
+      "raw_data": {
+        "rank": 6,
+        "city": "襄阳"
+      }
+    },
+    {
+      "platform": "tripadvisor",
+      "hotel_name": "7天酒店(襄阳火车站中原路店)",
+      "price_min": 1080.0,
+      "price_max": 1736.0,
+      "rating": null,
+      "review_count": 30,
+      "room_available": true,
+      "scraped_at": "2026-05-12T09:25:39.463978+08:00",
+      "url": "https://www.tripadvisor.cn/Hotels-g494931-Hotels.html",
+      "raw_data": {
+        "rank": 7,
+        "city": "襄阳"
+      }
+    },
+    {
+      "platform": "tripadvisor",
+      "hotel_name": "襄樊城市名人酒店航空路店",
+      "price_min": 1080.0,
+      "price_max": 1736.0,
+      "rating": null,
+      "review_count": 35,
+      "room_available": true,
+      "scraped_at": "2026-05-12T09:25:39.464004+08:00",
+      "url": "https://www.tripadvisor.cn/Hotels-g494931-Hotels.html",
+      "raw_data": {
+        "rank": 8,
+        "city": "襄阳"
+      }
+    },
+    {
+      "platform": "tripadvisor",
+      "hotel_name": "一景国际假日酒店",
+      "price_min": 1080.0,
+      "price_max": 1736.0,
+      "rating": null,
+      "review_count": 29,
+      "room_available": true,
+      "scraped_at": "2026-05-12T09:25:39.464043+08:00",
+      "url": "https://www.tripadvisor.cn/Hotels-g494931-Hotels.html",
+      "raw_data": {
+        "rank": 10,
+        "city": "襄阳"
+      }
+    },
+    {
+      "platform": "tripadvisor",
+      "hotel_name": "东方夏威夷酒店",
+      "price_min": 1080.0,
+      "price_max": 1736.0,
+      "rating": null,
+      "review_count": 26,
+      "room_available": true,
+      "scraped_at": "2026-05-12T09:25:39.464068+08:00",
+      "url": "https://www.tripadvisor.cn/Hotels-g494931-Hotels.html",
+      "raw_data": {
+        "rank": 11,
+        "city": "襄阳"
+      }
+    },
+    {
+      "platform": "tripadvisor",
+      "hotel_name": "绿地铂骊酒店（襄阳万达广场店）",
+      "price_min": 1080.0,
+      "price_max": 1736.0,
+      "rating": null,
+      "review_count": 286,
+      "room_available": true,
+      "scraped_at": "2026-05-12T09:25:39.464095+08:00",
+      "url": "https://www.tripadvisor.cn/Hotels-g494931-Hotels.html",
+      "raw_data": {
+        "rank": 12,
+        "city": "襄阳"
+      }
+    },
+    {
+      "platform": "tripadvisor",
+      "hotel_name": "川惠大酒店",
+      "price_min": 1080.0,
+      "price_max": 1736.0,
+      "rating": null,
+      "review_count": 25,
+      "room_available": true,
+      "scraped_at": "2026-05-12T09:25:39.464122+08:00",
+      "url": "https://www.tripadvisor.cn/Hotels-g494931-Hotels.html",
+      "raw_data": {
+        "rank": 13,
+        "city": "襄阳"
+      }
+    },
+    {
+      "platform": "tripadvisor",
+      "hotel_name": "铁路大酒店（襄阳火车站店）",
+      "price_min": 1080.0,
+      "price_max": 1736.0,
+      "rating": null,
+      "review_count": 52,
+      "room_available": true,
+      "scraped_at": "2026-05-12T09:25:39.464148+08:00",
+      "url": "https://www.tripadvisor.cn/Hotels-g494931-Hotels.html",
+      "raw_data": {
+        "rank": 14,
+        "city": "襄阳"
+      }
+    },
+    {
+      "platform": "tripadvisor",
+      "hotel_name": "荣华国际大酒店",
+      "price_min": 1080.0,
+      "price_max": 1736.0,
+      "rating": null,
+      "review_count": 22,
+      "room_available": true,
+      "scraped_at": "2026-05-12T09:25:39.464196+08:00",
+      "url": "https://www.tripadvisor.cn/Hotels-g494931-Hotels.html",
+      "raw_data": {
+        "rank": 17,
+        "city": "襄阳"
+      }
+    },
+    {
+      "platform": "tripadvisor",
+      "hotel_name": "一景快捷酒店（襄阳体育馆万达广场店）",
+      "price_min": 1080.0,
+      "price_max": 1736.0,
+      "rating": null,
+      "review_count": 29,
+      "room_available": true,
+      "scraped_at": "2026-05-12T09:25:39.464222+08:00",
+      "url": "https://www.tripadvisor.cn/Hotels-g494931-Hotels.html",
+      "raw_data": {
+        "rank": 18,
+        "city": "襄阳"
+      }
+    },
+    {
+      "platform": "tripadvisor",
+      "hotel_name": "襄阳洲际酒店",
+      "price_min": 1080.0,
+      "price_max": 1736.0,
+      "rating": null,
+      "review_count": 3,
+      "room_available": true,
+      "scraped_at": "2026-05-12T09:25:39.464244+08:00",
+      "url": "https://www.tripadvisor.cn/Hotels-g494931-Hotels.html",
+      "raw_data": {
+        "rank": 20,
+        "city": "襄阳"
+      }
+    },
+    {
+      "platform": "tripadvisor",
+      "hotel_name": "美格丽芬花园酒店（襄阳古城店）",
+      "price_min": 1080.0,
+      "price_max": 1736.0,
+      "rating": null,
+      "review_count": 15,
+      "room_available": true,
+      "scraped_at": "2026-05-12T09:25:39.464279+08:00",
+      "url": "https://www.tripadvisor.cn/Hotels-g494931-Hotels.html",
+      "raw_data": {
+        "rank": 21,
+        "city": "襄阳"
+      }
+    },
+    {
+      "platform": "tripadvisor",
+      "hotel_name": "一景城市花园酒店",
+      "price_min": 1080.0,
+      "price_max": 1736.0,
+      "rating": null,
+      "review_count": 11,
+      "room_available": true,
+      "scraped_at": "2026-05-12T09:25:39.464306+08:00",
+      "url": "https://www.tripadvisor.cn/Hotels-g494931-Hotels.html",
+      "raw_data": {
+        "rank": 22,
+        "city": "襄阳"
+      }
+    },
+    {
+      "platform": "tripadvisor",
+      "hotel_name": "襄阳人家大酒店",
+      "price_min": 1080.0,
+      "price_max": 1736.0,
+      "rating": null,
+      "review_count": 9,
+      "room_available": true,
+      "scraped_at": "2026-05-12T09:25:39.464332+08:00",
+      "url": "https://www.tripadvisor.cn/Hotels-g494931-Hotels.html",
+      "raw_data": {
+        "rank": 23,
+        "city": "襄阳"
+      }
+    },
+    {
+      "platform": "tripadvisor",
+      "hotel_name": "金城大酒店",
+      "price_min": 1080.0,
+      "price_max": 1736.0,
+      "rating": null,
+      "review_count": 15,
+      "room_available": true,
+      "scraped_at": "2026-05-12T09:25:39.464355+08:00",
+      "url": "https://www.tripadvisor.cn/Hotels-g494931-Hotels.html",
+      "raw_data": {
+        "rank": 24,
+        "city": "襄阳"
+      }
+    },
+    {
+      "platform": "tripadvisor",
+      "hotel_name": "和驰上品大酒店（襄阳火车站万达广场店）",
+      "price_min": 1080.0,
+      "price_max": 1736.0,
+      "rating": null,
+      "review_count": 5,
+      "room_available": true,
+      "scraped_at": "2026-05-12T09:25:39.464381+08:00",
+      "url": "https://www.tripadvisor.cn/Hotels-g494931-Hotels.html",
+      "raw_data": {
+        "rank": 25,
+        "city": "襄阳"
+      }
+    },
+    {
+      "platform": "tripadvisor",
+      "hotel_name": "美易美家城市酒店（襄阳火车站店）",
+      "price_min": 1080.0,
+      "price_max": 1736.0,
+      "rating": null,
+      "review_count": 7,
+      "room_available": true,
+      "scraped_at": "2026-05-12T09:25:39.464405+08:00",
+      "url": "https://www.tripadvisor.cn/Hotels-g494931-Hotels.html",
+      "raw_data": {
+        "rank": 26,
+        "city": "襄阳"
+      }
+    },
+    {
+      "platform": "tripadvisor",
+      "hotel_name": "凤雏宾馆",
+      "price_min": 1080.0,
+      "price_max": 1736.0,
+      "rating": null,
+      "review_count": 8,
+      "room_available": true,
+      "scraped_at": "2026-05-12T09:25:39.464428+08:00",
+      "url": "https://www.tripadvisor.cn/Hotels-g494931-Hotels.html",
+      "raw_data": {
+        "rank": 27,
+        "city": "襄阳"
+      }
+    },
+    {
+      "platform": "tripadvisor",
+      "hotel_name": "金丽城商务酒店",
+      "price_min": 1080.0,
+      "price_max": 1736.0,
+      "rating": null,
+      "review_count": 9,
+      "room_available": true,
+      "scraped_at": "2026-05-12T09:25:39.464453+08:00",
+      "url": "https://www.tripadvisor.cn/Hotels-g494931-Hotels.html",
+      "raw_data": {
+        "rank": 28,
+        "city": "襄阳"
+      }
+    },
+    {
+      "platform": "tripadvisor",
+      "hotel_name": "万家盛宴大酒店（襄阳时代天街钻石大道店）",
+      "price_min": 1080.0,
+      "price_max": 1736.0,
+      "rating": null,
+      "review_count": 2,
+      "room_available": true,
+      "scraped_at": "2026-05-12T09:25:39.464479+08:00",
+      "url": "https://www.tripadvisor.cn/Hotels-g494931-Hotels.html",
+      "raw_data": {
+        "rank": 29,
+        "city": "襄阳"
+      }
+    },
+    {
+      "platform": "tripadvisor",
+      "hotel_name": "电力宾馆",
+      "price_min": 1080.0,
+      "price_max": 1736.0,
+      "rating": null,
+      "review_count": 8,
+      "room_available": true,
+      "scraped_at": "2026-05-12T09:25:39.464500+08:00",
+      "url": "https://www.tripadvisor.cn/Hotels-g494931-Hotels.html",
+      "raw_data": {
+        "rank": 30,
+        "city": "襄阳"
+      }
+    },
+    {
+      "platform": "tripadvisor",
+      "hotel_name": "N·南船北马酒店(吾悦广场店)",
+      "price_min": 1080.0,
+      "price_max": 1736.0,
+      "rating": null,
+      "review_count": 1,
+      "room_available": true,
+      "scraped_at": "2026-05-12T09:25:39.464523+08:00",
+      "url": "https://www.tripadvisor.cn/Hotels-g494931-Hotels.html",
+      "raw_data": {
+        "rank": 31,
+        "city": "襄阳"
+      }
+    }
+  ]
+}
