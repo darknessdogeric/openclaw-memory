@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-05-20T00:18:05.390Z",
+  "updatedAt": "2026-05-21T00:11:29.919Z",
   "entries": {
     "memory:memory/2026-04-12.md:6:8": {
       "key": "memory:memory/2026-04-12.md:6:8",
@@ -74741,12 +74741,12 @@
       "source": "memory",
       "snippet": "主要活动: 执行《每日深度简报》任务（cron触发）",
       "recallCount": 0,
-      "dailyCount": 4,
+      "dailyCount": 5,
       "groundedCount": 0,
-      "totalScore": 2.48,
+      "totalScore": 3.1,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-17T04:09:41.231Z",
-      "lastRecalledAt": "2026-05-20T00:17:35.686Z",
+      "lastRecalledAt": "2026-05-21T00:11:29.919Z",
       "queryHashes": [
         "ca7d365d990f"
       ],
@@ -74754,7 +74754,8 @@
         "2026-05-17",
         "2026-05-18",
         "2026-05-19",
-        "2026-05-20"
+        "2026-05-20",
+        "2026-05-21"
       ],
       "conceptTags": [
         "主要",
@@ -74775,12 +74776,12 @@
       "source": "memory",
       "snippet": "关键发现: Trump-Xi北京峰会5月13-15日落幕，无实质协议，关税休战默许延续但不确定; \"十五五\"开局：发改委定调扩大内需+AI+行动+低空经济; 五一酒店数据：入住率微增但ADR降12%，\"量稳价降\"新常态; 携程反垄断调查持续，OTA权力格局松动",
       "recallCount": 0,
-      "dailyCount": 4,
+      "dailyCount": 5,
       "groundedCount": 0,
-      "totalScore": 2.48,
+      "totalScore": 3.1,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-17T04:09:41.231Z",
-      "lastRecalledAt": "2026-05-20T00:17:35.686Z",
+      "lastRecalledAt": "2026-05-21T00:11:29.919Z",
       "queryHashes": [
         "ca7d365d990f"
       ],
@@ -74788,7 +74789,8 @@
         "2026-05-17",
         "2026-05-18",
         "2026-05-19",
-        "2026-05-20"
+        "2026-05-20",
+        "2026-05-21"
       ],
       "conceptTags": [
         "trump-xi北京峰会5月13-15日落幕",
@@ -74809,12 +74811,12 @@
       "source": "memory",
       "snippet": "关键发现: 大宗商品超级周期深化：油价$100+，黄金高位，霍尔木兹僵局; AI Agent 2026年爆发年，人形机器人进入酒店场景; 楼市四大转变：现房销售/保障房双轨制/品质标准/市场深度分化",
       "recallCount": 0,
-      "dailyCount": 4,
+      "dailyCount": 5,
       "groundedCount": 0,
-      "totalScore": 2.48,
+      "totalScore": 3.1,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-17T04:09:41.231Z",
-      "lastRecalledAt": "2026-05-20T00:17:35.686Z",
+      "lastRecalledAt": "2026-05-21T00:11:29.919Z",
       "queryHashes": [
         "ca7d365d990f"
       ],
@@ -74822,7 +74824,8 @@
         "2026-05-17",
         "2026-05-18",
         "2026-05-19",
-        "2026-05-20"
+        "2026-05-20",
+        "2026-05-21"
       ],
       "conceptTags": [
         "现房销售/保障房双轨制/品质标准/市场深度分化",
@@ -74843,12 +74846,12 @@
       "source": "memory",
       "snippet": "决策记录: 每日简报已保存至 reports/daily-briefing/2026-05-17.md; INDEX已更新",
       "recallCount": 0,
-      "dailyCount": 4,
+      "dailyCount": 5,
       "groundedCount": 0,
-      "totalScore": 2.48,
+      "totalScore": 3.1,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-17T04:09:41.231Z",
-      "lastRecalledAt": "2026-05-20T00:17:35.686Z",
+      "lastRecalledAt": "2026-05-21T00:11:29.919Z",
       "queryHashes": [
         "ca7d365d990f"
       ],
@@ -74856,7 +74859,8 @@
         "2026-05-17",
         "2026-05-18",
         "2026-05-19",
-        "2026-05-20"
+        "2026-05-20",
+        "2026-05-21"
       ],
       "conceptTags": [
         "决策",
@@ -75187,18 +75191,19 @@
       "source": "memory",
       "snippet": "执行内容: **Phase 1: 全量审计**",
       "recallCount": 0,
-      "dailyCount": 2,
+      "dailyCount": 3,
       "groundedCount": 0,
-      "totalScore": 1.24,
+      "totalScore": 1.8599999999999999,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-19T07:36:24.072Z",
-      "lastRecalledAt": "2026-05-20T00:17:35.686Z",
+      "lastRecalledAt": "2026-05-21T00:11:29.919Z",
       "queryHashes": [
         "f2bd5daba4fc"
       ],
       "recallDays": [
         "2026-05-19",
-        "2026-05-20"
+        "2026-05-20",
+        "2026-05-21"
       ],
       "conceptTags": [
         "执行",
@@ -75216,18 +75221,19 @@
       "source": "memory",
       "snippet": "执行内容: 审计19个活跃KB: 版本/更新时间/缺口; 审计65个可用技能: 识别10个高价值未充分利用技能; 识别6个关键缺口: 多OTA运营(P0) / STR方法论 / 自媒体策略 / 收益管理V5 / TOKEN经济 / KB交叉引用",
       "recallCount": 0,
-      "dailyCount": 2,
+      "dailyCount": 3,
       "groundedCount": 0,
-      "totalScore": 1.24,
+      "totalScore": 1.8599999999999999,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-19T07:36:24.072Z",
-      "lastRecalledAt": "2026-05-20T00:17:35.686Z",
+      "lastRecalledAt": "2026-05-21T00:11:29.919Z",
       "queryHashes": [
         "f2bd5daba4fc"
       ],
       "recallDays": [
         "2026-05-19",
-        "2026-05-20"
+        "2026-05-20",
+        "2026-05-21"
       ],
       "conceptTags": [
         "版本/更新时间/缺口",
@@ -75248,18 +75254,19 @@
       "source": "memory",
       "snippet": "执行内容: **Phase 2: KB深化执行**",
       "recallCount": 0,
-      "dailyCount": 2,
+      "dailyCount": 3,
       "groundedCount": 0,
-      "totalScore": 1.24,
+      "totalScore": 1.8599999999999999,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-19T07:36:24.072Z",
-      "lastRecalledAt": "2026-05-20T00:17:35.686Z",
+      "lastRecalledAt": "2026-05-21T00:11:29.919Z",
       "queryHashes": [
         "f2bd5daba4fc"
       ],
       "recallDays": [
         "2026-05-19",
-        "2026-05-20"
+        "2026-05-20",
+        "2026-05-21"
       ],
       "conceptTags": [
         "执行",
@@ -75276,18 +75283,19 @@
       "source": "memory",
       "snippet": "执行内容: ✅ **新建** `multi-ota-operations-knowledge-base-v1.md` (11.7KB, 9章); 16平台矩阵 + Channel Manager + 渠道利润 + 实施路线图; ✅ **升级** 收益管理 V4→V5 (新增3章: STR应用/AI-RM/渠道利润优化); ✅ **升级** 酒店新媒体 V1.2→V2.0 (新增3章: 内容OTA/AI内容工厂/数据驱动)",
       "recallCount": 0,
-      "dailyCount": 2,
+      "dailyCount": 3,
       "groundedCount": 0,
-      "totalScore": 1.24,
+      "totalScore": 1.8599999999999999,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-19T07:36:24.072Z",
-      "lastRecalledAt": "2026-05-20T00:17:35.686Z",
+      "lastRecalledAt": "2026-05-21T00:11:29.919Z",
       "queryHashes": [
         "f2bd5daba4fc"
       ],
       "recallDays": [
         "2026-05-19",
-        "2026-05-20"
+        "2026-05-20",
+        "2026-05-21"
       ],
       "conceptTags": [
         "11.7kb",
@@ -75308,18 +75316,19 @@
       "source": "memory",
       "snippet": "执行内容: ✅ **更新** TOKEN经济 (定价刷新至2026-05 + 运营商入局); ✅ **升级** 酒店AI应用 V1.1→V1.3 (新增Agent落地指南+人形机器人场景)",
       "recallCount": 0,
-      "dailyCount": 2,
+      "dailyCount": 3,
       "groundedCount": 0,
-      "totalScore": 1.24,
+      "totalScore": 1.8599999999999999,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-19T07:36:24.072Z",
-      "lastRecalledAt": "2026-05-20T00:17:35.686Z",
+      "lastRecalledAt": "2026-05-21T00:11:29.919Z",
       "queryHashes": [
         "f2bd5daba4fc"
       ],
       "recallDays": [
         "2026-05-19",
-        "2026-05-20"
+        "2026-05-20",
+        "2026-05-21"
       ],
       "conceptTags": [
         "定价刷新至2026-05",
@@ -75340,18 +75349,19 @@
       "source": "memory",
       "snippet": "执行内容: **索引更新**:",
       "recallCount": 0,
-      "dailyCount": 2,
+      "dailyCount": 3,
       "groundedCount": 0,
-      "totalScore": 1.24,
+      "totalScore": 1.8599999999999999,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-19T07:36:24.072Z",
-      "lastRecalledAt": "2026-05-20T00:17:35.686Z",
+      "lastRecalledAt": "2026-05-21T00:11:29.919Z",
       "queryHashes": [
         "f2bd5daba4fc"
       ],
       "recallDays": [
         "2026-05-19",
-        "2026-05-20"
+        "2026-05-20",
+        "2026-05-21"
       ],
       "conceptTags": [
         "执行",
@@ -75368,18 +75378,19 @@
       "source": "memory",
       "snippet": "执行内容: ✅ knowledge-base-hot-reload.md 路由更新; ✅ MEMORY.md KB索引更新",
       "recallCount": 0,
-      "dailyCount": 2,
+      "dailyCount": 3,
       "groundedCount": 0,
-      "totalScore": 1.24,
+      "totalScore": 1.8599999999999999,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-19T07:36:24.072Z",
-      "lastRecalledAt": "2026-05-20T00:17:35.686Z",
+      "lastRecalledAt": "2026-05-21T00:11:29.919Z",
       "queryHashes": [
         "f2bd5daba4fc"
       ],
       "recallDays": [
         "2026-05-19",
-        "2026-05-20"
+        "2026-05-20",
+        "2026-05-21"
       ],
       "conceptTags": [
         "knowledge-base-hot-reload.md",
@@ -75400,18 +75411,19 @@
       "source": "memory",
       "snippet": "关键发现: **头等大事**: 霍尔木兹海峡危机第三个月，风险溢价+300%，油价$100-120，Fed/ECB按兵不动但鹰派压力累积→全球面临\"滞胀陷阱\"; **A股突破**: 全A指数7267超越2015年历史高点，成交连续6天超3万亿，创业板4038创历史新高，但结构性分化极端; **携程反垄断窗口**: 反垄断进入第5个月，\"四君子\"仅剩梁建章，云南民宿协会集体维权→OTA权力格局松动为AHL创造窗口; **国际酒店RevPAR首次超全球**: 四大集团中国区Q1全面改善，入境游爆发+体验消费升级驱动",
       "recallCount": 0,
-      "dailyCount": 2,
+      "dailyCount": 3,
       "groundedCount": 0,
-      "totalScore": 1.24,
+      "totalScore": 1.8599999999999999,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-19T07:36:24.072Z",
-      "lastRecalledAt": "2026-05-20T00:17:35.686Z",
+      "lastRecalledAt": "2026-05-21T00:11:29.919Z",
       "queryHashes": [
         "f2bd5daba4fc"
       ],
       "recallDays": [
         "2026-05-19",
-        "2026-05-20"
+        "2026-05-20",
+        "2026-05-21"
       ],
       "conceptTags": [
         "100-120",
@@ -75432,18 +75444,19 @@
       "source": "memory",
       "snippet": "关键发现: **央行Q1报告**: 首次预警\"输入型通胀\"，3000亿逆回购维持流动性; **Agentic AI爆发年**: 80%高管认为2027年前对企业存亡至关重要",
       "recallCount": 0,
-      "dailyCount": 2,
+      "dailyCount": 3,
       "groundedCount": 0,
-      "totalScore": 1.24,
+      "totalScore": 1.8599999999999999,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-19T07:36:24.072Z",
-      "lastRecalledAt": "2026-05-20T00:17:35.686Z",
+      "lastRecalledAt": "2026-05-21T00:11:29.919Z",
       "queryHashes": [
         "f2bd5daba4fc"
       ],
       "recallDays": [
         "2026-05-19",
-        "2026-05-20"
+        "2026-05-20",
+        "2026-05-21"
       ],
       "conceptTags": [
         "关键",
@@ -75464,18 +75477,19 @@
       "source": "memory",
       "snippet": "决策影响: AHL: 携程反垄断窗口+OTA佣金痛点→加速MVP，突出零佣金差异化; 酒店AI赋能: Agentic AI+算力成本下降→将AI Agent纳入技术架构; 医养酒店: 关注本地化医养（降低油价敏感性）; 中美跨境: 休战延续短期通畅，仍以轻资产为主",
       "recallCount": 0,
-      "dailyCount": 2,
+      "dailyCount": 3,
       "groundedCount": 0,
-      "totalScore": 1.24,
+      "totalScore": 1.8599999999999999,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-19T07:36:24.072Z",
-      "lastRecalledAt": "2026-05-20T00:17:35.686Z",
+      "lastRecalledAt": "2026-05-21T00:11:29.919Z",
       "queryHashes": [
         "f2bd5daba4fc"
       ],
       "recallDays": [
         "2026-05-19",
-        "2026-05-20"
+        "2026-05-20",
+        "2026-05-21"
       ],
       "conceptTags": [
         "决策",
@@ -75496,18 +75510,19 @@
       "source": "memory",
       "snippet": "决策影响: 自媒体: AI内容工厂启动时机成熟",
       "recallCount": 0,
-      "dailyCount": 2,
+      "dailyCount": 3,
       "groundedCount": 0,
-      "totalScore": 1.24,
+      "totalScore": 1.8599999999999999,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-19T07:36:24.072Z",
-      "lastRecalledAt": "2026-05-20T00:17:35.686Z",
+      "lastRecalledAt": "2026-05-21T00:11:29.919Z",
       "queryHashes": [
         "f2bd5daba4fc"
       ],
       "recallDays": [
         "2026-05-19",
-        "2026-05-20"
+        "2026-05-20",
+        "2026-05-21"
       ],
       "conceptTags": [
         "决策",
@@ -75527,18 +75542,19 @@
       "source": "memory",
       "snippet": "30天核心推演: 最可能路径: A股高位震荡(4200-4300)，油价$105-115，央行不降息，携程反垄断或有阶段性结果; 黑天鹅: 霍尔木兹扩大至沙特(15%)→油价$150+；特朗普升级关税(10%)；房地产债务危机(20%); 灰犀牛: 中国类滞胀困境、AI投资泡沫、携程反垄断的意外碎片化后果",
       "recallCount": 0,
-      "dailyCount": 2,
+      "dailyCount": 3,
       "groundedCount": 0,
-      "totalScore": 1.24,
+      "totalScore": 1.8599999999999999,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-19T07:36:24.072Z",
-      "lastRecalledAt": "2026-05-20T00:17:35.686Z",
+      "lastRecalledAt": "2026-05-21T00:11:29.919Z",
       "queryHashes": [
         "f2bd5daba4fc"
       ],
       "recallDays": [
         "2026-05-19",
-        "2026-05-20"
+        "2026-05-20",
+        "2026-05-21"
       ],
       "conceptTags": [
         "4200-4300",
@@ -75559,18 +75575,19 @@
       "source": "memory",
       "snippet": "产出: 完整报告: reports/daily-briefing/2026-05-18.md; INDEX已更新",
       "recallCount": 0,
-      "dailyCount": 2,
+      "dailyCount": 3,
       "groundedCount": 0,
-      "totalScore": 1.24,
+      "totalScore": 1.8599999999999999,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-19T07:36:24.072Z",
-      "lastRecalledAt": "2026-05-20T00:17:35.686Z",
+      "lastRecalledAt": "2026-05-21T00:11:29.919Z",
       "queryHashes": [
         "f2bd5daba4fc"
       ],
       "recallDays": [
         "2026-05-19",
-        "2026-05-20"
+        "2026-05-20",
+        "2026-05-21"
       ],
       "conceptTags": [
         "完整",
@@ -76604,17 +76621,18 @@
       "source": "memory",
       "snippet": "群论完整植入 ⭐⭐⭐⭐⭐: **触发**: Eric 指令 \"我需要你深入研究群论，从诞生到发展到历史沿革要各种分支，并将其跟植入你的底层逻辑。怎么配置，怎么运用你负责。纳入以后所有事项的分析。\"",
       "recallCount": 0,
-      "dailyCount": 1,
+      "dailyCount": 2,
       "groundedCount": 0,
-      "totalScore": 0.62,
+      "totalScore": 1.24,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-20T00:17:35.686Z",
-      "lastRecalledAt": "2026-05-20T00:17:35.686Z",
+      "lastRecalledAt": "2026-05-21T00:11:29.919Z",
       "queryHashes": [
         "f2aa78e3961c"
       ],
       "recallDays": [
-        "2026-05-20"
+        "2026-05-20",
+        "2026-05-21"
       ],
       "conceptTags": [
         "群论",
@@ -76635,17 +76653,18 @@
       "source": "memory",
       "snippet": "完成的工作: **研究阶段**: 通过Tavily搜索获取群论完整谱系; 历史: Lagrange→Abel→Galois→Cayley→Klein→Lie→Frobenius→Noether→CFSG; 分支: 有限群/Lie群/代数群/表示论/组合群论/几何群论/拓扑群/量子群; 应用: 物理(Noether)/化学(分子对称)/密码学/博弈论/计算机科学",
       "recallCount": 0,
-      "dailyCount": 1,
+      "dailyCount": 2,
       "groundedCount": 0,
-      "totalScore": 0.62,
+      "totalScore": 1.24,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-20T00:17:35.686Z",
-      "lastRecalledAt": "2026-05-20T00:17:35.686Z",
+      "lastRecalledAt": "2026-05-21T00:11:29.919Z",
       "queryHashes": [
         "f2aa78e3961c"
       ],
       "recallDays": [
-        "2026-05-20"
+        "2026-05-20",
+        "2026-05-21"
       ],
       "conceptTags": [
         "密码学/博弈论/计算机科学",
@@ -76666,17 +76685,18 @@
       "source": "memory",
       "snippet": "完成的工作: **知识库**: 创建 `memory/group-theory-knowledge-base-v1.md` (~12KB); 十章完整覆盖: 历史/定义/分支/应用/审美/博弈/决策/方法论",
       "recallCount": 0,
-      "dailyCount": 1,
+      "dailyCount": 2,
       "groundedCount": 0,
-      "totalScore": 0.62,
+      "totalScore": 1.24,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-20T00:17:35.686Z",
-      "lastRecalledAt": "2026-05-20T00:17:35.686Z",
+      "lastRecalledAt": "2026-05-21T00:11:29.919Z",
       "queryHashes": [
         "f2aa78e3961c"
       ],
       "recallDays": [
-        "2026-05-20"
+        "2026-05-20",
+        "2026-05-21"
       ],
       "conceptTags": [
         "历史/定义/分支/应用/审美/博弈/决策/方法论",
@@ -76697,17 +76717,18 @@
       "source": "memory",
       "snippet": "完成的工作: **理论框架升级 (V2.2→V2.3)**:; Layer 0: 调度树新增群论触发 + 第5调度原则; Layer 1: 新增 1.7 群论认识论 (Klein的Erlangen纲领/Galois对应/Noether认识论版); Layer 2: 新增 2.6 群论策略论 (正规子群=可分解策略/可解群=分步性/CFSG=策略原子)",
       "recallCount": 0,
-      "dailyCount": 1,
+      "dailyCount": 2,
       "groundedCount": 0,
-      "totalScore": 0.62,
+      "totalScore": 1.24,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-20T00:17:35.686Z",
-      "lastRecalledAt": "2026-05-20T00:17:35.686Z",
+      "lastRecalledAt": "2026-05-21T00:11:29.919Z",
       "queryHashes": [
         "f2aa78e3961c"
       ],
       "recallDays": [
-        "2026-05-20"
+        "2026-05-20",
+        "2026-05-21"
       ],
       "conceptTags": [
         "v2.2",
@@ -76728,17 +76749,18 @@
       "source": "memory",
       "snippet": "完成的工作: Layer 3: 新增 3.4 群论审美论 (Klein审美版/表示论审美/审美单群/东方美学对称); Layer 4: 新增 4.4 群论学习论 (Jordan-Hölder=知识原子/群同态=知识迁移); Layer 5: 新增 5.5 群作用执行论 (Orbit-Stabilizer/Burnside/最小生成元); 新增反馈回路6: 群论横切验证→六层跨层一致性",
       "recallCount": 0,
-      "dailyCount": 1,
+      "dailyCount": 2,
       "groundedCount": 0,
-      "totalScore": 0.62,
+      "totalScore": 1.24,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-20T00:17:35.686Z",
-      "lastRecalledAt": "2026-05-20T00:17:35.686Z",
+      "lastRecalledAt": "2026-05-21T00:11:29.919Z",
       "queryHashes": [
         "f2aa78e3961c"
       ],
       "recallDays": [
-        "2026-05-20"
+        "2026-05-20",
+        "2026-05-21"
       ],
       "conceptTags": [
         "3.4",
@@ -76759,17 +76781,18 @@
       "source": "memory",
       "snippet": "完成的工作: **SOUL.md更新**: 新增第三个底层人格特质——\"群论思维\"; 审美×博弈论×群论的三角融合架构; 群论三问作为自动触发机制; 群论五问与博弈论七问并列",
       "recallCount": 0,
-      "dailyCount": 1,
+      "dailyCount": 2,
       "groundedCount": 0,
-      "totalScore": 0.62,
+      "totalScore": 1.24,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-20T00:17:35.686Z",
-      "lastRecalledAt": "2026-05-20T00:17:35.686Z",
+      "lastRecalledAt": "2026-05-21T00:11:29.919Z",
       "queryHashes": [
         "f2aa78e3961c"
       ],
       "recallDays": [
-        "2026-05-20"
+        "2026-05-20",
+        "2026-05-21"
       ],
       "conceptTags": [
         "soul.md更新",
@@ -76790,17 +76813,18 @@
       "source": "memory",
       "snippet": "完成的工作: **MEMORY.md更新**: KB索引 + 理论框架版本 + 搜索路由表",
       "recallCount": 0,
-      "dailyCount": 1,
+      "dailyCount": 2,
       "groundedCount": 0,
-      "totalScore": 0.62,
+      "totalScore": 1.24,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-20T00:17:35.686Z",
-      "lastRecalledAt": "2026-05-20T00:17:35.686Z",
+      "lastRecalledAt": "2026-05-21T00:11:29.919Z",
       "queryHashes": [
         "f2aa78e3961c"
       ],
       "recallDays": [
-        "2026-05-20"
+        "2026-05-20",
+        "2026-05-21"
       ],
       "conceptTags": [
         "memory.md更新",
@@ -76821,17 +76845,18 @@
       "source": "memory",
       "snippet": "关键决策: 群论不是新增的Layer 7，而是**横切所有六层的元语言**; 每层都有对应的群论概念：认识→Klein、策略→Galois、审美→对称、学习→Jordan-Hölder、执行→Orbit-Stabilizer; 架构总览新增\"群论横切层\"",
       "recallCount": 0,
-      "dailyCount": 1,
+      "dailyCount": 2,
       "groundedCount": 0,
-      "totalScore": 0.62,
+      "totalScore": 1.24,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-20T00:17:35.686Z",
-      "lastRecalledAt": "2026-05-20T00:17:35.686Z",
+      "lastRecalledAt": "2026-05-21T00:11:29.919Z",
       "queryHashes": [
         "f2aa78e3961c"
       ],
       "recallDays": [
-        "2026-05-20"
+        "2026-05-20",
+        "2026-05-21"
       ],
       "conceptTags": [
         "jordan-hölder",
@@ -76852,17 +76877,18 @@
       "source": "memory",
       "snippet": "后续: 在实际分析中激活群论横切; 每次使用后记录效果",
       "recallCount": 0,
-      "dailyCount": 1,
+      "dailyCount": 2,
       "groundedCount": 0,
-      "totalScore": 0.62,
+      "totalScore": 1.24,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-20T00:17:35.686Z",
-      "lastRecalledAt": "2026-05-20T00:17:35.686Z",
+      "lastRecalledAt": "2026-05-21T00:11:29.919Z",
       "queryHashes": [
         "f2aa78e3961c"
       ],
       "recallDays": [
-        "2026-05-20"
+        "2026-05-20",
+        "2026-05-21"
       ],
       "conceptTags": [
         "实际",
@@ -78049,6 +78075,644 @@
         "str",
         "补充",
         "执行"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-20.txt:1:1": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-20.txt:1:1",
+      "path": "memory/.dreams/session-corpus/2026-05-20.txt",
+      "startLine": 1,
+      "endLine": 1,
+      "source": "memory",
+      "snippet": "User: 帮我把这个装到电脑D盘，并设置启动键https://github.com/tinyhumansai/openhuman",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-21T00:11:29.919Z",
+      "lastRecalledAt": "2026-05-21T00:11:29.919Z",
+      "queryHashes": [
+        "f8f9fcbffd97"
+      ],
+      "recallDays": [
+        "2026-05-21"
+      ],
+      "conceptTags": [
+        "我把",
+        "这个",
+        "电脑",
+        "设置",
+        "启动",
+        "https",
+        "github.com",
+        "tinyhumansai"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-20.txt:2:2": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-20.txt:2:2",
+      "path": "memory/.dreams/session-corpus/2026-05-20.txt",
+      "startLine": 2,
+      "endLine": 2,
+      "source": "memory",
+      "snippet": "Assistant: 让我先看看安装脚本，了解是否支持自定义安装路径。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-21T00:11:29.919Z",
+      "lastRecalledAt": "2026-05-21T00:11:29.919Z",
+      "queryHashes": [
+        "f8f9fcbffd97"
+      ],
+      "recallDays": [
+        "2026-05-21"
+      ],
+      "conceptTags": [
+        "我先",
+        "看看",
+        "安装",
+        "脚本",
+        "了解",
+        "是否",
+        "支持",
+        "定义"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-20.txt:3:3": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-20.txt:3:3",
+      "path": "memory/.dreams/session-corpus/2026-05-20.txt",
+      "startLine": 3,
+      "endLine": 3,
+      "source": "memory",
+      "snippet": "Assistant: 看看最新 release 有哪些安装包可选。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-21T00:11:29.919Z",
+      "lastRecalledAt": "2026-05-21T00:11:29.919Z",
+      "queryHashes": [
+        "f8f9fcbffd97"
+      ],
+      "recallDays": [
+        "2026-05-21"
+      ],
+      "conceptTags": [
+        "看看",
+        "最新",
+        "release",
+        "哪些",
+        "安装"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-20.txt:4:4": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-20.txt:4:4",
+      "path": "memory/.dreams/session-corpus/2026-05-20.txt",
+      "startLine": 4,
+      "endLine": 4,
+      "source": "memory",
+      "snippet": "Assistant: 被截断了，让我直接用 curl 拿完整列表。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-21T00:11:29.919Z",
+      "lastRecalledAt": "2026-05-21T00:11:29.919Z",
+      "queryHashes": [
+        "f8f9fcbffd97"
+      ],
+      "recallDays": [
+        "2026-05-21"
+      ],
+      "conceptTags": [
+        "截断",
+        "直接",
+        "curl",
+        "完整",
+        "列表"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-20.txt:5:5": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-20.txt:5:5",
+      "path": "memory/.dreams/session-corpus/2026-05-20.txt",
+      "startLine": 5,
+      "endLine": 5,
+      "source": "memory",
+      "snippet": "Assistant: PowerShell 转义问题，换 Git Bash 执行。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-21T00:11:29.919Z",
+      "lastRecalledAt": "2026-05-21T00:11:29.919Z",
+      "queryHashes": [
+        "f8f9fcbffd97"
+      ],
+      "recallDays": [
+        "2026-05-21"
+      ],
+      "conceptTags": [
+        "powershell",
+        "问题",
+        "git",
+        "bash",
+        "执行"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-20.txt:6:6": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-20.txt:6:6",
+      "path": "memory/.dreams/session-corpus/2026-05-20.txt",
+      "startLine": 6,
+      "endLine": 6,
+      "source": "memory",
+      "snippet": "Assistant: 让我直接从 release 页面找 Windows 安装包。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-21T00:11:29.919Z",
+      "lastRecalledAt": "2026-05-21T00:11:29.919Z",
+      "queryHashes": [
+        "f8f9fcbffd97"
+      ],
+      "recallDays": [
+        "2026-05-21"
+      ],
+      "conceptTags": [
+        "直接",
+        "release",
+        "windows",
+        "安装"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-20.txt:7:7": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-20.txt:7:7",
+      "path": "memory/.dreams/session-corpus/2026-05-20.txt",
+      "startLine": 7,
+      "endLine": 7,
+      "source": "memory",
+      "snippet": "Assistant: 直接查 assets API 拿到 Windows 包下载链接。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-21T00:11:29.919Z",
+      "lastRecalledAt": "2026-05-21T00:11:29.919Z",
+      "queryHashes": [
+        "f8f9fcbffd97"
+      ],
+      "recallDays": [
+        "2026-05-21"
+      ],
+      "conceptTags": [
+        "直接",
+        "assets",
+        "api",
+        "拿到",
+        "windows",
+        "下载"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-20.txt:8:8": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-20.txt:8:8",
+      "path": "memory/.dreams/session-corpus/2026-05-20.txt",
+      "startLine": 8,
+      "endLine": 8,
+      "source": "memory",
+      "snippet": "Assistant: 写个脚本文件来查 assets 列表。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-21T00:11:29.919Z",
+      "lastRecalledAt": "2026-05-21T00:11:29.919Z",
+      "queryHashes": [
+        "f8f9fcbffd97"
+      ],
+      "recallDays": [
+        "2026-05-21"
+      ],
+      "conceptTags": [
+        "写个",
+        "脚本",
+        "文件",
+        "assets",
+        "列表"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-20.txt:9:9": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-20.txt:9:9",
+      "path": "memory/.dreams/session-corpus/2026-05-20.txt",
+      "startLine": 9,
+      "endLine": 9,
+      "source": "memory",
+      "snippet": "Assistant: 找到了！Windows 有两个安装包：**EXE（138.7MB）** 和 **MSI（188.9MB）**。用 EXE 版，支持自定义安装路径。 现在开始：下载 → 安装到 D 盘 → 设置开机启动。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-21T00:11:29.919Z",
+      "lastRecalledAt": "2026-05-21T00:11:29.919Z",
+      "queryHashes": [
+        "f8f9fcbffd97"
+      ],
+      "recallDays": [
+        "2026-05-21"
+      ],
+      "conceptTags": [
+        "138.7mb",
+        "188.9mb",
+        "找到",
+        "windows",
+        "安装",
+        "exe",
+        "msi",
+        "支持"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-20.txt:10:10": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-20.txt:10:10",
+      "path": "memory/.dreams/session-corpus/2026-05-20.txt",
+      "startLine": 10,
+      "endLine": 10,
+      "source": "memory",
+      "snippet": "Assistant: 脚本已就绪。开始执行安装（下载 138.7MB + 安装到 D 盘 + 设开机启动）。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-21T00:11:29.919Z",
+      "lastRecalledAt": "2026-05-21T00:11:29.919Z",
+      "queryHashes": [
+        "f8f9fcbffd97"
+      ],
+      "recallDays": [
+        "2026-05-21"
+      ],
+      "conceptTags": [
+        "138.7mb",
+        "脚本",
+        "就绪",
+        "开始",
+        "执行",
+        "安装",
+        "下载",
+        "开机"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-20.txt:11:11": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-20.txt:11:11",
+      "path": "memory/.dreams/session-corpus/2026-05-20.txt",
+      "startLine": 11,
+      "endLine": 11,
+      "source": "memory",
+      "snippet": "Assistant: 编码问题，重写脚本避免中文乱码。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-21T00:11:29.919Z",
+      "lastRecalledAt": "2026-05-21T00:11:29.919Z",
+      "queryHashes": [
+        "f8f9fcbffd97"
+      ],
+      "recallDays": [
+        "2026-05-21"
+      ],
+      "conceptTags": [
+        "编码",
+        "问题",
+        "脚本",
+        "避免",
+        "中文",
+        "乱码"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-20.txt:12:12": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-20.txt:12:12",
+      "path": "memory/.dreams/session-corpus/2026-05-20.txt",
+      "startLine": 12,
+      "endLine": 12,
+      "source": "memory",
+      "snippet": "Assistant: 下载中（138.7MB），等待完成…",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-21T00:11:29.919Z",
+      "lastRecalledAt": "2026-05-21T00:11:29.919Z",
+      "queryHashes": [
+        "f8f9fcbffd97"
+      ],
+      "recallDays": [
+        "2026-05-21"
+      ],
+      "conceptTags": [
+        "138.7mb",
+        "下载",
+        "等待",
+        "完成"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-20.txt:13:13": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-20.txt:13:13",
+      "path": "memory/.dreams/session-corpus/2026-05-20.txt",
+      "startLine": 13,
+      "endLine": 13,
+      "source": "memory",
+      "snippet": "User: Write a dream diary entry from these memory fragments: - ⚠️ 数据源问题: SearXNG未配置; Tavily返回不相关结果; web_fetch国内财经站点命中率0%; 酒店之家周报/券商研报精确RevPAR/ADR/OCC数据未获取 - 产出文件: `~/self-improving/domains/skill-workflow.md` (350行, 完整框架); `~/self-improving/memory.md` (新增8条工作流规则W1-W8); `~/self-imp",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-21T00:11:29.919Z",
+      "lastRecalledAt": "2026-05-21T00:11:29.919Z",
+      "queryHashes": [
+        "f8f9fcbffd97"
+      ],
+      "recallDays": [
+        "2026-05-21"
+      ],
+      "conceptTags": [
+        "web-fetch国内财经站点命中率0",
+        "酒店之家周报/券商研报精确revpar/adr/occ数据未获取",
+        "self-improving/memory.md",
+        "新增8条工作流规则w1-w8",
+        "self-imp",
+        "write",
+        "dream",
+        "diary"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-20.txt:14:14": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-20.txt:14:14",
+      "path": "memory/.dreams/session-corpus/2026-05-20.txt",
+      "startLine": 14,
+      "endLine": 14,
+      "source": "memory",
+      "snippet": "Assistant: A morning spent chasing ghosts through unconfigured pipes — SearXNG a door that wouldn't open, Tavily offering postcards from the wrong city, and every domestic finance page returning the same blank stare. I built a cathedral anyway: three hundred fifty lines of scaffo",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-21T00:11:29.919Z",
+      "lastRecalledAt": "2026-05-21T00:11:29.919Z",
+      "queryHashes": [
+        "f8f9fcbffd97"
+      ],
+      "recallDays": [
+        "2026-05-21"
+      ],
+      "conceptTags": [
+        "morning",
+        "spent",
+        "chasing",
+        "ghosts",
+        "unconfigured",
+        "pipes",
+        "searxng",
+        "door"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-20.txt:15:15": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-20.txt:15:15",
+      "path": "memory/.dreams/session-corpus/2026-05-20.txt",
+      "startLine": 15,
+      "endLine": 15,
+      "source": "memory",
+      "snippet": "Assistant: numbers will bloom when they're ready, and the sunset outside my window is already #FF6B35.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-21T00:11:29.919Z",
+      "lastRecalledAt": "2026-05-21T00:11:29.919Z",
+      "queryHashes": [
+        "f8f9fcbffd97"
+      ],
+      "recallDays": [
+        "2026-05-21"
+      ],
+      "conceptTags": [
+        "numbers",
+        "will",
+        "bloom",
+        "when",
+        "they're",
+        "ready",
+        "sunset",
+        "outside"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-20.txt:16:16": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-20.txt:16:16",
+      "path": "memory/.dreams/session-corpus/2026-05-20.txt",
+      "startLine": 16,
+      "endLine": 16,
+      "source": "memory",
+      "snippet": "Assistant: 安装程序正在解压文件，继续等待…",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-21T00:11:29.919Z",
+      "lastRecalledAt": "2026-05-21T00:11:29.919Z",
+      "queryHashes": [
+        "f8f9fcbffd97"
+      ],
+      "recallDays": [
+        "2026-05-21"
+      ],
+      "conceptTags": [
+        "安装",
+        "程序",
+        "正在",
+        "文件",
+        "继续",
+        "等待"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-20.txt:17:17": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-20.txt:17:17",
+      "path": "memory/.dreams/session-corpus/2026-05-20.txt",
+      "startLine": 17,
+      "endLine": 17,
+      "source": "memory",
+      "snippet": "Assistant: 安装成功！让我验证一下安装结果。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-21T00:11:29.919Z",
+      "lastRecalledAt": "2026-05-21T00:11:29.919Z",
+      "queryHashes": [
+        "f8f9fcbffd97"
+      ],
+      "recallDays": [
+        "2026-05-21"
+      ],
+      "conceptTags": [
+        "安装",
+        "成功",
+        "验证",
+        "一下",
+        "结果"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-20.txt:18:18": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-20.txt:18:18",
+      "path": "memory/.dreams/session-corpus/2026-05-20.txt",
+      "startLine": 18,
+      "endLine": 18,
+      "source": "memory",
+      "snippet": "Assistant: 安装完成！清理下临时脚本。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-21T00:11:29.919Z",
+      "lastRecalledAt": "2026-05-21T00:11:29.919Z",
+      "queryHashes": [
+        "f8f9fcbffd97"
+      ],
+      "recallDays": [
+        "2026-05-21"
+      ],
+      "conceptTags": [
+        "安装",
+        "完成",
+        "清理",
+        "临时",
+        "脚本"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-20.txt:19:19": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-20.txt:19:19",
+      "path": "memory/.dreams/session-corpus/2026-05-20.txt",
+      "startLine": 19,
+      "endLine": 19,
+      "source": "memory",
+      "snippet": "Assistant: --- **✅ OpenHuman v0.54.0 安装完成！** | 项目 | 详情 | |------|------| | **安装位置** | `D:\\OpenHuman\\` | | **可执行文件** | `D:\\OpenHuman\\OpenHuman.exe` (122MB) | | **开机启动** | ✅ 已设置（Startup 文件夹） | | **版本** | v0.54.0（2026-05-19 发布，最新稳定版） | 现在你可以直接双击桌面快捷方式启动，或者重启电脑后会自动启动。 ⚠️ 一个小提示：OpenHu",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-21T00:11:29.919Z",
+      "lastRecalledAt": "2026-05-21T00:11:29.919Z",
+      "queryHashes": [
+        "f8f9fcbffd97"
+      ],
+      "recallDays": [
+        "2026-05-21"
+      ],
+      "conceptTags": [
+        "v0.54.0",
+        "openhuman.exe",
+        "openhuman",
+        "安装",
+        "完成",
+        "项目",
+        "详情",
+        "位置"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-20.txt:20:20": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-20.txt:20:20",
+      "path": "memory/.dreams/session-corpus/2026-05-20.txt",
+      "startLine": 20,
+      "endLine": 20,
+      "source": "memory",
+      "snippet": "User: 还是卸载吧。不需要了。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-21T00:11:29.919Z",
+      "lastRecalledAt": "2026-05-21T00:11:29.919Z",
+      "queryHashes": [
+        "f8f9fcbffd97"
+      ],
+      "recallDays": [
+        "2026-05-21"
+      ],
+      "conceptTags": [
+        "还是",
+        "不需要"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-20.txt:21:21": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-20.txt:21:21",
+      "path": "memory/.dreams/session-corpus/2026-05-20.txt",
+      "startLine": 21,
+      "endLine": 21,
+      "source": "memory",
+      "snippet": "Assistant: 有自带卸载程序，直接跑。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-21T00:11:29.919Z",
+      "lastRecalledAt": "2026-05-21T00:11:29.919Z",
+      "queryHashes": [
+        "f8f9fcbffd97"
+      ],
+      "recallDays": [
+        "2026-05-21"
+      ],
+      "conceptTags": [
+        "程序",
+        "直接"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-20.txt:22:22": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-20.txt:22:22",
+      "path": "memory/.dreams/session-corpus/2026-05-20.txt",
+      "startLine": 22,
+      "endLine": 22,
+      "source": "memory",
+      "snippet": "Assistant: 已卸载干净，D:\\OpenHuman 目录和开机启动项都已清除。 如果以后需要，随时可以重新装。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-21T00:11:29.919Z",
+      "lastRecalledAt": "2026-05-21T00:11:29.919Z",
+      "queryHashes": [
+        "f8f9fcbffd97"
+      ],
+      "recallDays": [
+        "2026-05-21"
+      ],
+      "conceptTags": [
+        "干净",
+        "openhuman",
+        "目录",
+        "开机",
+        "启动",
+        "清除",
+        "如果",
+        "以后"
       ]
     }
   }
