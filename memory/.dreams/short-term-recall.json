@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-05-24T04:11:48.026Z",
+  "updatedAt": "2026-05-25T00:58:49.168Z",
   "entries": {
     "memory:memory/2026-04-12.md:6:8": {
       "key": "memory:memory/2026-04-12.md:6:8",
@@ -75195,12 +75195,12 @@
       "source": "memory",
       "snippet": "执行内容: **Phase 1: 全量审计**",
       "recallCount": 0,
-      "dailyCount": 4,
+      "dailyCount": 5,
       "groundedCount": 0,
-      "totalScore": 2.48,
+      "totalScore": 3.1,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-19T07:36:24.072Z",
-      "lastRecalledAt": "2026-05-24T04:11:48.026Z",
+      "lastRecalledAt": "2026-05-25T00:58:49.168Z",
       "queryHashes": [
         "f2bd5daba4fc"
       ],
@@ -75208,7 +75208,8 @@
         "2026-05-19",
         "2026-05-20",
         "2026-05-21",
-        "2026-05-24"
+        "2026-05-24",
+        "2026-05-25"
       ],
       "conceptTags": [
         "执行",
@@ -75226,12 +75227,12 @@
       "source": "memory",
       "snippet": "执行内容: 审计19个活跃KB: 版本/更新时间/缺口; 审计65个可用技能: 识别10个高价值未充分利用技能; 识别6个关键缺口: 多OTA运营(P0) / STR方法论 / 自媒体策略 / 收益管理V5 / TOKEN经济 / KB交叉引用",
       "recallCount": 0,
-      "dailyCount": 4,
+      "dailyCount": 5,
       "groundedCount": 0,
-      "totalScore": 2.48,
+      "totalScore": 3.1,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-19T07:36:24.072Z",
-      "lastRecalledAt": "2026-05-24T04:11:48.026Z",
+      "lastRecalledAt": "2026-05-25T00:58:49.168Z",
       "queryHashes": [
         "f2bd5daba4fc"
       ],
@@ -75239,7 +75240,8 @@
         "2026-05-19",
         "2026-05-20",
         "2026-05-21",
-        "2026-05-24"
+        "2026-05-24",
+        "2026-05-25"
       ],
       "conceptTags": [
         "版本/更新时间/缺口",
@@ -75260,12 +75262,12 @@
       "source": "memory",
       "snippet": "执行内容: **Phase 2: KB深化执行**",
       "recallCount": 0,
-      "dailyCount": 4,
+      "dailyCount": 5,
       "groundedCount": 0,
-      "totalScore": 2.48,
+      "totalScore": 3.1,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-19T07:36:24.072Z",
-      "lastRecalledAt": "2026-05-24T04:11:48.026Z",
+      "lastRecalledAt": "2026-05-25T00:58:49.168Z",
       "queryHashes": [
         "f2bd5daba4fc"
       ],
@@ -75273,7 +75275,8 @@
         "2026-05-19",
         "2026-05-20",
         "2026-05-21",
-        "2026-05-24"
+        "2026-05-24",
+        "2026-05-25"
       ],
       "conceptTags": [
         "执行",
@@ -75290,12 +75293,12 @@
       "source": "memory",
       "snippet": "执行内容: ✅ **新建** `multi-ota-operations-knowledge-base-v1.md` (11.7KB, 9章); 16平台矩阵 + Channel Manager + 渠道利润 + 实施路线图; ✅ **升级** 收益管理 V4→V5 (新增3章: STR应用/AI-RM/渠道利润优化); ✅ **升级** 酒店新媒体 V1.2→V2.0 (新增3章: 内容OTA/AI内容工厂/数据驱动)",
       "recallCount": 0,
-      "dailyCount": 4,
+      "dailyCount": 5,
       "groundedCount": 0,
-      "totalScore": 2.48,
+      "totalScore": 3.1,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-19T07:36:24.072Z",
-      "lastRecalledAt": "2026-05-24T04:11:48.026Z",
+      "lastRecalledAt": "2026-05-25T00:58:49.168Z",
       "queryHashes": [
         "f2bd5daba4fc"
       ],
@@ -75303,7 +75306,8 @@
         "2026-05-19",
         "2026-05-20",
         "2026-05-21",
-        "2026-05-24"
+        "2026-05-24",
+        "2026-05-25"
       ],
       "conceptTags": [
         "11.7kb",
@@ -75324,12 +75328,12 @@
       "source": "memory",
       "snippet": "执行内容: ✅ **更新** TOKEN经济 (定价刷新至2026-05 + 运营商入局); ✅ **升级** 酒店AI应用 V1.1→V1.3 (新增Agent落地指南+人形机器人场景)",
       "recallCount": 0,
-      "dailyCount": 4,
+      "dailyCount": 5,
       "groundedCount": 0,
-      "totalScore": 2.48,
+      "totalScore": 3.1,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-19T07:36:24.072Z",
-      "lastRecalledAt": "2026-05-24T04:11:48.026Z",
+      "lastRecalledAt": "2026-05-25T00:58:49.168Z",
       "queryHashes": [
         "f2bd5daba4fc"
       ],
@@ -75337,7 +75341,8 @@
         "2026-05-19",
         "2026-05-20",
         "2026-05-21",
-        "2026-05-24"
+        "2026-05-24",
+        "2026-05-25"
       ],
       "conceptTags": [
         "定价刷新至2026-05",
@@ -75358,12 +75363,12 @@
       "source": "memory",
       "snippet": "执行内容: **索引更新**:",
       "recallCount": 0,
-      "dailyCount": 4,
+      "dailyCount": 5,
       "groundedCount": 0,
-      "totalScore": 2.48,
+      "totalScore": 3.1,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-19T07:36:24.072Z",
-      "lastRecalledAt": "2026-05-24T04:11:48.026Z",
+      "lastRecalledAt": "2026-05-25T00:58:49.168Z",
       "queryHashes": [
         "f2bd5daba4fc"
       ],
@@ -75371,7 +75376,8 @@
         "2026-05-19",
         "2026-05-20",
         "2026-05-21",
-        "2026-05-24"
+        "2026-05-24",
+        "2026-05-25"
       ],
       "conceptTags": [
         "执行",
@@ -75388,12 +75394,12 @@
       "source": "memory",
       "snippet": "执行内容: ✅ knowledge-base-hot-reload.md 路由更新; ✅ MEMORY.md KB索引更新",
       "recallCount": 0,
-      "dailyCount": 4,
+      "dailyCount": 5,
       "groundedCount": 0,
-      "totalScore": 2.48,
+      "totalScore": 3.1,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-19T07:36:24.072Z",
-      "lastRecalledAt": "2026-05-24T04:11:48.026Z",
+      "lastRecalledAt": "2026-05-25T00:58:49.168Z",
       "queryHashes": [
         "f2bd5daba4fc"
       ],
@@ -75401,7 +75407,8 @@
         "2026-05-19",
         "2026-05-20",
         "2026-05-21",
-        "2026-05-24"
+        "2026-05-24",
+        "2026-05-25"
       ],
       "conceptTags": [
         "knowledge-base-hot-reload.md",
@@ -75422,12 +75429,12 @@
       "source": "memory",
       "snippet": "关键发现: **头等大事**: 霍尔木兹海峡危机第三个月，风险溢价+300%，油价$100-120，Fed/ECB按兵不动但鹰派压力累积→全球面临\"滞胀陷阱\"; **A股突破**: 全A指数7267超越2015年历史高点，成交连续6天超3万亿，创业板4038创历史新高，但结构性分化极端; **携程反垄断窗口**: 反垄断进入第5个月，\"四君子\"仅剩梁建章，云南民宿协会集体维权→OTA权力格局松动为AHL创造窗口; **国际酒店RevPAR首次超全球**: 四大集团中国区Q1全面改善，入境游爆发+体验消费升级驱动",
       "recallCount": 0,
-      "dailyCount": 4,
+      "dailyCount": 5,
       "groundedCount": 0,
-      "totalScore": 2.48,
+      "totalScore": 3.1,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-19T07:36:24.072Z",
-      "lastRecalledAt": "2026-05-24T04:11:48.026Z",
+      "lastRecalledAt": "2026-05-25T00:58:49.168Z",
       "queryHashes": [
         "f2bd5daba4fc"
       ],
@@ -75435,7 +75442,8 @@
         "2026-05-19",
         "2026-05-20",
         "2026-05-21",
-        "2026-05-24"
+        "2026-05-24",
+        "2026-05-25"
       ],
       "conceptTags": [
         "100-120",
@@ -75456,12 +75464,12 @@
       "source": "memory",
       "snippet": "关键发现: **央行Q1报告**: 首次预警\"输入型通胀\"，3000亿逆回购维持流动性; **Agentic AI爆发年**: 80%高管认为2027年前对企业存亡至关重要",
       "recallCount": 0,
-      "dailyCount": 4,
+      "dailyCount": 5,
       "groundedCount": 0,
-      "totalScore": 2.48,
+      "totalScore": 3.1,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-19T07:36:24.072Z",
-      "lastRecalledAt": "2026-05-24T04:11:48.026Z",
+      "lastRecalledAt": "2026-05-25T00:58:49.168Z",
       "queryHashes": [
         "f2bd5daba4fc"
       ],
@@ -75469,7 +75477,8 @@
         "2026-05-19",
         "2026-05-20",
         "2026-05-21",
-        "2026-05-24"
+        "2026-05-24",
+        "2026-05-25"
       ],
       "conceptTags": [
         "关键",
@@ -75490,12 +75499,12 @@
       "source": "memory",
       "snippet": "决策影响: AHL: 携程反垄断窗口+OTA佣金痛点→加速MVP，突出零佣金差异化; 酒店AI赋能: Agentic AI+算力成本下降→将AI Agent纳入技术架构; 医养酒店: 关注本地化医养（降低油价敏感性）; 中美跨境: 休战延续短期通畅，仍以轻资产为主",
       "recallCount": 0,
-      "dailyCount": 4,
+      "dailyCount": 5,
       "groundedCount": 0,
-      "totalScore": 2.48,
+      "totalScore": 3.1,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-19T07:36:24.072Z",
-      "lastRecalledAt": "2026-05-24T04:11:48.026Z",
+      "lastRecalledAt": "2026-05-25T00:58:49.168Z",
       "queryHashes": [
         "f2bd5daba4fc"
       ],
@@ -75503,7 +75512,8 @@
         "2026-05-19",
         "2026-05-20",
         "2026-05-21",
-        "2026-05-24"
+        "2026-05-24",
+        "2026-05-25"
       ],
       "conceptTags": [
         "决策",
@@ -75524,12 +75534,12 @@
       "source": "memory",
       "snippet": "决策影响: 自媒体: AI内容工厂启动时机成熟",
       "recallCount": 0,
-      "dailyCount": 4,
+      "dailyCount": 5,
       "groundedCount": 0,
-      "totalScore": 2.48,
+      "totalScore": 3.1,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-19T07:36:24.072Z",
-      "lastRecalledAt": "2026-05-24T04:11:48.026Z",
+      "lastRecalledAt": "2026-05-25T00:58:49.168Z",
       "queryHashes": [
         "f2bd5daba4fc"
       ],
@@ -75537,7 +75547,8 @@
         "2026-05-19",
         "2026-05-20",
         "2026-05-21",
-        "2026-05-24"
+        "2026-05-24",
+        "2026-05-25"
       ],
       "conceptTags": [
         "决策",
@@ -75557,12 +75568,12 @@
       "source": "memory",
       "snippet": "30天核心推演: 最可能路径: A股高位震荡(4200-4300)，油价$105-115，央行不降息，携程反垄断或有阶段性结果; 黑天鹅: 霍尔木兹扩大至沙特(15%)→油价$150+；特朗普升级关税(10%)；房地产债务危机(20%); 灰犀牛: 中国类滞胀困境、AI投资泡沫、携程反垄断的意外碎片化后果",
       "recallCount": 0,
-      "dailyCount": 4,
+      "dailyCount": 5,
       "groundedCount": 0,
-      "totalScore": 2.48,
+      "totalScore": 3.1,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-19T07:36:24.072Z",
-      "lastRecalledAt": "2026-05-24T04:11:48.026Z",
+      "lastRecalledAt": "2026-05-25T00:58:49.168Z",
       "queryHashes": [
         "f2bd5daba4fc"
       ],
@@ -75570,7 +75581,8 @@
         "2026-05-19",
         "2026-05-20",
         "2026-05-21",
-        "2026-05-24"
+        "2026-05-24",
+        "2026-05-25"
       ],
       "conceptTags": [
         "4200-4300",
@@ -75591,12 +75603,12 @@
       "source": "memory",
       "snippet": "产出: 完整报告: reports/daily-briefing/2026-05-18.md; INDEX已更新",
       "recallCount": 0,
-      "dailyCount": 4,
+      "dailyCount": 5,
       "groundedCount": 0,
-      "totalScore": 2.48,
+      "totalScore": 3.1,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-19T07:36:24.072Z",
-      "lastRecalledAt": "2026-05-24T04:11:48.026Z",
+      "lastRecalledAt": "2026-05-25T00:58:49.168Z",
       "queryHashes": [
         "f2bd5daba4fc"
       ],
@@ -75604,7 +75616,8 @@
         "2026-05-19",
         "2026-05-20",
         "2026-05-21",
-        "2026-05-24"
+        "2026-05-24",
+        "2026-05-25"
       ],
       "conceptTags": [
         "完整",
@@ -76638,19 +76651,20 @@
       "source": "memory",
       "snippet": "群论完整植入 ⭐⭐⭐⭐⭐: **触发**: Eric 指令 \"我需要你深入研究群论，从诞生到发展到历史沿革要各种分支，并将其跟植入你的底层逻辑。怎么配置，怎么运用你负责。纳入以后所有事项的分析。\"",
       "recallCount": 0,
-      "dailyCount": 3,
+      "dailyCount": 4,
       "groundedCount": 0,
-      "totalScore": 1.8599999999999999,
+      "totalScore": 2.48,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-20T00:17:35.686Z",
-      "lastRecalledAt": "2026-05-24T04:11:48.026Z",
+      "lastRecalledAt": "2026-05-25T00:58:49.168Z",
       "queryHashes": [
         "f2aa78e3961c"
       ],
       "recallDays": [
         "2026-05-20",
         "2026-05-21",
-        "2026-05-24"
+        "2026-05-24",
+        "2026-05-25"
       ],
       "conceptTags": [
         "群论",
@@ -76671,19 +76685,20 @@
       "source": "memory",
       "snippet": "完成的工作: **研究阶段**: 通过Tavily搜索获取群论完整谱系; 历史: Lagrange→Abel→Galois→Cayley→Klein→Lie→Frobenius→Noether→CFSG; 分支: 有限群/Lie群/代数群/表示论/组合群论/几何群论/拓扑群/量子群; 应用: 物理(Noether)/化学(分子对称)/密码学/博弈论/计算机科学",
       "recallCount": 0,
-      "dailyCount": 3,
+      "dailyCount": 4,
       "groundedCount": 0,
-      "totalScore": 1.8599999999999999,
+      "totalScore": 2.48,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-20T00:17:35.686Z",
-      "lastRecalledAt": "2026-05-24T04:11:48.026Z",
+      "lastRecalledAt": "2026-05-25T00:58:49.168Z",
       "queryHashes": [
         "f2aa78e3961c"
       ],
       "recallDays": [
         "2026-05-20",
         "2026-05-21",
-        "2026-05-24"
+        "2026-05-24",
+        "2026-05-25"
       ],
       "conceptTags": [
         "密码学/博弈论/计算机科学",
@@ -76704,19 +76719,20 @@
       "source": "memory",
       "snippet": "完成的工作: **知识库**: 创建 `memory/group-theory-knowledge-base-v1.md` (~12KB); 十章完整覆盖: 历史/定义/分支/应用/审美/博弈/决策/方法论",
       "recallCount": 0,
-      "dailyCount": 3,
+      "dailyCount": 4,
       "groundedCount": 0,
-      "totalScore": 1.8599999999999999,
+      "totalScore": 2.48,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-20T00:17:35.686Z",
-      "lastRecalledAt": "2026-05-24T04:11:48.026Z",
+      "lastRecalledAt": "2026-05-25T00:58:49.168Z",
       "queryHashes": [
         "f2aa78e3961c"
       ],
       "recallDays": [
         "2026-05-20",
         "2026-05-21",
-        "2026-05-24"
+        "2026-05-24",
+        "2026-05-25"
       ],
       "conceptTags": [
         "历史/定义/分支/应用/审美/博弈/决策/方法论",
@@ -76737,19 +76753,20 @@
       "source": "memory",
       "snippet": "完成的工作: **理论框架升级 (V2.2→V2.3)**:; Layer 0: 调度树新增群论触发 + 第5调度原则; Layer 1: 新增 1.7 群论认识论 (Klein的Erlangen纲领/Galois对应/Noether认识论版); Layer 2: 新增 2.6 群论策略论 (正规子群=可分解策略/可解群=分步性/CFSG=策略原子)",
       "recallCount": 0,
-      "dailyCount": 3,
+      "dailyCount": 4,
       "groundedCount": 0,
-      "totalScore": 1.8599999999999999,
+      "totalScore": 2.48,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-20T00:17:35.686Z",
-      "lastRecalledAt": "2026-05-24T04:11:48.026Z",
+      "lastRecalledAt": "2026-05-25T00:58:49.168Z",
       "queryHashes": [
         "f2aa78e3961c"
       ],
       "recallDays": [
         "2026-05-20",
         "2026-05-21",
-        "2026-05-24"
+        "2026-05-24",
+        "2026-05-25"
       ],
       "conceptTags": [
         "v2.2",
@@ -76770,19 +76787,20 @@
       "source": "memory",
       "snippet": "完成的工作: Layer 3: 新增 3.4 群论审美论 (Klein审美版/表示论审美/审美单群/东方美学对称); Layer 4: 新增 4.4 群论学习论 (Jordan-Hölder=知识原子/群同态=知识迁移); Layer 5: 新增 5.5 群作用执行论 (Orbit-Stabilizer/Burnside/最小生成元); 新增反馈回路6: 群论横切验证→六层跨层一致性",
       "recallCount": 0,
-      "dailyCount": 3,
+      "dailyCount": 4,
       "groundedCount": 0,
-      "totalScore": 1.8599999999999999,
+      "totalScore": 2.48,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-20T00:17:35.686Z",
-      "lastRecalledAt": "2026-05-24T04:11:48.026Z",
+      "lastRecalledAt": "2026-05-25T00:58:49.168Z",
       "queryHashes": [
         "f2aa78e3961c"
       ],
       "recallDays": [
         "2026-05-20",
         "2026-05-21",
-        "2026-05-24"
+        "2026-05-24",
+        "2026-05-25"
       ],
       "conceptTags": [
         "3.4",
@@ -76803,19 +76821,20 @@
       "source": "memory",
       "snippet": "完成的工作: **SOUL.md更新**: 新增第三个底层人格特质——\"群论思维\"; 审美×博弈论×群论的三角融合架构; 群论三问作为自动触发机制; 群论五问与博弈论七问并列",
       "recallCount": 0,
-      "dailyCount": 3,
+      "dailyCount": 4,
       "groundedCount": 0,
-      "totalScore": 1.8599999999999999,
+      "totalScore": 2.48,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-20T00:17:35.686Z",
-      "lastRecalledAt": "2026-05-24T04:11:48.026Z",
+      "lastRecalledAt": "2026-05-25T00:58:49.168Z",
       "queryHashes": [
         "f2aa78e3961c"
       ],
       "recallDays": [
         "2026-05-20",
         "2026-05-21",
-        "2026-05-24"
+        "2026-05-24",
+        "2026-05-25"
       ],
       "conceptTags": [
         "soul.md更新",
@@ -76836,19 +76855,20 @@
       "source": "memory",
       "snippet": "完成的工作: **MEMORY.md更新**: KB索引 + 理论框架版本 + 搜索路由表",
       "recallCount": 0,
-      "dailyCount": 3,
+      "dailyCount": 4,
       "groundedCount": 0,
-      "totalScore": 1.8599999999999999,
+      "totalScore": 2.48,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-20T00:17:35.686Z",
-      "lastRecalledAt": "2026-05-24T04:11:48.026Z",
+      "lastRecalledAt": "2026-05-25T00:58:49.168Z",
       "queryHashes": [
         "f2aa78e3961c"
       ],
       "recallDays": [
         "2026-05-20",
         "2026-05-21",
-        "2026-05-24"
+        "2026-05-24",
+        "2026-05-25"
       ],
       "conceptTags": [
         "memory.md更新",
@@ -76869,19 +76889,20 @@
       "source": "memory",
       "snippet": "关键决策: 群论不是新增的Layer 7，而是**横切所有六层的元语言**; 每层都有对应的群论概念：认识→Klein、策略→Galois、审美→对称、学习→Jordan-Hölder、执行→Orbit-Stabilizer; 架构总览新增\"群论横切层\"",
       "recallCount": 0,
-      "dailyCount": 3,
+      "dailyCount": 4,
       "groundedCount": 0,
-      "totalScore": 1.8599999999999999,
+      "totalScore": 2.48,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-20T00:17:35.686Z",
-      "lastRecalledAt": "2026-05-24T04:11:48.026Z",
+      "lastRecalledAt": "2026-05-25T00:58:49.168Z",
       "queryHashes": [
         "f2aa78e3961c"
       ],
       "recallDays": [
         "2026-05-20",
         "2026-05-21",
-        "2026-05-24"
+        "2026-05-24",
+        "2026-05-25"
       ],
       "conceptTags": [
         "jordan-hölder",
@@ -76902,19 +76923,20 @@
       "source": "memory",
       "snippet": "后续: 在实际分析中激活群论横切; 每次使用后记录效果",
       "recallCount": 0,
-      "dailyCount": 3,
+      "dailyCount": 4,
       "groundedCount": 0,
-      "totalScore": 1.8599999999999999,
+      "totalScore": 2.48,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-20T00:17:35.686Z",
-      "lastRecalledAt": "2026-05-24T04:11:48.026Z",
+      "lastRecalledAt": "2026-05-25T00:58:49.168Z",
       "queryHashes": [
         "f2aa78e3961c"
       ],
       "recallDays": [
         "2026-05-20",
         "2026-05-21",
-        "2026-05-24"
+        "2026-05-24",
+        "2026-05-25"
       ],
       "conceptTags": [
         "实际",
@@ -78923,6 +78945,99 @@
         "complete",
         "summary",
         "component"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-24.txt:1:1": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-24.txt:1:1",
+      "path": "memory/.dreams/session-corpus/2026-05-24.txt",
+      "startLine": 1,
+      "endLine": 1,
+      "source": "memory",
+      "snippet": "Assistant: --- # 📊 每日深度简报 — 2026年5月24日 > **执行摘要**：Kevin Warsh在争议中就任美联储主席，全球利率格局进入\"高利率+强政治干预\"新常态——对Eric的融资时间窗口和资产配置策略构成直接约束。中国3万亿特别国债+消费刺激转向，服务消费（酒店/文旅/银发）正式成为政策靶心——AHL和医养酒店迎来政策顺风。伊朗停火脆弱，油价含永久安全溢价——能源成本将结构性抬升酒店运营成本。 --- ## 🔴 头等大事：Kevin Warsh就任美联储主席——鹰派降息？独立央行的黄昏？ **2026年5月22日**，",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-25T00:58:49.168Z",
+      "lastRecalledAt": "2026-05-25T00:58:49.168Z",
+      "queryHashes": [
+        "c27113cc41fb"
+      ],
+      "recallDays": [
+        "2026-05-25"
+      ],
+      "conceptTags": [
+        "酒店/文旅/银发",
+        "每日",
+        "深度",
+        "简报",
+        "执行",
+        "摘要",
+        "kevin",
+        "warsh"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-24.txt:2:2": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-24.txt:2:2",
+      "path": "memory/.dreams/session-corpus/2026-05-24.txt",
+      "startLine": 2,
+      "endLine": 2,
+      "source": "memory",
+      "snippet": "Assistant: 50% | 全年僵持→利率高位横盘 | | 🔴 悲观 25% | 伊朗升级+加息+川普冲突→全球风险骤降 | **对Eric**：高利率延长→融资优先国内政策红利，暂缓美元融资。AHL性价比主张契合消费降级趋势。 --- ## 🟡 重要关注 ### 中国3万亿特别国债+消费刺激——服务消费被瞄准 \"AI+消费\"\"银发经济\"\"冰雪经济\"被列入国家发改委2026重点任务清单。中央预算内投资可能继续增加。**AHL和医养酒店正处于政策靶心交叉点。** | 🟢 30% | 消费大爆发→民宿+医养需求井喷 | | 🟡 50% | 温和",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-25T00:58:49.168Z",
+      "lastRecalledAt": "2026-05-25T00:58:49.168Z",
+      "queryHashes": [
+        "c27113cc41fb"
+      ],
+      "recallDays": [
+        "2026-05-25"
+      ],
+      "conceptTags": [
+        "全年",
+        "僵持",
+        "利率",
+        "高位",
+        "悲观",
+        "伊朗",
+        "升级",
+        "冲突"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-24.txt:3:3": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-24.txt:3:3",
+      "path": "memory/.dreams/session-corpus/2026-05-24.txt",
+      "startLine": 3,
+      "endLine": 3,
+      "source": "memory",
+      "snippet": "Assistant: |------|------|------|--------| | **AHL** | AI+消费国策+Agent跃升 | ⬆️ 利好 | 🔴 高 | | **酒店AI赋能** | Agent自主8小时工作 | ⬆️ 利好 | 🟡 中 | | **医养酒店** | 银发经济政策+CAGR 7.87% | ⬆️ 利好 | 🟡 中 | | **中美跨境** | 半导体关税25%+贸易锐减 | ⬇️ 利空 | 🟡 中 | | **自媒体** | 银发+AI Agent话题红利 | ⬆️ 利好 | 🟢 低 | | **融资** |",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-25T00:58:49.168Z",
+      "lastRecalledAt": "2026-05-25T00:58:49.168Z",
+      "queryHashes": [
+        "c27113cc41fb"
+      ],
+      "recallDays": [
+        "2026-05-25"
+      ],
+      "conceptTags": [
+        "7.87",
+        "ahl",
+        "消费",
+        "国策",
+        "酒店",
+        "自主",
+        "小时",
+        "工作"
       ]
     }
   }
