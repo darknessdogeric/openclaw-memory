@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-05-25T00:58:49.168Z",
+  "updatedAt": "2026-05-30T07:23:36.201Z",
   "entries": {
     "memory:memory/2026-04-12.md:6:8": {
       "key": "memory:memory/2026-04-12.md:6:8",
@@ -79038,6 +79038,130 @@
         "自主",
         "小时",
         "工作"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-29.txt:1:1": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-29.txt:1:1",
+      "path": "memory/.dreams/session-corpus/2026-05-29.txt",
+      "startLine": 1,
+      "endLine": 1,
+      "source": "memory",
+      "snippet": "Assistant: Git auto-backup complete. Committed 2 files (daily briefing INDEX + 2026-05-27 report) and pushed to `master`.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-30T07:23:36.201Z",
+      "lastRecalledAt": "2026-05-30T07:23:36.201Z",
+      "queryHashes": [
+        "0e934d1f0d1c"
+      ],
+      "recallDays": [
+        "2026-05-30"
+      ],
+      "conceptTags": [
+        "backup",
+        "auto-backup",
+        "git",
+        "auto",
+        "complete",
+        "committed",
+        "briefing",
+        "index"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-30.txt:1:1": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-30.txt:1:1",
+      "path": "memory/.dreams/session-corpus/2026-05-30.txt",
+      "startLine": 1,
+      "endLine": 1,
+      "source": "memory",
+      "snippet": "User: 我的电脑在很多时候，尤其是游戏的时候出现卡顿。我需要你深度梳理我的电脑，让它运行流畅。该删的就删。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-30T07:23:36.201Z",
+      "lastRecalledAt": "2026-05-30T07:23:36.201Z",
+      "queryHashes": [
+        "3558e5ebbbb7"
+      ],
+      "recallDays": [
+        "2026-05-30"
+      ],
+      "conceptTags": [
+        "我的",
+        "电脑",
+        "很多",
+        "时候",
+        "尤其是",
+        "游戏",
+        "出现",
+        "需要"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-30.txt:2:2": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-30.txt:2:2",
+      "path": "memory/.dreams/session-corpus/2026-05-30.txt",
+      "startLine": 2,
+      "endLine": 2,
+      "source": "memory",
+      "snippet": "Assistant: 好的，让我给你的电脑做一次全面体检。先从硬件配置、资源占用、启动项、磁盘等几个维度同时入手。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-30T07:23:36.201Z",
+      "lastRecalledAt": "2026-05-30T07:23:36.201Z",
+      "queryHashes": [
+        "3558e5ebbbb7"
+      ],
+      "recallDays": [
+        "2026-05-30"
+      ],
+      "conceptTags": [
+        "好的",
+        "你的",
+        "电脑",
+        "一次",
+        "全面",
+        "体检",
+        "先从",
+        "硬件"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-30.txt:3:3": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-30.txt:3:3",
+      "path": "memory/.dreams/session-corpus/2026-05-30.txt",
+      "startLine": 3,
+      "endLine": 3,
+      "source": "memory",
+      "snippet": "Assistant: 硬件已摸清。接下来检查资源占用、启动项、磁盘、后台进程。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-30T07:23:36.201Z",
+      "lastRecalledAt": "2026-05-30T07:23:36.201Z",
+      "queryHashes": [
+        "3558e5ebbbb7"
+      ],
+      "recallDays": [
+        "2026-05-30"
+      ],
+      "conceptTags": [
+        "硬件",
+        "摸清",
+        "下来",
+        "检查",
+        "资源",
+        "占用",
+        "启动",
+        "磁盘"
       ]
     }
   }
