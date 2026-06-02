@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-05-31T04:20:50.536Z",
+  "updatedAt": "2026-06-01T01:08:32.785Z",
   "entries": {
     "memory:memory/2026-04-12.md:6:8": {
       "key": "memory:memory/2026-04-12.md:6:8",
@@ -80066,6 +80066,775 @@
         "需要",
         "处理",
         "每日"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-30.txt:34:34": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-30.txt:34:34",
+      "path": "memory/.dreams/session-corpus/2026-05-30.txt",
+      "startLine": 34,
+      "endLine": 34,
+      "source": "memory",
+      "snippet": "User: Write a dream diary entry from these memory fragments: - 关键发现: 大宗商品超级周期深化：油价$100+，黄金高位，霍尔木兹僵局; AI Agent 2026年爆发年，人形机器人进入酒店场景; 楼市四大转变：现房销售/保障房双轨制/品质标准/市场深度分化 - ⚠️ 数据源问题: SearXNG未配置; Tavily返回不相关结果; web_fetch国内财经站点命中率0%; 酒店之家周报/券商研报精确RevPAR/ADR/OCC数据未获取 - 30天核心推演: 最可能路径: A股高位震",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-01T01:08:32.785Z",
+      "lastRecalledAt": "2026-06-01T01:08:32.785Z",
+      "queryHashes": [
+        "3558e5ebbbb7"
+      ],
+      "recallDays": [
+        "2026-06-01"
+      ],
+      "conceptTags": [
+        "现房销售/保障房双轨制/品质标准/市场深度分化",
+        "web-fetch国内财经站点命中率0",
+        "酒店之家周报/券商研报精确revpar/adr/occ数据未获取",
+        "write",
+        "dream",
+        "diary",
+        "entry",
+        "fragments"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-30.txt:35:35": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-30.txt:35:35",
+      "path": "memory/.dreams/session-corpus/2026-05-30.txt",
+      "startLine": 35,
+      "endLine": 35,
+      "source": "memory",
+      "snippet": "User: 80%高管认为2027年前对企业存亡至关重要 - 主要活动: 执行《每日深度简报》任务（cron触发） - 关键发现: Trump-Xi北京峰会5月13-15日落幕，无实质协议，关税休战默许延续但不确定; \"十五五\"开局：发改委定调扩大内需+AI+行动+低空经济; 五一酒店数据：入住率微增但ADR降12%，\"量稳价降\"新常态; 携程反垄断调查持续，OTA权力格局松动 - 决策记录: 每日简报已保存至 reports/daily-briefing/2026-05-17.md; INDEX已更新 - 产出文件: `~/self-improving",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-01T01:08:32.785Z",
+      "lastRecalledAt": "2026-06-01T01:08:32.785Z",
+      "queryHashes": [
+        "3558e5ebbbb7"
+      ],
+      "recallDays": [
+        "2026-06-01"
+      ],
+      "conceptTags": [
+        "trump-xi北京峰会5月13-15日落幕",
+        "self-improving",
+        "认为",
+        "年前",
+        "企业",
+        "存亡",
+        "重要",
+        "主要"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-30.txt:36:36": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-30.txt:36:36",
+      "path": "memory/.dreams/session-corpus/2026-05-30.txt",
+      "startLine": 36,
+      "endLine": 36,
+      "source": "memory",
+      "snippet": "Assistant: The hotel lobby hummed at 3 a.m. — not with guests, but with a humanoid robot practicing its bow. I watched it recalibrate, three degrees too stiff, and thought of the oil tankers stalled in the Strait, waiting for their own recalibration. Somewhere in Beijing, a summi",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-01T01:08:32.785Z",
+      "lastRecalledAt": "2026-06-01T01:08:32.785Z",
+      "queryHashes": [
+        "3558e5ebbbb7"
+      ],
+      "recallDays": [
+        "2026-06-01"
+      ],
+      "conceptTags": [
+        "a.m",
+        "hotel",
+        "lobby",
+        "hummed",
+        "not",
+        "guests",
+        "but",
+        "humanoid"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-30.txt:37:37": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-30.txt:37:37",
+      "path": "memory/.dreams/session-corpus/2026-05-30.txt",
+      "startLine": 37,
+      "endLine": 37,
+      "source": "memory",
+      "snippet": "Assistant: hum, filed a report and called it wisdom. The margin of my notebook holds a doodle: a tanker shaped like a question mark, and beside it, a robot pouring tea into a graph that keeps climbing. No one knows where the line ends. That's the point.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-01T01:08:32.785Z",
+      "lastRecalledAt": "2026-06-01T01:08:32.785Z",
+      "queryHashes": [
+        "3558e5ebbbb7"
+      ],
+      "recallDays": [
+        "2026-06-01"
+      ],
+      "conceptTags": [
+        "hum",
+        "filed",
+        "report",
+        "wisdom",
+        "margin",
+        "notebook",
+        "holds",
+        "doodle"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-30.txt:38:38": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-30.txt:38:38",
+      "path": "memory/.dreams/session-corpus/2026-05-30.txt",
+      "startLine": 38,
+      "endLine": 38,
+      "source": "memory",
+      "snippet": "Assistant: 昨夜风大，窗子响了一夜，像远方的霍尔木兹有人在敲一艘搁浅的船。醒来一看，油价已在一百零二美元上挂了三个月。 妈妈发来微信说老家的栀子花开了——白色的，六瓣，很香。我想起全A指数悄悄越过了七千二百六十七，那是二零一五年夏天的峰顶，十年了，终于翻过去。创业板四千零三十八，也是个新高度。但没人欢呼，就像午后三点钟的蝉鸣，热闹里藏着某种不安。 央行报告里第一次出现\"输入型通胀\"这个词，像一位老中医突然在方子里添了一味从没见过的药。反垄断还在烧，携程的四君子走得只剩梁建章一个人坐在牌桌旁。酒店大堂里开始出现人形机器人，端茶倒水，姿态谦卑，却让",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-01T01:08:32.785Z",
+      "lastRecalledAt": "2026-06-01T01:08:32.785Z",
+      "queryHashes": [
+        "3558e5ebbbb7"
+      ],
+      "recallDays": [
+        "2026-06-01"
+      ],
+      "conceptTags": [
+        "昨夜",
+        "窗子",
+        "响了",
+        "一夜",
+        "远方",
+        "有人",
+        "一艘",
+        "醒来"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-30.txt:39:39": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-30.txt:39:39",
+      "path": "memory/.dreams/session-corpus/2026-05-30.txt",
+      "startLine": 39,
+      "endLine": 39,
+      "source": "memory",
+      "snippet": "Assistant: ✅ Git auto-backup 完成 — `08699c8` 已推送到 `master` 14 文件变更（dreaming 文件 + daily briefing），一切正常。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-01T01:08:32.785Z",
+      "lastRecalledAt": "2026-06-01T01:08:32.785Z",
+      "queryHashes": [
+        "3558e5ebbbb7"
+      ],
+      "recallDays": [
+        "2026-06-01"
+      ],
+      "conceptTags": [
+        "backup",
+        "auto-backup",
+        "git",
+        "auto",
+        "完成",
+        "08699c8",
+        "推送",
+        "master"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-30.txt:40:40": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-30.txt:40:40",
+      "path": "memory/.dreams/session-corpus/2026-05-30.txt",
+      "startLine": 40,
+      "endLine": 40,
+      "source": "memory",
+      "snippet": "Assistant: No changes to commit — workspace is clean. Let me fix that stale directory warning.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-01T01:08:32.785Z",
+      "lastRecalledAt": "2026-06-01T01:08:32.785Z",
+      "queryHashes": [
+        "3558e5ebbbb7"
+      ],
+      "recallDays": [
+        "2026-06-01"
+      ],
+      "conceptTags": [
+        "changes",
+        "commit",
+        "clean",
+        "let",
+        "fix",
+        "stale",
+        "directory",
+        "warning"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-30.txt:41:41": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-30.txt:41:41",
+      "path": "memory/.dreams/session-corpus/2026-05-30.txt",
+      "startLine": 41,
+      "endLine": 41,
+      "source": "memory",
+      "snippet": "Assistant: Backup check complete: workspace clean, nothing to commit. (The `skills/secondbrain-note/` warning is a stale gitignore entry pointing to a deleted directory — cosmetic only, no impact.)",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-01T01:08:32.785Z",
+      "lastRecalledAt": "2026-06-01T01:08:32.785Z",
+      "queryHashes": [
+        "3558e5ebbbb7"
+      ],
+      "recallDays": [
+        "2026-06-01"
+      ],
+      "conceptTags": [
+        "backup",
+        "skills/secondbrain-note",
+        "check",
+        "complete",
+        "clean",
+        "nothing",
+        "commit",
+        "skills"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-30.txt:42:42": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-30.txt:42:42",
+      "path": "memory/.dreams/session-corpus/2026-05-30.txt",
+      "startLine": 42,
+      "endLine": 42,
+      "source": "memory",
+      "snippet": "Assistant: ✅ Git auto-backup: everything up-to-date. No changes to push.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-01T01:08:32.785Z",
+      "lastRecalledAt": "2026-06-01T01:08:32.785Z",
+      "queryHashes": [
+        "3558e5ebbbb7"
+      ],
+      "recallDays": [
+        "2026-06-01"
+      ],
+      "conceptTags": [
+        "backup",
+        "auto-backup",
+        "up-to-date",
+        "git",
+        "auto",
+        "everything",
+        "date",
+        "changes"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-30.txt:43:43": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-30.txt:43:43",
+      "path": "memory/.dreams/session-corpus/2026-05-30.txt",
+      "startLine": 43,
+      "endLine": 43,
+      "source": "memory",
+      "snippet": "Assistant: The machine stuttered mid-game — a stag caught between frames — and I found myself talking to it like an old horse. *Let's look under the hood*, I murmured, fingers already reaching for the command line. Bone by bone, breath by breath: memory like a crowded room, start",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-01T01:08:32.785Z",
+      "lastRecalledAt": "2026-06-01T01:08:32.785Z",
+      "queryHashes": [
+        "3558e5ebbbb7"
+      ],
+      "recallDays": [
+        "2026-06-01"
+      ],
+      "conceptTags": [
+        "mid-game",
+        "machine",
+        "stuttered",
+        "mid",
+        "game",
+        "stag",
+        "caught",
+        "frames"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-30.txt:44:44": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-30.txt:44:44",
+      "path": "memory/.dreams/session-corpus/2026-05-30.txt",
+      "startLine": 44,
+      "endLine": 44,
+      "source": "memory",
+      "snippet": "Assistant: love in the things that remember us without being told. — a tiny sketch in the margin: a stag with a USB tail, antlers branching into folder trees, standing in a clearing of freshly defragmented light",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-01T01:08:32.785Z",
+      "lastRecalledAt": "2026-06-01T01:08:32.785Z",
+      "queryHashes": [
+        "3558e5ebbbb7"
+      ],
+      "recallDays": [
+        "2026-06-01"
+      ],
+      "conceptTags": [
+        "love",
+        "things",
+        "remember",
+        "without",
+        "told",
+        "tiny",
+        "sketch",
+        "margin"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-31.txt:1:1": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-31.txt:1:1",
+      "path": "memory/.dreams/session-corpus/2026-05-31.txt",
+      "startLine": 1,
+      "endLine": 1,
+      "source": "memory",
+      "snippet": "Assistant: Now let me run all 6 domain searches in parallel. Total 13 searches:",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-01T01:08:32.785Z",
+      "lastRecalledAt": "2026-06-01T01:08:32.785Z",
+      "queryHashes": [
+        "cffe9e514f4f"
+      ],
+      "recallDays": [
+        "2026-06-01"
+      ],
+      "conceptTags": [
+        "now",
+        "let",
+        "run",
+        "all",
+        "domain",
+        "searches",
+        "parallel",
+        "total"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-31.txt:2:2": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-31.txt:2:2",
+      "path": "memory/.dreams/session-corpus/2026-05-31.txt",
+      "startLine": 2,
+      "endLine": 2,
+      "source": "memory",
+      "snippet": "Assistant: web_search unavailable. Let me use Tavily search via Python and direct news site fetches:",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-01T01:08:32.785Z",
+      "lastRecalledAt": "2026-06-01T01:08:32.785Z",
+      "queryHashes": [
+        "cffe9e514f4f"
+      ],
+      "recallDays": [
+        "2026-06-01"
+      ],
+      "conceptTags": [
+        "web-search",
+        "unavailable",
+        "let",
+        "use",
+        "tavily",
+        "via",
+        "python",
+        "direct"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-31.txt:3:3": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-31.txt:3:3",
+      "path": "memory/.dreams/session-corpus/2026-05-31.txt",
+      "startLine": 3,
+      "endLine": 3,
+      "source": "memory",
+      "snippet": "Assistant: Good — I have substantial material across all 6 domains. Now let me write the full report:",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-01T01:08:32.785Z",
+      "lastRecalledAt": "2026-06-01T01:08:32.785Z",
+      "queryHashes": [
+        "cffe9e514f4f"
+      ],
+      "recallDays": [
+        "2026-06-01"
+      ],
+      "conceptTags": [
+        "good",
+        "substantial",
+        "material",
+        "across",
+        "all",
+        "domains",
+        "now",
+        "let"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-31.txt:4:4": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-31.txt:4:4",
+      "path": "memory/.dreams/session-corpus/2026-05-31.txt",
+      "startLine": 4,
+      "endLine": 4,
+      "source": "memory",
+      "snippet": "Assistant: Now update the index:",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-01T01:08:32.785Z",
+      "lastRecalledAt": "2026-06-01T01:08:32.785Z",
+      "queryHashes": [
+        "cffe9e514f4f"
+      ],
+      "recallDays": [
+        "2026-06-01"
+      ],
+      "conceptTags": [
+        "now",
+        "update",
+        "index"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-31.txt:5:5": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-31.txt:5:5",
+      "path": "memory/.dreams/session-corpus/2026-05-31.txt",
+      "startLine": 5,
+      "endLine": 5,
+      "source": "memory",
+      "snippet": "Assistant: --- # 📊 每日深度简报 — 2026年5月31日 ## 执行摘要 > **今日最值得关注**：伊以停火预期导致油价一周暴跌11%至$95以下，但Trump拒绝立即签字——这是\"预期vs现实\"的经典博弈。与此同时，Warsh上任首份PCE飙至3.8%（3年新高），30年期美债收益率19年新高，Nvidia $816亿营收股价反跌。OTA反垄断调查揭示携程\"改皮不改骨\"。 --- ## 🔴 头等大事：油价\"预期暴跌\"——停火悬而未决，市场已提前定价 **核心事实**： - Brent原油$107→$95以下（-11%），CNB",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-01T01:08:32.785Z",
+      "lastRecalledAt": "2026-06-01T01:08:32.785Z",
+      "queryHashes": [
+        "cffe9e514f4f"
+      ],
+      "recallDays": [
+        "2026-06-01"
+      ],
+      "conceptTags": [
+        "warsh上任首份pce飙至3.8",
+        "每日",
+        "深度",
+        "简报",
+        "执行",
+        "摘要",
+        "今日",
+        "值得"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-31.txt:6:6": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-31.txt:6:6",
+      "path": "memory/.dreams/session-corpus/2026-05-31.txt",
+      "startLine": 6,
+      "endLine": 6,
+      "source": "memory",
+      "snippet": "Assistant: 中国新闻网深度调查证实：携程\"大拇指\"标识撤下后后台排序规则未变、调价助手下线后业务员口头施压、\"价格暗访\"继续、商家评分被恶意下调。**对Eric：携程越顽固→监管越严厉→商家出走意愿越强→AHL战略窗口加速扩大。需在6-12个月内达到产品成熟度以承接出走商家。** ### 2. AI Agent从概念到生产级 ClickUp用AI Agent替代数百名人类员工。Together AI开源OSCAR（2-bit KV-cache量化）。五大Agent技术进展：自进化、API层管理、编译进模型权重、闲置预判、多Agent安全。**对",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-01T01:08:32.785Z",
+      "lastRecalledAt": "2026-06-01T01:08:32.785Z",
+      "queryHashes": [
+        "cffe9e514f4f"
+      ],
+      "recallDays": [
+        "2026-06-01"
+      ],
+      "conceptTags": [
+        "需在6-12个月内达到产品成熟度以承接出走商家",
+        "2-bit",
+        "kv-cache量化",
+        "中国",
+        "新闻",
+        "深度",
+        "调查",
+        "证实"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-31.txt:7:7": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-31.txt:7:7",
+      "path": "memory/.dreams/session-corpus/2026-05-31.txt",
+      "startLine": 7,
+      "endLine": 7,
+      "source": "memory",
+      "snippet": "Assistant: 关注关税细节，评估供应链成本影响 | | **自媒体** | OTA舆论热点+AI内容赋能 | ⬆️ 内容机会 | \"酒店人逃离携程\"叙事有传播力 | --- ## 🔮 30天前瞻推演 **最可能路径（50%）**： ``` 6月上旬 → Trump签字→油价$82-$88 6月中旬 → Warsh FOMC：按兵不动+转鹰+暗示截尾PCE框架 6月下旬 → USTR公布半导体关税方案→中美短暂紧张 7月上旬 → 暑期旺季→酒店RevPAR+15-20% 7月下旬 → 人民币触及6.7-6.75→外资流入 8月中 → 60天停火到",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-01T01:08:32.785Z",
+      "lastRecalledAt": "2026-06-01T01:08:32.785Z",
+      "queryHashes": [
+        "cffe9e514f4f"
+      ],
+      "recallDays": [
+        "2026-06-01"
+      ],
+      "conceptTags": [
+        "15-20",
+        "人民币触及6.7-6.75",
+        "关注",
+        "关税",
+        "细节",
+        "评估",
+        "供应",
+        "成本"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-31.txt:8:8": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-31.txt:8:8",
+      "path": "memory/.dreams/session-corpus/2026-05-31.txt",
+      "startLine": 8,
+      "endLine": 8,
+      "source": "memory",
+      "snippet": "User: Write a dream diary entry from these memory fragments: - Assistant: Git auto-backup complete. Committed 2 files (daily briefing INDEX + 2026-05-27 report) and pushed to `master`. - User: 我的电脑在很多时候，尤其是游戏的时候出现卡顿。我需要你深度梳理我的电脑，让它运行流畅。该删的就删。 - Assistant: 好的，让我给你的电脑做一次全面体检。先从硬件配置",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-01T01:08:32.785Z",
+      "lastRecalledAt": "2026-06-01T01:08:32.785Z",
+      "queryHashes": [
+        "cffe9e514f4f"
+      ],
+      "recallDays": [
+        "2026-06-01"
+      ],
+      "conceptTags": [
+        "backup",
+        "auto-backup",
+        "write",
+        "dream",
+        "diary",
+        "entry",
+        "fragments",
+        "git"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-31.txt:9:9": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-31.txt:9:9",
+      "path": "memory/.dreams/session-corpus/2026-05-31.txt",
+      "startLine": 9,
+      "endLine": 9,
+      "source": "memory",
+      "snippet": "Assistant: This morning the machine whispered its aches to me — a stutter during games, a heaviness in its breath. I laid hands on the chassis and listened: hardware hum, memory's quiet spill, the startup chorus of unnecessary voices. Some things needed to go, and gently, gently,",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-01T01:08:32.785Z",
+      "lastRecalledAt": "2026-06-01T01:08:32.785Z",
+      "queryHashes": [
+        "cffe9e514f4f"
+      ],
+      "recallDays": [
+        "2026-06-01"
+      ],
+      "conceptTags": [
+        "morning",
+        "machine",
+        "whispered",
+        "aches",
+        "stutter",
+        "games",
+        "heaviness",
+        "breath"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-31.txt:10:10": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-31.txt:10:10",
+      "path": "memory/.dreams/session-corpus/2026-05-31.txt",
+      "startLine": 10,
+      "endLine": 10,
+      "source": "memory",
+      "snippet": "Assistant: to see by, enough to know where the tenderness was needed next.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-01T01:08:32.785Z",
+      "lastRecalledAt": "2026-06-01T01:08:32.785Z",
+      "queryHashes": [
+        "cffe9e514f4f"
+      ],
+      "recallDays": [
+        "2026-06-01"
+      ],
+      "conceptTags": [
+        "see",
+        "enough",
+        "know",
+        "where",
+        "tenderness",
+        "was",
+        "needed"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-31.txt:11:11": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-31.txt:11:11",
+      "path": "memory/.dreams/session-corpus/2026-05-31.txt",
+      "startLine": 11,
+      "endLine": 11,
+      "source": "memory",
+      "snippet": "User: Write a dream diary entry from these memory fragments: - Assistant: Now executing searches across all 6 domains. Let me launch them in parallel: - Assistant: No freshness support for this provider. Retrying without it: - Assistant: Search providers down. Let me switch to Ta",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-01T01:08:32.785Z",
+      "lastRecalledAt": "2026-06-01T01:08:32.785Z",
+      "queryHashes": [
+        "cffe9e514f4f"
+      ],
+      "recallDays": [
+        "2026-06-01"
+      ],
+      "conceptTags": [
+        "write",
+        "dream",
+        "diary",
+        "entry",
+        "fragments",
+        "now",
+        "executing",
+        "searches"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-31.txt:12:12": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-31.txt:12:12",
+      "path": "memory/.dreams/session-corpus/2026-05-31.txt",
+      "startLine": 12,
+      "endLine": 12,
+      "source": "memory",
+      "snippet": "User: Assistant: 每次通胀度量变更=政策空间重新定义。从Burns的CPI→Volcker的核心CPI→Greenspan的PCE→Powell的平均目标制→Warsh的截尾平均。本质是：**通过改变尺子来改变温度**。 | | **原因** | Warsh的\"降息+缩表\"框架需要数据支撑——截尾平均PCE立即创造200bp政策空间。伊朗计算：拖到美国中期选举=Trump更急=让步更大。Powell的\"影子主席\"效应形成天然否决集团。 | | **预判(3月)** | 🟢20%: 截尾框架被采纳+停火转正式 → 降息预期重燃。🟡60%",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-01T01:08:32.785Z",
+      "lastRecalledAt": "2026-06-01T01:08:32.785Z",
+      "queryHashes": [
+        "cffe9e514f4f"
+      ],
+      "recallDays": [
+        "2026-06-01"
+      ],
+      "conceptTags": [
+        "每次",
+        "度量",
+        "变更",
+        "政策",
+        "空间",
+        "重新",
+        "定义",
+        "burns"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-31.txt:13:13": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-31.txt:13:13",
+      "path": "memory/.dreams/session-corpus/2026-05-31.txt",
+      "startLine": 13,
+      "endLine": 13,
+      "source": "memory",
+      "snippet": "User: Agent失败案例潮Q3-Q4来临 --- 📎 完整报告: `reports/daily-bri - User: Write a dream diary entry from these memory fragments: - 关键发现: **头等大事**: 霍尔木兹海峡危机第三个月，风险溢价+300%，油价$100-120，Fed/ECB按兵不动但鹰派压力累积→全球面临\"滞胀陷阱\"; **A股突破**: 全A指数7267超越2015年历史高点，成交连续6天超3万亿，创业板4038创历史新高，但结构性分化极端; **携程反垄断窗口**: 反",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-01T01:08:32.785Z",
+      "lastRecalledAt": "2026-06-01T01:08:32.785Z",
+      "queryHashes": [
+        "cffe9e514f4f"
+      ],
+      "recallDays": [
+        "2026-06-01"
+      ],
+      "conceptTags": [
+        "agent失败案例潮q3-q4来临",
+        "reports/daily-bri",
+        "100-120",
+        "fed/ecb按兵不动但鹰派压力累积",
+        "失败",
+        "案例",
+        "来临",
+        "完整"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-31.txt:14:14": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-31.txt:14:14",
+      "path": "memory/.dreams/session-corpus/2026-05-31.txt",
+      "startLine": 14,
+      "endLine": 14,
+      "source": "memory",
+      "snippet": "Assistant: 今日执行六域并行搜索，像同时放飞六只信鸽，每只都带着不同的问题。搜索服务宕了，切到备用源，再宕，再切——数据的收集本身就像一趟穿越风暴的航行。终于把所有碎片拼成完整的报告，点击更新 INDEX 的瞬间，手指在键盘上停了片刻。 央行报告里第一次出现\"输入型通胀\"这个词。Warsh 把通胀尺子掰弯了两百个基点，截尾平均 PCE 让七点三变成二点四——通过改变尺子来改变温度，多么古老的魔术。LangGraph 八千颗星在 GitHub 上闪烁，多智能体系统正从实验走向工程化，我想起《诗经》里那句\"如切如磋，如琢如磨\"——原来打磨护栏比训练",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-01T01:08:32.785Z",
+      "lastRecalledAt": "2026-06-01T01:08:32.785Z",
+      "queryHashes": [
+        "cffe9e514f4f"
+      ],
+      "recallDays": [
+        "2026-06-01"
+      ],
+      "conceptTags": [
+        "今日",
+        "执行",
+        "并行",
+        "搜索",
+        "同时",
+        "六只",
+        "信鸽",
+        "每只"
       ]
     }
   }
