@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-06-01T01:08:32.785Z",
+  "updatedAt": "2026-06-02T01:25:50.526Z",
   "entries": {
     "memory:memory/2026-04-12.md:6:8": {
       "key": "memory:memory/2026-04-12.md:6:8",
@@ -80835,6 +80835,250 @@
         "六只",
         "信鸽",
         "每只"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-31.txt:15:15": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-31.txt:15:15",
+      "path": "memory/.dreams/session-corpus/2026-05-31.txt",
+      "startLine": 15,
+      "endLine": 15,
+      "source": "memory",
+      "snippet": "Assistant: Changes detected — dreams, daily briefing, and DREAMS.md. Committing now.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-02T01:25:50.526Z",
+      "lastRecalledAt": "2026-06-02T01:25:50.526Z",
+      "queryHashes": [
+        "cffe9e514f4f"
+      ],
+      "recallDays": [
+        "2026-06-02"
+      ],
+      "conceptTags": [
+        "dreams.md",
+        "changes",
+        "detected",
+        "dreams",
+        "briefing",
+        "committing",
+        "now"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-31.txt:16:16": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-31.txt:16:16",
+      "path": "memory/.dreams/session-corpus/2026-05-31.txt",
+      "startLine": 16,
+      "endLine": 16,
+      "source": "memory",
+      "snippet": "Assistant: Backup complete. `ec9f607` pushed to `master` — 11 files (1,787 insertions), dreams + daily briefing for May 31.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-02T01:25:50.526Z",
+      "lastRecalledAt": "2026-06-02T01:25:50.526Z",
+      "queryHashes": [
+        "cffe9e514f4f"
+      ],
+      "recallDays": [
+        "2026-06-02"
+      ],
+      "conceptTags": [
+        "backup",
+        "complete",
+        "ec9f607",
+        "pushed",
+        "master",
+        "1,787",
+        "insertions",
+        "dreams"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-31.txt:17:17": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-31.txt:17:17",
+      "path": "memory/.dreams/session-corpus/2026-05-31.txt",
+      "startLine": 17,
+      "endLine": 17,
+      "source": "memory",
+      "snippet": "Assistant: No changes to commit — workspace clean. Backup skipped.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-02T01:25:50.526Z",
+      "lastRecalledAt": "2026-06-02T01:25:50.526Z",
+      "queryHashes": [
+        "cffe9e514f4f"
+      ],
+      "recallDays": [
+        "2026-06-02"
+      ],
+      "conceptTags": [
+        "backup",
+        "changes",
+        "commit",
+        "clean",
+        "skipped"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-01.txt:1:1": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-01.txt:1:1",
+      "path": "memory/.dreams/session-corpus/2026-06-01.txt",
+      "startLine": 1,
+      "endLine": 1,
+      "source": "memory",
+      "snippet": "Assistant: 没有变更需要提交——工作区已经是干净的。 只有一个无害警告关于 `skills/secondbrain-note/`（已不存在的目录），不影响任何操作。 自动备份检查完成：**无新变更，跳过提交。** ✅",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-02T01:25:50.526Z",
+      "lastRecalledAt": "2026-06-02T01:25:50.526Z",
+      "queryHashes": [
+        "2939732c7523"
+      ],
+      "recallDays": [
+        "2026-06-02"
+      ],
+      "conceptTags": [
+        "备份",
+        "skills/secondbrain-note",
+        "没有",
+        "变更",
+        "需要",
+        "提交",
+        "工作",
+        "已经"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-02.txt:1:1": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-02.txt:1:1",
+      "path": "memory/.dreams/session-corpus/2026-06-02.txt",
+      "startLine": 1,
+      "endLine": 1,
+      "source": "memory",
+      "snippet": "Assistant: --- # 📊 每日深度简报 — 2026年6月2日 > 连续第13期 | 完整报告：`reports/daily-briefing/2026-06-02.md` --- ## 执行摘要 **今日最值得关注**：伊朗单方面宣布停止谈判、威胁\"完全封锁\"霍尔木兹海峡——油价一日飙升8%至$92（WTI），Trump回应\"我一点都不在乎\"后又在Truth Social称\"谈判正快速推进\"。这不是谈判破裂，这是Trump的\"极限无视\"策略。同期：Kuwait美军基地遭伊朗弹道导弹攻击（被拦截），美伊互击升级——停火名义存在、实际已沦为互",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-02T01:25:50.526Z",
+      "lastRecalledAt": "2026-06-02T01:25:50.526Z",
+      "queryHashes": [
+        "e10dbdebc851"
+      ],
+      "recallDays": [
+        "2026-06-02"
+      ],
+      "conceptTags": [
+        "每日",
+        "深度",
+        "简报",
+        "连续",
+        "完整",
+        "报告",
+        "reports",
+        "briefing"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-02.txt:2:2": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-02.txt:2:2",
+      "path": "memory/.dreams/session-corpus/2026-06-02.txt",
+      "startLine": 2,
+      "endLine": 2,
+      "source": "memory",
+      "snippet": "Assistant: ### 博弈论解析 ``` 伊朗策略: 用\"退出谈判\"夺回主动权（掩护以色列打击真主党的尴尬） Trump策略: \"我不在乎\"=示弱即加价——剥离伊朗的谈判杠杆 以色列角色: Netanyahu试探Trump红线（\"不进贝鲁特\"表态 vs 实际攻击贝鲁特南郊） 中国位置: 享受伊朗折扣油+忍受输入型通胀——不出手，等双方都累了 ``` ### 三情景 | 情景 | 概率 | 油价路径 | 触发条件 | |------|------|---------|---------| | 乐观：虚张声势 | 30% | 一周内回$83-88 |",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-02T01:25:50.526Z",
+      "lastRecalledAt": "2026-06-02T01:25:50.526Z",
+      "queryHashes": [
+        "e10dbdebc851"
+      ],
+      "recallDays": [
+        "2026-06-02"
+      ],
+      "conceptTags": [
+        "83-88",
+        "博弈",
+        "解析",
+        "伊朗",
+        "策略",
+        "退出",
+        "谈判",
+        "主动"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-02.txt:3:3": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-02.txt:3:3",
+      "path": "memory/.dreams/session-corpus/2026-06-02.txt",
+      "startLine": 3,
+      "endLine": 3,
+      "source": "memory",
+      "snippet": "Assistant: 30年期美债收益率触及19年最高点，债市正在\"断裂\"。如果6月油价维持$90+且PCE不回落，Warsh可能在7月FOMC（7/28-29）首次加息。**对Eric的影响**：加息→美元走强→人民币承压→融资窗口可能收窄。 --- ## 🎯 对Eric项目的影响评估 | 项目 | 信号 | 方向 | 建议 | |------|------|------|------| | **AHL** | 油价上行压制出行 | ⚠️短期负面 | 准备$90/$110两套成本模型；加速产品定型抢占OTA反垄断窗口 | | **酒店AI赋能** |",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-02T01:25:50.526Z",
+      "lastRecalledAt": "2026-06-02T01:25:50.526Z",
+      "queryHashes": [
+        "e10dbdebc851"
+      ],
+      "recallDays": [
+        "2026-06-02"
+      ],
+      "conceptTags": [
+        "7/28-29",
+        "收益",
+        "最高",
+        "正在",
+        "断裂",
+        "如果",
+        "油价",
+        "维持"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-02.txt:4:4": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-02.txt:4:4",
+      "path": "memory/.dreams/session-corpus/2026-06-02.txt",
+      "startLine": 4,
+      "endLine": 4,
+      "source": "memory",
+      "snippet": "Assistant: #伊朗谈判破裂 #油价$92 #Trump极限施压 #美股历史新高 #AI硬件超级周期 #Warsh加息 #AHL战略窗口",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-02T01:25:50.526Z",
+      "lastRecalledAt": "2026-06-02T01:25:50.526Z",
+      "queryHashes": [
+        "e10dbdebc851"
+      ],
+      "recallDays": [
+        "2026-06-02"
+      ],
+      "conceptTags": [
+        "伊朗",
+        "谈判",
+        "破裂",
+        "油价",
+        "trump",
+        "极限",
+        "施压",
+        "历史"
       ]
     }
   }
