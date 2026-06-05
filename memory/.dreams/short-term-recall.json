@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-06-02T01:25:50.526Z",
+  "updatedAt": "2026-06-04T01:13:33.506Z",
   "entries": {
     "memory:memory/2026-04-12.md:6:8": {
       "key": "memory:memory/2026-04-12.md:6:8",
@@ -81079,6 +81079,95 @@
         "极限",
         "施压",
         "历史"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-02.txt:5:5": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-02.txt:5:5",
+      "path": "memory/.dreams/session-corpus/2026-06-02.txt",
+      "startLine": 5,
+      "endLine": 5,
+      "source": "memory",
+      "snippet": "Assistant: ✅ Git auto-backup complete: `ec9f607..b8f85be` — 10 files (dreams system & memory updates), pushed to `master`.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-04T01:13:33.506Z",
+      "lastRecalledAt": "2026-06-04T01:13:33.506Z",
+      "queryHashes": [
+        "e10dbdebc851"
+      ],
+      "recallDays": [
+        "2026-06-04"
+      ],
+      "conceptTags": [
+        "backup",
+        "auto-backup",
+        "git",
+        "auto",
+        "complete",
+        "ec9f607",
+        "b8f85be",
+        "dreams"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-03.txt:1:1": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-03.txt:1:1",
+      "path": "memory/.dreams/session-corpus/2026-06-03.txt",
+      "startLine": 1,
+      "endLine": 1,
+      "source": "memory",
+      "snippet": "Assistant: Changes detected — committing and pushing.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-04T01:13:33.506Z",
+      "lastRecalledAt": "2026-06-04T01:13:33.506Z",
+      "queryHashes": [
+        "87e9e611ff5e"
+      ],
+      "recallDays": [
+        "2026-06-04"
+      ],
+      "conceptTags": [
+        "changes",
+        "detected",
+        "committing",
+        "pushing"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-03.txt:2:2": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-03.txt:2:2",
+      "path": "memory/.dreams/session-corpus/2026-06-03.txt",
+      "startLine": 2,
+      "endLine": 2,
+      "source": "memory",
+      "snippet": "Assistant: 备份完成 ✓ — `ddfef71` 已推送至 `darknessdogeric/openclaw-memory`，13 个文件变更（含 6/1-6/2 梦境语料和简报）。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-04T01:13:33.506Z",
+      "lastRecalledAt": "2026-06-04T01:13:33.506Z",
+      "queryHashes": [
+        "87e9e611ff5e"
+      ],
+      "recallDays": [
+        "2026-06-04"
+      ],
+      "conceptTags": [
+        "备份",
+        "darknessdogeric/openclaw-memory",
+        "6/1-6/2",
+        "完成",
+        "ddfef71",
+        "推送",
+        "darknessdogeric",
+        "openclaw"
       ]
     }
   }

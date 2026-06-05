@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>中旅酒店 3+1 战略下品牌矩阵发展规划提纲</title>
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: "Microsoft YaHei", "PingFang SC", sans-serif;
+  background: #f5f5f5;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+}
+svg { width: 100%; height: 100%; background: #f5f5f5; }
+
+.node rect {
+  stroke: #bbb;
+  stroke-width: 0.5;
+  rx: 3;
+  ry: 3;
+}
+.node text {
+  font-size: 12px;
+  fill: #333;
+  text-anchor: start;
+  dominant-baseline: middle;
+}
+/* root */
+.node.root rect { fill: #595959; stroke: #4a4a4a; }
+.node.root text { fill: #fff; font-size: 14px; font-weight: bold; }
+/* level 1 */
+.node.lvl1 rect { fill: #707070; stroke: #606060; }
+.node.lvl1 text { fill: #fff; font-size: 13px; font-weight: bold; }
+/* level 2 */
+.node.lvl2 rect { fill: #999; stroke: #888; }
+.node.lvl2 text { fill: #fff; font-size: 12px; }
+/* level 3 */
+.node.lvl3 rect { fill: #c0c0c0; stroke: #aaa; }
+.node.lvl3 text { fill: #333; font-size: 11px; }
+/* level 4 */
+.node.lvl4 rect { fill: #d9d9d9; stroke: #c0c0c0; }
+.node.lvl4 text { fill: #555; font-size: 10px; }
+/* level 5 */
+.node.lvl5 rect { fill: #eee; stroke: #d0d0d0; }
+.node.lvl5 text { fill: #666; font-size: 10px; }
+
+.link {
+  fill: none;
+  stroke: #aaa;
+  stroke-width: 0.8;
+}
+</style>
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script>
+const data = {
+  name: "中旅酒店 3+1 战略下\n品牌矩阵发展规划提纲",
+  className: "root",
+  children: [
+    {
+      name: "一、现状背景与行业研判",
+      className: "lvl1",
+      children: [
+        {
+          name: "1. 行业背景及政策大势研判",
+          className: "lvl2",
+          children: [
+            {
+              name: "行业层面/国家战略层面",
+              className: "lvl3",
+              children: [
+                { name: "宏观背景：消费竞争、数字化转型、\n供给侧改革、链条产业等", className: "lvl4" },
+                { name: "战略方向：中旅集团酒店业务\n作为重要支撑点的战略愿景", className: "lvl4" }
+              ]
+            },
+            {
+              name: "行业核心趋势",
+              className: "lvl3",
+              children: [
+                { name: "中旅酒店核心竞争力梳理：\n聚焦品牌、提质增效", className: "lvl4" },
+                { name: ""3+1"战略背景下的"聚焦"：\n引入核心品牌", className: "lvl4" },
+                { name: "发展模式转变：从重资产运营\n转向"轻资产运营"", className: "lvl4" }
+              ]
+            }
+          ]
+        },
+        {
+          name: "2. 品牌矩阵及核心问题",
+          className: "lvl2",
+          children: [
+            { name: "品牌现状研判：\n现状、痛点、机遇", className: "lvl3", children: [] },
+            { name: "核心品牌定义及价值梳理：\n明确内部品牌价值，形成合力规模", className: "lvl3", children: [] },
+            { name: "核心品牌核心问题诊断：\n品牌定义不清、资产化运营低效", className: "lvl3", children: [] },
+            { name: "产品力与服务力诊断：\n住宿产品、服务体验、技术支撑、\n精细化管理", className: "lvl3", children: [] },
+            { name: "品牌工程对业绩的支撑：\n赋能产品、渠道、提升溢价", className: "lvl3", children: [] }
+          ]
+        }
+      ]
+    },
+    {
+      name: "二、总体思路目标",
+      className: "lvl1",
+      children: [
+        {
+          name: "1. 总体定位",
+          className: "lvl2",
+          children: [
+            { name: "打造具有中旅特色的酒店集团品牌矩阵\n——具有国际视野、民族特色的\n高品质酒店品牌集群", className: "lvl3", children: [] }
+          ]
+        },
+        {
+          name: "2. 总体核心纲领方向",
+          className: "lvl2",
+          children: [
+            { name: "通过品牌重塑提升品牌价值：\n聚焦、体系化、提质", className: "lvl3", children: [] },
+            { name: "通过资源整合优化发展效率：\n增量、规模、品牌化", className: "lvl3", children: [] }
+          ]
+        },
+        {
+          name: "3. "3+1"战略核心思路",
+          className: "lvl2",
+          children: [
+            { name: "3：存量\n存量酒店品牌提质升级及梳理", className: "lvl3", children: [] },
+            { name: "1：增量\n聚焦优质资源打造新酒店", className: "lvl3", children: [] },
+            { name: "链：构建差异化、互补化品牌阵列", className: "lvl3", children: [] },
+            { name: "系统：强化平台赋能，统筹全局", className: "lvl3", children: [] }
+          ]
+        }
+      ]
+    },
+    {
+      name: "三、品牌矩阵构架总体思路",
+      className: "lvl1",
+      children: [
+        {
+          name: "1. 从品牌阵列向品牌梯队转变",
+          className: "lvl2",
+          children: [
+            { name: "做强子品牌并形成品牌链条", className: "lvl3", children: [] }
+          ]
+        },
+        {
+          name: "2. "三大核心品牌+三类核心客群"",
+          className: "lvl2",
+          children: [
+            { name: "品牌梯队：高端 - 中高端 - 中端", className: "lvl3", children: [] },
+            { name: "核心品牌：维景国际 - 维景 - 睿景", className: "lvl3", children: [] }
+          ]
+        }
+      ]
+    },
+    {
+      name: "四、品牌发展子战略规划\n（核心板块）",
+      className: "lvl1",
+      children: [
+        {
+          name: "1. 维景国际 - 旗舰品牌\n(Metropark International)",
+          className: "lvl2",
+          children: [
+            { name: "战略定位：中旅酒店最具特色的\n高端旗舰品牌", className: "lvl3", children: [] },
+            { name: "战略任务：精炼核心价值、\n建立旗舰级品牌标准、打造标杆旗舰店", className: "lvl3", children: [] },
+            { name: "战略方向：打造"中式美学"新标杆；\n构建轻资产管理运营模式；\n强化数字化引领；品牌推广与联动", className: "lvl3", children: [] }
+          ]
+        },
+        {
+          name: "2. 维景 - 核心主力品牌\n(Metropark)",
+          className: "lvl2",
+          children: [
+            { name: "战略定位：中国式高端商务\n精致酒店品牌", className: "lvl3", children: [] },
+            { name: "战略任务：规模扩张、建立标准化模型、\n承接核心资源整合", className: "lvl3", children: [] },
+            { name: "战略方向：差异化竞争、产品创新与迭代、\n提升用户忠诚度", className: "lvl3", children: [] }
+          ]
+        },
+        {
+          name: "3. 睿景 - 年轻化生活方式品牌\n(Kei)",
+          className: "lvl2",
+          children: [
+            { name: "战略定位：东方美学精选\n生活方式品牌", className: "lvl3", children: [] },
+            { name: "战略任务：品牌年轻化焕新、\n提升产品溢价力、拓展品牌多元盈利点", className: "lvl3", children: [] },
+            { name: "战略方向：构建睿景生活方式闭环、\n强化品牌社交属性、打造跨界合作新标杆", className: "lvl3", children: [] }
+          ]
+        },
+        {
+          name: "4. 旅居家 - 旅居生活品牌\n(Luju)",
+          className: "lvl2",
+          children: [
+            { name: "战略定位：依托优质景区资源的\n旅居品牌", className: "lvl3", children: [] },
+            { name: "战略任务：丰富品牌内涵、\n提升品牌独特性、布局关键旅游节点", className: "lvl3", children: [] },
+            { name: "战略方向：构建全场景旅居体验、\n强化品牌度假属性", className: "lvl3", children: [] }
+          ]
+        },
+        {
+          name: "5. 其他公寓、康养等补充品牌",
+          className: "lvl2",
+          children: [
+            { name: "战略定位：补充现有酒店业态，\n满足多元化需求", className: "lvl3", children: [] },
+            { name: "战略方向：发展高端公寓项目、\n康养主题产品", className: "lvl3", children: [] }
+          ]
+        },
+        {
+          name: "6. 海外与收并购品牌\n——第二增长曲线",
+          className: "lvl2",
+          children: [
+            { name: "战略任务：布局海外重点区域、\n寻找优质收并购标的", className: "lvl3", children: [] },
+            { name: "战略方向：构建全球化服务网络", className: "lvl3", children: [] }
+          ]
+        }
+      ]
+    },
+    {
+      name: "五、核心能力建设",
+      className: "lvl1",
+      children: [
+        {
+          name: "1. 建立"中旅标准"体系",
+          className: "lvl2",
+          children: [
+            { name: "提炼核心竞争力：\n产品、运营、工程、服务、数字化", className: "lvl3", children: [] }
+          ]
+        },
+        {
+          name: "2. 建立品牌运营管控力",
+          className: "lvl2",
+          children: [
+            { name: "提升标准、效率", className: "lvl3", children: [] }
+          ]
+        },
+        {
+          name: "3. 建立全链条会员系统",
+          className: "lvl2",
+          children: [
+            { name: "构建高效获客、转化、\n留存的会员体系", className: "lvl3", children: [] }
+          ]
+        }
+      ]
+    },
+    {
+      name: "六、实施路径建议",
+      className: "lvl1",
+      children: [
+        {
+          name: "第一阶段",
+          className: "lvl2",
+          children: [
+            { name: "品牌梳理与内部整合\n明确各品牌定位、重塑品牌标准", className: "lvl3", children: [] }
+          ]
+        },
+        {
+          name: "第二阶段",
+          className: "lvl2",
+          children: [
+            { name: "核心品牌重塑与市场扩张\n重点布局、示范店建设、外部加盟启动", className: "lvl3", children: [] }
+          ]
+        },
+        {
+          name: "第三阶段",
+          className: "lvl2",
+          children: [
+            { name: "品牌全球化布局与生态圈建设\n跨国运营、多业态联动、构建品牌生态", className: "lvl3", children: [] }
+          ]
+        }
+      ]
+    }
+  ]
+};
+
+const width = window.innerWidth;
+const height = window.innerHeight;
+
+const svg = d3.select("#mindmap")
+  .attr("width", width)
+  .attr("height", height);
+
+const g = svg.append("g");
+
+const zoom = d3.zoom()
+  .scaleExtent([0.2, 2])
+  .on("zoom", (event) => g.attr("transform", event.transform));
+svg.call(zoom);
+
+const root = d3.hierarchy(data);
+
+// Calculate tree layout
+const dx = 24;
+const dy = width / 7;
+
+function wrapText(text, maxChars) {
+  if (!text) return [""];
+  const lines = text.split('\n');
+  return lines;
+}
+
+// Assign sizes based on text content
+root.descendants().forEach(d => {
+  const lines = d.data.name.split('\n');
+  const maxLineLen = Math.max(...lines.map(l => l.length));
+  const w = Math.max(maxLineLen * 13 + 32, 100);
+  const h = Math.max(lines.length * 16 + 24, 36);
+  d._w = w;
+  d._h = h;
+});
+
+// Manually compute positions for a compact left-to-right layout
+// Use a custom layout algorithm
+
+function computeLayout(node, level, yOffset) {
+  const nodeHeight = node._h;
+  const nodeWidth = node._w;
+  const x = level * (dy * 0.9) + 40;
+
+  if (!node.children || node.children.length === 0) {
+    node.x = x;
+    node.y = yOffset + nodeHeight / 2;
+    return nodeHeight + 16; // return total height consumed
+  }
+
+  // Compute children layouts first
+  let totalChildrenHeight = 0;
+  const childOffsets = [];
+  for (const child of node.children) {
+    const childH = computeLayout(child, level + 1, yOffset + totalChildrenHeight);
+    childOffsets.push(totalChildrenHeight);
+    totalChildrenHeight += childH;
+  }
+
+  // Center this node vertically relative to its children
+  const childrenMid = totalChildrenHeight / 2;
+  node.x = x;
+  node.y = yOffset + childrenMid;
+
+  return Math.max(totalChildrenHeight, nodeHeight + 16);
+}
+
+computeLayout(root, 0, 0);
+
+// Compute SVG dimensions needed
+let maxX = 0, maxY = 0;
+root.descendants().forEach(d => {
+  maxX = Math.max(maxX, d.x + d._w + 40);
+  maxY = Math.max(maxY, d.y + d._h + 20);
+});
+
+svg.attr("width", Math.max(width, maxX))
+   .attr("height", Math.max(height, maxY));
+
+// Draw links
+const link = g.append("g")
+  .selectAll("path")
+  .data(root.links())
+  .join("path")
+  .attr("class", "link")
+  .attr("d", d => {
+    const sx = d.source.x + d.source._w;
+    const sy = d.source.y;
+    const tx = d.target.x;
+    const ty = d.target.y;
+    const mx = (sx + tx) / 2;
+    return `M${sx},${sy} C${mx},${sy} ${mx},${ty} ${tx},${ty}`;
+  });
+
+// Draw nodes
+const node = g.append("g")
+  .selectAll("g")
+  .data(root.descendants())
+  .join("g")
+  .attr("class", d => `node ${d.data.className}`)
+  .attr("transform", d => `translate(${d.x},${d.y - d._h / 2})`);
+
+node.append("rect")
+  .attr("width", d => d._w)
+  .attr("height", d => d._h);
+
+node.append("text")
+  .attr("x", 10)
+  .attr("y", d => d._h / 2)
+  .each(function(d) {
+    const lines = d.data.name.split('\n');
+    const textEl = d3.select(this);
+    lines.forEach((line, i) => {
+      if (i === 0) {
+        textEl.text(line);
+      }
+      textEl.append("tspan")
+        .attr("x", 10)
+        .attr("dy", i === 0 ? 0 : 15)
+        .text(line);
+    });
+  });
+
+// Fix text: only show first line, then tspans
+node.selectAll("text").remove();
+node.append("text")
+  .each(function(d) {
+    const lines = d.data.name.split('\n');
+    const el = d3.select(this);
+    el.attr("x", 10)
+      .attr("y", d._h / 2 - (lines.length - 1) * 7.5)
+      .style("font-size", d.data.className === "root" ? "14px" :
+              d.data.className === "lvl1" ? "13px" :
+              d.data.className === "lvl2" ? "12px" :
+              d.data.className === "lvl3" ? "11px" : "10px")
+      .style("font-weight", (d.data.className === "root" || d.data.className === "lvl1") ? "bold" : "normal")
+      .style("fill", (d.data.className === "root" || d.data.className === "lvl1" || d.data.className === "lvl2") ? "#fff" : "#333");
+    
+    el.append("tspan").attr("x", 10).attr("dy", 0).text(lines[0]);
+    for (let i = 1; i < lines.length; i++) {
+      el.append("tspan")
+        .attr("x", 10)
+        .attr("dy", 15)
+        .text(lines[i]);
+    }
+  });
+
+// Fit to view
+const bbox = g.node().getBBox();
+const padding = 60;
+const fullW = bbox.width + padding * 2;
+const fullH = bbox.height + padding * 2;
+const scale = Math.min(1, width / fullW, height / fullH);
+const tx = (width - bbox.width * scale) / 2 - bbox.x * scale;
+const ty = (height - bbox.height * scale) / 2 - bbox.y * scale;
+svg.call(zoom.transform, d3.zoomIdentity.translate(tx, ty).scale(scale * 0.9));
+</script>
+</body>
+</html>
