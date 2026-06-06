@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-06-04T01:13:33.506Z",
+  "updatedAt": "2026-06-05T05:37:06.014Z",
   "entries": {
     "memory:memory/2026-04-12.md:6:8": {
       "key": "memory:memory/2026-04-12.md:6:8",
@@ -81168,6 +81168,671 @@
         "推送",
         "darknessdogeric",
         "openclaw"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-04.txt:1:1": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-04.txt:1:1",
+      "path": "memory/.dreams/session-corpus/2026-06-04.txt",
+      "startLine": 1,
+      "endLine": 1,
+      "source": "memory",
+      "snippet": "User: 这个图片看得清么？",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-05T05:37:06.014Z",
+      "lastRecalledAt": "2026-06-05T05:37:06.014Z",
+      "queryHashes": [
+        "ecfa2a7911d5"
+      ],
+      "recallDays": [
+        "2026-06-05"
+      ],
+      "conceptTags": [
+        "这个",
+        "图片",
+        "看得"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-04.txt:2:2": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-04.txt:2:2",
+      "path": "memory/.dreams/session-corpus/2026-06-04.txt",
+      "startLine": 2,
+      "endLine": 2,
+      "source": "memory",
+      "snippet": "Assistant: 看得非常清楚。这是一份**「中旅酒店 3+1 战略下品牌矩阵发展规划提纲」**的思维导图，整体结构很完整，六大部分层层递进： --- **📋 整体框架：** | 部分 | 核心内容 | |------|----------| | **一、现状背景与行业研判** | 宏观政策大势、行业趋势（轻资产转型）、品牌现状诊断、产品力/服务力诊断 | | **二、总体思路目标** | 定位：国际视野+民族特色的高品质品牌集群；\"3存量+1增量\"战略核心 | | **三、品牌矩阵架构** | 三大核心品牌 → 三大核心客群：维景国际（高端）→",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-05T05:37:06.014Z",
+      "lastRecalledAt": "2026-06-05T05:37:06.014Z",
+      "queryHashes": [
+        "ecfa2a7911d5"
+      ],
+      "recallDays": [
+        "2026-06-05"
+      ],
+      "conceptTags": [
+        "产品力/服务力诊断",
+        "看得",
+        "非常",
+        "清楚",
+        "一份",
+        "酒店",
+        "战略",
+        "品牌"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-04.txt:3:3": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-04.txt:3:3",
+      "path": "memory/.dreams/session-corpus/2026-06-04.txt",
+      "startLine": 3,
+      "endLine": 3,
+      "source": "memory",
+      "snippet": "User: 按照图片里的这种图示架构给我做一个一模一样的思维导图出来。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-05T05:37:06.014Z",
+      "lastRecalledAt": "2026-06-05T05:37:06.014Z",
+      "queryHashes": [
+        "ecfa2a7911d5"
+      ],
+      "recallDays": [
+        "2026-06-05"
+      ],
+      "conceptTags": [
+        "按照",
+        "图片",
+        "这种",
+        "架构",
+        "一个",
+        "一样",
+        "思维",
+        "出来"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-04.txt:4:4": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-04.txt:4:4",
+      "path": "memory/.dreams/session-corpus/2026-06-04.txt",
+      "startLine": 4,
+      "endLine": 4,
+      "source": "memory",
+      "snippet": "Assistant: 可以。图片中的是横向层级树形思维导图，灰白配色、矩形节点、左→右分支结构。我用 D3.js 搭一个一模一样的出来。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-05T05:37:06.014Z",
+      "lastRecalledAt": "2026-06-05T05:37:06.014Z",
+      "queryHashes": [
+        "ecfa2a7911d5"
+      ],
+      "recallDays": [
+        "2026-06-05"
+      ],
+      "conceptTags": [
+        "d3.js",
+        "可以",
+        "图片",
+        "中的",
+        "思维",
+        "灰白",
+        "配色",
+        "矩形"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-04.txt:5:5": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-04.txt:5:5",
+      "path": "memory/.dreams/session-corpus/2026-06-04.txt",
+      "startLine": 5,
+      "endLine": 5,
+      "source": "memory",
+      "snippet": "Assistant: 文件已生成，让我验证效果并嵌入展示。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-05T05:37:06.014Z",
+      "lastRecalledAt": "2026-06-05T05:37:06.014Z",
+      "queryHashes": [
+        "ecfa2a7911d5"
+      ],
+      "recallDays": [
+        "2026-06-05"
+      ],
+      "conceptTags": [
+        "文件",
+        "生成",
+        "验证",
+        "效果",
+        "嵌入",
+        "展示"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-04.txt:6:6": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-04.txt:6:6",
+      "path": "memory/.dreams/session-corpus/2026-06-04.txt",
+      "startLine": 6,
+      "endLine": 6,
+      "source": "memory",
+      "snippet": "Assistant: 文件已就位。先在聊天框里嵌入展示： [embed url=\"/__openclaw__/canvas/cts_brand_matrix.html\" title=\"中旅酒店 3+1 品牌矩阵\" height=\"640\" /] --- **同时也保存在了工作区：** `中旅酒店品牌矩阵规划.html` 功能特性： - 🖱️ **滚轮缩放** + **拖拽平移** - 横向树形布局，左→右层级展开 - 灰白渐进式配色（根节点深灰 → 一级深灰 → 二级中灰 → 三四级浅灰） - 贝塞尔曲线连接线 - 完整6大板块 + 所有子节点 + 三",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-05T05:37:06.014Z",
+      "lastRecalledAt": "2026-06-05T05:37:06.014Z",
+      "queryHashes": [
+        "ecfa2a7911d5"
+      ],
+      "recallDays": [
+        "2026-06-05"
+      ],
+      "conceptTags": [
+        "canvas/cts-brand-matrix.html",
+        "中旅酒店品牌矩阵规划.html",
+        "文件",
+        "聊天",
+        "嵌入",
+        "展示",
+        "embed",
+        "url"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-04.txt:7:7": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-04.txt:7:7",
+      "path": "memory/.dreams/session-corpus/2026-06-04.txt",
+      "startLine": 7,
+      "endLine": 7,
+      "source": "memory",
+      "snippet": "Assistant: 已放到桌面：`中旅酒店品牌矩阵规划.html`，双击浏览器打开即可。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-05T05:37:06.014Z",
+      "lastRecalledAt": "2026-06-05T05:37:06.014Z",
+      "queryHashes": [
+        "ecfa2a7911d5"
+      ],
+      "recallDays": [
+        "2026-06-05"
+      ],
+      "conceptTags": [
+        "中旅酒店品牌矩阵规划.html",
+        "放到",
+        "桌面",
+        "酒店",
+        "品牌",
+        "矩阵",
+        "规划",
+        "html"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-04.txt:8:8": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-04.txt:8:8",
+      "path": "memory/.dreams/session-corpus/2026-06-04.txt",
+      "startLine": 8,
+      "endLine": 8,
+      "source": "memory",
+      "snippet": "User: 生成图片。。。现在看是空白的。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-05T05:37:06.014Z",
+      "lastRecalledAt": "2026-06-05T05:37:06.014Z",
+      "queryHashes": [
+        "ecfa2a7911d5"
+      ],
+      "recallDays": [
+        "2026-06-05"
+      ],
+      "conceptTags": [
+        "生成",
+        "图片",
+        "现在",
+        "空白"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-04.txt:9:9": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-04.txt:9:9",
+      "path": "memory/.dreams/session-corpus/2026-06-04.txt",
+      "startLine": 9,
+      "endLine": 9,
+      "source": "memory",
+      "snippet": "Assistant: CDN 被墙了，D3.js 加载失败导致空白。我换成纯手写布局，不依赖任何外部库。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-05T05:37:06.014Z",
+      "lastRecalledAt": "2026-06-05T05:37:06.014Z",
+      "queryHashes": [
+        "ecfa2a7911d5"
+      ],
+      "recallDays": [
+        "2026-06-05"
+      ],
+      "conceptTags": [
+        "d3.js",
+        "cdn",
+        "失败",
+        "导致",
+        "空白",
+        "手写",
+        "布局",
+        "依赖"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-04.txt:10:10": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-04.txt:10:10",
+      "path": "memory/.dreams/session-corpus/2026-06-04.txt",
+      "startLine": 10,
+      "endLine": 10,
+      "source": "memory",
+      "snippet": "Assistant: 这次纯手写，零外部依赖，国内直接打开。同时帮你生成一张图片。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-05T05:37:06.014Z",
+      "lastRecalledAt": "2026-06-05T05:37:06.014Z",
+      "queryHashes": [
+        "ecfa2a7911d5"
+      ],
+      "recallDays": [
+        "2026-06-05"
+      ],
+      "conceptTags": [
+        "这次",
+        "手写",
+        "外部",
+        "依赖",
+        "国内",
+        "直接",
+        "打开",
+        "同时"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-04.txt:11:11": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-04.txt:11:11",
+      "path": "memory/.dreams/session-corpus/2026-06-04.txt",
+      "startLine": 11,
+      "endLine": 11,
+      "source": "memory",
+      "snippet": "Assistant: 搞定了。截图验证——**不是空白的**，完整渲染出来了。 --- **两个文件都在桌面：** | 文件 | 说明 | |------|------| | `中旅酒店品牌矩阵规划.html` | 交互版，双击打开可缩放/拖拽 | | `中旅酒店品牌矩阵规划.png` | 静态截图 2800×1800 | MEDIA:C:\\Users\\Administrator\\Desktop\\中旅酒店品牌矩阵规划.png HTML 版这次**纯手写，零 CDN 依赖**——树形布局算法、SVG 渲染、贝塞尔连线、缩放平移全部内置，国内网络直接开。右下",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-05T05:37:06.014Z",
+      "lastRecalledAt": "2026-06-05T05:37:06.014Z",
+      "queryHashes": [
+        "ecfa2a7911d5"
+      ],
+      "recallDays": [
+        "2026-06-05"
+      ],
+      "conceptTags": [
+        "网络",
+        "中旅酒店品牌矩阵规划.html",
+        "双击打开可缩放/拖拽",
+        "中旅酒店品牌矩阵规划.png",
+        "搞定",
+        "验证",
+        "不是",
+        "空白"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-04.txt:12:12": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-04.txt:12:12",
+      "path": "memory/.dreams/session-corpus/2026-06-04.txt",
+      "startLine": 12,
+      "endLine": 12,
+      "source": "memory",
+      "snippet": "Assistant: 搞定了。截图验证——**不是空白的**，完整渲染出来了。 --- **两个文件都在桌面：** | 文件 | 说明 | |------|------| | `中旅酒店品牌矩阵规划.html` | 交互版，双击打开可缩放/拖拽 | | `中旅酒店品牌矩阵规划.png` | 静态截图 2800×1800 | HTML 版这次**纯手写，零 CDN 依赖**——树形布局算法、SVG 渲染、贝塞尔连线、缩放平移全部内置，国内网络直接开。右下角有 ＋/－/⊡/1:1 四个按钮控制视图。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-05T05:37:06.014Z",
+      "lastRecalledAt": "2026-06-05T05:37:06.014Z",
+      "queryHashes": [
+        "ecfa2a7911d5"
+      ],
+      "recallDays": [
+        "2026-06-05"
+      ],
+      "conceptTags": [
+        "网络",
+        "中旅酒店品牌矩阵规划.html",
+        "双击打开可缩放/拖拽",
+        "中旅酒店品牌矩阵规划.png",
+        "搞定",
+        "验证",
+        "不是",
+        "空白"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-04.txt:13:13": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-04.txt:13:13",
+      "path": "memory/.dreams/session-corpus/2026-06-04.txt",
+      "startLine": 13,
+      "endLine": 13,
+      "source": "memory",
+      "snippet": "Assistant: 工作区干净，无变更需要提交。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-05T05:37:06.014Z",
+      "lastRecalledAt": "2026-06-05T05:37:06.014Z",
+      "queryHashes": [
+        "ecfa2a7911d5"
+      ],
+      "recallDays": [
+        "2026-06-05"
+      ],
+      "conceptTags": [
+        "工作",
+        "干净",
+        "变更",
+        "需要",
+        "提交"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-04.txt:14:14": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-04.txt:14:14",
+      "path": "memory/.dreams/session-corpus/2026-06-04.txt",
+      "startLine": 14,
+      "endLine": 14,
+      "source": "memory",
+      "snippet": "Assistant: 已确认：工作区自昨日备份 (`ddfef71`) 后无新变更，本次跳过提交。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-05T05:37:06.014Z",
+      "lastRecalledAt": "2026-06-05T05:37:06.014Z",
+      "queryHashes": [
+        "ecfa2a7911d5"
+      ],
+      "recallDays": [
+        "2026-06-05"
+      ],
+      "conceptTags": [
+        "备份",
+        "确认",
+        "工作",
+        "昨日",
+        "ddfef71",
+        "变更",
+        "本次",
+        "提交"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-04.txt:15:15": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-04.txt:15:15",
+      "path": "memory/.dreams/session-corpus/2026-06-04.txt",
+      "startLine": 15,
+      "endLine": 15,
+      "source": "memory",
+      "snippet": "User: 我把网络整通了。你虽然渲染出来了，，，但是全模糊。。。我作为人类啥也看不清楚。。。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-05T05:37:06.014Z",
+      "lastRecalledAt": "2026-06-05T05:37:06.014Z",
+      "queryHashes": [
+        "ecfa2a7911d5"
+      ],
+      "recallDays": [
+        "2026-06-05"
+      ],
+      "conceptTags": [
+        "网络",
+        "我把",
+        "虽然",
+        "渲染",
+        "出来",
+        "但是",
+        "模糊",
+        "作为"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-04.txt:16:16": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-04.txt:16:16",
+      "path": "memory/.dreams/session-corpus/2026-06-04.txt",
+      "startLine": 16,
+      "endLine": 16,
+      "source": "memory",
+      "snippet": "Assistant: 明白了，树太大、字号太小、缩放后全糊了。我来重新设计——**更紧凑的横向间距 + 大字号 + 高密度布局**，保证肉眼能看清。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-05T05:37:06.014Z",
+      "lastRecalledAt": "2026-06-05T05:37:06.014Z",
+      "queryHashes": [
+        "ecfa2a7911d5"
+      ],
+      "recallDays": [
+        "2026-06-05"
+      ],
+      "conceptTags": [
+        "明白",
+        "太大",
+        "字号",
+        "我来",
+        "重新",
+        "设计",
+        "紧凑",
+        "高密度"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-04.txt:17:17": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-04.txt:17:17",
+      "path": "memory/.dreams/session-corpus/2026-06-04.txt",
+      "startLine": 17,
+      "endLine": 17,
+      "source": "memory",
+      "snippet": "Assistant: 这次完全可读了。确认结果： - **PNG**: 330KB（上版才79KB），4000×3200 高分辨率，文字清晰 - **HTML**: 字号提升到12-16px，横向间距压缩到230px，节点更紧凑 桌面两个文件都更新了： - `中旅酒店品牌矩阵规划.html` → 双击浏览器看交互版 - `中旅酒店品牌矩阵规划.png` → 直接看图 MEDIA:C:\\Users\\Administrator\\Desktop\\中旅酒店品牌矩阵规划.png 你现在打开看看，应该不会再糊了。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-05T05:37:06.014Z",
+      "lastRecalledAt": "2026-06-05T05:37:06.014Z",
+      "queryHashes": [
+        "ecfa2a7911d5"
+      ],
+      "recallDays": [
+        "2026-06-05"
+      ],
+      "conceptTags": [
+        "字号提升到12-16px",
+        "中旅酒店品牌矩阵规划.html",
+        "中旅酒店品牌矩阵规划.png",
+        "这次",
+        "完全",
+        "读了",
+        "确认",
+        "结果"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-04.txt:18:18": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-04.txt:18:18",
+      "path": "memory/.dreams/session-corpus/2026-06-04.txt",
+      "startLine": 18,
+      "endLine": 18,
+      "source": "memory",
+      "snippet": "Assistant: 这次完全可读了。确认结果： - **PNG**: 330KB（上版才79KB），4000×3200 高分辨率，文字清晰 - **HTML**: 字号提升到12-16px，横向间距压缩到230px，节点更紧凑 桌面两个文件都更新了： - `中旅酒店品牌矩阵规划.html` → 双击浏览器看交互版 - `中旅酒店品牌矩阵规划.png` → 直接看图 你现在打开看看，应该不会再糊了。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-05T05:37:06.014Z",
+      "lastRecalledAt": "2026-06-05T05:37:06.014Z",
+      "queryHashes": [
+        "ecfa2a7911d5"
+      ],
+      "recallDays": [
+        "2026-06-05"
+      ],
+      "conceptTags": [
+        "字号提升到12-16px",
+        "中旅酒店品牌矩阵规划.html",
+        "中旅酒店品牌矩阵规划.png",
+        "这次",
+        "完全",
+        "读了",
+        "确认",
+        "结果"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-04.txt:19:19": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-04.txt:19:19",
+      "path": "memory/.dreams/session-corpus/2026-06-04.txt",
+      "startLine": 19,
+      "endLine": 19,
+      "source": "memory",
+      "snippet": "User: 分层似乎不够，原图是分了六层的。你这个只分到第5层啊。我要求是和原图一样。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-05T05:37:06.014Z",
+      "lastRecalledAt": "2026-06-05T05:37:06.014Z",
+      "queryHashes": [
+        "ecfa2a7911d5"
+      ],
+      "recallDays": [
+        "2026-06-05"
+      ],
+      "conceptTags": [
+        "似乎",
+        "不够",
+        "这个",
+        "要求",
+        "一样"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-04.txt:20:20": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-04.txt:20:20",
+      "path": "memory/.dreams/session-corpus/2026-06-04.txt",
+      "startLine": 20,
+      "endLine": 20,
+      "source": "memory",
+      "snippet": "Assistant: 你说得对，最深层级节点内容被我压扁了。原图确实有6层视觉（根节点 + 5级子节点）。我把叶子节点拆开，补齐第六层。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-05T05:37:06.014Z",
+      "lastRecalledAt": "2026-06-05T05:37:06.014Z",
+      "queryHashes": [
+        "ecfa2a7911d5"
+      ],
+      "recallDays": [
+        "2026-06-05"
+      ],
+      "conceptTags": [
+        "说得",
+        "最深",
+        "节点",
+        "内容",
+        "压扁",
+        "确实",
+        "视觉",
+        "我把"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-04.txt:21:21": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-04.txt:21:21",
+      "path": "memory/.dreams/session-corpus/2026-06-04.txt",
+      "startLine": 21,
+      "endLine": 21,
+      "source": "memory",
+      "snippet": "Assistant: 6层视觉确认无误。但最深层文字还是偏小——树太宽太高导致。我加大渲染分辨率再截一版。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-05T05:37:06.014Z",
+      "lastRecalledAt": "2026-06-05T05:37:06.014Z",
+      "queryHashes": [
+        "ecfa2a7911d5"
+      ],
+      "recallDays": [
+        "2026-06-05"
+      ],
+      "conceptTags": [
+        "视觉",
+        "确认",
+        "无误",
+        "最深",
+        "文字",
+        "还是",
+        "太高",
+        "导致"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-04.txt:22:22": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-04.txt:22:22",
+      "path": "memory/.dreams/session-corpus/2026-06-04.txt",
+      "startLine": 22,
+      "endLine": 22,
+      "source": "memory",
+      "snippet": "Assistant: 660KB，比上版又大了30%。来看最终效果： MEDIA:C:\\Users\\Administrator\\Desktop\\中旅酒店品牌矩阵规划.png --- **这次改动：** - ✅ **6层视觉**：root（深黑）→ lvl1（深灰）→ lvl2（中灰）→ lvl3（浅灰）→ lvl4（更浅）→ lvl5（白底灰字） - ✅ **第四板块最深**：每个品牌下拆出战略定位/战略任务/战略方向 → 再拆具体条目 → 再拆执行细节，完整6层 - ✅ **第五板块拓展**：中旅标准体系拆出产品/运营/工程/服务/数字化5个标准子节点",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-05T05:37:06.014Z",
+      "lastRecalledAt": "2026-06-05T05:37:06.014Z",
+      "queryHashes": [
+        "ecfa2a7911d5"
+      ],
+      "recallDays": [
+        "2026-06-05"
+      ],
+      "conceptTags": [
+        "中旅酒店品牌矩阵规划.png",
+        "每个品牌下拆出战略定位/战略任务/战略方向",
+        "中旅标准体系拆出产品/运营/工程/服务/数字化5个标准子节点",
+        "660kb",
+        "比上",
+        "来看",
+        "最终",
+        "效果"
       ]
     }
   }
