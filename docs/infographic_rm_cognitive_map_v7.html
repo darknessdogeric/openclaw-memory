@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>酒店收益管理认知海报</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap');
+*{margin:0;padding:0;box-sizing:border-box;}
+body{
+  font-family:'Noto Sans SC',sans-serif;background:#0f172a;color:#e2e8f0;
+  width:2160px;height:3840px;overflow:hidden;
+}
+.wrapper{padding:18px 18px 8px;height:100%;display:flex;flex-direction:column;}
+
+.tbox{text-align:center;margin-bottom:4px;}
+.tbox h1{font-size:72px;font-weight:900;line-height:1.05;
+  background:linear-gradient(135deg,#22d3ee,#6366f1,#8b5cf6);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+.tbox .sub{font-size:22px;color:#64748b;margin-top:1px;}
+.ebar{margin-top:2px;display:flex;gap:6px;justify-content:center;flex-wrap:wrap;}
+.ebar span{background:rgba(34,211,238,0.06);border:1px solid rgba(34,211,238,0.1);border-radius:20px;padding:3px 16px;font-size:16px;color:#94a3b8;}
+
+.cnt{flex:1;display:flex;flex-direction:column;gap:4px;}
+
+/* R1: Model Spectrum */
+.r1{display:flex;gap:4px;flex:1.2;}
+.r1l{flex:2.4;background:rgba(30,41,59,0.5);border-radius:8px;border:1px solid rgba(30,41,59,0.6);padding:6px 10px;display:flex;flex-direction:column;}
+.r1l h2{font-size:26px;font-weight:700;margin-bottom:3px;color:#22d3ee;}
+.r1r{flex:1.6;background:rgba(30,41,59,0.5);border-radius:8px;border:1px solid rgba(30,41,59,0.6);padding:6px 10px;display:flex;flex-direction:column;}
+.r1r h2{font-size:26px;font-weight:700;margin-bottom:3px;color:#a78bfa;}
+
+.lbar{display:flex;gap:2px;height:68px;margin-bottom:2px;}
+.lseg{flex:1;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:700;color:#0f172a;}
+.l1{background:linear-gradient(180deg,#06b6d4,#22d3ee);}
+.l2{background:linear-gradient(180deg,#6366f1,#8b5cf6);}
+.l3{background:linear-gradient(180deg,#f59e0b,#fbbf24);}
+.l4{background:linear-gradient(180deg,#ef4444,#f87171);}
+.l5{background:linear-gradient(180deg,#10b981,#34d399);}
+
+.lgrid{display:grid;grid-template-columns:1fr 1fr 1fr 1fr 1fr;gap:2px;flex:1;}
+.lc{background:rgba(15,23,42,0.7);border-radius:4px;padding:3px 5px;border:1px solid rgba(30,41,59,0.3);display:flex;flex-direction:column;}
+.lc .lh{font-size:18px;font-weight:700;margin-bottom:1px;line-height:1.1;}
+.lc .ld{font-size:15px;color:#94a3b8;line-height:1.1;flex:1;}
+.lc .lf{font-size:12px;color:#64748b;margin-top:auto;}
+
+.evo{display:flex;flex-direction:column;gap:2px;flex:1;}
+.ei{flex:1;display:flex;align-items:center;background:rgba(15,23,42,0.5);border-radius:3px;padding:2px 5px;border-left:5px solid;gap:5px;}
+.ei .eg{font-size:18px;font-weight:700;min-width:130px;line-height:1.05;}
+.ei .ed{font-size:15px;color:#94a3b8;flex:1;line-height:1.1;}
+.ei .ep{font-size:12px;color:#64748b;min-width:90px;text-align:right;}
+.eg1{border-color:#6366f1;}.eg1 .eg{color:#a78bfa;}
+.eg2{border-color:#22d3ee;}.eg2 .eg{color:#22d3ee;}
+.eg3{border-color:#fbbf24;}.eg3 .eg{color:#fbbf24;}
+.eg4{border-color:#f87171;}.eg4 .eg{color:#f87171;}
+.eg5{border-color:#34d399;}.eg5 .eg{color:#34d399;}
+.egen{margin-top:1px;background:rgba(99,102,241,0.06);border-radius:3px;padding:1px 6px;display:flex;flex-wrap:wrap;gap:2px;justify-content:center;font-size:13px;color:#818cf8;line-height:1.15;}
+
+/* R2 */
+.r2{flex:0.9;background:rgba(30,41,59,0.5);border-radius:8px;border:1px solid rgba(30,41,59,0.6);padding:5px 8px;display:flex;flex-direction:column;}
+.r2 h2{font-size:26px;font-weight:700;margin-bottom:1px;color:#34d399;}
+.r2g{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:2px;flex:1;}
+.r2c{background:rgba(15,23,42,0.7);border:1px solid rgba(30,41,59,0.4);border-radius:4px;padding:2px 4px;}
+.r2c .rh{display:flex;justify-content:space-between;align-items:center;}
+.r2c .rg{font-size:16px;font-weight:700;line-height:1.1;}
+.r2c .rr{font-size:13px;color:#94a3b8;line-height:1.1;}
+.r2c .rm{font-size:12px;color:#64748b;line-height:1.1;}
+.gt{font-size:10px;padding:0 5px;border-radius:3px;font-weight:700;}
+.g5{background:rgba(52,211,153,0.25);color:#34d399;}
+.g4{background:rgba(248,113,113,0.25);color:#f87171;}
+.g34{background:rgba(251,146,60,0.25);color:#fb923c;}
+
+/* R3 */
+.r3{display:flex;gap:4px;flex:0.9;}
+.r3l{flex:1;background:rgba(30,41,59,0.5);border-radius:8px;border:1px solid rgba(30,41,59,0.6);padding:5px 8px;display:flex;flex-direction:column;}
+.r3l h2{font-size:24px;font-weight:700;margin-bottom:1px;color:#fbbf24;}
+.r3lg{display:grid;grid-template-columns:1fr 1fr;gap:2px;flex:1;}
+.r3lc{background:rgba(15,23,42,0.7);border-radius:4px;padding:2px 5px;border:1px solid rgba(251,191,36,0.08);}
+.r3lc .ct{font-size:16px;font-weight:700;color:#fbbf24;line-height:1.1;}
+.r3lc .cd{font-size:14px;color:#94a3b8;line-height:1.1;}
+
+.r3m{flex:0.7;background:rgba(30,41,59,0.5);border-radius:8px;border:1px solid rgba(30,41,59,0.6);padding:5px 8px;display:flex;flex-direction:column;}
+.r3m h2{font-size:24px;font-weight:700;margin-bottom:1px;color:#fb7185;}
+.r3ml{display:flex;flex-direction:column;gap:2px;flex:1;}
+.r3mc{background:rgba(15,23,42,0.7);border-radius:4px;padding:2px 5px;border:1px solid rgba(30,41,59,0.2);display:flex;gap:4px;align-items:flex-start;flex:1;}
+.r3mc .ci{font-size:18px;font-weight:700;min-width:60px;line-height:1.05;}
+.r3mc .cd{font-size:14px;color:#94a3b8;line-height:1.1;}
+
+.r3r{flex:1;background:rgba(30,41,59,0.5);border-radius:8px;border:1px solid rgba(30,41,59,0.6);padding:5px 8px;display:flex;flex-direction:column;}
+.r3r h2{font-size:24px;font-weight:700;margin-bottom:1px;color:#f87171;}
+.r3rg{display:grid;grid-template-columns:1fr 1fr 1fr;gap:2px;flex:1;}
+.r3rc{background:rgba(15,23,42,0.7);border-radius:4px;padding:2px 4px;border:1px solid rgba(30,41,59,0.3);}
+.r3rc .st{font-size:16px;font-weight:700;line-height:1.1;}
+.r3rc .sr{font-size:14px;color:#94a3b8;line-height:1.05;}
+.r3rc .sw{font-size:12px;color:#64748b;line-height:1.05;}
+
+/* R4 */
+.r4{display:flex;gap:4px;flex:0.8;}
+.r4l{flex:1.5;background:rgba(30,41,59,0.5);border-radius:8px;border:1px solid rgba(30,41,59,0.6);padding:5px 8px;display:flex;flex-direction:column;}
+.r4l h2{font-size:24px;font-weight:700;margin-bottom:1px;color:#818cf8;}
+.r4lg{display:grid;grid-template-columns:1fr 1fr;gap:2px;flex:1;}
+.r4lc{background:rgba(15,23,42,0.7);border-radius:4px;padding:2px 4px;border:1px solid rgba(30,41,59,0.2);}
+.r4lc .ft{font-size:14px;font-weight:700;line-height:1.05;}
+.r4lc .ff{font-family:'Courier New',monospace;font-size:14px;color:#64748b;}
+.r4lc .fd{font-size:12px;color:#475569;line-height:1.05;}
+
+.r4r{flex:1;background:rgba(30,41,59,0.5);border-radius:8px;border:1px solid rgba(30,41,59,0.6);padding:5px 8px;display:flex;flex-direction:column;}
+.r4r h2{font-size:24px;font-weight:700;margin-bottom:1px;color:#2dd4bf;}
+.r4rg{display:grid;grid-template-columns:1fr 1fr 1fr;gap:2px;flex:1;}
+.r4rc{background:rgba(15,23,42,0.7);border-radius:4px;padding:2px 4px;border:1px solid rgba(30,41,59,0.2);}
+.r4rc .kt{font-size:20px;font-weight:900;line-height:1.05;}
+.r4rc .kf{font-family:'Courier New',monospace;font-size:14px;color:#64748b;}
+.r4rc .kd{font-size:12px;color:#475569;line-height:1.05;}
+
+.footer{margin-top:2px;text-align:center;font-size:13px;color:#475569;line-height:1.1;}
+</style>
+</head>
+<body>
+<div class="wrapper">
+<div class="tbox">
+  <h1>酒店收益管理认知地图</h1>
+  <div class="sub">Revenue Management · 全景模型图谱 · 12大RMS系统 · 5代演进 · 51个核心模型</div>
+  <div class="ebar">
+    <span>✈️ 航空源自1972 · Littlewood</span>
+    <span>🏨 酒店适配1990s · IDeaS</span>
+    <span>🎯 5R定律</span>
+    <span>🧠 AI定价2025 · 美团既白</span>
+  </div>
+</div>
+
+<div class="cnt">
+
+<div class="r1">
+  <div class="r1l">
+    <h2>五层收益管理模型体系 · 51个核心模型全景</h2>
+    <div class="lbar">
+      <div class="lseg l1">🌡️ 预测层 (10模型)</div>
+      <div class="lseg l2">💰 定价层 (12)</div>
+      <div class="lseg l3">📊 库存层 (8)</div>
+      <div class="lseg l4">⚠️ 超售层 (6)</div>
+      <div class="lseg l5">📡 渠道层 (8)</div>
+    </div>
+    <div class="lgrid">
+      <div class="lc"><div class="lh" style="color:#22d3ee">时间序列</div><div class="ld">ARIMA·SARIMA·指数平滑·Holt-Winters·移动平均·朴素预测·组合集成</div><div class="lf">IDeaS: LSTM+ARIMA混合引擎</div></div>
+      <div class="lc"><div class="lh" style="color:#a78bfa">容-量-控-制</div><div class="ld">Littlewood·EMSRa·EMSRb·EMSRc·Bid Price·行业基石40年</div><div class="lf">万豪OneYield: EMSRb核心</div></div>
+      <div class="lc"><div class="lh" style="color:#fbbf24">保护水平</div><div class="ld">Nested Protection·电容控制·闸门控制·多级保护·行业通行</div><div class="lf">IHG RIRO: 网络RM最优</div></div>
+      <div class="lc"><div class="lh" style="color:#f87171">启-发-式-超-售</div><div class="ld">OS=n·(1-NoShow%)·风险权衡·赔偿成本平衡·泊松到达分布</div><div class="lf">XGBoost提升30-50%精度</div></div>
+      <div class="lc"><div class="lh" style="color:#34d399">佣金/渠道</div><div class="ld">加权毛利率·OTAvs直销·渠道ROI·批量置换成本分析</div><div class="lf">Duetto: 全渠道整合优化</div></div>
+      <div class="lc"><div class="lh" style="color:#22d3ee">ML深度学习</div><div class="ld">LSTM·GRU·Transformer·XGBoost·LightGBM·CatBoost·Prophet</div><div class="lf">众荟: OTA大数据接入</div></div>
+      <div class="lc"><div class="lh" style="color:#a78bfa">动态定价</div><div class="ld">Gallego-VR(1994)·DP·Markdown·Continuous·MNL竞争模型</div><div class="lf">希尔顿OnQ: ML驱动定价</div></div>
+      <div class="lc"><div class="lh" style="color:#fbbf24">网络RM</div><div class="ld">ODF控制·LP线性规划·列生成·MIP·多晚跨房型联合优化</div><div class="lf">航空衍生 → IHG RIRO → 锦江</div></div>
+      <div class="lc"><div class="lh" style="color:#f87171">ML超售</div><div class="ld">XGBoost No-Show·LSTM取消概率·动态阈值·Bayesian更新</div><div class="lf">华住自研: 全自动超售引擎</div></div>
+      <div class="lc"><div class="lh" style="color:#34d399">混合策略</div><div class="ld">OTAvs直销博弈·Bertrand·Nash均衡·实时竞品指数监控</div><div class="lf">价格雷达: 全平台竞品监控</div></div>
+      <div class="lc"><div class="lh" style="color:#22d3ee">因果/外部</div><div class="ld">多元线性回归·Bayesian结构·Prophet(节假日最优)·天气·PMI</div><div class="lf">Prophet处理中国节假日最佳</div></div>
+      <div class="lc"><div class="lh" style="color:#a78bfa">客户选择</div><div class="ld">MNL·Choice-Based·RL定价·积分动态定价·竞争MNL模型</div><div class="lf">Duetto: MNL选择模型</div></div>
+      <div class="lc"><div class="lh" style="color:#fbbf24">团客置换</div><div class="ld">团客vs散客置换·机会成本·最低团客门槛·Displacement分析</div><div class="lf">Rainmaker: 团+个联合优化</div></div>
+      <div class="lc"><div class="lh" style="color:#f87171">概率模型</div><div class="ld">Poisson到达过程·Bayesian更新·指数分布·负二项分布模型</div><div class="lf">IDeaS: 泊松+风险权衡</div></div>
+      <div class="lc"><div class="lh" style="color:#34d399">会员/LTV</div><div class="ld">RFM·CLV·价格弹性·价格栅栏·行为细分·会员等级定价</div><div class="lf">亚朵: 场景化客群定制</div></div>
+    </div>
+  </div>
+  <div class="r1r">
+    <h2>RMS五代演进 · 1972航空 → 2026 AI Agent</h2>
+    <div class="evo">
+      <div class="ei eg1"><div class="eg">G1·手工时代</div><div class="ed">Littlewood's Rule(1972)·EMSR原型·美洲航空首创·手工Excel+经验判断·两档票价保护·收益管理思想诞生</div><div class="ep">1980s-90s</div></div>
+      <div class="ei eg2"><div class="eg">G2·系统化</div><div class="ed">EMSRb成行业标准·IDeaS诞生(1989)·预测+优化引擎成熟·万豪OneYield自研·希尔顿OnQ建立</div><div class="ep">1990s-00s</div></div>
+      <div class="ei eg3"><div class="eg">G3·精细化</div><div class="ed">DP贝尔曼方程·网络RM(ODF控制)·Gallego-VR·全服务酒店普及·OTA渠道分流·众荟Data驱动</div><div class="ep">2000s-10s</div></div>
+      <div class="ei eg4"><div class="eg">G4·数据驱动</div><div class="ed">LSTM/XGBoost·云RMS(SaaS)·OTA大数据·Duetto云原生·锦江价格雷达·华住自研·锦鲲AI(2026)</div><div class="ep">2010s-20s</div></div>
+      <div class="ei eg5"><div class="eg">G5·AI Agent</div><div class="ed">LLM推理定价·强化学习RL·全自动收益管理·跨域Hub→Leaf协同·美团既白(2025)·AHL RM Agent(前瞻)</div><div class="ep">2020s-</div></div>
+    </div>
+    <div class="egen">📊 当前代际: 万豪G4→5 | 希尔顿G4→5 | IHG G4→5 | 锦江G4 | 华住G4 | 亚朵G3→4 | IDeaS G4 | Duetto G4 | 美团既白G5 | 众荟G3→4</div>
+  </div>
+</div>
+
+<div class="r2">
+  <h2>全球RMS系统全景 · 12大RMS · 6万+酒店覆盖</h2>
+  <div class="r2g">
+    <div class="r2c"><div class="rh"><span class="rg" style="color:#22d3ee">万豪 Marriott</span><span class="gt g5">G4→5</span></div><div class="rr">OneYield(自研)+M Live AI·8,900+酒店</div><div class="rm">EMSRb+Bid Price+积分动态定价(2022)·全球RM先驱</div></div>
+    <div class="r2c"><div class="rh"><span class="rg" style="color:#a78bfa">希尔顿 Hilton</span><span class="gt g5">G4→5</span></div><div class="rr">OnQ RMS(自研)·7,800+酒店</div><div class="rm">ARIMA+ML→动态定价·误差&lt;5%(公开报道)·积分动态最早</div></div>
+    <div class="r2c"><div class="rh"><span class="rg" style="color:#fbbf24">洲际 IHG</span><span class="gt g5">G4→5</span></div><div class="rr">RIRO(自研)·6,300+酒店</div><div class="rm">网络RM(航空ODF衍生)·多品牌区域联合·Q1中国RevPAR+5.7%</div></div>
+    <div class="r2c"><div class="rh"><span class="rg" style="color:#f87171">锦江 Jinjiang</span><span class="gt g4">G4</span></div><div class="rr">价格雷达+众荟+锦鲲AI(2026)·14,236家</div><div class="rm">竞品全监控+OTA大数据·Q1净利+280%·锦鲲AI+RM</div></div>
+    <div class="r2c"><div class="rh"><span class="rg" style="color:#06b6d4">华住 Huazhu</span><span class="gt g4">G4</span></div><div class="rr">自研RMS(数据驱动)·13,215家</div><div class="rm">需求预测+会员定价+全季汉庭桔子·30秒入住全数据</div></div>
+    <div class="r2c"><div class="rh"><span class="rg" style="color:#34d399">凯悦·雅高·温德姆</span><span class="gt g4">G4</span></div><div class="rr">IDeaS全量部署(最大客户群)</div><div class="rm">云RMS+定制化·共通平台赋能·温德姆9,000+轻量部署</div></div>
+    <div class="r2c"><div class="rh"><span class="rg" style="color:#fb923c">亚朵 Atour</span><span class="gt g34">G3→4</span></div><div class="rr">众荟Revenue Plus+自研·2,000+家</div><div class="rm">场景化客群定价·RevPAR 312元领先·场景会员运营成功</div></div>
+    <div class="r2c"><div class="rh"><span class="rg" style="color:#818cf8">IDeaS(SAS)</span><span class="gt g4">G4</span></div><div class="rr">全球RMS第一品牌·1989-今·15,000+</div><div class="rm">EMSRb+DP+LSTM·V3 AI版·SAS收购(2018)·覆盖全档次</div></div>
+    <div class="r2c"><div class="rh"><span class="rg" style="color:#2dd4bf">Duetto(云原生)</span><span class="gt g4">G4</span></div><div class="rr">BlockBuster+ScoreBoard·开放API</div><div class="rm">MNL选择行为模型·实时集成·独立+精品连锁首选</div></div>
+    <div class="r2c"><div class="rh"><span class="rg" style="color:#f472b6">众荟Revenue Plus</span><span class="gt g4">G4</span></div><div class="rr">携程系·中国大数据RMS第一</div><div class="rm">OTA大数据+行为追踪·价格价值图·中小企业普惠</div></div>
+    <div class="r2c"><div class="rh"><span class="rg" style="color:#fb923c">美团既白(2025)</span><span class="gt g5">G5</span></div><div class="rr">国内首个酒店AI Agent</div><div class="rm">AI对话式收益管理·黄龙饭店首批·节省70%时间·美团生态</div></div>
+    <div class="r2c"><div class="rh"><span class="rg" style="color:#eab308">Rainmaker</span><span class="gt g4">G4</span></div><div class="rr">度假村+赌场RM专家·北美龙头</div><div class="rm">群体销售联合优化·休闲+博彩专用·动态定价一体</div></div>
+  </div>
+</div>
+
+<div class="r3">
+  <div class="r3l">
+    <h2>中国市场六大特色适配</h2>
+    <div class="r3lg">
+      <div class="r3lc"><div class="ct">1️⃣ OTA生态差异</div><div class="cd">携程+美团占60-70% vs 海外Booking+Expedia · 中国RMS必须OTA数据接入 · 众荟/价格雷达以此为护城河</div></div>
+      <div class="r3lc"><div class="ct">2️⃣ 价格带极其细密</div><div class="cd">中端ADR 200-400元有5-8个档(海外2-3档) · EMSRb需多档适配 · 连续定价模型在中国市场价值最大</div></div>
+      <div class="r3lc"><div class="ct">3️⃣ 会员体系差异</div><div class="cd">中国低积分+高频次 vs 欧美高价值+低频 · RMS更重频次+客单价联合 · 亚朵场景化已验证成功</div></div>
+      <div class="r3lc"><div class="ct">4️⃣ 节假日高度集中</div><div class="cd">春节/五一/十一三大峰占全年30-40%营收 · 需Prophet强预判 · 提前60天锁定 · 动态定价+超售联合</div></div>
+      <div class="r3lc"><div class="ct">5️⃣ 民宿冲击中端</div><div class="cd">全球最大民宿市场(川西/大理/莫干山) · 中端RMS需将民宿纳入竞争圈 · 价格弹性模型须外扩替代品</div></div>
+      <div class="r3lc"><div class="ct">6️⃣ 连锁化红利窗口</div><div class="cd">连锁化率25-28%→40%+进程中 · 每提升1pp释放约2千万RMS投入 · 未来5年是中国RMS的黄金期</div></div>
+    </div>
+  </div>
+  <div class="r3m">
+    <h2>跨行业RM对比</h2>
+    <div class="r3ml">
+      <div class="r3mc"><div class="ci" style="color:#22d3ee">✈️航空</div><div class="cd">容控(经典RM起源)·座位同质·单程/往返·超售可改签·EMSR最成熟·存量市场(最老牌)</div></div>
+      <div class="r3mc"><div class="ci" style="color:#a78bfa">🏨酒店</div><div class="cd">容量+时长·房型异质·多晚复杂·超售赔偿高(无法改签)·OTA博弈·增量有空间</div></div>
+      <div class="r3mc"><div class="ci" style="color:#fbbf24">🚗租车</div><div class="cd">最复杂(容量+时长+地点三维)·车队跨城调配·替代成本高·同属易逝资产</div></div>
+      <div class="r3mc"><div class="ci" style="color:#f87171">🛳️邮轮</div><div class="cd">客舱+航线+体验三重优化·提前1年定价·强季·CRM+RM深度融合·高客单价</div></div>
+      <div class="r3mc"><div class="ci" style="color:#34d399">📺广告/SaaS</div><div class="cd">展示+点击RTB·SaaS订阅+用量RM·竞价排名·自动调价最前沿</div></div>
+    </div>
+  </div>
+  <div class="r3r">
+    <h2>六大场景最优模型选择矩阵</h2>
+    <div class="r3rg">
+      <div class="r3rc"><div class="st" style="color:#22d3ee">🏪 单体酒店</div><div class="sr">Littlewood+超售启发式+Excel</div><div class="sw">零投入·40年验证·两档管理</div></div>
+      <div class="r3rc"><div class="st" style="color:#a78bfa">🏢 中端连锁</div><div class="sr">EMSRb+Bid Price+众荟</div><div class="sw">行业标准7档·OTA数据</div></div>
+      <div class="r3rc"><div class="st" style="color:#fbbf24">🏔️ 高端度假</div><div class="sr">DP+Gallego-VR+Prophet</div><div class="sw">DP最优·节假日预判</div></div>
+      <div class="r3rc"><div class="st" style="color:#f87171">🏗️ 集团多品牌</div><div class="sr">网络RM+RL+IDeaS/RIRO</div><div class="sw">LP全局·RL自适应</div></div>
+      <div class="r3rc"><div class="st" style="color:#34d399">📱 直销高会员</div><div class="sr">Choice-Based MNL+积分</div><div class="sw">MNL建模·万豪积分</div></div>
+      <div class="r3rc"><div class="st" style="color:#fb923c">⚔️ 强竞争市场</div><div class="sr">博弈论+竞品监控+雷达</div><div class="sw">Nash均衡·实时预警</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="r4">
+  <div class="r4l">
+    <h2>10大核心收益管理数学模型</h2>
+    <div class="r4lg">
+      <div class="r4lc"><div class="ft" style="color:#22d3ee">① EMSRb保护水平(Belobaba1987)</div><div class="ff">P(D≥y) = P_{j+1} / P_j</div><div class="fd">多档最优保护水平·IDeaS/万豪OneYield/希尔顿OnQ/IHG RIRO的算法基石</div></div>
+      <div class="r4lc"><div class="ft" style="color:#22d3ee">② Littlewood's Rule(1972起源)</div><div class="ff">Accept if P₂ ≥ P₁ · P(D₁ ≤ C)</div><div class="fd">收益管理思想的真正源头·两档票价下接受/拒绝低价预订的最优规则</div></div>
+      <div class="r4lc"><div class="ft" style="color:#a78bfa">③ Gallego-Van Ryzin(1994)</div><div class="ff">p*(t) = θ⁻¹ · ln(α·x(t) / β)</div><div class="fd">泊松到达+价格敏感函数·高强度连续控制定价·高端度假场景最优解</div></div>
+      <div class="r4lc"><div class="ft" style="color:#a78bfa">④ Bid Price机会成本</div><div class="ff">BP = V_{t-1}(c) - V_{t-1}(c-1)</div><div class="fd">边际机会成本=多卖1间房的期望价值损失·实时门槛阈值控制方法</div></div>
+      <div class="r4lc"><div class="ft" style="color:#fbbf24">⑤ 网络RM线性规划</div><div class="ff">max Σrᵢxᵢ s.t. Ax ≤ C, x ≥ 0</div><div class="fd">多元多维约束下的收入最大化·IHG RIRO核心·航空网络RM到酒店的直接衍生</div></div>
+      <div class="r4lc"><div class="ft" style="color:#fbbf24">⑥ DP贝尔曼方程</div><div class="ff">V_t(c) = max{ E[R + V_{t+1}(c)] }</div><div class="fd">逆向归纳·状态(c容量, t时间)下的最优期望价值·库存分配场景的核心算法</div></div>
+      <div class="r4lc"><div class="ft" style="color:#f87171">⑦ 超售平衡点模型</div><div class="ff">OS* = n·(1-π̅_show) - C_deny / C_revenue</div><div class="fd">边际收益=边际拒绝成本的平衡点·超售量过高会赔偿、过低会浪费的最佳公式</div></div>
+      <div class="r4lc"><div class="ft" style="color:#f87171">⑧ XGBoost No-Show预测</div><div class="ff">ŷ = Σf_k(x_i) + Ω(f_k)</div><div class="fd">梯度提升树·正则化防过拟合·预测精度比传统启发式方法高30-50%</div></div>
+      <div class="r4lc"><div class="ft" style="color:#34d399">⑨ 渠道净收入优化</div><div class="ff">Rev_net = Σ(Rev_i - Com_i) · w_i</div><div class="fd">各渠道净收入×权重的最大化·OTA佣金15-25%下实际到账收入的真实计算</div></div>
+      <div class="r4lc"><div class="ft" style="color:#34d399">⑩ MNL选择概率模型</div><div class="ff">P_i = e^{U_i} / Σe^{U_j}</div><div class="fd">客户在多选项中选i的概率·U_i=消费者对i的效用函数·Choice-Based RM的基础</div></div>
+    </div>
+  </div>
+  <div class="r4r">
+    <h2>9大收益管理核心KPI</h2>
+    <div class="r4rg">
+      <div class="r4rc"><div class="kt" style="color:#22d3ee">RevPAR</div><div class="kf">R = ADR × OCC</div><div class="kd">每间可售房收入·行业核心指标·四川估160-228元</div></div>
+      <div class="r4rc"><div class="kt" style="color:#a78bfa">GOPPAR</div><div class="kf">GOP / 可售房数</div><div class="kd">每间可售房毛利润·RM效果的终极度量</div></div>
+      <div class="r4rc"><div class="kt" style="color:#fbbf24">TRevPAR</div><div class="kf">RevPAR+非房/可售房</div><div class="kd">含餐饮SPA的总收入·中国酒店非房占20-30%</div></div>
+      <div class="r4rc"><div class="kt" style="color:#f87171">Flow-Through</div><div class="kf">ΔGOP / ΔRevenue</div><div class="kd">利润转化效率·目标50-60%·增量收入质量</div></div>
+      <div class="r4rc"><div class="kt" style="color:#34d399">MPI</div><div class="kf">本店OCC/竞圈OCC</div><div class="kd">市场渗透·&gt;100=跑赢竞争圈</div></div>
+      <div class="r4rc"><div class="kt" style="color:#fb923c">ARI</div><div class="kf">本店ADR/竞圈ADR×100</div><div class="kd">平均房价指数·与MPI交叉分析</div></div>
+      <div class="r4rc"><div class="kt" style="color:#06b6d4">RGI</div><div class="kf">本店RevPAR/竞圈RevPAR</div><div class="kd">收入生成指数·RMS最终检验</div></div>
+      <div class="r4rc"><div class="kt" style="color:#f472b6">NRevPAR</div><div class="kf">(总收入-分销成本)/可售房</div><div class="kd">扣佣金净收入·OTA佣金影响大</div></div>
+      <div class="r4rc"><div class="kt" style="color:#2dd4bf">预订提前天数</div><div class="kf">BkLead=Σ(入住-预订)/n</div><div class="kd">散客7-14天·团客30-90天</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="footer">B166ER · 收益管理深度知识库 · 51个模型·12大RMS·5代演进·5行业对比·10公式·9KPI·6场景选型 · Eric Zhang 2026</div>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,401 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<title>知局 · 免费项目诊断 · 抖音版</title>
+<style>
+  :root {
+    --ink: #0A2540;
+    --paper: #FAF8F4;
+    --accent: #DC2626;
+    --gold: #D4A574;
+    --hot: #F59E0B;
+    --muted: rgba(250,248,244,0.78);
+    --muted-2: rgba(250,248,244,0.55);
+    --rule: rgba(212,165,116,0.25);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body {
+    background: var(--ink);
+    color: var(--paper);
+    font-family: 'Source Han Serif SC', 'Noto Serif CJK SC', 'Songti SC', 'PingFang SC', Georgia, serif;
+    -webkit-font-smoothing: antialiased;
+    font-weight: 500;
+  }
+  .poster {
+    width: 1080px;
+    height: 1920px;
+    background: var(--ink);
+    padding: 70px 70px 60px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  .poster::before {
+    content: '';
+    position: absolute; inset: 0;
+    background-image:
+      radial-gradient(circle at 1px 1px, rgba(212,165,116,0.07) 1px, transparent 0);
+    background-size: 28px 28px;
+    pointer-events: none;
+  }
+
+  /* HEADER */
+  .eyebrow {
+    position: relative; z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: ui-monospace, 'SF Mono', monospace;
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing: 0.20em;
+    text-transform: uppercase;
+    color: var(--paper);
+  }
+  .eyebrow .dot { width: 10px; height: 10px; background: var(--accent); border-radius: 50%; }
+
+  /* HOOK - 顶部强主张 */
+  .hook {
+    position: relative; z-index: 1;
+    margin-top: 30px;
+    padding: 30px 32px;
+    background: rgba(245,158,11,0.10);
+    border: 1px solid var(--hot);
+    border-left: 4px solid var(--hot);
+  }
+  .hook .tag {
+    font-family: ui-monospace, monospace;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--hot);
+    letter-spacing: 0.20em;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+  }
+  .hook .q {
+    font-size: 52px;
+    font-weight: 700;
+    line-height: 1.12;
+    color: var(--paper);
+    letter-spacing: -0.02em;
+  }
+  .hook .q em {
+    color: var(--hot);
+    font-style: normal;
+    font-weight: 800;
+  }
+  .hook .sub {
+    margin-top: 16px;
+    font-family: ui-monospace, monospace;
+    font-size: 17px;
+    color: var(--muted);
+    letter-spacing: 0.04em;
+  }
+  .hook .sub .hi { color: var(--paper); font-weight: 600; }
+
+  /* 资历背书 */
+  .creds {
+    position: relative; z-index: 1;
+    margin-top: 26px;
+    padding: 18px 24px;
+    border: 1px solid var(--rule);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .creds .left {
+    font-family: 'Source Han Serif SC', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--paper);
+    letter-spacing: 0.02em;
+  }
+  .creds .left small {
+    display: block;
+    font-family: ui-monospace, monospace;
+    font-size: 11px;
+    color: var(--gold);
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 4px;
+  }
+  .creds .right {
+    font-family: ui-monospace, 'SF Mono', monospace;
+    font-size: 13px;
+    color: var(--accent);
+    font-weight: 700;
+    text-align: right;
+    line-height: 1.45;
+  }
+
+  /* SECTION TITLE */
+  .sec-title {
+    position: relative; z-index: 1;
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: ui-monospace, 'SF Mono', monospace;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--gold);
+  }
+  .sec-title::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--rule);
+  }
+
+  /* 诊断包含 5 项 - 卡片 */
+  .check {
+    position: relative; z-index: 1;
+    margin-top: 12px;
+    border: 1px solid var(--rule);
+  }
+  .check-row {
+    display: grid;
+    grid-template-columns: 64px 1fr;
+    align-items: center;
+    padding: 18px 22px;
+    border-bottom: 1px solid var(--rule);
+  }
+  .check-row:last-child { border-bottom: none; }
+  .check-row .n {
+    font-family: ui-monospace, 'SF Mono', monospace;
+    font-size: 28px;
+    color: var(--accent);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+  .check-row .body .head {
+    font-family: 'Source Han Serif SC', serif;
+    font-size: 21px;
+    font-weight: 700;
+    color: var(--paper);
+    line-height: 1.3;
+  }
+  .check-row .body .head .hi { color: var(--hot); }
+  .check-row .body .desc {
+    margin-top: 4px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--muted);
+    line-height: 1.5;
+  }
+
+  /* 3 个对比数字 */
+  .compare {
+    position: relative; z-index: 1;
+    margin-top: 26px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0;
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+    padding: 22px 0;
+  }
+  .compare > div {
+    padding: 0 18px;
+    border-right: 1px solid var(--rule);
+  }
+  .compare > div:last-child { border-right: none; }
+  .compare .num {
+    font-family: ui-monospace, 'SF Mono', monospace;
+    font-size: 56px;
+    font-weight: 600;
+    line-height: 1;
+    color: var(--hot);
+    letter-spacing: -0.04em;
+  }
+  .compare .num .plus { font-size: 28px; }
+  .compare .label {
+    margin-top: 8px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--paper);
+  }
+  .compare .label small {
+    display: block;
+    font-family: ui-monospace, monospace;
+    font-size: 10px;
+    color: var(--muted-2);
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    margin-top: 2px;
+  }
+
+  /* 底部 CTA - 强钩子 */
+  .cta {
+    position: relative; z-index: 1;
+    margin-top: auto;
+    padding: 28px 30px;
+    background: rgba(220,38,38,0.10);
+    border: 1px solid var(--accent);
+    border-left: 4px solid var(--accent);
+  }
+  .cta .row1 {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--accent);
+    letter-spacing: 0.20em;
+    text-transform: uppercase;
+    font-family: ui-monospace, monospace;
+    margin-bottom: 12px;
+  }
+  .cta .row1 .arrow { font-size: 18px; }
+  .cta .row2 {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.18;
+    color: var(--paper);
+    letter-spacing: -0.01em;
+  }
+  .cta .row2 em {
+    color: var(--accent);
+    font-style: normal;
+    font-weight: 800;
+  }
+  .cta .row3 {
+    margin-top: 10px;
+    font-size: 15px;
+    color: var(--muted);
+    font-family: ui-monospace, monospace;
+    letter-spacing: 0.04em;
+    line-height: 1.6;
+  }
+  .cta .row3 .hi { color: var(--paper); font-weight: 600; }
+
+  /* FOOTER */
+  .footer {
+    position: relative; z-index: 1;
+    margin-top: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: ui-monospace, 'SF Mono', monospace;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .footer .left { display: flex; flex-direction: column; gap: 3px; }
+  .footer .left .name { color: var(--paper); font-weight: 700; }
+  .footer .right { display: flex; align-items: center; gap: 14px; }
+  .footer .bar { width: 40px; height: 2px; background: var(--accent); }
+</style>
+</head>
+<body>
+  <div class="poster">
+    <!-- HEADER -->
+    <div class="eyebrow">
+      <span>B·166·ER · ZHIJU</span>
+      <span class="dot"></span>
+    </div>
+
+    <!-- TOP HOOK -->
+    <div class="hook">
+      <div class="tag">→ FREE DIAGNOSIS</div>
+      <div class="q">你的酒店年营收，<em>凭什么是这个数</em>？</div>
+      <div class="sub"><span class="hi">3 分钟 · 免费 · 帮你看清关键问题</span></div>
+    </div>
+
+    <!-- 资历背书 -->
+    <div class="creds">
+      <div class="left">
+        <small>Hosted by</small>
+        Eric · 酒店行业实战派
+      </div>
+      <div class="right">
+        B·166·ER<br/>
+        出品
+      </div>
+    </div>
+
+    <!-- 诊断包含 5 项 -->
+    <div class="sec-title">0 元项目诊断 · 你会收到</div>
+    <div class="check">
+      <div class="check-row">
+        <div class="n">01</div>
+        <div class="body">
+          <div class="head">现状<strong>画像</strong> · 10 项关键指标</div>
+          <div class="desc">出租率 / ADR / RevPAR / OTA 占比 / 会员复购 / 员工流失 — 一次看清</div>
+        </div>
+      </div>
+      <div class="check-row">
+        <div class="n">02</div>
+        <div class="body">
+          <div class="head">3 大<strong>核心问题</strong> · 排序版</div>
+          <div class="desc">基于你的真实数据，定位最该改的 3 件事 — 不空谈</div>
+        </div>
+      </div>
+      <div class="check-row">
+        <div class="n">03</div>
+        <div class="body">
+          <div class="head"><strong>同类酒店</strong>对比 · 5 城 4 档</div>
+          <div class="desc">你所在城市同档酒店的 RevPAR / ADR / 出租率 — 知道你差在哪</div>
+        </div>
+      </div>
+      <div class="check-row">
+        <div class="n">04</div>
+        <div class="body">
+          <div class="head">3 大<strong>改进建议</strong> · 90 天落地</div>
+          <div class="desc">一线实战亲历，3 个立刻能落地的动作 — 不是 PPT</div>
+        </div>
+      </div>
+      <div class="check-row">
+        <div class="n">05</div>
+        <div class="body">
+          <div class="head"><strong>5 页完整</strong>报告 · 48 小时</div>
+          <div class="desc">填完问卷留微信，48 小时内 1v1 视频讲解完整报告</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3 个对比数字 -->
+    <div class="compare">
+      <div>
+        <div class="num">3<span class="plus">分</span></div>
+        <div class="label">自助填问卷<small>Self-Service</small></div>
+      </div>
+      <div>
+        <div class="num">48<span class="plus">h</span></div>
+        <div class="label">完整报告<small>Full Report</small></div>
+      </div>
+      <div>
+        <div class="num">0<span class="plus">元</span></div>
+        <div class="label">首批 30 名<small>First 30 Free</small></div>
+      </div>
+    </div>
+
+    <!-- 底部 CTA -->
+    <div class="cta">
+      <div class="row1"><span class="arrow">→</span> <span>3 步领取</span></div>
+      <div class="row2">关注 + 欢迎评论区交流
+      <div class="row3"><span class="hi">首批 30 名免费 · 满额转 99 元</span></div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer">
+      <div class="left">
+        <span class="name">B·166·ER · 知局</span>
+        <span>Zhang Shi · 酒店行业实战派</span>
+      </div>
+      <div class="right">
+        <span>Anti-AI-Slop</span>
+        <span class="bar"></span>
+        <span>v7</span>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

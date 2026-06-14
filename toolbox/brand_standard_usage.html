@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>B166ER 徽章标准用法指南</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{
+  font-family:'PingFang SC','Microsoft YaHei',sans-serif;
+  background:linear-gradient(180deg,#f5f1ea 0%,#e7e0d3 100%);
+  color:#1a1410;width:1600px;height:2200px;overflow:hidden;
+}
+.wrap{padding:50px 60px;display:flex;flex-direction:column;gap:32px;}
+
+/* 标题区 */
+.title-bar{text-align:center;padding-bottom:20px;border-bottom:2px solid #c9a87c;}
+.title-bar h1{
+  font-size:46px;font-weight:900;letter-spacing:2px;
+  background:linear-gradient(135deg,#1a1410 0%,#8b6f47 100%);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+  margin-bottom:8px;
+}
+.title-bar .sub{font-size:18px;color:#78716c;letter-spacing:3px;}
+
+/* 场景卡片 */
+.scenarios{display:flex;flex-direction:column;gap:20px;}
+
+.scenario{
+  display:grid;grid-template-columns:280px 1fr;
+  gap:24px;align-items:center;
+  background:#fffaf2;border-radius:16px;padding:24px 28px;
+  box-shadow:0 2px 8px rgba(0,0,0,0.04);
+  border-left:4px solid #c9a87c;
+}
+
+.scenario-num{
+  font-size:14px;color:#a89378;letter-spacing:3px;
+  font-weight:700;margin-bottom:6px;
+}
+
+.scenario-title{
+  font-size:24px;font-weight:900;color:#1a1410;margin-bottom:8px;
+}
+
+.scenario-desc{
+  font-size:15px;color:#4a3a2a;line-height:1.6;
+}
+
+.scenario-meta{
+  margin-top:10px;padding-top:10px;border-top:1px dashed #d4c5a0;
+  font-size:12px;color:#78716c;line-height:1.5;
+}
+
+.scenario-meta .tag{
+  display:inline-block;background:#fef3c7;color:#8b6f47;
+  padding:2px 8px;border-radius:4px;font-size:11px;
+  margin-right:6px;font-weight:600;
+}
+
+/* 模拟示意图 */
+.demo{
+  width:280px;height:200px;
+  background:#1a1410;border-radius:8px;
+  display:flex;align-items:center;justify-content:center;
+  position:relative;overflow:hidden;
+  border:1px solid #c9a87c;
+}
+.demo.demo-light{background:#fffaf2;border-color:#8b6f47;}
+
+/* PPT 模拟 */
+.demo-ppt{
+  width:100%;height:100%;
+  background:linear-gradient(135deg,#0f172a 0%,#1e293b 100%);
+  display:flex;align-items:center;justify-content:center;
+  flex-direction:column;gap:8px;padding:20px;position:relative;
+}
+.demo-ppt .badge-pos{
+  position:absolute;top:14px;left:14px;
+  width:56px;height:56px;border-radius:50%;
+  background:linear-gradient(135deg,#1a1410 0%,#3a2e22 100%);
+  border:2px solid #c9a87c;
+  display:flex;align-items:center;justify-content:center;
+  font-size:26px;font-weight:900;color:#c9a87c;
+}
+.demo-ppt .ppt-title{
+  font-size:20px;color:#e2e8f0;font-weight:700;text-align:center;
+}
+.demo-ppt .ppt-sub{font-size:12px;color:#94a3b8;}
+.demo-ppt .credit{
+  position:absolute;bottom:10px;right:14px;
+  font-size:9px;color:#a89378;letter-spacing:1px;
+}
+
+/* 长图水印 */
+.demo-watermark{
+  width:100%;height:100%;background:linear-gradient(180deg,#0f172a 0%,#1e1b4b 100%);
+  display:flex;flex-direction:column;padding:14px;position:relative;
+}
+.demo-watermark .title{
+  font-size:11px;color:#94a3b8;text-align:center;margin-bottom:6px;
+}
+.demo-watermark .content{
+  flex:1;background:rgba(255,255,255,0.04);border-radius:4px;
+}
+.demo-watermark .badge-watermark{
+  position:absolute;bottom:8px;right:8px;
+  width:32px;height:32px;border-radius:50%;
+  background:linear-gradient(135deg,#1a1410 0%,#3a2e22 100%);
+  border:1.5px solid #c9a87c;
+  display:flex;align-items:center;justify-content:center;
+  font-size:14px;font-weight:900;color:#c9a87c;
+}
+
+/* 公众号文章 */
+.demo-xhs{
+  width:100%;height:100%;background:#fffaf2;
+  display:flex;flex-direction:column;padding:14px;
+}
+.demo-xhs .header{
+  text-align:center;padding-bottom:8px;border-bottom:1px solid #e7e0d3;
+  margin-bottom:8px;
+}
+.demo-xhs .header h3{font-size:13px;color:#1a1410;}
+.demo-xhs .header .meta{font-size:9px;color:#a89378;margin-top:2px;}
+.demo-xhs .body{
+  flex:1;background:#f5f1ea;border-radius:4px;padding:8px;
+  font-size:9px;color:#4a3a2a;line-height:1.4;
+}
+.demo-xhs .signoff{
+  margin-top:8px;display:flex;align-items:center;gap:8px;
+  padding-top:8px;border-top:1px dashed #d4c5a0;
+}
+.demo-xhs .signoff .mini-badge{
+  width:36px;height:36px;border-radius:50%;
+  background:linear-gradient(135deg,#1a1410 0%,#3a2e22 100%);
+  border:1.5px solid #c9a87c;
+  display:flex;align-items:center;justify-content:center;
+  font-size:16px;font-weight:900;color:#c9a87c;
+  flex-shrink:0;
+}
+.demo-xhs .signoff .text{font-size:9px;color:#78716c;line-height:1.4;}
+
+/* 极小尺寸（社媒头像） */
+.demo-tiny{
+  width:100%;height:100%;
+  background:#f5f1ea;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;
+}
+.demo-tiny .grid{display:flex;gap:10px;}
+.demo-tiny .item{
+  display:flex;flex-direction:column;align-items:center;gap:3px;
+}
+.demo-tiny .item-label{font-size:9px;color:#78716c;}
+.demo-tiny .item img,.demo-tiny .item .mini{
+  border-radius:50%;
+  background:linear-gradient(135deg,#1a1410 0%,#3a2e22 100%);
+  border:1.5px solid #c9a87c;
+  display:flex;align-items:center;justify-content:center;
+  font-weight:900;color:#c9a87c;
+  flex-shrink:0;
+}
+.demo-tiny .sz-128{width:128px;height:128px;font-size:54px;}
+.demo-tiny .sz-64{width:64px;height:64px;font-size:28px;}
+.demo-tiny .sz-32{width:32px;height:32px;font-size:14px;}
+.demo-tiny .sz-16{width:16px;height:16px;font-size:7px;border-width:1px;}
+
+/* 邮件/文档 */
+.demo-doc{
+  width:100%;height:100%;background:#fff;
+  display:flex;flex-direction:column;padding:14px;
+  border:1px solid #e7e0d3;
+}
+.demo-doc .header-line{
+  display:flex;align-items:center;gap:8px;padding-bottom:8px;
+  border-bottom:1px solid #1a1410;margin-bottom:8px;
+}
+.demo-doc .header-badge{
+  width:32px;height:32px;border-radius:50%;
+  background:linear-gradient(135deg,#1a1410 0%,#3a2e22 100%);
+  border:1.5px solid #c9a87c;
+  display:flex;align-items:center;justify-content:center;
+  font-size:14px;font-weight:900;color:#c9a87c;
+  flex-shrink:0;
+}
+.demo-doc .header-text{
+  font-size:11px;color:#1a1410;font-weight:700;letter-spacing:1px;
+}
+.demo-doc .body{
+  flex:1;background:#f9f6f0;border-radius:2px;padding:8px;
+  font-size:9px;color:#4a3a2a;line-height:1.4;
+}
+.demo-doc .footer{
+  margin-top:6px;font-size:8px;color:#a89378;text-align:right;letter-spacing:0.5px;
+}
+
+/* 底部统一规则 */
+.principles{
+  background:#1a1410;color:#e2e8f0;
+  border-radius:16px;padding:28px 32px;
+  display:grid;grid-template-columns:repeat(3,1fr);gap:24px;
+}
+.principle-item .label{
+  font-size:11px;color:#c9a87c;letter-spacing:3px;margin-bottom:8px;font-weight:700;
+}
+.principle-item .text{font-size:14px;color:#cbd5e1;line-height:1.5;}
+.principle-item .text strong{color:#fbbf24;}
+
+.footer{text-align:center;font-size:13px;color:#78716c;letter-spacing:1px;padding-top:6px;}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <!-- 标题 -->
+  <div class="title-bar">
+    <h1>B166ER 徽章 · 5 大标准用法</h1>
+    <div class="sub">A2 深色主版 · 通用规范 · 2026-06</div>
+  </div>
+
+  <!-- 场景 1: PPT/报告 -->
+  <div class="scenario">
+    <div class="demo">
+      <div class="demo-ppt">
+        <div class="badge-pos">B</div>
+        <div class="ppt-title">酒店行业全景<br>知识库 v3.5</div>
+        <div class="ppt-sub">ERIC × B166ER · 2026-06-13</div>
+        <div class="credit">B166ER × ERIC 共同出品</div>
+      </div>
+    </div>
+    <div>
+      <div class="scenario-num">场景 01</div>
+      <div class="scenario-title">PPT / 报告 · 首页左上角</div>
+      <div class="scenario-desc">
+        首页左上角放 56×56 圆徽章 + 副标题用"ERIC × B166ER · {日期}"，右下角加 "B166ER × ERIC 共同出品" 小字。
+      </div>
+      <div class="scenario-meta">
+        <span class="tag">尺寸 56px</span>
+        <span class="tag">位置 左上</span>
+        <span class="tag">不抢主标题</span>
+        <span class="tag">每页页眉复用</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 场景 2: 长图水印 -->
+  <div class="scenario">
+    <div class="demo">
+      <div class="demo-watermark">
+        <div class="title">9:16 竖版信息图</div>
+        <div class="content"></div>
+        <div class="badge-watermark">B</div>
+      </div>
+    </div>
+    <div>
+      <div class="scenario-num">场景 02</div>
+      <div class="scenario-title">长图 / 信息图 · 右下角小水印</div>
+      <div class="scenario-desc">
+        长图右下角放 32×32 极简徽章（只保留"B"单字母 + 圆环），不抢主体内容，但远看仍可识别。
+      </div>
+      <div class="scenario-meta">
+        <span class="tag">尺寸 32px</span>
+        <span class="tag">位置 右下</span>
+        <span class="tag">不透明 80%</span>
+        <span class="tag">不抢主体</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 场景 3: 公众号/小红书文章 -->
+  <div class="scenario">
+    <div class="demo">
+      <div class="demo-xhs">
+        <div class="header">
+          <h3>独立酒店海外获客指南</h3>
+          <div class="meta">ERIC × B166ER · 2026-06</div>
+        </div>
+        <div class="body">正文内容...</div>
+        <div class="signoff">
+          <div class="mini-badge">B</div>
+          <div class="text">本文由 <strong style="color:#8b6f47">ERIC × B166ER</strong> 共同出品<br>B166ER · 垂系 AI 助理 · 2026</div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="scenario-num">场景 03</div>
+      <div class="scenario-title">公众号 / 小红书文章 · 文末署名</div>
+      <div class="scenario-desc">
+        文章文末用 36×36 圆徽章 + "本文由 ERIC × B166ER 共同出品"文字成对。视觉重心与正文分离。
+      </div>
+      <div class="scenario-meta">
+        <span class="tag">尺寸 36px</span>
+        <span class="tag">位置 文末</span>
+        <span class="tag">与署名成对</span>
+        <span class="tag">左右版式</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 场景 4: 社媒头像（小尺寸） -->
+  <div class="scenario">
+    <div class="demo">
+      <div class="demo-tiny">
+        <div class="grid">
+          <div class="item">
+            <div class="mini sz-128">B</div>
+            <div class="item-label">128px · 头像</div>
+          </div>
+          <div class="item">
+            <div class="mini sz-64">B</div>
+            <div class="item-label">64px · 工具栏</div>
+          </div>
+          <div class="item">
+            <div class="mini sz-32">B</div>
+            <div class="item-label">32px · 评论</div>
+          </div>
+          <div class="item">
+            <div class="mini sz-16">B</div>
+            <div class="item-label">16px · favicon</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="scenario-num">场景 04</div>
+      <div class="scenario-title">社媒头像 / 小尺寸 · 单字母简化版</div>
+      <div class="scenario-desc">
+        小于 64px 时，去掉"B166ER"文字，只保留"B"单字母 + 圆环。16px 仍能识别。
+      </div>
+      <div class="scenario-meta">
+        <span class="tag">尺寸 16-128px</span>
+        <span class="tag">位置 头像</span>
+        <span class="tag">仅"B"字母</span>
+        <span class="tag">保留圆环</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 场景 5: 文档/README -->
+  <div class="scenario">
+    <div class="demo demo-light">
+      <div class="demo-doc">
+        <div class="header-line">
+          <div class="header-badge">B</div>
+          <div class="header-text">README.md · 标题 + 徽章</div>
+        </div>
+        <div class="body">文档正文...</div>
+        <div class="footer">© ERIC × B166ER · 2026-06 · 共同出品</div>
+      </div>
+    </div>
+    <div>
+      <div class="scenario-num">场景 05</div>
+      <div class="scenario-title">代码 / README / 文档 · 标题旁小徽章</div>
+      <div class="scenario-desc">
+        README 标题行嵌入 32×32 圆徽章 + 标题文字，页脚加"© ERIC × B166ER · 2026-06 · 共同出品"。
+      </div>
+      <div class="scenario-meta">
+        <span class="tag">尺寸 32px</span>
+        <span class="tag">位置 标题行</span>
+        <span class="tag">页脚 ©</span>
+        <span class="tag">开源友好</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3 大铁律 -->
+  <div class="principles">
+    <div class="principle-item">
+      <div class="label">PRINCIPLE 01</div>
+      <div class="text"><strong>不抢主体</strong><br>徽章永远小于或弱于主标题，不破坏信息层级</div>
+    </div>
+    <div class="principle-item">
+      <div class="label">PRINCIPLE 02</div>
+      <div class="text"><strong>统一署名</strong><br>所有出品都用 "ERIC × B166ER 共同出品"——<br>不能改写、省略或调换顺序</div>
+    </div>
+    <div class="principle-item">
+      <div class="label">PRINCIPLE 03</div>
+      <div class="text"><strong>不绑行业</strong><br>徽章 = B166ER 自己的品牌，不绑定任何项目/行业。<br>酒店/收益/AHL 是 B166ER 的"任务"，不是 B166ER 的"身份"</div>
+    </div>
+  </div>
+
+  <div class="footer">B166ER 品牌指南 · 2026-06-13 · ERIC × B166ER 共同出品</div>
+</div>
+</body>
+</html>

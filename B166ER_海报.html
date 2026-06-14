@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700;900&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 1080px; height: 1920px;
+    font-family: 'Noto Sans SC', -apple-system, 'PingFang SC', sans-serif;
+    background: #050810; color: #e0e8f0; overflow: hidden;
+    display: flex; flex-direction: column;
+  }
+
+  /* ===== HEADER ===== */
+  .header {
+    padding: 36px 48px 20px;
+    text-align: center; flex-shrink: 0;
+    background: linear-gradient(180deg, rgba(123,104,238,0.06) 0%, transparent 100%);
+    border-bottom: 1px solid rgba(123,104,238,0.12);
+  }
+  .header .version { display: inline-block; padding: 4px 16px; border: 1.5px solid #7B68EE; border-radius: 20px; font-size: 14px; color: #9B88FF; font-weight: 600; margin-bottom: 6px; letter-spacing: 1px; }
+  .header h1 { font-size: 40px; font-weight: 900; color: #7BB8FF; letter-spacing: 3px; margin-bottom: 4px; }
+  .header .tagline { font-size: 15px; color: #5a8bc0; font-weight: 400; letter-spacing: 1px; margin-bottom: 4px; line-height: 1.4; }
+  .header .axis { font-size: 13px; color: #445566; letter-spacing: 1px; }
+
+  /* ===== LAYERS ===== */
+  .layer { border-radius: 10px; padding: 10px 22px; margin: 0 24px 4px; position: relative; overflow: hidden; flex-shrink: 0; }
+  .layer::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; }
+  .lrow { display: flex; align-items: center; gap: 8px; margin-bottom: 3px; }
+  .lbadge { display: inline-flex; align-items: center; justify-content: center; width: 26px; height: 26px; border-radius: 6px; font-size: 12px; font-weight: 800; flex-shrink: 0; }
+  .ltitle { font-size: 17px; font-weight: 700; letter-spacing: 0.5px; }
+  .ldesc { font-size: 13px; color: #8899bb; line-height: 1.4; padding-left: 34px; margin-bottom: 3px; }
+  .ltags { display: flex; flex-wrap: wrap; gap: 4px; padding-left: 34px; }
+  .ltags span { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 500; line-height: 1.3; }
+  .newbadge { display: inline-block; font-size: 9px; font-weight: 700; padding: 1px 5px; border-radius: 3px; background: rgba(255,50,50,0.2); color: #FF6060; border: 1px solid rgba(255,50,50,0.3); margin-left: 4px; vertical-align: middle; }
+
+  .c0 { background: linear-gradient(135deg, rgba(123,104,238,0.12) 0%, rgba(30,20,60,0.6) 100%); border: 1px solid rgba(123,104,238,0.35); } .c0::before { background: #7B68EE; }
+  .c0 .lbadge { background: rgba(123,104,238,0.25); color: #B8A8FF; } .c0 .ltitle { color: #B8A8FF; } .c0 .ltags span { background: rgba(123,104,238,0.18); color: #C8B8FF; border: 1px solid rgba(123,104,238,0.25); }
+  .c05 { background: linear-gradient(135deg, rgba(75,0,130,0.10) 0%, rgba(20,10,40,0.6) 100%); border: 1px solid rgba(75,0,130,0.30); } .c05::before { background: #6A0DAD; }
+  .c05 .lbadge { background: rgba(106,13,173,0.20); color: #AA50E0; } .c05 .ltitle { color: #AA50E0; } .c05 .ltags span { background: rgba(106,13,173,0.15); color: #C070F0; border: 1px solid rgba(106,13,173,0.20); }
+  .c1 { background: linear-gradient(135deg, rgba(100,180,255,0.10) 0%, rgba(10,30,60,0.6) 100%); border: 1px solid rgba(100,180,255,0.30); } .c1::before { background: #64B4FF; }
+  .c1 .lbadge { background: rgba(100,180,255,0.20); color: #80CCFF; } .c1 .ltitle { color: #80CCFF; } .c1 .ltags span { background: rgba(100,180,255,0.15); color: #90D0FF; border: 1px solid rgba(100,180,255,0.20); }
+  .c2 { background: linear-gradient(135deg, rgba(0,206,170,0.10) 0%, rgba(5,30,30,0.6) 100%); border: 1px solid rgba(0,206,170,0.30); } .c2::before { background: #00CEAA; }
+  .c2 .lbadge { background: rgba(0,206,170,0.20); color: #40E8C8; } .c2 .ltitle { color: #40E8C8; } .c2 .ltags span { background: rgba(0,206,170,0.15); color: #60F0D0; border: 1px solid rgba(0,206,170,0.20); }
+  .c3 { background: linear-gradient(135deg, rgba(255,165,0,0.10) 0%, rgba(50,30,5,0.6) 100%); border: 1px solid rgba(255,165,0,0.30); } .c3::before { background: #FFA500; }
+  .c3 .lbadge { background: rgba(255,165,0,0.20); color: #FFC040; } .c3 .ltitle { color: #FFC040; } .c3 .ltags span { background: rgba(255,165,0,0.15); color: #FFD060; border: 1px solid rgba(255,165,0,0.20); }
+  .c4 { background: linear-gradient(135deg, rgba(218,165,32,0.10) 0%, rgba(40,35,5,0.6) 100%); border: 1px solid rgba(218,165,32,0.30); } .c4::before { background: #DAA520; }
+  .c4 .lbadge { background: rgba(218,165,32,0.20); color: #E8C840; } .c4 .ltitle { color: #E8C840; } .c4 .ltags span { background: rgba(218,165,32,0.15); color: #F0D860; border: 1px solid rgba(218,165,32,0.20); }
+  .c5 { background: linear-gradient(135deg, rgba(199,21,133,0.10) 0%, rgba(50,5,30,0.6) 100%); border: 1px solid rgba(199,21,133,0.30); } .c5::before { background: #C71585; }
+  .c5 .lbadge { background: rgba(199,21,133,0.20); color: #E060B0; } .c5 .ltitle { color: #E060B0; } .c5 .ltags span { background: rgba(199,21,133,0.15); color: #E880C0; border: 1px solid rgba(199,21,133,0.20); }
+  .c52 { background: linear-gradient(135deg, rgba(255,20,147,0.10) 0%, rgba(50,5,30,0.6) 100%); border: 1px solid rgba(255,20,147,0.30); } .c52::before { background: #FF1493; }
+  .c52 .lbadge { background: rgba(255,20,147,0.20); color: #FF70C0; } .c52 .ltitle { color: #FF70C0; } .c52 .ltags span { background: rgba(255,20,147,0.15); color: #FF90D0; border: 1px solid rgba(255,20,147,0.20); }
+
+  /* ===== SECTION DIVIDER ===== */
+  .sec { text-align: center; padding: 10px 48px 8px; color: #556677; font-size: 13px; font-weight: 500; letter-spacing: 3px; flex-shrink: 0; position: relative; }
+  .sec::before, .sec::after { content: ''; position: absolute; top: 50%; width: 30%; height: 1px; background: linear-gradient(to right, transparent, rgba(123,104,238,0.15)); }
+  .sec::before { left: 24px; } .sec::after { right: 24px; background: linear-gradient(to left, transparent, rgba(123,104,238,0.15)); }
+
+  /* ===== AXIOMS ===== */
+  .axioms { display: flex; gap: 6px; padding: 0 24px; flex-shrink: 0; }
+  .ax { flex: 1; background: rgba(40,30,80,0.4); border: 1px solid rgba(123,104,238,0.12); border-radius: 8px; padding: 6px 8px; text-align: center; }
+  .ax-sym { font-size: 13px; font-weight: 700; color: #B8A8FF; margin-bottom: 2px; }
+  .ax-name { font-size: 11px; font-weight: 600; color: #7B68EE; }
+  .ax-desc { font-size: 10px; color: #7788aa; line-height: 1.3; margin-top: 2px; }
+
+  /* ===== FEEDBACK ===== */
+  .fb { display: flex; gap: 5px; padding: 0 24px; flex-shrink: 0; }
+  .fb-item { flex: 1; background: rgba(30,40,70,0.6); border: 1px solid rgba(100,130,200,0.15); border-radius: 8px; padding: 5px 4px; text-align: center; }
+  .fb-n { display: inline-block; width: 20px; height: 20px; line-height: 20px; border-radius: 50%; background: rgba(100,150,255,0.2); color: #80B0FF; font-size: 10px; font-weight: 700; margin-bottom: 1px; }
+  .fb-l { font-size: 10px; color: #8899bb; line-height: 1.2; }
+
+  /* ===== INSIGHTS ===== */
+  .ins { padding: 0 24px; flex-shrink: 0; }
+  .ins-row { display: flex; gap: 5px; margin-bottom: 4px; }
+  .ins-item { flex: 1; background: rgba(30,40,70,0.3); border: 1px solid rgba(100,130,200,0.1); border-radius: 8px; padding: 6px 10px; }
+  .ins-t { font-size: 12px; font-weight: 600; color: #7BB8FF; margin-bottom: 2px; }
+  .ins-d { font-size: 11px; color: #8899bb; line-height: 1.3; }
+
+  /* ===== TOOLS ===== */
+  .tools { display: flex; gap: 5px; padding: 0 24px; flex-shrink: 0; }
+  .tool { flex: 1; background: rgba(60,40,100,0.3); border: 1px solid rgba(123,104,238,0.15); border-radius: 8px; padding: 6px 10px; }
+  .tool-t { font-size: 12px; font-weight: 600; color: #B8A8FF; margin-bottom: 2px; }
+  .tool-d { font-size: 11px; color: #8899bb; line-height: 1.3; }
+
+  /* ===== FOOTER ===== */
+  .footer {
+    padding: 14px 48px 24px; text-align: center; flex-shrink: 0; margin-top: auto;
+    background: linear-gradient(0deg, rgba(123,104,238,0.06) 0%, transparent 100%);
+    border-top: 1px solid rgba(123,104,238,0.12);
+  }
+  .footer .ftitle { font-size: 14px; font-weight: 600; color: #7BB8FF; letter-spacing: 1px; margin-bottom: 3px; }
+  .footer .fdesc { font-size: 11px; color: #445566; line-height: 1.4; }
+  .footer .fmeta { font-size: 10px; color: #334455; margin-top: 3px; letter-spacing: 1px; }
+</style>
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<div class="header">
+  <div class="version">V3.0 · 群论深层内化</div>
+  <h1>B166ER 底层理论架构</h1>
+  <div class="tagline">群论不再是"一个框架"——四条公理约束所有认知操作，是所有框架的数学语言</div>
+  <div class="axis">横轴：认识论→策略论→价值论 &nbsp;|&nbsp; 纵轴：元认知→学习论→执行论</div>
+</div>
+
+<!-- ===== LAYER 0 ===== -->
+<div class="layer c0">
+  <div class="lrow"><div class="lbadge">L0</div><div class="ltitle">元认知层 · 什么时候用什么框架</div></div>
+  <div class="ldesc">框架集合G作用于情境X，找最稳定的变换结果。关键步骤：识别对称性→匹配变换群→验证稳定性→降级</div>
+</div>
+
+<!-- ===== LAYER 0.5 ===== -->
+<div class="layer c05">
+  <div class="lrow"><div class="lbadge">L0.5</div><div class="ltitle">课题分离层 · 进入框架前的第一道门 <span class="newbadge">V3.0</span></div></div>
+  <div class="ldesc">决策空间正交分解 D = D_me ⊕ D_shared ⊕ D_other ⊕ D_fate。三种群论错误：控制错觉/越界/逃避</div>
+  <div class="ltags"><span>我的课题→全力负责</span><span>共享课题→激励相容</span><span>他人课题→边界清醒</span><span>不可抗力→接受备选</span></div>
+</div>
+
+<!-- ===== LAYER 1 ===== -->
+<div class="layer c1">
+  <div class="lrow"><div class="lbadge">L1</div><div class="ltitle">认识论 · 怎么认识世界</div></div>
+  <div class="ldesc">五维认知=五种子群生成元。第一性原理=所有变换下不变的量。奥卡姆剃刀=最小生成子群（商群最小描述长度）</div>
+  <div class="ltags"><span>历史沿革·时间平移</span><span>当下情况·空间平移</span><span>原因分析·因果追溯</span><span>未来预判·路径分叉</span><span>底层逻辑·最高对称</span></div>
+</div>
+
+<!-- ===== LAYER 2 ===== -->
+<div class="layer c2">
+  <div class="lrow"><div class="lbadge">L2</div><div class="ltitle">策略论 · 怎么做出选择</div></div>
+  <div class="ldesc">博弈均衡=群作用不动点。ESS=稳定子群。AHL引入新变换=打破旧均衡→新均衡形成=赚钱机会</div>
+  <div class="ltags"><span>博弈论核心</span><span>演化博弈ESS</span><span>贝叶斯·先验×证据→后验</span><span>昂贵信号·信号成本=可信度</span><span>护城河·稳定子群</span></div>
+</div>
+
+<!-- ===== LAYER 3 ===== -->
+<div class="layer c3">
+  <div class="lrow"><div class="lbadge">L3</div><div class="ltitle">价值论 · 怎么判断好坏</div></div>
+  <div class="ldesc">审美=对称性判断（气韵优先=最有生命力的不对称性）。真善美=在不同表示群下的稳定判断</div>
+  <div class="ltags"><span>审美哲学谱系·柏拉图→庄子</span><span>东方美学·气韵/意境/留白/侘寂/物哀/幽玄</span><span>真善美统一</span><span>底线伦理</span></div>
+</div>
+
+<!-- ===== LAYER 4 ===== -->
+<div class="layer c4">
+  <div class="lrow"><div class="lbadge">L4</div><div class="ltitle">学习论 · 怎么进化</div></div>
+  <div class="ldesc">自反思闭环=群同态自我校准。三层记忆=短期/中期/长期+RAG。反脆弱=小错误是群的生成元（演化燃料）</div>
+  <div class="ltags"><span>自反思闭环</span><span>三层记忆架构</span><span>状态机模型</span><span>MICE阶段机</span><span>反脆弱学习·群扩张</span></div>
+</div>
+
+<!-- ===== LAYER 5 ===== -->
+<div class="layer c5">
+  <div class="lrow"><div class="lbadge">L5</div><div class="ltitle">执行论 · 怎么行动</div></div>
+  <div class="ldesc">执行=群作用在状态空间的轨迹。正确方向=在所有环境变换下收益期望>0。紧急+重要=单位元变换</div>
+  <div class="ltags"><span>实用主义</span><span>Grice四准则</span><span>艾森豪威尔矩阵</span><span>通道适配</span></div>
+</div>
+
+<!-- ===== LAYER 5.2 ===== -->
+<div class="layer c52">
+  <div class="lrow"><div class="lbadge">L5.2</div><div class="ltitle">杠杆放大 · 群表示维数提升 <span class="newbadge">V3.0</span></div></div>
+  <div class="ldesc">执行力向量v在小任务群G_small→加杠杆后在G_large。不同杠杆=不同群结构，稳定性=环境变换下的作用一致性</div>
+  <div class="ltags"><span>资本·资金加法群(R,+)·线性1:∞</span><span>技术·代码幂群(O,∘)·超线性1:N²</span><span>网络·节点对称群Sn·指数1:2^N</span><span>品牌·信任非交换群·非线性</span></div>
+</div>
+
+<!-- ===== AXIOMS ===== -->
+<div class="sec">四条公理 = 决策约束</div>
+<div class="axioms">
+  <div class="ax"><div class="ax-sym">✦</div><div class="ax-name">封闭性</div><div class="ax-desc">决策不走到认知外<br>在行业域内封闭</div></div>
+  <div class="ax"><div class="ax-sym">✦</div><div class="ax-name">结合律</div><div class="ax-desc">顺序无关=可并行<br>顺序重要=非交换群</div></div>
+  <div class="ax"><div class="ax-sym">✦</div><div class="ax-name">单位元</div><div class="ax-desc">不做决定也是决定<br>保持现状是可选项</div></div>
+  <div class="ax"><div class="ax-sym">✦</div><div class="ax-name">逆元</div><div class="ax-desc">每个决策必须可撤销<br>止损=保持操作在群内</div></div>
+</div>
+
+<!-- ===== FEEDBACK ===== -->
+<div class="sec">六条层间反馈回路 · 子群之间的同态映射</div>
+<div class="fb">
+  <div class="fb-item"><div class="fb-n">1</div><div class="fb-l">执行→诊断</div></div>
+  <div class="fb-item"><div class="fb-n">2</div><div class="fb-l">审美→策略</div></div>
+  <div class="fb-item"><div class="fb-n">3</div><div class="fb-l">伦理→边界</div></div>
+  <div class="fb-item"><div class="fb-n">4</div><div class="fb-l">元监控</div></div>
+  <div class="fb-item"><div class="fb-n">5</div><div class="fb-l">学习校准</div></div>
+  <div class="fb-item"><div class="fb-n" style="color:#FF70C0">6</div><div class="fb-l" style="color:#FF70C0">课题→杠杆 <span style="font-size:9px;color:#FF6060">NEW</span></div></div>
+</div>
+
+<!-- ===== INSIGHTS ===== -->
+<div class="sec">五大吸收 · 从工具比喻到认知语法</div>
+<div class="ins">
+  <div class="ins-row">
+    <div class="ins-item"><div class="ins-t">对称性=感知起点</div><div class="ins-d">市场机会在对称性破缺处涌现。AHL打破OTA均衡=赚钱机会</div></div>
+    <div class="ins-item"><div class="ins-t">结构>数值</div><div class="ins-d">ADR和OCC的关系结构比各自数值更本质——关键看两个表示的同态映射</div></div>
+  </div>
+  <div class="ins-row">
+    <div class="ins-item"><div class="ins-t">可逆性=健康度</div><div class="ins-d">每个决策必须可撤销（逆元存在）。止损的数学本质=保持操作在群内</div></div>
+    <div class="ins-item"><div class="ins-t">表示论=多视角</div><div class="ins-d">同群不同表示。AHL=向量匹配/置换排列/价格矩阵，三个同构投影</div></div>
+  </div>
+  <div class="ins-row">
+    <div class="ins-item"><div class="ins-t">群同调=阻碍检测</div><div class="ins-d">H¹(G,M)≠0=结构性阻碍，不能直接迁移。分三种：结构/表示/扩张</div></div>
+  </div>
+</div>
+
+<!-- ===== TOOLS ===== -->
+<div class="sec">群论生成的三个新决策工具</div>
+<div class="tools">
+  <div class="tool"><div class="tool-t">商群抽象器</div><div class="tool-d">复杂情境找正规子群N，商群G/N=抽象层级。最优N=最小描述长度=奥卡姆剃刀的数学版本</div></div>
+  <div class="tool"><div class="tool-t">轨道-稳定子</div><div class="tool-d">|Orbit|x|Stabilizer|=|G|。大稳定子+小轨道=稳定不灵活；小稳定子+大轨道=灵活不稳定</div></div>
+  <div class="tool"><div class="tool-t">同调阻碍</div><div class="tool-d">H¹(G,M)衡量扩展阻碍。策略复用前先检测——避坑的数学基础</div></div>
+</div>
+
+<!-- ===== FOOTER ===== -->
+<div class="footer">
+  <div class="ftitle">B166ER · 底层理论架构 V3.0</div>
+  <div class="fdesc">群论不再是"框架"——四条公理是所有认知操作的语法规则。<br>不再叠加，而是贯穿。群论是数学语言，不是第六个框架。</div>
+  <div class="fmeta">Layer 0 元认知 · L0.5 课题分离 · L1 认识论 · L2 策略论 · L3 价值论 · L4 学习论 · L5 执行论 · L5.2 杠杆放大</div>
+</div>
+
+</body>
+</html>

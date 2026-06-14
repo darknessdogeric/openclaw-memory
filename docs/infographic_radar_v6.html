@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 1080px; height: 1920px; margin: 0; overflow: hidden;
+    font-family: 'Noto Sans SC', -apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+    background: linear-gradient(165deg, #0f0c29 0%, #1a1a3e 35%, #24244a 65%, #1a2a3a 100%);
+    color: #ffffff; position: relative;
+  }
+  .grid-bg { position: absolute; top:0; left:0; right:0; bottom:0; background-image: linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px); background-size: 60px 60px; pointer-events: none; }
+  .container { position: relative; z-index: 1; padding: 24px 40px 16px; height: 100%; display: flex; flex-direction: column; justify-content: space-between; }
+
+  .sec-title { font-size: 14px; font-weight: 700; color: #fff; margin-bottom: 6px; display: flex; align-items: center; gap: 5px; letter-spacing: 1px; }
+  .sec-title .ico { display: inline-flex; width: 20px; height: 20px; background: rgba(99,102,241,0.25); border-radius: 4px; align-items: center; justify-content: center; font-size: 10px; flex-shrink: 0; }
+
+  /* CONNECT ARROW */
+  .conn { text-align: center; font-size: 12px; color: rgba(255,255,255,0.06); letter-spacing: 2px; line-height: 1; margin: 2px 0; }
+
+  /* PAIN → NEED */
+  .dual-row { display: flex; gap: 5px; }
+  .dual-box { flex: 1; border-radius: 6px; padding: 6px 8px; }
+  .dual-box .dl { font-size: 10px; font-weight: 600; margin-bottom: 3px; letter-spacing: 1px; }
+  .dual-box .dd { font-size: 10px; line-height: 1.4; }
+  .pains { background: rgba(239,68,68,0.06); border: 1px solid rgba(239,68,68,0.1); }
+  .pains .dl { color: #f87171; }
+  .pains .dd { color: rgba(255,255,255,0.55); }
+  .needs { background: rgba(52,211,153,0.06); border: 1px solid rgba(52,211,153,0.1); }
+  .needs .dl { color: #6ee7b7; }
+  .needs .dd { color: rgba(255,255,255,0.55); }
+
+  /* MODULES */
+  .mod-row { display: flex; gap: 5px; }
+  .mod-item { flex: 1; border-radius: 7px; padding: 8px 8px; text-align: center; border: 1px solid; }
+  .mod-item .micon { font-size: 18px; }
+  .mod-item .mname { font-size: 13px; font-weight: 800; margin: 2px 0 3px; letter-spacing: 0.5px; }
+  .mod-item .mdesc { font-size: 10px; line-height: 1.4; }
+  .ma { background: rgba(6,182,212,0.06); border-color: rgba(6,182,212,0.1); } .ma .mname { color: #22d3ee; } .ma .mdesc { color: rgba(255,255,255,0.55); }
+  .mb { background: rgba(99,102,241,0.06); border-color: rgba(99,102,241,0.1); } .mb .mname { color: #818cf8; } .mb .mdesc { color: rgba(255,255,255,0.55); }
+  .mc { background: rgba(251,191,36,0.06); border-color: rgba(251,191,36,0.1); } .mc .mname { color: #fbbf24; } .mc .mdesc { color: rgba(255,255,255,0.55); }
+
+  /* DATA SOURCES */
+  .ds-row { display: flex; gap: 4px; }
+  .ds-item { flex: 1; border-radius: 5px; padding: 5px 6px; text-align: center; border: 1px solid rgba(255,255,255,0.06); background: rgba(255,255,255,0.03); }
+  .ds-item .di { font-size: 11px; font-weight: 700; letter-spacing: 0.5px; }
+  .ds-item .dd { font-size: 9px; color: rgba(255,255,255,0.35); margin-top: 1px; }
+  .d1 .di { color: #22d3ee; } .d2 .di { color: #818cf8; } .d3 .di { color: #fbbf24; }
+  .d4 .di { color: #34d399; } .d5 .di { color: #f472b6; } .d6 .di { color: #a78bfa; }
+
+  /* SCORE + GRADE */
+  .score-grade { display: flex; gap: 6px; }
+  .score-box { flex: 1.4; }
+  .grade-box { flex: 1; }
+  .sr-row { display: flex; flex-wrap: wrap; gap: 3px; }
+  .sr-item { width: 49%; display: flex; align-items: center; gap: 4px; background: rgba(255,255,255,0.03); border-radius: 4px; padding: 3px 6px; }
+  .sr-item .sl { font-size: 9px; color: rgba(255,255,255,0.4); flex: 1; }
+  .sr-item .sb { height: 5px; background: rgba(255,255,255,0.04); border-radius: 3px; width: 30px; overflow: hidden; flex-shrink: 0; }
+  .sr-item .sb .sf { height: 100%; border-radius: 3px; }
+  .sr-item .sp { font-size: 8px; color: rgba(255,255,255,0.25); min-width: 16px; text-align: right; }
+
+  .gr-row { display: flex; gap: 3px; flex-wrap: wrap; }
+  .gr-item { width: 48%; border-radius: 4px; padding: 4px 4px; text-align: center; border: 1px solid; }
+  .gr-item .gl { font-size: 8px; font-weight: 600; }
+  .gr-item .gv { font-size: 12px; font-weight: 800; margin: 1px 0; }
+  .gr-item .gd { font-size: 7px; color: rgba(255,255,255,0.3); }
+  .ga { background: rgba(6,182,212,0.06); border-color: rgba(6,182,212,0.08); } .ga .gl, .ga .gv { color: #22d3ee; }
+  .gb { background: rgba(99,102,241,0.05); border-color: rgba(99,102,241,0.07); } .gb .gl, .gb .gv { color: #818cf8; }
+  .gc { background: rgba(251,191,36,0.04); border-color: rgba(251,191,36,0.06); } .gc .gl, .gc .gv { color: #fbbf24; }
+  .gd { background: rgba(107,114,128,0.03); border-color: rgba(107,114,128,0.04); } .gd .gl, .gd .gv { color: #9ca3af; }
+
+  /* WORKFLOW */
+  .wf-row { display: flex; gap: 4px; }
+  .wf-step { flex: 1; border-radius: 5px; padding: 6px 4px; text-align: center; border: 1px solid rgba(255,255,255,0.05); background: rgba(255,255,255,0.03); }
+  .wf-step .wi { font-size: 16px; }
+  .wf-step .wt { font-size: 11px; font-weight: 600; color: rgba(255,255,255,0.55); }
+  .wf-step .wd { font-size: 9px; color: rgba(255,255,255,0.25); line-height: 1.2; }
+
+  /* TMC COMPACT */
+  .tmc-flex { display: flex; gap: 5px; }
+  .tmc-col { flex: 1; }
+  .tmc-title { font-size: 10px; font-weight: 600; color: rgba(255,255,255,0.35); margin-bottom: 3px; letter-spacing: 1px; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 2px; }
+  .tmc-list { display: flex; flex-wrap: wrap; gap: 2px; }
+  .tmc-tag { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.04); border-radius: 3px; padding: 2px 6px; font-size: 8px; color: rgba(255,255,255,0.5); display: inline-flex; align-items: center; gap: 2px; }
+
+  /* BOTTOM RESULT */
+  .result-row { display: flex; gap: 4px; }
+  .result-item { flex: 1; border-radius: 5px; padding: 5px 8px; text-align: center; border: 1px solid; display: flex; align-items: center; justify-content: center; gap: 5px; }
+  .result-item .ri { font-size: 14px; }
+  .result-item .rt { font-size: 11px; font-weight: 600; }
+  .result-item .rd { font-size: 9px; color: rgba(255,255,255,0.4); }
+  .ra { background: rgba(6,182,212,0.05); border-color: rgba(6,182,212,0.08); } .ra .rt { color: #22d3ee; }
+  .rb { background: rgba(99,102,241,0.05); border-color: rgba(99,102,241,0.08); } .rb .rt { color: #818cf8; }
+  .rc { background: rgba(52,211,153,0.05); border-color: rgba(52,211,153,0.08); } .rc .rt { color: #6ee7b7; }
+  .rd { background: rgba(251,191,36,0.05); border-color: rgba(251,191,36,0.08); } .rd .rt { color: #fbbf24; }
+
+  .footer { text-align: center; }
+  .footer .tag { font-size: 9px; color: rgba(255,255,255,0.07); letter-spacing: 2px; }
+</style>
+</head>
+<body>
+<div class="grid-bg"></div>
+<div class="container">
+
+  <!-- 痛点 → 需要什么 -->
+  <div class="sec-title"><span class="ico">⚠️</span> 痛点 → 需要什么</div>
+  <div class="dual-row">
+    <div class="dual-box pains">
+      <div class="dl">💰 佣金高 + 🔍 覆盖窄 + ⏰ 发现迟 + 📉 转化低</div>
+      <div class="dd">OTA佣金20-30% / 销售人力有限3-5km覆盖不了 / 企业信号被竞品先手 / 80%拜访无效</div>
+    </div>
+    <div class="dual-box needs">
+      <div class="dl">→ 需要一套AI驱动的主动获客系统</div>
+      <div class="dd">自动扫描·智能评分·精准触达·全渠道覆盖·RFP/MICE/协议客户三赛道并行</div>
+    </div>
+  </div>
+  <div class="conn">↓</div>
+
+  <!-- 三大功能模块 -->
+  <div class="sec-title"><span class="ico">🧩</span> 三大功能模块</div>
+  <div class="mod-row">
+    <div class="mod-item ma">
+      <div class="micon">📡</div>
+      <div class="mname">3-5km协议客户雷达</div>
+      <div class="mdesc">6数据源自动扫描周边企业 → 7维评分排序 → AIGC一键生成开发信 → 导航拜访。覆盖科技/金融/医药等高差旅行业</div>
+    </div>
+    <div class="mod-item mb">
+      <div class="micon">🔗</div>
+      <div class="mname">TMC+RFP自动应答</div>
+      <div class="mdesc">接入24家TMC获取企业差旅数据 → RFP日历监控 → AI自动应答&lt;4h → GDS上传。外资RFP满足GBTA/多语言/合规审计</div>
+    </div>
+    <div class="mod-item mc">
+      <div class="micon">🎪</div>
+      <div class="mname">宴会+MICE专项</div>
+      <div class="mdesc">小红书/抖音提前6-12月捕获婚宴/年会信号 → 竞品档期监控 → AI方案生成&lt;30秒(PDF/H5/报价单)。客单价15-30万/单</div>
+    </div>
+  </div>
+  <div class="conn">↓ 由六大数据源支撑 ↓</div>
+
+  <!-- 六大数据源 -->
+  <div class="sec-title"><span class="ico">🔍</span> 六大数据源</div>
+  <div class="ds-row">
+    <div class="ds-item d1"><div class="di">📍 高德POI</div><div class="dd">企业位置·实时</div></div>
+    <div class="ds-item d2"><div class="di">🏢 企查查</div><div class="dd">工商·每日更新</div></div>
+    <div class="ds-item d3"><div class="di">🔗 TMC桥接</div><div class="dd">差旅量级·每日同步</div></div>
+    <div class="ds-item d4"><div class="di">📋 展会数据</div><div class="dd">排期·每周更新</div></div>
+    <div class="ds-item d5"><div class="di">💍 社交婚宴</div><div class="dd">抖音/小红书·实时</div></div>
+    <div class="ds-item d6"><div class="di">📄 RFP招投标</div><div class="dd">采招网·每4h扫描</div></div>
+  </div>
+  <div class="conn">↓ AI评分 + ABCD分级 ↓</div>
+
+  <!-- 评分 + 分级 -->
+  <div class="score-grade">
+    <div class="score-box">
+      <div class="sec-title" style="margin-bottom:4px;font-size:12px;"><span class="ico">📊</span> 7维评分</div>
+      <div class="sr-row">
+        <div class="sr-item"><span class="sl">距离</span><div class="sb"><div class="sf" style="width:100%;background:#22d3ee"></div></div><span class="sp">20%</span></div>
+        <div class="sr-item"><span class="sl">差旅强度</span><div class="sb"><div class="sf" style="width:100%;background:#22d3ee"></div></div><span class="sp">20%</span></div>
+        <div class="sr-item"><span class="sl">企业规模</span><div class="sb"><div class="sf" style="width:75%;background:#818cf8"></div></div><span class="sp">15%</span></div>
+        <div class="sr-item"><span class="sl">招聘信号</span><div class="sb"><div class="sf" style="width:75%;background:#818cf8"></div></div><span class="sp">15%</span></div>
+        <div class="sr-item"><span class="sl">融资扩张</span><div class="sb"><div class="sf" style="width:75%;background:#fbbf24"></div></div><span class="sp">15%</span></div>
+        <div class="sr-item"><span class="sl">展会关联</span><div class="sb"><div class="sf" style="width:50%;background:#fbbf24"></div></div><span class="sp">10%</span></div>
+        <div class="sr-item"><span class="sl">社交意向</span><div class="sb"><div class="sf" style="width:25%;background:#f472b6"></div></div><span class="sp">5%</span></div>
+      </div>
+    </div>
+    <div class="grade-box">
+      <div class="sec-title" style="margin-bottom:4px;font-size:12px;"><span class="ico">🏆</span> ABCD分级</div>
+      <div class="gr-row">
+        <div class="gr-item ga"><div class="gl">A级 90+</div><div class="gv">即时跟进</div><div class="gd">含联系人+开发信</div></div>
+        <div class="gr-item gb"><div class="gl">B级 70-89</div><div class="gv">本周拜访</div><div class="gd">每日9:00汇总</div></div>
+        <div class="gr-item gc"><div class="gl">C级 50-69</div><div class="gv">培育池</div><div class="gd">每周一更新</div></div>
+        <div class="gr-item gd"><div class="gl">D级 &lt;50</div><div class="gv">监控</div><div class="gd">动态推送</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TMC全遍历 -->
+  <div class="sec-title"><span class="ico">🔗</span> 24家TMC差旅管理公司 &amp; RFP平台</div>
+  <div class="tmc-flex">
+    <div class="tmc-col">
+      <div class="tmc-title">🌍 国际TMC</div>
+      <div class="tmc-list">
+        <span class="tmc-tag">🇺🇸 AMEX GBT</span><span class="tmc-tag">🇳🇱 BCD Travel</span>
+        <span class="tmc-tag">🇫🇷 CWT</span><span class="tmc-tag">🇩🇪 HRS Group</span>
+        <span class="tmc-tag">🇺🇸 SAP Concur</span><span class="tmc-tag">🇺🇸 Lanyon&#8593;</span>
+        <span class="tmc-tag">🇯🇵 JTB</span><span class="tmc-tag">🇦🇺 FCm Travel</span>
+      </div>
+    </div>
+    <div class="tmc-col">
+      <div class="tmc-title">🇨🇳 国内TMC</div>
+      <div class="tmc-list">
+        <span class="tmc-tag">携程商旅</span><span class="tmc-tag">飞猪商旅</span>
+        <span class="tmc-tag">同程商旅</span><span class="tmc-tag">美团商旅</span>
+        <span class="tmc-tag">差旅1号</span><span class="tmc-tag">红色加力</span>
+        <span class="tmc-tag">滴滴企业版</span><span class="tmc-tag">途牛商旅</span>
+      </div>
+    </div>
+    <div class="tmc-col">
+      <div class="tmc-title">📋 RFP+招标平台</div>
+      <div class="tmc-list">
+        <span class="tmc-tag">Lanyon(Cendyn)</span><span class="tmc-tag">HRS Procurement</span>
+        <span class="tmc-tag">CWT Procure</span><span class="tmc-tag">DemandStar</span>
+        <span class="tmc-tag">采招网</span><span class="tmc-tag">千里马</span>
+        <span class="tmc-tag">中国采购招标网</span><span class="tmc-tag">企业官网</span>
+      </div>
+    </div>
+  </div>
+  <div class="conn">↓ 四步获客闭环 ↓</div>
+
+  <!-- 四步闭环 -->
+  <div class="wf-row">
+    <div class="wf-step"><div class="wi">📡</div><div class="wt">雷达扫描</div><div class="wd">6数据源·2h/次<br>3-5km半径</div></div>
+    <div style="display:flex;align-items:center;font-size:14px;color:rgba(255,255,255,0.08);">→</div>
+    <div class="wf-step"><div class="wi">🧠</div><div class="wt">AI评分+分级</div><div class="wd">7维权重+BERT<br>ABCD自动分类</div></div>
+    <div style="display:flex;align-items:center;font-size:14px;color:rgba(255,255,255,0.08);">→</div>
+    <div class="wf-step"><div class="wi">📊</div><div class="wt">分级推送</div><div class="wd">A级即时·B级每日<br>C级每周·D级监控</div></div>
+    <div style="display:flex;align-items:center;font-size:14px;color:rgba(255,255,255,0.08);">→</div>
+    <div class="wf-step"><div class="wi">✍️</div><div class="wt">AIGC触达</div><div class="wd">开发信·RFP应答<br>宴会方案·导航</div></div>
+  </div>
+  <div class="conn">↓ 实现效果 ↓</div>
+
+  <!-- 效果 -->
+  <div class="result-row">
+    <div class="result-item ra"><span class="ri">📈</span><div><div class="rt">效率+300%</div><div class="rd">AI替代人工扫楼</div></div></div>
+    <div class="result-item rb"><span class="ri">🎯</span><div><div class="rt">转化&gt;15%</div><div class="rd">B级以上精准线索</div></div></div>
+    <div class="result-item rc"><span class="ri">⏱️</span><div><div class="rt">RFP&lt;4h</div><div class="rd">自动应答+外资合规</div></div></div>
+    <div class="result-item rd"><span class="ri">💎</span><div><div class="rt">MICE+60%</div><div class="rd">方案2天→30秒</div></div></div>
+  </div>
+
+  <div class="footer">
+    <div class="tag">AHL · ERIC'S B166ER 出品 · 全套方案已归档 docs/radarpro-*.md</div>
+  </div>
+</div>
+</body>
+</html>
