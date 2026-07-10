@@ -157,9 +157,8 @@ class ObscuraAdapter(BaseScraperAdapter):
 
     OBSCURA_PATTERNS = [
         "ctrip.com", "meituan.com", "xiaohongshu.com",
-        "douyin.com", "fliggy.com", "hotels.com",
-        "booking.com", "airbnb.com", "expedia.com",
-        "agoda.com", ".jd.com", ".taobao.com",
+        "douyin.com", "fliggy.com",
+        ".jd.com", ".taobao.com",
     ]
 
     def is_available(self) -> bool:
@@ -205,7 +204,7 @@ class ObscuraAdapter(BaseScraperAdapter):
             cmd.append("--stealth")
         cmd.extend(["--eval", eval_js, "--timeout", str(timeout), "--quiet"])
         r = subprocess.run(cmd, capture_output=True, timeout=timeout + 10,
-                          errors="replace")
+                          encoding="utf-8", errors="replace")
         return r.stdout.strip() if r.stdout else ""
 
 
@@ -311,8 +310,283 @@ class TavilyAdapter(BaseScraperAdapter):
                               errors=[str(e)], url=query)
 
 
+_SKYVERN_VENV_PY = os.path.join(_ROOT, "workspace", "skyvern_env", "Scripts", "python.exe")
+_SKYVERN_SCRIPTS = os.path.join(_ROOT, "toolbox", "skyvern_scripts")
+_SKYVERN_LLM_KEY = os.environ.get("OPENAI_API_KEY") or os.environ.get("ANTHROPIC_API_KEY") or ""
+
+def _run_skyvern_script(script_content: str, timeout: int = 300) -> str:
+    """在 Skyvern 3.12 虚拟环境中执行脚本，返回 stdout"""
+    import tempfile, pathlib
+    os.makedirs(_SKYVERN_SCRIPTS, exist_ok=True)
+    with tempfile.NamedTemporaryFile(mode="w", suffix="_skyvern.py",
+                                      dir=_SKYVERN_SCRIPTS, delete=False,
+                                      encoding="utf-8") as f:
+        f.write(script_content)
+        script_path = f.name
+    env = os.environ.copy()
+    if _SKYVERN_LLM_KEY:
+        env["OPENAI_API_KEY"] = _SKYVERN_LLM_KEY
+    try:
+        r = subprocess.run([_SKYVERN_VENV_PY, script_path],
+                          capture_output=True, timeout=timeout,
+                          env=env, cwd=_ROOT, errors="replace")
+        return (r.stdout or "").strip()
+    except subprocess.TimeoutExpired:
+        return "{\"success\":false,\"error\":\"timeout\"}"
+    finally:
+        try:
+            os.unlink(script_path)
+        except:
+            pass
+
+
+def _skyvern_extract(url: str, prompt: str, schema: dict = None,
+                     max_steps: int = 8) -> dict:
+    """用 Skyvern Vision LLM 从页面提取结构化数据"""
+    schema_str = json.dumps(schema) if schema else "null"
+    script = f'''
+import asyncio, json, os
+from skyvern import Skyvern
+async def main():
+    api_key = os.environ.get("OPENAI_API_KEY") or os.environ.get("ANTHROPIC_API_KEY","")
+    if not api_key:
+        print(json.dumps({{"success":False,"error":"no_api_key"}})); return
+    sv = Skyvern(api_key=api_key)
+    task = await sv.run_task(
+        prompt="Navigate to {url} and {prompt}",
+        max_steps={max_steps},
+        data_extraction_schema={schema_str},
+        headless=True
+    )
+    print(json.dumps({{
+        "success": task.get("completed",False),
+        "data": task.get("extracted_data") or task.get("status",""),
+        "error": None,
+        "steps": task.get("steps",0)
+    }}, ensure_ascii=False))
+asyncio.run(main())
+'''
+    try:
+        out = _run_skyvern_script(script)
+        return json.loads(out)
+    except:
+        return {"success": False, "error": out[:200], "data": None}
+
+
 # ──────────────────────────────────────────────
-# 7. 编排器
+# 8. Skyvern 适配器（智能兜底层，Priority 1）
+# ──────────────────────────────────────────────
+class SkyvernAdapter(BaseScraperAdapter):
+    """
+    Skyvern Vision LLM 适配器
+    兜底方案：当 scrap_tools/Obscura/Playwright/Tavily 都失败时使用
+    核心优势：无需XPath，用自然语言理解任何页面，换网站不坏
+    """
+    name = "Skyvern"
+    priority = 1  # 最高优先级（数字小），在所有工具都失败后作为智能兜底
+    
+    SKYVERN_TRIGGERS = ["extract", "结构化", "复杂页面", "登录", "需要理解"]
+
+    def is_available(self) -> bool:
+        return (
+            os.path.exists(_SKYVERN_VENV_PY)
+            and bool(_SKYVERN_LLM_KEY)
+        )
+
+    def can_handle(self, url: str, task_type: str = "auto") -> bool:
+        # 仅在以下情况触发 Skyvern：
+        # 1. task_type == "vision" 或 "smart"（显式要求智能理解）
+        # 2. 之前所有工具都失败了（由编排器判断）
+        # 3. url 包含需要复杂交互的关键词
+        if task_type in ("vision", "smart"):
+            return True
+        if any(t in url.lower() for t in self.SKYVERN_TRIGGERS):
+            return True
+        return False
+
+    def scrape(self, url: str, **kwargs) -> ScrapeResult:
+        prompt = kwargs.get("prompt", f"Extract the main content from this page")
+        schema = kwargs.get("schema")
+        max_steps = kwargs.get("max_steps", 8)
+
+        result = _skyvern_extract(url, prompt, schema, max_steps)
+
+        if result.get("success"):
+            data = result.get("data", {})
+            content = json.dumps(data, ensure_ascii=False) if isinstance(data, dict) else str(data)
+            return ScrapeResult(
+                status=ScrapeStatus.SUCCESS,
+                content=content,
+                tool_used=self.name,
+                attempts=result.get("steps", 1),
+                url=url
+            )
+        return ScrapeResult(
+            status=ScrapeStatus.FAILED,
+            content="",
+            tool_used=self.name,
+            attempts=1,
+            errors=[result.get("error", "unknown")],
+            url=url
+        )
+
+
+# ──────────────────────────────────────────────
+# 9. Vision 适配器（智能兜底）
+# ──────────────────────────────────────────────
+# ─────────────────────────────────────────────
+# 9.5 InvisiblePlaywright 适配器（跨境 OTA + Firefox 引擎 2026-06-12）
+# ─────────────────────────────────────────────
+class InvisiblePlaywrightAdapter(BaseScraperAdapter):
+    """
+    InvisiblePlaywright 适配器 - Firefox 150 + C++ 源 patch
+    专属场景：跨境 OTA / 强反爬平台（Booking/Agoda/Airbnb/Expedia）
+    核心优势：reCAPTCHA v3 0.90 vs Chromium 0.3-0.5（断层领先）
+    验证：2026-06-12 A/B 对比，Obscura 被 consent 页拦截，本工具成功
+    """
+    name = "InvisiblePlaywright"
+    priority = 4  # 介于 Playwright(3) 和 Tavily(4) 之间
+
+    CROSS_BORDER_DOMAINS = [
+        # OTA 跨境平台
+        "booking.com", "agoda.com", "tripadvisor.com",
+        "expedia.com", "hotels.com", "trivago.com",
+        "airbnb.com", "kayak.com", "priceline.com",
+        # 跨境社交 / 媒体
+        "twitter.com", "x.com", "linkedin.com",
+        "instagram.com", "facebook.com", "pinterest.com",
+        "reddit.com", "yelp.com", "glassdoor.com",
+        # 跨境电商
+        "amazon.com", "ebay.com", "aliexpress.com",
+    ]
+
+    def is_available(self) -> bool:
+        try:
+            from invisible_playwright import InvisiblePlaywright
+            return True
+        except ImportError:
+            return False
+
+    def can_handle(self, url: str, task_type: str = "auto") -> bool:
+        url_lower = url.lower()
+        # 跨境场景：默认走 invisible_playwright
+        if any(d in url_lower for d in self.CROSS_BORDER_DOMAINS):
+            return True
+        # task_type=cross-border 显式指定
+        if task_type == "cross-border":
+            return True
+        return False
+
+    def scrape(self, url: str, **kwargs) -> ScrapeResult:
+        try:
+            from invisible_playwright import InvisiblePlaywright
+            wait_ms = kwargs.get("wait_ms", 8000)
+            timeout_ms = kwargs.get("timeout_ms", 45000)
+            extract = kwargs.get("extract", "title")
+            proxy = kwargs.get("proxy", None)
+            timezone = kwargs.get("timezone", None)
+
+            ctx_args = {}
+            if proxy:
+                ctx_args["proxy"] = proxy
+            if timezone:
+                ctx_args["timezone"] = timezone
+
+            with InvisiblePlaywright(**ctx_args) as browser:
+                page = browser.new_page()
+                try:
+                    page.goto(url, timeout=timeout_ms, wait_until="domcontentloaded")
+                    page.wait_for_timeout(wait_ms)
+                    if extract == "title":
+                        content = page.title()
+                    elif extract == "html":
+                        content = page.content()
+                    elif extract == "text":
+                        content = page.evaluate("() => document.body.innerText")
+                    else:
+                        content = page.evaluate(extract)
+                    return ScrapeResult(
+                        status=ScrapeStatus.SUCCESS if content else ScrapeStatus.PARTIAL,
+                        content=content or "",
+                        tool_used=self.name,
+                        attempts=1,
+                        url=url,
+                    )
+                except Exception as e:
+                    return ScrapeResult(
+                        status=ScrapeStatus.FAILED, content="",
+                        tool_used=self.name, attempts=1,
+                        errors=[str(e)], url=url,
+                    )
+                finally:
+                    page.close()
+        except ImportError:
+            return ScrapeResult(status=ScrapeStatus.FAILED, content="",
+                              tool_used=self.name, attempts=1,
+                              errors=["invisible_playwright not installed"], url=url)
+        except Exception as e:
+            return ScrapeResult(status=ScrapeStatus.FAILED, content="",
+                              tool_used=self.name, attempts=1,
+                              errors=[str(e)], url=url)
+
+
+class VisionAdapter(BaseScraperAdapter):
+    """
+    Vision LLM 适配器
+    用 MiniMax-M2 Vision 直接理解页面截图——彻底告别XPath
+    作为所有工具都失败后的智能兜底
+    """
+    name = "Vision"
+    priority = 5
+
+    def is_available(self) -> bool:
+        try:
+            sys.path.insert(0, os.path.join(_ROOT, "toolbox"))
+            from vision_extractor import is_vision_available
+            return is_vision_available()
+        except ImportError:
+            return False
+
+    def can_handle(self, url: str, task_type: str = "auto") -> bool:
+        # Vision 作为兜底：任何 url 都可以处理，但优先级最低
+        return task_type in ("vision", "smart")
+
+    def scrape(self, url: str, **kwargs) -> ScrapeResult:
+        prompt = kwargs.get("prompt", "Extract all useful text from this page")
+        try:
+            sys.path.insert(0, os.path.join(_ROOT, "toolbox"))
+            from vision_extractor import extract_with_vision
+
+            result = extract_with_vision(url, prompt)
+
+            if result.success:
+                return ScrapeResult(
+                    status=ScrapeStatus.SUCCESS,
+                    content=result.content,
+                    tool_used=self.name,
+                    attempts=1,
+                    url=url
+                )
+            return ScrapeResult(
+                status=ScrapeStatus.PARTIAL,
+                content=result.content or "",
+                tool_used=self.name,
+                attempts=1,
+                errors=[result.error] if result.error else [],
+                url=url
+            )
+        except ImportError:
+            return ScrapeResult(status=ScrapeStatus.FAILED, content="",
+                              tool_used=self.name, attempts=1,
+                              errors=["vision_extractor not found"], url=url)
+        except Exception as e:
+            return ScrapeResult(status=ScrapeStatus.FAILED, content="",
+                              tool_used=self.name, attempts=1,
+                              errors=[str(e)], url=url)
+
+
+# ──────────────────────────────────────────────
+# 10. 编排器（含 Vision 兜底）
 # ──────────────────────────────────────────────
 class ScrapeSkillOrchestrator:
     """
@@ -326,7 +600,9 @@ class ScrapeSkillOrchestrator:
             ScrapToolsAdapter(),
             ObscuraAdapter(),
             PlaywrightAdapter(),
+            InvisiblePlaywrightAdapter(),  # 跨境 OTA / Firefox 引擎 备选
             TavilyAdapter(),
+            VisionAdapter(),  # Vision LLM 兜底（scrap失败时调用）
         ]:
             if adapter.is_available():
                 self.adapters.append(adapter)
@@ -337,6 +613,7 @@ class ScrapeSkillOrchestrator:
         errors = []
         attempts = 0
 
+        # Skyvern 作为最后兜底（当所有其他工具都失败时）
         for adapter in self.adapters:
             if not adapter.can_handle(url, task_type):
                 continue
@@ -349,6 +626,20 @@ class ScrapeSkillOrchestrator:
                 errors.append(f"{adapter.name}: {result.errors}")
             except Exception as e:
                 errors.append(f"{adapter.name} Exception: {str(e)}")
+
+        # ── 所有工具都失败了？尝试 Skyvern 智能兜底 ──
+        if skyvern_available := SkyvernAdapter().is_available():
+            try:
+                skyvern = SkyvernAdapter()
+                prompt = kwargs.get("prompt", "Extract all useful information from this page")
+                result = skyvern.scrape(url, prompt=prompt,
+                                        schema=kwargs.get("schema"),
+                                        max_steps=kwargs.get("max_steps", 8))
+                if result.status == ScrapeStatus.SUCCESS:
+                    return result
+                errors.append(f"Skyvern兜底失败: {result.errors}")
+            except Exception as e:
+                errors.append(f"Skyvern兜底异常: {str(e)}")
 
         return ScrapeResult(
             status=ScrapeStatus.FAILED,
@@ -382,7 +673,25 @@ def get_orchestrator() -> ScrapeSkillOrchestrator:
     return _orch
 
 def scrape(url: str, task_type: str = "auto", **kwargs) -> ScrapeResult:
+    """
+    统一爬取接口（含 Skyvern 智能兜底）
+    
+    额外参数（Skyvern）：
+        prompt: 自然语言提取指令
+        schema: JSON Schema 输出格式
+        max_steps: 最大步数（控制任务复杂度）
+    """
     return get_orchestrator().scrape(url, task_type, **kwargs)
+
+def scrape_smart(url: str, prompt: str = "Extract all useful content",
+                 schema: dict = None, max_steps: int = 8) -> ScrapeResult:
+    """
+    Skyvern 智能提取 - 强制使用 Vision LLM 理解页面
+    适用于：复杂页面/无API/需要语义理解的场景
+    """
+    return get_orchestrator().scrape(url, task_type="vision",
+                                    prompt=prompt, schema=schema,
+                                    max_steps=max_steps)
 
 def scrape_search(query: str, max_results: int = 5) -> ScrapeResult:
     return get_orchestrator().scrape("__search__", task_type="research",

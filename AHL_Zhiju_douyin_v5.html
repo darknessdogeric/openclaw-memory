@@ -1,0 +1,455 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<title>知局 · 酒店收益管理实战手册 · 抖音版</title>
+<style>
+  :root {
+    --ink: #0A2540;
+    --paper: #FAF8F4;
+    --accent: #DC2626;
+    --gold: #D4A574;
+    --muted: rgba(250,248,244,0.78);
+    --muted-2: rgba(250,248,244,0.55);
+    --rule: rgba(212,165,116,0.25);
+    --hot: #F59E0B;  /* 钩子色：暖橙（避免 indigo） */
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body {
+    background: var(--ink);
+    color: var(--paper);
+    font-family: 'Source Han Serif SC', 'Noto Serif CJK SC', 'Songti SC', 'PingFang SC', Georgia, serif;
+    -webkit-font-smoothing: antialiased;
+    font-weight: 500;
+  }
+  .poster {
+    width: 1080px;
+    height: 1920px;
+    background: var(--ink);
+    padding: 70px 70px 60px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  .poster::before {
+    content: '';
+    position: absolute; inset: 0;
+    background-image:
+      radial-gradient(circle at 1px 1px, rgba(212,165,116,0.07) 1px, transparent 0);
+    background-size: 28px 28px;
+    pointer-events: none;
+  }
+
+  /* HEADER */
+  .eyebrow {
+    position: relative; z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: ui-monospace, 'SF Mono', monospace;
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing: 0.20em;
+    text-transform: uppercase;
+    color: var(--paper);
+  }
+  .eyebrow .dot { width: 10px; height: 10px; background: var(--accent); border-radius: 50%; }
+
+  /* HOOK - 顶部强主张 */
+  .hook {
+    position: relative; z-index: 1;
+    margin-top: 30px;
+    padding: 28px 30px;
+    background: rgba(245,158,11,0.10);
+    border: 1px solid var(--hot);
+    border-left: 4px solid var(--hot);
+  }
+  .hook .tag {
+    font-family: ui-monospace, monospace;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--hot);
+    letter-spacing: 0.20em;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+  .hook .q {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.15;
+    color: var(--paper);
+    letter-spacing: -0.02em;
+  }
+  .hook .q em {
+    color: var(--hot);
+    font-style: normal;
+    font-weight: 800;
+  }
+  .hook .sub {
+    margin-top: 14px;
+    font-family: ui-monospace, monospace;
+    font-size: 16px;
+    color: var(--muted);
+    letter-spacing: 0.04em;
+  }
+
+  /* 产品名 */
+  .product {
+    position: relative; z-index: 1;
+    margin-top: 30px;
+  }
+  .product .kicker {
+    font-family: ui-monospace, monospace;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 14px;
+  }
+  .product h1 {
+    font-size: 80px;
+    font-weight: 700;
+    line-height: 1.0;
+    letter-spacing: -0.03em;
+  }
+  .product h1 .red { color: var(--accent); font-style: italic; }
+  .product .sub {
+    margin-top: 16px;
+    font-family: ui-monospace, monospace;
+    font-size: 17px;
+    color: var(--muted);
+    letter-spacing: 0.06em;
+  }
+  .product .sub .hi { color: var(--paper); font-weight: 600; }
+
+  /* 3 大数字 */
+  .big3 {
+    position: relative; z-index: 1;
+    margin-top: 28px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0;
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+    padding: 20px 0;
+  }
+  .big3 > div {
+    padding: 0 18px;
+    border-right: 1px solid var(--rule);
+  }
+  .big3 > div:last-child { border-right: none; }
+  .big3 .num {
+    font-family: ui-monospace, 'SF Mono', monospace;
+    font-size: 60px;
+    font-weight: 600;
+    line-height: 1;
+    color: var(--paper);
+    letter-spacing: -0.04em;
+  }
+  .big3 .num .unit { font-size: 24px; color: var(--accent); margin-left: 4px; }
+  .big3 .label {
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--paper);
+  }
+  .big3 .label small {
+    display: block;
+    font-family: ui-monospace, monospace;
+    font-size: 11px;
+    color: var(--muted-2);
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    margin-top: 2px;
+  }
+
+  /* SECTION TITLE */
+  .sec-title {
+    position: relative; z-index: 1;
+    margin-top: 32px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: ui-monospace, 'SF Mono', monospace;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--gold);
+  }
+  .sec-title::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--rule);
+  }
+
+  /* 17 章目录 - 2 列 */
+  .chapters {
+    position: relative; z-index: 1;
+    margin-top: 12px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 22px;
+    row-gap: 0;
+  }
+  .chap {
+    display: grid;
+    grid-template-columns: 42px 1fr;
+    align-items: baseline;
+    padding: 6px 0;
+    border-bottom: 1px dashed var(--rule);
+  }
+  .chap .n {
+    font-family: ui-monospace, 'SF Mono', monospace;
+    font-size: 15px;
+    color: var(--gold);
+    font-weight: 700;
+  }
+  .chap .t {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--paper);
+    line-height: 1.4;
+  }
+  .chap .t small {
+    color: var(--muted-2);
+    font-family: ui-monospace, monospace;
+    font-size: 10.5px;
+    margin-left: 4px;
+  }
+
+  /* 3 大特性 - 一行 */
+  .props {
+    position: relative; z-index: 1;
+    margin-top: 24px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0;
+    border: 1px solid var(--rule);
+  }
+  .prop {
+    padding: 16px 18px;
+    border-right: 1px solid var(--rule);
+  }
+  .prop:last-child { border-right: none; }
+  .prop .head {
+    font-family: 'Source Han Serif SC', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--paper);
+    margin-bottom: 8px;
+  }
+  .prop .head .mark { color: var(--accent); }
+  .prop .body {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--muted);
+    line-height: 1.55;
+  }
+
+  /* 8 Excel - 4×2 */
+  .excels {
+    position: relative; z-index: 1;
+    margin-top: 12px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 0;
+    border: 1px solid var(--rule);
+  }
+  .exc {
+    padding: 12px 14px;
+    border-right: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+  }
+  .exc:nth-child(4n) { border-right: none; }
+  .exc:nth-last-child(-n+4) { border-bottom: none; }
+  .exc .n {
+    font-family: ui-monospace, 'SF Mono', monospace;
+    font-size: 12px;
+    color: var(--accent);
+    font-weight: 700;
+  }
+  .exc .t {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--paper);
+    margin-top: 3px;
+    line-height: 1.3;
+  }
+
+  /* 底部钩子 CTA - 强主张 */
+  .cta {
+    position: relative; z-index: 1;
+    margin-top: auto;
+    padding: 26px 28px;
+    background: rgba(220,38,38,0.10);
+    border: 1px solid var(--accent);
+    border-left: 4px solid var(--accent);
+  }
+  .cta .row1 {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--accent);
+    letter-spacing: 0.20em;
+    text-transform: uppercase;
+    font-family: ui-monospace, monospace;
+    margin-bottom: 10px;
+  }
+  .cta .row1 .arrow { font-size: 18px; }
+  .cta .row2 {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--paper);
+    letter-spacing: -0.01em;
+  }
+  .cta .row2 em {
+    color: var(--accent);
+    font-style: normal;
+    font-weight: 800;
+  }
+  .cta .row3 {
+    margin-top: 10px;
+    font-size: 15px;
+    color: var(--muted);
+    font-family: ui-monospace, monospace;
+    letter-spacing: 0.04em;
+  }
+  .cta .row3 .hi { color: var(--paper); font-weight: 600; }
+
+  /* FOOTER */
+  .footer {
+    position: relative; z-index: 1;
+    margin-top: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: ui-monospace, 'SF Mono', monospace;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .footer .left { display: flex; flex-direction: column; gap: 3px; }
+  .footer .left .name { color: var(--paper); font-weight: 700; }
+  .footer .right { display: flex; align-items: center; gap: 14px; }
+  .footer .bar { width: 40px; height: 2px; background: var(--accent); }
+</style>
+</head>
+<body>
+  <div class="poster">
+    <!-- HEADER -->
+    <div class="eyebrow">
+      <span>B·166·ER · ZHIJU</span>
+      <span class="dot"></span>
+    </div>
+
+    <!-- TOP HOOK - 强主张 -->
+    <div class="hook">
+      <div class="tag">→ HOT TAKE</div>
+      <div class="q">为什么你的酒店，<em>越忙越亏</em>？</div>
+      <div class="sub">90% 业主没意识到：定价模型是错的</div>
+    </div>
+
+    <!-- 产品名 -->
+    <div class="product">
+      <div class="kicker">酒店业酒店总经理 · 全链路 RM 实战体系</div>
+      <h1>酒店收益管理<br/><span class="red">实战手册</span></h1>
+      <div class="sub"><span class="hi">17 章 · 8 Excel · 60+ 操作步骤</span></div>
+    </div>
+
+    <!-- 3 大数字 -->
+    <div class="big3">
+      <div>
+        <div class="num">17<span class="unit">章</span></div>
+        <div class="label">完整章节<small>Chapters</small></div>
+      </div>
+      <div>
+        <div class="num">8<span class="unit">个</span></div>
+        <div class="label">Excel 模板<small>Templates</small></div>
+      </div>
+      <div>
+        <div class="num">60<span class="unit">+</span></div>
+        <div class="label">操作步骤<small>Operations</small></div>
+      </div>
+    </div>
+
+    <!-- 17 章目录 -->
+    <div class="sec-title">17 章完整目录</div>
+    <div class="chapters">
+      <div class="chap"><div class="n">00</div><div class="t">来龙去脉<small>9 个时期</small></div></div>
+      <div class="chap"><div class="n">01</div><div class="t">基础概念<small>5R 框架</small></div></div>
+      <div class="chap"><div class="n">02</div><div class="t">市场细分<small>18 子类</small></div></div>
+      <div class="chap"><div class="n">03</div><div class="t">10 个公式<small>商业逻辑</small></div></div>
+      <div class="chap"><div class="n">04</div><div class="t">需求预测<small>5 种方法</small></div></div>
+      <div class="chap"><div class="n">05</div><div class="t">12 种定价战术<small>全天候</small></div></div>
+      <div class="chap"><div class="n">06</div><div class="t">组织架构<small>RM 体系</small></div></div>
+      <div class="chap"><div class="n">07</div><div class="t">特殊事件 SOP<small>展会/赛事</small></div></div>
+      <div class="chap"><div class="n">08</div><div class="t">企业协议价<small>矩阵设计</small></div></div>
+      <div class="chap"><div class="n">09</div><div class="t">Flow-Through<small>利润转化</small></div></div>
+      <div class="chap"><div class="n">10</div><div class="t">城市价格区间<small>5 城 4 档</small></div></div>
+      <div class="chap"><div class="n">11</div><div class="t">库存超售<small>保护级</small></div></div>
+      <div class="chap"><div class="n">12</div><div class="t">渠道管理<small>ROI 分析</small></div></div>
+      <div class="chap"><div class="n">13</div><div class="t">RMS 系统<small>五代理</small></div></div>
+      <div class="chap"><div class="n">14</div><div class="t">中国市场<small>本土化</small></div></div>
+      <div class="chap"><div class="n">15</div><div class="t">行为经济学<small>6 种偏差</small></div></div>
+      <div class="chap"><div class="n">16</div><div class="t">AI 收益引擎<small>四层架构</small></div></div>
+      <div class="chap"><div class="n">★</div><div class="t">虚拟案例<small>华庭酒店周报</small></div></div>
+    </div>
+
+    <!-- 3 大特性 + 8 Excel 并排 -->
+    <div class="sec-title">3 大特性 + 8 Excel 模板</div>
+    <div class="props">
+      <div class="prop">
+        <div class="head"><span class="mark">●</span> 全面</div>
+        <div class="body">17 章覆盖 RM 全链路 — 从历史到 AI</div>
+      </div>
+      <div class="prop">
+        <div class="head"><span class="mark">●</span> 实用</div>
+        <div class="body">讲道理 + 教你怎么做，双轨并行</div>
+      </div>
+      <div class="prop">
+        <div class="head"><span class="mark">●</span> 易上手</div>
+        <div class="body">零基础可读，Excel 填数据即出结果</div>
+      </div>
+    </div>
+    <div class="excels">
+      <div class="exc"><div class="n">01</div><div class="t">RevPAR<br/>计算器</div></div>
+      <div class="exc"><div class="n">02</div><div class="t">EMSRb<br/>保护级</div></div>
+      <div class="exc"><div class="n">03</div><div class="t">渠道<br/>ROI</div></div>
+      <div class="exc"><div class="n">04</div><div class="t">竞品价格<br/>追踪</div></div>
+      <div class="exc"><div class="n">05</div><div class="t">需求<br/>预测</div></div>
+      <div class="exc"><div class="n">06</div><div class="t">价格<br/>弹性</div></div>
+      <div class="exc"><div class="n">07</div><div class="t">节假日<br/>定价</div></div>
+      <div class="exc"><div class="n">08</div><div class="t">预算<br/>对照</div></div>
+    </div>
+
+    <!-- 底部钩子 CTA -->
+    <div class="cta">
+      <div class="row1"><span class="arrow">→</span> <span>想看完整 17 章？下条视频讲透</span></div>
+      <div class="row2">关注 <em>不迷路</em> · 欢迎评论区交流</div>
+      <div class="row3"><span class="hi">下一期：</span>RevPAR 提高 30% 的 3 个笨办法（亲历）</div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer">
+      <div class="left">
+        <span class="name">B·166·ER · 知局 V3</span>
+        <span>Zhang Shi · 酒店业酒店老兵</span>
+      </div>
+      <div class="right">
+        <span>Anti-AI-Slop</span>
+        <span class="bar"></span>
+        <span>v5</span>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

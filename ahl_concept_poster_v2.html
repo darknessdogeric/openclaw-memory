@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AHL 概念海报</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+SC:wght@300;400;500;700;900&family=JetBrains+Mono:wght@400;500&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    width: 1080px;
+    height: 1920px;
+    background: #0A1628;
+    font-family: 'Noto Sans SC', 'Inter', sans-serif;
+    overflow: hidden;
+    position: relative;
+  }
+
+  /* === Background === */
+  .bg {
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 100% 50% at 50% -10%, rgba(6, 182, 212, 0.10) 0%, transparent 55%),
+      radial-gradient(ellipse 70% 50% at 20% 90%, rgba(37, 99, 235, 0.08) 0%, transparent 50%),
+      radial-gradient(ellipse 60% 40% at 85% 85%, rgba(249, 115, 22, 0.06) 0%, transparent 50%),
+      linear-gradient(180deg, #080E1C 0%, #0A1628 40%, #0D1E35 100%);
+  }
+
+  /* Subtle dot grid */
+  .dots {
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(rgba(6,182,212,0.15) 1px, transparent 1px);
+    background-size: 48px 48px;
+    mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 10%, transparent 70%);
+  }
+
+  /* === TOP SECTION === */
+  .top-bar {
+    position: relative;
+    z-index: 10;
+    padding: 52px 56px 0;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .logo-lockup {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .logo-icon {
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(135deg, #F97316 0%, #EA580C 100%);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    font-size: 22px;
+    color: white;
+    box-shadow: 0 6px 20px rgba(249, 115, 22, 0.35);
+    flex-shrink: 0;
+  }
+
+  .brand-name {
+    font-size: 28px;
+    font-weight: 800;
+    color: #FFFFFF;
+    letter-spacing: 4px;
+    line-height: 1;
+  }
+
+  .brand-sub {
+    font-size: 11px;
+    font-weight: 400;
+    color: #6B7280;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-top: 3px;
+  }
+
+  /* === HERO TITLE === */
+  .hero {
+    position: relative;
+    z-index: 10;
+    padding: 64px 56px 0;
+    text-align: center;
+  }
+
+  .big-title {
+    font-size: 160px;
+    font-weight: 900;
+    line-height: 0.9;
+    letter-spacing: -6px;
+    color: #FFFFFF;
+    margin-bottom: 0;
+  }
+
+  .big-title .highlight {
+    display: block;
+    background: linear-gradient(135deg, #F97316 0%, #FB923C 50%, #F97316 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .chinese-name {
+    font-size: 36px;
+    font-weight: 700;
+    color: #E5E7EB;
+    letter-spacing: 12px;
+    margin-top: 16px;
+  }
+
+  .mission-line {
+    font-size: 15px;
+    font-weight: 400;
+    color: #6B7280;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-top: 24px;
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  /* === DIVIDER === */
+  .divider {
+    position: relative;
+    z-index: 10;
+    margin: 48px 56px 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(6,182,212,0.3), rgba(249,115,22,0.3), transparent);
+  }
+
+  /* === WHAT IS AHL — Core Concept Block === */
+  .concept-section {
+    position: relative;
+    z-index: 10;
+    padding: 40px 56px 0;
+  }
+
+  .section-label {
+    font-size: 11px;
+    font-weight: 500;
+    color: #06B6D4;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  .concept-statement {
+    font-size: 22px;
+    font-weight: 400;
+    color: #D1D5DB;
+    line-height: 1.8;
+    letter-spacing: 0.3px;
+  }
+
+  .concept-statement strong {
+    color: #FFFFFF;
+    font-weight: 600;
+  }
+
+  .concept-statement .coral { color: #F97316; font-weight: 600; }
+  .concept-statement .cyan { color: #06B6D4; font-weight: 600; }
+
+  /* === THREE CORE PRINCIPLES === */
+  .principles {
+    position: relative;
+    z-index: 10;
+    padding: 40px 56px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .principle {
+    background: rgba(17, 24, 39, 0.6);
+    border: 1px solid rgba(55, 65, 81, 0.5);
+    border-radius: 16px;
+    padding: 24px 28px;
+    display: grid;
+    grid-template-columns: 52px 1fr;
+    gap: 20px;
+    align-items: start;
+    backdrop-filter: blur(8px);
+    transition: border-color 200ms ease;
+  }
+
+  .principle:hover {
+    border-color: rgba(6, 182, 212, 0.25);
+  }
+
+  .p-num {
+    font-size: 13px;
+    font-weight: 700;
+    color: #06B6D4;
+    font-family: 'JetBrains Mono', monospace;
+    padding-top: 3px;
+    opacity: 0.7;
+  }
+
+  .p-body { flex: 1; }
+
+  .p-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #F9FAFB;
+    margin-bottom: 8px;
+    letter-spacing: 0.3px;
+  }
+
+  .p-title .p-accent {
+    color: #F97316;
+  }
+
+  .p-desc {
+    font-size: 14px;
+    font-weight: 400;
+    color: #9CA3AF;
+    line-height: 1.7;
+  }
+
+  .p-tech {
+    margin-top: 8px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(6, 182, 212, 0.08);
+    border: 1px solid rgba(6, 182, 212, 0.15);
+    border-radius: 6px;
+    padding: 4px 10px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: #06B6D4;
+    letter-spacing: 0.5px;
+  }
+
+  /* === ARCHITECTURE STRIP === */
+  .arch-strip {
+    position: relative;
+    z-index: 10;
+    padding: 40px 56px 0;
+  }
+
+  .arch-label {
+    font-size: 11px;
+    font-weight: 500;
+    color: #6B7280;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  .arch-flow {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    background: rgba(10, 16, 32, 0.8);
+    border: 1px solid rgba(55, 65, 81, 0.4);
+    border-radius: 14px;
+    padding: 16px 20px;
+    overflow: hidden;
+  }
+
+  .arch-node {
+    flex: 1;
+    text-align: center;
+    padding: 10px 8px;
+  }
+
+  .arch-node-label {
+    font-size: 11px;
+    font-weight: 600;
+    color: #D1D5DB;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  .arch-node-sub {
+    font-size: 10px;
+    color: #6B7280;
+    margin-top: 3px;
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  .arch-arrow {
+    color: rgba(6, 182, 212, 0.4);
+    font-size: 18px;
+    flex-shrink: 0;
+    padding: 0 4px;
+  }
+
+  .arch-node.accent .arch-node-label { color: #F97316; }
+  .arch-node.cyan .arch-node-label { color: #06B6D4; }
+
+  /* === PROTOCOL ID === */
+  .protocol-id {
+    position: relative;
+    z-index: 10;
+    padding: 40px 56px 0;
+    text-align: center;
+  }
+
+  .proto-box {
+    display: inline-block;
+    background: rgba(6, 182, 212, 0.06);
+    border: 1px solid rgba(6, 182, 212, 0.2);
+    border-radius: 10px;
+    padding: 14px 28px;
+  }
+
+  .proto-label {
+    font-size: 10px;
+    font-weight: 500;
+    color: #6B7280;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-family: 'JetBrains Mono', monospace;
+    margin-bottom: 6px;
+  }
+
+  .proto-value {
+    font-size: 16px;
+    font-weight: 500;
+    color: #06B6D4;
+    font-family: 'JetBrains Mono', monospace;
+    letter-spacing: 1px;
+  }
+
+  /* === BOTTOM TAGLINE === */
+  .bottom-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    padding: 0 56px 48px;
+    background: linear-gradient(0deg, rgba(8, 14, 28, 1) 0%, rgba(8, 14, 28, 0.7) 50%, transparent 100%);
+    padding-top: 100px;
+    text-align: center;
+  }
+
+  .bottom-tagline {
+    font-size: 28px;
+    font-weight: 700;
+    color: #FFFFFF;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+  }
+
+  .bottom-tagline .coral { color: #F97316; }
+
+  .bottom-sub {
+    font-size: 13px;
+    color: #6B7280;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  /* === Corner marks === */
+  .corner {
+    position: absolute;
+    width: 160px;
+    height: 160px;
+    pointer-events: none;
+    z-index: 5;
+  }
+  .corner-tl {
+    top: 0; left: 0;
+    border-top: 1px solid rgba(6, 182, 212, 0.12);
+    border-left: 1px solid rgba(6, 182, 212, 0.12);
+  }
+  .corner-br {
+    bottom: 0; right: 0;
+    border-bottom: 1px solid rgba(249, 115, 22, 0.1);
+    border-right: 1px solid rgba(249, 115, 22, 0.1);
+  }
+
+  /* Subtle scan */
+  .scanline {
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 3px,
+      rgba(0,0,0,0.02) 3px,
+      rgba(0,0,0,0.02) 6px
+    );
+    pointer-events: none;
+    z-index: 100;
+  }
+</style>
+</head>
+<body>
+
+<div class="bg"></div>
+<div class="dots"></div>
+<div class="corner corner-tl"></div>
+<div class="corner corner-br"></div>
+<div class="scanline"></div>
+
+<!-- Top -->
+<div class="top-bar">
+  <div class="logo-lockup">
+    <div class="logo-icon">A</div>
+    <div>
+      <div class="brand-name">AHL</div>
+      <div class="brand-sub">Decentralized Travel</div>
+    </div>
+  </div>
+</div>
+
+<!-- Hero -->
+<div class="hero">
+  <div class="big-title">AHL</div>
+  <div class="chinese-name">去中心化旅行网络</div>
+  <div class="mission-line">// Accommodation Hybrid Ledger</div>
+</div>
+
+<!-- Divider -->
+<div class="divider"></div>
+
+<!-- What is AHL -->
+<div class="concept-section">
+  <div class="section-label">// What is AHL</div>
+  <div class="concept-statement">
+    AHL 是一个基于 <strong>双 Agent 协作</strong> 与 <span class="coral"><strong>区块链智能合约</strong></span> 的去中心化旅行住宿网络。<br><br>
+    它用 <span class="cyan"><strong>AI 替代平台</strong></span> 重新定义旅宿交易的信任机制——<br>
+    房东与租客直接匹配，无需中间商，<span class="coral">佣金归零</span>。
+  </div>
+</div>
+
+<!-- Three Principles -->
+<div class="principles">
+  <div class="principle">
+    <div class="p-num">01</div>
+    <div class="p-body">
+      <div class="p-title"><span class="p-accent">⚡</span> AI 智能匹配引擎</div>
+      <div class="p-desc">双 Agent 驱动——需求 Agent 理解用户，房源 Agent 理解供给。向量语义匹配，准确率超 95%。</div>
+      <div class="p-tech">Dual-Agent · Vector Search · >95% Match Rate</div>
+    </div>
+  </div>
+
+  <div class="principle">
+    <div class="p-num">02</div>
+    <div class="p-body">
+      <div class="p-title"><span class="p-accent">🔐</span> 智能合约信任层</div>
+      <div class="p-desc">预订、入住、评价全上链。Trustless 机制，无需第三方担保，规则即法律，代码即信任。</div>
+      <div class="p-tech">Smart Contract · Trustless · On-Chain Escrow</div>
+    </div>
+  </div>
+
+  <div class="principle">
+    <div class="p-num">03</div>
+    <div class="p-body">
+      <div class="p-title"><span class="p-accent">🔗</span> Token 经济激励</div>
+      <div class="p-desc">AHL Token 连接房东、租客与生态贡献者。持份者共建网络，价值由社区共享，非平台独有。</div>
+      <div class="p-tech">AHL Token · Stake-to-Earn · Community Governance</div>
+    </div>
+  </div>
+</div>
+
+<!-- Architecture Flow -->
+<div class="arch-strip">
+  <div class="arch-label">// System Architecture</div>
+  <div class="arch-flow">
+    <div class="arch-node">
+      <div class="arch-node-label">用户需求</div>
+      <div class="arch-node-sub">自然语言</div>
+    </div>
+    <div class="arch-arrow">→</div>
+    <div class="arch-node accent">
+      <div class="arch-node-label">AHL Agent</div>
+      <div class="arch-node-sub">LLM推理</div>
+    </div>
+    <div class="arch-arrow">→</div>
+    <div class="arch-node cyan">
+      <div class="arch-node-label">Vector DB</div>
+      <div class="arch-node-sub">语义匹配</div>
+    </div>
+    <div class="arch-arrow">→</div>
+    <div class="arch-node">
+      <div class="arch-node-label">智能合约</div>
+      <div class="arch-node-sub">自动执行</div>
+    </div>
+  </div>
+</div>
+
+<!-- Protocol ID -->
+<div class="protocol-id">
+  <div class="proto-box">
+    <div class="proto-label">Protocol Version</div>
+    <div class="proto-value">AHL-LLM v1.0</div>
+  </div>
+</div>
+
+<!-- Bottom -->
+<div class="bottom-bar">
+  <div class="bottom-tagline">重新定义<span class="coral">旅行住宿</span>的信任方式</div>
+  <div class="bottom-sub">AHL · Decentralized Travel Protocol</div>
+</div>
+
+</body>
+</html>

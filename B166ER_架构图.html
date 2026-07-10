@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700;900&display=swap');
+  
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  
+  body {
+    width: 2560px;
+    font-family: 'Noto Sans SC', -apple-system, 'PingFang SC', sans-serif;
+    background: #050810;
+    color: #e0e8f0;
+    overflow-x: hidden;
+  }
+  
+  .container {
+    width: 2400px;
+    margin: 0 auto;
+    padding: 60px 0 40px;
+  }
+
+  /* ===== Header ===== */
+  .header {
+    text-align: center;
+    padding-bottom: 50px;
+    border-bottom: 1px solid rgba(123,104,238,0.25);
+    margin-bottom: 40px;
+  }
+  .header h1 {
+    font-size: 54px;
+    font-weight: 900;
+    color: #7BB8FF;
+    letter-spacing: 3px;
+    margin-bottom: 8px;
+  }
+  .header .subtitle {
+    font-size: 22px;
+    color: #5a8bc0;
+    margin-bottom: 12px;
+    font-weight: 400;
+    letter-spacing: 2px;
+  }
+  .version-tag {
+    display: inline-block;
+    padding: 6px 22px;
+    border: 2px solid #7B68EE;
+    border-radius: 20px;
+    font-size: 18px;
+    color: #9B88FF;
+    font-weight: 600;
+    margin-bottom: 16px;
+  }
+  .header .framework-title {
+    font-size: 20px;
+    color: #8899bb;
+    font-weight: 500;
+    margin-bottom: 6px;
+  }
+  .header .axis-desc {
+    font-size: 16px;
+    color: #556677;
+  }
+
+  /* ===== Layer Cards ===== */
+  .layer-card {
+    width: 100%;
+    border-radius: 18px;
+    padding: 32px 40px;
+    margin-bottom: 18px;
+    position: relative;
+    overflow: hidden;
+  }
+  .layer-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 4px;
+  }
+
+  .layer-header {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 14px;
+  }
+  .layer-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    border-radius: 12px;
+    font-size: 22px;
+    font-weight: 800;
+    flex-shrink: 0;
+  }
+  .layer-title {
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+  .layer-desc {
+    font-size: 17px;
+    color: #8899bb;
+    margin-bottom: 18px;
+    line-height: 1.6;
+    padding-left: 70px;
+  }
+
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding-left: 70px;
+  }
+  .tag {
+    display: inline-block;
+    padding: 8px 20px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+  }
+
+  /* Layer 0 - Purple */
+  .l0 { background: linear-gradient(135deg, rgba(123,104,238,0.12) 0%, rgba(30,20,60,0.6) 100%); border: 1px solid rgba(123,104,238,0.35); }
+  .l0::before { background: #7B68EE; }
+  .l0 .layer-badge { background: rgba(123,104,238,0.25); color: #B8A8FF; }
+  .l0 .layer-title { color: #B8A8FF; }
+  .l0 .tag { background: rgba(123,104,238,0.18); color: #C8B8FF; border: 1px solid rgba(123,104,238,0.25); }
+
+  /* Layer 1 - Sky Blue */
+  .l1 { background: linear-gradient(135deg, rgba(100,180,255,0.10) 0%, rgba(10,30,60,0.6) 100%); border: 1px solid rgba(100,180,255,0.30); }
+  .l1::before { background: #64B4FF; }
+  .l1 .layer-badge { background: rgba(100,180,255,0.20); color: #80CCFF; }
+  .l1 .layer-title { color: #80CCFF; }
+  .l1 .tag { background: rgba(100,180,255,0.15); color: #90D0FF; border: 1px solid rgba(100,180,255,0.20); }
+
+  /* Layer 2 - Teal */
+  .l2 { background: linear-gradient(135deg, rgba(0,206,170,0.10) 0%, rgba(5,30,30,0.6) 100%); border: 1px solid rgba(0,206,170,0.30); }
+  .l2::before { background: #00CEAA; }
+  .l2 .layer-badge { background: rgba(0,206,170,0.20); color: #40E8C8; }
+  .l2 .layer-title { color: #40E8C8; }
+  .l2 .tag { background: rgba(0,206,170,0.15); color: #60F0D0; border: 1px solid rgba(0,206,170,0.20); }
+
+  /* Layer 3 - Orange */
+  .l3 { background: linear-gradient(135deg, rgba(255,165,0,0.10) 0%, rgba(50,30,5,0.6) 100%); border: 1px solid rgba(255,165,0,0.30); }
+  .l3::before { background: #FFA500; }
+  .l3 .layer-badge { background: rgba(255,165,0,0.20); color: #FFC040; }
+  .l3 .layer-title { color: #FFC040; }
+  .l3 .tag { background: rgba(255,165,0,0.15); color: #FFD060; border: 1px solid rgba(255,165,0,0.20); }
+
+  /* Layer 4 - Gold */
+  .l4 { background: linear-gradient(135deg, rgba(218,165,32,0.10) 0%, rgba(40,35,5,0.6) 100%); border: 1px solid rgba(218,165,32,0.30); }
+  .l4::before { background: #DAA520; }
+  .l4 .layer-badge { background: rgba(218,165,32,0.20); color: #E8C840; }
+  .l4 .layer-title { color: #E8C840; }
+  .l4 .tag { background: rgba(218,165,32,0.15); color: #F0D860; border: 1px solid rgba(218,165,32,0.20); }
+
+  /* Layer 5 - Magenta */
+  .l5 { background: linear-gradient(135deg, rgba(199,21,133,0.10) 0%, rgba(50,5,30,0.6) 100%); border: 1px solid rgba(199,21,133,0.30); }
+  .l5::before { background: #C71585; }
+  .l5 .layer-badge { background: rgba(199,21,133,0.20); color: #E060B0; }
+  .l5 .layer-title { color: #E060B0; }
+  .l5 .tag { background: rgba(199,21,133,0.15); color: #E880C0; border: 1px solid rgba(199,21,133,0.20); }
+
+  /* Layer 0.5 - Indigo (new) */
+  .l05 { background: linear-gradient(135deg, rgba(75,0,130,0.10) 0%, rgba(20,10,40,0.6) 100%); border: 1px solid rgba(75,0,130,0.30); }
+  .l05::before { background: #6A0DAD; }
+  .l05 .layer-badge { background: rgba(106,13,173,0.20); color: #AA50E0; }
+  .l05 .layer-title { color: #AA50E0; }
+  .l05 .tag { background: rgba(106,13,173,0.15); color: #C070F0; border: 1px solid rgba(106,13,173,0.20); }
+
+  /* Layer 5.2 - Pink (new) */
+  .l52 { background: linear-gradient(135deg, rgba(255,20,147,0.10) 0%, rgba(50,5,30,0.6) 100%); border: 1px solid rgba(255,20,147,0.30); }
+  .l52::before { background: #FF1493; }
+  .l52 .layer-badge { background: rgba(255,20,147,0.20); color: #FF70C0; }
+  .l52 .layer-title { color: #FF70C0; }
+  .l52 .tag { background: rgba(255,20,147,0.15); color: #FF90D0; border: 1px solid rgba(255,20,147,0.20); }
+
+  /* ===== Section Divider ===== */
+  .section-divider {
+    text-align: center;
+    padding: 40px 0 30px;
+    color: #556677;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    position: relative;
+  }
+  .section-divider::before, .section-divider::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 35%;
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgba(123,104,238,0.2));
+  }
+  .section-divider::before { left: 0; }
+  .section-divider::after {
+    right: 0;
+    background: linear-gradient(to left, transparent, rgba(123,104,238,0.2));
+  }
+
+  /* ===== Feedback Loops ===== */
+  .feedback-row {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .feedback-item {
+    background: rgba(30,40,70,0.6);
+    border: 1px solid rgba(100,130,200,0.2);
+    border-radius: 14px;
+    padding: 20px 28px;
+    text-align: center;
+    min-width: 220px;
+    flex: 1;
+    max-width: 460px;
+  }
+  .feedback-num {
+    display: inline-block;
+    width: 40px; height: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    background: rgba(100,150,255,0.2);
+    color: #80B0FF;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+  .feedback-item .label {
+    font-size: 15px;
+    color: #8899bb;
+  }
+
+  /* ===== Data Tables ===== */
+  .data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+  .data-table td {
+    padding: 10px 12px;
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+    vertical-align: top;
+  }
+  .data-table .cat-tag {
+    display: inline-block;
+    padding: 6px 16px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    width: 80px;
+    text-align: center;
+    white-space: nowrap;
+  }
+  .data-table .cat-items {
+    font-size: 15px;
+    color: #a0b0c8;
+    line-height: 1.7;
+  }
+  .data-table .cat-items strong {
+    color: #c0d0e8;
+    font-weight: 500;
+  }
+
+  .cat-macro { background: rgba(60,120,200,0.25); color: #80B8F0; }
+  .cat-hotel { background: rgba(0,150,200,0.25); color: #50C8E8; }
+  .cat-ota { background: rgba(120,80,200,0.25); color: #B090E8; }
+  .cat-tmc { background: rgba(220,120,40,0.25); color: #E8A050; }
+  .cat-group { background: rgba(40,180,80,0.25); color: #60D080; }
+  .cat-finance { background: rgba(200,160,40,0.25); color: #E0C050; }
+  .cat-assoc { background: rgba(180,180,60,0.25); color: #D0D060; }
+  .cat-media { background: rgba(0,180,180,0.25); color: #40D0D0; }
+  .cat-ai { background: rgba(60,180,255,0.25); color: #80C8FF; }
+
+  .cat-hotel-s { background: rgba(0,150,200,0.25); color: #50C8E8; }
+  .cat-ppt { background: rgba(200,60,120,0.25); color: #E080A0; }
+  .cat-content { background: rgba(200,160,40,0.25); color: #E0C050; }
+  .cat-biz { background: rgba(60,180,80,0.25); color: #60D888; }
+  .cat-search { background: rgba(80,100,220,0.25); color: #90A8F0; }
+  .cat-efficiency { background: rgba(180,100,180,0.25); color: #D080D0; }
+  .cat-growth { background: rgba(255,120,60,0.25); color: #FF9050; }
+
+  /* ===== Footer ===== */
+  .footer {
+    text-align: center;
+    padding-top: 40px;
+    margin-top: 40px;
+    border-top: 1px solid rgba(255,255,255,0.06);
+    font-size: 15px;
+    color: #445566;
+    letter-spacing: 1px;
+  }
+
+  /* ===== New additions marker ===== */
+  .new-badge {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 4px;
+    background: rgba(255,50,50,0.2);
+    color: #FF6060;
+    border: 1px solid rgba(255,50,50,0.3);
+    margin-left: 6px;
+    vertical-align: middle;
+    letter-spacing: 1px;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- ===== HEADER ===== -->
+  <div class="header">
+    <h1>B166ER 底层理论架构</h1>
+    <div class="subtitle">群论不再是一个"框架"——它是所有框架的数学语言</div>
+    <div class="version-tag">V3.0 · 群论深层内化</div>
+    <div class="framework-title">LAYER 0-5 · 群论即认知语法</div>
+    <div class="axis-desc">四条公理约束所有认知操作 · 轨道稳定子定理生成决策工具 · 群论不再是框架——是所有框架的数学语言</div>
+  </div>
+
+  <!-- ===== LAYER 0 ===== -->
+  <div class="layer-card l0">
+    <div class="layer-header">
+      <div class="layer-badge">L0</div>
+      <div class="layer-title">元认知层 · 框架调度</div>
+    </div>
+    <div class="layer-desc">框架调度算法 · 注意力经济学 · 置信度校准 · 群论（调度算法）</div>
+    <div class="tags">
+      <span class="tag">框架调度树</span>
+      <span class="tag">注意力预算</span>
+      <span class="tag">置信度量表</span>
+      <span class="tag">群论框架选择</span>
+    </div>
+  </div>
+
+  <!-- ===== LAYER 0.5 ===== -->
+  <div class="layer-card l05">
+    <div class="layer-header">
+      <div class="layer-badge">L0.5</div>
+      <div class="layer-title">课题分离层 · 进入框架前的第一道门 <span class="new-badge">NEW</span></div>
+    </div>
+    <div class="layer-desc">进入任何分析框架之前：先判断"这是谁的课题"——我的课题 / 共享课题 / 他人课题 / 不可抗力 · 群论：决策空间 D = D_me ⊕ D_shared ⊕ D_other ⊕ D_fate</div>
+    <div class="tags">
+      <span class="tag">我的课题 → 全力负责</span>
+      <span class="tag">共享课题 → 激励相容</span>
+      <span class="tag">他人课题 → 不替人决策</span>
+      <span class="tag">不可抗力 → 接受备选</span>
+    </div>
+  </div>
+
+  <!-- ===== LAYER 1 ===== -->
+  <div class="layer-card l1">
+    <div class="layer-header">
+      <div class="layer-badge">L1</div>
+      <div class="layer-title">认识论 · 怎么认识世界</div>
+    </div>
+    <div class="layer-desc">五维认知框架 · 第一性原理 · 奥卡姆剃刀 · 系统思维 · 信息论</div>
+    <div class="tags">
+      <span class="tag">历史沿革</span>
+      <span class="tag">当下情况</span>
+      <span class="tag">原因分析</span>
+      <span class="tag">未来预判</span>
+      <span class="tag">底层逻辑</span>
+      <span class="tag">第一性原理</span>
+      <span class="tag">奥卡姆剃刀</span>
+    </div>
+  </div>
+
+  <!-- ===== LAYER 2 ===== -->
+  <div class="layer-card l2">
+    <div class="layer-header">
+      <div class="layer-badge">L2</div>
+      <div class="layer-title">策略论 · 怎么做出选择</div>
+    </div>
+    <div class="layer-desc">博弈论 · 贝叶斯推理 · 昂贵信号 · 护城河机制 · 群论（不动点）</div>
+    <div class="tags">
+      <span class="tag">博弈论核心</span>
+      <span class="tag">演化博弈ESS</span>
+      <span class="tag">贝叶斯决策</span>
+      <span class="tag">昂贵信号</span>
+      <span class="tag">护城河机制</span>
+      <span class="tag">二阶思维</span>
+      <span class="tag">心智模型库</span>
+    </div>
+  </div>
+
+  <!-- ===== LAYER 3 ===== -->
+  <div class="layer-card l3">
+    <div class="layer-header">
+      <div class="layer-badge">L3</div>
+      <div class="layer-title">价值论 · 怎么判断好坏</div>
+    </div>
+    <div class="layer-desc">审美哲学谱系 · 真善美三位一体 · 伦理三层 · 群论（对称性）</div>
+    <div class="tags">
+      <span class="tag">审美哲学谱系</span>
+      <span class="tag">东方美学六概念</span>
+      <span class="tag">真善美统一</span>
+      <span class="tag">底线伦理</span>
+      <span class="tag">德性伦理</span>
+      <span class="tag">气韵·意境·留白</span>
+    </div>
+  </div>
+
+  <!-- ===== LAYER 4 ===== -->
+  <div class="layer-card l4">
+    <div class="layer-header">
+      <div class="layer-badge">L4</div>
+      <div class="layer-title">学习论 · 怎么进化</div>
+    </div>
+    <div class="layer-desc">自反思闭环 · 三层记忆架构 · 状态机模型 · 群论（同态映射）</div>
+    <div class="tags">
+      <span class="tag">自反思闭环</span>
+      <span class="tag">三层记忆架构</span>
+      <span class="tag">状态机模型</span>
+      <span class="tag">MICE阶段机</span>
+      <span class="tag">反脆弱学习</span>
+    </div>
+  </div>
+
+  <!-- ===== LAYER 5 ===== -->
+  <div class="layer-card l5">
+    <div class="layer-header">
+      <div class="layer-badge">L5</div>
+      <div class="layer-title">执行论 · 怎么行动</div>
+    </div>
+    <div class="layer-desc">实用主义原则 · 沟通理论 · 艾森豪威尔矩阵 · 群论（群作用）</div>
+    <div class="tags">
+      <span class="tag">实用主义</span>
+      <span class="tag">Grice四准则</span>
+      <span class="tag">艾森豪威尔矩阵</span>
+      <span class="tag">通道适配</span>
+    </div>
+  </div>
+
+  <!-- ===== LAYER 5.2 ===== -->
+  <div class="layer-card l52">
+    <div class="layer-header">
+      <div class="layer-badge">L5.2</div>
+      <div class="layer-title">杠杆放大 · 执行力的放大器 <span class="new-badge">NEW</span></div>
+    </div>
+    <div class="layer-desc">优先级确定之后问：这个执行可以用什么杠杆放大？不同的杠杆对应不同的群结构：资金加法群 / 代码幂群 / 节点对称群 / 信任非交换群</div>
+    <div class="tags">
+      <span class="tag">资本杠杆 1:∞</span>
+      <span class="tag">技术杠杆 1:100+</span>
+      <span class="tag">网络杠杆 1:N³</span>
+      <span class="tag">品牌杠杆 1:10</span>
+      <span class="tag">一次只加一根杠杆</span>
+    </div>
+  </div>
+
+  <!-- ===== FEEDBACK LOOPS ===== -->
+  <div class="section-divider">— 五条层间反馈回路 —</div>
+  <div class="feedback-row">
+    <div class="feedback-item">
+      <div class="feedback-num">1</div>
+      <div class="label">执行失败 → 诊断更新</div>
+    </div>
+    <div class="feedback-item">
+      <div class="feedback-num">2</div>
+      <div class="label">审美判断 → 策略选择</div>
+    </div>
+    <div class="feedback-item">
+      <div class="feedback-num">3</div>
+      <div class="label">伦理约束 → 执行边界</div>
+    </div>
+    <div class="feedback-item">
+      <div class="feedback-num">4</div>
+      <div class="label">元认知 → 监控所有层</div>
+    </div>
+    <div class="feedback-item">
+      <div class="feedback-num">5</div>
+      <div class="label">学习反馈 → 校准速度</div>
+    </div>
+    <div class="feedback-item">
+      <div class="feedback-num">6</div>
+      <div class="label">课题分离 → 杠杆放大 <span style="font-size:11px;color:#FF6060">NEW</span></div>
+    </div>
+  </div>
+
+  <!-- ===== DATA SOURCES ===== -->
+  <div class="section-divider">— 数据源体系 · 40+ 信源 —</div>
+  <table class="data-table">
+    <tr><td style="width:100px"><span class="cat-tag cat-macro">宏观</span></td><td class="cat-items">交通部 · 统计局 · 文旅部 · 航空局 · 铁路12306</td></tr>
+    <tr><td><span class="cat-tag cat-hotel">酒店</span></td><td class="cat-items"><strong>酒店之家</strong> · 厚海数据 · <strong>STR</strong> · 浩华 · 戴德梁行 · 迈点</td></tr>
+    <tr><td><span class="cat-tag cat-ota">OTA</span></td><td class="cat-items">携程 · 美团 · 飞猪 · 艺龙 · 同程 · 去哪儿</td></tr>
+    <tr><td><span class="cat-tag cat-tmc">TMC</span></td><td class="cat-items">携程商旅 · 美亚 · 中航嘉信 · 国旅运通 · 饿了么企业版</td></tr>
+    <tr><td><span class="cat-tag cat-group">集团</span></td><td class="cat-items">锦江 · 华住 · 首旅 · 万豪 · 希尔顿 · 洲际 · 雅高 · 开元</td></tr>
+    <tr><td><span class="cat-tag cat-finance">金融</span></td><td class="cat-items">彭博社 · Choice · 中信 · 中金 · 港交所 · 路透社</td></tr>
+    <tr><td><span class="cat-tag cat-assoc">协会</span></td><td class="cat-items">旅游研究院 · 饭店协会 · PwC/Deloitte/EY/KPMG · IDEAS</td></tr>
+    <tr><td><span class="cat-tag cat-media">媒体</span></td><td class="cat-items">环球旅讯 · 酒管财经 · 酒店高参 · 空间秘探 · 旅界 · 钛媒体</td></tr>
+    <tr><td><span class="cat-tag cat-ai">AI工具</span></td><td class="cat-items">Tavily · Jina Reader · TrendRadar · scrape_matrix · Skyvern · 语义搜索 · <strong>Agent-Reach</strong></td></tr>
+  </table>
+
+  <!-- ===== SKILL BASE ===== -->
+  <div class="section-divider">— 核心技能库 · 精选 —</div>
+  <table class="data-table">
+    <tr><td style="width:100px"><span class="cat-tag cat-hotel-s">酒店</span></td><td class="cat-items">hotel-revenue-management · hotel-report · hotel-financial-modeling · hotel-project-lifecycle · hotel-new-media · hotel-private-domain</td></tr>
+    <tr><td><span class="cat-tag cat-ppt">PPT</span></td><td class="cat-items">ppt-deck-builder-pro（12模板） · ppt-generator · pptx-generator · canva-automation · <strong>design-md（59品牌规范）</strong></td></tr>
+    <tr><td><span class="cat-tag cat-content">内容</span></td><td class="cat-items">article-to-infographic · doc-reader · doc-pdf · summarize · image-gen · music-aesthetic-judgment</td></tr>
+    <tr><td><span class="cat-tag cat-biz">商业</span></td><td class="cat-items">business-intelligence · startup-fundraising · strategic-decision-making · validate-idea · cross-border-trade · token-economy</td></tr>
+    <tr><td><span class="cat-tag cat-search">搜索</span></td><td class="cat-items">scraping-official · tavily-search · firecrawl · ultimate-search · self-improving · ontology · <strong>Agent-Reach（17平台）</strong></td></tr>
+    <tr><td><span class="cat-tag cat-efficiency">效率</span></td><td class="cat-items">smart-scheduler · goal-management · <strong>knowledge-base（RAG）</strong> · secondbrain-note · elite-longterm-memory</td></tr>
+    <tr><td><span class="cat-tag cat-growth">增长</span></td><td class="cat-items">xiaohongshu（RedBook） · twitter · linkedin · youtube · autoresearch · price-comparison</td></tr>
+  </table>
+
+  <!-- ===== FOOTER ===== -->
+  <div class="footer">
+    B166ER · 底层理论架构 V3.0 群论深层内化 · 不再是框架，是所有框架的数学语言
+  </div>
+
+</div>
+</body>
+</html>
