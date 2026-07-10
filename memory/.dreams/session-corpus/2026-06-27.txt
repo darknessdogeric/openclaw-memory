@@ -1,0 +1,1 @@
+[main/sessions/main/06e85c5f-8612-4365-8fb9-f66dde7f9922.jsonl.deleted.2026-06-28T06-55-16.781Z#L22] Assistant: 📊 **周六晨检 | 6/27 09:40** **今日无到期任务** ✅ --- **⚠️ 两项关注：** 1. **暑期预测报告未生成** — 6/25 cron因billing cooldown被disable，主session补生成未执行。暑期已开始，预测窗口正在关闭。 2. **6/30 双重重磅**（3天后）： - `端午复盘(T+9)` + `Q2半年分析` 同时10:00触发 - 当前billing cooldown问题（每日简报5连错），两

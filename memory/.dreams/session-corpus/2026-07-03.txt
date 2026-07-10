@@ -1,0 +1,1 @@
+[main/sessions/main/c67cb453-02e7-4211-a430-f6471e626764.jsonl.deleted.2026-07-04T02-12-35.045Z#L25] Assistant: HEARTBEAT_OK 📊 **7/3 周五早 08:16** — 无今日到期任务。 **即将到期**: - 🔜 **端午STR补充**: 7/7 (周二) — cron正常，4天后 - 🔜 **6月月度报告**: 7/12 — ⚠️ 上次5/12 billing cooldown error **持续关注**: - 🔴 Q2半年分析：cron已消失，7/1两次手动trigger均runs=0，报告未生成 - 🟡 缺失日常cron（政策早餐/行业双

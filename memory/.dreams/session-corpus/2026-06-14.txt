@@ -1,0 +1,3 @@
+[main/sessions/main/315d016f-412f-4de4-871a-6e8a057a7b90.jsonl#L6] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/5c56b59d-0f48-4547-aaa2-242ec8ef06ac.jsonl#L2] User: 需要把模型增加MiniMax-M3
+[main/sessions/main/5c56b59d-0f48-4547-aaa2-242ec8ef06ac.jsonl#L3] Assistant: ⚠️ Agent failed before reply: No API key found for provider "minimax". Auth store: C:\Users\Administrator\.openclaw\agents\main\agent\openclaw-agent.sqlite (agentDir: C:\Users\Administrator\.openclaw\agents\main\agent). Configure auth for this agent (openclaw agents
