@@ -1,3 +1,17 @@
+---
+skill_id: "md2pdf-converter"
+title: "Markdown转PDF技能"
+category: "内容生产"
+description: "## 技能名称 **MD2PDF Converter** - Markdown转PDF转换器"
+when_to_use: ""
+size_kb: 1.6
+refactored: "2026-06-24"
+source: "skills/md2pdf-converter/SKILL.md"
+tags:
+  - skills
+  - 内容生产
+---
+
 # Markdown转PDF技能
 
 ## 技能名称

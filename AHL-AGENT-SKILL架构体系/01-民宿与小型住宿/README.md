@@ -1,3 +1,20 @@
+---
+id: "AHL-01"
+title: "民宿与小型住宿 - AGENT+SKILL 架构方案"
+accommodation_type: "民宿与小型住宿"
+agent_type: ""
+role: "住宿类型架构方案"
+size_kb: 15.2
+version: "v1.0"
+refactored: "2026-06-24"
+source: "AHL-AGENT-SKILL架构体系/01-民宿与小型住宿\README.md"
+tags:
+  - ahl
+  - agent-skill
+  - 民宿与小型住宿
+  - architecture
+---
+
 # 民宿与小型住宿 - AGENT+SKILL 架构方案
 
 > 版本: V1.0  

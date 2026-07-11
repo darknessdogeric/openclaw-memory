@@ -1,3 +1,22 @@
+---
+id: 12
+title: "非标住宿 - 民宿/精品酒店"
+category: "非标住宿"
+lifecycle_phase: "拓展"
+phase_order: 6
+role: "投资人/业主, 品牌方/开发商"
+scenarios: "非标住宿投资, 民宿/精品酒店评估"
+size_kb: 5.9
+version: "v3.3"
+updated: "2026-02-13"
+refactored: "2026-06-24"
+source: "knowledge/hotel-industry/12-alternative-acc.md"
+tags:
+  - hotel-industry
+  - 非标住宿
+  - 拓展
+---
+
 # 12 非标住宿 - 民宿与精品酒店
 
 > 市场概况 · 民宿运营 · 精品酒店 · 共享住宿 · 监管政策 · 投资特点

@@ -1,3 +1,17 @@
+---
+skill_id: "evoclaw"
+title: "EvoClaw — Self-Evolving Identity Framework"
+category: "AI/ML"
+description: "> _Experience → Classification → Memory → Reflection → Proposal → Governance → SOUL Update → Log_ --- **⚠️ ADDRESSING: This entire document is written FOR YOU, THE AI AGENT.** Every "you" in this docu"
+when_to_use: ""
+size_kb: 47.6
+refactored: "2026-06-24"
+source: "skills/evoclaw/SKILL.md"
+tags:
+  - skills
+  - AI/ML
+---
+
 # EvoClaw — Self-Evolving Identity Framework
 
 > _Experience → Classification → Memory → Reflection → Proposal → Governance → SOUL Update → Log_

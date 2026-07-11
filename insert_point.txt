@@ -1,6 +1,0 @@
-Insert point char index: 46082
-Marker at: 46064
-Dash offset from marker: 17
-Section offset from marker: 23
-Content at insert point:
-'新目标: [X]人\n  GMV目标: ¥[Y]万\n```\n\n---\n\n## 4.7.5 工具协同架构图（全景）\n\n```\n┌──────────────────────────────────────────────────────────────┐\n│   '

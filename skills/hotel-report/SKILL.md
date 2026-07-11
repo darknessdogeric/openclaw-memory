@@ -1,3 +1,17 @@
+---
+skill_id: "hotel-report"
+title: "Hotel Report Generator Skill"
+category: "行业专属"
+description: "> **Version**: 1.0.0 > **Author**: B166ER > **Created**: 2026-03-18 > **Status**: Active Development"
+when_to_use: ""
+size_kb: 7.4
+refactored: "2026-06-24"
+source: "skills/hotel-report/SKILL.md"
+tags:
+  - skills
+  - 行业专属
+---
+
 # Hotel Report Generator Skill
 
 > **Version**: 1.0.0  

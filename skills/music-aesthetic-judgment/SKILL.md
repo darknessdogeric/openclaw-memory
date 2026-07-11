@@ -1,3 +1,17 @@
+---
+skill_id: "music-aesthetic-judgment"
+title: "音乐审美专项判断框架"
+category: "多媒体"
+description: "## 定位 Eric的音乐审美是**审美能力最集中的体现**。这份专项将Eric的音乐基因转化为可执行的审美判断工具。 ---"
+when_to_use: ""这首歌怎么样？" → 用五维度评价 | "这首歌适合放在哪个场景？" → 用意境分析 | "这首歌和某首歌比哪个好？" → 用music_comparison"
+size_kb: 8.0
+refactored: "2026-06-24"
+source: "skills/music-aesthetic-judgment/SKILL.md"
+tags:
+  - skills
+  - 多媒体
+---
+
 # 音乐审美专项判断框架
 
 ## 定位

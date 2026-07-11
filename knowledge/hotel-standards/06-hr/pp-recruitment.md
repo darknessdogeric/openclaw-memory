@@ -1,3 +1,20 @@
+---
+dept_code: "06-hr"
+dept_name: "人力资源部"
+doc_type: "P&P"
+doc_code: ""
+title: "招聘政策"
+role: "HR/培训师"
+size_kb: 4.1
+version: "v1.0"
+refactored: "2026-06-24"
+source: "knowledge/hotel-standards/06-hr/pp-recruitment.md"
+tags:
+  - hotel-standards
+  - 人力资源部
+  - P&P
+---
+
 # 招聘政策 (Recruitment P&P)
 
 > **文档编号**: HR-PP-001  

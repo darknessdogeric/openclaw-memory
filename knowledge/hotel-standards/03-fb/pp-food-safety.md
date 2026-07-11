@@ -1,3 +1,20 @@
+---
+dept_code: "03-fb"
+dept_name: "餐饮部"
+doc_type: "P&P"
+doc_code: ""
+title: "食品安全政策"
+role: "餐厅服务员/厨师"
+size_kb: 4.3
+version: "v1.0"
+refactored: "2026-06-24"
+source: "knowledge/hotel-standards/03-fb/pp-food-safety.md"
+tags:
+  - hotel-standards
+  - 餐饮部
+  - P&P
+---
+
 # 食品安全政策 (Food Safety P&P)
 
 > **文档编号**: FB-PP-001  

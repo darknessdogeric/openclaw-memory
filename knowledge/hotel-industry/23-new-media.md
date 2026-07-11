@@ -1,3 +1,22 @@
+---
+id: 23
+title: "新媒体运营 - 抖音/小红书/直播"
+category: "数字化"
+lifecycle_phase: "数字化"
+phase_order: 7
+role: "营销负责人"
+scenarios: "如何做抖音/小红书, 新媒体营销"
+size_kb: 8.9
+version: "v3.3"
+updated: "2026-02-13"
+refactored: "2026-06-24"
+source: "knowledge/hotel-industry/23-new-media.md"
+tags:
+  - hotel-industry
+  - 数字化
+  - 数字化
+---
+
 # 23 新媒体运营 - 流量时代的酒店营销
 
 > 短视频 · 直播 · 私域运营 · 内容种草 · KOL合作

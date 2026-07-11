@@ -162,7 +162,8 @@ class BookingPriceExtractor:
                         if (priceCell) {
                             const cellText = priceCell.innerText.trim();
                             room.price_cell_text = cellText.substring(0, 200);
-                            const m = cellText.match(/[¥$€£]\s*[\d,]+/g);
+                            // 匹配 ¥/$/€/£/￥/元 后跟数字 (支持中英文价格符号)
+                            const m = cellText.match(/[¥$€£￥]\s*[\d,]+|\d+\s*元/g);
                             if (m) room.prices = m;
                         }
                         const text = tr.innerText;
@@ -180,7 +181,7 @@ class BookingPriceExtractor:
                     document.querySelectorAll('.hprt-table-block, .hprt-block').forEach(row => {
                         const txt = row.innerText.trim();
                         if (txt.length > 30) {
-                            const m = txt.match(/[¥$€£]\s*[\d,]+/g);
+                            const m = txt.match(/[¥$€£￥]\s*[\d,]+|\d+\s*元/g);
                             if (m) out.rooms.push({raw_text: txt.substring(0, 500), prices: m});
                         }
                     });

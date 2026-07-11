@@ -1,3 +1,17 @@
+---
+skill_id: "business-design"
+title: "Business Design Output Skill"
+category: "商业/管理"
+description: "> 版本: V1.0 > 日期: 2026-04-06 > 功能: 商业文档/PPT/图片生成"
+when_to_use: ""
+size_kb: 0.8
+refactored: "2026-06-24"
+source: "skills/business-design/SKILL.md"
+tags:
+  - skills
+  - 商业/管理
+---
+
 # Business Design Output Skill
 
 > 版本: V1.0

@@ -1,3 +1,22 @@
+---
+id: 14
+title: "投资案例 - 24 个详实案例"
+category: "投资决策"
+lifecycle_phase: "投"
+phase_order: 1
+role: "投资人/业主, 投资分析师"
+scenarios: "投资参考案例, 成败对比"
+size_kb: 17.2
+version: "v3.3"
+updated: "2026-02-13"
+refactored: "2026-06-24"
+source: "knowledge/hotel-industry/14-case-studies.md"
+tags:
+  - hotel-industry
+  - 投资决策
+  - 投
+---
+
 # 14 投资案例 - 20个详实案例
 
 > 成功案例 · 失败教训 · 案例拆解 · 关键启示  

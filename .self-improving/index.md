@@ -7,6 +7,7 @@
 
 ## WARM (load on context match)
 - `corrections.md` — Recent corrections log
+- `ecc_patterns.md` — ECC-inspired mechanisms (instincts/hooks/research-first)
 - `projects/` — (empty, ready for project-specific learnings)
 - `domains/` — (empty, ready for domain-specific learnings)
 

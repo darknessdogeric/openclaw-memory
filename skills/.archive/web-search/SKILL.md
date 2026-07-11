@@ -1,3 +1,17 @@
+---
+skill_id: "web-search"
+title: "Web Search Skill"
+category: "数据/分析"
+description: "## Metadata - **Name**: web-search - **Version**: 1.0.0 - **Author**: OpenClaw - **Description**: AI-powered web search using Exa API"
+when_to_use: ""
+size_kb: 0.6
+refactored: "2026-06-24"
+source: "skills/web-search/SKILL.md"
+tags:
+  - skills
+  - 数据/分析
+---
+
 # Web Search Skill
 
 ## Metadata

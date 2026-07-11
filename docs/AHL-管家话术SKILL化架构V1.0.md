@@ -345,7 +345,7 @@ templates:
     variants:
       - "我理解您的考虑。这个价格在同类酒店中其实很有竞争力，而且包含{included_services}。"
       - "如果您能确定预订，我可以申请给您{discount_percent}的优惠，这是我能争取的最大力度了。"
-      - "或者您看这样，我送您{complimentary_service}，价值¥{service_value}，这样性价比就更高了。"
+      - "或者您看这样{complimentary_service}，价值¥{service_value}，这样性价比就更高了。"
     variables:
       - "{included_services}"
       - "{discount_percent}"

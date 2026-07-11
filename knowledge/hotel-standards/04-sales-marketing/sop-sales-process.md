@@ -1,3 +1,20 @@
+---
+dept_code: "04-sales-marketing"
+dept_name: "销售营销部"
+doc_type: "SOP"
+doc_code: ""
+title: "销售流程SOP"
+role: "销售经理/营销专员"
+size_kb: 7.0
+version: "v1.0"
+refactored: "2026-06-24"
+source: "knowledge/hotel-standards/04-sales-marketing/sop-sales-process.md"
+tags:
+  - hotel-standards
+  - 销售营销部
+  - SOP
+---
+
 # 销售流程SOP (Sales Process SOP)
 
 > **文档编号**: SM-SOP-001  

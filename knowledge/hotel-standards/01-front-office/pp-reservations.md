@@ -1,3 +1,20 @@
+---
+dept_code: "01-front-office"
+dept_name: "前厅部"
+doc_type: "P&P"
+doc_code: ""
+title: "预订政策"
+role: "前台/接待员"
+size_kb: 2.7
+version: "v1.0"
+refactored: "2026-06-24"
+source: "knowledge/hotel-standards/01-front-office/pp-reservations.md"
+tags:
+  - hotel-standards
+  - 前厅部
+  - P&P
+---
+
 # 预订政策 (Reservations P&P)
 
 > **文档编号**: FO-PP-001  

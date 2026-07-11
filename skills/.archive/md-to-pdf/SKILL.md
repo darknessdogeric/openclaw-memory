@@ -1,3 +1,17 @@
+---
+skill_id: "md-to-pdf"
+title: "Markdown to PDF Converter Skill"
+category: "内容生产"
+description: "Converte arquivos Markdown para PDF usando md-to-pdf com suporte a temas e estilos customizados."
+when_to_use: ""
+size_kb: 3.5
+refactored: "2026-06-24"
+source: "skills/md-to-pdf/SKILL.md"
+tags:
+  - skills
+  - 内容生产
+---
+
 # Markdown to PDF Converter Skill
 
 Converte arquivos Markdown para PDF usando md-to-pdf com suporte a temas e estilos customizados.

@@ -1,3 +1,17 @@
+---
+skill_id: "task-manager"
+title: "Task Manager Skill"
+category: "AI/ML"
+description: "## Metadata - **Name**: task-manager - **Version**: 1.0.0 - **Author**: OpenClaw - **Description**: Personal task and project management"
+when_to_use: ""
+size_kb: 1.0
+refactored: "2026-06-24"
+source: "skills/task-manager/SKILL.md"
+tags:
+  - skills
+  - AI/ML
+---
+
 # Task Manager Skill
 
 ## Metadata

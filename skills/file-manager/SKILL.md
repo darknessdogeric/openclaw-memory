@@ -1,3 +1,17 @@
+---
+skill_id: "file-manager"
+title: "File Manager Skill"
+category: "工作流/方法论"
+description: "## Metadata - **Name**: file-manager - **Version**: 1.0.0 - **Author**: OpenClaw - **Description**: Advanced file management operations"
+when_to_use: ""
+size_kb: 0.9
+refactored: "2026-06-24"
+source: "skills/file-manager/SKILL.md"
+tags:
+  - skills
+  - 工作流/方法论
+---
+
 # File Manager Skill
 
 ## Metadata

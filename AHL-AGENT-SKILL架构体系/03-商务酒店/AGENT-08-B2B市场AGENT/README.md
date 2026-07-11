@@ -1,3 +1,20 @@
+---
+id: "AHL-03-B2B"
+title: "B2B市场AGENT - 商务酒店版"
+accommodation_type: "商务酒店"
+agent_type: "B端-B2B市场"
+role: "Agent 架构方案"
+size_kb: 16.5
+version: "v1.0"
+refactored: "2026-06-24"
+source: "AHL-AGENT-SKILL架构体系/03-商务酒店\AGENT-08-B2B市场AGENT\README.md"
+tags:
+  - ahl
+  - agent-skill
+  - 商务酒店
+  - B端-B2B市场
+---
+
 # B2B市场AGENT - 商务酒店版
 
 > AGENT名称: B2B Market Agent  

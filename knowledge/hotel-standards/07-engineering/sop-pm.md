@@ -1,3 +1,20 @@
+---
+dept_code: "07-engineering"
+dept_name: "工程部"
+doc_type: "SOP"
+doc_code: ""
+title: "预防性维护SOP"
+role: "工程师/维修工"
+size_kb: 5.3
+version: "v1.0"
+refactored: "2026-06-24"
+source: "knowledge/hotel-standards/07-engineering/sop-pm.md"
+tags:
+  - hotel-standards
+  - 工程部
+  - SOP
+---
+
 # 预防性维护SOP (Preventive Maintenance SOP)
 
 > **文档编号**: ENG-SOP-001  

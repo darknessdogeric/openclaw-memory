@@ -1,3 +1,17 @@
+---
+skill_id: "md2ppt"
+title: "MD2PPT Converter Skill"
+category: "PPT/演示"
+description: "## Markdown转PPT路演工具 **技能名称**: MD2PPT Converter **版本**: 1.0 **创建日期**: 2026-03-04 **用途**: 将Markdown文档转换为路演演示PPT ---"
+when_to_use: ""
+size_kb: 2.4
+refactored: "2026-06-24"
+source: "skills/md2ppt/SKILL.md"
+tags:
+  - skills
+  - PPT/演示
+---
+
 # MD2PPT Converter Skill
 ## Markdown转PPT路演工具
 

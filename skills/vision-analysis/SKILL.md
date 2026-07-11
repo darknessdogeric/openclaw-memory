@@ -1,18 +1,10 @@
 ---
 name: vision-analysis
 description: >
-  Analyze, describe, and extract information from images using the MiniMax vision MCP tool.
-  Use when: user shares an image file path or URL (any message containing .jpg, .jpeg, .png,
-  .gif, .webp, .bmp, or .svg file extension) or uses any of these words/phrases near an image:
-  "analyze", "analyse", "describe", "explain", "understand", "look at", "review",
-  "extract text", "OCR", "what is in", "what's in", "read this image", "see this image",
-  "tell me about", "explain this", "interpret this", in connection with an image, screenshot,
-  diagram, chart, mockup, wireframe, or photo.
-  Also triggers for: UI mockup review, wireframe analysis, design critique, data extraction
-  from charts, object detection, person/animal/activity identification.
-  Triggers: any message with an image file extension (jpg, jpeg, png, gif, webp, bmp, svg),
-  or any request to analyze/describ/understand/review/extract text from an image, screenshot,
-  diagram, chart, photo, mockup, or wireframe.
+  Analyze, describe, extract text from images using MiniMax vision MCP.
+  Triggers: user shares image file (.jpg/.png/.gif/.webp/.bmp/.svg/.bmp) or URL,
+  or uses words like analyze/describe/explain/review/OCR/understand near
+  an image, screenshot, diagram, chart, mockup, wireframe, or photo.
 license: MIT
 metadata:
   version: "1.0"

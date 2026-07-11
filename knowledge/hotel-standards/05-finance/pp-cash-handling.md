@@ -1,3 +1,20 @@
+---
+dept_code: "05-finance"
+dept_name: "财务部"
+doc_type: "P&P"
+doc_code: ""
+title: "现金管理政策"
+role: "会计/出纳"
+size_kb: 3.9
+version: "v1.0"
+refactored: "2026-06-24"
+source: "knowledge/hotel-standards/05-finance/pp-cash-handling.md"
+tags:
+  - hotel-standards
+  - 财务部
+  - P&P
+---
+
 # 现金管理政策 (Cash Handling P&P)
 
 > **文档编号**: FI-PP-001  

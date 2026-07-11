@@ -1,3 +1,22 @@
+---
+id: 27
+title: "投资决策全流程 - 九阶段"
+category: "投资决策"
+lifecycle_phase: "投"
+phase_order: 1
+role: "投资人/业主, 投资分析师"
+scenarios: "投资决策流程, 项目风险评估"
+size_kb: 28.5
+version: "v3.3"
+updated: "2026-02-13"
+refactored: "2026-06-24"
+source: "knowledge/hotel-industry/27-investment-process.md"
+tags:
+  - hotel-industry
+  - 投资决策
+  - 投
+---
+
 # 27 投资决策全流程 - 从机会发现到成功退出
 
 > 投资决策树 · 关键节点checklist · 风险预警信号 · 决策支持工具

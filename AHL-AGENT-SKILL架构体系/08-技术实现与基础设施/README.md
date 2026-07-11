@@ -1,3 +1,20 @@
+---
+id: "AHL-08"
+title: "技术实现与基础设施 - AGENT+SKILL 技术总纲"
+accommodation_type: "技术基础设施"
+agent_type: ""
+role: "住宿类型架构方案"
+size_kb: 18.4
+version: "v1.0"
+refactored: "2026-06-24"
+source: "AHL-AGENT-SKILL架构体系/08-技术实现与基础设施\README.md"
+tags:
+  - ahl
+  - agent-skill
+  - 技术基础设施
+  - architecture
+---
+
 # 技术实现与基础设施 - AGENT+SKILL 技术总纲
 
 > 版本: V1.0  

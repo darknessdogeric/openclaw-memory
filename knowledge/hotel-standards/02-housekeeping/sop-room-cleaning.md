@@ -1,3 +1,20 @@
+---
+dept_code: "02-housekeeping"
+dept_name: "客房部"
+doc_type: "SOP"
+doc_code: ""
+title: "客房清洁SOP"
+role: "客房服务员"
+size_kb: 5.7
+version: "v1.0"
+refactored: "2026-06-24"
+source: "knowledge/hotel-standards/02-housekeeping/sop-room-cleaning.md"
+tags:
+  - hotel-standards
+  - 客房部
+  - SOP
+---
+
 # 客房清洁SOP (Room Cleaning SOP)
 
 > **文档编号**: HK-SOP-001  

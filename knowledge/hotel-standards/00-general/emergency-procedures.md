@@ -1,3 +1,20 @@
+---
+dept_code: "00-general"
+dept_name: "通用"
+doc_type: "SOP"
+doc_code: ""
+title: "紧急程序"
+role: "全员"
+size_kb: 5.7
+version: "v1.0"
+refactored: "2026-06-24"
+source: "knowledge/hotel-standards/00-general/emergency-procedures.md"
+tags:
+  - hotel-standards
+  - 通用
+  - Other
+---
+
 # 紧急程序 (Emergency Procedures)
 
 > **文档编号**: GEN-003  

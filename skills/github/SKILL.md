@@ -1,3 +1,17 @@
+---
+skill_id: "github"
+title: "GitHub Integration Skill"
+category: "开发工具"
+description: "## Metadata - **Name**: github - **Version**: 1.0.0 - **Author**: OpenClaw - **Description**: GitHub repository management and API integration"
+when_to_use: ""
+size_kb: 0.8
+refactored: "2026-06-24"
+source: "skills/github/SKILL.md"
+tags:
+  - skills
+  - 开发工具
+---
+
 # GitHub Integration Skill
 
 ## Metadata

@@ -1,3 +1,17 @@
+---
+skill_id: "weather"
+title: "Weather Forecast Skill"
+category: "行业专属"
+description: "## Metadata - **Name**: weather - **Version**: 1.0.0 - **Author**: OpenClaw - **Description**: Weather forecast and alerts"
+when_to_use: ""
+size_kb: 0.8
+refactored: "2026-06-24"
+source: "skills/weather/SKILL.md"
+tags:
+  - skills
+  - 行业专属
+---
+
 # Weather Forecast Skill
 
 ## Metadata

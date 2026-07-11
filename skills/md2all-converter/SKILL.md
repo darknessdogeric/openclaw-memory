@@ -1,3 +1,17 @@
+---
+skill_id: "md2all-converter"
+title: "MD2ALL Converter - Markdown全能转换技能"
+category: "内容生产"
+description: "## 技能名称 **MD2ALL Converter** - Markdown转PDF/Word/HTML全能转换器"
+when_to_use: ""
+size_kb: 5.3
+refactored: "2026-06-24"
+source: "skills/md2all-converter/SKILL.md"
+tags:
+  - skills
+  - 内容生产
+---
+
 # MD2ALL Converter - Markdown全能转换技能
 
 ## 技能名称

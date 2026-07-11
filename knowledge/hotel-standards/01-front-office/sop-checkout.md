@@ -1,3 +1,20 @@
+---
+dept_code: "01-front-office"
+dept_name: "前厅部"
+doc_type: "SOP"
+doc_code: ""
+title: "退房SOP"
+role: "前台/接待员"
+size_kb: 4.3
+version: "v1.0"
+refactored: "2026-06-24"
+source: "knowledge/hotel-standards/01-front-office/sop-checkout.md"
+tags:
+  - hotel-standards
+  - 前厅部
+  - SOP
+---
+
 # 退房SOP (Check-out SOP)
 
 > **文档编号**: FO-SOP-002  

@@ -26,7 +26,7 @@ Eric收藏巴赫的音乐，代表着他对"技艺"的最高敬意。巴赫的�
 
 ---
 
-## 187. Porpora《Una Furtiva Lagrima》（偷偷流下的一滴泪，1724年）
+## 187. Porpora《Una Furtiva Lagrima》（偷偷流下的一滴泪，17多年）
 
 **历史背景**：
 

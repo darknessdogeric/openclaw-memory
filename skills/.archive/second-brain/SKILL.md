@@ -1,3 +1,17 @@
+---
+skill_id: "second-brain"
+title: "Second Brain Knowledge Management"
+category: "开发工具"
+description: "## Metadata - **Name**: second-brain - **Version**: 1.0.0 - **Author**: OpenClaw - **Description**: Personal knowledge base for capturing and retrieving insights"
+when_to_use: ""
+size_kb: 0.8
+refactored: "2026-06-24"
+source: "skills/second-brain/SKILL.md"
+tags:
+  - skills
+  - 开发工具
+---
+
 # Second Brain Knowledge Management
 
 ## Metadata

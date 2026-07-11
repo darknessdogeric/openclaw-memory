@@ -1,3 +1,22 @@
+---
+id: 18
+title: "政策法规 - 开业证照与合规"
+category: "合规法规"
+lifecycle_phase: "管"
+phase_order: 4
+role: "运营总/GM, 法务"
+scenarios: "开业合规, 法规查询"
+size_kb: 5.0
+version: "v3.3"
+updated: "2026-02-13"
+refactored: "2026-06-24"
+source: "knowledge/hotel-industry/18-regulations.md"
+tags:
+  - hotel-industry
+  - 合规法规
+  - 管
+---
+
 # 18 政策法规 - 合规指南
 
 > 开业证照 · 消防法规 · 环保要求 · 劳动法规 · 安全责任

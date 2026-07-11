@@ -1,3 +1,22 @@
+---
+id: 25
+title: "AI 应用全景 - 智能酒店"
+category: "AI 应用"
+lifecycle_phase: "AI"
+phase_order: 8
+role: "运营总/GM, 技术负责人"
+scenarios: "AI 客服怎么上, AI 应用选型"
+size_kb: 9.0
+version: "v3.3"
+updated: "2026-02-13"
+refactored: "2026-06-24"
+source: "knowledge/hotel-industry/25-ai-applications.md"
+tags:
+  - hotel-industry
+  - AI 应用
+  - AI
+---
+
 # 25 AI应用全景 - 智能酒店落地指南
 
 > AI客服 · 收益管理 · 智能客控 · 预测分析 · HAL协议

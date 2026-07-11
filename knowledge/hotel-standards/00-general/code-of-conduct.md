@@ -1,3 +1,20 @@
+---
+dept_code: "00-general"
+dept_name: "通用"
+doc_type: "P&P"
+doc_code: ""
+title: "行为准则"
+role: "全员"
+size_kb: 4.0
+version: "v1.0"
+refactored: "2026-06-24"
+source: "knowledge/hotel-standards/00-general/code-of-conduct.md"
+tags:
+  - hotel-standards
+  - 通用
+  - Other
+---
+
 # 行为准则 (Code of Conduct)
 
 > **文档编号**: GEN-002  

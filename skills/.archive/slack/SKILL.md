@@ -1,3 +1,17 @@
+---
+skill_id: "slack"
+title: "Slack Integration Skill"
+category: "行业专属"
+description: "## Metadata - **Name**: slack - **Version**: 1.0.0 - **Author**: OpenClaw - **Description**: Slack workspace integration for messaging and notifications"
+when_to_use: ""
+size_kb: 0.9
+refactored: "2026-06-24"
+source: "skills/slack/SKILL.md"
+tags:
+  - skills
+  - 行业专属
+---
+
 # Slack Integration Skill
 
 ## Metadata

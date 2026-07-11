@@ -1,3 +1,17 @@
+---
+skill_id: "linkedin"
+title: "LinkedIn Integration Skill"
+category: "行业专属"
+description: "## Metadata - **Name**: linkedin - **Version**: 1.0.0 - **Author**: OpenClaw - **Description**: LinkedIn professional networking and B2B outreach"
+when_to_use: ""
+size_kb: 1.1
+refactored: "2026-06-24"
+source: "skills/linkedin/SKILL.md"
+tags:
+  - skills
+  - 行业专属
+---
+
 # LinkedIn Integration Skill
 
 ## Metadata

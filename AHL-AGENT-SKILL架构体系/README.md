@@ -1,3 +1,20 @@
+---
+id: "AHL-OVERVIEW"
+title: "AHL AGENT+SKILL 架构体系 - 总览"
+accommodation_type: "AHL总览"
+agent_type: ""
+role: "总览/导航"
+size_kb: 16.0
+version: "v1.0"
+refactored: "2026-06-24"
+source: "AHL-AGENT-SKILL架构体系/README.md"
+tags:
+  - ahl
+  - agent-skill
+  - AHL总览
+  - architecture
+---
+
 # AHL AGENT+SKILL 架构体系 - 总览
 
 > 版本: V1.0  

@@ -22,6 +22,8 @@
   },
   "homepage": "https://github.com/darknessdogeric/openclaw-memory#readme",
   "dependencies": {
+    "@antv/infographic": "^0.2.19",
+    "@google/design.md": "^0.3.0",
     "sqlite-vec": "^0.1.9"
   }
 }

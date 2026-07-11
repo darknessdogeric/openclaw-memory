@@ -1,3 +1,17 @@
+---
+skill_id: "email"
+title: "Email Management Skill"
+category: "行业专属"
+description: "## Metadata - **Name**: email - **Version**: 1.0.0 - **Author**: OpenClaw - **Description**: Email management and automation across multiple providers"
+when_to_use: ""
+size_kb: 0.9
+refactored: "2026-06-24"
+source: "skills/email/SKILL.md"
+tags:
+  - skills
+  - 行业专属
+---
+
 # Email Management Skill
 
 ## Metadata

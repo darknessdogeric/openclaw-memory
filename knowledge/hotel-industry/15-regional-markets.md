@@ -1,3 +1,22 @@
+---
+id: 15
+title: "区域市场 - 8 大城市 RevPAR"
+category: "投资决策"
+lifecycle_phase: "投"
+phase_order: 1
+role: "投资人/业主, 投资分析师"
+scenarios: "区域选择, 投资热力图"
+size_kb: 6.0
+version: "v3.3"
+updated: "2026-02-13"
+refactored: "2026-06-24"
+source: "knowledge/hotel-industry/15-regional-markets.md"
+tags:
+  - hotel-industry
+  - 投资决策
+  - 投
+---
+
 # 15 区域市场 - 8大城市RevPAR数据
 
 > 一线城市 · 新一线城市 · 投资热力图 · 市场特征 · 投资建议

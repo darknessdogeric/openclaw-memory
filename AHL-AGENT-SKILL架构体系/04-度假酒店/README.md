@@ -1,3 +1,20 @@
+---
+id: "AHL-04"
+title: "度假酒店 - AGENT+SKILL 架构方案"
+accommodation_type: "度假酒店"
+agent_type: ""
+role: "住宿类型架构方案"
+size_kb: 9.1
+version: "v1.0"
+refactored: "2026-06-24"
+source: "AHL-AGENT-SKILL架构体系/04-度假酒店\README.md"
+tags:
+  - ahl
+  - agent-skill
+  - 度假酒店
+  - architecture
+---
+
 # 度假酒店 - AGENT+SKILL 架构方案
 
 > 版本: V1.0  

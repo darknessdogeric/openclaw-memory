@@ -1,3 +1,22 @@
+---
+id: 10
+title: "数据速查 - 全行业 KPI 基准"
+category: "数据基准"
+lifecycle_phase: "管"
+phase_order: 4
+role: "运营总/GM, 财务负责人"
+scenarios: "KPI 对标, 数据查询"
+size_kb: 6.2
+version: "v3.3"
+updated: "2026-02-13"
+refactored: "2026-06-24"
+source: "knowledge/hotel-industry/10-benchmarks.md"
+tags:
+  - hotel-industry
+  - 数据基准
+  - 管
+---
+
 # 10 数据速查 - 全行业KPI基准
 
 > 核心公式 · 行业基准 · 竞争力指数 · 财务指标 · 运营标准

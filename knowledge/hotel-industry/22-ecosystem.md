@@ -1,3 +1,22 @@
+---
+id: 22
+title: "产业链生态 - 上下游协同"
+category: "产业链"
+lifecycle_phase: "拓展"
+phase_order: 6
+role: "品牌方/开发商, 行业研究者"
+scenarios: "合作伙伴, 生态理解"
+size_kb: 6.6
+version: "v3.3"
+updated: "2026-02-13"
+refactored: "2026-06-24"
+source: "knowledge/hotel-industry/22-ecosystem.md"
+tags:
+  - hotel-industry
+  - 产业链
+  - 拓展
+---
+
 # 22 产业链生态 - 上下游与合作方
 
 > 上游供应商 · 下游分销渠道 · 协会组织 · 协同趋势

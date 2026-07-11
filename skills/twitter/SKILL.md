@@ -1,3 +1,17 @@
+---
+skill_id: "twitter"
+title: "Twitter/X Social Media Skill"
+category: "行业专属"
+description: "## Metadata - **Name**: twitter - **Version**: 1.0.0 - **Author**: OpenClaw - **Description**: Twitter/X social media monitoring and posting"
+when_to_use: ""
+size_kb: 0.8
+refactored: "2026-06-24"
+source: "skills/twitter/SKILL.md"
+tags:
+  - skills
+  - 行业专属
+---
+
 # Twitter/X Social Media Skill
 
 ## Metadata

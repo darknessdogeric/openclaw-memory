@@ -1,3 +1,20 @@
+---
+dept_code: "03-fb"
+dept_name: "餐饮部"
+doc_type: "SOP"
+doc_code: ""
+title: "厨房操作SOP"
+role: "餐厅服务员/厨师"
+size_kb: 4.8
+version: "v1.0"
+refactored: "2026-06-24"
+source: "knowledge/hotel-standards/03-fb/sop-kitchen.md"
+tags:
+  - hotel-standards
+  - 餐饮部
+  - SOP
+---
+
 # 厨房操作SOP (Kitchen SOP)
 
 > **文档编号**: FB-SOP-001  

@@ -1,3 +1,20 @@
+---
+id: "AHL-06"
+title: "康养酒店 - AGENT+SKILL 架构方案"
+accommodation_type: "康养酒店"
+agent_type: ""
+role: "住宿类型架构方案"
+size_kb: 8.1
+version: "v1.0"
+refactored: "2026-06-24"
+source: "AHL-AGENT-SKILL架构体系/06-康养酒店\README.md"
+tags:
+  - ahl
+  - agent-skill
+  - 康养酒店
+  - architecture
+---
+
 # 康养酒店 - AGENT+SKILL 架构方案
 
 > 版本: V1.0  

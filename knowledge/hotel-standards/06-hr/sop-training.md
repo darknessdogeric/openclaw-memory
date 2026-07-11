@@ -1,3 +1,20 @@
+---
+dept_code: "06-hr"
+dept_name: "人力资源部"
+doc_type: "SOP"
+doc_code: ""
+title: "员工培训SOP"
+role: "HR/培训师"
+size_kb: 4.5
+version: "v1.0"
+refactored: "2026-06-24"
+source: "knowledge/hotel-standards/06-hr/sop-training.md"
+tags:
+  - hotel-standards
+  - 人力资源部
+  - SOP
+---
+
 # 员工培训SOP (Training SOP)
 
 > **文档编号**: HR-SOP-001  

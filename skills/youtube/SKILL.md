@@ -1,3 +1,17 @@
+---
+skill_id: "youtube"
+title: "YouTube Video Skill"
+category: "开发工具"
+description: "## Metadata - **Name**: youtube - **Version**: 1.0.0 - **Author**: OpenClaw - **Description**: YouTube video download, subtitle extraction, and search"
+when_to_use: ""
+size_kb: 0.9
+refactored: "2026-06-24"
+source: "skills/youtube/SKILL.md"
+tags:
+  - skills
+  - 开发工具
+---
+
 # YouTube Video Skill
 
 ## Metadata

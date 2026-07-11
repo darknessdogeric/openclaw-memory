@@ -65,20 +65,52 @@ class B166ERWatermark:
         return len(bin(int(text.encode('utf-8').hex(), base=16))[2:])
 
     def embed_text(self, img_path: str, text: str, output_path: str = None) -> str:
-        """嵌入文字水印"""
+        """嵌入文字水印（修复 cv2.imread / cv2.imwrite 兼容性问题，2026-06-18）"""
         if output_path is None:
             base, ext = os.path.splitext(img_path)
             output_path = f"{base}_wm{ext}"
+        from PIL import Image
+        import numpy as np
+        import cv2
+        pil_img = Image.open(img_path).convert('RGB')
+        img_arr = np.array(pil_img)
+        # RGB -> BGR for blind_watermark
+        img_bgr = cv2.cvtColor(img_arr, cv2.COLOR_RGB2BGR)
         bwm = WaterMark(password_img=self.pwd, password_wm=self.pwd)
-        bwm.read_img(img_path)
+        # Bypass broken cv2.imread by passing array directly
+        bwm.read_img(img=img_bgr)
         bwm.read_wm(text, mode='str')
-        bwm.embed(output_path)
+        embed_img = bwm.bwm_core.embed()
+        # Cast float32 -> uint8 (cv2.imwrite fails silently on float)
+        if embed_img.dtype != np.uint8:
+            embed_img = np.clip(embed_img, 0, 255).astype(np.uint8)
+        # Save via PIL (more reliable than cv2.imwrite on this system)
+        embed_rgb = cv2.cvtColor(embed_img, cv2.COLOR_BGR2RGB)
+        Image.fromarray(embed_rgb).save(output_path)
         return output_path
 
     def extract_text(self, img_path: str, text: str) -> str:
-        """提取文字水印（需知原文）"""
+        """提取文字水印（需知原文，2026-06-18 修复 cv2.imread）"""
+        from PIL import Image
+        import numpy as np
+        import cv2
+        pil_img = Image.open(img_path).convert('RGB')
+        img_arr = np.array(pil_img)
+        img_bgr = cv2.cvtColor(img_arr, cv2.COLOR_RGB2BGR)
         bwm = WaterMark(password_img=self.pwd, password_wm=self.pwd)
-        return bwm.extract(img_path, wm_shape=self._bits_for(text), mode='str')
+        wm_shape = self._bits_for(text)
+        # Call extract with embed_img directly (bypasses cv2.imread)
+        wm_avg = bwm.bwm_core.extract_with_kmeans(img=img_bgr, wm_shape=wm_shape)
+        # Decrypt with password_wm
+        wm_index = np.arange(wm_avg.size)
+        np.random.RandomState(self.pwd).shuffle(wm_index)
+        wm_avg[wm_index] = wm_avg.copy()
+        # Decode bits -> bytes -> str (same as library does)
+        byte_bits = ''.join(str((i >= 0.5) * 1) for i in wm_avg)
+        hex_str = hex(int(byte_bits, base=2))[2:]
+        if len(hex_str) % 2:
+            hex_str = '0' + hex_str
+        return bytes.fromhex(hex_str).decode('utf-8', errors='replace')
 
     def embed_image(self, img_path: str, wm_img_path: str, output_path: str = None) -> str:
         """嵌入图片水印（如 Logo/二维码）"""

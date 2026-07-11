@@ -1,3 +1,17 @@
+---
+skill_id: "rss-reader"
+title: "RSS Feed Reader Skill"
+category: "数据/分析"
+description: "## Metadata - **Name**: rss-reader - **Version**: 1.0.0 - **Author**: OpenClaw - **Description**: RSS/Atom feed reader and subscription manager"
+when_to_use: ""
+size_kb: 1.1
+refactored: "2026-06-24"
+source: "skills/rss-reader/SKILL.md"
+tags:
+  - skills
+  - 数据/分析
+---
+
 # RSS Feed Reader Skill
 
 ## Metadata

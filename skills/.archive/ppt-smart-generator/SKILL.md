@@ -1,3 +1,17 @@
+---
+skill_id: "ppt-smart-generator"
+title: "PPT智能生成器 (ppt-smart-generator)"
+category: "PPT/演示"
+description: "## 触发条件 当用户要求以下操作时自动触发： - "生成PPT" / "做PPT" / "帮我做个演示" - "把文档做成PPT" / "Word转PPT" - "智能PPT" / "AI生成PPT" - "配图PPT" / "带图的PPT" - "banana-slides" / "香蕉幻灯片""
+when_to_use: ""生成PPT" / "做PPT" / "帮我做个演示" | "把文档做成PPT" / "Word转PPT" | "智能PPT" / "AI生成PPT""
+size_kb: 2.1
+refactored: "2026-06-24"
+source: "skills/ppt-smart-generator/SKILL.md"
+tags:
+  - skills
+  - PPT/演示
+---
+
 # PPT智能生成器 (ppt-smart-generator)
 
 ## 触发条件

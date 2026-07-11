@@ -1,3 +1,20 @@
+---
+dept_code: "02-housekeeping"
+dept_name: "客房部"
+doc_type: "SOP"
+doc_code: ""
+title: "公共区域清洁SOP"
+role: "客房服务员"
+size_kb: 3.9
+version: "v1.0"
+refactored: "2026-06-24"
+source: "knowledge/hotel-standards/02-housekeeping/sop-public-areas.md"
+tags:
+  - hotel-standards
+  - 客房部
+  - SOP
+---
+
 # 公共区域清洁SOP (Public Area Cleaning SOP)
 
 > **文档编号**: HK-SOP-002  

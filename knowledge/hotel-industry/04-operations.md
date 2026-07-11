@@ -1,3 +1,22 @@
+---
+id: 04
+title: "运营管理 - 收益管理 4 支柱"
+category: "运营管理"
+lifecycle_phase: "管"
+phase_order: 4
+role: "运营总/GM"
+scenarios: "RevPAR 下滑怎么办, 运营期管理"
+size_kb: 9.0
+version: "v3.3"
+updated: "2026-02-13"
+refactored: "2026-06-24"
+source: "knowledge/hotel-industry/04-operations.md"
+tags:
+  - hotel-industry
+  - 运营管理
+  - 管
+---
+
 # 04 运营管理 - 收益管理四支柱
 
 > 动态定价 · 渠道管理 · 库存控制 · 需求预测 · 运营标准

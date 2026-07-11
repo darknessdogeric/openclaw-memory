@@ -1,3 +1,22 @@
+---
+id: 24
+title: "数字化运营 - 数据中台/CDP"
+category: "数字化"
+lifecycle_phase: "数字化"
+phase_order: 7
+role: "运营总/GM, 技术负责人"
+scenarios: "数字化转型怎么做, 数据中台建设"
+size_kb: 8.5
+version: "v3.3"
+updated: "2026-02-13"
+refactored: "2026-06-24"
+source: "knowledge/hotel-industry/24-digital-operations.md"
+tags:
+  - hotel-industry
+  - 数字化
+  - 数字化
+---
+
 # 24 数字化运营 - 酒店数字化转型实战
 
 > 数据中台 · 智能决策 · 客户画像 · 自动化营销 · 数字孪生

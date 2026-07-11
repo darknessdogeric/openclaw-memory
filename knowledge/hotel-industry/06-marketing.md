@@ -1,3 +1,22 @@
+---
+id: 06
+title: "市场营销 - 直销体系建设"
+category: "营销运营"
+lifecycle_phase: "管"
+phase_order: 4
+role: "营销负责人"
+scenarios: "OTA 策略, 会员体系"
+size_kb: 10.0
+version: "v3.3"
+updated: "2026-02-13"
+refactored: "2026-06-24"
+source: "knowledge/hotel-industry/06-marketing.md"
+tags:
+  - hotel-industry
+  - 营销运营
+  - 管
+---
+
 # 06 市场营销 - 直销体系建设
 
 > 营销漏斗 · 微信生态 · 会员体系 · OTA运营 · 内容营销

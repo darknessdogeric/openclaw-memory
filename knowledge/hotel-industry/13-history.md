@@ -1,3 +1,22 @@
+---
+id: 13
+title: "发展史 - 1777 年至今"
+category: "行业历史"
+lifecycle_phase: "拓展"
+phase_order: 6
+role: "行业研究者"
+scenarios: "行业规律总结, 历史脉络"
+size_kb: 5.6
+version: "v3.3"
+updated: "2026-02-13"
+refactored: "2026-06-24"
+source: "knowledge/hotel-industry/13-history.md"
+tags:
+  - hotel-industry
+  - 行业历史
+  - 拓展
+---
+
 # 13 发展史 - 酒店业演进脉络
 
 > 国际发展史 · 中国酒店业 · 港澳台发展 · 历史规律总结

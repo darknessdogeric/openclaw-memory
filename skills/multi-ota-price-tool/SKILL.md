@@ -1,3 +1,17 @@
+---
+skill_id: "multi-ota-price-tool"
+title: "Multi-OTA Price Intelligence Tool (MOTI)"
+category: "数据/分析"
+description: "## 定位 **AHL酒店初始定位专用工具**。在零竞品数据前提下，通过多OTA平台抓取 + AI视觉解析 + 入住率加权，还原酒店真实市场价格锚点。 ---"
+when_to_use: ""
+size_kb: 4.3
+refactored: "2026-06-24"
+source: "skills/multi-ota-price-tool/SKILL.md"
+tags:
+  - skills
+  - 数据/分析
+---
+
 # Multi-OTA Price Intelligence Tool (MOTI)
 
 ## 定位

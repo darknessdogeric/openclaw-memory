@@ -1,3 +1,20 @@
+---
+dept_code: "08-security"
+dept_name: "安保部"
+doc_type: "SOP"
+doc_code: ""
+title: "应急响应SOP"
+role: "安保员"
+size_kb: 5.2
+version: "v1.0"
+refactored: "2026-06-24"
+source: "knowledge/hotel-standards/08-security/sop-emergency.md"
+tags:
+  - hotel-standards
+  - 安保部
+  - SOP
+---
+
 # 应急响应SOP (Emergency Response SOP)
 
 > **文档编号**: SEC-SOP-001  

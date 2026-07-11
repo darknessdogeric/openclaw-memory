@@ -1,3 +1,22 @@
+---
+id: 11
+title: "退出机制 - 七大路径"
+category: "投资退出"
+lifecycle_phase: "退"
+phase_order: 5
+role: "投资人/业主"
+scenarios: "如何退出投资, 退出时点判断"
+size_kb: 19.8
+version: "v3.3"
+updated: "2026-02-13"
+refactored: "2026-06-24"
+source: "knowledge/hotel-industry/11-exit-strategies.md"
+tags:
+  - hotel-industry
+  - 投资退出
+  - 退
+---
+
 # 11 退出机制 - 全方位退出策略指南
 
 > 退出时机研判 · 七大退出路径详解 · 资产评估技术 · 交易流程全解 · 政策法规梳理 · 经济环境影响 · 实操案例

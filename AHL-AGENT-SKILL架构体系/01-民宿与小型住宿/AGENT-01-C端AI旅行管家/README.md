@@ -1,3 +1,20 @@
+---
+id: "AHL-01-C"
+title: "C端 AI旅行管家 - 民宿版"
+accommodation_type: "民宿与小型住宿"
+agent_type: "C端-客户侧"
+role: "Agent 架构方案"
+size_kb: 13.5
+version: "v1.0"
+refactored: "2026-06-24"
+source: "AHL-AGENT-SKILL架构体系/01-民宿与小型住宿\AGENT-01-C端AI旅行管家\README.md"
+tags:
+  - ahl
+  - agent-skill
+  - 民宿与小型住宿
+  - C端-客户侧
+---
+
 # C端 AI旅行管家 - 民宿版
 
 > AGENT名称: Guest AI Concierge  

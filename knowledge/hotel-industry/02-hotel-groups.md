@@ -1,3 +1,22 @@
+---
+id: 02
+title: "品牌集团 - 30+ 品牌费用对比"
+category: "品牌加盟"
+lifecycle_phase: "融"
+phase_order: 2
+role: "品牌方/开发商, 投资人/业主"
+scenarios: "选哪个品牌加盟"
+size_kb: 8.8
+version: "v3.3"
+updated: "2026-02-13"
+refactored: "2026-06-24"
+source: "knowledge/hotel-industry/02-hotel-groups.md"
+tags:
+  - hotel-industry
+  - 品牌加盟
+  - 融
+---
+
 # 02 品牌集团 - 30+品牌费用对比
 
 > 国际集团矩阵 · 中国本土势力 · 品牌费用对比 · 选择决策框架

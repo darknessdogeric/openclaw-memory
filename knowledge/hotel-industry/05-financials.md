@@ -1,3 +1,22 @@
+---
+id: 05
+title: "财务测算 - 投资回报模型"
+category: "财务投资"
+lifecycle_phase: "管"
+phase_order: 4
+role: "财务负责人, 投资人/业主"
+scenarios: "投资额度怎么定, 财务测算"
+size_kb: 7.5
+version: "v3.3"
+updated: "2026-02-13"
+refactored: "2026-06-24"
+source: "knowledge/hotel-industry/05-financials.md"
+tags:
+  - hotel-industry
+  - 财务投资
+  - 管
+---
+
 # 05 财务测算 - 投资回报模型
 
 > 收入结构 · 成本分析 · 单店模型 · 敏感性分析 · 财务健康度

@@ -1,3 +1,20 @@
+---
+dept_code: "05-finance"
+dept_name: "财务部"
+doc_type: "SOP"
+doc_code: ""
+title: "夜审SOP"
+role: "会计/出纳"
+size_kb: 4.1
+version: "v1.0"
+refactored: "2026-06-24"
+source: "knowledge/hotel-standards/05-finance/sop-night-audit.md"
+tags:
+  - hotel-standards
+  - 财务部
+  - SOP
+---
+
 # 夜审SOP (Night Audit SOP)
 
 > **文档编号**: FI-SOP-001  

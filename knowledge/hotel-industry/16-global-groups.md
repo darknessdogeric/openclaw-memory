@@ -1,3 +1,22 @@
+---
+id: 16
+title: "国际集团深度 - 万豪/希尔顿/洲际"
+category: "品牌加盟"
+lifecycle_phase: "融"
+phase_order: 2
+role: "品牌方/开发商, 投资人/业主"
+scenarios: "国际品牌对比, 全球战略分析"
+size_kb: 7.0
+version: "v3.3"
+updated: "2026-02-13"
+refactored: "2026-06-24"
+source: "knowledge/hotel-industry/16-global-groups.md"
+tags:
+  - hotel-industry
+  - 品牌加盟
+  - 融
+---
+
 # 16 国际集团深度 - 全球战略分析
 
 > 万豪 · 希尔顿 · 洲际 · 雅高 · 并购史 · 中国战略

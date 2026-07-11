@@ -1,3 +1,25 @@
+---
+type: kb-legacy
+domain: quantitative-trading
+status: v1.0-legacy
+created: 2026-04-14
+last-updated: 2026-04-14
+superseded-by: ../../knowledge/quantitative-trading/
+owner: Eric (张实)
+author: B166ER
+priority: P1
+tags:
+  - quantitative-trading
+  - factor-model
+  - backtest
+  - technical-analysis
+  - python-quant
+related:
+  - ../../knowledge/quantitative-trading/README.md
+  - ../../knowledge/quantitative-trading/03-策略工程骨架.md
+  - ../../knowledge/quantitative-trading/04-AI量化前沿.md
+---
+
 # 量化交易知识库
 
 > 整理: B166ER
@@ -5,6 +27,8 @@
 > 版本: V1.0
 > 分类: 金融/量化交易
 > 触发词: 量化交易/量化策略/回测/技术分析/算法交易/因子模型/Python量化/backtest
+
+> **2026-06-28 升级**: v1.0 已被 `knowledge/quantitative-trading/` 知识库覆盖。新版包含平台架构 / 数据源 / 策略工程 / AI 量化 / 中国监管 / Eric 专属路径 / 实战手册 7 个模块。本文件保留作为理论参考。
 
 ---
 

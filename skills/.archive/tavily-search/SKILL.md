@@ -1,3 +1,17 @@
+---
+skill_id: "tavily-search"
+title: "Tavily Search API Skill"
+category: "数据/分析"
+description: "## Metadata - **Name**: tavily-search - **Version**: 1.0.0 - **Author**: OpenClaw - **Description**: AI-powered web search using Tavily API"
+when_to_use: ""
+size_kb: 0.9
+refactored: "2026-06-24"
+source: "skills/tavily-search/SKILL.md"
+tags:
+  - skills
+  - 数据/分析
+---
+
 # Tavily Search API Skill
 
 ## Metadata

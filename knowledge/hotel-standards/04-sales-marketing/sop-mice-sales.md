@@ -1,3 +1,20 @@
+---
+dept_code: "04-sales-marketing"
+dept_name: "销售营销部"
+doc_type: "SOP"
+doc_code: ""
+title: "会议/宴会销售SOP"
+role: "销售经理/营销专员"
+size_kb: 6.3
+version: "v1.0"
+refactored: "2026-06-24"
+source: "knowledge/hotel-standards/04-sales-marketing/sop-mice-sales.md"
+tags:
+  - hotel-standards
+  - 销售营销部
+  - SOP
+---
+
 # 会议/宴会销售SOP (MICE Sales SOP)
 
 > **文档编号**: SM-SOP-003  

@@ -1,3 +1,17 @@
+---
+skill_id: "jina-reader"
+title: "Jina Reader Skill"
+category: "学术/研究"
+description: "## Metadata - **Name**: jina-reader - **Version**: 1.0.0 - **Author**: OpenClaw - **Description**: Read and extract content from any webpage"
+when_to_use: ""
+size_kb: 0.5
+refactored: "2026-06-24"
+source: "skills/jina-reader/SKILL.md"
+tags:
+  - skills
+  - 学术/研究
+---
+
 # Jina Reader Skill
 
 ## Metadata

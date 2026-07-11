@@ -1,3 +1,17 @@
+---
+skill_id: "notion"
+title: "Notion Integration Skill"
+category: "学术/研究"
+description: "## Metadata - **Name**: notion - **Version**: 1.0.0 - **Author**: OpenClaw - **Description**: Notion workspace integration for notes, databases, and wikis"
+when_to_use: ""
+size_kb: 1.0
+refactored: "2026-06-24"
+source: "skills/notion/SKILL.md"
+tags:
+  - skills
+  - 学术/研究
+---
+
 # Notion Integration Skill
 
 ## Metadata

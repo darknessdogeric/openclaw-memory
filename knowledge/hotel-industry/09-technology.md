@@ -1,3 +1,22 @@
+---
+id: 09
+title: "技术应用 - PMS/RMS 选型"
+category: "数字化"
+lifecycle_phase: "管"
+phase_order: 4
+role: "运营总/GM, 技术负责人"
+scenarios: "PMS 选型, 数字化转型"
+size_kb: 9.7
+version: "v3.3"
+updated: "2026-02-13"
+refactored: "2026-06-24"
+source: "knowledge/hotel-industry/09-technology.md"
+tags:
+  - hotel-industry
+  - 数字化
+  - 管
+---
+
 # 09 技术应用 - PMS/RMS系统选型
 
 > 技术栈演进 · 核心系统 · 智能客控 · 数字化转型 · AI应用

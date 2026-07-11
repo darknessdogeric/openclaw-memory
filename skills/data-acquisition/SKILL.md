@@ -1,3 +1,17 @@
+---
+skill_id: "data-acquisition"
+title: "数据获取技能 (Data Acquisition Skill)"
+category: "数据/分析"
+description: "## 功能 免费获取酒店行业相关数据，支持： - 行业新闻采集 - 竞品数据监控 - OTA平台数据 - 政策法规 - 舆情监控"
+when_to_use: ""
+size_kb: 1.1
+refactored: "2026-06-24"
+source: "skills/data-acquisition/SKILL.md"
+tags:
+  - skills
+  - 数据/分析
+---
+
 # 数据获取技能 (Data Acquisition Skill)
 
 ## 功能

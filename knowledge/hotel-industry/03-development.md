@@ -1,3 +1,22 @@
+---
+id: 03
+title: "开发筹建 - 4 阶段 30 个月流程"
+category: "筹建管理"
+lifecycle_phase: "建"
+phase_order: 3
+role: "品牌方/开发商"
+scenarios: "筹建期管理"
+size_kb: 8.6
+version: "v3.3"
+updated: "2026-02-13"
+refactored: "2026-06-24"
+source: "knowledge/hotel-industry/03-development.md"
+tags:
+  - hotel-industry
+  - 筹建管理
+  - 建
+---
+
 # 03 开发筹建 - 4阶段30个月流程
 
 > 前期策划 · 设计阶段 · 施工阶段 · 筹开阶段 · 里程碑检查点

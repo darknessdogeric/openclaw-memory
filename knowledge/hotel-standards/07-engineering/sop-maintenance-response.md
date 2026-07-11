@@ -1,3 +1,20 @@
+---
+dept_code: "07-engineering"
+dept_name: "工程部"
+doc_type: "SOP"
+doc_code: ""
+title: "维修响应SOP"
+role: "工程师/维修工"
+size_kb: 4.7
+version: "v1.0"
+refactored: "2026-06-24"
+source: "knowledge/hotel-standards/07-engineering/sop-maintenance-response.md"
+tags:
+  - hotel-standards
+  - 工程部
+  - SOP
+---
+
 # 维修响应SOP (Maintenance Response SOP)
 
 > **文档编号**: ENG-SOP-002  

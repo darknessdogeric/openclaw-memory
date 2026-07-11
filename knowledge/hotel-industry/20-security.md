@@ -1,3 +1,22 @@
+---
+id: 20
+title: "安保管理 - 消防/治安/食品"
+category: "运营管理"
+lifecycle_phase: "管"
+phase_order: 4
+role: "运营总/GM, 安保负责人"
+scenarios: "应急预案, 安全管理"
+size_kb: 5.3
+version: "v3.3"
+updated: "2026-02-13"
+refactored: "2026-06-24"
+source: "knowledge/hotel-industry/20-security.md"
+tags:
+  - hotel-industry
+  - 运营管理
+  - 管
+---
+
 # 20 安保管理 - 消防/治安/应急预案
 
 > 组织架构 · 消防安全 · 治安防范 · 食品安全 · 应急预案

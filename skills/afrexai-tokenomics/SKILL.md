@@ -1,3 +1,17 @@
+---
+skill_id: "afrexai-tokenomics"
+title: "Token Economics Analyzer"
+category: "商业/管理"
+description: "Evaluate token and digital asset economics for business decisions. Covers utility tokens, governance tokens, loyalty points, and tokenized assets."
+when_to_use: "Evaluating a token-based product or partnership | Designing tokenomics for a new product launch | Assessing token treasury risk exposure"
+size_kb: 5.3
+refactored: "2026-06-24"
+source: "skills/afrexai-tokenomics/SKILL.md"
+tags:
+  - skills
+  - 商业/管理
+---
+
 # Token Economics Analyzer
 
 Evaluate token and digital asset economics for business decisions. Covers utility tokens, governance tokens, loyalty points, and tokenized assets.

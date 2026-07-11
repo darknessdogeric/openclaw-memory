@@ -132,6 +132,54 @@
     "amazon-fba-prep": {
       "version": "1.0.0",
       "installedAt": 1776006422346
+    },
+    "token-optimizer": {
+      "version": "1.0.18",
+      "installedAt": 1778287178641
+    },
+    "openclaw-workflow-automator": {
+      "version": "2.0.6",
+      "installedAt": 1778287178813
+    },
+    "smart-task-scheduler": {
+      "version": "1.0.6",
+      "installedAt": 1778287228352
+    },
+    "smart-scheduler": {
+      "version": "0.1.0",
+      "installedAt": 1778287228684
+    },
+    "gog": {
+      "version": "1.0.0",
+      "installedAt": 1778287248146
+    },
+    "ws-agent-browser": {
+      "version": "1.0.0",
+      "installedAt": 1778287248480
+    },
+    "elite-longterm-memory": {
+      "version": "1.2.3",
+      "installedAt": 1778287248596
+    },
+    "openclaw-auto-updater": {
+      "version": "1.0.0",
+      "installedAt": 1778287249375
+    },
+    "ckt-design": {
+      "version": "1.0.3",
+      "installedAt": 1780208175143
+    },
+    "baoyu-diagram": {
+      "version": "1.117.3",
+      "installedAt": 1780240026568
+    },
+    "drawio-coderknock": {
+      "version": "1.0.0",
+      "installedAt": 1780240027210
+    },
+    "ffmpeg-video-editor": {
+      "version": "1.0.0",
+      "installedAt": 1781797894379
     }
   }
 }

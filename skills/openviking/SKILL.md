@@ -1,3 +1,17 @@
+---
+skill_id: "openviking"
+title: "OpenViking Skill"
+category: "学术/研究"
+description: "**OpenViking** 是字节跳动火山引擎开源的 AI Agent 上下文数据库，专为 OpenClaw 等 AI Agent 平台设计。"
+when_to_use: ""
+size_kb: 6.0
+refactored: "2026-06-24"
+source: "skills/openviking/SKILL.md"
+tags:
+  - skills
+  - 学术/研究
+---
+
 # OpenViking Skill
 
 **OpenViking** 是字节跳动火山引擎开源的 AI Agent 上下文数据库，专为 OpenClaw 等 AI Agent 平台设计。

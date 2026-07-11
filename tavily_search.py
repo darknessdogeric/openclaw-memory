@@ -1,47 +1,34 @@
 # -*- coding: utf-8 -*-
-import requests
-import json
+"""Tavily search - POST + Bearer auth (fixed 2026-05-26)"""
+import sys, io, json, requests
+sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
+sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding='utf-8')
 
-TAVILY_KEY = 'tvly-dev-8KxnA8kQ8nLGqJzMFJqJ3p0D'
+KEY = "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"
 
-queries = [
-    '新华酒店管理公司 两江假日集团',
-    '新华渝北酒店 两江假日',
-    '重庆两江假日酒店管理有限公司 新华渝北',
-]
+def search(query, max_results=8):
+    r = requests.post(
+        "https://api.tavily.com/search",
+        headers={"Authorization": f"Bearer {KEY}", "Content-Type": "application/json"},
+        json={"query": query, "max_results": max_results, "include_answer": True},
+        timeout=30,
+    )
+    r.raise_for_status()
+    return r.json()
 
-for query in queries:
-    print(f'\n========== {query} ==========\n')
-    try:
-        response = requests.post(
-            'https://api.tavily.com/search',
-            json={
-                'api_key': TAVILY_KEY,
-                'query': query,
-                'search_depth': 'advanced',
-                'max_results': 10,
-                'include_answer': True
-            },
-            timeout=20
-        )
-        result = response.json()
-        
-        if 'detail' in result:
-            print(f'Error: {result["detail"]}')
-            continue
-            
-        print(f'Found {len(result.get("results", []))} results')
-        
-        if result.get('answer'):
-            print(f'\nAnswer: {result["answer"]}\n')
-        
-        for r in result.get('results', [])[:8]:
-            score = r.get('score', 0)
-            print(f'[{score:.2f}] {r["title"]}')
-            print(f'  URL: {r["url"]}')
-            content = r.get('content', '')[:300]
-            print(f'  Content: {content}')
-            print()
-            
-    except Exception as e:
-        print(f'Error: {e}')
+if __name__ == '__main__':
+    queries = sys.argv[1:] if len(sys.argv) > 1 else ['2026端午酒店预订']
+    for q in queries:
+        try:
+            d = search(q)
+            ans = d.get('answer','')
+            results = d.get('results',[])
+            print(f'\n=== {q} ({len(results)} results) ===')
+            if ans: print(f'[A] {ans[:500]}')
+            for item in results:
+                print(f"  [{item.get('score',0):.2f}] {item.get('title','')[:70]}")
+                print(f"    {item.get('url','')[:90]}")
+                c = item.get('content','')[:200]
+                if c: print(f'    {c}')
+        except Exception as e:
+            print(f'ERR: {e}')

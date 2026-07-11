@@ -1,3 +1,20 @@
+---
+dept_code: "00-general"
+dept_name: "通用"
+doc_type: "Other"
+doc_code: ""
+title: "员工手册"
+role: "全员"
+size_kb: 5.3
+version: "v1.0"
+refactored: "2026-06-24"
+source: "knowledge/hotel-standards/00-general/employee-handbook.md"
+tags:
+  - hotel-standards
+  - 通用
+  - Other
+---
+
 # 员工手册 (Employee Handbook)
 
 > **文档编号**: GEN-001  

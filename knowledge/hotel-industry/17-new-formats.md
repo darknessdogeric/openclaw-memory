@@ -1,3 +1,22 @@
+---
+id: 17
+title: "新业态 - 康养/电竞/亲子"
+category: "新业态"
+lifecycle_phase: "拓展"
+phase_order: 6
+role: "品牌方/开发商, 投资人/业主"
+scenarios: "新业态投资, 差异化定位"
+size_kb: 5.1
+version: "v3.3"
+updated: "2026-02-13"
+refactored: "2026-06-24"
+source: "knowledge/hotel-industry/17-new-formats.md"
+tags:
+  - hotel-industry
+  - 新业态
+  - 拓展
+---
+
 # 17 新业态 - 康养/电竞/亲子酒店
 
 > 康养酒店 · 电竞酒店 · 亲子酒店 · 其他新业态 · 投资分析

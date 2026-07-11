@@ -1,3 +1,22 @@
+---
+id: 26
+title: "市场调研与投资决策"
+category: "投资决策"
+lifecycle_phase: "投"
+phase_order: 1
+role: "投资人/业主, 投资分析师"
+scenarios: "项目调研, 投资测算"
+size_kb: 16.8
+version: "v3.3"
+updated: "2026-02-13"
+refactored: "2026-06-24"
+source: "knowledge/hotel-industry/26-market-research.md"
+tags:
+  - hotel-industry
+  - 投资决策
+  - 投
+---
+
 # 26 市场调研与投资决策 - 从选址到品牌全链条
 
 > 三级调研体系 · 投资测算模型 · 品牌适配决策 · 合作方匹配

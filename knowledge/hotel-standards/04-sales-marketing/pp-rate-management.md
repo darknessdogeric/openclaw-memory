@@ -1,3 +1,20 @@
+---
+dept_code: "04-sales-marketing"
+dept_name: "销售营销部"
+doc_type: "P&P"
+doc_code: ""
+title: "价格管理政策"
+role: "销售经理/营销专员"
+size_kb: 3.4
+version: "v1.0"
+refactored: "2026-06-24"
+source: "knowledge/hotel-standards/04-sales-marketing/pp-rate-management.md"
+tags:
+  - hotel-standards
+  - 销售营销部
+  - P&P
+---
+
 # 价格管理政策 (Rate Management P&P)
 
 > **文档编号**: SM-PP-001  

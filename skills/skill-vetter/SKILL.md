@@ -1,3 +1,17 @@
+---
+skill_id: "skill-vetter"
+title: "Untitled"
+category: "AI/ML"
+description: ""
+when_to_use: "Before installing any skill from ClawdHub | Before running skills from GitHub repos | When evaluating skills shared by other agents"
+size_kb: 4.6
+refactored: "2026-06-24"
+source: "skills/skill-vetter/SKILL.md"
+tags:
+  - skills
+  - AI/ML
+---
+
 ﻿---
 name: skill-vetter
 version: 1.0.0

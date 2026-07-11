@@ -1,3 +1,20 @@
+---
+id: "AHL-07"
+title: "服务式公寓 - AGENT+SKILL 架构方案"
+accommodation_type: "服务式公寓"
+agent_type: ""
+role: "住宿类型架构方案"
+size_kb: 7.6
+version: "v1.0"
+refactored: "2026-06-24"
+source: "AHL-AGENT-SKILL架构体系/07-服务式公寓\README.md"
+tags:
+  - ahl
+  - agent-skill
+  - 服务式公寓
+  - architecture
+---
+
 # 服务式公寓 - AGENT+SKILL 架构方案
 
 > 版本: V1.0  

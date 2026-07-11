@@ -1,3 +1,20 @@
+---
+dept_code: "01-front-office"
+dept_name: "前厅部"
+doc_type: "SOP"
+doc_code: ""
+title: "礼宾服务SOP"
+role: "前台/接待员"
+size_kb: 4.8
+version: "v1.0"
+refactored: "2026-06-24"
+source: "knowledge/hotel-standards/01-front-office/sop-concierge.md"
+tags:
+  - hotel-standards
+  - 前厅部
+  - SOP
+---
+
 # 礼宾服务SOP (Concierge Service SOP)
 
 > **文档编号**: FO-SOP-004  

@@ -1,3 +1,22 @@
+---
+id: 01
+title: "行业全景 - 酒店业投资地图"
+category: "投资决策"
+lifecycle_phase: "投"
+phase_order: 1
+role: "投资人/业主, 投资分析师, 行业研究者"
+scenarios: "要不要投资酒店, 行业宏观判断"
+size_kb: 10.4
+version: "v3.3"
+updated: "2026-02-13"
+refactored: "2026-06-24"
+source: "knowledge/hotel-industry/01-industry-overview.md"
+tags:
+  - hotel-industry
+  - 投资决策
+  - 投
+---
+
 # 01 行业全景 - 酒店业投资地图
 
 > 行业规模数据 · 市场细分矩阵 · 产业链结构 · 核心指标速查

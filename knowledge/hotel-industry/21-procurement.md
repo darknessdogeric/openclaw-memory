@@ -1,3 +1,22 @@
+---
+id: 21
+title: "采购供应链 - 供应商管理"
+category: "运营管理"
+lifecycle_phase: "管"
+phase_order: 4
+role: "运营总/GM, 采购负责人"
+scenarios: "采购成本控制, 供应商选择"
+size_kb: 4.9
+version: "v3.3"
+updated: "2026-02-13"
+refactored: "2026-06-24"
+source: "knowledge/hotel-industry/21-procurement.md"
+tags:
+  - hotel-industry
+  - 运营管理
+  - 管
+---
+
 # 21 采购供应链 - 成本控制与供应商管理
 
 > 供应商分类 · 采购流程 · 成本控制 · 集采模式 · 库存管理

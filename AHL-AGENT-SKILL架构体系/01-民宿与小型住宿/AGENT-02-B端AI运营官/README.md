@@ -1,3 +1,20 @@
+---
+id: "AHL-01-B"
+title: "B端 AI运营官 - 民宿版"
+accommodation_type: "民宿与小型住宿"
+agent_type: "B端-运营侧"
+role: "Agent 架构方案"
+size_kb: 18.5
+version: "v1.0"
+refactored: "2026-06-24"
+source: "AHL-AGENT-SKILL架构体系/01-民宿与小型住宿\AGENT-02-B端AI运营官\README.md"
+tags:
+  - ahl
+  - agent-skill
+  - 民宿与小型住宿
+  - B端-运营侧
+---
+
 # B端 AI运营官 - 民宿版
 
 > AGENT名称: Host AI Operator  

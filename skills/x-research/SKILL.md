@@ -1,15 +1,12 @@
 ---
 name: x-research
 description: >
-  General-purpose X/Twitter research agent. Searches X for real-time perspectives,
-  dev discussions, product feedback, cultural takes, breaking news, and expert opinions.
-  Works like a web research agent but uses X as the source.
-  Use when: (1) user says "x research", "search x for", "search twitter for",
-  "what are people saying about", "what's twitter saying", "check x for", "x search",
-  "/x-research", (2) user is working on something where recent X discourse would provide
-  useful context (new library releases, API changes, product launches, cultural events,
-  industry drama), (3) user wants to find what devs/experts/community thinks about a topic.
-  NOT for: posting tweets or account management. Note: currently uses recent search (last 7 days). Full-archive search is available on the same pay-per-use X API plan but not yet implemented in this skill.
+  X/Twitter research agent. Searches X for real-time perspectives,
+  dev discussions, product feedback, breaking news, and expert opinions.
+  Use when: user says "x research", "search x/twitter for",
+  "what are people saying about", "check x for", "/x-research".
+  NOT for posting or account management.
+  Note: searches last 7 days (recent search).
 ---
 
 # X Research

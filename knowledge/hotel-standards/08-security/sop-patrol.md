@@ -1,3 +1,20 @@
+---
+dept_code: "08-security"
+dept_name: "安保部"
+doc_type: "SOP"
+doc_code: ""
+title: "安保巡逻SOP"
+role: "安保员"
+size_kb: 4.3
+version: "v1.0"
+refactored: "2026-06-24"
+source: "knowledge/hotel-standards/08-security/sop-patrol.md"
+tags:
+  - hotel-standards
+  - 安保部
+  - SOP
+---
+
 # 安保巡逻SOP (Security Patrol SOP)
 
 > **文档编号**: SEC-SOP-002  

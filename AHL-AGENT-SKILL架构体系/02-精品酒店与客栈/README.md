@@ -1,3 +1,20 @@
+---
+id: "AHL-02"
+title: "精品酒店与客栈 - AGENT+SKILL 架构方案"
+accommodation_type: "精品酒店与客栈"
+agent_type: ""
+role: "住宿类型架构方案"
+size_kb: 15.8
+version: "v1.0"
+refactored: "2026-06-24"
+source: "AHL-AGENT-SKILL架构体系/02-精品酒店与客栈\README.md"
+tags:
+  - ahl
+  - agent-skill
+  - 精品酒店与客栈
+  - architecture
+---
+
 # 精品酒店与客栈 - AGENT+SKILL 架构方案
 
 > 版本: V1.0  

@@ -1,3 +1,17 @@
+---
+skill_id: "ppt-deep-generator"
+title: "PPT深度生成器 (ppt-deep-generator)"
+category: "PPT/演示"
+description: "## 概述 高级PPT智能生成系统，支持深度排版、丰富背景、图形化数据展示。"
+when_to_use: ""
+size_kb: 1.4
+refactored: "2026-06-24"
+source: "skills/ppt-deep-generator/SKILL.md"
+tags:
+  - skills
+  - PPT/演示
+---
+
 # PPT深度生成器 (ppt-deep-generator)
 
 ## 概述
