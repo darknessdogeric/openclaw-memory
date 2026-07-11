@@ -17,7 +17,8 @@ from typing import Any
 sys.path.insert(0, os.path.dirname(__file__))
 from lottery_math import (
     kelly_criterion, FallacyDetector, binomial_test,
-    gamblers_ruin_probability,
+    gamblers_ruin_probability, validate_combination,
+    consensus_score, diversify_anti_consensus, backtest_strategy,
 )
 
 sys.stdout.reconfigure(encoding='utf-8')
@@ -352,8 +353,11 @@ class LotteryPredictor:
         for f, b, s in sorted(candidates, key=lambda x: -x[2]):
             key = f'{f}|{b}'
             if key not in seen:
-                seen.add(key)
-                unique.append((f, b, s))
+                # ══ V3.0 约束过滤 ══
+                check = validate_combination(f, self.rule['front_pool'], self.rule['front_count'])
+                if check.passes:
+                    seen.add(key)
+                    unique.append((f, b, s))
             if len(unique) >= k:
                 break
 
@@ -375,10 +379,11 @@ class LotteryPredictor:
 
         # A组: 主策略
         candidates_a = self.generate_candidates(200, variant='A')
-        # B组: 变体策略
-        candidates_b = self.generate_candidates(200, variant='B')
+        # B组: 变体策略 — 应用反共识过滤
+        candidates_b_raw = self.generate_candidates(300, variant='B')
 
         bets = []
+        # A组
         for i, (front, back, score) in enumerate(candidates_a[:half]):
             bets.append({
                 'scheme': i + 1,
@@ -386,15 +391,24 @@ class LotteryPredictor:
                 'front': front,
                 'back': back,
                 'score': round(score, 2),
+                'consensus': round(consensus_score(front), 2),
             })
 
-        for i, (front, back, score) in enumerate(candidates_b[:half]):
+        # B组 — 反共识过滤
+        anti_consensus = diversify_anti_consensus(
+            [(f, b) for f, b, _ in candidates_b_raw[:half * 2]],
+            top_k=half
+        )
+        for i, (front, back) in enumerate(anti_consensus):
+            # 找对应评分
+            score = next((s for f, b, s in candidates_b_raw if f == front and b == back), 0)
             bets.append({
                 'scheme': half + i + 1,
-                'group': 'B (冷号倾斜)',
+                'group': 'B (反共识)',
                 'front': front,
                 'back': back,
                 'score': round(score, 2),
+                'consensus': round(consensus_score(front), 2),
             })
 
         # ══ 凯利下注建议 ══
@@ -413,7 +427,14 @@ class LotteryPredictor:
         audit_text = f'预测基于{self.analyzer.total_issues}期历史频次统计。'
         fallacy_warnings = FallacyDetector.audit_text(audit_text)
 
-        # ══ 模型置信度 ══
+        # ══ 回测 ══
+        bt = backtest_strategy(self.lt, n_trials=20, train_window=50)
+        if bt:
+            bt_note = (f'📈 回测(20期): 策略均{bt.avg_front_hits}前区/期 vs '
+                       f'随机基线{bt.random_baseline} → '
+                       f'{"✅ 优于随机" if bt.better_than_random else "❌ 不优于随机"}')
+        else:
+            bt_note = '📈 回测: 数据不足(需≥75期)'
         # 检查是否有足够的预测-复盘对来做统计检验
         preds_file = os.path.join(DIR, 'predictions_log.json')
         total_tracked = 0
@@ -452,6 +473,7 @@ class LotteryPredictor:
             },
             'kelly_note': kelly_note,
             'fallacy_audit': fallacy_warnings,
+            'backtest': bt_note,
             'model_confidence': model_status,
             'disclaimer': FallacyDetector.correction_text(),
         }
@@ -609,14 +631,14 @@ def main():
         print(f'{"="*60}')
 
         # 按组输出
-        for group in ['A', 'B']:
-            group_bets = [b for b in result['bets'] if b['group'].startswith(group)]
-            group_label = result['bets'][0]['group'] if result['bets'][0]['group'].startswith(group) else result['bets'][-1]['group']
-            print(f'\n  ── {group}组: {group_label} ──')
+        for group_name, group_label in [('A', 'A (热号驱动+约束过滤)'), ('B', 'B (反共识+区间均衡)')]:
+            group_bets = [b for b in result['bets'] if b['group'].startswith(group_name)]
+            print(f'\n  ── {group_label} ──')
             for bet in group_bets:
                 f_str = ' '.join(str(n).zfill(2) for n in bet['front'])
                 b_str = ' '.join(str(n).zfill(2) for n in bet['back'])
-                print(f'    方案{bet["scheme"]} ({bet["score"]:.2f}): {f_str} | {b_str}')
+                cs = bet.get('consensus', '?')
+                print(f'    方案{bet["scheme"]} ({bet["score"]:.1f} 共识{cs}): {f_str} | {b_str}')
 
         print(f'\n{"-"*60}')
         print(f'  📊 热号TOP10: {result["stats_snapshot"]["front_hot_30"]}')
@@ -624,7 +646,9 @@ def main():
         print(f'  📊 遗漏TOP5: {list(result["stats_snapshot"]["front_gaps_top5"].items())[:5]}')
         print(f'  📊 后区频次: {result["stats_snapshot"]["back_freq_top5"]}')
         print(f'\n  {result["kelly_note"]}')
-        if result['fallacy_audit']:
+        if result.get('backtest'):
+            print(f'  {result["backtest"]}')
+        if result.get('fallacy_audit'):
             for w in result['fallacy_audit']:
                 print(f'  {w}')
         print(f'  📈 {result["model_confidence"]}')

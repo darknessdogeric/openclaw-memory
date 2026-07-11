@@ -10,6 +10,7 @@ B166ER 博彩数学武器库 V1.0
 import math
 import json
 import os
+import csv
 from typing import Tuple, Optional
 from dataclasses import dataclass, field
 
@@ -535,7 +536,206 @@ def markov_steady_state(transition_matrix: list[list[float]],
 
 
 # ═══════════════════════════════════════════
-#  七、统计显著性检验
+#  七、约束过滤器 (Constraint Filter)
+# ═══════════════════════════════════════════
+
+@dataclass
+class ConstraintCheck:
+    passes: bool
+    checks: dict
+    violations: list[str]
+
+
+def validate_combination(numbers: list[int], pool_size: int,
+                         count: int, history_sums: list[float] | None = None) -> ConstraintCheck:
+    """验证号码组合是否符合统计约束: 和值/奇偶/区间/连号"""
+    violations = []
+    nums = sorted(numbers)
+    total = sum(nums)
+
+    # 和值
+    if history_sums and len(history_sums) > 0:
+        import statistics
+        h_sorted = sorted(history_sums)
+        p05 = h_sorted[max(0, int(len(h_sorted) * 0.05))]
+        p95 = h_sorted[min(len(h_sorted) - 1, int(len(h_sorted) * 0.95))]
+        sum_ok = p05 <= total <= p95
+    else:
+        sum_ok = True
+    if not sum_ok:
+        violations.append(f'和值{total}超出范围')
+
+    # 奇偶比
+    odds = sum(1 for n in nums if n % 2 == 1)
+    oe_ok = odds not in (0, count)
+    if not oe_ok:
+        violations.append(f'奇偶极端{odds}:{count-odds}')
+
+    # 区间
+    zs = pool_size // 3
+    zones = [sum(1 for n in nums if n <= zs),
+             sum(1 for n in nums if zs < n <= zs * 2),
+             sum(1 for n in nums if n > zs * 2)]
+    zone_ok = max(zones) < count - 1
+    if not zone_ok:
+        violations.append(f'区间极端{zones}')
+
+    return ConstraintCheck(
+        passes=sum_ok and oe_ok and zone_ok,
+        checks={'sum': total, 'odds': odds, 'zones': zones},
+        violations=violations,
+    )
+
+
+# ═══════════════════════════════════════════
+#  八、轮转覆盖 (Wheeling System)
+# ═══════════════════════════════════════════
+
+def generate_wheel(key_numbers: list[int], pick_count: int,
+                   guarantee: int = 3) -> list[list[int]]:
+    """轮转覆盖: 若key_numbers含guarantee个中奖号, 保证至少一注覆盖"""
+    from itertools import combinations
+
+    if len(key_numbers) < pick_count:
+        return []
+
+    all_subsets = {frozenset(s) for s in combinations(key_numbers, guarantee)}
+    all_combos = list(combinations(key_numbers, pick_count))
+
+    covered = set()
+    selected = []
+    for _ in range(50):
+        best, best_new = None, 0
+        for combo in all_combos:
+            n = sum(1 for s in combinations(combo, guarantee)
+                    if frozenset(s) in all_subsets and frozenset(s) not in covered)
+            if n > best_new:
+                best_new, best = n, combo
+        if best is None or best_new == 0:
+            break
+        selected.append(list(best))
+        for s in combinations(best, guarantee):
+            covered.add(frozenset(s))
+    return selected
+
+
+# ═══════════════════════════════════════════
+#  九、反共识过滤器 (Anti-Consensus)
+# ═══════════════════════════════════════════
+
+BIRTHDAY_RANGE = set(range(1, 32))
+BIRTHDAY_HOT = {6, 8, 16, 18, 28}
+
+
+def consensus_score(numbers: list[int]) -> float:
+    """共识度 0~1 (越高越大众, 中奖后分钱越多)"""
+    birthday_r = sum(1 for n in numbers if n in BIRTHDAY_RANGE) / len(numbers)
+    lucky = min(sum(1 for n in numbers if n in BIRTHDAY_HOT) / len(numbers), 0.5)
+    return min(birthday_r * 0.5 + lucky * 0.5, 1.0)
+
+
+def diversify_anti_consensus(combos: list[tuple[list[int], list[int]]], top_k: int = 5) -> list[list[int]]:
+    """选出最反共识的组合 (combos: [(front, back), ...])"""
+    scored = []
+    for combo in combos:
+        if isinstance(combo, tuple):
+            front, _ = combo
+        else:
+            front = combo
+        scored.append((combo, consensus_score(front)))
+    scored.sort(key=lambda x: x[1])
+    return [c for c, _ in scored[:top_k]]
+
+
+# ═══════════════════════════════════════════
+#  十、回测框架
+# ═══════════════════════════════════════════
+
+@dataclass
+class BacktestResult:
+    total_trials: int
+    avg_front_hits: float
+    avg_back_hits: float
+    random_baseline: float
+    better_than_random: bool
+
+
+def backtest_strategy(lottery_type: str, n_trials: int = 20,
+                      train_window: int = 50) -> BacktestResult | None:
+    """滑动窗口回测: 策略 vs 随机基线"""
+    import random
+
+    RULES = {
+        'dlt': {'front_pool': 35, 'front_count': 5, 'back_pool': 12, 'back_count': 2},
+        'ssq': {'front_pool': 33, 'front_count': 6, 'back_pool': 16, 'back_count': 1},
+    }
+    rule = RULES[lottery_type]
+    csv_path = os.path.join(os.path.dirname(__file__),
+                            'dlt_history.csv' if lottery_type == 'dlt' else 'ssq_history.csv')
+    if not os.path.exists(csv_path):
+        return None
+
+    with open(csv_path, 'r', encoding='utf-8') as f:
+        history = list(csv.DictReader(f))
+
+    if len(history) < train_window + n_trials + 5:
+        return None
+
+    front_hits_all, back_hits_all = [], []
+    total = len(history)
+
+    for i in range(n_trials):
+        test_idx = total - n_trials + i
+        train = history[:test_idx]
+        test = history[test_idx]
+
+        # 提取实际号码
+        if lottery_type == 'dlt':
+            actual_front = sorted(int(test[f'front_{j}']) for j in range(1, 6))
+            actual_back = sorted(int(test[f'back_{j}']) for j in range(1, 3))
+        else:
+            actual_front = sorted(int(test[f'r{j}']) for j in range(1, 7))
+            actual_back = [int(test['b1'])]
+
+        # 从训练集统计热号
+        from collections import Counter
+        front_cnt = Counter()
+        back_cnt = Counter()
+        for row in train:
+            if lottery_type == 'dlt':
+                front_cnt.update(int(row[f'front_{j}']) for j in range(1, 6))
+                back_cnt.update(int(row[f'back_{j}']) for j in range(1, 3))
+            else:
+                front_cnt.update(int(row[f'r{j}']) for j in range(1, 7))
+                back_cnt.update([int(row['b1'])])
+
+        hot_f = [n for n, _ in front_cnt.most_common(rule['front_count'] * 3)]
+        hot_b = [n for n, _ in back_cnt.most_common(rule['back_count'] * 3)]
+
+        if len(hot_f) >= rule['front_count']:
+            pred_f = sorted(random.sample(hot_f, rule['front_count']))
+        else:
+            pred_f = sorted(random.sample(range(1, rule['front_pool'] + 1), rule['front_count']))
+
+        if len(hot_b) >= rule['back_count']:
+            pred_b = sorted(random.sample(hot_b, rule['back_count']))
+        else:
+            pred_b = sorted(random.sample(range(1, rule['back_pool'] + 1), rule['back_count']))
+
+        front_hits_all.append(len(set(pred_f) & set(actual_front)))
+        back_hits_all.append(len(set(pred_b) & set(actual_back)))
+
+    avg_f = sum(front_hits_all) / len(front_hits_all)
+    avg_b = sum(back_hits_all) / len(back_hits_all)
+    random_f = rule['front_count'] * (rule['front_count'] / rule['front_pool'])
+
+    return BacktestResult(
+        total_trials=n_trials,
+        avg_front_hits=round(avg_f, 2),
+        avg_back_hits=round(avg_b, 2),
+        random_baseline=round(random_f, 2),
+        better_than_random=avg_f > random_f,
+    )
 # ═══════════════════════════════════════════
 
 def binomial_test(successes: int, trials: int, expected_p: float) -> dict:
