@@ -363,17 +363,34 @@ class LotteryPredictor:
 
         return unique
 
-    def predict(self, n_bets: int = 10) -> dict:
+    def predict(self, n_bets: int = 10, force: bool = False) -> dict:
         """
-        出预测结果
+        出预测结果 — V3.0 确定性输出
 
-        V2.0 策略:
-        - A组 (n_bets//2 注): 主模型 — 热号驱动 + 区间平衡
-        - B组 (n_bets//2 注): 变体 — 冷号倾斜 + 反共识探测
+        关键: 使用种子锁定, 同一期号永远返回相同结果。
+        种子 = hash(lottery_type + issue_number)
+
+        策略:
+        - A组 (n_bets//2 注): 热号驱动 + 约束过滤
+        - B组 (n_bets//2 注): 反共识 + 区间均衡
         - 10注 = 2张彩票 = 20元
 
-        自迭代: 预测结果写入 predictions_log.json
+        force=True: 强制重新生成 (覆盖缓存)
         """
+        # ══ 确定目标期号 ══
+        next_issue = str(int(self.analyzer.latest_issue) + 1)
+
+        # ══ 缓存检查 ══
+        if not force:
+            cached = self._find_cached_prediction(next_issue)
+            if cached:
+                cached['_from_cache'] = True
+                return cached
+
+        # ══ 确定性种子 ══
+        seed_val = hash(f'{self.lt}:{next_issue}') % (2**31)
+        random.seed(seed_val)
+
         report = self.analyzer.full_report()
         half = max(n_bets // 2, 1)
 
@@ -452,6 +469,8 @@ class LotteryPredictor:
         prediction = {
             'lottery': self.rule['name'],
             'type': self.lt,
+            'target_issue': next_issue,
+            'seed': seed_val,
             'predicted_at': datetime.now().isoformat(),
             'total_issues': self.analyzer.total_issues,
             'latest_issue': self.analyzer.latest_issue,
@@ -484,14 +503,29 @@ class LotteryPredictor:
         return prediction
 
     def _save_prediction(self, pred: dict) -> None:
-        """保存预测到日志"""
+        """保存预测到日志 (去重: 同一期号覆盖旧预测)"""
         preds = []
         if os.path.exists(PREDICTIONS_FILE):
             with open(PREDICTIONS_FILE, 'r', encoding='utf-8') as f:
                 preds = json.load(f)
+        # 去重: 移除同一type+target_issue的旧记录
+        preds = [p for p in preds
+                 if not (p.get('type') == pred['type']
+                         and p.get('target_issue') == pred['target_issue'])]
         preds.append(pred)
         with open(PREDICTIONS_FILE, 'w', encoding='utf-8') as f:
             json.dump(preds, f, ensure_ascii=False, indent=2)
+
+    def _find_cached_prediction(self, target_issue: str) -> dict | None:
+        """查找是否已有该期号的缓存预测"""
+        if not os.path.exists(PREDICTIONS_FILE):
+            return None
+        with open(PREDICTIONS_FILE, 'r', encoding='utf-8') as f:
+            preds = json.load(f)
+        for p in preds:
+            if p.get('type') == self.lt and p.get('target_issue') == target_issue:
+                return p
+        return None
 
 
 # ═══════════════════════════════════════════
