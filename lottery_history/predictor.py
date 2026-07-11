@@ -1,7 +1,8 @@
 """
-B166ER 统一彩票预测引擎 V1.0
+B166ER 统一彩票预测引擎 V2.0
 支持: 大乐透 (DLT) + 双色球 (SSQ)
 自迭代: 预测→复盘→权重更新
+V2 变更: 集成数学武器库 / 剔除赌徒谬误 / 凯利下注建议 / 双组策略
 """
 import csv
 import json
@@ -11,6 +12,13 @@ import random
 from collections import Counter, defaultdict
 from datetime import datetime
 from typing import Any
+
+# 导入数学武器库
+sys.path.insert(0, os.path.dirname(__file__))
+from lottery_math import (
+    kelly_criterion, FallacyDetector, binomial_test,
+    gamblers_ruin_probability,
+)
 
 sys.stdout.reconfigure(encoding='utf-8')
 
@@ -242,21 +250,32 @@ class LotteryPredictor:
         self.analyzer = LotteryAnalyzer(lottery_type)
         self.rule = self.analyzer.rule
 
-    def score_number(self, num: int, report: dict) -> float:
-        """综合评分一个号码（前区/红球）"""
+    def score_number(self, num: int, report: dict, variant: str = 'A') -> float:
+        """
+        综合评分一个号码（前区/红球）
+
+        ⚠️ V2.0 反谬误修正:
+        - 不再使用"遗漏回补"逻辑 (赌徒谬误)
+        - 评分基于: 频次(机械偏倚探测) + 区间平衡
+        - 每个号码的独立性前提已内置
+
+        variant='A': 主策略(热号驱动)
+        variant='B': 变体(冷号倾斜+区间均衡)
+        """
         score = 0.0
 
-        # 热号加分
+        # 热号加分 (检测机械偏倚, 非预测概率)
         hot = report['front_hot_30']
         if num in hot:
             pos = hot.index(num)
-            score += (len(hot) - pos) / len(hot) * 3.0  # 越热分越高
+            score += (len(hot) - pos) / len(hot) * 4.0  # 越热分越高
 
-        # 冷号补分（遗漏回补）
-        gaps = report['front_gaps']
-        gap = gaps.get(str(num), 0)
-        if gap > 10:
-            score += min(gap / 20, 2.0)  # 遗漏越久，回补概率越大
+        # 冷号: 仅B组考虑（反共识探测）
+        if variant == 'B':
+            cold = report['front_cold_30']
+            if num in cold:
+                pos = cold.index(num)
+                score += (len(cold) - pos) / len(cold) * 2.0  # 冷号小权重
 
         # 区间平衡加分
         zone_size = self.rule['front_pool'] // 3
@@ -270,30 +289,33 @@ class LotteryPredictor:
         total_zone = sum(zones.values())
         if total_zone > 0:
             zone_ratio = zones.get(zone, 0) / total_zone
-            # 区间占比越高，该区号码越值得选
             score += zone_ratio * 2.0
 
         return score
 
-    def score_back_number(self, num: int, report: dict) -> float:
-        """综合评分后区/蓝球"""
+    def score_back_number(self, num: int, report: dict, variant: str = 'A') -> float:
+        """
+        综合评分后区/蓝球
+
+        V2.0: 只使用频次数据, 不引入遗漏回补
+        """
         score = 0.0
         bf = report['back_freq']
-        # 热度加分
         if str(num) in bf:
             score += bf[str(num)] * 0.5
-        # 遗漏加分
-        bg = report['back_gaps']
-        gap = bg.get(str(num), 0)
-        if gap > 8:
-            score += min(gap / 10, 2.0)
+        # B组: 低频后区小权重
+        if variant == 'B':
+            if str(num) not in bf or bf[str(num)] <= 2:
+                score += 1.0
         return score
 
-    def generate_candidates(self, k: int = 100) -> list[tuple[list[int], list[int], float]]:
-        """生成K个候选组合并评分"""
+    def generate_candidates(self, k: int = 100, variant: str = 'A') -> list[tuple[list[int], list[int], float]]:
+        """生成K个候选组合并评分
+        variant='A': 主策略 / 'B': 变体策略
+        """
         report = self.analyzer.full_report()
-        front_scores = {n: self.score_number(n, report) for n in range(1, self.rule['front_pool'] + 1)}
-        back_scores = {n: self.score_back_number(n, report) for n in range(1, self.rule['back_pool'] + 1)}
+        front_scores = {n: self.score_number(n, report, variant) for n in range(1, self.rule['front_pool'] + 1)}
+        back_scores = {n: self.score_back_number(n, report, variant) for n in range(1, self.rule['back_pool'] + 1)}
 
         candidates = []
         for _ in range(k * 5):  # 多生成一些再筛选
@@ -337,19 +359,74 @@ class LotteryPredictor:
 
         return unique
 
-    def predict(self, n_bets: int = 5) -> dict:
-        """出预测结果：n_bets 注"""
+    def predict(self, n_bets: int = 10) -> dict:
+        """
+        出预测结果
+
+        V2.0 策略:
+        - A组 (n_bets//2 注): 主模型 — 热号驱动 + 区间平衡
+        - B组 (n_bets//2 注): 变体 — 冷号倾斜 + 反共识探测
+        - 10注 = 2张彩票 = 20元
+
+        自迭代: 预测结果写入 predictions_log.json
+        """
         report = self.analyzer.full_report()
-        candidates = self.generate_candidates(200)
+        half = max(n_bets // 2, 1)
+
+        # A组: 主策略
+        candidates_a = self.generate_candidates(200, variant='A')
+        # B组: 变体策略
+        candidates_b = self.generate_candidates(200, variant='B')
 
         bets = []
-        for i, (front, back, score) in enumerate(candidates[:n_bets]):
+        for i, (front, back, score) in enumerate(candidates_a[:half]):
             bets.append({
                 'scheme': i + 1,
+                'group': 'A (热号驱动)',
                 'front': front,
                 'back': back,
                 'score': round(score, 2),
             })
+
+        for i, (front, back, score) in enumerate(candidates_b[:half]):
+            bets.append({
+                'scheme': half + i + 1,
+                'group': 'B (冷号倾斜)',
+                'front': front,
+                'back': back,
+                'score': round(score, 2),
+            })
+
+        # ══ 凯利下注建议 ══
+        # 彩票期望值极低(约50%返奖率), 凯利公式理论上建议0下注
+        # 但作为"量化实验", 固定10注/20元视为研究支出
+        bankroll_assumed = 5000  # 假设月预算
+        monthly_cost = n_bets * 2 * 12  # 每彩种月支出 (每周3次×4周)
+
+        kelly_note = (
+            f'📐 凯利公式评估: 彩票返奖率≈50% → f*<0 → 理论不下注。'
+            f'20元/次为量化研究支出, 月均{(n_bets*2)*3*4}元。'
+            f'非投资行为。'
+        )
+
+        # ══ 反谬误审计 ══
+        audit_text = f'预测基于{self.analyzer.total_issues}期历史频次统计。'
+        fallacy_warnings = FallacyDetector.audit_text(audit_text)
+
+        # ══ 模型置信度 ══
+        # 检查是否有足够的预测-复盘对来做统计检验
+        preds_file = os.path.join(DIR, 'predictions_log.json')
+        total_tracked = 0
+        if os.path.exists(preds_file):
+            with open(preds_file, 'r', encoding='utf-8') as f:
+                all_preds = json.load(f)
+                total_tracked = sum(1 for p in all_preds if p['type'] == self.lt)
+
+        model_status = (
+            f'已追踪{total_tracked}次预测, '
+            f'数据不足以做统计显著性检验' if total_tracked < 10
+            else f'已追踪{total_tracked}次预测, 可运行 --review 复盘后获取p值'
+        )
 
         prediction = {
             'lottery': self.rule['name'],
@@ -358,6 +435,7 @@ class LotteryPredictor:
             'total_issues': self.analyzer.total_issues,
             'latest_issue': self.analyzer.latest_issue,
             'n_bets': n_bets,
+            'cost': f'{n_bets * 2}元 ({n_bets // 5}张彩票)',
             'bets': bets,
             'stats_snapshot': {
                 'front_hot_30': report['front_hot_30'][:10],
@@ -372,6 +450,10 @@ class LotteryPredictor:
                     key=lambda x: -x[1]
                 )[:5]),
             },
+            'kelly_note': kelly_note,
+            'fallacy_audit': fallacy_warnings,
+            'model_confidence': model_status,
+            'disclaimer': FallacyDetector.correction_text(),
         }
 
         # 保存预测记录
@@ -520,24 +602,33 @@ def main():
 
         # 格式化输出
         print(f'\n{"="*60}')
-        print(f'  {result["lottery"]} 预测方案')
+        print(f'  B166ER {result["lottery"]} 预测 V2.0')
         print(f'  基于: {result["total_issues"]}期历史数据')
         print(f'  最新: {result["latest_issue"]}期')
-        print(f'  时间: {result["predicted_at"][:19]}')
+        print(f'  投入: {result["cost"]}')
         print(f'{"="*60}')
 
-        for bet in result['bets']:
-            f_str = ' '.join(str(n).zfill(2) for n in bet['front'])
-            b_str = ' '.join(str(n).zfill(2) for n in bet['back'])
-            print(f'\n  方案{bet["scheme"]} (评分: {bet["score"]:.2f})')
-            print(f'    前区: {f_str}')
-            print(f'    后区: {b_str}')
+        # 按组输出
+        for group in ['A', 'B']:
+            group_bets = [b for b in result['bets'] if b['group'].startswith(group)]
+            group_label = result['bets'][0]['group'] if result['bets'][0]['group'].startswith(group) else result['bets'][-1]['group']
+            print(f'\n  ── {group}组: {group_label} ──')
+            for bet in group_bets:
+                f_str = ' '.join(str(n).zfill(2) for n in bet['front'])
+                b_str = ' '.join(str(n).zfill(2) for n in bet['back'])
+                print(f'    方案{bet["scheme"]} ({bet["score"]:.2f}): {f_str} | {b_str}')
 
         print(f'\n{"-"*60}')
-        print(f'  热号TOP10: {result["stats_snapshot"]["front_hot_30"]}')
-        print(f'  冷号TOP10: {result["stats_snapshot"]["front_cold_30"]}')
-        print(f'  遗漏TOP5: {list(result["stats_snapshot"]["front_gaps_top5"].items())[:5]}')
-        print(f'  后区频次: {result["stats_snapshot"]["back_freq_top5"]}')
+        print(f'  📊 热号TOP10: {result["stats_snapshot"]["front_hot_30"]}')
+        print(f'  📊 冷号TOP10: {result["stats_snapshot"]["front_cold_30"]}')
+        print(f'  📊 遗漏TOP5: {list(result["stats_snapshot"]["front_gaps_top5"].items())[:5]}')
+        print(f'  📊 后区频次: {result["stats_snapshot"]["back_freq_top5"]}')
+        print(f'\n  {result["kelly_note"]}')
+        if result['fallacy_audit']:
+            for w in result['fallacy_audit']:
+                print(f'  {w}')
+        print(f'  📈 {result["model_confidence"]}')
+        print(f'\n  {result["disclaimer"]}')
         print(f'{"="*60}\n')
 
     elif args.review:
