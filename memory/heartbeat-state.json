@@ -1,11 +1,11 @@
 {
   "lastChecks": {
-    "cron-health": 1783559700,
-    "project": 1782787380,
+    "cron-health": 1783647407,
+    "project": 1783559700,
     "skills": 1782742920,
     "industry": null,
     "lottery": null
   },
-  "lastHeartbeat": 1783559700,
-  "notes": "2026-07-09 09:15 (Thu) — 🔴端午全流程断裂：预测(中断)+复盘(disabled)+STR补充(从未触发)。子代理 spawned (duanwu-str-review) 执行三合一补充报告。GitAutoBackup仍显示runningAtMs挂起。月度报告7/12⚠️billing。Cron 6db37603已清理。"
+  "lastHeartbeat": 1783647407,
+  "notes": "2026-07-10 09:36 (Fri) — GitAutoBackup ✅ pushed. 月度报告(e1450328) due 7/12⚠️billing risk(上次cooldown)。端午crons全部disabled(预测中断+复盘never ran+STR cleaned)。暑期预测/复盘/Q2半年均disabled。Remote有conflict已force-with-lease解决。"
 }

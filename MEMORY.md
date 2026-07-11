@@ -198,35 +198,26 @@
 | 参考图风格复现 | ✅ 掌握 | 玻璃拟态/扁平/深色科技全风格 |
 | AHL海报 | ✅ 完成 | 4版本（AHL树形架构图） |
 
-## Promoted From Short-Term Memory (2026-07-05)
+## Promoted From Short-Term Memory (2026-07-10)
 
-<!-- openclaw-memory-promotion:memory:memory/2026-06-29.md:12:14 -->
-- 已执行操作: ✅ 禁用端午复盘cron (4772a0c5) — 缺少预测baseline，防止空跑; ✅ Q2半年分析错开至11:00 (03:00 UTC) — 避免与端午复盘撞车; ✅ 禁用每日深度简报 (49578c29) — delivery channel待修复 [score=0.869 recalls=0 avg=0.620 source=memory/2026-06-29.md:12-14]
-<!-- openclaw-memory-promotion:memory:memory/2026-06-29.md:23:23 -->
-- Git备份: Git auto-backup正在运行中 (runningAtMs: 1782744212357) [score=0.869 recalls=0 avg=0.620 source=memory/2026-06-29.md:23-23]
-<!-- openclaw-memory-promotion:memory:memory/2026-06-29.md:8:9 -->
-- 心跳检查 (22:43): 风险：两个deepseek-v4-pro high-thinking同时跑 → billing cooldown; 🔴 每日深度简报6连fail — delivery channel缺失 [score=0.869 recalls=0 avg=0.620 source=memory/2026-06-29.md:8-9]
+<!-- openclaw-memory-promotion:memory:memory/2026-07-04.md:16:16 -->
+- 📋 报告缺口（长期）: 日常cron缺失：政策早餐/行业双周报/文旅酒店周期性 [score=0.869 recalls=0 avg=0.620 source=memory/2026-07-04.md:16-16]
+<!-- openclaw-memory-promotion:memory:memory/2026-07-04.md:19:22 -->
+- 🟢 7/7 端午STR补充 — 就绪确认: Cron ID: 6db37603; 时间: 2026-07-07 10:00 CST (02:00 UTC); 类型: isolated agentTurn, deleteAfterRun; 前置依赖: 需端午复盘报告 — ⚠️ 但端午复盘未生成！ [score=0.869 recalls=0 avg=0.620 source=memory/2026-07-04.md:19-22]
+<!-- openclaw-memory-promotion:memory:memory/2026-07-04.md:23:23 -->
+- 🟢 7/7 端午STR补充 — 就绪确认: 策略: STR补充可独立完成（直接对比STR数据+OTA+预测框架），不依赖完整复盘 [score=0.869 recalls=0 avg=0.620 source=memory/2026-07-04.md:23-23]
+<!-- openclaw-memory-promotion:memory:memory/2026-07-04.md:26:28 -->
+- 系统状态: GitAutoBackup ✅ 正常运行; Memory Dreaming ✅ 每天3:00; 后续cron全部正常（暑期复盘/中秋/十一系列） [score=0.869 recalls=0 avg=0.620 source=memory/2026-07-04.md:26-28]
+<!-- openclaw-memory-promotion:memory:memory/2026-07-05.md:6:9 -->
+- 📊 关键节点: | 事件 | 时间 | 状态 | |------|------|------| | 端午STR补充复盘(T+16) | **7/7 10:00** | ⏳ 2天后，cron就绪 (6db37603) | | 6月月度报告 | 7/12 2:00 | ⏳ 7天后，上次billing error | [score=0.850 recalls=0 avg=0.620 source=memory/2026-07-05.md:6-9]
 
-## Promoted From Short-Term Memory (2026-07-08)
+## Promoted From Short-Term Memory (2026-07-11)
 
-<!-- openclaw-memory-promotion:memory:memory/2026-07-01.md:12:15 -->
-- 📊 报告状态总览: | 报告 | 状态 | 备注 | |------|------|------| | Q2半年分析 | 🔄 刚手动触发 | 原定6/30 11:00，scheduler未触发 | | 端午STR补充 | ⏳ 7/7 10:00 | 6天后，cron正常 | [score=0.826 recalls=0 avg=0.620 source=memory/2026-07-01.md:12-15]
-<!-- openclaw-memory-promotion:memory:memory/2026-07-01.md:16:19 -->
-- 📊 报告状态总览: | 6月月度报告 | ⏳ 7/12 2:00 | cron正常（e1450328），上次5/12 billing error | | 文旅酒店周期性 | ❌ 无cron | 每月1日9:00，上次timeout后被清理 | | 暑期预测 | ❌ disabled | 6/25未执行，暑期已开始 | | 端午预测 | ❌ disabled | 6/17 gateway restart中断 | [score=0.826 recalls=0 avg=0.620 source=memory/2026-07-01.md:16-19]
-<!-- openclaw-memory-promotion:memory:memory/2026-07-01.md:20:20 -->
-- 📊 报告状态总览: | 端午复盘 | ❌ disabled | 6/29因无baseline主动禁用 | [score=0.826 recalls=0 avg=0.620 source=memory/2026-07-01.md:20-20]
-
-## Promoted From Short-Term Memory (2026-07-09)
-
-<!-- openclaw-memory-promotion:memory:memory/2026-07-04.md:12:15 -->
-- 📋 报告缺口（长期）: 端午预测 ❌ (6/17 gateway restart中断); 端午复盘 ❌ (6/29无baseline主动禁用); 暑期预测 ❌ (6/25未执行，窗口已过); Q2半年分析 ❌ (7/1手动触发两次均无输出) [score=0.831 recalls=0 avg=0.620 source=memory/2026-07-04.md:12-15]
-<!-- openclaw-memory-promotion:memory:memory/2026-07-04.md:6:9 -->
-- 📊 近期关键节点: | 事件 | 时间 | 状态 | |------|------|------| | 端午STR补充复盘(T+16) | **7/7 10:00** | ⏳ 3天后，cron就绪 (6db37603) | | 6月月度报告 | 7/12 2:00 | ⏳ cron就绪，上次billing error | [score=0.831 recalls=0 avg=0.620 source=memory/2026-07-04.md:6-9]
-<!-- openclaw-memory-promotion:memory:memory/2026-07-01.md:23:23 -->
-- 📋 缺失的HEARTBEAT Cron: 以下cron已从列表消失（推测因连续失败被清理）： [score=0.805 recalls=0 avg=0.620 source=memory/2026-07-01.md:23-23]
-<!-- openclaw-memory-promotion:memory:memory/2026-07-01.md:24:27 -->
-- 📋 缺失的HEARTBEAT Cron: 政策早餐（每3天 8:00）— 上次timeout; 行业双周报（每14天 10:00）; 文旅酒店周期性（每月1日 9:00）— 今天本应执行; 知识库索引更新（每周一） [score=0.805 recalls=0 avg=0.620 source=memory/2026-07-01.md:24-27]
-<!-- openclaw-memory-promotion:memory:memory/2026-07-01.md:30:33 -->
-- 🟢 正常运行的Cron: GitAutoBackup ✅ 每6h，上次ok; Memory Dreaming ✅ 每天3:00; 季度分析(Q3/Q4) ✅ 9月底/12月底; 暑期复盘(T+12) ✅ 9/10 [score=0.805 recalls=0 avg=0.620 source=memory/2026-07-01.md:30-33]
-<!-- openclaw-memory-promotion:memory:memory/2026-07-01.md:6:9 -->
-- 🔴 Q2半年分析 — 未执行，已手动触发: Cron `6f52495b` 设定 6/30 11:00 CST (03:00 UTC)，但 runs=0，从未触发; 已手动 `cron run` 触发 → isolated agentTurn; deleteAfterRun=true，跑完自动清理; 这是H1最重要的报告，覆盖端午数据（弥补预测+复盘双失） [score=0.805 recalls=0 avg=0.620 source=memory/2026-07-01.md:6-9]
+<!-- openclaw-memory-promotion:memory:memory/2026-07-05.md:12:14 -->
+- 🟢 系统状态: 14个cron全部正常（含所有节假日系列）; GitAutoBackup 运行中; Memory Dreaming 今日3:00已执行 [score=0.869 recalls=0 avg=0.620 source=memory/2026-07-05.md:12-14]
+<!-- openclaw-memory-promotion:memory:memory/2026-07-06.md:27:28 -->
+- ⚠️ 关注点: 端午STR补充复盘明天执行，但前置的端午复盘报告可能缺失 — 明天cron内部有前置检查可处理; 6月月度报告7/12执行，需关注billing问题是否已解决 [score=0.844 recalls=0 avg=0.620 source=memory/2026-07-06.md:27-28]
+<!-- openclaw-memory-promotion:memory:memory/2026-07-07.md:17:18 -->
+- ⚠️ 关注: 端午复盘报告(6/30) disabled/无run data — STR补充cron内应处理缺失前置; 6月月度7/12 — billing cooldown风险 [score=0.844 recalls=0 avg=0.620 source=memory/2026-07-07.md:17-18]
+<!-- openclaw-memory-promotion:memory:memory/2026-07-06.md:6:9 -->
+- 📊 关键节点: | 事件 | 时间 | 状态 | |------|------|------| | 端午STR补充复盘(T+16) | **明天 7/7 10:00** | ⏳ cron就绪 (6db37603) | | 6月月度报告 | 7/12 02:00 | ⚠️ 上次billing error | [score=0.825 recalls=0 avg=0.620 source=memory/2026-07-06.md:6-9]
