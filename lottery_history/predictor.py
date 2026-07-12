@@ -620,10 +620,16 @@ def _log_evolution(review: dict) -> None:
         lines.append(f'- 方案{r["scheme"]}: 前区{r["front_hits"]}+后区{r["back_hits"]} '
                      f'({" ".join(str(n).zfill(2) for n in r["front"])})')
 
+    # 规则映射
+    rule_map = {'大乐透': 'dlt', '双色球': 'ssq'}
+    lt_key = rule_map.get(review['lottery'], 'dlt')
+    fc = RULES[lt_key]['front_count']
+    bc = RULES[lt_key]['back_count']
+
     lines.append('')
     lines.append('### 进化信号')
-    lines.append(f'- 前区命中率: {review["best"]["front_hits"]}/{RULES[review["lottery"].lower() if review["lottery"]=="大乐透" else "ssq"]["front_count"]}')
-    lines.append(f'- 后区命中率: {review["best"]["back_hits"]}/{RULES[review["lottery"].lower() if review["lottery"]=="大乐透" else "ssq"]["back_count"]}')
+    lines.append(f'- 前区命中率: {review["best"]["front_hits"]}/{fc}')
+    lines.append(f'- 后区命中率: {review["best"]["back_hits"]}/{bc}')
     lines.append('')
 
     # 简单进化建议

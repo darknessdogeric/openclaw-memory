@@ -198,19 +198,6 @@
 | 参考图风格复现 | ✅ 掌握 | 玻璃拟态/扁平/深色科技全风格 |
 | AHL海报 | ✅ 完成 | 4版本（AHL树形架构图） |
 
-## Promoted From Short-Term Memory (2026-07-10)
-
-<!-- openclaw-memory-promotion:memory:memory/2026-07-04.md:16:16 -->
-- 📋 报告缺口（长期）: 日常cron缺失：政策早餐/行业双周报/文旅酒店周期性 [score=0.869 recalls=0 avg=0.620 source=memory/2026-07-04.md:16-16]
-<!-- openclaw-memory-promotion:memory:memory/2026-07-04.md:19:22 -->
-- 🟢 7/7 端午STR补充 — 就绪确认: Cron ID: 6db37603; 时间: 2026-07-07 10:00 CST (02:00 UTC); 类型: isolated agentTurn, deleteAfterRun; 前置依赖: 需端午复盘报告 — ⚠️ 但端午复盘未生成！ [score=0.869 recalls=0 avg=0.620 source=memory/2026-07-04.md:19-22]
-<!-- openclaw-memory-promotion:memory:memory/2026-07-04.md:23:23 -->
-- 🟢 7/7 端午STR补充 — 就绪确认: 策略: STR补充可独立完成（直接对比STR数据+OTA+预测框架），不依赖完整复盘 [score=0.869 recalls=0 avg=0.620 source=memory/2026-07-04.md:23-23]
-<!-- openclaw-memory-promotion:memory:memory/2026-07-04.md:26:28 -->
-- 系统状态: GitAutoBackup ✅ 正常运行; Memory Dreaming ✅ 每天3:00; 后续cron全部正常（暑期复盘/中秋/十一系列） [score=0.869 recalls=0 avg=0.620 source=memory/2026-07-04.md:26-28]
-<!-- openclaw-memory-promotion:memory:memory/2026-07-05.md:6:9 -->
-- 📊 关键节点: | 事件 | 时间 | 状态 | |------|------|------| | 端午STR补充复盘(T+16) | **7/7 10:00** | ⏳ 2天后，cron就绪 (6db37603) | | 6月月度报告 | 7/12 2:00 | ⏳ 7天后，上次billing error | [score=0.850 recalls=0 avg=0.620 source=memory/2026-07-05.md:6-9]
-
 ## Promoted From Short-Term Memory (2026-07-11)
 
 <!-- openclaw-memory-promotion:memory:memory/2026-07-05.md:12:14 -->
@@ -221,3 +208,22 @@
 - ⚠️ 关注: 端午复盘报告(6/30) disabled/无run data — STR补充cron内应处理缺失前置; 6月月度7/12 — billing cooldown风险 [score=0.844 recalls=0 avg=0.620 source=memory/2026-07-07.md:17-18]
 <!-- openclaw-memory-promotion:memory:memory/2026-07-06.md:6:9 -->
 - 📊 关键节点: | 事件 | 时间 | 状态 | |------|------|------| | 端午STR补充复盘(T+16) | **明天 7/7 10:00** | ⏳ cron就绪 (6db37603) | | 6月月度报告 | 7/12 02:00 | ⚠️ 上次billing error | [score=0.825 recalls=0 avg=0.620 source=memory/2026-07-06.md:6-9]
+
+## Promoted From Short-Term Memory (2026-07-12)
+
+<!-- openclaw-memory-promotion:memory:memory/2026-07-07.md:6:9 -->
+- 📊 今日关键: | 事件 | 时间 | 状态 | |------|------|------| | **端午STR补充复盘(T+16)** | **今天 10:00** | ⏳ 50分钟后触发 (6db37603) | | GitAutoBackup | 运行中 | 🟡 当前exec中 | [score=0.893 recalls=0 avg=0.620 source=memory/2026-07-07.md:6-9]
+<!-- openclaw-memory-promotion:memory:memory/2026-07-06.md:12:15 -->
+- 🔍 历史问题追踪: | 问题 | 状态 | 备注 | |------|------|------| | 端午预测报告(6/17) | ❌ gateway restart中断 | 预测未生成 | | 端午复盘报告(6/30) | ❓ disabled, 无run data | 可能未执行 | [score=0.861 recalls=0 avg=0.620 source=memory/2026-07-06.md:12-15]
+<!-- openclaw-memory-promotion:memory:memory/2026-07-06.md:16:18 -->
+- 🔍 历史问题追踪: | Q2+半年分析(6/30) | ❌ agent error | 未生成 | | 6月月度(6/12) | ❌ billing cooldown | 所有model failed | | 每日深度简报 | ❌ delivery channel缺失 | 已disable | [score=0.861 recalls=0 avg=0.620 source=memory/2026-07-06.md:16-18]
+<!-- openclaw-memory-promotion:memory:memory/2026-07-06.md:21:24 -->
+- 🟢 系统状态: 19 crons total: 14 enabled, 5 disabled (已完成/失败); GitAutoBackup ✅ (6h周期); Memory Dreaming ✅ (每日3:00); 端午STR补充 cron: 明天10:00自动触发 [score=0.861 recalls=0 avg=0.620 source=memory/2026-07-06.md:21-24]
+<!-- openclaw-memory-promotion:memory:memory/2026-07-07.md:12:14 -->
+- 🟢 系统状态: 19 crons: 14 enabled / 5 disabled; 端午STR cron: enabled, deleteAfterRun, 10:00触发; 6月月度报告: 7/12 02:00 (上次billing error，需关注) [score=0.861 recalls=0 avg=0.620 source=memory/2026-07-07.md:12-14]
+<!-- openclaw-memory-promotion:memory:memory/2026-07-08.md:12:14 -->
+- 🟡 系统状态: 19 crons: 14 enabled / 5 disabled; GitAutoBackup: 上次执行中 (runningAtMs仍挂载); 月度报告(7/12): ⚠️ billing cooldown风险（上次error） [score=0.861 recalls=0 avg=0.620 source=memory/2026-07-08.md:12-14]
+<!-- openclaw-memory-promotion:memory:memory/2026-07-08.md:17:17 -->
+- 已操作: 手动触发 6db37603（端午STR补充复盘） [score=0.861 recalls=0 avg=0.620 source=memory/2026-07-08.md:17-17]
+<!-- openclaw-memory-promotion:memory:memory/2026-07-08.md:7:9 -->
+- 🔴 关键发现: 端午STR补充复盘未触发: **Cron 6db37603**: 计划7/7 10:00执行，**0 runs，从未触发**; **无端午报告**: reports/目录无任何端午相关文件; **完整流程断裂**: 预测(6/17,中断) → 复盘(6/30,disabled) → STR补充(7/7,未触发) [score=0.861 recalls=0 avg=0.620 source=memory/2026-07-08.md:7-9]

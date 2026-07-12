@@ -1,11 +1,11 @@
 {
   "lastChecks": {
-    "cron-health": 1783647407,
+    "cron-health": 1783815384,
     "project": 1783559700,
     "skills": 1782742920,
     "industry": null,
     "lottery": null
   },
-  "lastHeartbeat": 1783647407,
-  "notes": "2026-07-10 09:36 (Fri) — GitAutoBackup ✅ pushed. 月度报告(e1450328) due 7/12⚠️billing risk(上次cooldown)。端午crons全部disabled(预测中断+复盘never ran+STR cleaned)。暑期预测/复盘/Q2半年均disabled。Remote有conflict已force-with-lease解决。"
+  "lastHeartbeat": 1783815384,
+  "notes": "2026-07-12 08:16 (Sun) — ⚠️月度报告(e1450328)截至08:16未执行(nextRun即将触发), 上月billing cooldown error. Memory Dreaming OK. 其余13个正常。大乐透(1a761024) lastRun=error 已知。"
 }
