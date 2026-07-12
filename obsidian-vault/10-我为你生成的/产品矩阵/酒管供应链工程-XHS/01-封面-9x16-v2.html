@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700;900&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 1080px; height: 1920px;
+    font-family: 'Noto Sans SC', -apple-system, 'PingFang SC', sans-serif;
+    background: #050810; color: #e0e8f0; overflow: hidden;
+    display: flex; flex-direction: column;
+  }
+
+  /* ===== HEADER ===== */
+  .header {
+    padding: 36px 48px 20px;
+    text-align: center; flex-shrink: 0;
+    background: linear-gradient(180deg, rgba(123,104,238,0.06) 0%, transparent 100%);
+    border-bottom: 1px solid rgba(123,104,238,0.12);
+  }
+  .header .version { display: inline-block; padding: 4px 16px; border: 1.5px solid #7B68EE; border-radius: 20px; font-size: 14px; color: #9B88FF; font-weight: 600; margin-bottom: 6px; letter-spacing: 1px; }
+  .header h1 { font-size: 40px; font-weight: 900; color: #7BB8FF; letter-spacing: 3px; margin-bottom: 4px; }
+  .header .tagline { font-size: 15px; color: #5a8bc0; font-weight: 400; letter-spacing: 1px; margin-bottom: 4px; line-height: 1.4; }
+  .header .axis { font-size: 13px; color: #445566; letter-spacing: 1px; }
+
+  /* ===== LAYERS ===== */
+  .layer { border-radius: 10px; padding: 10px 22px; margin: 0 24px 4px; position: relative; overflow: hidden; flex-shrink: 0; }
+  .layer::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; }
+  .lrow { display: flex; align-items: center; gap: 8px; margin-bottom: 3px; }
+  .lbadge { display: inline-flex; align-items: center; justify-content: center; width: 26px; height: 26px; border-radius: 6px; font-size: 12px; font-weight: 800; flex-shrink: 0; }
+  .ltitle { font-size: 17px; font-weight: 700; letter-spacing: 0.5px; }
+  .ldesc { font-size: 13px; color: #8899bb; line-height: 1.4; padding-left: 34px; margin-bottom: 3px; }
+  .ltags { display: flex; flex-wrap: wrap; gap: 4px; padding-left: 34px; }
+  .ltags span { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 500; line-height: 1.3; }
+  .newbadge { display: inline-block; font-size: 9px; font-weight: 700; padding: 1px 5px; border-radius: 3px; background: rgba(255,50,50,0.2); color: #FF6060; border: 1px solid rgba(255,50,50,0.3); margin-left: 4px; vertical-align: middle; }
+
+  .c0 { background: linear-gradient(135deg, rgba(123,104,238,0.12) 0%, rgba(30,20,60,0.6) 100%); border: 1px solid rgba(123,104,238,0.35); } .c0::before { background: #7B68EE; }
+  .c0 .lbadge { background: rgba(123,104,238,0.25); color: #B8A8FF; } .c0 .ltitle { color: #B8A8FF; } .c0 .ltags span { background: rgba(123,104,238,0.18); color: #C8B8FF; border: 1px solid rgba(123,104,238,0.25); }
+  .c05 { background: linear-gradient(135deg, rgba(75,0,130,0.10) 0%, rgba(20,10,40,0.6) 100%); border: 1px solid rgba(75,0,130,0.30); } .c05::before { background: #6A0DAD; }
+  .c05 .lbadge { background: rgba(106,13,173,0.20); color: #AA50E0; } .c05 .ltitle { color: #AA50E0; } .c05 .ltags span { background: rgba(106,13,173,0.15); color: #C070F0; border: 1px solid rgba(106,13,173,0.20); }
+  .c1 { background: linear-gradient(135deg, rgba(100,180,255,0.10) 0%, rgba(10,30,60,0.6) 100%); border: 1px solid rgba(100,180,255,0.30); } .c1::before { background: #64B4FF; }
+  .c1 .lbadge { background: rgba(100,180,255,0.20); color: #80CCFF; } .c1 .ltitle { color: #80CCFF; } .c1 .ltags span { background: rgba(100,180,255,0.15); color: #90D0FF; border: 1px solid rgba(100,180,255,0.20); }
+  .c2 { background: linear-gradient(135deg, rgba(0,206,170,0.10) 0%, rgba(5,30,30,0.6) 100%); border: 1px solid rgba(0,206,170,0.30); } .c2::before { background: #00CEAA; }
+  .c2 .lbadge { background: rgba(0,206,170,0.20); color: #40E8C8; } .c2 .ltitle { color: #40E8C8; } .c2 .ltags span { background: rgba(0,206,170,0.15); color: #60F0D0; border: 1px solid rgba(0,206,170,0.20); }
+  .c3 { background: linear-gradient(135deg, rgba(255,165,0,0.10) 0%, rgba(50,30,5,0.6) 100%); border: 1px solid rgba(255,165,0,0.30); } .c3::before { background: #FFA500; }
+  .c3 .lbadge { background: rgba(255,165,0,0.20); color: #FFC040; } .c3 .ltitle { color: #FFC040; } .c3 .ltags span { background: rgba(255,165,0,0.15); color: #FFD060; border: 1px solid rgba(255,165,0,0.20); }
+  .c4 { background: linear-gradient(135deg, rgba(218,165,32,0.10) 0%, rgba(40,35,5,0.6) 100%); border: 1px solid rgba(218,165,32,0.30); } .c4::before { background: #DAA520; }
+  .c4 .lbadge { background: rgba(218,165,32,0.20); color: #E8C840; } .c4 .ltitle { color: #E8C840; } .c4 .ltags span { background: rgba(218,165,32,0.15); color: #F0D860; border: 1px solid rgba(218,165,32,0.20); }
+  .c5 { background: linear-gradient(135deg, rgba(199,21,133,0.10) 0%, rgba(50,5,30,0.6) 100%); border: 1px solid rgba(199,21,133,0.30); } .c5::before { background: #C71585; }
+  .c5 .lbadge { background: rgba(199,21,133,0.20); color: #E060B0; } .c5 .ltitle { color: #E060B0; } .c5 .ltags span { background: rgba(199,21,133,0.15); color: #E880C0; border: 1px solid rgba(199,21,133,0.20); }
+  .c52 { background: linear-gradient(135deg, rgba(255,20,147,0.10) 0%, rgba(50,5,30,0.6) 100%); border: 1px solid rgba(255,20,147,0.30); } .c52::before { background: #FF1493; }
+  .c52 .lbadge { background: rgba(255,20,147,0.20); color: #FF70C0; } .c52 .ltitle { color: #FF70C0; } .c52 .ltags span { background: rgba(255,20,147,0.15); color: #FF90D0; border: 1px solid rgba(255,20,147,0.20); }
+
+  /* ===== SECTION DIVIDER ===== */
+  .sec { text-align: center; padding: 10px 48px 8px; color: #556677; font-size: 13px; font-weight: 500; letter-spacing: 3px; flex-shrink: 0; position: relative; }
+  .sec::before, .sec::after { content: ''; position: absolute; top: 50%; width: 30%; height: 1px; background: linear-gradient(to right, transparent, rgba(123,104,238,0.15)); }
+  .sec::before { left: 24px; } .sec::after { right: 24px; background: linear-gradient(to left, transparent, rgba(123,104,238,0.15)); }
+
+  /* ===== AXIOMS ===== */
+  .axioms { display: flex; gap: 6px; padding: 0 24px; flex-shrink: 0; }
+  .ax { flex: 1; background: rgba(40,30,80,0.4); border: 1px solid rgba(123,104,238,0.12); border-radius: 8px; padding: 6px 8px; text-align: center; }
+  .ax-sym { font-size: 13px; font-weight: 700; color: #B8A8FF; margin-bottom: 2px; }
+  .ax-name { font-size: 11px; font-weight: 600; color: #7B68EE; }
+  .ax-desc { font-size: 10px; color: #7788aa; line-height: 1.3; margin-top: 2px; }
+
+  /* ===== FEEDBACK ===== */
+  .fb { display: flex; gap: 5px; padding: 0 24px; flex-shrink: 0; }
+  .fb-item { flex: 1; background: rgba(30,40,70,0.6); border: 1px solid rgba(100,130,200,0.15); border-radius: 8px; padding: 5px 4px; text-align: center; }
+  .fb-n { display: inline-block; width: 20px; height: 20px; line-height: 20px; border-radius: 50%; background: rgba(100,150,255,0.2); color: #80B0FF; font-size: 10px; font-weight: 700; margin-bottom: 1px; }
+  .fb-l { font-size: 10px; color: #8899bb; line-height: 1.2; }
+
+  /* ===== INSIGHTS ===== */
+  .ins { padding: 0 24px; flex-shrink: 0; }
+  .ins-row { display: flex; gap: 5px; margin-bottom: 4px; }
+  .ins-item { flex: 1; background: rgba(30,40,70,0.3); border: 1px solid rgba(100,130,200,0.1); border-radius: 8px; padding: 6px 10px; }
+  .ins-t { font-size: 12px; font-weight: 600; color: #7BB8FF; margin-bottom: 2px; }
+  .ins-d { font-size: 11px; color: #8899bb; line-height: 1.3; }
+
+  /* ===== TOOLS ===== */
+  .tools { display: flex; gap: 5px; padding: 0 24px; flex-shrink: 0; }
+  .tool { flex: 1; background: rgba(60,40,100,0.3); border: 1px solid rgba(123,104,238,0.15); border-radius: 8px; padding: 6px 10px; }
+  .tool-t { font-size: 12px; font-weight: 600; color: #B8A8FF; margin-bottom: 2px; }
+  .tool-d { font-size: 11px; color: #8899bb; line-height: 1.3; }
+
+  /* ===== FOOTER ===== */
+  .footer {
+    padding: 14px 48px 24px; text-align: center; flex-shrink: 0; margin-top: auto;
+    background: linear-gradient(0deg, rgba(123,104,238,0.06) 0%, transparent 100%);
+    border-top: 1px solid rgba(123,104,238,0.12);
+  }
+  .footer .ftitle { font-size: 14px; font-weight: 600; color: #7BB8FF; letter-spacing: 1px; margin-bottom: 3px; }
+  .footer .fdesc { font-size: 11px; color: #445566; line-height: 1.4; }
+  .footer .fmeta { font-size: 10px; color: #334455; margin-top: 3px; letter-spacing: 1px; }
+</style>
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<div class="header">
+  <div class="version">V1.0 · 24 年酒店老炮出品</div>
+  <h1>B166ER 酒管公司供应链工程</h1>
+  <div class="tagline">13 章节全维度交付包 · 24-36 月体系建设导航图</div>
+  <div class="axis">横轴：统筹→体系→架构→工具→数字→经营→响应→成本 &nbsp;|&nbsp; 纵轴：基础→体系→智能</div>
+</div>
+
+<!-- ===== LAYER 01 ===== -->
+<div class="layer c0">
+  <div class="lrow"><div class="lbadge">01</div><div class="ltitle">综合主报告 · 全维度体系</div></div>
+  <div class="ldesc">13 章整合 · 完整目录 · 附录使用指南 · 适合通读全文 · 决策层快速建立全局认知 · 含页眉页脚 + 斑马纹 + 品牌标识</div>
+  <div class="ltags"><span>主报告PDF</span><span>404 KB</span><span>含页眉页脚</span><span>章节分页</span><span>品牌标识</span></div>
+</div>
+
+<!-- ===== LAYER 02 ===== -->
+<div class="layer c05">
+  <div class="lrow"><div class="lbadge">02</div><div class="ltitle">13 份分章节 PDF · 按角色精准推送 <span class="newbadge">V1.0</span></div></div>
+  <div class="ldesc">体系架构 · 实施方案 · 供应商分级 · 工具矩阵 · KPI · 应急SOP · 成本TCO · 实施清单 · 产品矩阵 · 数据经营 · 决策树 · 技术架构</div>
+  <div class="ltags"><span>01主报告</span><span>02实施方案</span><span>03体系架构</span><span>04供应商分级</span><span>05工具矩阵</span><span>06 KPI</span><span>07应急SOP</span><span>08成本TCO</span><span>09-13 实施/数据/架构</span></div>
+</div>
+
+<!-- ===== LAYER 03 ===== -->
+<div class="layer c1">
+  <div class="lrow"><div class="lbadge">03</div><div class="ltitle">工具清单 · 数字化工具矩阵</div></div>
+  <div class="ldesc">5 档规模组织：微小型 / 小型 / 中型 / 大型 / 集团型 · 每档含核心特征+工具栈+预算+实施周期</div>
+  <div class="ltags"><span>94KB PDF</span><span>5 档规模</span><span>选型决策树</span><span>5 级数字化成熟度</span><span>核心特征+工具栈</span></div>
+</div>
+
+<!-- ===== LAYER 04 ===== -->
+<div class="layer c2">
+  <div class="lrow"><div class="lbadge">04</div><div class="ltitle">思维导图 · 8 大主维度 + 8 补充维度</div></div>
+  <div class="ldesc">统筹 / 体系 / 架构 / 工具 / 数字化联动 / 经营 / 响应 / 成本 · 1x + 2x retina + HTML 交互</div>
+  <div class="ltags"><span>1080×1440</span><span>2160×2880 retina</span><span>HTML 交互式</span><span>8 大主维度</span><span>8 补充维度</span><span>分级分类·质量·风险·ESG</span></div>
+</div>
+
+<!-- ===== LAYER 05 ===== -->
+<div class="layer c3">
+  <div class="lrow"><div class="lbadge">05</div><div class="ltitle">5 大角色路径 · 精准推送</div></div>
+  <div class="ldesc">CEO/CFO → 01+06+02+09 / 项目组 → 01+02+09+03+04 / 采购总监 → 01+03+04+05+06 / 采购经理 → 04+06+08 / IT → 05+02+06</div>
+  <div class="ltags"><span>CEO决策层</span><span>项目组实施</span><span>采购总监</span><span>采购经理</span><span>IT负责人</span><span>精准推送</span></div>
+</div>
+
+<!-- ===== LAYER 06 ===== -->
+<div class="layer c4">
+  <div class="lrow"><div class="lbadge">06</div><div class="ltitle">3 阶段实施 · 24-36 月节奏 <span class="newbadge">V1.0</span></div></div>
+  <div class="ldesc">阶段1 基础 1-3 月：治理结构+品类分级+KPI+应急SOP / 阶段2 体系 4-9 月：SRM/WMS+TCO / 阶段3 智能 10-24 月：AI 比价+数字孪生+ESG</div>
+  <div class="ltags"><span>阶段1·基础·1-3月</span><span>阶段2·体系·4-9月</span><span>阶段3·智能·10-24月</span><span>集采目录v1</span><span>TCO落地</span><span>数字孪生v1</span></div>
+</div>
+
+<!-- ===== LAYER 07 ===== -->
+<div class="layer c5">
+  <div class="lrow"><div class="lbadge">07</div><div class="ltitle">5 档版本 · 按酒管规模选择</div></div>
+  <div class="ldesc">速赢版 2980 / 标准版 8980 / 完整版 19800 / 定制版面议 / 陪跑版 49800/年 · 标准版为多数酒管公司首选</div>
+  <div class="ltags"><span>速赢 3月</span><span>标准 6-12月 ★</span><span>完整 12-24月</span><span>定制面议</span><span>陪跑 49800/年</span></div>
+</div>
+
+<!-- ===== LAYER 08 ===== -->
+<div class="layer c52">
+  <div class="lrow"><div class="lbadge">08</div><div class="ltitle">适合谁 + 行动召唤 <span class="newbadge">CTA</span></div></div>
+  <div class="ldesc">酒管公司采购总监 / 集团供应链负责人 / 单体酒店数字化 GM / 准备创业的酒店老板 · 扫码加微信备注"供应链 v1.0" 5 分钟发资料</div>
+  <div class="ltags"><span>酒管公司</span><span>集团供应链</span><span>单体酒店</span><span>数字化GM</span><span>酒店创业</span><span>5分钟发资料</span></div>
+</div>
+
+<!-- ===== ANCHOR ===== -->
+<div class="sec">价值锚点 · 对比传统咨询</div>
+<div class="axioms">
+  <div class="ax"><div class="ax-sym">¥</div><div class="ax-name">咨询 1 天</div><div class="ax-desc">5000+<br>1 天·不可复用</div></div>
+  <div class="ax"><div class="ax-sym">¥</div><div class="ax-name">招供应链总监</div><div class="ax-desc">30万/年<br>6 月培养</div></div>
+  <div class="ax"><div class="ax-sym">¥</div><div class="ax-name">顾问项目 6 月</div><div class="ax-desc">50万起<br>6 月落地</div></div>
+  <div class="ax"><div class="ax-sym">¥</div><div class="ax-name">本交付包</div><div class="ax-desc">2980 起<br>拿到即用</div></div>
+</div>
+
+<!-- ===== VERSIONS ===== -->
+<div class="sec">5 档版本速查 · 选最匹配的一档</div>
+<div class="fb">
+  <div class="fb-item"><div class="fb-n">1</div><div class="fb-l">速赢 2980</div></div>
+  <div class="fb-item"><div class="fb-n" style="color:#FFC040">2</div><div class="fb-l" style="color:#FFC040">标准 8980 ★</div></div>
+  <div class="fb-item"><div class="fb-n">3</div><div class="fb-l">完整 19800</div></div>
+  <div class="fb-item"><div class="fb-n">4</div><div class="fb-l">定制面议</div></div>
+  <div class="fb-item"><div class="fb-n">5</div><div class="fb-l">陪跑 49800/年</div></div>
+  <div class="fb-item"><div class="fb-n" style="color:#FF70C0">CTA</div><div class="fb-l" style="color:#FF70C0">扫码加微信</div></div>
+</div>
+
+<!-- ===== WHO ===== -->
+<div class="sec">适合谁 · 5 类采购人</div>
+<div class="ins">
+  <div class="ins-row">
+    <div class="ins-item"><div class="ins-t">酒管公司</div><div class="ins-d">采购总监/总经办 · 集团供应链负责人 · 选完整版</div></div>
+    <div class="ins-item"><div class="ins-t">集团酒店</div><div class="ins-d">多门店采购 · 选标准版或陪跑版</div></div>
+  </div>
+  <div class="ins-row">
+    <div class="ins-item"><div class="ins-t">单体酒店</div><div class="ins-d">数字化转型 GM · 选速赢版或标准版</div></div>
+    <div class="ins-item"><div class="ins-t">酒店创业</div><div class="ins-d">准备做酒店的老板 · 选速赢版建立体系</div></div>
+  </div>
+  <div class="ins-row">
+    <div class="ins-item"><div class="ins-t">IT/数字化</div><div class="ins-d">选完整版 · 含技术架构选型 12-24 月路线</div></div>
+  </div>
+</div>
+
+<!-- ===== TOOLS ===== -->
+<div class="sec">3 阶段实施 · 24-36 月体系建设节奏</div>
+<div class="tools">
+  <div class="tool"><div class="tool-t">阶段 1 · 基础</div><div class="tool-d">1-3 月 · 治理结构 + 品类分级 + KPI + 应急 SOP · 集采目录 + 供应商分级 + KPI 仪表盘 v1</div></div>
+  <div class="tool"><div class="tool-t">阶段 2 · 体系</div><div class="tool-d">4-9 月 · 供应商全生命周期 + 工具矩阵 + 成本控制 · SRM/WMS 选型上线 + TCO 模型落地</div></div>
+  <div class="tool"><div class="tool-t">阶段 3 · 智能</div><div class="tool-d">10-24 月 · AI 比价 + 数字孪生 + ESG + 数据与经营同步 · 智能补货 + 碳排放报告 + 数字孪生 v1</div></div>
+</div>
+
+<!-- ===== FOOTER ===== -->
+<div class="footer">
+  <div class="ftitle">B166ER · 酒管公司供应链工程 v1.0</div>
+  <div class="fdesc">13 章节全维度交付包 · 24-36 月体系建设导航图<br>ERIC 出品 · 红绿灯合规 · 24 年酒店实战</div>
+  <div class="fmeta">主报告 + 13 份分章节 + 工具清单 + 思维导图 · 5 档版本 · 5 大角色 · 3 阶段 · 扫码加微信备注"供应链 v1.0"</div>
+</div>
+
+</body>
+</html>
