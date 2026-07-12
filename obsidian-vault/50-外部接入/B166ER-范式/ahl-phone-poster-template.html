@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1080, height=1920, initial-scale=1.0, maximum-scale=1.0">
+    <title>AHL海报</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&family=Noto+Serif+SC:wght@600;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #0a0e1a;
+            --card: #111827;
+            --text: #f1f5f9;
+            --muted: #64748b;
+            --cyan: #00d4ff;
+            --blue: #3b82f6;
+            --gold: #f59e0b;
+            --green: #10b981;
+            --red: #ef4444;
+            --purple: #8b5cf6;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html, body {
+            width: 1080px;
+            min-height: 1920px;
+            overflow-x: hidden;
+        }
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            width: 1080px;
+            min-height: 1920px;
+            overflow-y: auto;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            height: 600px;
+            background: radial-gradient(ellipse at 35% 0%, rgba(0,212,255,0.2) 0%, transparent 65%);
+            pointer-events: none;
+            z-index: 0;
+        }
+        body::after {
+            content: '';
+            position: fixed;
+            bottom: 0; left: 0; right: 0;
+            height: 600px;
+            background: radial-gradient(ellipse at 65% 100%, rgba(139,92,246,0.15) 0%, transparent 65%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .content {
+            position: relative;
+            z-index: 1;
+            padding: 48px 36px 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            width: 1080px;
+        }
+
+        /* ===== HEADER ===== */
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .brand { display: flex; align-items: center; gap: 16px; }
+        .brand-icon {
+            width: 80px; height: 80px;
+            background: linear-gradient(135deg, #00d4ff 0%, #3b82f6 100%);
+            border-radius: 20px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 40px;
+            font-weight: 900;
+            font-family: 'Noto Serif SC', serif;
+            color: #fff;
+            flex-shrink: 0;
+        }
+        .brand-name {
+            font-family: 'Noto Serif SC', serif;
+            font-size: 56px;
+            font-weight: 900;
+            background: linear-gradient(135deg, #00d4ff 0%, #3b82f6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1;
+        }
+        .brand-sub {
+            font-size: 13px;
+            color: var(--muted);
+            letter-spacing: 3px;
+            margin-top: 4px;
+        }
+        .tag {
+            background: rgba(245,158,11,0.15);
+            border: 1px solid rgba(245,158,11,0.4);
+            color: var(--gold);
+            padding: 10px 20px;
+            border-radius: 30px;
+            font-size: 13px;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        /* ===== STATS ===== */
+        .stats {
+            display: flex;
+            gap: 12px;
+        }
+        .stat {
+            flex: 1;
+            background: var(--card);
+            border: 1px solid rgba(255,255,255,0.07);
+            border-radius: 16px;
+            padding: 16px 8px;
+            text-align: center;
+        }
+        .stat-num {
+            font-family: 'Noto Serif SC', serif;
+            font-size: 30px;
+            font-weight: 900;
+            background: linear-gradient(135deg, #00d4ff 0%, #3b82f6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .stat-lbl { font-size: 10px; color: var(--muted); margin-top: 4px; }
+
+        /* ===== SECTION TITLE ===== */
+        .sec {
+            background: var(--card);
+            border: 1px solid rgba(255,255,255,0.07);
+            border-radius: 20px;
+            padding: 20px;
+        }
+        .sec-title {
+            font-size: 15px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .sec-bar {
+            width: 5px; height: 22px;
+            border-radius: 3px;
+            flex-shrink: 0;
+        }
+        .sec-bar.cyan { background: var(--cyan); }
+        .sec-bar.gold { background: var(--gold); }
+        .sec-bar.purple { background: var(--purple); }
+        .sec-title.cyan { color: var(--cyan); }
+        .sec-title.gold { color: var(--gold); }
+        .sec-title.purple { color: var(--purple); }
+        .sec-title.green { color: var(--green); }
+
+        /* ===== ARCH LAYERS ===== */
+        .layer-row {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 10px;
+            align-items: stretch;
+        }
+        .layer-row:last-child { margin-bottom: 0; }
+        .layer-badge {
+            width: 88px;
+            border-radius: 12px;
+            padding: 10px 6px;
+            text-align: center;
+            flex-shrink: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .layer-badge.app { background: rgba(0,212,255,0.1); border: 1px solid rgba(0,212,255,0.25); }
+        .layer-badge.agent { background: rgba(245,158,11,0.1); border: 1px solid rgba(245,158,11,0.25); }
+        .layer-badge.cluster { background: rgba(139,92,246,0.1); border: 1px solid rgba(139,92,246,0.25); }
+        .layer-badge.data { background: rgba(16,185,129,0.1); border: 1px solid rgba(16,185,129,0.25); }
+        .layer-badge-name { font-size: 12px; font-weight: 700; }
+        .layer-badge-sub { font-size: 9px; opacity: 0.65; margin-top: 3px; }
+        .layer-badge.app .layer-badge-name { color: var(--cyan); }
+        .layer-badge.agent .layer-badge-name { color: var(--gold); }
+        .layer-badge.cluster .layer-badge-name { color: var(--purple); }
+        .layer-badge.data .layer-badge-name { color: var(--green); }
+        .layer-body {
+            flex: 1;
+            background: rgba(255,255,255,0.03);
+            border-radius: 10px;
+            padding: 10px 14px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 4px;
+        }
+        .layer-line {
+            font-size: 11px;
+            color: var(--muted);
+            line-height: 1.5;
+        }
+        .layer-line strong { color: var(--text); font-weight: 500; }
+        .arch-arrow {
+            text-align: center;
+            font-size: 18px;
+            color: rgba(255,255,255,0.15);
+            padding: 2px 0;
+        }
+
+        /* ===== DUAL AGENT ===== */
+        .agents {
+            display: flex;
+            gap: 12px;
+            align-items: stretch;
+            margin-bottom: 14px;
+        }
+        .agent-card {
+            flex: 1;
+            border-radius: 14px;
+            padding: 14px;
+        }
+        .agent-card.c { background: rgba(0,212,255,0.08); border: 1px solid rgba(0,212,255,0.2); }
+        .agent-card.b { background: rgba(245,158,11,0.08); border: 1px solid rgba(245,158,11,0.2); }
+        .agent-card-title {
+            font-size: 14px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .agent-card.c .agent-card-title { color: var(--cyan); }
+        .agent-card.b .agent-card-title { color: var(--gold); }
+        .agent-steps {
+            font-size: 10px;
+            color: var(--muted);
+            line-height: 1.8;
+        }
+        .agent-steps strong { color: var(--text); font-weight: 500; }
+        .vs-badge {
+            width: 68px;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .vs-engine {
+            background: rgba(139,92,246,0.12);
+            border: 1px solid rgba(139,92,246,0.35);
+            border-radius: 12px;
+            padding: 10px 6px;
+            text-align: center;
+        }
+        .vs-engine-name { font-size: 9px; font-weight: 700; color: var(--purple); line-height: 1.4; }
+        .quote {
+            background: linear-gradient(135deg, rgba(0,212,255,0.07) 0%, rgba(139,92,246,0.07) 100%);
+            border: 1px solid rgba(0,212,255,0.12);
+            border-radius: 12px;
+            padding: 14px;
+        }
+        .quote-label { font-size: 11px; color: var(--cyan); font-weight: 600; margin-bottom: 6px; }
+        .quote-text { font-size: 11px; color: var(--muted); line-height: 1.7; }
+        .quote-text strong { color: var(--text); }
+        .quote-result { font-size: 10px; color: var(--muted); margin-top: 6px; }
+        .quote-result strong { color: var(--cyan); }
+
+        /* ===== CLUSTER ===== */
+        .cluster-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 8px;
+        }
+        .cluster-cell {
+            background: rgba(245,158,11,0.07);
+            border: 1px solid rgba(245,158,11,0.18);
+            border-radius: 10px;
+            padding: 10px 4px;
+            text-align: center;
+        }
+        .cluster-cell.core {
+            grid-column: span 2;
+            background: rgba(245,158,11,0.13);
+            border-color: rgba(245,158,11,0.3);
+        }
+        .cluster-icon { font-size: 20px; margin-bottom: 4px; }
+        .cluster-name { font-size: 10px; font-weight: 600; }
+        .cluster-sub { font-size: 8px; color: var(--muted); margin-top: 2px; }
+
+        /* ===== VS ===== */
+        .vs-row {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 14px;
+        }
+        .vs-card {
+            flex: 1;
+            border-radius: 14px;
+            padding: 16px;
+        }
+        .vs-card.ota { background: rgba(239,68,68,0.07); border: 1px solid rgba(239,68,68,0.22); }
+        .vs-card.ahl { background: rgba(0,212,255,0.07); border: 1px solid rgba(0,212,255,0.22); }
+        .vs-label { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 4px; }
+        .vs-card.ota .vs-label { color: var(--red); }
+        .vs-card.ahl .vs-label { color: var(--cyan); }
+        .vs-name { font-family: 'Noto Serif SC', serif; font-size: 16px; font-weight: 700; }
+        .vs-metric { font-size: 10px; color: var(--muted); margin-top: 4px; line-height: 1.5; }
+        .vs-metric strong { font-weight: 700; }
+        .vs-card.ahl .vs-metric strong { color: var(--cyan); }
+        .vs-divider { font-family: 'Noto Serif SC', serif; font-size: 24px; font-weight: 900; color: rgba(255,255,255,0.2); flex-shrink: 0; }
+        .nl-row {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+        }
+        .nl-tag {
+            background: rgba(255,255,255,0.04);
+            border-radius: 20px;
+            padding: 7px 16px;
+            font-size: 11px;
+            color: var(--muted);
+        }
+        .nl-tag.main {
+            background: rgba(0,212,255,0.1);
+            border: 1px solid rgba(0,212,255,0.28);
+            color: var(--cyan);
+            font-weight: 600;
+        }
+
+        /* ===== FOOTER ===== */
+        .footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 16px;
+            border-top: 1px solid rgba(255,255,255,0.07);
+        }
+        .footer-brand {
+            font-family: 'Noto Serif SC', serif;
+            font-size: 20px;
+            font-weight: 900;
+            background: linear-gradient(135deg, #00d4ff 0%, #3b82f6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .footer-team { font-size: 11px; color: var(--muted); }
+        .footer-team strong { color: var(--text); font-weight: 500; }
+    </style>
+</head>
+<body>
+<div class="content">
+
+    <!-- HEADER -->
+    <div class="header">
+        <div class="brand">
+            <div class="brand-icon">A</div>
+            <div>
+                <div class="brand-name">AHL</div>
+                <div class="brand-sub">去中心化旅行平台</div>
+            </div>
+        </div>
+        <div class="tag">AI住宿业革命</div>
+    </div>
+
+    <!-- STATS -->
+    <div class="stats">
+        <div class="stat"><div class="stat-num">95%+</div><div class="stat-lbl">匹配准确率</div></div>
+        <div class="stat"><div class="stat-num">87个</div><div class="stat-lbl">SKILL</div></div>
+        <div class="stat"><div class="stat-num">&lt;3秒</div><div class="stat-lbl">响应速度</div></div>
+        <div class="stat"><div class="stat-num">2-3%</div><div class="stat-lbl">技术服务费</div></div>
+    </div>
+
+    <!-- ARCH LAYERS -->
+    <div class="sec">
+        <div class="sec-title cyan"><div class="sec-bar cyan"></div>四层架构</div>
+
+        <div class="layer-row">
+            <div class="layer-badge app">
+                <div class="layer-badge-name">应用层</div>
+                <div class="layer-badge-sub">交互入口</div>
+            </div>
+            <div class="layer-body">
+                <div class="layer-line"><strong>C端：</strong>"我想住大理古城带院子的民宿，预算500"</div>
+                <div class="layer-line"><strong>B端：</strong>自然语言描述服务，AI封装产品</div>
+            </div>
+        </div>
+
+        <div class="arch-arrow">↓</div>
+
+        <div class="layer-row">
+            <div class="layer-badge agent">
+                <div class="layer-badge-name">双AGENT层</div>
+                <div class="layer-badge-sub">核心引擎</div>
+            </div>
+            <div class="layer-body">
+                <div class="layer-line"><strong>C管家：</strong>理解意图 → 生成向量 → Top-K匹配</div>
+                <div class="layer-line"><strong>B运营官：</strong>产品封装 → 动态定价 → 精准营销</div>
+            </div>
+        </div>
+
+        <div class="arch-arrow">↓</div>
+
+        <div class="layer-row">
+            <div class="layer-badge cluster">
+                <div class="layer-badge-name">集群层</div>
+                <div class="layer-badge-sub">87个SKILL</div>
+            </div>
+            <div class="layer-body">
+                <div class="layer-line">核心AGENT · 营销 · 收益 · 工程 · 安防</div>
+                <div class="layer-line">宴会 · 财务 · 人力 · 供应链</div>
+            </div>
+        </div>
+
+        <div class="arch-arrow">↓</div>
+
+        <div class="layer-row">
+            <div class="layer-badge data">
+                <div class="layer-badge-name">数据层</div>
+                <div class="layer-badge-sub">向量数据库</div>
+            </div>
+            <div class="layer-body">
+                <div class="layer-line"><strong>标准：</strong>房型/价格/位置/评分</div>
+                <div class="layer-line"><strong>深水：</strong>光照指数·噪音分贝·主理人语义（OTA采不到）</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- DUAL AGENT -->
+    <div class="sec">
+        <div class="sec-title purple"><div class="sec-bar purple"></div>双AGENT核心引擎</div>
+        <div class="agents">
+            <div class="agent-card c">
+                <div class="agent-card-title">👤 C端AI管家</div>
+                <div class="agent-steps">
+                    <strong>理解意图</strong> → <strong>提取需求向量</strong><br>
+                    <strong>Top-K匹配</strong> → <strong>多轮澄清</strong><br>
+                    <strong>直接预订</strong>，无中间商
+                </div>
+            </div>
+            <div class="vs-badge">
+                <div class="vs-engine">
+                    <div class="vs-engine-name">⚡ 向量<br>匹配<br>引擎</div>
+                </div>
+            </div>
+            <div class="agent-card b">
+                <div class="agent-card-title">🏨 B端AI运营官</div>
+                <div class="agent-steps">
+                    <strong>产品封装</strong> → <strong>动态定价</strong><br>
+                    <strong>客户洞察</strong> → <strong>精准营销</strong><br>
+                    <strong>集群协同</strong> → 主动出击
+                </div>
+            </div>
+        </div>
+        <div class="quote">
+            <div class="quote-label">💬 自然语言交互示意</div>
+            <div class="quote-text">
+                「大理古城·带院子·民宿·预算500」<br>
+                → <strong>AI理解：</strong>位置 | 房型 | 调性 | 预算<br>
+                → <strong>精准匹配3家最优民宿</strong>
+            </div>
+            <div class="quote-result">87%用户偏好 · <strong>语音/文字/多轮</strong> 即时响应</div>
+        </div>
+    </div>
+
+    <!-- CLUSTER -->
+    <div class="sec">
+        <div class="sec-title gold"><div class="sec-bar gold"></div>9大AGENT集群 × 87个SKILL</div>
+        <div class="cluster-grid">
+            <div class="cluster-cell core">
+                <div class="cluster-icon">🎯</div>
+                <div class="cluster-name">核心AGENT</div>
+                <div class="cluster-sub">系统调度</div>
+            </div>
+            <div class="cluster-cell"><div class="cluster-icon">📢</div><div class="cluster-name">营销</div></div>
+            <div class="cluster-cell"><div class="cluster-icon">💰</div><div class="cluster-name">收益</div></div>
+            <div class="cluster-cell"><div class="cluster-icon">🔧</div><div class="cluster-name">工程</div></div>
+            <div class="cluster-cell"><div class="cluster-icon">🔒</div><div class="cluster-name">安防</div></div>
+            <div class="cluster-cell"><div class="cluster-icon">🍽️</div><div class="cluster-name">宴会</div></div>
+            <div class="cluster-cell"><div class="cluster-icon">💳</div><div class="cluster-name">财务</div></div>
+            <div class="cluster-cell"><div class="cluster-icon">👥</div><div class="cluster-name">人力</div></div>
+            <div class="cluster-cell"><div class="cluster-icon">🔗</div><div class="cluster-name">供应链</div></div>
+        </div>
+    </div>
+
+    <!-- VS -->
+    <div class="sec">
+        <div class="sec-title" style="color:var(--red)"><div class="sec-bar" style="background:var(--red)"></div>核心优势对比</div>
+        <div class="vs-row">
+            <div class="vs-card ota">
+                <div class="vs-label">传统OTA</div>
+                <div class="vs-name">携程/美团</div>
+                <div class="vs-metric">佣金 15-30% · 搜索比价<br>平台垄断数据 · 商家被动</div>
+            </div>
+            <div class="vs-divider">VS</div>
+            <div class="vs-card ahl">
+                <div class="vs-label">AHL平台</div>
+                <div class="vs-name">去中心化旅行</div>
+                <div class="vs-metric"><strong>仅2-3%</strong>技术服务费<br>AI精准推荐 · 数据自有</div>
+            </div>
+        </div>
+        <div class="nl-row">
+            <div class="nl-tag main">🎤 语音输入</div>
+            <div class="nl-tag">📝 文字对话</div>
+            <div class="nl-tag">🔄 多轮澄清</div>
+            <div class="nl-tag">⚡ 即时响应</div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer">
+        <div class="footer-brand">AHL</div>
+        <div class="footer-team">张实<strong>(What)</strong> × 李源<strong>(How)</strong> × 陈思序<strong>(When)</strong></div>
+    </div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><title>Brutalist P08</title><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700;900&family=Noto+Serif+SC:wght@400;600;700;900&family=Inter:wght@200;300;400;500;700;800;900&family=Noto+Sans+SC:wght@300;400;500;700;900&family=IBM+Plex+Mono:wght@400;500;700&display=swap"><style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"Inter","Noto Sans SC","IBM Plex Mono",sans-serif;background:#2a2a2a;display:flex;justify-content:center;align-items:center;min-height:100vh;padding:20px}
+.poster{width:1080px;height:1440px;position:relative;overflow:hidden;display:grid;grid-template-rows:130px 1fr 110px;color:#0a0a0a;font-family:"Inter","Noto Sans SC",sans-serif}
+/* 顶部条 */
+.top{padding:36px 60px 0;display:flex;justify-content:space-between;align-items:center;border-bottom:6px solid #0a0a0a;margin:0 60px;font-family:"IBM Plex Mono",monospace}
+.brand{font-size:22px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#0a0a0a}
+.meta{font-size:20px;font-weight:700;letter-spacing:.1em;color:#0a0a0a}
+/* 主区 */
+.main{padding:36px 60px 24px;display:flex;flex-direction:column;position:relative}
+/* kicker */
+.kicker{font-family:"IBM Plex Mono",monospace;font-size:22px;font-weight:700;letter-spacing:.35em;text-transform:uppercase;margin-bottom:14px;display:inline-block;padding:6px 14px;background:#0a0a0a;color:#fafafa;align-self:flex-start}
+.kicker.light{background:#fafafa;color:#0a0a0a;border:4px solid #0a0a0a}
+.kicker.red{background:#e63946;color:#fafafa}
+/* h1: 100-110px */
+h1{font-family:"Noto Serif SC","Inter",serif;font-size:104px;font-weight:900;line-height:.95;letter-spacing:-.04em;margin-bottom:18px;text-transform:none}
+h1 em{font-style:normal;color:#e63946;font-family:"Cormorant Garamond",serif;font-weight:900}
+h1 u{text-decoration:none;background:#ffb703;color:#0a0a0a;padding:0 12px;display:inline-block;transform:rotate(-2deg)}
+h1 .strike{position:relative;display:inline-block}
+h1 .strike::after{content:"";position:absolute;left:-4%;right:-4%;top:50%;height:14px;background:#e63946;transform:rotate(-2deg)}
+/* lede */
+.lede{font-family:"Noto Serif SC",serif;font-size:28px;color:#0a0a0a;line-height:1.45;margin-bottom:24px;font-weight:500}
+/* 底部 */
+.bottom{padding:0 60px;border-top:6px solid #0a0a0a;margin:0 60px;display:flex;justify-content:space-between;align-items:center}
+.stamp{font-family:"IBM Plex Mono",monospace;font-size:18px;font-weight:700;letter-spacing:.15em;color:#0a0a0a;text-transform:uppercase}
+.by{font-family:"Inter","Noto Sans SC",sans-serif;font-size:24px;font-weight:900;letter-spacing:.04em;color:#0a0a0a;text-transform:uppercase;display:flex;align-items:center}
+.by .s{display:inline-block;width:22px;height:22px;background:#e63946;margin-right:12px}
+/* === 黑白交替 变体 === */
+/* 默认 LIGHT */
+.poster.light{background:#fafafa;color:#0a0a0a}
+.poster.light .top{border-bottom-color:#0a0a0a}
+.poster.light .bottom{border-top-color:#0a0a0a}
+.poster.light .stamp,.poster.light .by{color:#0a0a0a}
+/* DARK */
+.poster.dark{background:#0a0a0a;color:#fafafa}
+.poster.dark .top{border-bottom-color:#fafafa}
+.poster.dark .bottom{border-top-color:#fafafa}
+.poster.dark .stamp,.poster.dark .by{color:#fafafa}
+.poster.dark .brand{color:#fafafa}
+.poster.dark .meta{color:#ffb703}
+.poster.dark h1{color:#fafafa}
+.poster.dark h1 em{color:#ffb703}
+.poster.dark .lede{color:#fafafa}
+.poster.dark .kicker{background:#ffb703;color:#0a0a0a}
+/* 通用网格分割 */
+.divider{height:6px;background:#0a0a0a;margin:14px 0}
+.divider.red{background:#e63946}
+.divider.yellow{background:#ffb703}
+/* 小框 */
+.box{border:5px solid #0a0a0a;padding:18px 22px;background:#fafafa;color:#0a0a0a}
+.box.dark{background:#0a0a0a;color:#fafafa;border-color:#0a0a0a}
+.box.red{background:#e63946;color:#fafafa;border-color:#0a0a0a}
+.box.yellow{background:#ffb703;color:#0a0a0a;border-color:#0a0a0a}
+/* 通用页码标记 */
+.pgnum{position:absolute;top:36px;right:60px;font-family:"IBM Plex Mono",monospace;font-size:48px;font-weight:900;color:#e63946;line-height:1}
+.pgnum.l{color:#0a0a0a}
+.pgnum.y{color:#ffb703}
+/* 旋转装饰 */
+.tilt-l{transform:rotate(-2deg)}
+.tilt-r{transform:rotate(2deg)}
+.tilt-xl{transform:rotate(-3deg)}
+</style></head><body><div class="poster light"><div class="top"><div class="brand">ERIC的B166ER出品 · P08</div><div class="meta">4 大件 + 自动发货</div></div><div class="main"><div class="kicker light">DELIVERY · 自动发货</div><h1>4 大件<br><em style="color:#e63946">+</em> 自动发货</h1><div class="lede">小红书支付完成 → 系统自动推送 → 立即可用,无需等待。</div><div style="display:grid;grid-template-columns:1fr 1fr;gap:0;border:6px solid #0a0a0a;margin-bottom:12px"><div style="padding:14px 18px;border-right:6px solid #0a0a0a;border-bottom:6px solid #0a0a0a;background:#ffb703"><div style="font-family:Inter,sans-serif;font-size:48px;font-weight:900;color:#0a0a0a;line-height:.9;letter-spacing:-.04em">N°01</div><h4 style="font-family:Noto Sans SC,sans-serif;font-size:24px;font-weight:900;color:#0a0a0a;margin:4px 0 2px">主指南 PDF</h4><p style="font-family:Noto Sans SC,sans-serif;font-size:14px;color:#0a0a0a;font-weight:700">568KB · 17 章完整</p></div><div style="padding:14px 18px;border-bottom:6px solid #0a0a0a;background:#0a0a0a"><div style="font-family:Inter,sans-serif;font-size:48px;font-weight:900;color:#ffb703;line-height:.9;letter-spacing:-.04em">N°02</div><h4 style="font-family:Noto Sans SC,sans-serif;font-size:24px;font-weight:900;color:#fafafa;margin:4px 0 2px">Excel 模板</h4><p style="font-family:Noto Sans SC,sans-serif;font-size:14px;color:#ffb703;font-weight:700">8 个 · 填入即用</p></div><div style="padding:14px 18px;border-right:6px solid #0a0a0a;background:#e63946"><div style="font-family:Inter,sans-serif;font-size:48px;font-weight:900;color:#fafafa;line-height:.9;letter-spacing:-.04em">N°03</div><h4 style="font-family:Noto Sans SC,sans-serif;font-size:24px;font-weight:900;color:#fafafa;margin:4px 0 2px">思维导图</h4><p style="font-family:Noto Sans SC,sans-serif;font-size:14px;color:#fafafa;font-weight:700">17 章全景体系</p></div><div style="padding:14px 18px;background:#1d3557"><div style="font-family:Inter,sans-serif;font-size:48px;font-weight:900;color:#ffb703;line-height:.9;letter-spacing:-.04em">N°04</div><h4 style="font-family:Noto Sans SC,sans-serif;font-size:24px;font-weight:900;color:#fafafa;margin:4px 0 2px">虚拟案例</h4><p style="font-family:Noto Sans SC,sans-serif;font-size:14px;color:#fafafa;font-weight:700">华庭酒店周模拟</p></div></div><div style="background:#0a0a0a;color:#fafafa;padding:14px 22px;border:6px solid #0a0a0a;margin-bottom:12px"><div style="display:flex;align-items:center;gap:8px;margin-bottom:8px"><div style="font-family:IBM Plex Mono,monospace;font-size:14px;font-weight:900;letter-spacing:.2em;color:#ffb703">3 步自动拿到</div><div style="flex:1;height:3px;background:#ffb703"></div><div style="font-family:Noto Sans SC,sans-serif;font-size:13px;color:#fafafa">支付完成 → 推送 → 即用</div></div><div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px"><div style="background:#e63946;color:#fafafa;padding:10px 12px;display:flex;gap:10px;align-items:center"><div style="font-family:Inter,sans-serif;font-size:48px;font-weight:900;line-height:.9">01</div><div style="font-family:Noto Sans SC,sans-serif;font-size:14px;font-weight:700;line-height:1.3">下单<br>小红书支付</div></div><div style="background:#ffb703;color:#0a0a0a;padding:10px 12px;display:flex;gap:10px;align-items:center"><div style="font-family:Inter,sans-serif;font-size:48px;font-weight:900;line-height:.9">02</div><div style="font-family:Noto Sans SC,sans-serif;font-size:14px;font-weight:700;line-height:1.3">自动发货<br>网盘 + 提取码</div></div><div style="background:#1d3557;color:#ffb703;padding:10px 12px;display:flex;gap:10px;align-items:center"><div style="font-family:Inter,sans-serif;font-size:48px;font-weight:900;line-height:.9">03</div><div style="font-family:Noto Sans SC,sans-serif;font-size:14px;font-weight:700;line-height:1.3">立即使用<br>手机 / 电脑</div></div></div></div><div style="display:grid;grid-template-columns:1fr 1fr 1fr;border:5px solid #0a0a0a"><div style="padding:10px 8px;border-right:5px solid #0a0a0a;text-align:center;background:#fafafa"><div style="font-family:Inter,sans-serif;font-size:36px;font-weight:900;color:#e63946;line-height:1">0.6%</div><div style="font-family:Noto Sans SC,sans-serif;font-size:13px;color:#0a0a0a;font-weight:700;letter-spacing:.1em">技术服务费</div></div><div style="padding:10px 8px;border-right:5px solid #0a0a0a;text-align:center;background:#ffb703"><div style="font-family:Inter,sans-serif;font-size:36px;font-weight:900;color:#0a0a0a;line-height:1">7×24</div><div style="font-family:Noto Sans SC,sans-serif;font-size:13px;color:#0a0a0a;font-weight:700;letter-spacing:.1em">自动发货</div></div><div style="padding:10px 8px;text-align:center;background:#0a0a0a"><div style="font-family:Inter,sans-serif;font-size:36px;font-weight:900;color:#ffb703;line-height:1">999</div><div style="font-family:Noto Sans SC,sans-serif;font-size:13px;color:#fafafa;font-weight:700;letter-spacing:.1em">份 · 限量</div></div></div></div><div class="bottom"><div class="stamp">V3 BRUTALIST · P08</div><div class="by"><span class="s"></span>ERIC的B166ER出品</div></div></div></body></html>
