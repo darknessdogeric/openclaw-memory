@@ -1,0 +1,12 @@
+{
+  "vaultName": "B166ER × ERIC 双向思考库",
+  "promptDelete": true,
+  "alwaysUpdateLinks": true,
+  "newLinkFormat": "shortest",
+  "useMarkdownLinks": false,
+  "newFileLocation": "current",
+  "attachmentFolderPath": ".",
+  "showLineNumber": true,
+  "spellcheck": false,
+  "showInlineTitle": true
+}
