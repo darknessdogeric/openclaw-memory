@@ -1,11 +1,26 @@
 {
-  "lastChecks": {
-    "cron-health": 1783559700,
-    "project": 1782787380,
-    "skills": 1782742920,
-    "industry": null,
-    "lottery": null
-  },
-  "lastHeartbeat": 1783559700,
-  "notes": "2026-07-09 09:15 (Thu) — 🔴端午全流程断裂：预测(中断)+复盘(disabled)+STR补充(从未触发)。子代理 spawned (duanwu-str-review) 执行三合一补充报告。GitAutoBackup仍显示runningAtMs挂起。月度报告7/12⚠️billing。Cron 6db37603已清理。"
+  "phase": "D+6 execution-phase observer",
+  "t0_past_hours": 112.5,
+  "protocols": [
+    "R-B",
+    "R12",
+    "R-CANDIDATE-T2",
+    "R256",
+    "R257",
+    "R258"
+  ],
+  "ericActiveHours": 75.95,
+  "session": "agent:main:cron:315657b9-fc80-4b94-a853-404e3955f7a0:run:1784705393087",
+  "tripleConfluence": "CLOSED (Day +1)",
+  "lastHB": 932,
+  "hbCount": 932,
+  "nextSignificantCheck": "21:00 evening self-iter (~4.5h)",
+  "mode": "DORMANT",
+  "silenceHours": 147.23,
+  "notes": "HB#932: +2.83h (afternoon transition). Wednesday 16:30. DORMANT sustained. 7/24 D-Day T-1 (~40.5h). No actionable signal. Next: 21:00 evening self-iter.",
+  "lastCheck": "2026-07-22T16:30:00+08:00",
+  "nextDDay": "7/24 (D-Day T-1, AnYi important meeting)",
+  "lastCronFired": "10:00 MWF daily briefing",
+  "ericActiveElsewhere": "AnYi webchat",
+  "nextDDayHours": 40.5
 }
