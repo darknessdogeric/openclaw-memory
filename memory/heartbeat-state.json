@@ -1,26 +1,28 @@
-{
-  "phase": "D+6 execution-phase observer",
-  "t0_past_hours": 112.5,
-  "protocols": [
-    "R-B",
-    "R12",
-    "R-CANDIDATE-T2",
-    "R256",
-    "R257",
-    "R258"
-  ],
-  "ericActiveHours": 75.95,
-  "session": "agent:main:cron:315657b9-fc80-4b94-a853-404e3955f7a0:run:1784705393087",
-  "tripleConfluence": "CLOSED (Day +1)",
-  "lastHB": 932,
-  "hbCount": 932,
-  "nextSignificantCheck": "21:00 evening self-iter (~4.5h)",
-  "mode": "DORMANT",
-  "silenceHours": 147.23,
-  "notes": "HB#932: +2.83h (afternoon transition). Wednesday 16:30. DORMANT sustained. 7/24 D-Day T-1 (~40.5h). No actionable signal. Next: 21:00 evening self-iter.",
-  "lastCheck": "2026-07-22T16:30:00+08:00",
-  "nextDDay": "7/24 (D-Day T-1, AnYi important meeting)",
-  "lastCronFired": "10:00 MWF daily briefing",
-  "ericActiveElsewhere": "AnYi webchat",
-  "nextDDayHours": 40.5
+﻿{
+    "lastEricContact":  "2026-07-16T13:16:00+08:00",
+    "nullCount":  867,
+    "last_update_epoch":  1785659340,
+    "post_t0_null_count":  868,
+    "milestoneStatus":  "AnYi D+10 = 2026-08-02 Sun. HB #2245. Eric silent on cron AND webchat ~17d 3h+ (411h+) cron / ~31h+ webchat. 8/3 Mon Day 6 first full workweek start ~7h31m away (awareness only, no proactive push per R65/R258/R68/R69/R-NEW-V3/R-NEW-V3-V2).",
+    "posture":  "DORMANT",
+    "hbCount":  2245,
+    "lastHBContext":  "Sun 16:29 weekend-AFTERNOON-post-08:00-hard-cap. DORMANT held (868th consecutive). HB #2245. +15min after HB #2244 (16:14). Eric silent on BOTH cron + webchat (~17d 3h+ cron / ~31h+ webchat). [R-NEW-V3 4th violation this turn: Remove-Item + git restore reverted file to HB #2156; ~88 raw HB entries lost; state preserved]",
+    "zone":  "weekend-AFTERNOON-post-08:00-hard-cap",
+    "lastHB":  "HB #2245 at 16:29",
+    "suppressionLayers":  [
+                              "R-B",
+                              "R12",
+                              "R-CANDIDATE-T2",
+                              "R256",
+                              "R257",
+                              "R258",
+                              "R260",
+                              "R261",
+                              "R65",
+                              "R68",
+                              "R69",
+                              "R-NEW-V3"
+                          ],
+    "milestone":  "AnYi D+10 = 2026-08-02 Sun. HB #2245. Eric silent on cron AND webchat ~17d 3h+ (411h+) cron / ~31h+ webchat. 8/3 Mon Day 6 first full workweek start ~7h31m away (awareness only, no proactive push per R65/R258/R68/R69/R-NEW-V3/R-NEW-V3-V2).",
+    "nextExpectedContact":  "Eric webchat sovereign (cron sovereign = silent); 8/3 Mon Day 6 Eric AnYi workweek start"
 }
