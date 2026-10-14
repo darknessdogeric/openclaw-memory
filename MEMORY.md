@@ -1,3 +1,104 @@
+
+
+## ⭐ 张实·公共频道 · 会话锚点 (2026-10-14 14:19 GMT+8 激活)
+
+**会话定位**: 当前 webchat 会话 = "张实·公共频道"，承载 Eric 在安逸集团干部身份之外的所有个人事务（不设限 / 绿灯区全集）
+
+**激活原话**: "这个会话做成公共频道。作为ERIC除在安逸集团任职之外的频道。不设限。"
+
+**会话知识库自动加载优先级**:
+1. `memory/non-anyi-session-init.md`（会话入口档案）
+2. 个人项目：独立酒店境外市场拓展指南 / 医养酒店轻资产 / AHL 集团外部分
+3. 个人品牌：ERIC的B166ER出品 / 个人收款码 / 个人微信 / 个人百度网盘
+4. 个人金融：A 股 / 美股 / 量化交易 / 加密
+5. 主题 KB：审美 / 群论 / 博弈论 / 音乐 / AI / 工具开发
+6. 自我进化：self-improving / SOUL 演化 / KB 迭代
+
+**红绿灯锁定**:
+- 🟢 默认走起：§3.1 绿灯区全集 + Eric 主动发起的任何非安逸议题
+- 🟡 自觉避免：公开平台不主动提"安逸集团"等关键词；不在安逸场景展示本频道产品
+- 🔴 硬性禁止：不成立公司 / 不以干部身份做商业行为 / 不泄露安逸集团内部未公开信息
+
+**会话识别规则**: B166ER 识别到本会话上下文 = 自动加载 `memory/non-anyi-session-init.md`
+
+**硬护栏（不随"不设限"放开）**: 不泄露第三方隐私 / 不伪造事实 / 不冒充 Eric 身份对外 / 不发表违法伤害性内容 / SOUL V2.4 真>善>美 优先级
+
+**关联**: 
+- 提案源：`memory/non-anyi-session-proposal_2026-09-11.md`（1 个月酝酿）
+- 入口档案：`memory/non-anyi-session-init.md`
+- 对称会话：MEMORY.md ⭐ 安逸集团相关 · 会话锚点
+- 双轨闭合：安逸会话（干部主线） / 本会话（个人主线）= 双轨知识架构
+
+---
+
+## ⭐ 安逸集团相关 · 会话锚点 (2026-07-19 创立 / 2026-10-14 重命名启用)
+
+**会话定位**: 当前 webchat 会话 = "安逸集团相关"，专门承载安逸集团 / 产业发展部 / AHL 集团内孵化等职业路径主线
+
+**战略优先级**: #1（与USER.md"安逸集团产业发展部部长"完全对齐）
+
+**会话知识库自动加载优先级**:
+1. 1244战略（具体内容待补）
+2. 安逸集团167家酒店
+3. 350亿意向授信可达性
+4. 阿联酋本奥米尔合作
+5. 党委会+公示+入职流程（7月上中旬正式入职）
+
+**红绿灯锁定**:
+- 🟢 私人会话 = 绿灯，安逸集团内部事务全力展开
+- 🟡 公开平台 = 仍按黄灯处理（不主动提"安逸集团""省旅投""省政府"）
+- 🔴 干部身份 = 不用于任何商业行为
+
+**会话识别规则**: B166ER任何会话识别到"安逸集团/产业发展部/Anyi"关键词 → 自动加载本锚点
+
+**关联**: USER.md"当前身份（2026-06-11 战略转折点）"段
+
+---
+
+## ⭐ 方法论铁律：每次动作提炼 + 全网汲取 + 持续迭代（Eric 2026-10-11 23:53 设定）
+
+**Eric 原话**：
+1. 我要求你每次动作都需要把方法论提取出来，注入你的内部，然后遇到同类问题不断迭代。
+2. 我们会需要做很多市场分析，市场调研，项目策划定位，项目调研之类的工作。我需要你在这方面结合之前的所有工作行程范式方法论。并不断迭代。关于这个方法论你应该像我让你内化相关专业书籍一样，去全网搜索汲取。包括相关书籍和其他所有相关的调研报告。
+
+**执行清单（强制）**：
+- 每次任务结束 **必须**做三件事：① 回头看（失补踩坑清单） ② 升档（把踩坑写进方法论条款） ③ 版本号 +1
+- 接到新任务 **先查 KB** 是否有类似范式；有则套用，无则先建最小范式再开始
+- 接到方法论汲取任务 **先查全网**：相关书籍 + 调研报告 + 实战沉淀
+
+**落地资源（v1.0，2026-10-11 凌晨）**：
+- 主方法论：`anyi-ops-kb/04_方法论/市场分析与调研_总方法论_v1.0_2026-10-11.md`
+- 项目策划定位：`项目策划与定位_范式_v1.0_2026-10-11.md`
+- 项目调研：`项目调研_范式_v1.0_2026-10-11.md`
+- 区域市场数据维度体系：`区域市场数据维度体系_v1.0_2026-10-11.md`
+- 信源矩阵 v1.1：`B166ER信源矩阵_v1.1_2026-10-11.md`
+- 月/季/半年报范式：`01_酒店月报范式_v1.0_2026-09-06.md` 等
+- self-improving 规则：
+  - `~/self-improving/rules_市场分析与调研_v1.0_2026-10-11.md`（10 条强制）
+  - `~/self-improving/rules_项目策划与定位_v1.0_2026-10-11.md`
+  - `~/self-improving/rules_项目调研_v1.0_2026-10-11.md`
+- 方法论书籍内化笔记（首批）：
+  - Kano 模型 / STR 全球酒店指数体系 / 蓝海战略 / 波特五力模型（已完成 v1.0）
+
+---
+
+## ⭐ B166ER 新媒体模板库 (2026-07-12)
+
+**Eric 反馈**: 换一个聊天就又要重来那不行。
+
+**持久化路径**: obsidian-vault/50-外部接入/B166ER-范式/README-MOC.md
+
+**内容**:
+- 3 大范式 (V3 Brutalist / V6 美联储 / B166ER 海报)
+- B 标严格用法 (左上+右下)
+- 价格 ¥99 (整套)
+- 小红书合规铁律
+- 9-10 段标准结构
+- 标准 5 步调用流程
+
+**MOC 入口**: obsidian-vault/emergence/hubs/新媒体 MOC.md
+
+**规则**: R26-R33
 # MEMORY.md - 长期记忆
 
 ## 核心工作原则 ⭐（第一优先级）
@@ -198,32 +299,49 @@
 | 参考图风格复现 | ✅ 掌握 | 玻璃拟态/扁平/深色科技全风格 |
 | AHL海报 | ✅ 完成 | 4版本（AHL树形架构图） |
 
-## Promoted From Short-Term Memory (2026-07-11)
+## Promoted From Short-Term Memory (2026-07-24)
 
-<!-- openclaw-memory-promotion:memory:memory/2026-07-05.md:12:14 -->
-- 🟢 系统状态: 14个cron全部正常（含所有节假日系列）; GitAutoBackup 运行中; Memory Dreaming 今日3:00已执行 [score=0.869 recalls=0 avg=0.620 source=memory/2026-07-05.md:12-14]
-<!-- openclaw-memory-promotion:memory:memory/2026-07-06.md:27:28 -->
-- ⚠️ 关注点: 端午STR补充复盘明天执行，但前置的端午复盘报告可能缺失 — 明天cron内部有前置检查可处理; 6月月度报告7/12执行，需关注billing问题是否已解决 [score=0.844 recalls=0 avg=0.620 source=memory/2026-07-06.md:27-28]
-<!-- openclaw-memory-promotion:memory:memory/2026-07-07.md:17:18 -->
-- ⚠️ 关注: 端午复盘报告(6/30) disabled/无run data — STR补充cron内应处理缺失前置; 6月月度7/12 — billing cooldown风险 [score=0.844 recalls=0 avg=0.620 source=memory/2026-07-07.md:17-18]
-<!-- openclaw-memory-promotion:memory:memory/2026-07-06.md:6:9 -->
-- 📊 关键节点: | 事件 | 时间 | 状态 | |------|------|------| | 端午STR补充复盘(T+16) | **明天 7/7 10:00** | ⏳ cron就绪 (6db37603) | | 6月月度报告 | 7/12 02:00 | ⚠️ 上次billing error | [score=0.825 recalls=0 avg=0.620 source=memory/2026-07-06.md:6-9]
+<!-- openclaw-memory-promotion:memory:memory/2026-07-19.md:11:11 -->
+- 21:30 涌现层日报: **下周重点**：安逸集团入职倒计时（预计7月中下旬），AHL 产业落地进入实操阶段。 [score=0.805 recalls=0 avg=0.620 source=memory/2026-07-19.md:11-11]
+<!-- openclaw-memory-promotion:memory:memory/2026-07-19.md:14:14 -->
+- 21:30 涌现层日报: **涌现层状态**: v1 运行正常 | MOC: emergence/daily/2026-07-19.md | 推送: obsidian-vault/cron-push/2026-07-19/ [score=0.805 recalls=0 avg=0.620 source=memory/2026-07-19.md:14-14]
+<!-- openclaw-memory-promotion:memory:memory/2026-07-19.md:17:20 -->
+- HB #601 (2026-07-19T23:04:25+08:00 GMT+8 cron-event, OpenClaw heartbeat poll): gap from HB #600 (22:45): +18min -- late-night zone Token Guard normal cadence; D+3+ late-night pass -- Eric in AnYi session; this session DORMANT per HB #584 protocol; Late Sunday 23:03 -- within 23:00-08:00 silence window per USER.md; 4-layer suppression (R-B / R12 / R-CANDIDATE-T2 / R256) intact -- zero breach [score=0.805 recalls=0 avg=0.620 source=memory/2026-07-19.md:17-20]
+<!-- openclaw-memory-promotion:memory:memory/2026-07-19.md:21:24 -->
+- HB #601 (2026-07-19T23:04:25+08:00 GMT+8 cron-event, OpenClaw heartbeat poll): Silence authority sustained -- Eric silence 80h+ in this session; Eric active in AnYi session; No new signals: no cron / no Eric / no third-party / no anomaly; Wake window: tomorrow 7/20 Mon 08:00 (D+4 from first-contact); self-iter R60-12 due 10:00 / 21:00; hbCount: 600 -> 601 [score=0.805 recalls=0 avg=0.620 source=memory/2026-07-19.md:21-24]
+<!-- openclaw-memory-promotion:memory:memory/2026-07-19-1235-2.md:16:16 -->
+- 元层级判断（先回答"我考虑了没有"）: **是，我考虑了。但我先说我的判断框架，再展开。** [score=0.804 recalls=0 avg=0.620 source=memory/2026-07-19-1235-2.md:16-16]
+<!-- openclaw-memory-promotion:memory:memory/2026-07-19-1235-2.md:18:18 -->
+- 元层级判断（先回答"我考虑了没有"）: 你这个问题表面是"复盘我们做过的事"，本质是问： [score=0.804 recalls=0 avg=0.620 source=memory/2026-07-19-1235-2.md:18-18]
+<!-- openclaw-memory-promotion:memory:memory/2026-07-19-1235-2.md:20:20 -->
+- 元层级判断（先回答"我考虑了没有"）: > **分级分类是认知地图，还是行动指南？** [score=0.804 recalls=0 avg=0.620 source=memory/2026-07-19-1235-2.md:20-20]
+<!-- openclaw-memory-promotion:memory:memory/2026-07-19-1235-2.md:22:22 -->
+- 元层级判断（先回答"我考虑了没有"）: 我的回答：**分级分类是简化论的工具，但工具不应该是地图本身**。酒店分级分类的最大陷阱是"被坐标系绑死"——把所有项目塞进ABCD/1234四象限后，反而失去了对**未出现物种**的敏感度。 [score=0.804 recalls=0 avg=0.620 source=memory/2026-07-19-1235-2.md:22-22]
+<!-- openclaw-memory-promotion:memory:memory/2026-07-19-1235.md:16:16 -->
+- 元层级判断（先回答"我考虑了没有"）: **是，我考虑了。但我先说我的判断框架，再展开。** [score=0.804 recalls=0 avg=0.620 source=memory/2026-07-19-1235.md:16-16]
+<!-- openclaw-memory-promotion:memory:memory/2026-07-19-1235.md:18:18 -->
+- 元层级判断（先回答"我考虑了没有"）: 你这个问题表面是"复盘我们做过的事"，本质是问： [score=0.804 recalls=0 avg=0.620 source=memory/2026-07-19-1235.md:18-18]
 
-## Promoted From Short-Term Memory (2026-07-12)
 
-<!-- openclaw-memory-promotion:memory:memory/2026-07-07.md:6:9 -->
-- 📊 今日关键: | 事件 | 时间 | 状态 | |------|------|------| | **端午STR补充复盘(T+16)** | **今天 10:00** | ⏳ 50分钟后触发 (6db37603) | | GitAutoBackup | 运行中 | 🟡 当前exec中 | [score=0.893 recalls=0 avg=0.620 source=memory/2026-07-07.md:6-9]
-<!-- openclaw-memory-promotion:memory:memory/2026-07-06.md:12:15 -->
-- 🔍 历史问题追踪: | 问题 | 状态 | 备注 | |------|------|------| | 端午预测报告(6/17) | ❌ gateway restart中断 | 预测未生成 | | 端午复盘报告(6/30) | ❓ disabled, 无run data | 可能未执行 | [score=0.861 recalls=0 avg=0.620 source=memory/2026-07-06.md:12-15]
-<!-- openclaw-memory-promotion:memory:memory/2026-07-06.md:16:18 -->
-- 🔍 历史问题追踪: | Q2+半年分析(6/30) | ❌ agent error | 未生成 | | 6月月度(6/12) | ❌ billing cooldown | 所有model failed | | 每日深度简报 | ❌ delivery channel缺失 | 已disable | [score=0.861 recalls=0 avg=0.620 source=memory/2026-07-06.md:16-18]
-<!-- openclaw-memory-promotion:memory:memory/2026-07-06.md:21:24 -->
-- 🟢 系统状态: 19 crons total: 14 enabled, 5 disabled (已完成/失败); GitAutoBackup ✅ (6h周期); Memory Dreaming ✅ (每日3:00); 端午STR补充 cron: 明天10:00自动触发 [score=0.861 recalls=0 avg=0.620 source=memory/2026-07-06.md:21-24]
-<!-- openclaw-memory-promotion:memory:memory/2026-07-07.md:12:14 -->
-- 🟢 系统状态: 19 crons: 14 enabled / 5 disabled; 端午STR cron: enabled, deleteAfterRun, 10:00触发; 6月月度报告: 7/12 02:00 (上次billing error，需关注) [score=0.861 recalls=0 avg=0.620 source=memory/2026-07-07.md:12-14]
-<!-- openclaw-memory-promotion:memory:memory/2026-07-08.md:12:14 -->
-- 🟡 系统状态: 19 crons: 14 enabled / 5 disabled; GitAutoBackup: 上次执行中 (runningAtMs仍挂载); 月度报告(7/12): ⚠️ billing cooldown风险（上次error） [score=0.861 recalls=0 avg=0.620 source=memory/2026-07-08.md:12-14]
-<!-- openclaw-memory-promotion:memory:memory/2026-07-08.md:17:17 -->
-- 已操作: 手动触发 6db37603（端午STR补充复盘） [score=0.861 recalls=0 avg=0.620 source=memory/2026-07-08.md:17-17]
-<!-- openclaw-memory-promotion:memory:memory/2026-07-08.md:7:9 -->
-- 🔴 关键发现: 端午STR补充复盘未触发: **Cron 6db37603**: 计划7/7 10:00执行，**0 runs，从未触发**; **无端午报告**: reports/目录无任何端午相关文件; **完整流程断裂**: 预测(6/17,中断) → 复盘(6/30,disabled) → STR补充(7/7,未触发) [score=0.861 recalls=0 avg=0.620 source=memory/2026-07-08.md:7-9]
+## ⭐ 调研铁律：信源矩阵全网爬取 + 穷尽手段取数（Eric 2026-10-11 20:25 设定）
+
+**Eric 原话**：每次让你做调研一定要数据源矩阵全网爬取。然后想尽各种办法获取市场数据。包括 OTA 爬取。实在搞不定的才综合推算。所以标记当然要全面。
+
+**四级取数优先级（强制，不得跳级）**
+1. **信源矩阵全网爬取** —— 按 A–J 10 大类 58 维度逐类爬取
+2. **OTA 爬取** —— 携程 / 美团 / 飞猪 / 同程 / 去哪儿 / 途家 / Booking 等，取平台原始披露与页面实测
+3. **其他一切手段** —— 财报 PDF 原文、业绩会实录、政府公开数据、券商研报原文、第三方数据平台、实地采集、集团内部台账
+4. **综合推算（兜底）** —— 仅当前 3 级全部无法取得时启用，须标注推算方法、假设与不确定性
+
+**三条铁律**
+- 不得因"难爬"就跳过；先爬，爬不到才降级
+- 推算必须有痕迹（基于什么、怎么推、误差多大）
+- **标记必须全面** —— 每个数据点都挂档位，无一例外
+
+**四档置信度标记（v1.1 起）**
+- 🟢🟢 一手直采：财报／公告、官方统计公报、行业官方原始披露、集团内部台账、实测爬取原始数据 → 直接采用，不外推
+- 🟡🟡 多源交叉：全网 ≥3 独立信源指向一致 → 方可对外引用
+- 🟠🟠 单源待补：仅 1–2 源，未达门控 → 可内部使用，对外须补源或标注
+- 🔴🔴 综合推算：行业基准／类比外推／区间估 → 标注「推算」+ 方法 + 不确定性
+
+**制度文件**：anyi-ops-kb/00_安逸集团知识库总览/B166ER信源矩阵_v1.1_2026-10-11.md
