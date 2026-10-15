@@ -1,0 +1,60 @@
+{
+  "name": "file_atomic_write",
+  "version": "1.0.0",
+  "description": "原子文件写入(临时文件+rename),防止半写和 clobber",
+  "owner": "B166ER",
+  "atomic": true,
+  "side_effects": true,
+  "input": {
+    "type": "object",
+    "required": ["path", "content"],
+    "properties": {
+      "path": {
+        "type": "string",
+        "description": "目标文件路径"
+      },
+      "content": {
+        "type": "string",
+        "description": "要写入的内容"
+      },
+      "encoding": {
+        "type": "string",
+        "default": "utf-8",
+        "description": "文件编码"
+      },
+      "mode": {
+        "type": ["integer", "null"],
+        "description": "文件权限 (e.g. 0o644)"
+      },
+      "create_dirs": {
+        "type": "boolean",
+        "default": true,
+        "description": "是否自动创建父目录"
+      }
+    }
+  },
+  "output": {
+    "type": "object",
+    "required": ["ok", "path", "bytes_written"],
+    "properties": {
+      "ok": {"type": "boolean"},
+      "path": {"type": "string"},
+      "bytes_written": {"type": "integer"},
+      "error": {"type": ["string", "null"]}
+    }
+  },
+  "errors": [
+    {
+      "code": "permission_denied",
+      "trigger": "无写权限",
+      "recovery": "检查文件/目录权限"
+    },
+    {
+      "code": "disk_full",
+      "trigger": "磁盘满",
+      "recovery": "清理空间"
+    }
+  ],
+  "history": "R-NEW-V2 教训: append 模式被改成 write 直接覆盖历史文件 (B166ER HEARTBEAT.md 2026-07-18 incident)。此工具是 fix。",
+  "depends_on": ["pathlib", "tempfile", "os"]
+}
