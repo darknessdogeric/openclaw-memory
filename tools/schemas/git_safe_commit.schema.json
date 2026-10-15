@@ -1,0 +1,82 @@
+{
+  "name": "git_safe_commit",
+  "version": "1.0.0",
+  "description": "安全的 git add + commit + (optional) push,带 dry-run 默认值",
+  "owner": "B166ER",
+  "atomic": false,
+  "side_effects": true,
+  "input": {
+    "type": "object",
+    "required": ["repo_path", "message"],
+    "properties": {
+      "repo_path": {
+        "type": "string",
+        "description": "git 仓库路径"
+      },
+      "message": {
+        "type": "string",
+        "description": "commit message"
+      },
+      "paths": {
+        "type": "array",
+        "items": {"type": "string"},
+        "description": "要 add 的文件路径列表 (null = add all)"
+      },
+      "push": {
+        "type": "boolean",
+        "default": false,
+        "description": "是否 push 到 remote"
+      },
+      "remote": {
+        "type": "string",
+        "default": "origin",
+        "description": "remote 名称"
+      },
+      "branch": {
+        "type": ["string", "null"],
+        "description": "推送分支 (null = 当前 branch)"
+      },
+      "dry_run": {
+        "type": "boolean",
+        "default": true,
+        "description": "True 时只打印命令不执行 (默认安全)"
+      },
+      "timeout": {
+        "type": "integer",
+        "default": 60,
+        "description": "子命令超时秒数"
+      }
+    }
+  },
+  "output": {
+    "type": "object",
+    "required": ["ok", "summary"],
+    "properties": {
+      "ok": {"type": "boolean"},
+      "executed_commands": {
+        "type": "array",
+        "items": {"type": "string"},
+        "description": "实际执行的命令"
+      },
+      "results": {
+        "type": "array",
+        "description": "每个命令的执行结果"
+      },
+      "summary": {
+        "type": "string",
+        "description": "简短结果摘要"
+      }
+    }
+  },
+  "errors": [
+    {"code": "not_a_git_repo", "trigger": ".git 目录不存在", "recovery": "检查路径"},
+    {"code": "command_failed", "trigger": "git add/commit/push 失败", "recovery": "查看 stderr"},
+    {"code": "timeout", "trigger": "子命令超时", "recovery": "增加 timeout 或分批"}
+  ],
+  "safety": {
+    "default_dry_run": true,
+    "rationale": "默认 dry_run=True,迫使调用方显式确认;生产环境必须 human-in-the-loop",
+    "human_required_for": ["push=true", "any production branch"]
+  },
+  "depends_on": ["subprocess", "pathlib"]
+}

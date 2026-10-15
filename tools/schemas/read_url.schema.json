@@ -1,0 +1,106 @@
+{
+  "name": "read_url",
+  "version": "1.0.0",
+  "description": "HTTP GET 抓取 URL 内容,带超时和重试",
+  "owner": "B166ER",
+  "atomic": true,
+  "side_effects": false,
+  "input": {
+    "type": "object",
+    "required": ["url"],
+    "properties": {
+      "url": {
+        "type": "string",
+        "format": "uri",
+        "description": "目标 URL"
+      },
+      "timeout": {
+        "type": "integer",
+        "default": 15,
+        "minimum": 1,
+        "maximum": 300,
+        "description": "单次超时秒数"
+      },
+      "retries": {
+        "type": "integer",
+        "default": 2,
+        "minimum": 0,
+        "maximum": 10,
+        "description": "失败重试次数"
+      },
+      "headers": {
+        "type": "object",
+        "description": "自定义 HTTP headers"
+      },
+      "verify_ssl": {
+        "type": "boolean",
+        "default": true,
+        "description": "是否验证 SSL 证书"
+      }
+    }
+  },
+  "output": {
+    "type": "object",
+    "required": ["ok", "status_code"],
+    "properties": {
+      "ok": {
+        "type": "boolean",
+        "description": "是否成功 (HTTP 2xx/3xx)"
+      },
+      "status_code": {
+        "type": "integer",
+        "description": "HTTP 状态码"
+      },
+      "content": {
+        "type": ["string", "null"],
+        "description": "响应内容 (HTML/text)"
+      },
+      "content_length": {
+        "type": "integer",
+        "description": "内容长度"
+      },
+      "elapsed_ms": {
+        "type": "integer",
+        "description": "耗时毫秒"
+      },
+      "url_final": {
+        "type": "string",
+        "description": "最终 URL (after redirects)"
+      },
+      "error": {
+        "type": ["string", "null"],
+        "description": "错误信息"
+      }
+    }
+  },
+  "errors": [
+    {
+      "code": "timeout",
+      "trigger": "request times out",
+      "recovery": "increase timeout or check network"
+    },
+    {
+      "code": "ssl_error",
+      "trigger": "SSL verification fails",
+      "recovery": "check cert or set verify_ssl=False (insecure)"
+    },
+    {
+      "code": "connection_error",
+      "trigger": "DNS/TCP fails",
+      "recovery": "check URL and network"
+    },
+    {
+      "code": "http_4xx_5xx",
+      "trigger": "non-2xx/3xx response",
+      "recovery": "check URL, auth, or rate limit"
+    }
+  ],
+  "examples": [
+    {
+      "input": {"url": "https://api.github.com/repos/morluto/rea"},
+      "output_expected_keys": ["ok", "status_code", "content", "content_length"]
+    }
+  ],
+  "tested": false,
+  "depends_on": ["requests"]
+}

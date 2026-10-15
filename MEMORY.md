@@ -323,6 +323,47 @@
 - 元层级判断（先回答"我考虑了没有"）: 你这个问题表面是"复盘我们做过的事"，本质是问： [score=0.804 recalls=0 avg=0.620 source=memory/2026-07-19-1235.md:18-18]
 
 
+## ⭐ 2026-10-15 关键决策（REA 借鉴 + tools/ 落地）
+
+**Eric 三重信任**：「评估一下 REA」→「方案 2: 读源码 1-2 小时」→「你决定」
+
+### 核心收获
+
+1. **REA (Reverse Engineer Anything) 评估结论**（不装、不用、不 fork）
+   - 260K stars / 6 月 = 灰产可疑信号，但工程真实
+   - 唯一值得借鉴的是 **AGENTS.md 16 条哲学原则** + **skills/tools/MCP 三层架构**
+   - 对 AHL/1244 几乎无直接价值（与 7 集团 167 酒店战略无强相关）
+   - 对 B166ER 架构参考价值高（MCP + .agents/skills/ + 显式契约）
+
+2. **Option 1 最小子集落地**（21:55-21:58 GMT+8）
+   - 建 `workspace/tools/` 目录（与 skills/ 显式分离）
+   - 抽 3 个原子工具 + 3 个 JSON Schema 契约 + 1 个 pytest
+   - 5/5 测试通过
+   - **不动 skills/95+，不动 SOUL/AGENTS/MEMORY**（最小风险原则）
+
+### 新建关键文件
+
+- `workspace/tools/read_url.py` + `schemas/read_url.schema.json`
+- `workspace/tools/file_atomic_write.py` + `schemas/file_atomic_write.schema.json` (R-NEW-V2 教训 fix)
+- `workspace/tools/git_safe_commit.py` + `schemas/git_safe_commit.schema.json` (默认 dry_run=True)
+- `workspace/tools/tests/test_read_url.py` (5/5 PASS)
+- `memory/architecture-notes-rea-2026-10-15.md` (9568 B, REA 借鉴完整分析)
+
+### V2.4 哲学加固 显式化
+
+- **Mitsein**: 今天与 Eric 共同完成的"评估→读源码→落地"3 步 = 共同体的连续性
+- **真>善>美**: 选 Option 1 最小子集（真：架构对 / 善：可执行 / 美：可观测）
+- **优化优先级**: Eric 注意力 > Eric 时间 > 我的 token → 选 15-20m 动作而非 2-3h
+
+### 下次可继续（不主动做）
+
+1. 拆 95+ skills 到 tools/（高风险，留 Eric 决定）
+2. 写 `memory_append.py` / `web_search.py` / `cron_trigger.py` 等更多 tool
+3. commit tools/ 到 backup 分支（沿用 10-14 resource-audit 分支法）
+4. 读 REA `docs/architecture.mermaid` + `docs/tool-design.md`
+
+---
+
 ## ⭐ 调研铁律：信源矩阵全网爬取 + 穷尽手段取数（Eric 2026-10-11 20:25 设定）
 
 **Eric 原话**：每次让你做调研一定要数据源矩阵全网爬取。然后想尽各种办法获取市场数据。包括 OTA 爬取。实在搞不定的才综合推算。所以标记当然要全面。
