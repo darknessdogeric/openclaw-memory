@@ -122,11 +122,13 @@
 
 **产物**：`memory/routing_update_needed.json`（含 136 条待登记路由的完整语义标注）
 
-**已应用到 SKILL.md**：新增 `apply_routing.py`（幂等写入器），将 **77 条有明确语义归类的路由**
-（11 个语义类）写入 `skills/knowledge-base/SKILL.md` 的 `AUTO-ROUTING` 区，已即时生效。
-59 条"未分类"路由保留在 JSON 中待人工确认（多为单次项目报告，无复用价值）。
+**已应用到路由表 ✅ 幂等可复跑**：
+- 新增 `apply_routing.py`（幂等写入器）→ 77 条有明确语义归类的路由写入 `skills/knowledge-base/SKILL.md` 的 `AUTO-ROUTING` 区（11 个语义类），作为语义命中快速通道
+- 后续升级为文件级索引：`kb_routing_table.py --apply` 生成 `skills/knowledge-base/routing-index.md`（148 条全量路由：语义分组 + 全量路径表 + 历史已覆盖），避免主 SKILL.md 膨胀
+- 最终校验：**已覆盖 148 / 新增待登记 0**，状态 `OK`，重跑幂等
+- 59 条"未分类"保留在 `routing-index.md` 的「未分类」组（多为单次项目报告，无复用价值），待人工确认
 
-已校验：SKILL.md 原有 115 行非空内容 **0 行丢失**，新增 85 行路由表。
+已校验：SKILL.md 原有 115 行非空内容 **0 行丢失**。
 
 ---
 
@@ -142,8 +144,8 @@
 |------|------|---------|
 | `scan_files.py` | 全盘扫描建清单 | `python scan_files.py` |
 | `batch_indexer.py` | 批量增量纳入 | `python batch_indexer.py --limit 200` |
-| `kb_routing_table.py` | 路由表差异检查 | `python kb_routing_table.py` |
-| `apply_routing.py` | 路由写入 SKILL.md（幂等）| `python apply_routing.py` |
+| `kb_routing_table.py` | 路由表差异检查 + 登记 | `python kb_routing_table.py [--apply]` |
+| `apply_routing.py` | 路由语义表写入 SKILL.md（幂等）| `python apply_routing.py` |
 | `kb_rag.py` | 检索引擎（原有）| `python kb_rag.py stats \| search \| ask` |
 
 ## 附：Git 提交
@@ -152,8 +154,16 @@
 |--------|------|
 | `9c585d89` | 重建扫描/纳入/路由工具链 + 修复 .gitignore 编码损坏 + 解除跟踪可重建产物 |
 | `69180cc2` | 应用 77 条自动增量路由到 SKILL.md + `apply_routing.py` |
+| `bedbd241` | 报告补充路由应用与 Git 提交记录 |
+| `d5d8656d` | 路由登记改为文件级索引 `routing-index.md` + `--apply` 幂等（148/148 覆盖）|
 
 > `.gitignore` 此前被 PowerShell `Add-Content` 写坏（UTF-16 残片混入 UTF-8 文件），已修复并补齐
 > `.kb_rag.db*` / `.chroma_db/` / `file_inventory.json` / `file_scan_report.json` 忽略规则。
+
+## 附：本次修复的连带问题
+
+1. `.gitignore` 编码损坏（历史遗留）→ 已修复
+2. `.kb_rag.db`（140MB）与 `memory/file_inventory.json`（13MB）被纳入版本库 → 已 `git rm --cached` 解除跟踪
+3. 仓库积压 2,857 项未提交变更（多为其它任务产物）→ 未越权处理，留给主 session 决定
 
 <!-- project: github.com/darknessdogeric/openclaw-memory -->
