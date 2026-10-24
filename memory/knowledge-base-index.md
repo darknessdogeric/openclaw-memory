@@ -1,7 +1,7 @@
 # B166ER 知识库索引 V3.0
 
 > 创建日期: 2026-03-31
-> 更新: 2026-05-04
+> 更新: 2026-10-25（月度知识库更新轮）
 
 ## 九、设计技能（2026-04-14新增）
 
@@ -48,13 +48,14 @@
 | AI Agent/商业化 | `ai-agent-production-knowledge-base-v1.md` (15KB) | AI/AGENT/多AGENT/RAG/TOKEN计费/生产环境 |
 | 跨境结构 | `china-us-cross-border-structure-v1.md` (12KB) | WFOE/VIE/ODI/美国公司/跨境资本/CFIUS |
 | 决策框架 | `mental-models-decision-frameworks-v1.md` (13KB) | 决策/逆向思维/概率/第二层思维/认知偏见 |
-| 酒店行业全景 | `hotel-industry-knowledge-base.md` (102KB, V8.1) | 酒店/民宿/行业/产业链/市场 |
-| 酒店收益管理 | `hotel-revenue-management-knowledge-base-v4.md` (40KB) | 收益管理/动态定价/RevPAR/STR指数/OTA博弈 |
+| 酒店行业全景 | `hotel-industry-knowledge-base.md` (102KB, V9.0) | 酒店/民宿/行业/产业链/市场 |
+| 酒店收益管理 | `hotel-revenue-management-knowledge-base-v5.md` (47KB) | 收益管理/动态定价/RevPAR/STR指数/OTA博弈 |
 | AI技术 | `ai-llm-knowledge-base-v2.md` (121KB) | AI/LLM/AGENT/Prompt/RAG/大模型 |
 | 创业融资 | `startup-fundraising-knowledge-base-v2.md` (40KB) | 融资/股权/YC/路演/BP/VC |
 | 大乐透 | `lottery-knowledge-base-v3.md` (8KB) | 大乐透/彩票/预测/V5.0/量化 |
 | 金融证券 | `finance-securities-knowledge-base.md` (60KB, v2.0) | 金融/证券/投资/股票/REITs/量化 |
 | 跨境贸易 | `跨境贸易知识库V1.0.md` (14KB) | 跨境/选品/亚马逊/出海 |
+| 商旅TMC | `商旅TMC知识库V1.0.md` (15KB) | 商旅/差旅/TMC/企业差旅/协议价/差标 |
 | 定价策略 | `pricing-strategy-knowledge-base.md` (23KB) | 定价/SaaS定价/酒店定价/ADR反推 |
 | 私域会员 | `hotel-private-domain-membership-knowledge-base.md` (43KB) | 私域/会员/RFM/复购 |
 | 新媒体 | `hotel-new-media-marketing-knowledge-base-v2.md` (43KB) | 新媒体/抖音/小红书/社群 |
@@ -89,25 +90,26 @@
 | 知识库 | 大小 | 版本 | 状态 |
 |--------|------|------|------|
 | 审美与品位 | 153KB | V3.1 | ✅ 已内化 |
-| 酒店行业全景 | 102KB | V8.1 | ✅ 核心 (2026-05-03) |
+| 酒店行业全景 | 102KB | V9.0 | ✅ 核心 (2026-10-25 行业动态) |
 | 酒店资产管理全流程 | 10KB | V1 | ✅ 投融管退闭环 |
 | 酒店投资测算实战 | 11KB | V1 | ✅ IRR/NPV决策工具 |
 | 酒店投诉处理与客户恢复 | 14KB | V1 | ✅ 运营核心 |
 | 酒店总经理每日工作手册 | 14KB | V1 | ✅ GM实战 |
 | 酒店危机管理实战手册 | 11KB | V1 | ✅ SOP最缺环节 |
-| AI/LLM技术 | 121KB | V2 | ✅ 完善 |
+| AI/LLM技术 | 121KB | V2 | ✅ 2026-10-25 行业动态 |
 | 博弈论与决策 | 69KB | V3 | ✅ 已内化 |
 | 创业融资 | 40KB | V2 | ✅ 完善 |
 | 大乐透彩票 | 8KB | V3 | ✅ 精简 |
 | 金融证券 | 60KB | V2.0 | ✅ 完善 |
 | 量化交易 | 15KB | V1.0 | ✅ 新增 |
 | 研究报告标准范式 | 14KB | V1.0 | ✅ 新增 |
-| 酒店收益管理 | 40KB | V4 | ✅ 最新 |
+| 酒店收益管理 | 47KB | V5 | ✅ 最新 |
 | 酒店私域会员 | 43KB | V1 | ✅ 完善 |
 | 酒店新媒体运营 | 43KB | V2 | ✅ 更新 |
 | 酒店智能化 | 28KB | V1.1 | ✅ 完善 |
 | 目标管理体系 | 45KB | V1 | ✅ 完善 |
-| 跨境贸易 | 14KB | V1 | ✅ 完善 |
+| 跨境贸易 | 14KB | V1 | ✅ 2026-10-25 行业动态 |
+| 商旅TMC | 15KB | V1 | ✅ 2026-10-25 行业动态 |
 | AI Agent生产级应用 | 15KB | V1.0 | ✅ 2026-04-14 |
 | 中美跨境商业结构 | 12KB | V1.0 | ✅ 2026-04-14 |
 | 决策思维框架 | 13KB | V1.0 | ✅ 2026-04-14 |
@@ -244,6 +246,7 @@ python kb_autoreg.py
 - V1.0 (2026-03-31): 初始版本
 - V2.0 (2026-04-02): 整合+归档冗余版本
 - V3.0 (2026-04-06): **三层架构确立**，路由决策表，自动迭代机制，进化系统，自动纳入机制
+- V3.2 (2026-10-25): 月度更新轮 — 酒店行业全景(主库+v7)/AI-LLM/商旅TMC/跨境贸易 四库追加「行业动态」章节；补登商旅TMC至路由表；修正酒店行业全景 V9.0 与收益管理 V5 版本号
 
 ---
 
