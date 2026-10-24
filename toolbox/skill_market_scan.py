@@ -24,7 +24,7 @@ LOG = WS / '.tmp' / 'skill_scan_last.json'
 
 TOTAL_BUDGET = 200
 CLAWHUB_TIMEOUT = 15
-GIT_TIMEOUT = 20
+GIT_TIMEOUT = 30
 MAX_GIT = 8
 QUERIES = ['hotel', 'travel']
 
@@ -124,8 +124,23 @@ cands = [d for d in (SKILLS.iterdir() if SKILLS.exists() else [])
 for d in cands:
     if left() < 30:
         break
+    # 3.0 清理陈旧 .lock（上次 fetch 被 timeout 强杀留下的残留，
+    #     会让后续 fetch 报 "reference already exists"）
+    #     只删 .lock 文件，不动任何 ref / 对象 / commit
+    try:
+        for _lk in (d / '.git').rglob('*.lock'):
+            if _lk.is_file():
+                _lk.unlink()
+    except Exception:
+        pass
     # 3.1 fetch（--no-tags 避免本地/远端同名标签冲突）
     rc, o, e = run(['git', '-C', str(d), 'fetch', '--prune', '--no-tags', 'origin'], GIT_TIMEOUT)
+    if rc != 0 and rc != -1 and 'already exists' in (e or ''):
+        # 远程跟踪引用冲突（远端 force-push 或本地 ref 形态不同）：
+        #   保守重试 —— --force 只重置 refs/remotes/* 远程跟踪引用，
+        #   不动本地分支、不动工作区、不改写任何提交。
+        rc, o, e = run(['git', '-C', str(d), 'fetch', '--prune', '--no-tags', '--force', 'origin'],
+                       GIT_TIMEOUT)
     if rc == -1:
         git_failed.append('{}(timeout)'.format(d.name))
         continue
@@ -148,8 +163,9 @@ for d in cands:
         git_uptodate.append(d.name)
         continue
     if ahead > 0:
-        # 分叉：本地有未推提交，绝不自动改写历史
-        git_diverged.append('{}(ahead {},behind {})'.format(d.name, ahead, behind))
+        # 分叉：本地有未推提交且远端也有新提交 → 需人工处理，脚本绝不自动改写历史
+        git_diverged.append('{}(ahead {},behind {} → 需人工 rebase/merge)'.format(
+            d.name, ahead, behind))
         continue
     # 3.3 仅在可快进时自动 merge
     rc3, o3, e3 = run(['git', '-C', str(d), 'merge', '--ff-only', '@{u}'], GIT_TIMEOUT)
