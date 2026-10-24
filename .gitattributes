@@ -1,0 +1,13 @@
+# 统一行尾：仓库按字节比较，Windows 上脚本回写会翻行尾导致全文件 churn
+* text=auto eol=lf
+
+# 二进制文件不参与行尾转换
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.pdf binary
+*.db binary
+*.xlsx binary
+*.docx binary
+*.pptx binary
