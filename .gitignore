@@ -27,3 +27,7 @@ __pycache__/
 memory/file_inventory.json
 memory/file_scan_report.json
 
+
+# 本地 scratch / 诊断脚本临时目录（可重建，不入库）
+.tmp/
+.tmp
