@@ -26,8 +26,20 @@ import urllib.error
 from pathlib import Path
 from datetime import datetime
 
+# 2026-10-25 修复：Windows 控制台默认 GBK 编码，打印 emoji（✅/❌/🔍）会抛
+# UnicodeEncodeError → stats / search / ask 三个命令全部崩溃。
+# 统一重配 stdout 为 UTF-8，errors=replace 兼顶生僻字符。
+try:
+    sys.stdout.reconfigure(encoding='utf-8', errors='replace')
+except Exception:
+    pass
+
 # === 配置 ===
-WORKSPACE = Path(os.environ.get("WORKSPACE", r"C:\Users\Administrator\.openclaw\workspace"))
+# 2026-10-25 修复：原 fallback 硬编码为 C:\Users\Administrator\.openclaw\workspace
+# （另一台机器的路径，本机不存在）→ WORKSPACE 环境变量未设时 sqlite3 报
+# "unable to open database file"。改为「脚本自身所在目录」——本仓库所有脚本都在
+# workspace 根目录，且不受环境变量影响。
+WORKSPACE = Path(os.environ.get("WORKSPACE") or Path(__file__).resolve().parent)
 DB_PATH = WORKSPACE / ".kb_rag.db"
 CHROMA_DIR = WORKSPACE / ".chroma_db"
 INDEX_EXTS = {".md", ".txt", ".py", ".json", ".yaml", ".yml", ".html", ".css", ".js", ".ts", ".csv"}

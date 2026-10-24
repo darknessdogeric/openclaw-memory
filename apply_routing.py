@@ -1,64 +1,36 @@
 # -*- coding: utf-8 -*-
 """
-apply_routing.py - 把 routing_update_needed.json 的新增路由写入
-skills/knowledge-base/SKILL.md 的路由决策表（追加区，幂等）。
+apply_routing.py — 【已废弃·薄壳委托】路由登记入口
+
+变更记录（2026-10-25 心跳收敛）：
+  旧行为：把 routing_update_needed.json 的新增路由按【文件名】写进
+          skills/knowledge-base/SKILL.md 的 AUTO-ROUTING 追加区。
+  问题  ：① SKILL.md 每次会话都加载，承载增长型索引会让它从 5.3KB 涨到 13.9KB；
+          ② 与 kb_routing_table.py --apply 形成两套并行写入机制（文件名 vs 全路径），
+             同一批 148 个文件两套格式并存，路由匹配时互相干扰。
+  现状  ：SKILL.md 的 AUTO-ROUTING 区已剥离（该区 77 条已被 routing-index.md 100% 覆盖，
+          缺失 0 条，剥离无损）；文件级路由登记的唯一事实源改为
+          skills/knowledge-base/routing-index.md。
+  本文件 ：保留为兼容入口，直接委托 kb_routing_table.py --apply（幂等）。
+
+用法: python apply_routing.py   # 等价于 python kb_routing_table.py --apply
 """
-import json, sys, re
+import subprocess
+import sys
 from pathlib import Path
 
-sys.stdout.reconfigure(encoding="utf-8")
+sys.stdout.reconfigure(encoding='utf-8', errors='replace')
 
-WS = Path(r"D:\B166ER-openclaw\workspace")
-JSON_PATH = WS / "memory" / "routing_update_needed.json"
-SKILL = WS / "skills" / "knowledge-base" / "SKILL.md"
-MARKER = "<!-- AUTO-ROUTING:BEGIN -->"
-MARKER_END = "<!-- AUTO-ROUTING:END -->"
+WS = Path(__file__).resolve().parent
+TARGET = WS / 'kb_routing_table.py'
 
-data = json.loads(JSON_PATH.read_text(encoding="utf-8"))
-routes = data["routing_table"]
+if not TARGET.exists():
+    print('❌ 找不到 {}'.format(TARGET))
+    sys.exit(2)
 
-# 只收录有明确语义归类的（排除"未分类"）
-usable = [r for r in routes if r["semantic"] != ["未分类"]]
-usable.sort(key=lambda r: (r["semantic"][0], r["name"]))
+print('[apply_routing] 已废弃：路由登记的唯一事实源是 skills/knowledge-base/routing-index.md')
+print('[apply_routing] 委托执行: python kb_routing_table.py --apply')
+print()
 
-groups = {}
-for r in usable:
-    groups.setdefault(r["semantic"][0], []).append(r)
-
-lines = []
-lines.append(MARKER)
-lines.append("")
-lines.append(f"## 路由决策表 · 自动增量（{data['generated_at']}）")
-lines.append("")
-lines.append(f"> 由 `kb_routing_table.py` 自动生成，纳入 {len(usable)} 个新 KB 文件。")
-lines.append("> 语义列可直接匹配任务意图；文件名含版本号时以最新版为准。")
-lines.append("")
-lines.append("| 语义类型 | KB 文件 | 触发词 |")
-lines.append("|---------|---------|--------|")
-for sem in sorted(groups.keys()):
-    for r in groups[sem]:
-        name = r["name"].replace("|", "／")
-        trig = "/".join(sem.split("/"))
-        lines.append(f"| {sem} | `{name}` | {trig} |")
-lines.append("")
-lines.append(MARKER_END)
-
-block = "\n".join(lines)
-
-text = SKILL.read_text(encoding="utf-8")
-if MARKER in text:
-    pre = text.split(MARKER)[0]
-    post = text.split(MARKER_END)[-1]
-    new_text = pre + block + post
-    action = "replaced"
-else:
-    new_text = text.rstrip() + "\n\n---\n\n" + block
-    action = "appended"
-
-SKILL.write_text(new_text, encoding="utf-8")
-print(f"[apply] {action}: {SKILL}")
-print(f"[apply] 写入路由 {len(usable)} 条 / {len(groups)} 个语义类")
-for sem, rs in sorted(groups.items()):
-    print(f"   {sem}: {len(rs)}")
-skipped = len(routes) - len(usable)
-print(f"[apply] 跳过未分类 {skipped} 条（保留在 routing_update_needed.json 待人工确认）")
+rc = subprocess.run([sys.executable, str(TARGET), '--apply'], cwd=str(WS)).returncode
+sys.exit(rc)
