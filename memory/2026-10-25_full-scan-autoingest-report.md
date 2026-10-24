@@ -122,6 +122,12 @@
 
 **产物**：`memory/routing_update_needed.json`（含 136 条待登记路由的完整语义标注）
 
+**已应用到 SKILL.md**：新增 `apply_routing.py`（幂等写入器），将 **77 条有明确语义归类的路由**
+（11 个语义类）写入 `skills/knowledge-base/SKILL.md` 的 `AUTO-ROUTING` 区，已即时生效。
+59 条"未分类"路由保留在 JSON 中待人工确认（多为单次项目报告，无复用价值）。
+
+已校验：SKILL.md 原有 115 行非空内容 **0 行丢失**，新增 85 行路由表。
+
 ---
 
 ## 5. 报告推送
@@ -137,6 +143,17 @@
 | `scan_files.py` | 全盘扫描建清单 | `python scan_files.py` |
 | `batch_indexer.py` | 批量增量纳入 | `python batch_indexer.py --limit 200` |
 | `kb_routing_table.py` | 路由表差异检查 | `python kb_routing_table.py` |
+| `apply_routing.py` | 路由写入 SKILL.md（幂等）| `python apply_routing.py` |
 | `kb_rag.py` | 检索引擎（原有）| `python kb_rag.py stats \| search \| ask` |
+
+## 附：Git 提交
+
+| Commit | 内容 |
+|--------|------|
+| `9c585d89` | 重建扫描/纳入/路由工具链 + 修复 .gitignore 编码损坏 + 解除跟踪可重建产物 |
+| `69180cc2` | 应用 77 条自动增量路由到 SKILL.md + `apply_routing.py` |
+
+> `.gitignore` 此前被 PowerShell `Add-Content` 写坏（UTF-16 残片混入 UTF-8 文件），已修复并补齐
+> `.kb_rag.db*` / `.chroma_db/` / `file_inventory.json` / `file_scan_report.json` 忽略规则。
 
 <!-- project: github.com/darknessdogeric/openclaw-memory -->
