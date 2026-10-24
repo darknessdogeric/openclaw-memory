@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""
+r"""
 B166ER-技能市场扫描 v1.3 —— 确定性扫描器（替代 agentTurn，根治 timeout）
 
 根因与修复对照：
@@ -109,19 +109,55 @@ local_dirs.sort()
 local_names = set(local_dirs)
 new_market = [m for m in market if m['name'] not in local_names]
 
-# ---------- 3. git pull ----------
-git_updated, git_failed = [], []
+# ---------- 3. git 更新（三分类，失败也给出可行动原因）----------
+# 2026-10-25 修正：旧版 `git pull --ff-only` 失败只报 err，无行动价值。
+#   evolver: main...origin/main [ahead 115, behind 149]  → 分叉，--ff-only 必然失败
+#   wewrite: fetching ref refs/tags/v3.6.1 failed: reference already exists → 标签冲突
+# 新版：fetch --no-tags（绕开标签冲突）→ 读 ahead/behind → 分类
+#   ① uptodate  已是最新
+#   ② updated  远端有新提交且可快进 → merge --ff-only（安全自动完成）
+#   ③ diverged 本地有未推提交且远端也有新提交 → 需人工 rebase/merge，脚本绝不自动改写
+#   ④ failed   网络/权限/其它 → 留待下轮
+git_updated, git_diverged, git_failed, git_uptodate = [], [], [], []
 cands = [d for d in (SKILLS.iterdir() if SKILLS.exists() else [])
          if d.is_dir() and (d / '.git').exists()][:MAX_GIT]
 for d in cands:
     if left() < 30:
         break
-    rc, o, e = run(['git', '-C', str(d), 'pull', '--ff-only'], GIT_TIMEOUT)
-    if rc == 0:
-        git_updated.append(d.name)
-    else:
+    # 3.1 fetch（--no-tags 避免本地/远端同名标签冲突）
+    rc, o, e = run(['git', '-C', str(d), 'fetch', '--prune', '--no-tags', 'origin'], GIT_TIMEOUT)
+    if rc == -1:
+        git_failed.append('{}(timeout)'.format(d.name))
+        continue
+    if rc != 0:
         reason = 'timeout' if rc == -1 else ('missing' if rc == -2 else
                   (e.strip().splitlines()[-1][:40] if e.strip() else 'err'))
+        git_failed.append('{}({})'.format(d.name, reason))
+        continue
+    # 3.2 读 ahead/behind
+    rc2, o2, e2 = run(['git', '-C', str(d), 'rev-list', '--left-right', '--count', 'HEAD...@{u}'], 60)
+    ahead = behind = None
+    if rc2 == 0:
+        parts = (o2 or '').split()
+        if len(parts) >= 2 and parts[0].isdigit() and parts[1].isdigit():
+            ahead, behind = int(parts[0]), int(parts[1])
+    if ahead is None:
+        git_failed.append('{}(no-upstream)'.format(d.name))
+        continue
+    if behind == 0:
+        git_uptodate.append(d.name)
+        continue
+    if ahead > 0:
+        # 分叉：本地有未推提交，绝不自动改写历史
+        git_diverged.append('{}(ahead {},behind {})'.format(d.name, ahead, behind))
+        continue
+    # 3.3 仅在可快进时自动 merge
+    rc3, o3, e3 = run(['git', '-C', str(d), 'merge', '--ff-only', '@{u}'], GIT_TIMEOUT)
+    if rc3 == 0:
+        git_updated.append(d.name)
+    else:
+        reason = 'timeout' if rc3 == -1 else (
+            (e3.strip().splitlines()[-1][:40] if (e3 or '').strip() else 'err'))
         git_failed.append('{}({})'.format(d.name, reason))
 
 # ---------- 4. 写清单 + 结构化日志 ----------
@@ -141,9 +177,13 @@ if new_market:
         L.append('- **{}** (score {}) — {}\n'.format(m['name'], m['score'], m['desc']))
 else:
     L.append('- 无（市场返回项均已安装）\n')
-L.append('\n### git pull 结果\n- 成功 {} 个：{}\n'.format(
+L.append('\n### git 更新结果\n- 已更新 {} 个：{}\n'.format(
     len(git_updated), ', '.join(git_updated) if git_updated else '—'))
-L.append('- 失败 {} 个：{}\n'.format(
+L.append('- 已是最新 {} 个：{}\n'.format(
+    len(git_uptodate), ', '.join(git_uptodate) if git_uptodate else '—'))
+L.append('- 需人工处理（分支分叉，脚本不自动改写）{} 个：{}\n'.format(
+    len(git_diverged), ', '.join(git_diverged) if git_diverged else '—'))
+L.append('- 失败（网络/权限等）{} 个：{}\n'.format(
     len(git_failed), ', '.join(git_failed) if git_failed else '—'))
 with open(MEMO, 'a', encoding='utf-8') as f:
     f.writelines(L)
@@ -151,7 +191,8 @@ with open(MEMO, 'a', encoding='utf-8') as f:
 result = {'ts': ts, 'sec': round(time.time() - t0, 1), 'cli_ok': cli_ok,
           'queries': q_stat, 'market_n': len(market), 'local_n': len(local_dirs),
           'skill_md_n': len(local_skill_md), 'new': new_market,
-          'git_ok': git_updated, 'git_fail': git_failed}
+          'git_ok': git_updated, 'git_uptodate': git_uptodate,
+          'git_diverged': git_diverged, 'git_fail': git_failed}
 LOG.parent.mkdir(parents=True, exist_ok=True)
 LOG.write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding='utf-8')
 
@@ -162,5 +203,6 @@ print('查询耗时：' + ' | '.join('{}={}s'.format(x['q'], x['sec']) for x in 
 print('市场去重 {} 条｜本地技能 {} 个（SKILL.md {}）'.format(
     len(market), len(local_dirs), len(local_skill_md)))
 print('新技能候选：' + (', '.join(m['name'] for m in new_market) if new_market else '无'))
-print('git pull 成功 {}｜失败 {}'.format(len(git_updated), len(git_failed)))
+print('git 更新: 已更新 {}｜已最新 {}｜需人工(分叉) {}｜失败 {}'.format(
+    len(git_updated), len(git_uptodate), len(git_diverged), len(git_failed)))
 print('清单：{}｜日志：{}'.format(MEMO, LOG))
