@@ -1,0 +1,4 @@
+__pycache__/
+*.pyc
+debug_parser.py
+verify_csv.py
