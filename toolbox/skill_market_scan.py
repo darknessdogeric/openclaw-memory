@@ -24,9 +24,16 @@ LOG = WS / '.tmp' / 'skill_scan_last.json'
 
 TOTAL_BUDGET = 200
 CLAWHUB_TIMEOUT = 15
+REG_TIMEOUT = 12
 GIT_TIMEOUT = 30
 MAX_GIT = 8
 QUERIES = ['hotel', 'travel']
+# 2026-10-25 追加：向量检索连续 4 轮返回同一批占位条目（hotel/travel/travel-rule-check…），
+# 而 registry 关键词检索能翻到 hotel-price-monitor / hotel-price-finder / meituan-hotel-deals
+# 等真正有价值的技能（1304/1355/965 次下载）→ 增加关键词通道（互补，不替代向量通道）
+REG_QUERIES = ['酒店降价监控', '酒店比价', '多平台比价', '酒店采购价格',
+               '美团酒店', '高德 酒店', 'OTA 房价', '竞品房价监控',
+               'hotel price compare', 'hotel price monitor']
 
 t0 = time.time()
 def left():
@@ -63,6 +70,50 @@ def run(cmd, timeout):
     except Exception as e:
         return -2, '', str(e)
 
+def registry_search(query, limit=12):
+    """只读查 ClawHub registry 关键词检索（不安装）
+    返回 [{'slug','ref'(owner/slug),'desc','score','downloads','installs','version','owner'}]
+    注意：同名 slug 可能有多 owner（安装会报 AMBIGUOUS_SKILL_SLUG），
+          故用 install.reference = owner/slug 作为唯一安装引用。"""
+    import json as _json
+    import ssl as _ssl
+    import urllib.parse
+    import urllib.request
+    out = []
+    try:
+        ctx = _ssl.create_default_context()
+        ctx.check_hostname = False
+        ctx.verify_mode = _ssl.CERT_NONE
+        url = 'https://clawhub.ai/api/v1/search?q=' + urllib.parse.quote(query)
+        req = urllib.request.Request(url, headers={
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/120.0',
+            'Accept': 'application/json'})
+        raw = urllib.request.urlopen(req, timeout=REG_TIMEOUT, context=ctx).read()
+        d = _json.loads(raw.decode('utf-8', 'replace'))
+        for it in (d.get('results') or [])[:limit]:
+            slug = it.get('slug') or ''
+            if not slug:
+                continue
+            owner = it.get('ownerHandle') or (it.get('install') or {}).get('reference', '').split('/')[0]
+            ref = (it.get('install') or {}).get('reference') or (
+                (owner + '/' + slug) if owner else slug)
+            out.append({
+                'slug': slug,
+                'ref': ref,
+                'name': slug,
+                'desc': (it.get('summary') or it.get('displayName') or '')[:110],
+                'score': str(it.get('score') or 0),
+                'downloads': it.get('downloads') or 0,
+                'installs': it.get('installs') or 0,
+                'version': it.get('version') or (it.get('tags') or {}).get('latest') or '',
+                'owner': owner,
+                'src': 'registry',
+            })
+    except Exception:
+        return []
+    return out
+
+
 LINE_RE = re.compile(r'^(?P<name>[^\s]+)\s{2,}(?P<desc>.*?)\s{2,}\((?P<score>[\d.]+)\)\s*$')
 
 def parse_market(text):
@@ -97,6 +148,23 @@ if SHIM.exists():
 else:
     print('!! clawhub.cmd 不存在：', SHIM)
 
+# ---------- 1b. registry 关键词检索（向量通道的互补）----------
+# 2026-10-25 追加：向量检索连续 4 轮返回完全相同的 10 条占位条目（hotel/travel/…），
+# 而 registry 关键词检索能翻到 hotel-price-finder(1355 下载) / hotel-price-monitor(1304) /
+# meituan-hotel-deals(965) / hotel-procurement-price-check(748) 等真正有价值的技能。
+# 原因：向量检索按语义相似度排序，泛词 hotel/travel 的 top 结果被占位条目占满。
+reg_market, reg_stat = [], []
+for q in REG_QUERIES:
+    if left() < 90:
+        break
+    st = time.time()
+    items = registry_search(q, limit=12)
+    dt = round(time.time() - st, 1)
+    reg_stat.append({'q': q, 'n': len(items), 'sec': dt})
+    for it in items:
+        if it['slug'] not in {r['slug'] for r in reg_market}:
+            reg_market.append(it)
+
 # ---------- 2. 本地清单 ----------
 local_dirs, local_skill_md = [], set()
 if SKILLS.exists():
@@ -108,6 +176,16 @@ if SKILLS.exists():
 local_dirs.sort()
 local_names = set(local_dirs)
 new_market = [m for m in market if m['name'] not in local_names]
+# registry 候选：按 slug 判本地是否已有（同名多 owner 用 ref 区分）
+reg_new = []
+for r in reg_market:
+    if r['slug'] in local_names:
+        r['local'] = True
+    else:
+        r['local'] = False
+        reg_new.append(r)
+# 高价值排序：先看下载量，再看安装量（下载量高 = 被真实使用过）
+reg_new.sort(key=lambda x: (-(x.get('downloads') or 0), -(x.get('installs') or 0)))
 
 # ---------- 3. git 更新（三分类，失败也给出可行动原因）----------
 # 2026-10-25 修正：旧版 `git pull --ff-only` 失败只报 err，无行动价值。
@@ -119,11 +197,42 @@ new_market = [m for m in market if m['name'] not in local_names]
 #   ③ diverged 本地有未推提交且远端也有新提交 → 需人工 rebase/merge，脚本绝不自动改写
 #   ④ failed   网络/权限/其它 → 留待下轮
 git_updated, git_diverged, git_failed, git_uptodate = [], [], [], []
+git_skipped = []
+# 2026-10-25 修正：run() 用 stderr=subprocess.STDOUT，错误文本在【stdout】而非 stderr，
+#   旧代码从 e 取原因 → 永远得到空串 → 报告显示无行动价值的 err。
+#   另一修正：GitHub 临时不可达时，6 个仓各等 21s 超时 = 130s 白烧预算 → 加网络预检 + 熔断。
+NET_MARKERS = ('Could not connect', 'Failed to connect', 'Connection was reset',
+               'RPC failed', 'Connection timed out', 'early EOF', 'gnutls_handshake')
+
+
+def net_reachable(host='github.com', port=443, t=6):
+    """TCP 预检：GitHub 不可达时直接跳过整个 git 阶段（6s 内给出明确结论）"""
+    import socket
+    try:
+        s = socket.create_connection((host, port), timeout=t)
+        s.close()
+        return True
+    except Exception:
+        return False
+
+
 cands = [d for d in (SKILLS.iterdir() if SKILLS.exists() else [])
          if d.is_dir() and (d / '.git').exists()][:MAX_GIT]
+NET_OK = net_reachable()
+if not NET_OK:
+    git_skipped = [d.name for d in cands]
+    print('[git] GitHub 不可达 → 本轮跳过 {} 个仓的更新（网络/代理问题，非脚本故障）'.format(len(cands)))
+consec_net_fail = 0
 for d in cands:
-    if left() < 30:
+    if not NET_OK:
         break
+    if left() < 30:
+        git_skipped.append(d.name)
+        continue
+    if consec_net_fail >= 2:
+        # 熔断：连续 2 个仓因网络失败 → 判定网络整体不通，剩余不再逐个试
+        git_skipped.append(d.name)
+        continue
     # 3.0 清理陈旧 .lock（上次 fetch 被 timeout 强杀留下的残留，
     #     会让后续 fetch 报 "reference already exists"）
     #     只删 .lock 文件，不动任何 ref / 对象 / commit
@@ -135,7 +244,8 @@ for d in cands:
         pass
     # 3.1 fetch（--no-tags 避免本地/远端同名标签冲突）
     rc, o, e = run(['git', '-C', str(d), 'fetch', '--prune', '--no-tags', 'origin'], GIT_TIMEOUT)
-    if rc != 0 and rc != -1 and 'already exists' in (e or ''):
+    # 错误文本在 stdout（stderr 已合并），必须从 o 取
+    if rc != 0 and rc != -1 and 'already exists' in (o or ''):
         # 远程跟踪引用冲突（远端 force-push 或本地 ref 形态不同）：
         #   保守重试 —— --force 只重置 refs/remotes/* 远程跟踪引用，
         #   不动本地分支、不动工作区、不改写任何提交。
@@ -145,8 +255,14 @@ for d in cands:
         git_failed.append('{}(timeout)'.format(d.name))
         continue
     if rc != 0:
-        reason = 'timeout' if rc == -1 else ('missing' if rc == -2 else
-                  (e.strip().splitlines()[-1][:40] if e.strip() else 'err'))
+        blob = o or ''
+        is_net = any(k in blob for k in NET_MARKERS)
+        if is_net:
+            consec_net_fail += 1
+            reason = 'neterr'
+        else:
+            reason = 'timeout' if rc == -1 else ('missing' if rc == -2 else
+                      (blob.strip().splitlines()[-1][:44] if blob.strip() else 'err'))
         git_failed.append('{}({})'.format(d.name, reason))
         continue
     # 3.2 读 ahead/behind
@@ -187,12 +303,22 @@ L = ['\n---\n\n## 技能市场扫描 · {}\n'.format(ts),
      '- 市场去重后 {} 条；本地技能 {} 个（SKILL.md {} 个）\n'.format(
          len(market), len(local_dirs), len(local_skill_md)),
      '- 市场有本地无：{} 个\n'.format(len(new_market)),
+     '- registry 关键词检索: {} 条去重（{} 个可安装）\n'.format(
+         len(reg_market), len(reg_new)),
      '\n### 新技能候选\n']
 if new_market:
     for m in new_market:
         L.append('- **{}** (score {}) — {}\n'.format(m['name'], m['score'], m['desc']))
 else:
     L.append('- 无（市场返回项均已安装）\n')
+L.append('\n### registry 关键词检索 · 可安装候选（按下载量降序）\n')
+if reg_new:
+    for r in reg_new[:15]:
+        L.append('- **{}**  v{}  ↓{}次/装{}次  owner: {}  ref: `{}`  — {}\n'.format(
+            r['slug'], r['version'] or '?', r['downloads'], r['installs'],
+            r['owner'] or '?', r['ref'], r['desc'][:90]))
+else:
+    L.append('- 无（全部已本地安装）\n')
 L.append('\n### git 更新结果\n- 已更新 {} 个：{}\n'.format(
     len(git_updated), ', '.join(git_updated) if git_updated else '—'))
 L.append('- 已是最新 {} 个：{}\n'.format(
@@ -201,14 +327,18 @@ L.append('- 需人工处理（分支分叉，脚本不自动改写）{} 个：{}
     len(git_diverged), ', '.join(git_diverged) if git_diverged else '—'))
 L.append('- 失败（网络/权限等）{} 个：{}\n'.format(
     len(git_failed), ', '.join(git_failed) if git_failed else '—'))
+L.append('- 跳过（网络不通/预算不足）{} 个：{}\n'.format(
+    len(git_skipped), ', '.join(git_skipped) if git_skipped else '—'))
 with open(MEMO, 'a', encoding='utf-8') as f:
     f.writelines(L)
 
 result = {'ts': ts, 'sec': round(time.time() - t0, 1), 'cli_ok': cli_ok,
           'queries': q_stat, 'market_n': len(market), 'local_n': len(local_dirs),
           'skill_md_n': len(local_skill_md), 'new': new_market,
+          'reg_new': reg_new, 'reg_stat': reg_stat,
           'git_ok': git_updated, 'git_uptodate': git_uptodate,
-          'git_diverged': git_diverged, 'git_fail': git_failed}
+          'git_diverged': git_diverged, 'git_fail': git_failed,
+          'git_skipped': git_skipped, 'net_ok': NET_OK}
 LOG.parent.mkdir(parents=True, exist_ok=True)
 LOG.write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding='utf-8')
 
@@ -219,6 +349,9 @@ print('查询耗时：' + ' | '.join('{}={}s'.format(x['q'], x['sec']) for x in 
 print('市场去重 {} 条｜本地技能 {} 个（SKILL.md {}）'.format(
     len(market), len(local_dirs), len(local_skill_md)))
 print('新技能候选：' + (', '.join(m['name'] for m in new_market) if new_market else '无'))
-print('git 更新: 已更新 {}｜已最新 {}｜需人工(分叉) {}｜失败 {}'.format(
-    len(git_updated), len(git_uptodate), len(git_diverged), len(git_failed)))
+print('registry 可安装候选 {} 个: {}'.format(
+    len(reg_new), ', '.join(r['slug'] for r in reg_new[:8]) or '无'))
+print('git 更新: 已更新 {}｜已最新 {}｜需人工(分叉) {}｜失败 {}｜跳过 {}'.format(
+    len(git_updated), len(git_uptodate), len(git_diverged), len(git_failed),
+    len(git_skipped)))
 print('清单：{}｜日志：{}'.format(MEMO, LOG))
