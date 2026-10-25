@@ -251,10 +251,14 @@ gap_status = _classify_gaps(reg_market)
 # 与上一轮对比 → 空白是否被填补（本扫描器最有价值的信号）
 gap_delta = []
 _prev = {}
+_prev_slugs = set()
+_prev_vec = set()
 if LOG.exists():
     try:
         _pd = json.loads(LOG.read_text(encoding='utf-8', errors='replace'))
         _prev = _pd.get('gap_status') or {}
+        _prev_slugs = {r.get('slug') for r in (_pd.get('reg_new') or []) if r.get('slug')}
+        _prev_vec = {m.get('name') for m in (_pd.get('new') or []) if m.get('name')}
     except Exception:
         _prev = {}
 for gid, g in gap_status.items():
@@ -263,6 +267,20 @@ for gid, g in gap_status.items():
         gap_delta.append('{}：{} → {}'.format(g['title'], old, g['status']))
 if gap_delta:
     print('[能力空白变化] ' + '；'.join(gap_delta))
+
+# 2026-10-26 追加：候选集变化量（解决「每 2h 重复推送完全相同内容」）
+#   扫描已连续多轮返回完全相同的 10 条向量候选 + 82 个 registry 候选 → 重复推送既刷屏又烧上下文。
+#   现输出变化量：只有真的有新技能/新空白时才值得推送。
+_cur_slugs = {r.get('slug') for r in reg_market if r.get('slug')}
+_cur_vec = {m.get('name') for m in market if m.get('name')}
+candidate_delta = sorted(_cur_slugs - _prev_slugs) if _prev_slugs else []
+vector_delta = sorted(_cur_vec - _prev_vec) if _prev_vec else []
+NO_CHANGE = (not candidate_delta) and (not vector_delta) and (not gap_delta)
+if NO_CHANGE:
+    print('[本轮无变化] 候选集与能力空白状态与上一轮一致 → 建议不推送（仅记日志）')
+else:
+    print('[本轮有变化] 新 registry 候选 {}｜新向量候选 {}｜空白变化 {}'.format(
+        len(candidate_delta), len(vector_delta), len(gap_delta)))
 
 # ---------- 3. git 更新（三分类，失败也给出可行动原因）----------
 # 2026-10-25 修正：旧版 `git pull --ff-only` 失败只报 err，无行动价值。
@@ -393,6 +411,8 @@ for gid, g in gap_status.items():
         '、'.join(g['core']) if g['core'] else '无',
         '、'.join(g['adj']) if g['adj'] else '无'))
 L.append('- 空白变化：{}\n'.format('；'.join(gap_delta) if gap_delta else '无（本轮无变化）'))
+L.append('- 候选变化：新增 registry 候选 {}｜新增向量候选 {}｜**本轮是否有变化**: {}\n'.format(
+    len(candidate_delta), len(vector_delta), '否（建议不推送）' if NO_CHANGE else '是'))
 L += ['\n### 新技能候选\n']
 if new_market:
     for m in new_market:
@@ -426,6 +446,8 @@ result = {'ts': ts, 'sec': round(time.time() - t0, 1), 'cli_ok': cli_ok,
           'skill_md_n': len(local_skill_md), 'new': new_market,
           'reg_new': reg_new, 'reg_stat': reg_stat,
           'gap_status': gap_status, 'gap_delta': gap_delta,
+          'candidate_delta': candidate_delta, 'vector_delta': vector_delta,
+          'no_change': NO_CHANGE,
           'git_ok': git_updated, 'git_uptodate': git_uptodate,
           'git_diverged': git_diverged, 'git_fail': git_failed,
           'git_skipped': git_skipped, 'net_ok': NET_OK}
