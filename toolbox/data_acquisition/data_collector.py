@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""
+r"""
 
 来源: 本文件是 cron「B166ER-DailyDataCollection」实际运行的权威版本，
       原位于 C:\Users\ericz\.openclaw\data-acquisition\data_collector.py（不在版本控制内，
