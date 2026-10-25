@@ -77,6 +77,77 @@ def _page_title(page) -> str:
         return ""
 
 
+# ---------------------------------------------------------------- 深度抓取（feed + 详情页）
+# 2026-10-25 固化：原 collector 只抓列表页标题、不进详情页 → 结构性漏采
+# （10-24 雅高 Q3、10-23 云酒店、10-24 内容即渠道 连三轮漏采，靠临时脚本补漏才找回）。
+# 现把 meadin 的 9 个 feed + 详情页正文抓取正式并入 collector，不再依赖临时脚本。
+
+MEADIN_FEEDS = [
+    "https://www.meadin.com/",
+    "https://www.meadin.com/news/",
+    "https://www.meadin.com/jd/",
+    "https://www.meadin.com/hotel/",
+    "https://www.meadin.com/travel/",
+    "https://www.meadin.com/report/",
+    "https://www.meadin.com/sc/",
+    "https://www.meadin.com/yd/",
+    "https://www.meadin.com/zs/",
+]
+
+_DETAIL_URL_RE = re.compile(r"^https?://www\.meadin\.com/[a-z]+/(\d+)\.html", re.I)
+_PUB_DATE_RE = re.compile(r"(\d{4}-\d{2}-\d{2}[ T]\d{2}:\d{2}(?::\d{2})?)")
+_BODY_DIV_RE = re.compile(
+    r'<div[^>]+class="[^"]*(?:article|content|detail|txt|main)[^"]*"[^>]*>(.*?)</div>\s*(?:<div|</section)',
+    re.S | re.I)
+
+
+def _strip_html(s: str) -> str:
+    if not s:
+        return ""
+    t = re.sub(r"(?is)<script.*?</script>", " ", s)
+    t = re.sub(r"(?is)<style.*?</style>", " ", t)
+    t = re.sub(r"(?is)<!--.*?-->", " ", t)
+    t = re.sub(r"<[^>]+>", " ", t)
+    for a, b in (("&nbsp;", " "), ("&amp;", "&"), ("&quot;", '"'), ("&ldquo;", "“"),
+                 ("&rdquo;", "”"), ("&hellip;", "…")):
+        t = t.replace(a, b)
+    return re.sub(r"\s+", " ", t).strip()
+
+
+def _page_html(page) -> str:
+    for attr in ("html_content", "body", "text"):
+        v = getattr(page, attr, None)
+        if isinstance(v, str) and v:
+            return v
+    try:
+        return str(page)
+    except Exception:
+        return ""
+
+
+def _extract_pub_date(html: str) -> str:
+    m = _PUB_DATE_RE.search(html or "")
+    if not m:
+        return ""
+    d = m.group(1).replace("T", " ")
+    if len(d) == 16:
+        d += ":00"
+    return d
+
+
+def _extract_body(html: str, title: str) -> str:
+    best = ""
+    for m in _BODY_DIV_RE.finditer(html or ""):
+        cand = _strip_html(m.group(1))
+        if len(cand) > len(best):
+            best = cand
+    if len(best) < 200:
+        best = _strip_html(html)
+    if title and best.startswith(title):
+        best = best[len(title):].strip()
+    return best
+
+
 async def _fetch_one(session, url: str, timeout_ms: int, **fetch_kwargs) -> Dict:
     """抓取单个 URL，返回统一结构。异常隔离在调用方之外。"""
     page = await session.fetch(url, timeout=timeout_ms, **fetch_kwargs)
@@ -145,6 +216,57 @@ class HotelDataCollector:
         return await self._collect("迈点研究院", "https://www.meadin.com/report/",
                                    network_idle=True)
 
+    async def collect_meadin_deep(self, since: str = "", max_details: int = 80) -> Dict:
+        """深度抓取：9 个 feed 找详情页链接 → 逐篇取正文 → 只保留 since 之后新发布。
+        固化自 2026-10-25 的临时补漏脚本（memory/_probe_meadin_2026-10-25_2000.py），
+        目的是消灭「只抓列表页标题」的结构性漏采。"""
+        out: Dict = {"source": "迈点研究院-深抓", "feeds": MEADIN_FEEDS,
+                     "since": since, "scanned": 0, "new": {}, "feed_stats": {}}
+        if not SCRAPLING_AVAILABLE or self._session is None:
+            out["error"] = "Scrapling不可用"
+            return out
+        mids: Dict[str, str] = {}
+        for feed in MEADIN_FEEDS:
+            try:
+                page = await self._session.fetch(feed, timeout=self.timeout_ms)
+            except Exception as e:
+                out["feed_stats"][feed] = "ERR " + str(e)[:80]
+                continue
+            found = 0
+            try:
+                nodes = page.css("a")
+            except Exception:
+                nodes = []
+            for el in nodes:
+                try:
+                    href = el.attrib.get("href", "") or ""
+                except Exception:
+                    continue
+                m = _DETAIL_URL_RE.match(href.strip())
+                if m:
+                    mids.setdefault(m.group(1), href.strip())
+                    found += 1
+            out["feed_stats"][feed] = "OK {}links".format(found)
+        ordered = sorted(mids.items(), key=lambda kv: int(kv[0]), reverse=True)
+        out["detail_candidates"] = len(ordered)
+        for mid, url in ordered[:max_details]:
+            try:
+                page = await self._session.fetch(url, timeout=self.timeout_ms)
+            except Exception:
+                continue
+            html = _page_html(page)
+            date = _extract_pub_date(html)
+            title = _page_title(page)
+            body = _extract_body(html, title)
+            out["scanned"] += 1
+            out["new"][mid] = {"url": url, "date": date, "title": title,
+                               "snippet": body[:2200], "len": len(body)}
+        if since:
+            out["new"] = {k: v for k, v in out["new"].items()
+                          if v.get("date") and v["date"] >= since}
+        out["new_count"] = len(out["new"])
+        return out
+
     async def collect_traveldaily_data(self) -> Dict:
         return await self._collect("环球旅讯", "https://hub.traveldaily.cn/report/")
 
@@ -173,6 +295,10 @@ class HotelDataCollector:
                 tasks["hangyan"] = self.collect_hangyan_data()
             if config.get("meadin", {}).get("enabled"):
                 tasks["meadin"] = self.collect_meadin_data()
+                if config["meadin"].get("deep"):
+                    tasks["meadin_deep"] = self.collect_meadin_deep(
+                        since=config["meadin"].get("since", ""),
+                        max_details=config["meadin"].get("deep_max", 80))
             if config.get("traveldaily", {}).get("enabled"):
                 tasks["traveldaily"] = self.collect_traveldaily_data()
             for comp in config.get("stocks", []):
@@ -217,6 +343,10 @@ if __name__ == "__main__":
     parser.add_argument("--start-date", help="开始日期 (YYYY-MM-DD)")
     parser.add_argument("--end-date", help="结束日期 (YYYY-MM-DD)")
     parser.add_argument("--timeout", type=int, default=45000, help="单页超时(毫秒)")
+    parser.add_argument("--deep", action="store_true",
+                        help="启用 meadin 深抓（feed + 详情页正文），补列表页结构性漏采")
+    parser.add_argument("--since", default="", help="深抓只保留该时点之后新发布 (YYYY-MM-DD HH:MM:SS)")
+    parser.add_argument("--deep-max", type=int, default=80, help="深抓最多抓取详情页数")
     args = parser.parse_args()
 
     config = {
@@ -224,7 +354,8 @@ if __name__ == "__main__":
                 "start_date": args.start_date or "2026-01-01",
                 "end_date": args.end_date or "2026-03-31"},
         "hangyan": {"enabled": args.source in ["hangyan", "all"]},
-        "meadin": {"enabled": args.source in ["meadin", "all"]},
+        "meadin": {"enabled": args.source in ["meadin", "all"],
+                   "deep": args.deep, "since": args.since, "deep_max": args.deep_max},
         "traveldaily": {"enabled": args.source in ["traveldaily", "all"]},
     }
 
