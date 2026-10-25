@@ -31,9 +31,14 @@ QUERIES = ['hotel', 'travel']
 # 2026-10-25 追加：向量检索连续 4 轮返回同一批占位条目（hotel/travel/travel-rule-check…），
 # 而 registry 关键词检索能翻到 hotel-price-monitor / hotel-price-finder / meituan-hotel-deals
 # 等真正有价值的技能（1304/1355/965 次下载）→ 增加关键词通道（互补，不替代向量通道）
-REG_QUERIES = ['酒店降价监控', '酒店比价', '多平台比价', '酒店采购价格',
-               '美团酒店', '高德 酒店', 'OTA 房价', '竞品房价监控',
-               'hotel price compare', 'hotel price monitor']
+REG_QUERIES = ['酒店比价', '降价监控', '多平台比价', '采购价格', '美团', '高德',
+               'OTA', '竞品监控', '动态定价', '会员', '私域', '选址', '商圈',
+               'hotel price compare', 'hotel price monitor',
+               'competitor pricing', 'revenue intelligence']
+# 2026-10-25 实测修正：registry 关键词检索对**长中文复合词不切分**
+#   「高德 酒店」0 条 /「高德酒店」0 条 /「高德」10 条 → 中文必须用 2–3 字粒度
+# 新增「竞品监控/动态定价/会员/私域/选址/商圈」用于**监测市场空白是否被填补**
+# （配套工具：toolbox/registry_gap_probe.py）
 
 t0 = time.time()
 def left():
