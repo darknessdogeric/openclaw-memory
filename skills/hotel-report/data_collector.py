@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
+# ⚠️ 本文件为旧版副本，**不再是权威版**。
+# 权威版（cron 实际运行、含 Scrapling 0.5 异步修复）：
+#   toolbox/data_acquisition/data_collector.py
+# 2026-10-25 收编入 git；本副本保留仅作历史参考，勿直接调用。
 """
 酒店行业报告数据爬虫 - 数据采集自动化工具
 基于Scrapling框架开发
