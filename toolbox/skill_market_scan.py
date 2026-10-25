@@ -137,12 +137,18 @@ def parse_market(text):
 
 # ---------- 1. 市场扫描 ----------
 market, cli_ok, q_stat = [], False, []
+vec_failed = []
 if SHIM.exists():
     for q in QUERIES:
         if left() < 45:
             break
         st = time.time()
         rc, o, e = run([str(SHIM), 'search', q, '--limit', '5'], CLAWHUB_TIMEOUT)
+        # 2026-10-25 20:22 轮：hotel 关键词 rc=-1（15.6s 超时）→ 本轮 hotel 侧候选覆盖度打折，
+        #   而旧逻辑**超时即放弃、不重试、不告警** → 静默降覆盖。故：超时重试一次（更长超时），
+        #   仍失败则显式记入 vec_failed 并在报告里输出覆盖度缺口告警。
+        if rc == -1 and left() > 60:
+            rc, o, e = run([str(SHIM), 'search', q, '--limit', '5'], CLAWHUB_TIMEOUT * 2)
         dt = round(time.time() - st, 1)
         q_stat.append({'q': q, 'rc': rc, 'sec': dt})
         if rc == 0:
@@ -150,6 +156,11 @@ if SHIM.exists():
             for it in parse_market(o):
                 if it['name'] not in {m['name'] for m in market}:
                     market.append(it)
+        else:
+            vec_failed.append(q)
+    if vec_failed:
+        print('[覆盖度告警] 向量检索以下关键词未取全: {}（该方向候选覆盖度打折，请以 registry 关键词结果为准）'.format(
+            ', '.join(vec_failed)))
 else:
     print('!! clawhub.cmd 不存在：', SHIM)
 
@@ -257,6 +268,8 @@ for d in cands:
         rc, o, e = run(['git', '-C', str(d), 'fetch', '--prune', '--no-tags', '--force', 'origin'],
                        GIT_TIMEOUT)
     if rc == -1:
+        # 超时也计入网络熔断计数（否则 timeout 型失败不触发熔断，会把 8 个仓逐个等一遍）
+        consec_net_fail += 1
         git_failed.append('{}(timeout)'.format(d.name))
         continue
     if rc != 0:
@@ -305,6 +318,8 @@ L = ['\n---\n\n## 技能市场扫描 · {}\n'.format(ts),
      '- 用时 {:.0f}s / 预算 {}s（clawhub CLI {}）\n'.format(
          time.time() - t0, TOTAL_BUDGET, '可用' if cli_ok else '不可用'),
      '- 检索词与耗时：' + q_line + '\n',
+     '- 向量通道覆盖度缺口：{}\n'.format(
+         ('、'.join(vec_failed) + '（未取全，该方向候选打折）') if vec_failed else '无'),
      '- 市场去重后 {} 条；本地技能 {} 个（SKILL.md {} 个）\n'.format(
          len(market), len(local_dirs), len(local_skill_md)),
      '- 市场有本地无：{} 个\n'.format(len(new_market)),
@@ -339,6 +354,7 @@ with open(MEMO, 'a', encoding='utf-8') as f:
 
 result = {'ts': ts, 'sec': round(time.time() - t0, 1), 'cli_ok': cli_ok,
           'queries': q_stat, 'market_n': len(market), 'local_n': len(local_dirs),
+          'vec_failed': vec_failed,
           'skill_md_n': len(local_skill_md), 'new': new_market,
           'reg_new': reg_new, 'reg_stat': reg_stat,
           'git_ok': git_updated, 'git_uptodate': git_uptodate,
