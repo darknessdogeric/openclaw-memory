@@ -14,6 +14,12 @@ B166ER-技能市场扫描 v1.3 —— 确定性扫描器（替代 agentTurn，�
 import sys, os, re, json, subprocess, tempfile, time, datetime
 from pathlib import Path
 
+# 复用「市场空白监测器」的能力缺口定义（避免两份正则规则漂移）
+try:
+    from registry_gap_probe import GAPS as _CAPABILITY_GAPS
+except Exception:
+    _CAPABILITY_GAPS = []
+
 sys.stdout.reconfigure(encoding='utf-8', errors='replace')
 
 WS = Path(r'D:\B166ER-OpenClaw\workspace')
@@ -203,6 +209,61 @@ for r in reg_market:
 # 高价值排序：先看下载量，再看安装量（下载量高 = 被真实使用过）
 reg_new.sort(key=lambda x: (-(x.get('downloads') or 0), -(x.get('installs') or 0)))
 
+
+# ---------- 2b. 能力空白判定（零额外网络开销：复用已抓到的候选）----------
+# 2026-10-25 追加：扫描每轮检出完全相同的 82 个候选 → 边际收益趋零；
+# 真正该回答的是「我们的核心能力空白有没有被填补」。
+# 判定规则与 registry_gap_probe.py 完全一致（复用同一份 GAPS 定义，避免规则漂移）。
+def _classify_gaps(cands):
+    """两级判定：core（域内核心）vs adj（相邻不对口）→ BLANK/ADJACENT/THIN/FILLED"""
+    out = {}
+    for g in _CAPABILITY_GAPS:
+        try:
+            c1 = re.compile(g['core_re'], re.I)
+            c2 = re.compile(g['core2_re'], re.I)
+            ca = re.compile(g['adj_re'], re.I)
+            ex = re.compile(g['exclude_slug_re'], re.I)
+        except Exception:
+            continue
+        core, adj = [], []
+        for r in cands:
+            slug = r.get('slug') or ''
+            if ex.search(slug):
+                continue
+            blob = '{} {} {}'.format(slug, r.get('desc') or '', r.get('owner') or '')
+            if c1.search(blob) and c2.search(blob):
+                core.append(r)
+            elif ca.search(blob):
+                adj.append(r)
+        if not core and not adj:
+            status = 'BLANK'
+        elif not core:
+            status = 'ADJACENT'
+        else:
+            best = max(core, key=lambda x: ((x.get('installs') or 0), (x.get('downloads') or 0)))
+            status = 'FILLED' if (best.get('installs') or 0) >= 3 else 'THIN'
+        out[g['id']] = {'title': g.get('title', g['id']), 'status': status,
+                        'core': [c['slug'] for c in core][:6], 'adj': [a['slug'] for a in adj][:4]}
+    return out
+
+
+gap_status = _classify_gaps(reg_market)
+# 与上一轮对比 → 空白是否被填补（本扫描器最有价值的信号）
+gap_delta = []
+_prev = {}
+if LOG.exists():
+    try:
+        _pd = json.loads(LOG.read_text(encoding='utf-8', errors='replace'))
+        _prev = _pd.get('gap_status') or {}
+    except Exception:
+        _prev = {}
+for gid, g in gap_status.items():
+    old = (_prev.get(gid) or {}).get('status')
+    if old and old != g['status']:
+        gap_delta.append('{}：{} → {}'.format(g['title'], old, g['status']))
+if gap_delta:
+    print('[能力空白变化] ' + '；'.join(gap_delta))
+
 # ---------- 3. git 更新（三分类，失败也给出可行动原因）----------
 # 2026-10-25 修正：旧版 `git pull --ff-only` 失败只报 err，无行动价值。
 #   evolver: main...origin/main [ahead 115, behind 149]  → 分叉，--ff-only 必然失败
@@ -325,7 +386,14 @@ L = ['\n---\n\n## 技能市场扫描 · {}\n'.format(ts),
      '- 市场有本地无：{} 个\n'.format(len(new_market)),
      '- registry 关键词检索: {} 条去重（{} 个可安装）\n'.format(
          len(reg_market), len(reg_new)),
-     '\n### 新技能候选\n']
+     '\n### 能力空白状态（判定复用上方已抓候选，零额外请求）\n']
+for gid, g in gap_status.items():
+    L.append('- {}：**{}**（域内核心 {}｜相邻 {}）\n'.format(
+        g['title'], g['status'],
+        '、'.join(g['core']) if g['core'] else '无',
+        '、'.join(g['adj']) if g['adj'] else '无'))
+L.append('- 空白变化：{}\n'.format('；'.join(gap_delta) if gap_delta else '无（本轮无变化）'))
+L += ['\n### 新技能候选\n']
 if new_market:
     for m in new_market:
         L.append('- **{}** (score {}) — {}\n'.format(m['name'], m['score'], m['desc']))
@@ -357,6 +425,7 @@ result = {'ts': ts, 'sec': round(time.time() - t0, 1), 'cli_ok': cli_ok,
           'vec_failed': vec_failed,
           'skill_md_n': len(local_skill_md), 'new': new_market,
           'reg_new': reg_new, 'reg_stat': reg_stat,
+          'gap_status': gap_status, 'gap_delta': gap_delta,
           'git_ok': git_updated, 'git_uptodate': git_uptodate,
           'git_diverged': git_diverged, 'git_fail': git_failed,
           'git_skipped': git_skipped, 'net_ok': NET_OK}
