@@ -36,3 +36,26 @@ memory/file_scan_report.json
 skills/knowledge-base/routing-index.md
 toolbox/kb_tools/KB_MOC.md
 toolbox/kb_tools/scan_report.json
+
+
+# ── 2026-10-26 追加：可再生产物（备份/缓存/字节码/临时目录/截图残留）
+# 判定依据：目录名或文件类型本身即为由代码再生的中间物，不是 Eric 的内容资产
+.backups/
+.bak/
+.scratch/
+.edge-screenshot/
+__pycache__/
+.cache/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.pyc
+*.pyo
+*.log
+*.tmp
+*.bak
+*.orig
+*.rej
+.DS_Store
+Thumbs.db
+*.swp
