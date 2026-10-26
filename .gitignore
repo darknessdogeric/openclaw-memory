@@ -31,3 +31,8 @@ memory/file_scan_report.json
 # 本地 scratch / 诊断脚本临时目录（可重建，不入库）
 .tmp/
 .tmp
+
+# KB 可重建产物（每次周维护全量重写，不入版本库；与 file_inventory.json 同款先例）
+skills/knowledge-base/routing-index.md
+toolbox/kb_tools/KB_MOC.md
+toolbox/kb_tools/scan_report.json
