@@ -1,0 +1,174 @@
+{
+  "str": {
+    "source": "STR",
+    "period": "2026-01-01 to 2026-03-31",
+    "metrics": {
+      "occ": null,
+      "adr": null,
+      "revpar": null
+    },
+    "note": "STR数据需要官方API授权（未配置 STR_API_KEY）"
+  },
+  "hangyan": {
+    "source_url": "https://www.hangyan.co/charts",
+    "http_status": 200,
+    "page_title": "行业研究数据 - 小牛行研",
+    "items": [
+      {
+        "text": "2026-10-25",
+        "href": "/charts/4015682935112861504"
+      },
+      {
+        "text": "2026-10-24",
+        "href": "/charts/4015591743821972928"
+      },
+      {
+        "text": "2026-10-23",
+        "href": "/charts/4014806867187337032"
+      },
+      {
+        "text": "2026-10-22",
+        "href": "/charts/4014111823199471588"
+      },
+      {
+        "text": "京ICP备12032824号-6",
+        "href": "https://beian.miit.gov.cn"
+      },
+      {
+        "text": "京公网安备11010802035917号",
+        "href": "http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010802035917"
+      }
+    ],
+    "scraped_at": "2026-10-25T20:01:21",
+    "source": "小牛行研",
+    "item_count": 6
+  },
+  "meadin": {
+    "source_url": "https://www.meadin.com/report/",
+    "http_status": 200,
+    "page_title": "迈点网-文旅头号媒体",
+    "items": [
+      {
+        "text": "Global Hotel Brand Communication Re...",
+        "href": "https://www.meadin.com/report/302598.html"
+      },
+      {
+        "text": "2026年9月住房租赁产业发展报告",
+        "href": "https://www.meadin.com/report/302490.html"
+      },
+      {
+        "text": "2026年9月景区运营发展报告",
+        "href": "https://www.meadin.com/report/302496.html"
+      },
+      {
+        "text": "2026年9月中国文旅集团发展报告",
+        "href": "https://www.meadin.com/report/302354.html"
+      },
+      {
+        "text": "2026年9月中国酒店业发展报告",
+        "href": "https://www.meadin.com/report/302311.html"
+      },
+      {
+        "text": "2026年中国文旅集团生态分析报告",
+        "href": "https://www.meadin.com/report/301970.html"
+      },
+      {
+        "text": "2026年十大热门县域酒店市场供需分析报告",
+        "href": "https://www.meadin.com/report/301686.html"
+      },
+      {
+        "text": "2026年赏秋旅游洞察报告",
+        "href": "https://www.meadin.com/report/301646.html"
+      },
+      {
+        "text": "2026年甘肃省县域旅游发展报告",
+        "href": "https://www.meadin.com/report/301552.html"
+      },
+      {
+        "text": "2026年上半年文旅集团财务分析报告",
+        "href": "https://www.meadin.com/report/301340.html"
+      },
+      {
+        "text": "2026年8月住房租赁产业发展报告",
+        "href": "https://www.meadin.com/report/301121.html"
+      },
+      {
+        "text": "2026年8月景区运营发展报告",
+        "href": "https://www.meadin.com/report/300998.html"
+      },
+      {
+        "text": "2026年8月中国县域和市辖区旅游传播报告",
+        "href": "https://www.meadin.com/report/300975.html"
+      },
+      {
+        "text": "2026年8月中国酒店业发展报告",
+        "href": "https://www.meadin.com/report/300916.html"
+      },
+      {
+        "text": "2026年8月中国文旅集团发展报告",
+        "href": "https://www.meadin.com/report/300825.html"
+      },
+      {
+        "text": "2026上半年酒店集团财务分析报告",
+        "href": "https://www.meadin.com/report/300631.html"
+      },
+      {
+        "text": "2026年上半年中国旅游市场分析报告",
+        "href": "https://www.meadin.com/report/300530.html"
+      },
+      {
+        "text": "2026年全国影视城发展格局与横店模式分析报告",
+        "href": "https://www.meadin.com/report/300221.html"
+      },
+      {
+        "text": "2024-2026年新疆酒店供给侧研究报告",
+        "href": "https://www.meadin.com/report/300132.html"
+      },
+      {
+        "text": "2026年暑期贵州省景区品牌运营发展报告",
+        "href": "https://www.meadin.com/report/299972.html"
+      },
+      {
+        "text": "2026年7月中国县域和市辖区旅游传播报告",
+        "href": "https://www.meadin.com/report/299788.html"
+      },
+      {
+        "text": "2026年7月住房租赁产业发展报告",
+        "href": "https://www.meadin.com/report/299670.html"
+      },
+      {
+        "text": "TARGET致品网",
+        "href": "http://www.luxtarget.com/"
+      },
+      {
+        "text": "东方网升（股票代码 835191）",
+        "href": "http://www.dfwsgroup.com"
+      },
+      {
+        "text": "浙ICP备19035682号-1",
+        "href": "https://beian.miit.gov.cn"
+      }
+    ],
+    "scraped_at": "2026-10-25T20:01:02",
+    "source": "迈点研究院",
+    "item_count": 25
+  },
+  "traveldaily": {
+    "source_url": "https://hub.traveldaily.cn/report/",
+    "http_status": 200,
+    "page_title": "报告 - 旅连连",
+    "items": [
+      {
+        "text": "开通PLUS会员",
+        "href": "/about#rights"
+      }
+    ],
+    "scraped_at": "2026-10-25T20:01:45",
+    "source": "环球旅讯",
+    "item_count": 1
+  },
+  "_meta": {
+    "collected_at": "2026-10-25T20:01:47",
+    "version": "2.0"
+  }
+}
