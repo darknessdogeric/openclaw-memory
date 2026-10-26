@@ -346,7 +346,16 @@ def manifest_version(slug, t=12):
 
 
 _ver_map = {}
-for _slug in true_new[:8]:
+# 补版本范围 = 真新增 + 下载量最高的候选（安装闸门要看的就是这些）
+_top = [r.get('slug') for r in sorted(reg_new, key=lambda x: -(x.get('downloads') or 0))[:6]]
+_need = []
+for _s in list(true_new) + _top:
+    if _s and _s not in _need:
+        _need.append(_s)
+for _slug in _need:
+    if left() < 45:
+        print('[manifest 补版本] 预算不足，提前停止（已查 {} 个）'.format(len(_ver_map)))
+        break
     _v, _dl, _ins, _ow = manifest_version(_slug)
     if _v:
         _ver_map[_slug] = _v
@@ -360,8 +369,8 @@ for _slug in true_new[:8]:
                 _r['installs'] = _ins
             if _ow:
                 _r['owner'] = _ow
-print('[manifest 补版本] 真新增候选 {} 个 → 查到版本 {}（其余仍为 ?）'.format(
-    len(true_new[:8]), _ver_map or '无'))
+print('[manifest 补版本] 应查 {} 个 → 查到版本 {}（其余仍为 ?）'.format(
+    len(_need), _ver_map or '无'))
 
 # ---------- 3. git 更新（三分类，失败也给出可行动原因）----------
 # 2026-10-25 修正：旧版 `git pull --ff-only` 失败只报 err，无行动价值。
@@ -379,6 +388,32 @@ git_skipped = []
 #   另一修正：GitHub 临时不可达时，6 个仓各等 21s 超时 = 130s 白烧预算 → 加网络预检 + 熔断。
 NET_MARKERS = ('Could not connect', 'Failed to connect', 'Connection was reset',
                'RPC failed', 'Connection timed out', 'early EOF', 'gnutls_handshake')
+
+
+# 2026-10-26 19:2x 根因修复：**Windows 上 git 不读 WinINET 系统代理**（Python urllib 会读）。
+#   实测：裸 TCP 直连 github.com 时通时不通（代理/TUN 路由抖动），
+#   而走 127.0.0.1:7900 的 urllib 稳定返回 200 → git 必须**显式指定代理**才稳定。
+#   症状：同一台机器、同一分钟，直连/git 结论互相矛盾（我 19:05 测「直连不通但 git 1.1s 成功」，
+#   扫描器 19:1x 测「直连通但 git 探针不通」）→ 结论：唯一可靠路径 = 显式代理。
+def detect_proxy():
+    try:
+        import urllib.request as _u
+        _p = _u.getproxies()
+        _px = (_p.get('https') or _p.get('http') or '').strip()
+        return _px if _px.startswith('http') else ''
+    except Exception:
+        return ''
+
+
+GIT_PROXY = detect_proxy()
+
+
+def git_args(*rest):
+    """所有 git 调用统一走检测到的系统代理（无代理时退化为原样）"""
+    _a = ['git']
+    if GIT_PROXY:
+        _a += ['-c', 'http.proxy=%s' % GIT_PROXY, '-c', 'https.proxy=%s' % GIT_PROXY]
+    return _a + list(rest)
 
 
 def net_reachable(host='github.com', port=443, t=6):
@@ -399,8 +434,8 @@ def git_reachable(t=14):
        现在改用 git 自己探：ls-remote 一个已知仓，14s 内返回即认为 git 通道可用。
        另外：Windows 上 git 不会自动读 WinINET 系统代理（urllib 会读），
        故直连失败 ≠ git 不可用（实测直连超时但 git 走代理 1.1s 成功）。"""
-    rc, o, e = run(['git', '-c', 'http.version=HTTP/1.1', 'ls-remote', '--heads',
-                    'https://github.com/EvoMap/evolver.git'], t)
+    rc, o, e = run(git_args('-c', 'http.version=HTTP/1.1', 'ls-remote', '--heads',
+                            'https://github.com/EvoMap/evolver.git'), t)
     return rc == 0
 
 
@@ -436,14 +471,22 @@ for d in cands:
     except Exception:
         pass
     # 3.1 fetch（--no-tags 避免本地/远端同名标签冲突）
-    rc, o, e = run(['git', '-C', str(d), 'fetch', '--prune', '--no-tags', 'origin'], GIT_TIMEOUT)
+    rc, o, e = run(git_args('-C', str(d), 'fetch', '--prune', '--no-tags', 'origin'), GIT_TIMEOUT)
     # 错误文本在 stdout（stderr 已合并），必须从 o 取
     if rc != 0 and rc != -1 and 'already exists' in (o or ''):
         # 远程跟踪引用冲突（远端 force-push 或本地 ref 形态不同）：
         #   保守重试 —— --force 只重置 refs/remotes/* 远程跟踪引用，
         #   不动本地分支、不动工作区、不改写任何提交。
-        rc, o, e = run(['git', '-C', str(d), 'fetch', '--prune', '--no-tags', '--force', 'origin'],
+        rc, o, e = run(git_args('-C', str(d), 'fetch', '--prune', '--no-tags', '--force', 'origin'),
                        GIT_TIMEOUT)
+    if rc != 0 and any(k in (o or '') for k in NET_MARKERS):
+        # 2026-10-26 修正：实测 neterr 是**瞬时抖动**（同命令 1.1s 成功 / 21s 超时都出现过）→ 重试一次
+        #   （与 clawhub 侧「超时重试一次」的既有做法一致），仍失败才计入熔断
+        rc, o, e = run(git_args('-c', 'http.version=HTTP/1.1', '-C', str(d),
+                                'fetch', '--prune', '--no-tags', 'origin'), GIT_TIMEOUT)
+        if rc == 0:
+            o = o or ''
+            e = e or ''
     if rc == -1:
         # 超时也计入网络熔断计数（否则 timeout 型失败不触发熔断，会把 8 个仓逐个等一遍）
         consec_net_fail += 1

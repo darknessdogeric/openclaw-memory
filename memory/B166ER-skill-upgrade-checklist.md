@@ -3033,3 +3033,59 @@ _扫描者: B166ER | 触发: cron 332ec6e6 | 模型: minimax/MiniMax-M3 | 第 9 
 - 需人工处理（分支分叉，脚本不自动改写）0 个：—
 - 失败（网络/权限等）0 个：—
 - 跳过（网络不通/预算不足）6 个：evolver(git通道不可达), open-design-skill(git通道不可达), ponytail(git通道不可达), ppt-generator(git通道不可达), scholar-skill(git通道不可达), wewrite(git通道不可达)
+
+---
+
+## 技能市场扫描 · 2026-10-26 22:14:22
+- 用时 167s / 预算 200s（clawhub CLI 可用）
+- 检索词与耗时：hotel=8.3s(rc0), travel=9.2s(rc0)
+- 向量通道覆盖度缺口：无
+- 市场去重后 10 条；本地技能 98 个（SKILL.md 93 个）
+- 市场有本地无：10 个
+- registry 关键词检索: 62 条去重（62 个可安装）
+
+### 能力空白状态（判定复用上方已抓候选，零额外请求）
+- 酒店竞品房价 / 动态定价监控：**ADJACENT**（域内核心 无｜相邻 hotel-price-monitor、price-drop-tracker、meituan-baodan、ddt-amap-restaurant-network）
+- 酒店存量翻新选址分析（POI + 商圈 + 客流）：**THIN**（域内核心 amap-lbs-skill、amap-jsapi-skill、amap-cli-skill、gaode-map-pro、amap、amap-jsapi-tool-free｜相邻 retail-member-points-check-free、majia-siyu）
+- 酒店私域 / 会员 / 复购运营：**THIN**（域内核心 majia-huiyuan、retail-member-points-check-free、membership-liability-check-free、private-traffic-sop｜相邻 meituan-coupon-traffic、competitor-intelligence-monitor、majia-siyu、siyu-morning-evening-reporter）
+- 酒店房价聚合（对照组 · 市场已有供给）：**THIN**（域内核心 china-hotel-price-compare、hotel-smart-book、hotel-price-monitor、bijia、xiaxiayouhui-deals、hotel-procurement-price-check｜相邻 price-drop-tracker、meituan-travel-assistant、meituan-baodan、meituan-coupon-get-tool）
+- 空白变化：无（本轮无变化）
+- 候选变化：新增 registry 候选 0｜新增向量候选 0｜**本轮是否有变化**: 否（建议不推送）
+- 真新增（累积池口径，排除回流）：0 个：无
+- 累积 slug 池总量：83 条
+
+### 新技能候选
+- **hotel** (score 6120.000) — Hotel
+- **gaode-hotel** (score 5095.000) — 飞猪联动
+- **hotel-lobby-ai-prompt-director** (score 5095.000) — Hotel Lobby AI Prompt Director
+- **china-hotel-price-compare** (score 5095.000) — 酒店比价
+- **rollinggo-hotel-skill-cn-new** (score 5095.000) — RollingGo全球酒店预订Skill-新版本1.1.1
+- **travel** (score 6120.000) — Travel
+- **travel-guide-generator** (score 5095.000) — 旅游攻略生成器
+- **meituan-travel** (score 5095.000) — meituan-travel
+- **travel-trip-contingency-planning** (score 5095.000) — Travel Advisor — Trip Contingency Planning
+- **travel-rule-check** (score 5095.000) — travel-rule-check
+
+### registry 关键词检索 · 可安装候选（按下载量降序）
+- **eas-update-insights**  v?  ↓36812次/装0次  owner: expo  ref: `skills-sh:expo/skills/eas-update-insights`  — # EAS Update Insights > **EAS service - costs apply.** Insights cover updates published th
+- **amap-lbs-skill**  v?  ↓8892次/装0次  owner: lbs-amap  ref: `lbs-amap/amap-lbs-skill`  — 高德地图综合服务，支持POI搜索、路径规划、旅游规划、周边搜索和热力图数据可视化
+- **amap-jsapi-skill**  v?  ↓6075次/装0次  owner: lbs-amap  ref: `lbs-amap/amap-jsapi-skill`  — 高德地图 JSAPI v2.0 (WebGL) 开发技能。涵盖地图生命周期管理、强制安全配置、3D 视图控制、覆盖物绘制及 LBS 服务集成。
+- **otaku-wiki**  v1.0.0  ↓2090次/装62次  owner: robin797860  ref: `robin797860/otaku-wiki`  — 番剧/角色百科问答：用 AniList API 快速查番、查角色、查声优与作品关联（无需数据库）
+- **meituan-travel-assistant**  v2.0.4  ↓1736次/装8次  owner: travel-skills  ref: `travel-skills/meituan-travel-assistant`  — 零配置即装即用，本地旅行一站式查询，酒店/机票/火车票/景点门票/行程规划全覆盖，数据覆盖300+城市。暑期吃喝玩乐一站式，美团旅行全攻略
+- **amap-cli-skill**  v1.0.2  ↓1732次/装44次  owner: lbs-amap  ref: `lbs-amap/amap-cli-skill`  — 通过 CLI 命令行参数实时操控运行在容器中的高德地图 JSAPI 2.0 实例， 支持地图状态控制、路径规划、POI 搜索等，所有操作均以结构化 JSON 输出，适合 AI Ag
+- **moment-writer**  v?  ↓1651次/装0次  owner: fengbabao0929  ref: `fengbabao0929/moment-writer`  — 朋友圈文案生成器（精简版），基于私域变现核心方法论
+- **china-hotel-price-compare**  v?  ↓1627次/装0次  owner: travel-skills  ref: `travel-skills/china-hotel-price-compare`  — 先浏览再比价，TourMind+途牛+同程+美团+RollingGo五源并发比价，找出全网最低价。含评分、距离、早餐、取消政策等详细信息。暑期出行多平台比价，轻松找到最划算的住宿方
+- **meituan-coupon-get-tool**  v?  ↓1531次/装0次  owner: meituan-zhengchang  ref: `meituan-zhengchang/meituan-coupon-get-tool`  — 【美团官方】美团红包助手，支持外卖、餐饮团购、酒店住宿、门票度假、休闲娱乐、闪购、医药等多品类优惠券/红包/神券的一键领取与历史领取记录查询。核心能力：1）一键领券，覆盖上述多品类
+- **gaode-map-pro**  v?  ↓1530次/装0次  owner: travel-skills  ref: `travel-skills/gaode-map-pro`  — 免申请Key即用，17项地图能力全覆盖：地理编码、POI搜索、周边搜索、驾车/公交/步行/骑行路线规划、天气查询、IP定位，出行必备地图工具。暑期自驾路线规划。
+- **mt-paotui-for-client**  v?  ↓1527次/装0次  owner: meituan-tech  ref: `meituan-tech/mt-paotui-for-client`  — 美团跑腿下单助手。支持场景：① 帮取送（A地取件送到B地，支持品类：餐饮、文件、生鲜、蛋糕、鲜花、数码、服饰、快递、五金、汽配等）② 帮买（代购商品）③ 帮取号（餐厅取号、医院挂号
+- **meituan-coupon**  v?  ↓1479次/装0次  owner: meituan-openplatform  ref: `meituan-openplatform/meituan-coupon`  — 【美团官方】美团红包助手，支持外卖、餐饮团购、酒店住宿、门票度假、休闲娱乐、闪购、医药等多品类优惠券/红包/神券的一键领取与历史领取记录查询。核心能力：1）一键领券，覆盖上述多品类
+- **majia-siyu**  v?  ↓1473次/装0次  owner: maojiebc  ref: `maojiebc/majia-siyu`  — 私域专家团 · 马甲实战版（majia-siyu）。处理朋友圈、群发、欢迎语、企微引流、私域诊断、整盘搭建、厂商选型/竞品/报价/市场地图、客户档案与任务后导航。涉及厂商、产品、价
+- **hotel-price-finder**  v?  ↓1367次/装0次  owner: yangms30  ref: `yangms30/hotel-price-finder`  — Compare hotel prices across Booking.com, Agoda, Trip.com in real-time. Free multi-OTA pric
+- **hotel-price-monitor**  v?  ↓1316次/装0次  owner: travel-skills  ref: `travel-skills/hotel-price-monitor`  — 酒店降价监控与多平台比价助手，同时搜索多个旅游平台实时价格帮你比价省钱，支持按酒店名称精确比价、按城市搜索酒店列表、创建降价监控任务，多旅游平台数据直连。暑期订酒店省钱，价格监控与
+
+### git 更新结果
+- 已更新 0 个：—
+- 已是最新 5 个：open-design-skill, ponytail, ppt-generator, scholar-skill, wewrite
+- 需人工处理（分支分叉，脚本不自动改写）0 个：—
+- 失败（网络/权限等）1 个：evolver(fatal: unable to access 'https://github.com/)
+- 跳过（网络不通/预算不足）0 个：—
