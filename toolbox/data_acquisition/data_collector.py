@@ -326,7 +326,17 @@ class HotelDataCollector:
         return out
 
     async def collect_traveldaily_data(self) -> Dict:
-        return await self._collect("环球旅讯", "https://hub.traveldaily.cn/report/")
+        # 2026-10-26 标注：该源列表页**无发布日期字段**（10-26 实测：其"新增"项多为补采而非新发布）
+        # → 本源的结果**不可用于 --since 差分**；显式打标，避免后续被误当"新增"统计
+        res = await self._collect("环球旅讯", "https://hub.traveldaily.cn/report/")
+        try:
+            res["has_publish_date"] = False
+            res["delta_comparable"] = False
+            res["note_delta"] = ("列表页无发布日期字段 → 不参与 --since 差分；"
+                                 "可做内容变化比对，不可做新增计数")
+        except Exception:
+            pass
+        return res
 
     async def collect_stock_data(self, company: str) -> Dict:
         urls = {
