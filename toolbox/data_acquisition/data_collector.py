@@ -273,7 +273,15 @@ class HotelDataCollector:
             for _alt in re.findall(r'alt="([^"]{4,200})"', _seg):
                 _mm = SUF.match(_alt.strip())
                 if _mm:
-                    _picked = _mm.group(1).strip()
+                    _cand = _mm.group(1).strip()
+                    # 2026-10-26 22:3x 二次修正：**后缀合规 ≠ 是标题**。
+                    #   实测仍有 alt 的后缀合规但正文部分本身是「少：从北证50高，点以来估值结构来看…」
+                    #   这类**正文片段**（含中文逗号/超长/以连接词开头）→ 同样算错配。
+                    #   判据（宁缺勿错）：含「，」「。」或长度>40 或以连接词开头 → 判为正文片段，丢弃。
+                    if ('，' in _cand or '。' in _cand or len(_cand) > 40
+                            or re.match(r'^(少|多|因此|所以|但是|然后|以及|其中|从|在|对|和|与|是|有|将|该|其)', _cand)):
+                        continue
+                    _picked = _cand
             if _picked:
                 out[_m.group(1)] = _picked
             _prev_end = _m.end()
