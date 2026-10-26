@@ -82,6 +82,7 @@ if scan_report.exists():
             'conflict_keywords': len(iss.get('conflict_keywords', [])),
             'advisory_terms': len(iss.get('advisory_terms', [])),
             'todos': len(iss.get('todos', [])),
+            'placeholder_terms': len(iss.get('placeholder_terms', [])),
         }
     except Exception as e:
         metrics['parse_error'] = str(e)

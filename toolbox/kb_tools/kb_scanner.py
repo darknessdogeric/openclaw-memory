@@ -55,7 +55,12 @@ def extract_metadata(filepath):
         md['version_in_name'] = version_match.group(1)
 
     # 检测 TODO
-    md['has_todo'] = bool(re.search(r'\bTODO\b|\bFIXME\b|\bXXX\b', content))
+    # 2026-10-26 分级：原正则把模板占位符（¥XXX / 安逸+XXX / RFP-XX-2026-XXX）当成真 TODO
+    #   → 实测 21 个被标记文件**无一含真 TODO/FIXME 注释**，全是占位符（噪音 100%）。
+    #   拆开：真 TODO/FIXME 注释 → todos（待办）；XXX 占位符 → placeholder_terms（info 级）
+    md['has_todo'] = bool(re.search(
+        r'(?:#|//|<!--|\*)\s*(?:TODO|FIXME)\b|\b(?:TODO|FIXME)\s*[:：]', content))
+    md['has_placeholder'] = bool(re.search(r'\bXXX\b|×××', content))
 
     # 检测归档标记
     md['has_archived'] = '_归档_' in filepath.name or '_archive_' in filepath.name
@@ -180,10 +185,12 @@ def analyze(files):
                         'note': info.get('note', ''),
                     })
 
-    # 4. TODO/FIXME
+    # 4. TODO/FIXME（真待办）vs 模板占位符（info 级，非待办）
     for f in files:
         if f['has_todo']:
             issues['todos'].append(f['path'])
+        elif f.get('has_placeholder'):
+            issues['placeholder_terms'].append(f['path'])
 
     # 5. 无 R66 校准标记但应该有
     for f in files:
