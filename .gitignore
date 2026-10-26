@@ -59,3 +59,6 @@ __pycache__/
 .DS_Store
 Thumbs.db
 *.swp
+
+# 采集器默认输出落在工作区根（手动验证用）→ 不入库
+hotel_data.json
