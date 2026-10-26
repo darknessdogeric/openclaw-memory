@@ -339,16 +339,27 @@ class HotelDataCollector:
         return res
 
     async def collect_stock_data(self, company: str) -> Dict:
+        # 2026-10-26 实测修正（原 4 个 URL：2×404 + 2×SSL EOF，实为休眠 bug）：
+        #   锦江/首旅的 /investor 路径 404；华住/亚朵 IR 域 TLS 握手 EOF（需浏览器态）
+        #   → 改用可达的官网 IR 入口；仍不可达的显式标注，不静默失败
         urls = {
-            "huazhu": "https://ir.huzhu.com",
-            "jinjiang": "http://www.jinjianghotels.com.cn/investor",
-            "shoulv": "http://www.bthhotels.com/investor",
-            "atour": "https://ir.atour.com",
+            "huazhu": "https://ir.huzhu.com/",
+            "jinjiang": "http://www.jinjianghotels.com.cn/",
+            "shoulv": "http://www.bthhotels.com/",
+            "atour": "https://ir.atour.com/",
         }
         url = urls.get(company)
         if not url:
             return {"source": company, "error": f"未知公司: {company}"}
-        return await self._collect(f"财报:{company}", url)
+        res = await self._collect(f"财报:{company}", url)
+        try:
+            res["has_publish_date"] = False
+            res["delta_comparable"] = False
+            res["note_delta"] = ("IR 页无统一发布日期字段；且 IR 域部分站点 TLS 直连失败"
+                                 "（华住/亚朵），需浏览器态 → 不参与 --since 差分")
+        except Exception:
+            pass
+        return res
 
     async def collect_all(self, config: Dict) -> Dict:
         results: Dict = {}
