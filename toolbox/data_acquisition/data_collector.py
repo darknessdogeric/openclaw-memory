@@ -82,19 +82,31 @@ def _page_title(page) -> str:
 # （10-24 雅高 Q3、10-23 云酒店、10-24 内容即渠道 连三轮漏采，靠临时脚本补漏才找回）。
 # 现把 meadin 的 9 个 feed + 详情页正文抓取正式并入 collector，不再依赖临时脚本。
 
+# 2026-10-26 修正：原列表中 6 个 slug 早已 404（/news/ /hotel/ /travel/ /sc/ /yd/ /zs/），
+# 它们静默返回 0 链接，等于「深抓覆盖了 6 个不存在的频道」——误以为有 9 个 feed 兜底，
+# 实际只有 / 与 /jd/ /report/ 三条在跑。已按站点真实导航 slug 全量替换（逐个实测 HTTP 200 + 有详情链接）：
+#   wl(文旅) jq(精品) cx(创新) gyl(供应链) mdzb(目的地) yj(研究) zl(专栏) gy(行业)
+#   ICTE(科技) MDGJ(目的地管理) ydpd(目的地盘点) jd(酒店) report(报告) + 首页
+# 另：/zt/ 与 /jdxm/ 虽 200 但 0 条详情链接，不纳入。
+# 教训同「深抓固化」：静默失败=结构性漏采，feed 必须带 HTTP 状态可观测（见 collect_meadin_deep）。
 MEADIN_FEEDS = [
     "https://www.meadin.com/",
-    "https://www.meadin.com/news/",
     "https://www.meadin.com/jd/",
-    "https://www.meadin.com/hotel/",
-    "https://www.meadin.com/travel/",
     "https://www.meadin.com/report/",
-    "https://www.meadin.com/sc/",
-    "https://www.meadin.com/yd/",
-    "https://www.meadin.com/zs/",
+    "https://www.meadin.com/wl/",
+    "https://www.meadin.com/jq/",
+    "https://www.meadin.com/cx/",
+    "https://www.meadin.com/gyl/",
+    "https://www.meadin.com/mdzb/",
+    "https://www.meadin.com/yj/",
+    "https://www.meadin.com/zl/",
+    "https://www.meadin.com/gy/",
+    "https://www.meadin.com/ICTE/",
+    "https://www.meadin.com/MDGJ/",
+    "https://www.meadin.com/ydpd/",
 ]
 
-_DETAIL_URL_RE = re.compile(r"^https?://www\.meadin\.com/[a-z]+/(\d+)\.html", re.I)
+_DETAIL_URL_RE = re.compile(r"^https?://www\.meadin\.com/[a-zA-Z]+/(\d+)\.html", re.I)
 _PUB_DATE_RE = re.compile(r"(\d{4}-\d{2}-\d{2}[ T]\d{2}:\d{2}(?::\d{2})?)")
 _BODY_DIV_RE = re.compile(
     r'<div[^>]+class="[^"]*(?:article|content|detail|txt|main)[^"]*"[^>]*>(.*?)</div>\s*(?:<div|</section)',
@@ -157,6 +169,7 @@ async def _fetch_one(session, url: str, timeout_ms: int, **fetch_kwargs) -> Dict
         "page_title": _page_title(page),
         "items": _safe_links(page),
         "scraped_at": datetime.now().isoformat(timespec="seconds"),
+        "_html": _page_html(page),
     }
 
 
@@ -169,6 +182,7 @@ class HotelDataCollector:
         self.timeout_ms = timeout_ms
         self.per_page_links = per_page_links
         self._session: Optional["AsyncStealthySession"] = None
+        self._last_html: str = ""
 
     async def __aenter__(self):
         if SCRAPLING_AVAILABLE:
@@ -191,6 +205,7 @@ class HotelDataCollector:
             res["source"] = label
             res["item_count"] = len(res["items"])
             res["items"] = res["items"][: self.per_page_links]
+            self._last_html = res.pop("_html", "") or ""
             return res
         except Exception as e:
             return {"source": label, "source_url": url, "error": f"{type(e).__name__}: {str(e)[:200]}"}
@@ -208,8 +223,41 @@ class HotelDataCollector:
 
     async def collect_hangyan_data(self) -> Dict:
         # 小牛行研首页有安全验证，需开启 Cloudflare 求解
-        return await self._collect("小牛行研", "https://www.hangyan.co/charts",
-                                   solve_cloudflare=True)
+        res = await self._collect("小牛行研", "https://www.hangyan.co/charts",
+                                  solve_cloudflare=True)
+        # 2026-10-26 修正：列表页 <a href="/charts/ID"> 的锚文本只有日期（如 2026-10-25），
+        # 图表标题在同卡片的 <img alt="标题 - 2026年10月 - 行业研究数据"> 里。
+        # 原逻辑只取锚文本 → 每日只有日期、看不到标题，等于采了「有日期没内容」的半条数据。
+        titles = self._hangyan_titles()
+        if titles:
+            for it in res.get("items", []):
+                mid = (it.get("href") or "").rstrip("/").rsplit("/", 1)[-1]
+                if mid in titles:
+                    it["title"] = titles[mid]
+            res["title_mapped"] = sum(1 for it in res.get("items", []) if it.get("title"))
+        return res
+
+    def _hangyan_titles(self) -> Dict[str, str]:
+        """从 hangyan 列表页 HTML 抽 {chart_id: 图表标题}。
+        规则：同一张卡片里 <img alt="标题 - 2026年10月 - 行业研究数据"> 的 alt 去掉尾部后缀即标题；
+        该 img 在结构上位于本卡片日期锚点 <a href="/charts/ID">日期</a> 之前，
+        故对每个日期锚点向前回溯有限窗口，取最后一个 alt 作为它的标题。"""
+        out: Dict[str, str] = {}
+        html = self._last_html or ""
+        if not html:
+            return out
+        for m in re.finditer(
+                r'<a[^>]+href="/charts/(\d+)"[^>]*>(20\d\d-\d\d-\d\d)</a>', html):
+            pre = html[max(0, m.start() - 3000): m.start()]
+            alts = re.findall(r'alt="([^"]{4,200})"', pre)
+            if not alts:
+                continue
+            title = alts[-1]
+            title = re.sub(r"\s*-\s*20\d\d年\d{1,2}月\s*-\s*行业研究数据\s*$", "", title)
+            title = title.strip()
+            if title:
+                out[m.group(1)] = title
+        return out
 
     async def collect_meadin_data(self) -> Dict:
         # 迈点报告列表为异步渲染，需等待网络空闲
@@ -233,6 +281,7 @@ class HotelDataCollector:
                 out["feed_stats"][feed] = "ERR " + str(e)[:80]
                 continue
             found = 0
+            status = getattr(page, "status", None)
             try:
                 nodes = page.css("a")
             except Exception:
@@ -246,9 +295,18 @@ class HotelDataCollector:
                 if m:
                     mids.setdefault(m.group(1), href.strip())
                     found += 1
-            out["feed_stats"][feed] = "OK {}links".format(found)
+            # feed 健康度：非 200 或 0 链接必须显式暴露，否则等于静默漏采
+            if status != 200:
+                out["feed_stats"][feed] = "HTTP{} {}links DEAD".format(status, found)
+            elif found == 0:
+                out["feed_stats"][feed] = "HTTP200 0links EMPTY"
+            else:
+                out["feed_stats"][feed] = "HTTP200 {}links".format(found)
         ordered = sorted(mids.items(), key=lambda kv: int(kv[0]), reverse=True)
         out["detail_candidates"] = len(ordered)
+        dead = [f for f, s in out["feed_stats"].items() if s.startswith("HTTP") and "DEAD" in s]
+        out["dead_feeds"] = dead
+        out["feed_health"] = ("OK" if not dead else "DEAD_FEEDS:{}".format(len(dead)))
         for mid, url in ordered[:max_details]:
             try:
                 page = await self._session.fetch(url, timeout=self.timeout_ms)

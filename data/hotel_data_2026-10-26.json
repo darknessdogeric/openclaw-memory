@@ -1,0 +1,296 @@
+{
+  "str": {
+    "source": "STR",
+    "period": "2026-01-01 to 2026-03-31",
+    "metrics": {
+      "occ": null,
+      "adr": null,
+      "revpar": null
+    },
+    "note": "STR数据需要官方API授权（未配置 STR_API_KEY）"
+  },
+  "hangyan": {
+    "source_url": "https://www.hangyan.co/charts",
+    "http_status": 200,
+    "page_title": "行业研究数据 - 小牛行研",
+    "items": [
+      {
+        "text": "2026-10-25",
+        "href": "/charts/4015712739736421388",
+        "title": "本周化工品价格及北交所产业链公司"
+      },
+      {
+        "text": "2026-10-24",
+        "href": "/charts/4015591743821972928",
+        "title": "SEB订单规模增长情况及对公司收入贡献度"
+      },
+      {
+        "text": "2026-10-23",
+        "href": "/charts/4014806867187337032",
+        "title": "2025年鑫宇科技前五大客户集中度72.39%"
+      },
+      {
+        "text": "京ICP备12032824号-6",
+        "href": "https://beian.miit.gov.cn"
+      },
+      {
+        "text": "京公网安备11010802035917号",
+        "href": "http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010802035917"
+      }
+    ],
+    "scraped_at": "2026-10-26T08:58:18",
+    "source": "小牛行研",
+    "item_count": 5,
+    "title_mapped": 3
+  },
+  "meadin": {
+    "source_url": "https://www.meadin.com/report/",
+    "http_status": 200,
+    "page_title": "迈点网-文旅头号媒体",
+    "items": [
+      {
+        "text": "Global Hotel Brand Communication Re...",
+        "href": "https://www.meadin.com/report/302598.html"
+      },
+      {
+        "text": "2026年9月住房租赁产业发展报告",
+        "href": "https://www.meadin.com/report/302490.html"
+      },
+      {
+        "text": "2026年9月景区运营发展报告",
+        "href": "https://www.meadin.com/report/302496.html"
+      },
+      {
+        "text": "2026年9月中国文旅集团发展报告",
+        "href": "https://www.meadin.com/report/302354.html"
+      },
+      {
+        "text": "2026年9月中国酒店业发展报告",
+        "href": "https://www.meadin.com/report/302311.html"
+      },
+      {
+        "text": "2026年中国文旅集团生态分析报告",
+        "href": "https://www.meadin.com/report/301970.html"
+      },
+      {
+        "text": "2026年十大热门县域酒店市场供需分析报告",
+        "href": "https://www.meadin.com/report/301686.html"
+      },
+      {
+        "text": "2026年赏秋旅游洞察报告",
+        "href": "https://www.meadin.com/report/301646.html"
+      },
+      {
+        "text": "2026年甘肃省县域旅游发展报告",
+        "href": "https://www.meadin.com/report/301552.html"
+      },
+      {
+        "text": "2026年上半年文旅集团财务分析报告",
+        "href": "https://www.meadin.com/report/301340.html"
+      },
+      {
+        "text": "2026年8月住房租赁产业发展报告",
+        "href": "https://www.meadin.com/report/301121.html"
+      },
+      {
+        "text": "2026年8月景区运营发展报告",
+        "href": "https://www.meadin.com/report/300998.html"
+      },
+      {
+        "text": "2026年8月中国县域和市辖区旅游传播报告",
+        "href": "https://www.meadin.com/report/300975.html"
+      },
+      {
+        "text": "2026年8月中国酒店业发展报告",
+        "href": "https://www.meadin.com/report/300916.html"
+      },
+      {
+        "text": "2026年8月中国文旅集团发展报告",
+        "href": "https://www.meadin.com/report/300825.html"
+      },
+      {
+        "text": "2026上半年酒店集团财务分析报告",
+        "href": "https://www.meadin.com/report/300631.html"
+      },
+      {
+        "text": "2026年上半年中国旅游市场分析报告",
+        "href": "https://www.meadin.com/report/300530.html"
+      },
+      {
+        "text": "2026年全国影视城发展格局与横店模式分析报告",
+        "href": "https://www.meadin.com/report/300221.html"
+      },
+      {
+        "text": "2024-2026年新疆酒店供给侧研究报告",
+        "href": "https://www.meadin.com/report/300132.html"
+      },
+      {
+        "text": "2026年暑期贵州省景区品牌运营发展报告",
+        "href": "https://www.meadin.com/report/299972.html"
+      },
+      {
+        "text": "2026年7月中国县域和市辖区旅游传播报告",
+        "href": "https://www.meadin.com/report/299788.html"
+      },
+      {
+        "text": "2026年7月住房租赁产业发展报告",
+        "href": "https://www.meadin.com/report/299670.html"
+      },
+      {
+        "text": "TARGET致品网",
+        "href": "http://www.luxtarget.com/"
+      },
+      {
+        "text": "东方网升（股票代码 835191）",
+        "href": "http://www.dfwsgroup.com"
+      },
+      {
+        "text": "浙ICP备19035682号-1",
+        "href": "https://beian.miit.gov.cn"
+      }
+    ],
+    "scraped_at": "2026-10-26T08:58:15",
+    "source": "迈点研究院",
+    "item_count": 25
+  },
+  "meadin_deep": {
+    "source": "迈点研究院-深抓",
+    "feeds": [
+      "https://www.meadin.com/",
+      "https://www.meadin.com/jd/",
+      "https://www.meadin.com/report/",
+      "https://www.meadin.com/wl/",
+      "https://www.meadin.com/jq/",
+      "https://www.meadin.com/cx/",
+      "https://www.meadin.com/gyl/",
+      "https://www.meadin.com/mdzb/",
+      "https://www.meadin.com/yj/",
+      "https://www.meadin.com/zl/",
+      "https://www.meadin.com/gy/",
+      "https://www.meadin.com/ICTE/",
+      "https://www.meadin.com/MDGJ/",
+      "https://www.meadin.com/ydpd/"
+    ],
+    "since": "2026-10-25 20:05:00",
+    "scanned": 80,
+    "new": {},
+    "feed_stats": {
+      "https://www.meadin.com/": "HTTP200 57links",
+      "https://www.meadin.com/jd/": "HTTP200 48links",
+      "https://www.meadin.com/report/": "HTTP200 48links",
+      "https://www.meadin.com/wl/": "HTTP200 48links",
+      "https://www.meadin.com/jq/": "HTTP200 48links",
+      "https://www.meadin.com/cx/": "HTTP200 48links",
+      "https://www.meadin.com/gyl/": "HTTP200 48links",
+      "https://www.meadin.com/mdzb/": "HTTP200 48links",
+      "https://www.meadin.com/yj/": "HTTP200 48links",
+      "https://www.meadin.com/zl/": "HTTP200 48links",
+      "https://www.meadin.com/gy/": "HTTP200 48links",
+      "https://www.meadin.com/ICTE/": "HTTP200 48links",
+      "https://www.meadin.com/MDGJ/": "HTTP200 48links",
+      "https://www.meadin.com/ydpd/": "HTTP200 48links"
+    },
+    "detail_candidates": 317,
+    "dead_feeds": [],
+    "feed_health": "OK",
+    "new_count": 0
+  },
+  "traveldaily": {
+    "source_url": "https://hub.traveldaily.cn/report/",
+    "http_status": 200,
+    "page_title": "报告 - 旅连连",
+    "items": [
+      {
+        "text": "《2026Q3中国商旅市场趋势洞察报告：增长中的重构》",
+        "href": "/research/detail/?id=10043"
+      },
+      {
+        "text": "本报告延续环球旅讯研究院《中国差旅市场趋势洞察报告》系列。Q1主要讨论年初预期与企业差旅管理目标、预算定调；Q2/H1关注上半年实际差旅频次、成本优化执行与TMC转型压力；Q3进一步通过商务旅行者、企业差旅经理人、差旅管理服务商三类样本，分析差旅市场的增长结构、成本与体验拉锯、AI与数电票落地进度。",
+        "href": "/research/detail/?id=10043"
+      },
+      {
+        "text": "《2026Q3中国旅游消费趋势洞察报告：长假的烟火》",
+        "href": "/research/detail/?id=10042"
+      },
+      {
+        "text": "本报告延续环球旅讯研究院《中国旅游消费趋势洞察报告》系列。Q1主要讨论年初旅游消费预期与出行意愿恢复、预算定调；Q2/H1关注上半年实际出游频次、消费结构变化与目的地选择；Q3进一步通过中秋国庆出游计划，分析旅游消费的目的地选择、预算分层、决策前置、平台与内容种草、AI工具使用等趋势。",
+        "href": "/research/detail/?id=10042"
+      },
+      {
+        "text": "《2026下半年中国AI旅游应用趋势洞察报告：神灯照进现实》",
+        "href": "/report/10041/"
+      },
+      {
+        "text": "本报告由环球旅讯研究院与数字100联合发布，并获得汇智、自我游、肖远山、新浪微博的大力支持。",
+        "href": "/report/10041/"
+      },
+      {
+        "text": "《2026Q2中国差旅市场趋势洞察报告：预期与落差》",
+        "href": "/research/detail/?id=10029"
+      },
+      {
+        "text": "2026年第二季度，中国商旅市场在 Q1\"稳中有变\" 的基础上，进一步呈现出分化加速、重构深化的鲜明特征。境内差旅频次以增长为主，国际差旅亦有增长但分化明显；高铁替代飞机趋势明确；降本诉求强烈但落地存在落差；AI 需求明确但数据基础薄弱；海外服务能力存在短板；合规精细化成为重要目标。",
+        "href": "/research/detail/?id=10029"
+      },
+      {
+        "text": "《2026Q2中国旅游消费趋势洞察报告：落差与韧性》",
+        "href": "/research/detail/?id=10023"
+      },
+      {
+        "text": "2026年Q2，中国旅游消费市场呈现“境内稳、出境冷”的鲜明分化，出境游的常态化需求基数仍显著低于国内，签证、成本、地缘风险三重结构性问题仍在制约。",
+        "href": "/research/detail/?id=10023"
+      },
+      {
+        "text": "《数字100 GGC出海罗盘：30国出海市场增长趋势系列白皮书》",
+        "href": "/report/10028/"
+      },
+      {
+        "text": "数字100联合 ECI Academy 发布《2026年30国出海市场增长趋势系列白皮书》，从一份可决策的国别白皮书，到一个可回源的出海决策智能体，数字100希望把“出海”从经验驱动变成数据与AI驱动",
+        "href": "/report/10028/"
+      },
+      {
+        "text": "《2026上半年AI旅游应用趋势洞察报告》",
+        "href": "/report/10010/"
+      },
+      {
+        "text": "本报告由环球旅讯研究院、中旅国际、数字100联合发布。",
+        "href": "/report/10010/"
+      },
+      {
+        "text": "《2026年9月份全国居民消费价格（含旅行社及其他旅游服务类别）》",
+        "href": "/report/10045/"
+      },
+      {
+        "text": "2026年9月份，全国居民消费价格（含旅行社及其他旅游服务类别）变化详情。",
+        "href": "/report/10045/"
+      },
+      {
+        "text": "《从资源量到能力坐标：中国商旅管理（TMC）白皮书（2026Q3）》",
+        "href": "/report/10044/"
+      },
+      {
+        "text": "报告基于2026年三季度公开信源与全球买家调研，拆解中国TMC市场格局、份额口径陷阱与平台能力坐标，给出五维选型框架与八条行动清单，助力企业把选型标准从\"资源量\"转向\"能力坐标\"。",
+        "href": "/report/10044/"
+      },
+      {
+        "text": "《2026中国商旅市场年度报告：市场规模与结构篇》",
+        "href": "/report/10038/"
+      },
+      {
+        "text": "本报告由环球旅讯研究院联合携程商旅共同发布，并获得美亚商旅、优行商旅与数字100的大力支持。",
+        "href": "/report/10038/"
+      },
+      {
+        "text": "开通PLUS会员",
+        "href": "/about#rights"
+      }
+    ],
+    "scraped_at": "2026-10-26T08:58:55",
+    "source": "环球旅讯",
+    "item_count": 21
+  },
+  "_meta": {
+    "collected_at": "2026-10-26T08:59:44",
+    "version": "2.0"
+  }
+}
