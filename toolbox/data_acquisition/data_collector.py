@@ -235,6 +235,9 @@ class HotelDataCollector:
                 if mid in titles:
                     it["title"] = titles[mid]
             res["title_mapped"] = sum(1 for it in res.get("items", []) if it.get("title"))
+            res["title_unmatched"] = sum(1 for it in res.get("items", []) if not it.get("title"))
+            res["title_rule"] = ("只认带「- YYYY年M月 - 行业研究数据」后缀的 alt；"
+                                 "无匹配则留空（宁可缺标题不可错标题）")
         return res
 
     def _hangyan_titles(self) -> Dict[str, str]:
@@ -246,17 +249,34 @@ class HotelDataCollector:
         html = self._last_html or ""
         if not html:
             return out
-        for m in re.finditer(
-                r'<a[^>]+href="/charts/(\d+)"[^>]*>(20\d\d-\d\d-\d\d)</a>', html):
-            pre = html[max(0, m.start() - 3000): m.start()]
-            alts = re.findall(r'alt="([^"]{4,200})"', pre)
-            if not alts:
-                continue
-            title = alts[-1]
-            title = re.sub(r"\s*-\s*20\d\d年\d{1,2}月\s*-\s*行业研究数据\s*$", "", title)
-            title = title.strip()
-            if title:
-                out[m.group(1)] = title
+        # 2026-10-26 22:0x 修正（静默给错结论族，与 R-HEAL-24/25/26/27 同源）：
+        #   原逻辑取「回溯窗口内最后一个 alt」→ 若该 alt 不带标题后缀（属别的卡片/正文片段）
+        #   → 错配（22:00 轮实测 title_mapped 仅 2/4，出现把正文片段当标题）。
+        #   改法：**只认带完整后缀**的 alt（「… - YYYY年M月 - 行业研究数据」），
+        #   取最近一个匹配的；一个都不匹配 → **留空不映射**。
+        #   原则：宁可缺标题，不可错标题（错的标题会污染下游报告的每一条结论）。
+        # 2026-10-26 22:0x 修正（静默给错结论族，与 R-HEAL-24/25/26/27 同源）：
+        #   原逻辑取「回溯窗口内最后一个 alt」→ 该 alt 若不带标题后缀（属别的卡片/正文片段）
+        #   → 错配（22:00 轮实测 title_mapped 仅 2/4，把正文片段当标题）。
+        #   第一版修法（只认带后缀的 alt）仍**二次错配**：固定 3000 字回溯窗口会把
+        #   **上一张卡片**的 alt 带进来（后一张卡片若无带后缀 alt → 继承上一张的标题）。
+        #   现改为**按卡片分段**：片段 = 上一个日期锚点结束 → 本锚点开始，
+        #   只在本卡片自己的片段里取带完整后缀的 alt（「… - YYYY年M月 - 行业研究数据」）。
+        #   一个都不匹配 → **留空不映射**。原则：宁可缺标题，不可错标题。
+        SUF = re.compile(r"^(.{2,180}?)\s*-\s*20\d\d年\d{1,2}月\s*-\s*行业研究数据\s*$")
+        _anchors = list(re.finditer(
+                r'<a[^>]+href="/charts/(\d+)"[^>]*>(20\d\d-\d\d-\d\d)</a>', html))
+        _prev_end = 0
+        for _m in _anchors:
+            _seg = html[_prev_end:_m.start()]
+            _picked = ""
+            for _alt in re.findall(r'alt="([^"]{4,200})"', _seg):
+                _mm = SUF.match(_alt.strip())
+                if _mm:
+                    _picked = _mm.group(1).strip()
+            if _picked:
+                out[_m.group(1)] = _picked
+            _prev_end = _m.end()
         return out
 
     async def collect_meadin_data(self) -> Dict:
