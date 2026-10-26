@@ -80,6 +80,7 @@ if scan_report.exists():
             'empty_files': len(iss.get('empty_files', [])),
             'multi_versions': len(iss.get('multi_versions', [])),
             'conflict_keywords': len(iss.get('conflict_keywords', [])),
+            'advisory_terms': len(iss.get('advisory_terms', [])),
             'todos': len(iss.get('todos', [])),
         }
     except Exception as e:
