@@ -318,6 +318,51 @@ except Exception as _pe:
 _seen = _pool_slugs
 true_new = list(candidate_delta)
 
+# 2026-10-26 18:22 修正：clawhub search 的纯文本输出**不含 version** → 真新增候选必须查 manifest
+#   （R-HEAL-26：版本只认 manifest；用 search 结果说「无版本号」会误判安装门控）
+#   18:22 那轮报告写 store-location-analysis「registry 未提供版本号（空）」，
+#   实际 manifest: tags.latest=1.0.0 / downloads=501 / installs=0。
+_MANIFEST_BASE = 'https://clawhub.ai/api/v1/skills/'
+
+
+def manifest_version(slug, t=12):
+    import ssl as _ssl
+    import urllib.request as _ur
+    ctx = _ssl.create_default_context()
+    ctx.check_hostname = False
+    ctx.verify_mode = _ssl.CERT_NONE
+    try:
+        req = _ur.Request(_MANIFEST_BASE + slug,
+                          headers={'User-Agent': 'B166ER-scan', 'Accept': 'application/json'})
+        r = _ur.urlopen(req, timeout=t, context=ctx)
+        j = json.loads(r.read().decode('utf-8', 'replace'))
+        sk = j.get('skill') or {}
+        st = sk.get('stats') or {}
+        return ((sk.get('tags') or {}).get('latest'),
+                st.get('downloads'), st.get('installs'),
+                (j.get('owner') or {}).get('handle'))
+    except Exception:
+        return None, None, None, None
+
+
+_ver_map = {}
+for _slug in true_new[:8]:
+    _v, _dl, _ins, _ow = manifest_version(_slug)
+    if _v:
+        _ver_map[_slug] = _v
+    for _r in reg_new:
+        if _r.get('slug') == _slug:
+            if _v:
+                _r['version'] = _v
+            if _dl is not None:
+                _r['downloads'] = _dl
+            if _ins is not None:
+                _r['installs'] = _ins
+            if _ow:
+                _r['owner'] = _ow
+print('[manifest 补版本] 真新增候选 {} 个 → 查到版本 {}（其余仍为 ?）'.format(
+    len(true_new[:8]), _ver_map or '无'))
+
 # ---------- 3. git 更新（三分类，失败也给出可行动原因）----------
 # 2026-10-25 修正：旧版 `git pull --ff-only` 失败只报 err，无行动价值。
 #   evolver: main...origin/main [ahead 115, behind 149]  → 分叉，--ff-only 必然失败
@@ -337,7 +382,7 @@ NET_MARKERS = ('Could not connect', 'Failed to connect', 'Connection was reset',
 
 
 def net_reachable(host='github.com', port=443, t=6):
-    """TCP 预检：GitHub 不可达时直接跳过整个 git 阶段（6s 内给出明确结论）"""
+    """TCP 直连探测（仅作诊断信息，不再作为「是否跳过 git 阶段」的判据）"""
     import socket
     try:
         s = socket.create_connection((host, port), timeout=t)
@@ -347,12 +392,28 @@ def net_reachable(host='github.com', port=443, t=6):
         return False
 
 
+def git_reachable(t=14):
+    """2026-10-26 18:22 修正：**预检必须与实际动作同栈**。
+       旧版用裸 socket 直连判「网络 OK」，但 git 走 libcurl（可走系统代理 / 不同 TLS 栈），
+       实测出现过「预检 OK 但 6 个仓全部 neterr」（net_ok=True 与 git_fail 同时成立，自相矛盾）。
+       现在改用 git 自己探：ls-remote 一个已知仓，14s 内返回即认为 git 通道可用。
+       另外：Windows 上 git 不会自动读 WinINET 系统代理（urllib 会读），
+       故直连失败 ≠ git 不可用（实测直连超时但 git 走代理 1.1s 成功）。"""
+    rc, o, e = run(['git', '-c', 'http.version=HTTP/1.1', 'ls-remote', '--heads',
+                    'https://github.com/EvoMap/evolver.git'], t)
+    return rc == 0
+
+
 cands = [d for d in (SKILLS.iterdir() if SKILLS.exists() else [])
          if d.is_dir() and (d / '.git').exists()][:MAX_GIT]
-NET_OK = net_reachable()
+NET_DIRECT = net_reachable()          # 诊断用：裸 TCP 直连（不代表 git 能否走代理）
+GIT_OK = git_reachable()               # 判据用：与实际 fetch 同栈的 git 探针
+NET_OK = GIT_OK
+print('[git] 通道探测：裸TCP直连={}｜git同栈探针={}（判据用后者）'.format(
+    '通' if NET_DIRECT else '不通', '通' if GIT_OK else '不通'))
 if not NET_OK:
-    git_skipped = [d.name for d in cands]
-    print('[git] GitHub 不可达 → 本轮跳过 {} 个仓的更新（网络/代理问题，非脚本故障）'.format(len(cands)))
+    git_skipped = ['{}(git通道不可达)'.format(d.name) for d in cands]
+    print('[git] git 通道不可达 → 本轮跳过 {} 个仓的更新（网络/代理问题，非脚本故障）'.format(len(cands)))
 consec_net_fail = 0
 for d in cands:
     if not NET_OK:
@@ -362,7 +423,8 @@ for d in cands:
         continue
     if consec_net_fail >= 2:
         # 熔断：连续 2 个仓因网络失败 → 判定网络整体不通，剩余不再逐个试
-        git_skipped.append(d.name)
+        # 2026-10-26 修正：标注「因熔断连带」——否则报告读起来像这 4 个仓也坏了
+        git_skipped.append('{}(因网络熔断连带，非该仓故障)'.format(d.name))
         continue
     # 3.0 清理陈旧 .lock（上次 fetch 被 timeout 强杀留下的残留，
     #     会让后续 fetch 报 "reference already exists"）
@@ -392,7 +454,9 @@ for d in cands:
         is_net = any(k in blob for k in NET_MARKERS)
         if is_net:
             consec_net_fail += 1
-            reason = 'neterr'
+            # 2026-10-26 修正：实测为**瞬时网络抖动**（同一命令 1.1s 成功 / 21s 超时都出现过），
+            # 不是「该仓坏了」也不是「代理配置错误」→ 不该让 Eric 去人工排查代理/域名
+            reason = 'neterr(瞬时抖动，下轮自动重试)'
         else:
             reason = 'timeout' if rc == -1 else ('missing' if rc == -2 else
                       (blob.strip().splitlines()[-1][:44] if blob.strip() else 'err'))
