@@ -250,6 +250,11 @@ def _classify_gaps(cands):
 gap_status = _classify_gaps(reg_market)
 # 与上一轮对比 → 空白是否被填补（本扫描器最有价值的信号）
 gap_delta = []
+# 2026-10-26 16:41 修正：单轮差分把「回流」误报为「新增」
+#   实测：registry 关键词检索结果集在轮间波动（82 → 69 → 75），
+#   候选掉出检索集、下轮再回来 → 单轮差分 (_cur - _prev) 把它当成全新候选 → 假新增。
+#   16:41 那轮 13 条「新增」里绝大多数是 12:40 已出现过的旧候选回流。
+#   改为：**累计见过的 slug 池**判定真新增（首次出现才算新增），并单独报「回流」数量。
 _prev = {}
 _prev_slugs = set()
 _prev_vec = set()
@@ -261,26 +266,50 @@ if LOG.exists():
         _prev_vec = {m.get('name') for m in (_pd.get('new') or []) if m.get('name')}
     except Exception:
         _prev = {}
+_pool = {'slugs': [], 'vec': []}
+if POOL.exists():
+    try:
+        _pd2 = json.loads(POOL.read_text(encoding='utf-8', errors='replace'))
+        _pool = {'slugs': list(_pd2.get('slugs') or []), 'vec': list(_pd2.get('vec') or [])}
+    except Exception:
+        _pool = {'slugs': [], 'vec': []}
+if not _pool.get('slugs') and not _pool.get('vec'):
+    # 首次启用：无池文件 → 以「上一轮」为种子，避免把整库 75 条一次性误报为新增
+    _pool = {'slugs': sorted(_prev_slugs), 'vec': sorted(_prev_vec)}
+    print('[累计池] 首次启用 → 以上一轮为种子（{} 个 slug），避免全量误报新增'.format(len(_pool['slugs'])))
+_pool_slugs = set(_pool.get('slugs') or [])
+_pool_vec = set(_pool.get('vec') or [])
 for gid, g in gap_status.items():
     old = (_prev.get(gid) or {}).get('status')
     if old and old != g['status']:
         gap_delta.append('{}：{} → {}'.format(g['title'], old, g['status']))
 if gap_delta:
     print('[能力空白变化] ' + '；'.join(gap_delta))
-
-# 2026-10-26 追加：候选集变化量（解决「每 2h 重复推送完全相同内容」）
-#   扫描已连续多轮返回完全相同的 10 条向量候选 + 82 个 registry 候选 → 重复推送既刷屏又烧上下文。
-#   现输出变化量：只有真的有新技能/新空白时才值得推送。
 _cur_slugs = {r.get('slug') for r in reg_market if r.get('slug')}
 _cur_vec = {m.get('name') for m in market if m.get('name')}
-candidate_delta = sorted(_cur_slugs - _prev_slugs) if _prev_slugs else []
-vector_delta = sorted(_cur_vec - _prev_vec) if _prev_vec else []
+# 真新增 = 从未在累计池里出现过（回流不再误报为新增）
+candidate_delta = sorted(_cur_slugs - _pool_slugs)
+vector_delta = sorted(_cur_vec - _pool_vec)
+# 回流 = 本轮出现、累计池里见过、但上一轮没出现 → 单轮差分会误判为新增
+reflow = sorted((_cur_slugs - _prev_slugs) & _pool_slugs)
 NO_CHANGE = (not candidate_delta) and (not vector_delta) and (not gap_delta)
 if NO_CHANGE:
-    print('[本轮无变化] 候选集与能力空白状态与上一轮一致 → 建议不推送（仅记日志）')
+    print('[本轮无变化] 真新增候选 0 + 空白状态与上轮一致 → 建议不推送（仅记日志）')
 else:
-    print('[本轮有变化] 新 registry 候选 {}｜新向量候选 {}｜空白变化 {}'.format(
+    print('[本轮有变化] 真新增 registry {}｜真新增向量 {}｜空白变化 {}'.format(
         len(candidate_delta), len(vector_delta), len(gap_delta)))
+print('[回流识别] 本轮回流旧候选 {} 个（已在累计池中，单轮差分会误报为新增）: {}'.format(
+    len(reflow), ', '.join(reflow[:12]) or '—'))
+_pool_slugs |= _cur_slugs
+_pool_vec |= _cur_vec
+try:
+    POOL.parent.mkdir(parents=True, exist_ok=True)
+    POOL.write_text(json.dumps({'slugs': sorted(_pool_slugs), 'vec': sorted(_pool_vec),
+                                 'updated': time.strftime('%Y-%m-%d %H:%M:%S')},
+                                ensure_ascii=False, indent=2), encoding='utf-8')
+    print('[累计池] 已更新：{} 个 slug / {} 个向量候选'.format(len(_pool_slugs), len(_pool_vec)))
+except Exception as _pe:
+    print('[累计池写入失败] {}'.format(_pe))
 
 # ---------- 3. git 更新（三分类，失败也给出可行动原因）----------
 # 2026-10-25 修正：旧版 `git pull --ff-only` 失败只报 err，无行动价值。
@@ -413,6 +442,9 @@ for gid, g in gap_status.items():
 L.append('- 空白变化：{}\n'.format('；'.join(gap_delta) if gap_delta else '无（本轮无变化）'))
 L.append('- 候选变化：新增 registry 候选 {}｜新增向量候选 {}｜**本轮是否有变化**: {}\n'.format(
     len(candidate_delta), len(vector_delta), '否（建议不推送）' if NO_CHANGE else '是'))
+L.append('- 真新增（累积池口径，排除回流）：{} 个：{}\n'.format(
+    len(true_new), '、'.join(true_new) if true_new else '无'))
+L.append('- 累积 slug 池总量：{} 条\n'.format(len(_seen)))
 L += ['\n### 新技能候选\n']
 if new_market:
     for m in new_market:
@@ -447,6 +479,8 @@ result = {'ts': ts, 'sec': round(time.time() - t0, 1), 'cli_ok': cli_ok,
           'reg_new': reg_new, 'reg_stat': reg_stat,
           'gap_status': gap_status, 'gap_delta': gap_delta,
           'candidate_delta': candidate_delta, 'vector_delta': vector_delta,
+          'reflow': reflow, 'pool_n': len(_pool_slugs),
+          'true_new': true_new, 'seen_pool_n': len(_seen),
           'no_change': NO_CHANGE,
           'git_ok': git_updated, 'git_uptodate': git_uptodate,
           'git_diverged': git_diverged, 'git_fail': git_failed,
