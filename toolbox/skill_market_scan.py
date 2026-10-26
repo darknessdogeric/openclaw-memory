@@ -27,6 +27,7 @@ SKILLS = WS / 'skills'
 MEMO = WS / 'memory' / 'B166ER-skill-upgrade-checklist.md'
 SHIM = Path(os.environ.get('APPDATA', '')) / 'npm' / 'clawhub.cmd'
 LOG = WS / '.tmp' / 'skill_scan_last.json'
+POOL = LOG.parent / 'skill_market_seen_pool.json'
 
 TOTAL_BUDGET = 200
 CLAWHUB_TIMEOUT = 15
