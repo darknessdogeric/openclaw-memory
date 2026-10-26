@@ -137,9 +137,18 @@ def analyze(files):
             'new': '1244',
             'note': '战略编号修正',
         },
-        '本奥米尔/UAE/阿联酋': {
-            'old': ['本奥米尔', 'UAE', '阿联酋'],
-            'note': 'R66 已清理虚构内容',
+        # 2026-10-26 分级修正：原规则把「本奥米尔」（R66 虚构地名）与「UAE/阿联酋」
+        #   （**真实地名**，如迪拜棕榈岛项目本就该提）混为一谈 → 实测 38 处「冲突」里
+        #   36 处是误报，噪音淹没真问题（真含虚构残留的只有 2 个文件）。
+        #   拆分：虚构残留 = error 级（conflict_keywords）；真实地名提及 = info 级（advisory_terms）
+        'R66虚构地名残留': {
+            'old': ['本奥米尔'],
+            'note': 'R66 已清理的虚构地名，应保持不出现',
+        },
+        '真实地名提及(非冲突)': {
+            'old': ['UAE', '阿联酋'],
+            'note': '真实地名，属正常表述，非 R66 虚构残留',
+            'advisory': True,
         },
     }
 
@@ -151,13 +160,17 @@ def analyze(files):
         # 检查 1234 在标题但 1244 在文末(矛盾)
         for conflict_name, info in CONFLICTS.items():
             if isinstance(info['old'], list):
-                # 多关键词:任何出现都提示
-                if any(kw in content for kw in info['old']):
-                    issues['conflict_keywords'].append({
-                        'file': f['path'],
-                        'type': conflict_name,
-                        'note': info.get('note', ''),
-                    })
+                # 多关键词:分级收集（advisory → advisory_terms，只提示不判冲突）
+                bucket = 'advisory_terms' if info.get('advisory') else 'conflict_keywords'
+                for kw in info['old']:
+                    if kw in content:
+                        issues[bucket].append({
+                            'file': f['path'],
+                            'type': conflict_name,
+                            'term': kw,
+                            'note': info.get('note', ''),
+                        })
+                        break
             else:
                 # 单一关键词(只在标题层)
                 if info['old'] in f['title'] and info['new'] in content:
@@ -204,7 +217,8 @@ def main():
         for v, p in m['versions']:
             print(f"      v{v}: {p}")
 
-    print(f"\n⚠️ 关键词冲突: {len(issues.get('conflict_keywords', []))}")
+    print(f"\n⚠️ 关键词冲突(R66虚构残留): {len(issues.get('conflict_keywords', []))}")
+    print(f"ℹ️ 真实地名提及(非冲突): {len(issues.get('advisory_terms', []))}")
     for c in issues.get('conflict_keywords', [])[:10]:
         print(f"   - {c['file']}: {c['type']} ({c['note']})")
 

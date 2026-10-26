@@ -1,6 +1,6 @@
 # KB 每周维护报告
 
-> 生成时间: 2026-10-26 10:32:47（自动）
+> 生成时间: 2026-10-26 10:36:50（自动）
 > 执行方式: `python toolbox/kb_tools/kb_weekly_run.py`（确定性三段流水线）
 
 ## 执行结果
@@ -16,8 +16,8 @@
 - scanned_files: 913
 - empty_files: 0
 - multi_versions: 9
-- conflict_keywords: 40
-- advisory_terms: 0
+- conflict_keywords: 4
+- advisory_terms: 40
 - todos: 21
 - kb_candidates: 1285
 - already_routed: 1285
