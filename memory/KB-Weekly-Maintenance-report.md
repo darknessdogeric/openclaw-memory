@@ -1,6 +1,6 @@
 # KB 每周维护报告
 
-> 生成时间: 2026-10-26 10:39:20（自动）
+> 生成时间: 2026-10-26 13:12:52（自动）
 > 执行方式: `python toolbox/kb_tools/kb_weekly_run.py`（确定性三段流水线）
 
 ## 执行结果
@@ -13,7 +13,7 @@
 
 ## 关键指标
 
-- scanned_files: 913
+- scanned_files: 916
 - empty_files: 0
 - multi_versions: 9
 - conflict_keywords: 4
@@ -24,7 +24,7 @@
 - already_routed: 1285
 - new_routes_needed: 0
 - routing_status: OK
-- moc_bytes: 128862
+- moc_bytes: 129225
 
 ## 结论
 
