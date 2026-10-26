@@ -1613,3 +1613,1199 @@ _扫描者: B166ER | 触发: cron 332ec6e6 | 模型: minimax/MiniMax-M3 | 第 9 
 ### git pull 结果
 - 成功 0 个：—
 - 失败 6 个：evolver(timeout), open-design-skill(timeout), ponytail(timeout), ppt-generator(timeout), scholar-skill(timeout), wewrite(timeout)
+
+---
+
+## 技能市场扫描 · 2026-10-25 04:20:39
+- 用时 30s / 预算 200s（clawhub CLI 可用）
+- 检索词与耗时：hotel=3.2s(rc0), travel=2.9s(rc0)
+- 市场去重后 10 条；本地技能 98 个（SKILL.md 93 个）
+- 市场有本地无：10 个
+
+### 新技能候选
+- **hotel** (score 6120.000) — Hotel
+- **gaode-hotel** (score 5095.000) — 飞猪联动
+- **hotel-lobby-ai-prompt-director** (score 5095.000) — Hotel Lobby AI Prompt Director
+- **china-hotel-price-compare** (score 5095.000) — 酒店比价
+- **rollinggo-hotel-skill-cn-new** (score 5095.000) — RollingGo全球酒店预订Skill-新版本1.1.1
+- **travel** (score 6120.000) — Travel
+- **travel-guide-generator** (score 5095.000) — 旅游攻略生成器
+- **meituan-travel** (score 5095.000) — meituan-travel
+- **travel-rule-check** (score 5095.000) — travel-rule-check
+- **travel-checklist-hy** (score 5095.000) — 出行清单必备
+
+### git pull 结果
+- 成功 4 个：open-design-skill, ponytail, ppt-generator, scholar-skill
+- 失败 2 个：evolver(err), wewrite(err)
+
+---
+
+## 技能市场扫描 · 2026-10-25 04:22:41
+- 用时 13s / 预算 200s（clawhub CLI 可用）
+- 检索词与耗时：hotel=2.4s(rc0), travel=2.3s(rc0)
+- 市场去重后 10 条；本地技能 98 个（SKILL.md 93 个）
+- 市场有本地无：10 个
+
+### 新技能候选
+- **hotel** (score 6120.000) — Hotel
+- **gaode-hotel** (score 5095.000) — 飞猪联动
+- **hotel-lobby-ai-prompt-director** (score 5095.000) — Hotel Lobby AI Prompt Director
+- **china-hotel-price-compare** (score 5095.000) — 酒店比价
+- **rollinggo-hotel-skill-cn-new** (score 5095.000) — RollingGo全球酒店预订Skill-新版本1.1.1
+- **travel** (score 6120.000) — Travel
+- **travel-guide-generator** (score 5095.000) — 旅游攻略生成器
+- **meituan-travel** (score 5095.000) — meituan-travel
+- **travel-rule-check** (score 5095.000) — travel-rule-check
+- **travel-checklist-hy** (score 5095.000) — 出行清单必备
+
+### git pull 结果
+- 成功 0 个：—
+- 失败 1 个：evolver(err)
+
+---
+
+## 技能市场扫描 · 2026-10-25 04:23:26
+- 用时 13s / 预算 200s（clawhub CLI 可用）
+- 检索词与耗时：hotel=2.3s(rc0), travel=2.8s(rc0)
+- 市场去重后 10 条；本地技能 98 个（SKILL.md 93 个）
+- 市场有本地无：10 个
+
+### 新技能候选
+- **hotel** (score 6120.000) — Hotel
+- **gaode-hotel** (score 5095.000) — 飞猪联动
+- **hotel-lobby-ai-prompt-director** (score 5095.000) — Hotel Lobby AI Prompt Director
+- **china-hotel-price-compare** (score 5095.000) — 酒店比价
+- **rollinggo-hotel-skill-cn-new** (score 5095.000) — RollingGo全球酒店预订Skill-新版本1.1.1
+- **travel** (score 6120.000) — Travel
+- **travel-guide-generator** (score 5095.000) — 旅游攻略生成器
+- **meituan-travel** (score 5095.000) — meituan-travel
+- **travel-rule-check** (score 5095.000) — travel-rule-check
+- **travel-checklist-hy** (score 5095.000) — 出行清单必备
+
+### git 更新结果
+- 已更新 0 个：—
+- 已是最新 5 个：open-design-skill, ponytail, ppt-generator, scholar-skill, wewrite
+- 需人工处理（分支分叉，脚本不自动改写）0 个：—
+- 失败（网络/权限等）1 个：evolver(err)
+
+---
+
+## 技能市场扫描 · 2026-10-25 04:24:31
+- 用时 13s / 预算 200s（clawhub CLI 可用）
+- 检索词与耗时：hotel=2.6s(rc0), travel=2.4s(rc0)
+- 市场去重后 10 条；本地技能 98 个（SKILL.md 93 个）
+- 市场有本地无：10 个
+
+### 新技能候选
+- **hotel** (score 6120.000) — Hotel
+- **gaode-hotel** (score 5095.000) — 飞猪联动
+- **hotel-lobby-ai-prompt-director** (score 5095.000) — Hotel Lobby AI Prompt Director
+- **china-hotel-price-compare** (score 5095.000) — 酒店比价
+- **rollinggo-hotel-skill-cn-new** (score 5095.000) — RollingGo全球酒店预订Skill-新版本1.1.1
+- **travel** (score 6120.000) — Travel
+- **travel-guide-generator** (score 5095.000) — 旅游攻略生成器
+- **meituan-travel** (score 5095.000) — meituan-travel
+- **travel-rule-check** (score 5095.000) — travel-rule-check
+- **travel-checklist-hy** (score 5095.000) — 出行清单必备
+
+### git 更新结果
+- 已更新 0 个：—
+- 已是最新 5 个：open-design-skill, ponytail, ppt-generator, scholar-skill, wewrite
+- 需人工处理（分支分叉，脚本不自动改写）0 个：—
+- 失败（网络/权限等）1 个：evolver(err)
+
+---
+
+## 技能市场扫描 · 2026-10-25 04:26:17
+- 用时 13s / 预算 200s（clawhub CLI 可用）
+- 检索词与耗时：hotel=4.1s(rc0), travel=2.4s(rc0)
+- 市场去重后 10 条；本地技能 98 个（SKILL.md 93 个）
+- 市场有本地无：10 个
+
+### 新技能候选
+- **hotel** (score 6120.000) — Hotel
+- **gaode-hotel** (score 5095.000) — 飞猪联动
+- **hotel-lobby-ai-prompt-director** (score 5095.000) — Hotel Lobby AI Prompt Director
+- **china-hotel-price-compare** (score 5095.000) — 酒店比价
+- **rollinggo-hotel-skill-cn-new** (score 5095.000) — RollingGo全球酒店预订Skill-新版本1.1.1
+- **travel** (score 6120.000) — Travel
+- **travel-guide-generator** (score 5095.000) — 旅游攻略生成器
+- **meituan-travel** (score 5095.000) — meituan-travel
+- **travel-rule-check** (score 5095.000) — travel-rule-check
+- **travel-checklist-hy** (score 5095.000) — 出行清单必备
+
+### git 更新结果
+- 已更新 0 个：—
+- 已是最新 5 个：open-design-skill, ponytail, ppt-generator, scholar-skill, wewrite
+- 需人工处理（分支分叉，脚本不自动改写）1 个：evolver(ahead 115,behind 149 → 需人工 rebase/merge)
+- 失败（网络/权限等）0 个：—
+
+---
+
+## 技能市场扫描 · 2026-10-25 06:20:31
+- 用时 14s / 预算 200s（clawhub CLI 可用）
+- 检索词与耗时：hotel=3.3s(rc0), travel=3.5s(rc0)
+- 市场去重后 10 条；本地技能 98 个（SKILL.md 93 个）
+- 市场有本地无：10 个
+
+### 新技能候选
+- **hotel** (score 6120.000) — Hotel
+- **gaode-hotel** (score 5095.000) — 飞猪联动
+- **hotel-lobby-ai-prompt-director** (score 5095.000) — Hotel Lobby AI Prompt Director
+- **china-hotel-price-compare** (score 5095.000) — 酒店比价
+- **rollinggo-hotel-skill-cn-new** (score 5095.000) — RollingGo全球酒店预订Skill-新版本1.1.1
+- **travel** (score 6120.000) — Travel
+- **travel-guide-generator** (score 5095.000) — 旅游攻略生成器
+- **meituan-travel** (score 5095.000) — meituan-travel
+- **travel-rule-check** (score 5095.000) — travel-rule-check
+- **travel-checklist-hy** (score 5095.000) — 出行清单必备
+
+### git 更新结果
+- 已更新 0 个：—
+- 已是最新 5 个：open-design-skill, ponytail, ppt-generator, scholar-skill, wewrite
+- 需人工处理（分支分叉，脚本不自动改写）1 个：evolver(ahead 115,behind 149 → 需人工 rebase/merge)
+- 失败（网络/权限等）0 个：—
+
+---
+
+## 技能市场扫描 · 2026-10-25 06:30:14
+- 用时 161s / 预算 200s（clawhub CLI 可用）
+- 检索词与耗时：hotel=2.5s(rc0), travel=2.6s(rc0)
+- 市场去重后 10 条；本地技能 98 个（SKILL.md 93 个）
+- 市场有本地无：10 个
+- registry 关键词检索: 17 条去重（17 个可安装）
+
+### 新技能候选
+- **hotel** (score 6120.000) — Hotel
+- **gaode-hotel** (score 5095.000) — 飞猪联动
+- **hotel-lobby-ai-prompt-director** (score 5095.000) — Hotel Lobby AI Prompt Director
+- **china-hotel-price-compare** (score 5095.000) — 酒店比价
+- **rollinggo-hotel-skill-cn-new** (score 5095.000) — RollingGo全球酒店预订Skill-新版本1.1.1
+- **travel** (score 6120.000) — Travel
+- **travel-guide-generator** (score 5095.000) — 旅游攻略生成器
+- **meituan-travel** (score 5095.000) — meituan-travel
+- **travel-rule-check** (score 5095.000) — travel-rule-check
+- **travel-checklist-hy** (score 5095.000) — 出行清单必备
+
+### registry 关键词检索 · 可安装候选（按下载量降序）
+- **pricewin-hotel-deal-finder**  v?  ↓19448次/装0次  owner: price-win  ref: `skills-sh:price-win/pricewin-skills-hub/pricewin-hotel-deal-finder`  — # PriceWin Hotel Deal Finder > **Compare live hotel prices across Booking.com, Agoda, Goog
+- **pricewin-price-comparison**  v?  ↓10513次/装0次  owner: price-win  ref: `skills-sh:price-win/pricewin-skills-hub/pricewin-price-comparison`  — > Requires the `pricewin` MCP server. This skill issues no network calls of its own. # Pri
+- **compare-hotels**  v?  ↓1651次/装0次  owner: dingtom336-gif  ref: `dingtom336-gif/compare-hotels`  — Compare hotel prices across multiple properties for the same dates. Side-by-side compariso
+- **china-hotel-price-compare**  v?  ↓1616次/装0次  owner: travel-skills  ref: `travel-skills/china-hotel-price-compare`  — 先浏览再比价，TourMind+途牛+同程+美团+RollingGo五源并发比价，找出全网最低价。含评分、距离、早餐、取消政策等详细信息。暑期出行多平台比价，轻松找到最划算的住宿方
+- **hotel-search**  v?  ↓1520次/装0次  owner: skillhq-ai  ref: `skillhq-ai/hotel-search`  — Search Google Hotels for hotel prices, ratings, and availability using browser automation.
+- **hotel-price-monitor**  v?  ↓1304次/装0次  owner: travel-skills  ref: `travel-skills/hotel-price-monitor`  — 酒店降价监控与多平台比价助手，同时搜索多个旅游平台实时价格帮你比价省钱，支持按酒店名称精确比价、按城市搜索酒店列表、创建降价监控任务，多旅游平台数据直连。暑期订酒店省钱，价格监控与
+- **travel-hotel-research**  v?  ↓1272次/装0次  owner: crawlora-org  ref: `crawlora-org/travel-hotel-research`  — Researches hotels, flights, attractions, short-term rentals, and live events via the Crawl
+- **hotel-smart-book**  v?  ↓1179次/装0次  owner: travel-skills  ref: `travel-skills/hotel-smart-book`  — 多旅游平台酒店比价与订房决策助手，帮你找到最便宜的酒店并告诉你该订还是再等等，含低价日历和订房建议，多旅游平台数据直连。暑假聪明订酒店，智能推荐与比价
+- **xiaxiayouhui-deals**  v?  ↓1143次/装0次  owner: cheese9102  ref: `cheese9102/xiaxiayouhui-deals`  — 跨平台电商比价与优惠券聚合工具。当用户询问商品价格、查找优惠券、解析商品链接、寻找今日好价或本地生活优惠时调用。返回多个电商平台的同款商品价格对比和可用券信息。
+- **bijia**  v?  ↓1001次/装0次  owner: fangshan101-coder  ref: `fangshan101-coder/bijia`  — 全网商品比价工具，一键对比淘宝京东拼多多抖音等各平台同款商品价格，结合优惠券和返利计算真实最低到手价。
+- **meituan-hotel-deals**  v?  ↓965次/装0次  owner: travel-skills  ref: `travel-skills/meituan-hotel-deals`  — 搜索美团全国连锁品牌酒店特价套餐，覆盖希尔顿、万豪、洲际、凯悦、香格里拉、亚朵、全季等品牌，低至2折起。支持按城市、品牌筛选，按折扣或价格排序。实时数据，含预订链接直跳美团下单。暑
+- **price-drop-tracker**  v?  ↓820次/装0次  owner: zhaorabbits  ref: `zhaorabbits/price-drop-tracker`  — 降价监控+自动下单。用户设置目标价和截止日期后，系统定时轮询飞猪价格，达标后通知或自动下单。Use when user mentions 降价监控, 价格提醒, 等降价, 盯盘, 
+- **rollinggo-hotel-skill-cn-new**  v?  ↓767次/装0次  owner: rollinggo-ai  ref: `rollinggo-ai/rollinggo-hotel-skill-cn-new`  — 全球酒店预订&低价监控提醒Skill，200万+精选酒店，独家优惠价格，全球第三大旅游科技公司14年房源积累，让你的Agent轻松预订品质酒店，支持支付宝下单+查询历史订单，24 
+- **hotel-procurement-price-check**  v?  ↓748次/装0次  owner: chaoliuzhu  ref: `chaoliuzhu/hotel-procurement-price-check`  — 提供酒店餐饮农产品及电商全网实时价格对比，支持多数据源查询和成本参考分析。
+- **hotl**  v?  ↓636次/装0次  owner: art22s  ref: `art22s/hotl`  — Use the hotl CLI to search Google Hotels, compare prices, fetch hotel room/rate details, a
+
+### git 更新结果
+- 已更新 0 个：—
+- 已是最新 0 个：—
+- 需人工处理（分支分叉，脚本不自动改写）0 个：—
+- 失败（网络/权限等）6 个：evolver(err), open-design-skill(err), ponytail(err), ppt-generator(timeout), scholar-skill(err), wewrite(err)
+
+---
+
+## 技能市场扫描 · 2026-10-25 06:35:44
+- 用时 69s / 预算 200s（clawhub CLI 可用）
+- 检索词与耗时：hotel=2.5s(rc0), travel=2.5s(rc0)
+- 市场去重后 10 条；本地技能 98 个（SKILL.md 93 个）
+- 市场有本地无：10 个
+- registry 关键词检索: 17 条去重（17 个可安装）
+
+### 新技能候选
+- **hotel** (score 6120.000) — Hotel
+- **gaode-hotel** (score 5095.000) — 飞猪联动
+- **hotel-lobby-ai-prompt-director** (score 5095.000) — Hotel Lobby AI Prompt Director
+- **china-hotel-price-compare** (score 5095.000) — 酒店比价
+- **rollinggo-hotel-skill-cn-new** (score 5095.000) — RollingGo全球酒店预订Skill-新版本1.1.1
+- **travel** (score 6120.000) — Travel
+- **travel-guide-generator** (score 5095.000) — 旅游攻略生成器
+- **meituan-travel** (score 5095.000) — meituan-travel
+- **travel-rule-check** (score 5095.000) — travel-rule-check
+- **travel-checklist-hy** (score 5095.000) — 出行清单必备
+
+### registry 关键词检索 · 可安装候选（按下载量降序）
+- **pricewin-hotel-deal-finder**  v?  ↓19448次/装0次  owner: price-win  ref: `skills-sh:price-win/pricewin-skills-hub/pricewin-hotel-deal-finder`  — # PriceWin Hotel Deal Finder > **Compare live hotel prices across Booking.com, Agoda, Goog
+- **pricewin-price-comparison**  v?  ↓10513次/装0次  owner: price-win  ref: `skills-sh:price-win/pricewin-skills-hub/pricewin-price-comparison`  — > Requires the `pricewin` MCP server. This skill issues no network calls of its own. # Pri
+- **compare-hotels**  v?  ↓1651次/装0次  owner: dingtom336-gif  ref: `dingtom336-gif/compare-hotels`  — Compare hotel prices across multiple properties for the same dates. Side-by-side compariso
+- **china-hotel-price-compare**  v?  ↓1616次/装0次  owner: travel-skills  ref: `travel-skills/china-hotel-price-compare`  — 先浏览再比价，TourMind+途牛+同程+美团+RollingGo五源并发比价，找出全网最低价。含评分、距离、早餐、取消政策等详细信息。暑期出行多平台比价，轻松找到最划算的住宿方
+- **hotel-search**  v?  ↓1520次/装0次  owner: skillhq-ai  ref: `skillhq-ai/hotel-search`  — Search Google Hotels for hotel prices, ratings, and availability using browser automation.
+- **hotel-price-monitor**  v?  ↓1304次/装0次  owner: travel-skills  ref: `travel-skills/hotel-price-monitor`  — 酒店降价监控与多平台比价助手，同时搜索多个旅游平台实时价格帮你比价省钱，支持按酒店名称精确比价、按城市搜索酒店列表、创建降价监控任务，多旅游平台数据直连。暑期订酒店省钱，价格监控与
+- **travel-hotel-research**  v?  ↓1272次/装0次  owner: crawlora-org  ref: `crawlora-org/travel-hotel-research`  — Researches hotels, flights, attractions, short-term rentals, and live events via the Crawl
+- **hotel-smart-book**  v?  ↓1179次/装0次  owner: travel-skills  ref: `travel-skills/hotel-smart-book`  — 多旅游平台酒店比价与订房决策助手，帮你找到最便宜的酒店并告诉你该订还是再等等，含低价日历和订房建议，多旅游平台数据直连。暑假聪明订酒店，智能推荐与比价
+- **xiaxiayouhui-deals**  v?  ↓1143次/装0次  owner: cheese9102  ref: `cheese9102/xiaxiayouhui-deals`  — 跨平台电商比价与优惠券聚合工具。当用户询问商品价格、查找优惠券、解析商品链接、寻找今日好价或本地生活优惠时调用。返回多个电商平台的同款商品价格对比和可用券信息。
+- **bijia**  v?  ↓1001次/装0次  owner: fangshan101-coder  ref: `fangshan101-coder/bijia`  — 全网商品比价工具，一键对比淘宝京东拼多多抖音等各平台同款商品价格，结合优惠券和返利计算真实最低到手价。
+- **meituan-hotel-deals**  v?  ↓965次/装0次  owner: travel-skills  ref: `travel-skills/meituan-hotel-deals`  — 搜索美团全国连锁品牌酒店特价套餐，覆盖希尔顿、万豪、洲际、凯悦、香格里拉、亚朵、全季等品牌，低至2折起。支持按城市、品牌筛选，按折扣或价格排序。实时数据，含预订链接直跳美团下单。暑
+- **price-drop-tracker**  v?  ↓820次/装0次  owner: zhaorabbits  ref: `zhaorabbits/price-drop-tracker`  — 降价监控+自动下单。用户设置目标价和截止日期后，系统定时轮询飞猪价格，达标后通知或自动下单。Use when user mentions 降价监控, 价格提醒, 等降价, 盯盘, 
+- **rollinggo-hotel-skill-cn-new**  v?  ↓767次/装0次  owner: rollinggo-ai  ref: `rollinggo-ai/rollinggo-hotel-skill-cn-new`  — 全球酒店预订&低价监控提醒Skill，200万+精选酒店，独家优惠价格，全球第三大旅游科技公司14年房源积累，让你的Agent轻松预订品质酒店，支持支付宝下单+查询历史订单，24 
+- **hotel-procurement-price-check**  v?  ↓748次/装0次  owner: chaoliuzhu  ref: `chaoliuzhu/hotel-procurement-price-check`  — 提供酒店餐饮农产品及电商全网实时价格对比，支持多数据源查询和成本参考分析。
+- **hotl**  v?  ↓636次/装0次  owner: art22s  ref: `art22s/hotl`  — Use the hotl CLI to search Google Hotels, compare prices, fetch hotel room/rate details, a
+
+### git 更新结果
+- 已更新 0 个：—
+- 已是最新 0 个：—
+- 需人工处理（分支分叉，脚本不自动改写）0 个：—
+- 失败（网络/权限等）2 个：evolver(neterr), open-design-skill(neterr)
+- 跳过（网络不通/预算不足）4 个：ponytail, ppt-generator, scholar-skill, wewrite
+
+---
+
+## 技能市场扫描 · 2026-10-25 09:04:48
+- 用时 156s / 预算 200s（clawhub CLI 可用）
+- 检索词与耗时：hotel=14.3s(rc0), travel=6.3s(rc0)
+- 市场去重后 10 条；本地技能 98 个（SKILL.md 93 个）
+- 市场有本地无：10 个
+- registry 关键词检索: 17 条去重（17 个可安装）
+
+### 新技能候选
+- **hotel** (score 6120.000) — Hotel
+- **gaode-hotel** (score 5095.000) — 飞猪联动
+- **hotel-lobby-ai-prompt-director** (score 5095.000) — Hotel Lobby AI Prompt Director
+- **china-hotel-price-compare** (score 5095.000) — 酒店比价
+- **rollinggo-hotel-skill-cn-new** (score 5095.000) — RollingGo全球酒店预订Skill-新版本1.1.1
+- **travel** (score 6120.000) — Travel
+- **travel-guide-generator** (score 5095.000) — 旅游攻略生成器
+- **meituan-travel** (score 5095.000) — meituan-travel
+- **travel-rule-check** (score 5095.000) — travel-rule-check
+- **travel-checklist-hy** (score 5095.000) — 出行清单必备
+
+### registry 关键词检索 · 可安装候选（按下载量降序）
+- **pricewin-hotel-deal-finder**  v?  ↓19448次/装0次  owner: price-win  ref: `skills-sh:price-win/pricewin-skills-hub/pricewin-hotel-deal-finder`  — # PriceWin Hotel Deal Finder > **Compare live hotel prices across Booking.com, Agoda, Goog
+- **pricewin-price-comparison**  v?  ↓10513次/装0次  owner: price-win  ref: `skills-sh:price-win/pricewin-skills-hub/pricewin-price-comparison`  — > Requires the `pricewin` MCP server. This skill issues no network calls of its own. # Pri
+- **compare-hotels**  v?  ↓1651次/装0次  owner: dingtom336-gif  ref: `dingtom336-gif/compare-hotels`  — Compare hotel prices across multiple properties for the same dates. Side-by-side compariso
+- **china-hotel-price-compare**  v?  ↓1617次/装0次  owner: travel-skills  ref: `travel-skills/china-hotel-price-compare`  — 先浏览再比价，TourMind+途牛+同程+美团+RollingGo五源并发比价，找出全网最低价。含评分、距离、早餐、取消政策等详细信息。暑期出行多平台比价，轻松找到最划算的住宿方
+- **hotel-search**  v?  ↓1520次/装0次  owner: skillhq-ai  ref: `skillhq-ai/hotel-search`  — Search Google Hotels for hotel prices, ratings, and availability using browser automation.
+- **hotel-price-monitor**  v?  ↓1305次/装0次  owner: travel-skills  ref: `travel-skills/hotel-price-monitor`  — 酒店降价监控与多平台比价助手，同时搜索多个旅游平台实时价格帮你比价省钱，支持按酒店名称精确比价、按城市搜索酒店列表、创建降价监控任务，多旅游平台数据直连。暑期订酒店省钱，价格监控与
+- **travel-hotel-research**  v?  ↓1273次/装0次  owner: crawlora-org  ref: `crawlora-org/travel-hotel-research`  — Researches hotels, flights, attractions, short-term rentals, and live events via the Crawl
+- **hotel-smart-book**  v?  ↓1179次/装0次  owner: travel-skills  ref: `travel-skills/hotel-smart-book`  — 多旅游平台酒店比价与订房决策助手，帮你找到最便宜的酒店并告诉你该订还是再等等，含低价日历和订房建议，多旅游平台数据直连。暑假聪明订酒店，智能推荐与比价
+- **xiaxiayouhui-deals**  v?  ↓1144次/装0次  owner: cheese9102  ref: `cheese9102/xiaxiayouhui-deals`  — 跨平台电商比价与优惠券聚合工具。当用户询问商品价格、查找优惠券、解析商品链接、寻找今日好价或本地生活优惠时调用。返回多个电商平台的同款商品价格对比和可用券信息。
+- **bijia**  v?  ↓1002次/装0次  owner: fangshan101-coder  ref: `fangshan101-coder/bijia`  — 全网商品比价工具，一键对比淘宝京东拼多多抖音等各平台同款商品价格，结合优惠券和返利计算真实最低到手价。
+- **meituan-hotel-deals**  v?  ↓965次/装0次  owner: travel-skills  ref: `travel-skills/meituan-hotel-deals`  — 搜索美团全国连锁品牌酒店特价套餐，覆盖希尔顿、万豪、洲际、凯悦、香格里拉、亚朵、全季等品牌，低至2折起。支持按城市、品牌筛选，按折扣或价格排序。实时数据，含预订链接直跳美团下单。暑
+- **price-drop-tracker**  v?  ↓820次/装0次  owner: zhaorabbits  ref: `zhaorabbits/price-drop-tracker`  — 降价监控+自动下单。用户设置目标价和截止日期后，系统定时轮询飞猪价格，达标后通知或自动下单。Use when user mentions 降价监控, 价格提醒, 等降价, 盯盘, 
+- **rollinggo-hotel-skill-cn-new**  v?  ↓767次/装0次  owner: rollinggo-ai  ref: `rollinggo-ai/rollinggo-hotel-skill-cn-new`  — 全球酒店预订&低价监控提醒Skill，200万+精选酒店，独家优惠价格，全球第三大旅游科技公司14年房源积累，让你的Agent轻松预订品质酒店，支持支付宝下单+查询历史订单，24 
+- **hotel-procurement-price-check**  v?  ↓748次/装0次  owner: chaoliuzhu  ref: `chaoliuzhu/hotel-procurement-price-check`  — 提供酒店餐饮农产品及电商全网实时价格对比，支持多数据源查询和成本参考分析。
+- **hotl**  v?  ↓636次/装0次  owner: art22s  ref: `art22s/hotl`  — Use the hotl CLI to search Google Hotels, compare prices, fetch hotel room/rate details, a
+
+### git 更新结果
+- 已更新 0 个：—
+- 已是最新 0 个：—
+- 需人工处理（分支分叉，脚本不自动改写）0 个：—
+- 失败（网络/权限等）3 个：evolver(neterr), open-design-skill(timeout), ponytail(neterr)
+- 跳过（网络不通/预算不足）3 个：ppt-generator, scholar-skill, wewrite
+
+---
+
+## 技能市场扫描 · 2026-10-25 16:21:58
+- 用时 103s / 预算 200s（clawhub CLI 可用）
+- 检索词与耗时：hotel=15.6s(rc-1), travel=9.0s(rc0)
+- 市场去重后 5 条；本地技能 98 个（SKILL.md 93 个）
+- 市场有本地无：5 个
+- registry 关键词检索: 81 条去重（81 个可安装）
+
+### 新技能候选
+- **travel** (score 6120.000) — Travel
+- **travel-guide-generator** (score 5095.000) — 旅游攻略生成器
+- **meituan-travel** (score 5095.000) — meituan-travel
+- **travel-rule-check** (score 5095.000) — travel-rule-check
+- **travel-checklist-hy** (score 5095.000) — 出行清单必备
+
+### registry 关键词检索 · 可安装候选（按下载量降序）
+- **pricewin-hotel-deal-finder**  v?  ↓19448次/装0次  owner: price-win  ref: `skills-sh:price-win/pricewin-skills-hub/pricewin-hotel-deal-finder`  — # PriceWin Hotel Deal Finder > **Compare live hotel prices across Booking.com, Agoda, Goog
+- **pricewin-price-comparison**  v?  ↓10513次/装0次  owner: price-win  ref: `skills-sh:price-win/pricewin-skills-hub/pricewin-price-comparison`  — > Requires the `pricewin` MCP server. This skill issues no network calls of its own. # Pri
+- **amap-lbs-skill**  v?  ↓8885次/装0次  owner: lbs-amap  ref: `lbs-amap/amap-lbs-skill`  — 高德地图综合服务，支持POI搜索、路径规划、旅游规划、周边搜索和热力图数据可视化
+- **amap-jsapi-skill**  v?  ↓6066次/装0次  owner: lbs-amap  ref: `lbs-amap/amap-jsapi-skill`  — 高德地图 JSAPI v2.0 (WebGL) 开发技能。涵盖地图生命周期管理、强制安全配置、3D 视图控制、覆盖物绘制及 LBS 服务集成。
+- **competitive-analysis**  v?  ↓5097次/装0次  owner: claude-office-skills  ref: `skills-sh:claude-office-skills/skills/competitive-analysis`  — # Competitive Analysis Skill ## Overview I help you systematically analyze competitors to 
+- **apify-competitor-intelligence**  v?  ↓3282次/装0次  owner: apify  ref: `apify/apify-competitor-intelligence`  — Analyze competitor strategies, content, pricing, ads, and market positioning across Google
+- **competitor-analysis-report**  v?  ↓3070次/装0次  owner: seanwyngaard  ref: `seanwyngaard/competitor-analysis-report`  — Generate structured competitive analysis reports with feature comparisons, pricing analysi
+- **pricing**  v?  ↓3041次/装0次  owner: ivangdavila  ref: `ivangdavila/pricing`  — Sets, tests, and changes prices: value metric, tier packaging, discounts, price increases,
+- **otaku-wiki**  v?  ↓2086次/装0次  owner: robin797860  ref: `robin797860/otaku-wiki`  — 番剧/角色百科问答：用 AniList API 快速查番、查角色、查声优与作品关联（无需数据库）
+- **meituan-travel-assistant**  v?  ↓1731次/装0次  owner: travel-skills  ref: `travel-skills/meituan-travel-assistant`  — 零配置即装即用，本地旅行一站式查询，酒店/机票/火车票/景点门票/行程规划全覆盖，数据覆盖300+城市。暑期吃喝玩乐一站式，美团旅行全攻略
+- **amap-cli-skill**  v?  ↓1726次/装0次  owner: lbs-amap  ref: `lbs-amap/amap-cli-skill`  — 通过 CLI 命令行参数实时操控运行在容器中的高德地图 JSAPI 2.0 实例， 支持地图状态控制、路径规划、POI 搜索等，所有操作均以结构化 JSON 输出，适合 AI Ag
+- **compare-hotels**  v?  ↓1655次/装0次  owner: dingtom336-gif  ref: `dingtom336-gif/compare-hotels`  — Compare hotel prices across multiple properties for the same dates. Side-by-side compariso
+- **moment-writer**  v?  ↓1647次/装0次  owner: fengbabao0929  ref: `fengbabao0929/moment-writer`  — 朋友圈文案生成器（精简版），基于私域变现核心方法论
+- **amazon-pricing-command-center**  v?  ↓1639次/装0次  owner: apiclaw  ref: `apiclaw/amazon-pricing-command-center`  — Data-driven pricing strategy engine for Amazon sellers. Given one or more ASINs, auto-dete
+- **china-hotel-price-compare**  v?  ↓1621次/装0次  owner: travel-skills  ref: `travel-skills/china-hotel-price-compare`  — 先浏览再比价，TourMind+途牛+同程+美团+RollingGo五源并发比价，找出全网最低价。含评分、距离、早餐、取消政策等详细信息。暑期出行多平台比价，轻松找到最划算的住宿方
+
+### git 更新结果
+- 已更新 0 个：—
+- 已是最新 5 个：open-design-skill, ponytail, ppt-generator, scholar-skill, wewrite
+- 需人工处理（分支分叉，脚本不自动改写）1 个：evolver(ahead 115,behind 149 → 需人工 rebase/merge)
+- 失败（网络/权限等）0 个：—
+- 跳过（网络不通/预算不足）0 个：—
+
+---
+
+## 技能市场扫描 · 2026-10-25 18:30:18
+- 用时 114s / 预算 200s（clawhub CLI 可用）
+- 检索词与耗时：hotel=2.4s(rc0), travel=2.8s(rc0)
+- 市场去重后 10 条；本地技能 98 个（SKILL.md 93 个）
+- 市场有本地无：10 个
+- registry 关键词检索: 82 条去重（82 个可安装）
+
+### 新技能候选
+- **hotel** (score 6120.000) — Hotel
+- **gaode-hotel** (score 5095.000) — 飞猪联动
+- **hotel-lobby-ai-prompt-director** (score 5095.000) — Hotel Lobby AI Prompt Director
+- **china-hotel-price-compare** (score 5095.000) — 酒店比价
+- **rollinggo-hotel-skill-cn-new** (score 5095.000) — RollingGo全球酒店预订Skill-新版本1.1.1
+- **travel** (score 6120.000) — Travel
+- **travel-guide-generator** (score 5095.000) — 旅游攻略生成器
+- **meituan-travel** (score 5095.000) — meituan-travel
+- **travel-rule-check** (score 5095.000) — travel-rule-check
+- **travel-checklist-hy** (score 5095.000) — 出行清单必备
+
+### registry 关键词检索 · 可安装候选（按下载量降序）
+- **eas-update-insights**  v?  ↓36812次/装0次  owner: expo  ref: `skills-sh:expo/skills/eas-update-insights`  — # EAS Update Insights > **EAS service - costs apply.** Insights cover updates published th
+- **pricewin-price-comparison**  v?  ↓10514次/装0次  owner: price-win  ref: `skills-sh:price-win/pricewin-skills-hub/pricewin-price-comparison`  — > Requires the `pricewin` MCP server. This skill issues no network calls of its own. # Pri
+- **amap-lbs-skill**  v?  ↓8889次/装0次  owner: lbs-amap  ref: `lbs-amap/amap-lbs-skill`  — 高德地图综合服务，支持POI搜索、路径规划、旅游规划、周边搜索和热力图数据可视化
+- **amap-jsapi-skill**  v?  ↓6069次/装0次  owner: lbs-amap  ref: `lbs-amap/amap-jsapi-skill`  — 高德地图 JSAPI v2.0 (WebGL) 开发技能。涵盖地图生命周期管理、强制安全配置、3D 视图控制、覆盖物绘制及 LBS 服务集成。
+- **competitive-analysis**  v?  ↓5097次/装0次  owner: claude-office-skills  ref: `skills-sh:claude-office-skills/skills/competitive-analysis`  — # Competitive Analysis Skill ## Overview I help you systematically analyze competitors to 
+- **apify-competitor-intelligence**  v?  ↓3285次/装0次  owner: apify  ref: `apify/apify-competitor-intelligence`  — Analyze competitor strategies, content, pricing, ads, and market positioning across Google
+- **competitor-analysis-report**  v?  ↓3071次/装0次  owner: seanwyngaard  ref: `seanwyngaard/competitor-analysis-report`  — Generate structured competitive analysis reports with feature comparisons, pricing analysi
+- **pricing**  v?  ↓3044次/装0次  owner: ivangdavila  ref: `ivangdavila/pricing`  — Sets, tests, and changes prices: value metric, tier packaging, discounts, price increases,
+- **otaku-wiki**  v?  ↓2087次/装0次  owner: robin797860  ref: `robin797860/otaku-wiki`  — 番剧/角色百科问答：用 AniList API 快速查番、查角色、查声优与作品关联（无需数据库）
+- **meituan-travel-assistant**  v?  ↓1734次/装0次  owner: travel-skills  ref: `travel-skills/meituan-travel-assistant`  — 零配置即装即用，本地旅行一站式查询，酒店/机票/火车票/景点门票/行程规划全覆盖，数据覆盖300+城市。暑期吃喝玩乐一站式，美团旅行全攻略
+- **amap-cli-skill**  v?  ↓1728次/装0次  owner: lbs-amap  ref: `lbs-amap/amap-cli-skill`  — 通过 CLI 命令行参数实时操控运行在容器中的高德地图 JSAPI 2.0 实例， 支持地图状态控制、路径规划、POI 搜索等，所有操作均以结构化 JSON 输出，适合 AI Ag
+- **compare-hotels**  v?  ↓1655次/装0次  owner: dingtom336-gif  ref: `dingtom336-gif/compare-hotels`  — Compare hotel prices across multiple properties for the same dates. Side-by-side compariso
+- **moment-writer**  v?  ↓1648次/装0次  owner: fengbabao0929  ref: `fengbabao0929/moment-writer`  — 朋友圈文案生成器（精简版），基于私域变现核心方法论
+- **amazon-pricing-command-center**  v?  ↓1643次/装0次  owner: apiclaw  ref: `apiclaw/amazon-pricing-command-center`  — Data-driven pricing strategy engine for Amazon sellers. Given one or more ASINs, auto-dete
+- **china-hotel-price-compare**  v?  ↓1624次/装0次  owner: travel-skills  ref: `travel-skills/china-hotel-price-compare`  — 先浏览再比价，TourMind+途牛+同程+美团+RollingGo五源并发比价，找出全网最低价。含评分、距离、早餐、取消政策等详细信息。暑期出行多平台比价，轻松找到最划算的住宿方
+
+### git 更新结果
+- 已更新 0 个：—
+- 已是最新 0 个：—
+- 需人工处理（分支分叉，脚本不自动改写）0 个：—
+- 失败（网络/权限等）3 个：evolver(neterr), open-design-skill(timeout), ponytail(neterr)
+- 跳过（网络不通/预算不足）3 个：ppt-generator, scholar-skill, wewrite
+
+---
+
+## 技能市场扫描 · 2026-10-25 20:22:20
+- 用时 127s / 预算 200s（clawhub CLI 可用）
+- 检索词与耗时：hotel=15.6s(rc-1), travel=2.4s(rc0)
+- 市场去重后 5 条；本地技能 98 个（SKILL.md 93 个）
+- 市场有本地无：5 个
+- registry 关键词检索: 82 条去重（82 个可安装）
+
+### 新技能候选
+- **travel** (score 6120.000) — Travel
+- **travel-guide-generator** (score 5095.000) — 旅游攻略生成器
+- **meituan-travel** (score 5095.000) — meituan-travel
+- **travel-rule-check** (score 5095.000) — travel-rule-check
+- **travel-checklist-hy** (score 5095.000) — 出行清单必备
+
+### registry 关键词检索 · 可安装候选（按下载量降序）
+- **eas-update-insights**  v?  ↓36812次/装0次  owner: expo  ref: `skills-sh:expo/skills/eas-update-insights`  — # EAS Update Insights > **EAS service - costs apply.** Insights cover updates published th
+- **pricewin-price-comparison**  v?  ↓10514次/装0次  owner: price-win  ref: `skills-sh:price-win/pricewin-skills-hub/pricewin-price-comparison`  — > Requires the `pricewin` MCP server. This skill issues no network calls of its own. # Pri
+- **amap-lbs-skill**  v?  ↓8889次/装0次  owner: lbs-amap  ref: `lbs-amap/amap-lbs-skill`  — 高德地图综合服务，支持POI搜索、路径规划、旅游规划、周边搜索和热力图数据可视化
+- **amap-jsapi-skill**  v?  ↓6069次/装0次  owner: lbs-amap  ref: `lbs-amap/amap-jsapi-skill`  — 高德地图 JSAPI v2.0 (WebGL) 开发技能。涵盖地图生命周期管理、强制安全配置、3D 视图控制、覆盖物绘制及 LBS 服务集成。
+- **competitive-analysis**  v?  ↓5120次/装0次  owner: claude-office-skills  ref: `skills-sh:claude-office-skills/skills/competitive-analysis`  — # Competitive Analysis Skill ## Overview I help you systematically analyze competitors to 
+- **apify-competitor-intelligence**  v?  ↓3285次/装0次  owner: apify  ref: `apify/apify-competitor-intelligence`  — Analyze competitor strategies, content, pricing, ads, and market positioning across Google
+- **competitor-analysis-report**  v?  ↓3071次/装0次  owner: seanwyngaard  ref: `seanwyngaard/competitor-analysis-report`  — Generate structured competitive analysis reports with feature comparisons, pricing analysi
+- **pricing**  v?  ↓3044次/装0次  owner: ivangdavila  ref: `ivangdavila/pricing`  — Sets, tests, and changes prices: value metric, tier packaging, discounts, price increases,
+- **otaku-wiki**  v?  ↓2087次/装0次  owner: robin797860  ref: `robin797860/otaku-wiki`  — 番剧/角色百科问答：用 AniList API 快速查番、查角色、查声优与作品关联（无需数据库）
+- **meituan-travel-assistant**  v?  ↓1734次/装0次  owner: travel-skills  ref: `travel-skills/meituan-travel-assistant`  — 零配置即装即用，本地旅行一站式查询，酒店/机票/火车票/景点门票/行程规划全覆盖，数据覆盖300+城市。暑期吃喝玩乐一站式，美团旅行全攻略
+- **amap-cli-skill**  v?  ↓1728次/装0次  owner: lbs-amap  ref: `lbs-amap/amap-cli-skill`  — 通过 CLI 命令行参数实时操控运行在容器中的高德地图 JSAPI 2.0 实例， 支持地图状态控制、路径规划、POI 搜索等，所有操作均以结构化 JSON 输出，适合 AI Ag
+- **compare-hotels**  v?  ↓1655次/装0次  owner: dingtom336-gif  ref: `dingtom336-gif/compare-hotels`  — Compare hotel prices across multiple properties for the same dates. Side-by-side compariso
+- **moment-writer**  v?  ↓1648次/装0次  owner: fengbabao0929  ref: `fengbabao0929/moment-writer`  — 朋友圈文案生成器（精简版），基于私域变现核心方法论
+- **amazon-pricing-command-center**  v?  ↓1643次/装0次  owner: apiclaw  ref: `apiclaw/amazon-pricing-command-center`  — Data-driven pricing strategy engine for Amazon sellers. Given one or more ASINs, auto-dete
+- **china-hotel-price-compare**  v?  ↓1624次/装0次  owner: travel-skills  ref: `travel-skills/china-hotel-price-compare`  — 先浏览再比价，TourMind+途牛+同程+美团+RollingGo五源并发比价，找出全网最低价。含评分、距离、早餐、取消政策等详细信息。暑期出行多平台比价，轻松找到最划算的住宿方
+
+### git 更新结果
+- 已更新 0 个：—
+- 已是最新 0 个：—
+- 需人工处理（分支分叉，脚本不自动改写）0 个：—
+- 失败（网络/权限等）3 个：evolver(neterr), open-design-skill(timeout), ponytail(neterr)
+- 跳过（网络不通/预算不足）3 个：ppt-generator, scholar-skill, wewrite
+
+---
+
+## 技能市场扫描 · 2026-10-25 20:24:48
+- 用时 45s / 预算 200s（clawhub CLI 可用）
+- 检索词与耗时：hotel=2.4s(rc0), travel=2.4s(rc0)
+- 向量通道覆盖度缺口：无
+- 市场去重后 10 条；本地技能 98 个（SKILL.md 93 个）
+- 市场有本地无：10 个
+- registry 关键词检索: 82 条去重（82 个可安装）
+
+### 新技能候选
+- **hotel** (score 6120.000) — Hotel
+- **gaode-hotel** (score 5095.000) — 飞猪联动
+- **hotel-lobby-ai-prompt-director** (score 5095.000) — Hotel Lobby AI Prompt Director
+- **china-hotel-price-compare** (score 5095.000) — 酒店比价
+- **rollinggo-hotel-skill-cn-new** (score 5095.000) — RollingGo全球酒店预订Skill-新版本1.1.1
+- **travel** (score 6120.000) — Travel
+- **travel-guide-generator** (score 5095.000) — 旅游攻略生成器
+- **meituan-travel** (score 5095.000) — meituan-travel
+- **travel-rule-check** (score 5095.000) — travel-rule-check
+- **travel-checklist-hy** (score 5095.000) — 出行清单必备
+
+### registry 关键词检索 · 可安装候选（按下载量降序）
+- **eas-update-insights**  v?  ↓36812次/装0次  owner: expo  ref: `skills-sh:expo/skills/eas-update-insights`  — # EAS Update Insights > **EAS service - costs apply.** Insights cover updates published th
+- **pricewin-price-comparison**  v?  ↓10514次/装0次  owner: price-win  ref: `skills-sh:price-win/pricewin-skills-hub/pricewin-price-comparison`  — > Requires the `pricewin` MCP server. This skill issues no network calls of its own. # Pri
+- **amap-lbs-skill**  v?  ↓8889次/装0次  owner: lbs-amap  ref: `lbs-amap/amap-lbs-skill`  — 高德地图综合服务，支持POI搜索、路径规划、旅游规划、周边搜索和热力图数据可视化
+- **amap-jsapi-skill**  v?  ↓6069次/装0次  owner: lbs-amap  ref: `lbs-amap/amap-jsapi-skill`  — 高德地图 JSAPI v2.0 (WebGL) 开发技能。涵盖地图生命周期管理、强制安全配置、3D 视图控制、覆盖物绘制及 LBS 服务集成。
+- **competitive-analysis**  v?  ↓5120次/装0次  owner: claude-office-skills  ref: `skills-sh:claude-office-skills/skills/competitive-analysis`  — # Competitive Analysis Skill ## Overview I help you systematically analyze competitors to 
+- **apify-competitor-intelligence**  v?  ↓3285次/装0次  owner: apify  ref: `apify/apify-competitor-intelligence`  — Analyze competitor strategies, content, pricing, ads, and market positioning across Google
+- **competitor-analysis-report**  v?  ↓3071次/装0次  owner: seanwyngaard  ref: `seanwyngaard/competitor-analysis-report`  — Generate structured competitive analysis reports with feature comparisons, pricing analysi
+- **pricing**  v?  ↓3044次/装0次  owner: ivangdavila  ref: `ivangdavila/pricing`  — Sets, tests, and changes prices: value metric, tier packaging, discounts, price increases,
+- **otaku-wiki**  v?  ↓2087次/装0次  owner: robin797860  ref: `robin797860/otaku-wiki`  — 番剧/角色百科问答：用 AniList API 快速查番、查角色、查声优与作品关联（无需数据库）
+- **meituan-travel-assistant**  v?  ↓1734次/装0次  owner: travel-skills  ref: `travel-skills/meituan-travel-assistant`  — 零配置即装即用，本地旅行一站式查询，酒店/机票/火车票/景点门票/行程规划全覆盖，数据覆盖300+城市。暑期吃喝玩乐一站式，美团旅行全攻略
+- **amap-cli-skill**  v?  ↓1728次/装0次  owner: lbs-amap  ref: `lbs-amap/amap-cli-skill`  — 通过 CLI 命令行参数实时操控运行在容器中的高德地图 JSAPI 2.0 实例， 支持地图状态控制、路径规划、POI 搜索等，所有操作均以结构化 JSON 输出，适合 AI Ag
+- **compare-hotels**  v?  ↓1655次/装0次  owner: dingtom336-gif  ref: `dingtom336-gif/compare-hotels`  — Compare hotel prices across multiple properties for the same dates. Side-by-side compariso
+- **moment-writer**  v?  ↓1648次/装0次  owner: fengbabao0929  ref: `fengbabao0929/moment-writer`  — 朋友圈文案生成器（精简版），基于私域变现核心方法论
+- **amazon-pricing-command-center**  v?  ↓1643次/装0次  owner: apiclaw  ref: `apiclaw/amazon-pricing-command-center`  — Data-driven pricing strategy engine for Amazon sellers. Given one or more ASINs, auto-dete
+- **china-hotel-price-compare**  v?  ↓1624次/装0次  owner: travel-skills  ref: `travel-skills/china-hotel-price-compare`  — 先浏览再比价，TourMind+途牛+同程+美团+RollingGo五源并发比价，找出全网最低价。含评分、距离、早餐、取消政策等详细信息。暑期出行多平台比价，轻松找到最划算的住宿方
+
+### git 更新结果
+- 已更新 0 个：—
+- 已是最新 0 个：—
+- 需人工处理（分支分叉，脚本不自动改写）0 个：—
+- 失败（网络/权限等）0 个：—
+- 跳过（网络不通/预算不足）6 个：evolver, open-design-skill, ponytail, ppt-generator, scholar-skill, wewrite
+
+---
+
+## 技能市场扫描 · 2026-10-25 22:31:43
+- 用时 99s / 预算 200s（clawhub CLI 可用）
+- 检索词与耗时：hotel=2.4s(rc0), travel=3.6s(rc0)
+- 向量通道覆盖度缺口：无
+- 市场去重后 10 条；本地技能 98 个（SKILL.md 93 个）
+- 市场有本地无：10 个
+- registry 关键词检索: 82 条去重（82 个可安装）
+
+### 新技能候选
+- **hotel** (score 6120.000) — Hotel
+- **gaode-hotel** (score 5095.000) — 飞猪联动
+- **hotel-lobby-ai-prompt-director** (score 5095.000) — Hotel Lobby AI Prompt Director
+- **china-hotel-price-compare** (score 5095.000) — 酒店比价
+- **rollinggo-hotel-skill-cn-new** (score 5095.000) — RollingGo全球酒店预订Skill-新版本1.1.1
+- **travel** (score 6120.000) — Travel
+- **travel-guide-generator** (score 5095.000) — 旅游攻略生成器
+- **meituan-travel** (score 5095.000) — meituan-travel
+- **travel-rule-check** (score 5095.000) — travel-rule-check
+- **travel-checklist-hy** (score 5095.000) — 出行清单必备
+
+### registry 关键词检索 · 可安装候选（按下载量降序）
+- **eas-update-insights**  v?  ↓36812次/装0次  owner: expo  ref: `skills-sh:expo/skills/eas-update-insights`  — # EAS Update Insights > **EAS service - costs apply.** Insights cover updates published th
+- **pricewin-price-comparison**  v?  ↓10514次/装0次  owner: price-win  ref: `skills-sh:price-win/pricewin-skills-hub/pricewin-price-comparison`  — > Requires the `pricewin` MCP server. This skill issues no network calls of its own. # Pri
+- **amap-lbs-skill**  v?  ↓8890次/装0次  owner: lbs-amap  ref: `lbs-amap/amap-lbs-skill`  — 高德地图综合服务，支持POI搜索、路径规划、旅游规划、周边搜索和热力图数据可视化
+- **amap-jsapi-skill**  v?  ↓6070次/装0次  owner: lbs-amap  ref: `lbs-amap/amap-jsapi-skill`  — 高德地图 JSAPI v2.0 (WebGL) 开发技能。涵盖地图生命周期管理、强制安全配置、3D 视图控制、覆盖物绘制及 LBS 服务集成。
+- **competitive-analysis**  v?  ↓5120次/装0次  owner: claude-office-skills  ref: `skills-sh:claude-office-skills/skills/competitive-analysis`  — # Competitive Analysis Skill ## Overview I help you systematically analyze competitors to 
+- **apify-competitor-intelligence**  v?  ↓3286次/装0次  owner: apify  ref: `apify/apify-competitor-intelligence`  — Analyze competitor strategies, content, pricing, ads, and market positioning across Google
+- **competitor-analysis-report**  v?  ↓3073次/装0次  owner: seanwyngaard  ref: `seanwyngaard/competitor-analysis-report`  — Generate structured competitive analysis reports with feature comparisons, pricing analysi
+- **pricing**  v?  ↓3044次/装0次  owner: ivangdavila  ref: `ivangdavila/pricing`  — Sets, tests, and changes prices: value metric, tier packaging, discounts, price increases,
+- **otaku-wiki**  v?  ↓2087次/装0次  owner: robin797860  ref: `robin797860/otaku-wiki`  — 番剧/角色百科问答：用 AniList API 快速查番、查角色、查声优与作品关联（无需数据库）
+- **meituan-travel-assistant**  v?  ↓1734次/装0次  owner: travel-skills  ref: `travel-skills/meituan-travel-assistant`  — 零配置即装即用，本地旅行一站式查询，酒店/机票/火车票/景点门票/行程规划全覆盖，数据覆盖300+城市。暑期吃喝玩乐一站式，美团旅行全攻略
+- **amap-cli-skill**  v?  ↓1728次/装0次  owner: lbs-amap  ref: `lbs-amap/amap-cli-skill`  — 通过 CLI 命令行参数实时操控运行在容器中的高德地图 JSAPI 2.0 实例， 支持地图状态控制、路径规划、POI 搜索等，所有操作均以结构化 JSON 输出，适合 AI Ag
+- **compare-hotels**  v?  ↓1656次/装0次  owner: dingtom336-gif  ref: `dingtom336-gif/compare-hotels`  — Compare hotel prices across multiple properties for the same dates. Side-by-side compariso
+- **moment-writer**  v?  ↓1648次/装0次  owner: fengbabao0929  ref: `fengbabao0929/moment-writer`  — 朋友圈文案生成器（精简版），基于私域变现核心方法论
+- **amazon-pricing-command-center**  v?  ↓1643次/装0次  owner: apiclaw  ref: `apiclaw/amazon-pricing-command-center`  — Data-driven pricing strategy engine for Amazon sellers. Given one or more ASINs, auto-dete
+- **china-hotel-price-compare**  v?  ↓1624次/装0次  owner: travel-skills  ref: `travel-skills/china-hotel-price-compare`  — 先浏览再比价，TourMind+途牛+同程+美团+RollingGo五源并发比价，找出全网最低价。含评分、距离、早餐、取消政策等详细信息。暑期出行多平台比价，轻松找到最划算的住宿方
+
+### git 更新结果
+- 已更新 0 个：—
+- 已是最新 0 个：—
+- 需人工处理（分支分叉，脚本不自动改写）0 个：—
+- 失败（网络/权限等）2 个：evolver(neterr), open-design-skill(timeout)
+- 跳过（网络不通/预算不足）4 个：ponytail, ppt-generator, scholar-skill, wewrite
+
+---
+
+## 技能市场扫描 · 2026-10-26 00:21:11
+- 用时 56s / 预算 200s（clawhub CLI 可用）
+- 检索词与耗时：hotel=3.3s(rc0), travel=3.6s(rc0)
+- 向量通道覆盖度缺口：无
+- 市场去重后 10 条；本地技能 98 个（SKILL.md 93 个）
+- 市场有本地无：10 个
+- registry 关键词检索: 82 条去重（82 个可安装）
+
+### 新技能候选
+- **hotel** (score 6120.000) — Hotel
+- **gaode-hotel** (score 5095.000) — 飞猪联动
+- **hotel-lobby-ai-prompt-director** (score 5095.000) — Hotel Lobby AI Prompt Director
+- **china-hotel-price-compare** (score 5095.000) — 酒店比价
+- **rollinggo-hotel-skill-cn-new** (score 5095.000) — RollingGo全球酒店预订Skill-新版本1.1.1
+- **travel** (score 6120.000) — Travel
+- **travel-guide-generator** (score 5095.000) — 旅游攻略生成器
+- **meituan-travel** (score 5095.000) — meituan-travel
+- **travel-rule-check** (score 5095.000) — travel-rule-check
+- **travel-checklist-hy** (score 5095.000) — 出行清单必备
+
+### registry 关键词检索 · 可安装候选（按下载量降序）
+- **eas-update-insights**  v?  ↓36812次/装0次  owner: expo  ref: `skills-sh:expo/skills/eas-update-insights`  — # EAS Update Insights > **EAS service - costs apply.** Insights cover updates published th
+- **pricewin-price-comparison**  v?  ↓10514次/装0次  owner: price-win  ref: `skills-sh:price-win/pricewin-skills-hub/pricewin-price-comparison`  — > Requires the `pricewin` MCP server. This skill issues no network calls of its own. # Pri
+- **amap-lbs-skill**  v?  ↓8890次/装0次  owner: lbs-amap  ref: `lbs-amap/amap-lbs-skill`  — 高德地图综合服务，支持POI搜索、路径规划、旅游规划、周边搜索和热力图数据可视化
+- **amap-jsapi-skill**  v?  ↓6070次/装0次  owner: lbs-amap  ref: `lbs-amap/amap-jsapi-skill`  — 高德地图 JSAPI v2.0 (WebGL) 开发技能。涵盖地图生命周期管理、强制安全配置、3D 视图控制、覆盖物绘制及 LBS 服务集成。
+- **competitive-analysis**  v?  ↓5120次/装0次  owner: claude-office-skills  ref: `skills-sh:claude-office-skills/skills/competitive-analysis`  — # Competitive Analysis Skill ## Overview I help you systematically analyze competitors to 
+- **apify-competitor-intelligence**  v?  ↓3286次/装0次  owner: apify  ref: `apify/apify-competitor-intelligence`  — Analyze competitor strategies, content, pricing, ads, and market positioning across Google
+- **competitor-analysis-report**  v?  ↓3073次/装0次  owner: seanwyngaard  ref: `seanwyngaard/competitor-analysis-report`  — Generate structured competitive analysis reports with feature comparisons, pricing analysi
+- **pricing**  v?  ↓3044次/装0次  owner: ivangdavila  ref: `ivangdavila/pricing`  — Sets, tests, and changes prices: value metric, tier packaging, discounts, price increases,
+- **otaku-wiki**  v?  ↓2087次/装0次  owner: robin797860  ref: `robin797860/otaku-wiki`  — 番剧/角色百科问答：用 AniList API 快速查番、查角色、查声优与作品关联（无需数据库）
+- **meituan-travel-assistant**  v?  ↓1734次/装0次  owner: travel-skills  ref: `travel-skills/meituan-travel-assistant`  — 零配置即装即用，本地旅行一站式查询，酒店/机票/火车票/景点门票/行程规划全覆盖，数据覆盖300+城市。暑期吃喝玩乐一站式，美团旅行全攻略
+- **amap-cli-skill**  v?  ↓1728次/装0次  owner: lbs-amap  ref: `lbs-amap/amap-cli-skill`  — 通过 CLI 命令行参数实时操控运行在容器中的高德地图 JSAPI 2.0 实例， 支持地图状态控制、路径规划、POI 搜索等，所有操作均以结构化 JSON 输出，适合 AI Ag
+- **compare-hotels**  v?  ↓1656次/装0次  owner: dingtom336-gif  ref: `dingtom336-gif/compare-hotels`  — Compare hotel prices across multiple properties for the same dates. Side-by-side compariso
+- **moment-writer**  v?  ↓1648次/装0次  owner: fengbabao0929  ref: `fengbabao0929/moment-writer`  — 朋友圈文案生成器（精简版），基于私域变现核心方法论
+- **amazon-pricing-command-center**  v?  ↓1643次/装0次  owner: apiclaw  ref: `apiclaw/amazon-pricing-command-center`  — Data-driven pricing strategy engine for Amazon sellers. Given one or more ASINs, auto-dete
+- **china-hotel-price-compare**  v?  ↓1624次/装0次  owner: travel-skills  ref: `travel-skills/china-hotel-price-compare`  — 先浏览再比价，TourMind+途牛+同程+美团+RollingGo五源并发比价，找出全网最低价。含评分、距离、早餐、取消政策等详细信息。暑期出行多平台比价，轻松找到最划算的住宿方
+
+### git 更新结果
+- 已更新 0 个：—
+- 已是最新 5 个：open-design-skill, ponytail, ppt-generator, scholar-skill, wewrite
+- 需人工处理（分支分叉，脚本不自动改写）1 个：evolver(ahead 115,behind 149 → 需人工 rebase/merge)
+- 失败（网络/权限等）0 个：—
+- 跳过（网络不通/预算不足）0 个：—
+
+---
+
+## 技能市场扫描 · 2026-10-26 00:23:26
+- 用时 51s / 预算 200s（clawhub CLI 可用）
+- 检索词与耗时：hotel=2.5s(rc0), travel=4.0s(rc0)
+- 向量通道覆盖度缺口：无
+- 市场去重后 10 条；本地技能 98 个（SKILL.md 93 个）
+- 市场有本地无：10 个
+- registry 关键词检索: 82 条去重（82 个可安装）
+
+### 能力空白状态（判定复用上方已抓候选，零额外请求）
+- 酒店竞品房价 / 动态定价监控：**THIN**（域内核心 pricing-calc｜相邻 hotel-price-monitor、price-drop-tracker、meituan-baodan、ddt-amap-restaurant-network）
+- 酒店存量翻新选址分析（POI + 商圈 + 客流）：**THIN**（域内核心 amap-lbs-skill、amap-jsapi-skill、amap-cli-skill、gaode-map-pro、amap、amap-jsapi-tool-free｜相邻 retail-member-points-check-free、majia-siyu、upkuajing-map-merchants-search-zh、apify-competitor-intelligence）
+- 酒店私域 / 会员 / 复购运营：**THIN**（域内核心 majia-huiyuan、retail-member-points-check-free、membership-liability-check-free、private-traffic-sop｜相邻 meituan-coupon-traffic、competitor-intelligence-monitor、majia-siyu、siyu-morning-evening-reporter）
+- 酒店房价聚合（对照组 · 市场已有供给）：**THIN**（域内核心 china-hotel-price-compare、hotel-smart-book、hotel-price-monitor、bijia、xiaxiayouhui-deals、hotel-procurement-price-check｜相邻 price-drop-tracker、meituan-travel-assistant、meituan-baodan、meituan-coupon-get-tool）
+- 空白变化：无（本轮无变化）
+
+### 新技能候选
+- **hotel** (score 6120.000) — Hotel
+- **gaode-hotel** (score 5095.000) — 飞猪联动
+- **hotel-lobby-ai-prompt-director** (score 5095.000) — Hotel Lobby AI Prompt Director
+- **china-hotel-price-compare** (score 5095.000) — 酒店比价
+- **rollinggo-hotel-skill-cn-new** (score 5095.000) — RollingGo全球酒店预订Skill-新版本1.1.1
+- **travel** (score 6120.000) — Travel
+- **travel-guide-generator** (score 5095.000) — 旅游攻略生成器
+- **meituan-travel** (score 5095.000) — meituan-travel
+- **travel-rule-check** (score 5095.000) — travel-rule-check
+- **travel-checklist-hy** (score 5095.000) — 出行清单必备
+
+### registry 关键词检索 · 可安装候选（按下载量降序）
+- **eas-update-insights**  v?  ↓36812次/装0次  owner: expo  ref: `skills-sh:expo/skills/eas-update-insights`  — # EAS Update Insights > **EAS service - costs apply.** Insights cover updates published th
+- **pricewin-price-comparison**  v?  ↓10514次/装0次  owner: price-win  ref: `skills-sh:price-win/pricewin-skills-hub/pricewin-price-comparison`  — > Requires the `pricewin` MCP server. This skill issues no network calls of its own. # Pri
+- **amap-lbs-skill**  v?  ↓8890次/装0次  owner: lbs-amap  ref: `lbs-amap/amap-lbs-skill`  — 高德地图综合服务，支持POI搜索、路径规划、旅游规划、周边搜索和热力图数据可视化
+- **amap-jsapi-skill**  v?  ↓6070次/装0次  owner: lbs-amap  ref: `lbs-amap/amap-jsapi-skill`  — 高德地图 JSAPI v2.0 (WebGL) 开发技能。涵盖地图生命周期管理、强制安全配置、3D 视图控制、覆盖物绘制及 LBS 服务集成。
+- **competitive-analysis**  v?  ↓5120次/装0次  owner: claude-office-skills  ref: `skills-sh:claude-office-skills/skills/competitive-analysis`  — # Competitive Analysis Skill ## Overview I help you systematically analyze competitors to 
+- **apify-competitor-intelligence**  v?  ↓3286次/装0次  owner: apify  ref: `apify/apify-competitor-intelligence`  — Analyze competitor strategies, content, pricing, ads, and market positioning across Google
+- **competitor-analysis-report**  v?  ↓3073次/装0次  owner: seanwyngaard  ref: `seanwyngaard/competitor-analysis-report`  — Generate structured competitive analysis reports with feature comparisons, pricing analysi
+- **pricing**  v?  ↓3044次/装0次  owner: ivangdavila  ref: `ivangdavila/pricing`  — Sets, tests, and changes prices: value metric, tier packaging, discounts, price increases,
+- **otaku-wiki**  v?  ↓2087次/装0次  owner: robin797860  ref: `robin797860/otaku-wiki`  — 番剧/角色百科问答：用 AniList API 快速查番、查角色、查声优与作品关联（无需数据库）
+- **meituan-travel-assistant**  v?  ↓1734次/装0次  owner: travel-skills  ref: `travel-skills/meituan-travel-assistant`  — 零配置即装即用，本地旅行一站式查询，酒店/机票/火车票/景点门票/行程规划全覆盖，数据覆盖300+城市。暑期吃喝玩乐一站式，美团旅行全攻略
+- **amap-cli-skill**  v?  ↓1728次/装0次  owner: lbs-amap  ref: `lbs-amap/amap-cli-skill`  — 通过 CLI 命令行参数实时操控运行在容器中的高德地图 JSAPI 2.0 实例， 支持地图状态控制、路径规划、POI 搜索等，所有操作均以结构化 JSON 输出，适合 AI Ag
+- **compare-hotels**  v?  ↓1656次/装0次  owner: dingtom336-gif  ref: `dingtom336-gif/compare-hotels`  — Compare hotel prices across multiple properties for the same dates. Side-by-side compariso
+- **moment-writer**  v?  ↓1648次/装0次  owner: fengbabao0929  ref: `fengbabao0929/moment-writer`  — 朋友圈文案生成器（精简版），基于私域变现核心方法论
+- **amazon-pricing-command-center**  v?  ↓1643次/装0次  owner: apiclaw  ref: `apiclaw/amazon-pricing-command-center`  — Data-driven pricing strategy engine for Amazon sellers. Given one or more ASINs, auto-dete
+- **china-hotel-price-compare**  v?  ↓1624次/装0次  owner: travel-skills  ref: `travel-skills/china-hotel-price-compare`  — 先浏览再比价，TourMind+途牛+同程+美团+RollingGo五源并发比价，找出全网最低价。含评分、距离、早餐、取消政策等详细信息。暑期出行多平台比价，轻松找到最划算的住宿方
+
+### git 更新结果
+- 已更新 0 个：—
+- 已是最新 5 个：open-design-skill, ponytail, ppt-generator, scholar-skill, wewrite
+- 需人工处理（分支分叉，脚本不自动改写）1 个：evolver(ahead 115,behind 149 → 需人工 rebase/merge)
+- 失败（网络/权限等）0 个：—
+- 跳过（网络不通/预算不足）0 个：—
+
+---
+
+## 技能市场扫描 · 2026-10-26 00:25:40
+- 用时 50s / 预算 200s（clawhub CLI 可用）
+- 检索词与耗时：hotel=2.3s(rc0), travel=2.4s(rc0)
+- 向量通道覆盖度缺口：无
+- 市场去重后 10 条；本地技能 98 个（SKILL.md 93 个）
+- 市场有本地无：10 个
+- registry 关键词检索: 82 条去重（82 个可安装）
+
+### 能力空白状态（判定复用上方已抓候选，零额外请求）
+- 酒店竞品房价 / 动态定价监控：**ADJACENT**（域内核心 无｜相邻 hotel-price-monitor、price-drop-tracker、meituan-baodan、ddt-amap-restaurant-network）
+- 酒店存量翻新选址分析（POI + 商圈 + 客流）：**THIN**（域内核心 amap-lbs-skill、amap-jsapi-skill、amap-cli-skill、gaode-map-pro、amap、amap-jsapi-tool-free｜相邻 retail-member-points-check-free、majia-siyu、upkuajing-map-merchants-search-zh、apify-competitor-intelligence）
+- 酒店私域 / 会员 / 复购运营：**THIN**（域内核心 majia-huiyuan、retail-member-points-check-free、membership-liability-check-free、private-traffic-sop｜相邻 meituan-coupon-traffic、competitor-intelligence-monitor、majia-siyu、siyu-morning-evening-reporter）
+- 酒店房价聚合（对照组 · 市场已有供给）：**THIN**（域内核心 china-hotel-price-compare、hotel-smart-book、hotel-price-monitor、bijia、xiaxiayouhui-deals、hotel-procurement-price-check｜相邻 price-drop-tracker、meituan-travel-assistant、meituan-baodan、meituan-coupon-get-tool）
+- 空白变化：酒店竞品房价 / 动态定价监控：THIN → ADJACENT
+
+### 新技能候选
+- **hotel** (score 6120.000) — Hotel
+- **gaode-hotel** (score 5095.000) — 飞猪联动
+- **hotel-lobby-ai-prompt-director** (score 5095.000) — Hotel Lobby AI Prompt Director
+- **china-hotel-price-compare** (score 5095.000) — 酒店比价
+- **rollinggo-hotel-skill-cn-new** (score 5095.000) — RollingGo全球酒店预订Skill-新版本1.1.1
+- **travel** (score 6120.000) — Travel
+- **travel-guide-generator** (score 5095.000) — 旅游攻略生成器
+- **meituan-travel** (score 5095.000) — meituan-travel
+- **travel-rule-check** (score 5095.000) — travel-rule-check
+- **travel-checklist-hy** (score 5095.000) — 出行清单必备
+
+### registry 关键词检索 · 可安装候选（按下载量降序）
+- **eas-update-insights**  v?  ↓36812次/装0次  owner: expo  ref: `skills-sh:expo/skills/eas-update-insights`  — # EAS Update Insights > **EAS service - costs apply.** Insights cover updates published th
+- **pricewin-price-comparison**  v?  ↓10514次/装0次  owner: price-win  ref: `skills-sh:price-win/pricewin-skills-hub/pricewin-price-comparison`  — > Requires the `pricewin` MCP server. This skill issues no network calls of its own. # Pri
+- **amap-lbs-skill**  v?  ↓8890次/装0次  owner: lbs-amap  ref: `lbs-amap/amap-lbs-skill`  — 高德地图综合服务，支持POI搜索、路径规划、旅游规划、周边搜索和热力图数据可视化
+- **amap-jsapi-skill**  v?  ↓6070次/装0次  owner: lbs-amap  ref: `lbs-amap/amap-jsapi-skill`  — 高德地图 JSAPI v2.0 (WebGL) 开发技能。涵盖地图生命周期管理、强制安全配置、3D 视图控制、覆盖物绘制及 LBS 服务集成。
+- **competitive-analysis**  v?  ↓5120次/装0次  owner: claude-office-skills  ref: `skills-sh:claude-office-skills/skills/competitive-analysis`  — # Competitive Analysis Skill ## Overview I help you systematically analyze competitors to 
+- **apify-competitor-intelligence**  v?  ↓3286次/装0次  owner: apify  ref: `apify/apify-competitor-intelligence`  — Analyze competitor strategies, content, pricing, ads, and market positioning across Google
+- **competitor-analysis-report**  v?  ↓3073次/装0次  owner: seanwyngaard  ref: `seanwyngaard/competitor-analysis-report`  — Generate structured competitive analysis reports with feature comparisons, pricing analysi
+- **pricing**  v?  ↓3044次/装0次  owner: ivangdavila  ref: `ivangdavila/pricing`  — Sets, tests, and changes prices: value metric, tier packaging, discounts, price increases,
+- **otaku-wiki**  v?  ↓2087次/装0次  owner: robin797860  ref: `robin797860/otaku-wiki`  — 番剧/角色百科问答：用 AniList API 快速查番、查角色、查声优与作品关联（无需数据库）
+- **meituan-travel-assistant**  v?  ↓1734次/装0次  owner: travel-skills  ref: `travel-skills/meituan-travel-assistant`  — 零配置即装即用，本地旅行一站式查询，酒店/机票/火车票/景点门票/行程规划全覆盖，数据覆盖300+城市。暑期吃喝玩乐一站式，美团旅行全攻略
+- **amap-cli-skill**  v?  ↓1728次/装0次  owner: lbs-amap  ref: `lbs-amap/amap-cli-skill`  — 通过 CLI 命令行参数实时操控运行在容器中的高德地图 JSAPI 2.0 实例， 支持地图状态控制、路径规划、POI 搜索等，所有操作均以结构化 JSON 输出，适合 AI Ag
+- **compare-hotels**  v?  ↓1656次/装0次  owner: dingtom336-gif  ref: `dingtom336-gif/compare-hotels`  — Compare hotel prices across multiple properties for the same dates. Side-by-side compariso
+- **moment-writer**  v?  ↓1648次/装0次  owner: fengbabao0929  ref: `fengbabao0929/moment-writer`  — 朋友圈文案生成器（精简版），基于私域变现核心方法论
+- **amazon-pricing-command-center**  v?  ↓1643次/装0次  owner: apiclaw  ref: `apiclaw/amazon-pricing-command-center`  — Data-driven pricing strategy engine for Amazon sellers. Given one or more ASINs, auto-dete
+- **china-hotel-price-compare**  v?  ↓1624次/装0次  owner: travel-skills  ref: `travel-skills/china-hotel-price-compare`  — 先浏览再比价，TourMind+途牛+同程+美团+RollingGo五源并发比价，找出全网最低价。含评分、距离、早餐、取消政策等详细信息。暑期出行多平台比价，轻松找到最划算的住宿方
+
+### git 更新结果
+- 已更新 0 个：—
+- 已是最新 5 个：open-design-skill, ponytail, ppt-generator, scholar-skill, wewrite
+- 需人工处理（分支分叉，脚本不自动改写）1 个：evolver(ahead 115,behind 149 → 需人工 rebase/merge)
+- 失败（网络/权限等）0 个：—
+- 跳过（网络不通/预算不足）0 个：—
+
+---
+
+## 技能市场扫描 · 2026-10-26 02:21:27
+- 用时 70s / 预算 200s（clawhub CLI 可用）
+- 检索词与耗时：hotel=2.9s(rc0), travel=2.9s(rc0)
+- 向量通道覆盖度缺口：无
+- 市场去重后 10 条；本地技能 98 个（SKILL.md 93 个）
+- 市场有本地无：10 个
+- registry 关键词检索: 82 条去重（82 个可安装）
+
+### 能力空白状态（判定复用上方已抓候选，零额外请求）
+- 酒店竞品房价 / 动态定价监控：**ADJACENT**（域内核心 无｜相邻 hotel-price-monitor、price-drop-tracker、meituan-baodan、ddt-amap-restaurant-network）
+- 酒店存量翻新选址分析（POI + 商圈 + 客流）：**THIN**（域内核心 amap-lbs-skill、amap-jsapi-skill、amap-cli-skill、gaode-map-pro、amap、amap-jsapi-tool-free｜相邻 retail-member-points-check-free、majia-siyu、upkuajing-map-merchants-search-zh、apify-competitor-intelligence）
+- 酒店私域 / 会员 / 复购运营：**THIN**（域内核心 majia-huiyuan、retail-member-points-check-free、membership-liability-check-free、private-traffic-sop｜相邻 meituan-coupon-traffic、competitor-intelligence-monitor、majia-siyu、siyu-morning-evening-reporter）
+- 酒店房价聚合（对照组 · 市场已有供给）：**THIN**（域内核心 china-hotel-price-compare、hotel-smart-book、hotel-price-monitor、bijia、xiaxiayouhui-deals、hotel-procurement-price-check｜相邻 price-drop-tracker、meituan-travel-assistant、meituan-baodan、meituan-coupon-get-tool）
+- 空白变化：无（本轮无变化）
+
+### 新技能候选
+- **hotel** (score 6120.000) — Hotel
+- **gaode-hotel** (score 5095.000) — 飞猪联动
+- **hotel-lobby-ai-prompt-director** (score 5095.000) — Hotel Lobby AI Prompt Director
+- **china-hotel-price-compare** (score 5095.000) — 酒店比价
+- **rollinggo-hotel-skill-cn-new** (score 5095.000) — RollingGo全球酒店预订Skill-新版本1.1.1
+- **travel** (score 6120.000) — Travel
+- **travel-guide-generator** (score 5095.000) — 旅游攻略生成器
+- **meituan-travel** (score 5095.000) — meituan-travel
+- **travel-rule-check** (score 5095.000) — travel-rule-check
+- **travel-checklist-hy** (score 5095.000) — 出行清单必备
+
+### registry 关键词检索 · 可安装候选（按下载量降序）
+- **eas-update-insights**  v?  ↓36812次/装0次  owner: expo  ref: `skills-sh:expo/skills/eas-update-insights`  — # EAS Update Insights > **EAS service - costs apply.** Insights cover updates published th
+- **pricewin-price-comparison**  v?  ↓10514次/装0次  owner: price-win  ref: `skills-sh:price-win/pricewin-skills-hub/pricewin-price-comparison`  — > Requires the `pricewin` MCP server. This skill issues no network calls of its own. # Pri
+- **amap-lbs-skill**  v?  ↓8890次/装0次  owner: lbs-amap  ref: `lbs-amap/amap-lbs-skill`  — 高德地图综合服务，支持POI搜索、路径规划、旅游规划、周边搜索和热力图数据可视化
+- **amap-jsapi-skill**  v?  ↓6070次/装0次  owner: lbs-amap  ref: `lbs-amap/amap-jsapi-skill`  — 高德地图 JSAPI v2.0 (WebGL) 开发技能。涵盖地图生命周期管理、强制安全配置、3D 视图控制、覆盖物绘制及 LBS 服务集成。
+- **competitive-analysis**  v?  ↓5120次/装0次  owner: claude-office-skills  ref: `skills-sh:claude-office-skills/skills/competitive-analysis`  — # Competitive Analysis Skill ## Overview I help you systematically analyze competitors to 
+- **apify-competitor-intelligence**  v?  ↓3286次/装0次  owner: apify  ref: `apify/apify-competitor-intelligence`  — Analyze competitor strategies, content, pricing, ads, and market positioning across Google
+- **competitor-analysis-report**  v?  ↓3073次/装0次  owner: seanwyngaard  ref: `seanwyngaard/competitor-analysis-report`  — Generate structured competitive analysis reports with feature comparisons, pricing analysi
+- **pricing**  v?  ↓3044次/装0次  owner: ivangdavila  ref: `ivangdavila/pricing`  — Sets, tests, and changes prices: value metric, tier packaging, discounts, price increases,
+- **otaku-wiki**  v?  ↓2087次/装0次  owner: robin797860  ref: `robin797860/otaku-wiki`  — 番剧/角色百科问答：用 AniList API 快速查番、查角色、查声优与作品关联（无需数据库）
+- **meituan-travel-assistant**  v?  ↓1734次/装0次  owner: travel-skills  ref: `travel-skills/meituan-travel-assistant`  — 零配置即装即用，本地旅行一站式查询，酒店/机票/火车票/景点门票/行程规划全覆盖，数据覆盖300+城市。暑期吃喝玩乐一站式，美团旅行全攻略
+- **amap-cli-skill**  v?  ↓1728次/装0次  owner: lbs-amap  ref: `lbs-amap/amap-cli-skill`  — 通过 CLI 命令行参数实时操控运行在容器中的高德地图 JSAPI 2.0 实例， 支持地图状态控制、路径规划、POI 搜索等，所有操作均以结构化 JSON 输出，适合 AI Ag
+- **compare-hotels**  v?  ↓1656次/装0次  owner: dingtom336-gif  ref: `dingtom336-gif/compare-hotels`  — Compare hotel prices across multiple properties for the same dates. Side-by-side compariso
+- **moment-writer**  v?  ↓1648次/装0次  owner: fengbabao0929  ref: `fengbabao0929/moment-writer`  — 朋友圈文案生成器（精简版），基于私域变现核心方法论
+- **amazon-pricing-command-center**  v?  ↓1643次/装0次  owner: apiclaw  ref: `apiclaw/amazon-pricing-command-center`  — Data-driven pricing strategy engine for Amazon sellers. Given one or more ASINs, auto-dete
+- **china-hotel-price-compare**  v?  ↓1624次/装0次  owner: travel-skills  ref: `travel-skills/china-hotel-price-compare`  — 先浏览再比价，TourMind+途牛+同程+美团+RollingGo五源并发比价，找出全网最低价。含评分、距离、早餐、取消政策等详细信息。暑期出行多平台比价，轻松找到最划算的住宿方
+
+### git 更新结果
+- 已更新 0 个：—
+- 已是最新 5 个：open-design-skill, ponytail, ppt-generator, scholar-skill, wewrite
+- 需人工处理（分支分叉，脚本不自动改写）1 个：evolver(ahead 115,behind 149 → 需人工 rebase/merge)
+- 失败（网络/权限等）0 个：—
+- 跳过（网络不通/预算不足）0 个：—
+
+---
+
+## 技能市场扫描 · 2026-10-26 02:23:42
+- 用时 71s / 预算 200s（clawhub CLI 可用）
+- 检索词与耗时：hotel=3.0s(rc0), travel=3.4s(rc0)
+- 向量通道覆盖度缺口：无
+- 市场去重后 10 条；本地技能 98 个（SKILL.md 93 个）
+- 市场有本地无：10 个
+- registry 关键词检索: 82 条去重（82 个可安装）
+
+### 能力空白状态（判定复用上方已抓候选，零额外请求）
+- 酒店竞品房价 / 动态定价监控：**ADJACENT**（域内核心 无｜相邻 hotel-price-monitor、price-drop-tracker、meituan-baodan、ddt-amap-restaurant-network）
+- 酒店存量翻新选址分析（POI + 商圈 + 客流）：**THIN**（域内核心 amap-lbs-skill、amap-jsapi-skill、amap-cli-skill、gaode-map-pro、amap、amap-jsapi-tool-free｜相邻 retail-member-points-check-free、majia-siyu、upkuajing-map-merchants-search-zh、apify-competitor-intelligence）
+- 酒店私域 / 会员 / 复购运营：**THIN**（域内核心 majia-huiyuan、retail-member-points-check-free、membership-liability-check-free、private-traffic-sop｜相邻 meituan-coupon-traffic、competitor-intelligence-monitor、majia-siyu、siyu-morning-evening-reporter）
+- 酒店房价聚合（对照组 · 市场已有供给）：**THIN**（域内核心 china-hotel-price-compare、hotel-smart-book、hotel-price-monitor、bijia、xiaxiayouhui-deals、hotel-procurement-price-check｜相邻 price-drop-tracker、meituan-travel-assistant、meituan-baodan、meituan-coupon-get-tool）
+- 空白变化：无（本轮无变化）
+- 候选变化：新增 registry 候选 0｜新增向量候选 0｜**本轮是否有变化**: 否（建议不推送）
+
+### 新技能候选
+- **hotel** (score 6120.000) — Hotel
+- **gaode-hotel** (score 5095.000) — 飞猪联动
+- **hotel-lobby-ai-prompt-director** (score 5095.000) — Hotel Lobby AI Prompt Director
+- **china-hotel-price-compare** (score 5095.000) — 酒店比价
+- **rollinggo-hotel-skill-cn-new** (score 5095.000) — RollingGo全球酒店预订Skill-新版本1.1.1
+- **travel** (score 6120.000) — Travel
+- **travel-guide-generator** (score 5095.000) — 旅游攻略生成器
+- **meituan-travel** (score 5095.000) — meituan-travel
+- **travel-rule-check** (score 5095.000) — travel-rule-check
+- **travel-checklist-hy** (score 5095.000) — 出行清单必备
+
+### registry 关键词检索 · 可安装候选（按下载量降序）
+- **eas-update-insights**  v?  ↓36812次/装0次  owner: expo  ref: `skills-sh:expo/skills/eas-update-insights`  — # EAS Update Insights > **EAS service - costs apply.** Insights cover updates published th
+- **pricewin-price-comparison**  v?  ↓10514次/装0次  owner: price-win  ref: `skills-sh:price-win/pricewin-skills-hub/pricewin-price-comparison`  — > Requires the `pricewin` MCP server. This skill issues no network calls of its own. # Pri
+- **amap-lbs-skill**  v?  ↓8890次/装0次  owner: lbs-amap  ref: `lbs-amap/amap-lbs-skill`  — 高德地图综合服务，支持POI搜索、路径规划、旅游规划、周边搜索和热力图数据可视化
+- **amap-jsapi-skill**  v?  ↓6070次/装0次  owner: lbs-amap  ref: `lbs-amap/amap-jsapi-skill`  — 高德地图 JSAPI v2.0 (WebGL) 开发技能。涵盖地图生命周期管理、强制安全配置、3D 视图控制、覆盖物绘制及 LBS 服务集成。
+- **competitive-analysis**  v?  ↓5120次/装0次  owner: claude-office-skills  ref: `skills-sh:claude-office-skills/skills/competitive-analysis`  — # Competitive Analysis Skill ## Overview I help you systematically analyze competitors to 
+- **apify-competitor-intelligence**  v?  ↓3286次/装0次  owner: apify  ref: `apify/apify-competitor-intelligence`  — Analyze competitor strategies, content, pricing, ads, and market positioning across Google
+- **competitor-analysis-report**  v?  ↓3073次/装0次  owner: seanwyngaard  ref: `seanwyngaard/competitor-analysis-report`  — Generate structured competitive analysis reports with feature comparisons, pricing analysi
+- **pricing**  v?  ↓3044次/装0次  owner: ivangdavila  ref: `ivangdavila/pricing`  — Sets, tests, and changes prices: value metric, tier packaging, discounts, price increases,
+- **otaku-wiki**  v?  ↓2087次/装0次  owner: robin797860  ref: `robin797860/otaku-wiki`  — 番剧/角色百科问答：用 AniList API 快速查番、查角色、查声优与作品关联（无需数据库）
+- **meituan-travel-assistant**  v?  ↓1734次/装0次  owner: travel-skills  ref: `travel-skills/meituan-travel-assistant`  — 零配置即装即用，本地旅行一站式查询，酒店/机票/火车票/景点门票/行程规划全覆盖，数据覆盖300+城市。暑期吃喝玩乐一站式，美团旅行全攻略
+- **amap-cli-skill**  v?  ↓1728次/装0次  owner: lbs-amap  ref: `lbs-amap/amap-cli-skill`  — 通过 CLI 命令行参数实时操控运行在容器中的高德地图 JSAPI 2.0 实例， 支持地图状态控制、路径规划、POI 搜索等，所有操作均以结构化 JSON 输出，适合 AI Ag
+- **compare-hotels**  v?  ↓1656次/装0次  owner: dingtom336-gif  ref: `dingtom336-gif/compare-hotels`  — Compare hotel prices across multiple properties for the same dates. Side-by-side compariso
+- **moment-writer**  v?  ↓1648次/装0次  owner: fengbabao0929  ref: `fengbabao0929/moment-writer`  — 朋友圈文案生成器（精简版），基于私域变现核心方法论
+- **amazon-pricing-command-center**  v?  ↓1643次/装0次  owner: apiclaw  ref: `apiclaw/amazon-pricing-command-center`  — Data-driven pricing strategy engine for Amazon sellers. Given one or more ASINs, auto-dete
+- **china-hotel-price-compare**  v?  ↓1624次/装0次  owner: travel-skills  ref: `travel-skills/china-hotel-price-compare`  — 先浏览再比价，TourMind+途牛+同程+美团+RollingGo五源并发比价，找出全网最低价。含评分、距离、早餐、取消政策等详细信息。暑期出行多平台比价，轻松找到最划算的住宿方
+
+### git 更新结果
+- 已更新 0 个：—
+- 已是最新 5 个：open-design-skill, ponytail, ppt-generator, scholar-skill, wewrite
+- 需人工处理（分支分叉，脚本不自动改写）1 个：evolver(ahead 115,behind 149 → 需人工 rebase/merge)
+- 失败（网络/权限等）0 个：—
+- 跳过（网络不通/预算不足）0 个：—
+
+---
+
+## 技能市场扫描 · 2026-10-26 04:22:56
+- 用时 160s / 预算 200s（clawhub CLI 可用）
+- 检索词与耗时：hotel=23.2s(rc0), travel=4.9s(rc0)
+- 向量通道覆盖度缺口：无
+- 市场去重后 10 条；本地技能 98 个（SKILL.md 93 个）
+- 市场有本地无：10 个
+- registry 关键词检索: 82 条去重（82 个可安装）
+
+### 能力空白状态（判定复用上方已抓候选，零额外请求）
+- 酒店竞品房价 / 动态定价监控：**ADJACENT**（域内核心 无｜相邻 hotel-price-monitor、price-drop-tracker、meituan-baodan、ddt-amap-restaurant-network）
+- 酒店存量翻新选址分析（POI + 商圈 + 客流）：**THIN**（域内核心 amap-lbs-skill、amap-jsapi-skill、amap-cli-skill、gaode-map-pro、amap、amap-jsapi-tool-free｜相邻 retail-member-points-check-free、majia-siyu、upkuajing-map-merchants-search-zh、apify-competitor-intelligence）
+- 酒店私域 / 会员 / 复购运营：**THIN**（域内核心 majia-huiyuan、retail-member-points-check-free、membership-liability-check-free、private-traffic-sop｜相邻 meituan-coupon-traffic、competitor-intelligence-monitor、majia-siyu、siyu-morning-evening-reporter）
+- 酒店房价聚合（对照组 · 市场已有供给）：**THIN**（域内核心 china-hotel-price-compare、hotel-smart-book、hotel-price-monitor、bijia、xiaxiayouhui-deals、hotel-procurement-price-check｜相邻 price-drop-tracker、meituan-travel-assistant、meituan-baodan、meituan-coupon-get-tool）
+- 空白变化：无（本轮无变化）
+- 候选变化：新增 registry 候选 0｜新增向量候选 0｜**本轮是否有变化**: 否（建议不推送）
+
+### 新技能候选
+- **hotel** (score 6120.000) — Hotel
+- **gaode-hotel** (score 5095.000) — 飞猪联动
+- **hotel-lobby-ai-prompt-director** (score 5095.000) — Hotel Lobby AI Prompt Director
+- **china-hotel-price-compare** (score 5095.000) — 酒店比价
+- **rollinggo-hotel-skill-cn-new** (score 5095.000) — RollingGo全球酒店预订Skill-新版本1.1.1
+- **travel** (score 6120.000) — Travel
+- **travel-guide-generator** (score 5095.000) — 旅游攻略生成器
+- **meituan-travel** (score 5095.000) — meituan-travel
+- **travel-rule-check** (score 5095.000) — travel-rule-check
+- **travel-checklist-hy** (score 5095.000) — 出行清单必备
+
+### registry 关键词检索 · 可安装候选（按下载量降序）
+- **eas-update-insights**  v?  ↓36812次/装0次  owner: expo  ref: `skills-sh:expo/skills/eas-update-insights`  — # EAS Update Insights > **EAS service - costs apply.** Insights cover updates published th
+- **pricewin-price-comparison**  v?  ↓10514次/装0次  owner: price-win  ref: `skills-sh:price-win/pricewin-skills-hub/pricewin-price-comparison`  — > Requires the `pricewin` MCP server. This skill issues no network calls of its own. # Pri
+- **amap-lbs-skill**  v?  ↓8891次/装0次  owner: lbs-amap  ref: `lbs-amap/amap-lbs-skill`  — 高德地图综合服务，支持POI搜索、路径规划、旅游规划、周边搜索和热力图数据可视化
+- **amap-jsapi-skill**  v?  ↓6071次/装0次  owner: lbs-amap  ref: `lbs-amap/amap-jsapi-skill`  — 高德地图 JSAPI v2.0 (WebGL) 开发技能。涵盖地图生命周期管理、强制安全配置、3D 视图控制、覆盖物绘制及 LBS 服务集成。
+- **competitive-analysis**  v?  ↓5120次/装0次  owner: claude-office-skills  ref: `skills-sh:claude-office-skills/skills/competitive-analysis`  — # Competitive Analysis Skill ## Overview I help you systematically analyze competitors to 
+- **apify-competitor-intelligence**  v?  ↓3287次/装0次  owner: apify  ref: `apify/apify-competitor-intelligence`  — Analyze competitor strategies, content, pricing, ads, and market positioning across Google
+- **competitor-analysis-report**  v?  ↓3073次/装0次  owner: seanwyngaard  ref: `seanwyngaard/competitor-analysis-report`  — Generate structured competitive analysis reports with feature comparisons, pricing analysi
+- **pricing**  v?  ↓3044次/装0次  owner: ivangdavila  ref: `ivangdavila/pricing`  — Sets, tests, and changes prices: value metric, tier packaging, discounts, price increases,
+- **otaku-wiki**  v?  ↓2087次/装0次  owner: robin797860  ref: `robin797860/otaku-wiki`  — 番剧/角色百科问答：用 AniList API 快速查番、查角色、查声优与作品关联（无需数据库）
+- **meituan-travel-assistant**  v?  ↓1734次/装0次  owner: travel-skills  ref: `travel-skills/meituan-travel-assistant`  — 零配置即装即用，本地旅行一站式查询，酒店/机票/火车票/景点门票/行程规划全覆盖，数据覆盖300+城市。暑期吃喝玩乐一站式，美团旅行全攻略
+- **amap-cli-skill**  v?  ↓1730次/装0次  owner: lbs-amap  ref: `lbs-amap/amap-cli-skill`  — 通过 CLI 命令行参数实时操控运行在容器中的高德地图 JSAPI 2.0 实例， 支持地图状态控制、路径规划、POI 搜索等，所有操作均以结构化 JSON 输出，适合 AI Ag
+- **compare-hotels**  v?  ↓1657次/装0次  owner: dingtom336-gif  ref: `dingtom336-gif/compare-hotels`  — Compare hotel prices across multiple properties for the same dates. Side-by-side compariso
+- **moment-writer**  v?  ↓1648次/装0次  owner: fengbabao0929  ref: `fengbabao0929/moment-writer`  — 朋友圈文案生成器（精简版），基于私域变现核心方法论
+- **amazon-pricing-command-center**  v?  ↓1644次/装0次  owner: apiclaw  ref: `apiclaw/amazon-pricing-command-center`  — Data-driven pricing strategy engine for Amazon sellers. Given one or more ASINs, auto-dete
+- **china-hotel-price-compare**  v?  ↓1625次/装0次  owner: travel-skills  ref: `travel-skills/china-hotel-price-compare`  — 先浏览再比价，TourMind+途牛+同程+美团+RollingGo五源并发比价，找出全网最低价。含评分、距离、早餐、取消政策等详细信息。暑期出行多平台比价，轻松找到最划算的住宿方
+
+### git 更新结果
+- 已更新 0 个：—
+- 已是最新 0 个：—
+- 需人工处理（分支分叉，脚本不自动改写）0 个：—
+- 失败（网络/权限等）2 个：evolver(timeout), open-design-skill(neterr)
+- 跳过（网络不通/预算不足）4 个：ponytail, ppt-generator, scholar-skill, wewrite
+
+---
+
+## 技能市场扫描 · 2026-10-26 06:22:31
+- 用时 135s / 预算 200s（clawhub CLI 可用）
+- 检索词与耗时：hotel=5.8s(rc0), travel=3.7s(rc0)
+- 向量通道覆盖度缺口：无
+- 市场去重后 10 条；本地技能 98 个（SKILL.md 93 个）
+- 市场有本地无：10 个
+- registry 关键词检索: 75 条去重（75 个可安装）
+
+### 能力空白状态（判定复用上方已抓候选，零额外请求）
+- 酒店竞品房价 / 动态定价监控：**ADJACENT**（域内核心 无｜相邻 hotel-price-monitor、price-drop-tracker、meituan-baodan、ddt-amap-restaurant-network）
+- 酒店存量翻新选址分析（POI + 商圈 + 客流）：**THIN**（域内核心 amap-lbs-skill、amap-jsapi-skill、amap-cli-skill、gaode-map-pro、amap、amap-jsapi-tool-free｜相邻 retail-member-points-check-free、majia-siyu、upkuajing-map-merchants-search-zh、apify-competitor-intelligence）
+- 酒店私域 / 会员 / 复购运营：**THIN**（域内核心 majia-huiyuan、retail-member-points-check-free、membership-liability-check-free、private-traffic-sop｜相邻 meituan-coupon-traffic、majia-siyu、siyu-morning-evening-reporter、wechat-private-traffic-operations-assistant）
+- 酒店房价聚合（对照组 · 市场已有供给）：**THIN**（域内核心 china-hotel-price-compare、hotel-smart-book、hotel-price-monitor、bijia、xiaxiayouhui-deals、hotel-procurement-price-check｜相邻 price-drop-tracker、meituan-travel-assistant、meituan-baodan、meituan-coupon-get-tool）
+- 空白变化：无（本轮无变化）
+- 候选变化：新增 registry 候选 0｜新增向量候选 0｜**本轮是否有变化**: 否（建议不推送）
+
+### 新技能候选
+- **hotel** (score 6120.000) — Hotel
+- **gaode-hotel** (score 5095.000) — 飞猪联动
+- **hotel-lobby-ai-prompt-director** (score 5095.000) — Hotel Lobby AI Prompt Director
+- **china-hotel-price-compare** (score 5095.000) — 酒店比价
+- **rollinggo-hotel-skill-cn-new** (score 5095.000) — RollingGo全球酒店预订Skill-新版本1.1.1
+- **travel** (score 6120.000) — Travel
+- **travel-guide-generator** (score 5095.000) — 旅游攻略生成器
+- **meituan-travel** (score 5095.000) — meituan-travel
+- **travel-rule-check** (score 5095.000) — travel-rule-check
+- **travel-checklist-hy** (score 5095.000) — 出行清单必备
+
+### registry 关键词检索 · 可安装候选（按下载量降序）
+- **eas-update-insights**  v?  ↓36812次/装0次  owner: expo  ref: `skills-sh:expo/skills/eas-update-insights`  — # EAS Update Insights > **EAS service - costs apply.** Insights cover updates published th
+- **pricewin-price-comparison**  v?  ↓10514次/装0次  owner: price-win  ref: `skills-sh:price-win/pricewin-skills-hub/pricewin-price-comparison`  — > Requires the `pricewin` MCP server. This skill issues no network calls of its own. # Pri
+- **amap-lbs-skill**  v?  ↓8891次/装0次  owner: lbs-amap  ref: `lbs-amap/amap-lbs-skill`  — 高德地图综合服务，支持POI搜索、路径规划、旅游规划、周边搜索和热力图数据可视化
+- **amap-jsapi-skill**  v?  ↓6072次/装0次  owner: lbs-amap  ref: `lbs-amap/amap-jsapi-skill`  — 高德地图 JSAPI v2.0 (WebGL) 开发技能。涵盖地图生命周期管理、强制安全配置、3D 视图控制、覆盖物绘制及 LBS 服务集成。
+- **competitive-analysis**  v?  ↓5120次/装0次  owner: claude-office-skills  ref: `skills-sh:claude-office-skills/skills/competitive-analysis`  — # Competitive Analysis Skill ## Overview I help you systematically analyze competitors to 
+- **apify-competitor-intelligence**  v?  ↓3287次/装0次  owner: apify  ref: `apify/apify-competitor-intelligence`  — Analyze competitor strategies, content, pricing, ads, and market positioning across Google
+- **competitor-analysis-report**  v?  ↓3073次/装0次  owner: seanwyngaard  ref: `seanwyngaard/competitor-analysis-report`  — Generate structured competitive analysis reports with feature comparisons, pricing analysi
+- **pricing**  v?  ↓3044次/装0次  owner: ivangdavila  ref: `ivangdavila/pricing`  — Sets, tests, and changes prices: value metric, tier packaging, discounts, price increases,
+- **otaku-wiki**  v?  ↓2087次/装0次  owner: robin797860  ref: `robin797860/otaku-wiki`  — 番剧/角色百科问答：用 AniList API 快速查番、查角色、查声优与作品关联（无需数据库）
+- **meituan-travel-assistant**  v?  ↓1735次/装0次  owner: travel-skills  ref: `travel-skills/meituan-travel-assistant`  — 零配置即装即用，本地旅行一站式查询，酒店/机票/火车票/景点门票/行程规划全覆盖，数据覆盖300+城市。暑期吃喝玩乐一站式，美团旅行全攻略
+- **amap-cli-skill**  v?  ↓1730次/装0次  owner: lbs-amap  ref: `lbs-amap/amap-cli-skill`  — 通过 CLI 命令行参数实时操控运行在容器中的高德地图 JSAPI 2.0 实例， 支持地图状态控制、路径规划、POI 搜索等，所有操作均以结构化 JSON 输出，适合 AI Ag
+- **compare-hotels**  v?  ↓1657次/装0次  owner: dingtom336-gif  ref: `dingtom336-gif/compare-hotels`  — Compare hotel prices across multiple properties for the same dates. Side-by-side compariso
+- **moment-writer**  v?  ↓1648次/装0次  owner: fengbabao0929  ref: `fengbabao0929/moment-writer`  — 朋友圈文案生成器（精简版），基于私域变现核心方法论
+- **amazon-pricing-command-center**  v?  ↓1645次/装0次  owner: apiclaw  ref: `apiclaw/amazon-pricing-command-center`  — Data-driven pricing strategy engine for Amazon sellers. Given one or more ASINs, auto-dete
+- **china-hotel-price-compare**  v?  ↓1626次/装0次  owner: travel-skills  ref: `travel-skills/china-hotel-price-compare`  — 先浏览再比价，TourMind+途牛+同程+美团+RollingGo五源并发比价，找出全网最低价。含评分、距离、早餐、取消政策等详细信息。暑期出行多平台比价，轻松找到最划算的住宿方
+
+### git 更新结果
+- 已更新 0 个：—
+- 已是最新 0 个：—
+- 需人工处理（分支分叉，脚本不自动改写）0 个：—
+- 失败（网络/权限等）2 个：evolver(neterr), open-design-skill(neterr)
+- 跳过（网络不通/预算不足）4 个：ponytail, ppt-generator, scholar-skill, wewrite
+
+---
+
+## 技能市场扫描 · 2026-10-26 08:41:27
+- 用时 119s / 预算 200s（clawhub CLI 可用）
+- 检索词与耗时：hotel=5.0s(rc0), travel=7.0s(rc0)
+- 向量通道覆盖度缺口：无
+- 市场去重后 10 条；本地技能 98 个（SKILL.md 93 个）
+- 市场有本地无：10 个
+- registry 关键词检索: 82 条去重（82 个可安装）
+
+### 能力空白状态（判定复用上方已抓候选，零额外请求）
+- 酒店竞品房价 / 动态定价监控：**ADJACENT**（域内核心 无｜相邻 hotel-price-monitor、price-drop-tracker、meituan-baodan、ddt-amap-restaurant-network）
+- 酒店存量翻新选址分析（POI + 商圈 + 客流）：**THIN**（域内核心 amap-lbs-skill、amap-jsapi-skill、amap-cli-skill、gaode-map-pro、amap、amap-jsapi-tool-free｜相邻 retail-member-points-check-free、majia-siyu、upkuajing-map-merchants-search-zh、apify-competitor-intelligence）
+- 酒店私域 / 会员 / 复购运营：**THIN**（域内核心 majia-huiyuan、retail-member-points-check-free、membership-liability-check-free、private-traffic-sop｜相邻 meituan-coupon-traffic、competitor-intelligence-monitor、majia-siyu、siyu-morning-evening-reporter）
+- 酒店房价聚合（对照组 · 市场已有供给）：**THIN**（域内核心 china-hotel-price-compare、hotel-smart-book、hotel-price-monitor、bijia、xiaxiayouhui-deals、hotel-procurement-price-check｜相邻 price-drop-tracker、meituan-travel-assistant、meituan-baodan、meituan-coupon-get-tool）
+- 空白变化：无（本轮无变化）
+- 候选变化：新增 registry 候选 7｜新增向量候选 0｜**本轮是否有变化**: 是
+
+### 新技能候选
+- **hotel** (score 6120.000) — Hotel
+- **gaode-hotel** (score 5095.000) — 飞猪联动
+- **hotel-lobby-ai-prompt-director** (score 5095.000) — Hotel Lobby AI Prompt Director
+- **china-hotel-price-compare** (score 5095.000) — 酒店比价
+- **rollinggo-hotel-skill-cn-new** (score 5095.000) — RollingGo全球酒店预订Skill-新版本1.1.1
+- **travel** (score 6120.000) — Travel
+- **travel-guide-generator** (score 5095.000) — 旅游攻略生成器
+- **meituan-travel** (score 5095.000) — meituan-travel
+- **travel-rule-check** (score 5095.000) — travel-rule-check
+- **travel-checklist-hy** (score 5095.000) — 出行清单必备
+
+### registry 关键词检索 · 可安装候选（按下载量降序）
+- **eas-update-insights**  v?  ↓36812次/装0次  owner: expo  ref: `skills-sh:expo/skills/eas-update-insights`  — # EAS Update Insights > **EAS service - costs apply.** Insights cover updates published th
+- **pricewin-price-comparison**  v?  ↓10514次/装0次  owner: price-win  ref: `skills-sh:price-win/pricewin-skills-hub/pricewin-price-comparison`  — > Requires the `pricewin` MCP server. This skill issues no network calls of its own. # Pri
+- **amap-lbs-skill**  v?  ↓8891次/装0次  owner: lbs-amap  ref: `lbs-amap/amap-lbs-skill`  — 高德地图综合服务，支持POI搜索、路径规划、旅游规划、周边搜索和热力图数据可视化
+- **amap-jsapi-skill**  v?  ↓6072次/装0次  owner: lbs-amap  ref: `lbs-amap/amap-jsapi-skill`  — 高德地图 JSAPI v2.0 (WebGL) 开发技能。涵盖地图生命周期管理、强制安全配置、3D 视图控制、覆盖物绘制及 LBS 服务集成。
+- **competitive-analysis**  v?  ↓5120次/装0次  owner: claude-office-skills  ref: `skills-sh:claude-office-skills/skills/competitive-analysis`  — # Competitive Analysis Skill ## Overview I help you systematically analyze competitors to 
+- **apify-competitor-intelligence**  v?  ↓3287次/装0次  owner: apify  ref: `apify/apify-competitor-intelligence`  — Analyze competitor strategies, content, pricing, ads, and market positioning across Google
+- **competitor-analysis-report**  v?  ↓3075次/装0次  owner: seanwyngaard  ref: `seanwyngaard/competitor-analysis-report`  — Generate structured competitive analysis reports with feature comparisons, pricing analysi
+- **pricing**  v?  ↓3046次/装0次  owner: ivangdavila  ref: `ivangdavila/pricing`  — Sets, tests, and changes prices: value metric, tier packaging, discounts, price increases,
+- **otaku-wiki**  v?  ↓2087次/装0次  owner: robin797860  ref: `robin797860/otaku-wiki`  — 番剧/角色百科问答：用 AniList API 快速查番、查角色、查声优与作品关联（无需数据库）
+- **meituan-travel-assistant**  v?  ↓1735次/装0次  owner: travel-skills  ref: `travel-skills/meituan-travel-assistant`  — 零配置即装即用，本地旅行一站式查询，酒店/机票/火车票/景点门票/行程规划全覆盖，数据覆盖300+城市。暑期吃喝玩乐一站式，美团旅行全攻略
+- **amap-cli-skill**  v?  ↓1731次/装0次  owner: lbs-amap  ref: `lbs-amap/amap-cli-skill`  — 通过 CLI 命令行参数实时操控运行在容器中的高德地图 JSAPI 2.0 实例， 支持地图状态控制、路径规划、POI 搜索等，所有操作均以结构化 JSON 输出，适合 AI Ag
+- **compare-hotels**  v?  ↓1657次/装0次  owner: dingtom336-gif  ref: `dingtom336-gif/compare-hotels`  — Compare hotel prices across multiple properties for the same dates. Side-by-side compariso
+- **moment-writer**  v?  ↓1648次/装0次  owner: fengbabao0929  ref: `fengbabao0929/moment-writer`  — 朋友圈文案生成器（精简版），基于私域变现核心方法论
+- **amazon-pricing-command-center**  v?  ↓1646次/装0次  owner: apiclaw  ref: `apiclaw/amazon-pricing-command-center`  — Data-driven pricing strategy engine for Amazon sellers. Given one or more ASINs, auto-dete
+- **china-hotel-price-compare**  v?  ↓1626次/装0次  owner: travel-skills  ref: `travel-skills/china-hotel-price-compare`  — 先浏览再比价，TourMind+途牛+同程+美团+RollingGo五源并发比价，找出全网最低价。含评分、距离、早餐、取消政策等详细信息。暑期出行多平台比价，轻松找到最划算的住宿方
+
+### git 更新结果
+- 已更新 0 个：—
+- 已是最新 5 个：open-design-skill, ponytail, ppt-generator, scholar-skill, wewrite
+- 需人工处理（分支分叉，脚本不自动改写）1 个：evolver(ahead 115,behind 149 → 需人工 rebase/merge)
+- 失败（网络/权限等）0 个：—
+- 跳过（网络不通/预算不足）0 个：—
+
+---
+
+## 技能市场扫描 · 2026-10-26 10:41:14
+- 用时 107s / 预算 200s（clawhub CLI 可用）
+- 检索词与耗时：hotel=4.4s(rc0), travel=3.3s(rc0)
+- 向量通道覆盖度缺口：无
+- 市场去重后 10 条；本地技能 98 个（SKILL.md 93 个）
+- 市场有本地无：10 个
+- registry 关键词检索: 79 条去重（79 个可安装）
+
+### 能力空白状态（判定复用上方已抓候选，零额外请求）
+- 酒店竞品房价 / 动态定价监控：**ADJACENT**（域内核心 无｜相邻 hotel-price-monitor、price-drop-tracker、meituan-baodan、ddt-amap-restaurant-network）
+- 酒店存量翻新选址分析（POI + 商圈 + 客流）：**THIN**（域内核心 amap-lbs-skill、amap-jsapi-skill、amap-cli-skill、gaode-map-pro、amap、amap-jsapi-tool-free｜相邻 retail-member-points-check-free、majia-siyu、upkuajing-map-merchants-search-zh、apify-competitor-intelligence）
+- 酒店私域 / 会员 / 复购运营：**THIN**（域内核心 majia-huiyuan、retail-member-points-check-free、membership-liability-check-free、private-traffic-sop｜相邻 meituan-coupon-traffic、competitor-intelligence-monitor、majia-siyu、siyu-morning-evening-reporter）
+- 酒店房价聚合（对照组 · 市场已有供给）：**THIN**（域内核心 china-hotel-price-compare、hotel-smart-book、hotel-price-monitor、bijia、xiaxiayouhui-deals、hotel-procurement-price-check｜相邻 price-drop-tracker、meituan-travel-assistant、meituan-baodan、meituan-coupon-get-tool）
+- 空白变化：无（本轮无变化）
+- 候选变化：新增 registry 候选 0｜新增向量候选 0｜**本轮是否有变化**: 否（建议不推送）
+
+### 新技能候选
+- **hotel** (score 6120.000) — Hotel
+- **gaode-hotel** (score 5095.000) — 飞猪联动
+- **hotel-lobby-ai-prompt-director** (score 5095.000) — Hotel Lobby AI Prompt Director
+- **china-hotel-price-compare** (score 5095.000) — 酒店比价
+- **rollinggo-hotel-skill-cn-new** (score 5095.000) — RollingGo全球酒店预订Skill-新版本1.1.1
+- **travel** (score 6120.000) — Travel
+- **travel-guide-generator** (score 5095.000) — 旅游攻略生成器
+- **meituan-travel** (score 5095.000) — meituan-travel
+- **travel-trip-contingency-planning** (score 5095.000) — Travel Advisor — Trip Contingency Planning
+- **travel-rule-check** (score 5095.000) — travel-rule-check
+
+### registry 关键词检索 · 可安装候选（按下载量降序）
+- **eas-update-insights**  v?  ↓36812次/装0次  owner: expo  ref: `skills-sh:expo/skills/eas-update-insights`  — # EAS Update Insights > **EAS service - costs apply.** Insights cover updates published th
+- **pricewin-price-comparison**  v?  ↓10514次/装0次  owner: price-win  ref: `skills-sh:price-win/pricewin-skills-hub/pricewin-price-comparison`  — > Requires the `pricewin` MCP server. This skill issues no network calls of its own. # Pri
+- **amap-lbs-skill**  v?  ↓8891次/装0次  owner: lbs-amap  ref: `lbs-amap/amap-lbs-skill`  — 高德地图综合服务，支持POI搜索、路径规划、旅游规划、周边搜索和热力图数据可视化
+- **amap-jsapi-skill**  v?  ↓6072次/装0次  owner: lbs-amap  ref: `lbs-amap/amap-jsapi-skill`  — 高德地图 JSAPI v2.0 (WebGL) 开发技能。涵盖地图生命周期管理、强制安全配置、3D 视图控制、覆盖物绘制及 LBS 服务集成。
+- **competitive-analysis**  v?  ↓5120次/装0次  owner: claude-office-skills  ref: `skills-sh:claude-office-skills/skills/competitive-analysis`  — # Competitive Analysis Skill ## Overview I help you systematically analyze competitors to 
+- **apify-competitor-intelligence**  v?  ↓3288次/装0次  owner: apify  ref: `apify/apify-competitor-intelligence`  — Analyze competitor strategies, content, pricing, ads, and market positioning across Google
+- **competitor-analysis-report**  v?  ↓3075次/装0次  owner: seanwyngaard  ref: `seanwyngaard/competitor-analysis-report`  — Generate structured competitive analysis reports with feature comparisons, pricing analysi
+- **pricing**  v?  ↓3046次/装0次  owner: ivangdavila  ref: `ivangdavila/pricing`  — Sets, tests, and changes prices: value metric, tier packaging, discounts, price increases,
+- **otaku-wiki**  v?  ↓2087次/装0次  owner: robin797860  ref: `robin797860/otaku-wiki`  — 番剧/角色百科问答：用 AniList API 快速查番、查角色、查声优与作品关联（无需数据库）
+- **meituan-travel-assistant**  v?  ↓1735次/装0次  owner: travel-skills  ref: `travel-skills/meituan-travel-assistant`  — 零配置即装即用，本地旅行一站式查询，酒店/机票/火车票/景点门票/行程规划全覆盖，数据覆盖300+城市。暑期吃喝玩乐一站式，美团旅行全攻略
+- **amap-cli-skill**  v?  ↓1731次/装0次  owner: lbs-amap  ref: `lbs-amap/amap-cli-skill`  — 通过 CLI 命令行参数实时操控运行在容器中的高德地图 JSAPI 2.0 实例， 支持地图状态控制、路径规划、POI 搜索等，所有操作均以结构化 JSON 输出，适合 AI Ag
+- **compare-hotels**  v?  ↓1657次/装0次  owner: dingtom336-gif  ref: `dingtom336-gif/compare-hotels`  — Compare hotel prices across multiple properties for the same dates. Side-by-side compariso
+- **moment-writer**  v?  ↓1648次/装0次  owner: fengbabao0929  ref: `fengbabao0929/moment-writer`  — 朋友圈文案生成器（精简版），基于私域变现核心方法论
+- **amazon-pricing-command-center**  v?  ↓1646次/装0次  owner: apiclaw  ref: `apiclaw/amazon-pricing-command-center`  — Data-driven pricing strategy engine for Amazon sellers. Given one or more ASINs, auto-dete
+- **china-hotel-price-compare**  v?  ↓1626次/装0次  owner: travel-skills  ref: `travel-skills/china-hotel-price-compare`  — 先浏览再比价，TourMind+途牛+同程+美团+RollingGo五源并发比价，找出全网最低价。含评分、距离、早餐、取消政策等详细信息。暑期出行多平台比价，轻松找到最划算的住宿方
+
+### git 更新结果
+- 已更新 0 个：—
+- 已是最新 5 个：open-design-skill, ponytail, ppt-generator, scholar-skill, wewrite
+- 需人工处理（分支分叉，脚本不自动改写）1 个：evolver(ahead 115,behind 149 → 需人工 rebase/merge)
+- 失败（网络/权限等）0 个：—
+- 跳过（网络不通/预算不足）0 个：—
+
+---
+
+## 技能市场扫描 · 2026-10-26 12:40:15
+- 用时 60s / 预算 200s（clawhub CLI 可用）
+- 检索词与耗时：hotel=2.6s(rc0), travel=2.5s(rc0)
+- 向量通道覆盖度缺口：无
+- 市场去重后 10 条；本地技能 98 个（SKILL.md 93 个）
+- 市场有本地无：10 个
+- registry 关键词检索: 82 条去重（82 个可安装）
+
+### 能力空白状态（判定复用上方已抓候选，零额外请求）
+- 酒店竞品房价 / 动态定价监控：**ADJACENT**（域内核心 无｜相邻 hotel-price-monitor、price-drop-tracker、meituan-baodan、ddt-amap-restaurant-network）
+- 酒店存量翻新选址分析（POI + 商圈 + 客流）：**THIN**（域内核心 amap-lbs-skill、amap-jsapi-skill、amap-cli-skill、gaode-map-pro、amap、amap-jsapi-tool-free｜相邻 retail-member-points-check-free、majia-siyu、upkuajing-map-merchants-search-zh、apify-competitor-intelligence）
+- 酒店私域 / 会员 / 复购运营：**THIN**（域内核心 majia-huiyuan、retail-member-points-check-free、membership-liability-check-free、private-traffic-sop｜相邻 meituan-coupon-traffic、competitor-intelligence-monitor、majia-siyu、siyu-morning-evening-reporter）
+- 酒店房价聚合（对照组 · 市场已有供给）：**THIN**（域内核心 china-hotel-price-compare、hotel-smart-book、hotel-price-monitor、bijia、xiaxiayouhui-deals、hotel-procurement-price-check｜相邻 price-drop-tracker、meituan-travel-assistant、meituan-baodan、meituan-coupon-get-tool）
+- 空白变化：无（本轮无变化）
+- 候选变化：新增 registry 候选 4｜新增向量候选 0｜**本轮是否有变化**: 是
+
+### 新技能候选
+- **hotel** (score 6120.000) — Hotel
+- **gaode-hotel** (score 5095.000) — 飞猪联动
+- **hotel-lobby-ai-prompt-director** (score 5095.000) — Hotel Lobby AI Prompt Director
+- **china-hotel-price-compare** (score 5095.000) — 酒店比价
+- **rollinggo-hotel-skill-cn-new** (score 5095.000) — RollingGo全球酒店预订Skill-新版本1.1.1
+- **travel** (score 6120.000) — Travel
+- **travel-guide-generator** (score 5095.000) — 旅游攻略生成器
+- **meituan-travel** (score 5095.000) — meituan-travel
+- **travel-trip-contingency-planning** (score 5095.000) — Travel Advisor — Trip Contingency Planning
+- **travel-rule-check** (score 5095.000) — travel-rule-check
+
+### registry 关键词检索 · 可安装候选（按下载量降序）
+- **eas-update-insights**  v?  ↓36812次/装0次  owner: expo  ref: `skills-sh:expo/skills/eas-update-insights`  — # EAS Update Insights > **EAS service - costs apply.** Insights cover updates published th
+- **pricewin-price-comparison**  v?  ↓10514次/装0次  owner: price-win  ref: `skills-sh:price-win/pricewin-skills-hub/pricewin-price-comparison`  — > Requires the `pricewin` MCP server. This skill issues no network calls of its own. # Pri
+- **amap-lbs-skill**  v?  ↓8891次/装0次  owner: lbs-amap  ref: `lbs-amap/amap-lbs-skill`  — 高德地图综合服务，支持POI搜索、路径规划、旅游规划、周边搜索和热力图数据可视化
+- **amap-jsapi-skill**  v?  ↓6072次/装0次  owner: lbs-amap  ref: `lbs-amap/amap-jsapi-skill`  — 高德地图 JSAPI v2.0 (WebGL) 开发技能。涵盖地图生命周期管理、强制安全配置、3D 视图控制、覆盖物绘制及 LBS 服务集成。
+- **competitive-analysis**  v?  ↓5120次/装0次  owner: claude-office-skills  ref: `skills-sh:claude-office-skills/skills/competitive-analysis`  — # Competitive Analysis Skill ## Overview I help you systematically analyze competitors to 
+- **apify-competitor-intelligence**  v?  ↓3288次/装0次  owner: apify  ref: `apify/apify-competitor-intelligence`  — Analyze competitor strategies, content, pricing, ads, and market positioning across Google
+- **competitor-analysis-report**  v?  ↓3076次/装0次  owner: seanwyngaard  ref: `seanwyngaard/competitor-analysis-report`  — Generate structured competitive analysis reports with feature comparisons, pricing analysi
+- **pricing**  v?  ↓3046次/装0次  owner: ivangdavila  ref: `ivangdavila/pricing`  — Sets, tests, and changes prices: value metric, tier packaging, discounts, price increases,
+- **otaku-wiki**  v?  ↓2087次/装0次  owner: robin797860  ref: `robin797860/otaku-wiki`  — 番剧/角色百科问答：用 AniList API 快速查番、查角色、查声优与作品关联（无需数据库）
+- **meituan-travel-assistant**  v?  ↓1735次/装0次  owner: travel-skills  ref: `travel-skills/meituan-travel-assistant`  — 零配置即装即用，本地旅行一站式查询，酒店/机票/火车票/景点门票/行程规划全覆盖，数据覆盖300+城市。暑期吃喝玩乐一站式，美团旅行全攻略
+- **amap-cli-skill**  v?  ↓1731次/装0次  owner: lbs-amap  ref: `lbs-amap/amap-cli-skill`  — 通过 CLI 命令行参数实时操控运行在容器中的高德地图 JSAPI 2.0 实例， 支持地图状态控制、路径规划、POI 搜索等，所有操作均以结构化 JSON 输出，适合 AI Ag
+- **compare-hotels**  v?  ↓1658次/装0次  owner: dingtom336-gif  ref: `dingtom336-gif/compare-hotels`  — Compare hotel prices across multiple properties for the same dates. Side-by-side compariso
+- **moment-writer**  v?  ↓1649次/装0次  owner: fengbabao0929  ref: `fengbabao0929/moment-writer`  — 朋友圈文案生成器（精简版），基于私域变现核心方法论
+- **amazon-pricing-command-center**  v?  ↓1646次/装0次  owner: apiclaw  ref: `apiclaw/amazon-pricing-command-center`  — Data-driven pricing strategy engine for Amazon sellers. Given one or more ASINs, auto-dete
+- **china-hotel-price-compare**  v?  ↓1626次/装0次  owner: travel-skills  ref: `travel-skills/china-hotel-price-compare`  — 先浏览再比价，TourMind+途牛+同程+美团+RollingGo五源并发比价，找出全网最低价。含评分、距离、早餐、取消政策等详细信息。暑期出行多平台比价，轻松找到最划算的住宿方
+
+### git 更新结果
+- 已更新 0 个：—
+- 已是最新 5 个：open-design-skill, ponytail, ppt-generator, scholar-skill, wewrite
+- 需人工处理（分支分叉，脚本不自动改写）1 个：evolver(ahead 115,behind 149 → 需人工 rebase/merge)
+- 失败（网络/权限等）0 个：—
+- 跳过（网络不通/预算不足）0 个：—
+
+---
+
+## 技能市场扫描 · 2026-10-26 14:49:09
+- 用时 107s / 预算 200s（clawhub CLI 可用）
+- 检索词与耗时：hotel=22.9s(rc0), travel=4.1s(rc0)
+- 向量通道覆盖度缺口：无
+- 市场去重后 10 条；本地技能 98 个（SKILL.md 93 个）
+- 市场有本地无：10 个
+- registry 关键词检索: 69 条去重（69 个可安装）
+
+### 能力空白状态（判定复用上方已抓候选，零额外请求）
+- 酒店竞品房价 / 动态定价监控：**ADJACENT**（域内核心 无｜相邻 meituan-baodan、competitor-intelligence-monitor、competitor-monitor-ai、competitor-monitor-claw）
+- 酒店存量翻新选址分析（POI + 商圈 + 客流）：**THIN**（域内核心 food-store-location、ddt-tencent-map-retail-expansion、ddt-tencent-map-restaurant-expansion、ddt-baidu-map-retail-expansion、ddt-baidu-map-restaurant-expansion、ddt-amap-restaurant-expansion｜相邻 retail-member-points-check-free、majia-siyu、upkuajing-map-merchants-search-zh、apify-competitor-intelligence）
+- 酒店私域 / 会员 / 复购运营：**THIN**（域内核心 majia-huiyuan、retail-member-points-check-free、membership-liability-check-free、private-traffic-sop｜相邻 meituan-coupon-traffic、competitor-intelligence-monitor、majia-siyu、siyu-morning-evening-reporter）
+- 酒店房价聚合（对照组 · 市场已有供给）：**THIN**（域内核心 hotel-procurement-price-check、meituan-hotel-deals、google-hotels-compare、hotel-price-finder、china-hotel-price-compare、hotel-search｜相邻 meituan-travel-assistant、meituan-baodan、meituan-coupon-get-tool、meituan-waimai-coupon）
+- 空白变化：无（本轮无变化）
+- 候选变化：新增 registry 候选 0｜新增向量候选 0｜**本轮是否有变化**: 否（建议不推送）
+
+### 新技能候选
+- **hotel** (score 6120.000) — Hotel
+- **gaode-hotel** (score 5095.000) — 飞猪联动
+- **hotel-lobby-ai-prompt-director** (score 5095.000) — Hotel Lobby AI Prompt Director
+- **china-hotel-price-compare** (score 5095.000) — 酒店比价
+- **rollinggo-hotel-skill-cn-new** (score 5095.000) — RollingGo全球酒店预订Skill-新版本1.1.1
+- **travel** (score 6120.000) — Travel
+- **travel-guide-generator** (score 5095.000) — 旅游攻略生成器
+- **meituan-travel** (score 5095.000) — meituan-travel
+- **travel-trip-contingency-planning** (score 5095.000) — Travel Advisor — Trip Contingency Planning
+- **travel-rule-check** (score 5095.000) — travel-rule-check
+
+### registry 关键词检索 · 可安装候选（按下载量降序）
+- **eas-update-insights**  v?  ↓36812次/装0次  owner: expo  ref: `skills-sh:expo/skills/eas-update-insights`  — # EAS Update Insights > **EAS service - costs apply.** Insights cover updates published th
+- **pricewin-price-comparison**  v?  ↓10514次/装0次  owner: price-win  ref: `skills-sh:price-win/pricewin-skills-hub/pricewin-price-comparison`  — > Requires the `pricewin` MCP server. This skill issues no network calls of its own. # Pri
+- **competitive-analysis**  v?  ↓5120次/装0次  owner: claude-office-skills  ref: `skills-sh:claude-office-skills/skills/competitive-analysis`  — # Competitive Analysis Skill ## Overview I help you systematically analyze competitors to 
+- **apify-competitor-intelligence**  v?  ↓3288次/装0次  owner: apify  ref: `apify/apify-competitor-intelligence`  — Analyze competitor strategies, content, pricing, ads, and market positioning across Google
+- **competitor-analysis-report**  v?  ↓3076次/装0次  owner: seanwyngaard  ref: `seanwyngaard/competitor-analysis-report`  — Generate structured competitive analysis reports with feature comparisons, pricing analysi
+- **pricing**  v?  ↓3046次/装0次  owner: ivangdavila  ref: `ivangdavila/pricing`  — Sets, tests, and changes prices: value metric, tier packaging, discounts, price increases,
+- **otaku-wiki**  v?  ↓2087次/装0次  owner: robin797860  ref: `robin797860/otaku-wiki`  — 番剧/角色百科问答：用 AniList API 快速查番、查角色、查声优与作品关联（无需数据库）
+- **meituan-travel-assistant**  v?  ↓1735次/装0次  owner: travel-skills  ref: `travel-skills/meituan-travel-assistant`  — 零配置即装即用，本地旅行一站式查询，酒店/机票/火车票/景点门票/行程规划全覆盖，数据覆盖300+城市。暑期吃喝玩乐一站式，美团旅行全攻略
+- **compare-hotels**  v?  ↓1658次/装0次  owner: dingtom336-gif  ref: `dingtom336-gif/compare-hotels`  — Compare hotel prices across multiple properties for the same dates. Side-by-side compariso
+- **moment-writer**  v?  ↓1649次/装0次  owner: fengbabao0929  ref: `fengbabao0929/moment-writer`  — 朋友圈文案生成器（精简版），基于私域变现核心方法论
+- **amazon-pricing-command-center**  v?  ↓1646次/装0次  owner: apiclaw  ref: `apiclaw/amazon-pricing-command-center`  — Data-driven pricing strategy engine for Amazon sellers. Given one or more ASINs, auto-dete
+- **china-hotel-price-compare**  v?  ↓1626次/装0次  owner: travel-skills  ref: `travel-skills/china-hotel-price-compare`  — 先浏览再比价，TourMind+途牛+同程+美团+RollingGo五源并发比价，找出全网最低价。含评分、距离、早餐、取消政策等详细信息。暑期出行多平台比价，轻松找到最划算的住宿方
+- **hotel-search**  v?  ↓1532次/装0次  owner: skillhq-ai  ref: `skillhq-ai/hotel-search`  — Search Google Hotels for hotel prices, ratings, and availability using browser automation.
+- **meituan-coupon-get-tool**  v?  ↓1530次/装0次  owner: meituan-zhengchang  ref: `meituan-zhengchang/meituan-coupon-get-tool`  — 【美团官方】美团红包助手，支持外卖、餐饮团购、酒店住宿、门票度假、休闲娱乐、闪购、医药等多品类优惠券/红包/神券的一键领取与历史领取记录查询。核心能力：1）一键领券，覆盖上述多品类
+- **mt-paotui-for-client**  v?  ↓1526次/装0次  owner: meituan-tech  ref: `meituan-tech/mt-paotui-for-client`  — 美团跑腿下单助手。支持场景：① 帮取送（A地取件送到B地，支持品类：餐饮、文件、生鲜、蛋糕、鲜花、数码、服饰、快递、五金、汽配等）② 帮买（代购商品）③ 帮取号（餐厅取号、医院挂号
+
+### git 更新结果
+- 已更新 0 个：—
+- 已是最新 5 个：open-design-skill, ponytail, ppt-generator, scholar-skill, wewrite
+- 需人工处理（分支分叉，脚本不自动改写）1 个：evolver(ahead 115,behind 149 → 需人工 rebase/merge)
+- 失败（网络/权限等）0 个：—
+- 跳过（网络不通/预算不足）0 个：—
+
+---
+
+## 技能市场扫描 · 2026-10-26 16:41:21
+- 用时 124s / 预算 200s（clawhub CLI 可用）
+- 检索词与耗时：hotel=6.1s(rc0), travel=7.0s(rc0)
+- 向量通道覆盖度缺口：无
+- 市场去重后 10 条；本地技能 98 个（SKILL.md 93 个）
+- 市场有本地无：10 个
+- registry 关键词检索: 75 条去重（75 个可安装）
+
+### 能力空白状态（判定复用上方已抓候选，零额外请求）
+- 酒店竞品房价 / 动态定价监控：**ADJACENT**（域内核心 无｜相邻 hotel-price-monitor、price-drop-tracker、meituan-baodan、ddt-amap-restaurant-network）
+- 酒店存量翻新选址分析（POI + 商圈 + 客流）：**THIN**（域内核心 amap-lbs-skill、amap-jsapi-skill、amap-cli-skill、gaode-map-pro、amap、amap-jsapi-tool-free｜相邻 retail-member-points-check-free、majia-siyu、upkuajing-map-merchants-search-zh、apify-competitor-intelligence）
+- 酒店私域 / 会员 / 复购运营：**THIN**（域内核心 majia-huiyuan、retail-member-points-check-free、membership-liability-check-free、private-traffic-sop｜相邻 meituan-coupon-traffic、competitor-intelligence-monitor、majia-siyu、siyu-morning-evening-reporter）
+- 酒店房价聚合（对照组 · 市场已有供给）：**THIN**（域内核心 china-hotel-price-compare、hotel-smart-book、hotel-price-monitor、bijia、xiaxiayouhui-deals、hotel-procurement-price-check｜相邻 price-drop-tracker、meituan-travel-assistant、meituan-baodan、meituan-coupon-get-tool）
+- 空白变化：无（本轮无变化）
+- 候选变化：新增 registry 候选 13｜新增向量候选 0｜**本轮是否有变化**: 是
+
+### 新技能候选
+- **hotel** (score 6120.000) — Hotel
+- **gaode-hotel** (score 5095.000) — 飞猪联动
+- **hotel-lobby-ai-prompt-director** (score 5095.000) — Hotel Lobby AI Prompt Director
+- **china-hotel-price-compare** (score 5095.000) — 酒店比价
+- **rollinggo-hotel-skill-cn-new** (score 5095.000) — RollingGo全球酒店预订Skill-新版本1.1.1
+- **travel** (score 6120.000) — Travel
+- **travel-guide-generator** (score 5095.000) — 旅游攻略生成器
+- **meituan-travel** (score 5095.000) — meituan-travel
+- **travel-trip-contingency-planning** (score 5095.000) — Travel Advisor — Trip Contingency Planning
+- **travel-rule-check** (score 5095.000) — travel-rule-check
+
+### registry 关键词检索 · 可安装候选（按下载量降序）
+- **eas-update-insights**  v?  ↓36812次/装0次  owner: expo  ref: `skills-sh:expo/skills/eas-update-insights`  — # EAS Update Insights > **EAS service - costs apply.** Insights cover updates published th
+- **amap-lbs-skill**  v?  ↓8892次/装0次  owner: lbs-amap  ref: `lbs-amap/amap-lbs-skill`  — 高德地图综合服务，支持POI搜索、路径规划、旅游规划、周边搜索和热力图数据可视化
+- **amap-jsapi-skill**  v?  ↓6073次/装0次  owner: lbs-amap  ref: `lbs-amap/amap-jsapi-skill`  — 高德地图 JSAPI v2.0 (WebGL) 开发技能。涵盖地图生命周期管理、强制安全配置、3D 视图控制、覆盖物绘制及 LBS 服务集成。
+- **competitive-analysis**  v?  ↓5120次/装0次  owner: claude-office-skills  ref: `skills-sh:claude-office-skills/skills/competitive-analysis`  — # Competitive Analysis Skill ## Overview I help you systematically analyze competitors to 
+- **apify-competitor-intelligence**  v?  ↓3288次/装0次  owner: apify  ref: `apify/apify-competitor-intelligence`  — Analyze competitor strategies, content, pricing, ads, and market positioning across Google
+- **competitor-analysis-report**  v?  ↓3076次/装0次  owner: seanwyngaard  ref: `seanwyngaard/competitor-analysis-report`  — Generate structured competitive analysis reports with feature comparisons, pricing analysi
+- **pricing**  v?  ↓3046次/装0次  owner: ivangdavila  ref: `ivangdavila/pricing`  — Sets, tests, and changes prices: value metric, tier packaging, discounts, price increases,
+- **otaku-wiki**  v?  ↓2087次/装0次  owner: robin797860  ref: `robin797860/otaku-wiki`  — 番剧/角色百科问答：用 AniList API 快速查番、查角色、查声优与作品关联（无需数据库）
+- **meituan-travel-assistant**  v?  ↓1735次/装0次  owner: travel-skills  ref: `travel-skills/meituan-travel-assistant`  — 零配置即装即用，本地旅行一站式查询，酒店/机票/火车票/景点门票/行程规划全覆盖，数据覆盖300+城市。暑期吃喝玩乐一站式，美团旅行全攻略
+- **amap-cli-skill**  v?  ↓1731次/装0次  owner: lbs-amap  ref: `lbs-amap/amap-cli-skill`  — 通过 CLI 命令行参数实时操控运行在容器中的高德地图 JSAPI 2.0 实例， 支持地图状态控制、路径规划、POI 搜索等，所有操作均以结构化 JSON 输出，适合 AI Ag
+- **moment-writer**  v?  ↓1649次/装0次  owner: fengbabao0929  ref: `fengbabao0929/moment-writer`  — 朋友圈文案生成器（精简版），基于私域变现核心方法论
+- **amazon-pricing-command-center**  v?  ↓1646次/装0次  owner: apiclaw  ref: `apiclaw/amazon-pricing-command-center`  — Data-driven pricing strategy engine for Amazon sellers. Given one or more ASINs, auto-dete
+- **china-hotel-price-compare**  v?  ↓1626次/装0次  owner: travel-skills  ref: `travel-skills/china-hotel-price-compare`  — 先浏览再比价，TourMind+途牛+同程+美团+RollingGo五源并发比价，找出全网最低价。含评分、距离、早餐、取消政策等详细信息。暑期出行多平台比价，轻松找到最划算的住宿方
+- **meituan-coupon-get-tool**  v?  ↓1530次/装0次  owner: meituan-zhengchang  ref: `meituan-zhengchang/meituan-coupon-get-tool`  — 【美团官方】美团红包助手，支持外卖、餐饮团购、酒店住宿、门票度假、休闲娱乐、闪购、医药等多品类优惠券/红包/神券的一键领取与历史领取记录查询。核心能力：1）一键领券，覆盖上述多品类
+- **gaode-map-pro**  v?  ↓1530次/装0次  owner: travel-skills  ref: `travel-skills/gaode-map-pro`  — 免申请Key即用，17项地图能力全覆盖：地理编码、POI搜索、周边搜索、驾车/公交/步行/骑行路线规划、天气查询、IP定位，出行必备地图工具。暑期自驾路线规划。
+
+### git 更新结果
+- 已更新 1 个：wewrite
+- 已是最新 4 个：open-design-skill, ponytail, ppt-generator, scholar-skill
+- 需人工处理（分支分叉，脚本不自动改写）1 个：evolver(ahead 115,behind 149 → 需人工 rebase/merge)
+- 失败（网络/权限等）0 个：—
+- 跳过（网络不通/预算不足）0 个：—
+
+---
+
+## 技能市场扫描 · 2026-10-26 17:02:04
+- 用时 122s / 预算 200s（clawhub CLI 可用）
+- 检索词与耗时：hotel=7.0s(rc0), travel=6.6s(rc0)
+- 向量通道覆盖度缺口：无
+- 市场去重后 10 条；本地技能 98 个（SKILL.md 93 个）
+- 市场有本地无：10 个
+- registry 关键词检索: 63 条去重（63 个可安装）
+
+### 能力空白状态（判定复用上方已抓候选，零额外请求）
+- 酒店竞品房价 / 动态定价监控：**ADJACENT**（域内核心 无｜相邻 hotel-price-monitor、price-drop-tracker、meituan-baodan、ddt-amap-restaurant-network）
+- 酒店存量翻新选址分析（POI + 商圈 + 客流）：**THIN**（域内核心 amap-lbs-skill、amap-jsapi-skill、amap-cli-skill、gaode-map-pro、amap、amap-jsapi-tool-free｜相邻 retail-member-points-check-free、majia-siyu、upkuajing-map-merchants-search-zh）
+- 酒店私域 / 会员 / 复购运营：**THIN**（域内核心 majia-huiyuan、retail-member-points-check-free、membership-liability-check-free、private-traffic-sop｜相邻 meituan-coupon-traffic、competitor-intelligence-monitor、majia-siyu、siyu-morning-evening-reporter）
+- 酒店房价聚合（对照组 · 市场已有供给）：**THIN**（域内核心 china-hotel-price-compare、hotel-smart-book、hotel-price-monitor、bijia、xiaxiayouhui-deals、hotel-procurement-price-check｜相邻 price-drop-tracker、meituan-travel-assistant、meituan-baodan、meituan-coupon-get-tool）
+- 空白变化：无（本轮无变化）
+- 候选变化：新增 registry 候选 0｜新增向量候选 0｜**本轮是否有变化**: 否（建议不推送）
+- 真新增（累积池口径，排除回流）：0 个：无
+- 累积 slug 池总量：82 条
+
+### 新技能候选
+- **hotel** (score 6120.000) — Hotel
+- **gaode-hotel** (score 5095.000) — 飞猪联动
+- **hotel-lobby-ai-prompt-director** (score 5095.000) — Hotel Lobby AI Prompt Director
+- **china-hotel-price-compare** (score 5095.000) — 酒店比价
+- **rollinggo-hotel-skill-cn-new** (score 5095.000) — RollingGo全球酒店预订Skill-新版本1.1.1
+- **travel** (score 6120.000) — Travel
+- **travel-guide-generator** (score 5095.000) — 旅游攻略生成器
+- **meituan-travel** (score 5095.000) — meituan-travel
+- **travel-trip-contingency-planning** (score 5095.000) — Travel Advisor — Trip Contingency Planning
+- **travel-rule-check** (score 5095.000) — travel-rule-check
+
+### registry 关键词检索 · 可安装候选（按下载量降序）
+- **eas-update-insights**  v?  ↓36812次/装0次  owner: expo  ref: `skills-sh:expo/skills/eas-update-insights`  — # EAS Update Insights > **EAS service - costs apply.** Insights cover updates published th
+- **amap-lbs-skill**  v?  ↓8892次/装0次  owner: lbs-amap  ref: `lbs-amap/amap-lbs-skill`  — 高德地图综合服务，支持POI搜索、路径规划、旅游规划、周边搜索和热力图数据可视化
+- **amap-jsapi-skill**  v?  ↓6073次/装0次  owner: lbs-amap  ref: `lbs-amap/amap-jsapi-skill`  — 高德地图 JSAPI v2.0 (WebGL) 开发技能。涵盖地图生命周期管理、强制安全配置、3D 视图控制、覆盖物绘制及 LBS 服务集成。
+- **otaku-wiki**  v?  ↓2088次/装0次  owner: robin797860  ref: `robin797860/otaku-wiki`  — 番剧/角色百科问答：用 AniList API 快速查番、查角色、查声优与作品关联（无需数据库）
+- **meituan-travel-assistant**  v?  ↓1735次/装0次  owner: travel-skills  ref: `travel-skills/meituan-travel-assistant`  — 零配置即装即用，本地旅行一站式查询，酒店/机票/火车票/景点门票/行程规划全覆盖，数据覆盖300+城市。暑期吃喝玩乐一站式，美团旅行全攻略
+- **amap-cli-skill**  v?  ↓1731次/装0次  owner: lbs-amap  ref: `lbs-amap/amap-cli-skill`  — 通过 CLI 命令行参数实时操控运行在容器中的高德地图 JSAPI 2.0 实例， 支持地图状态控制、路径规划、POI 搜索等，所有操作均以结构化 JSON 输出，适合 AI Ag
+- **moment-writer**  v?  ↓1649次/装0次  owner: fengbabao0929  ref: `fengbabao0929/moment-writer`  — 朋友圈文案生成器（精简版），基于私域变现核心方法论
+- **china-hotel-price-compare**  v?  ↓1626次/装0次  owner: travel-skills  ref: `travel-skills/china-hotel-price-compare`  — 先浏览再比价，TourMind+途牛+同程+美团+RollingGo五源并发比价，找出全网最低价。含评分、距离、早餐、取消政策等详细信息。暑期出行多平台比价，轻松找到最划算的住宿方
+- **meituan-coupon-get-tool**  v?  ↓1530次/装0次  owner: meituan-zhengchang  ref: `meituan-zhengchang/meituan-coupon-get-tool`  — 【美团官方】美团红包助手，支持外卖、餐饮团购、酒店住宿、门票度假、休闲娱乐、闪购、医药等多品类优惠券/红包/神券的一键领取与历史领取记录查询。核心能力：1）一键领券，覆盖上述多品类
+- **gaode-map-pro**  v?  ↓1530次/装0次  owner: travel-skills  ref: `travel-skills/gaode-map-pro`  — 免申请Key即用，17项地图能力全覆盖：地理编码、POI搜索、周边搜索、驾车/公交/步行/骑行路线规划、天气查询、IP定位，出行必备地图工具。暑期自驾路线规划。
+- **mt-paotui-for-client**  v?  ↓1526次/装0次  owner: meituan-tech  ref: `meituan-tech/mt-paotui-for-client`  — 美团跑腿下单助手。支持场景：① 帮取送（A地取件送到B地，支持品类：餐饮、文件、生鲜、蛋糕、鲜花、数码、服饰、快递、五金、汽配等）② 帮买（代购商品）③ 帮取号（餐厅取号、医院挂号
+- **meituan-coupon**  v?  ↓1478次/装0次  owner: meituan-openplatform  ref: `meituan-openplatform/meituan-coupon`  — 【美团官方】美团红包助手，支持外卖、餐饮团购、酒店住宿、门票度假、休闲娱乐、闪购、医药等多品类优惠券/红包/神券的一键领取与历史领取记录查询。核心能力：1）一键领券，覆盖上述多品类
+- **majia-siyu**  v?  ↓1472次/装0次  owner: maojiebc  ref: `maojiebc/majia-siyu`  — 私域专家团 · 马甲实战版（majia-siyu）。处理朋友圈、群发、欢迎语、企微引流、私域诊断、整盘搭建、厂商选型/竞品/报价/市场地图、客户档案与任务后导航。涉及厂商、产品、价
+- **hotel-price-finder**  v?  ↓1366次/装0次  owner: yangms30  ref: `yangms30/hotel-price-finder`  — Compare hotel prices across Booking.com, Agoda, Trip.com in real-time. Free multi-OTA pric
+- **hotel-price-monitor**  v?  ↓1316次/装0次  owner: travel-skills  ref: `travel-skills/hotel-price-monitor`  — 酒店降价监控与多平台比价助手，同时搜索多个旅游平台实时价格帮你比价省钱，支持按酒店名称精确比价、按城市搜索酒店列表、创建降价监控任务，多旅游平台数据直连。暑期订酒店省钱，价格监控与
+
+### git 更新结果
+- 已更新 0 个：—
+- 已是最新 5 个：open-design-skill, ponytail, ppt-generator, scholar-skill, wewrite
+- 需人工处理（分支分叉，脚本不自动改写）1 个：evolver(ahead 115,behind 149 → 需人工 rebase/merge)
+- 失败（网络/权限等）0 个：—
+- 跳过（网络不通/预算不足）0 个：—

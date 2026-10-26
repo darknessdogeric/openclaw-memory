@@ -27,7 +27,7 @@ SKILLS = WS / 'skills'
 MEMO = WS / 'memory' / 'B166ER-skill-upgrade-checklist.md'
 SHIM = Path(os.environ.get('APPDATA', '')) / 'npm' / 'clawhub.cmd'
 LOG = WS / '.tmp' / 'skill_scan_last.json'
-POOL = LOG.parent / 'skill_market_seen_pool.json'
+POOL = WS / 'memory' / 'skill_market_seen_pool.json'
 
 TOTAL_BUDGET = 200
 CLAWHUB_TIMEOUT = 15
@@ -311,6 +311,12 @@ try:
     print('[累计池] 已更新：{} 个 slug / {} 个向量候选'.format(len(_pool_slugs), len(_pool_vec)))
 except Exception as _pe:
     print('[累计池写入失败] {}'.format(_pe))
+
+# ---- 与报告段/结果字段口径对齐（这两个定义曾被差分块整块替换覆盖，2026-10-26 修复）----
+#   _seen    = 累积 slug 池（同一对象引用；下面的 union 会原地更新它 -> 总量自动同步）
+#   true_new = 真新增（累积池口径：从未在池中出现过 -> 天然排除回流）
+_seen = _pool_slugs
+true_new = list(candidate_delta)
 
 # ---------- 3. git 更新（三分类，失败也给出可行动原因）----------
 # 2026-10-25 修正：旧版 `git pull --ff-only` 失败只报 err，无行动价值。
