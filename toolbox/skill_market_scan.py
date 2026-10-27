@@ -29,7 +29,7 @@ SHIM = Path(os.environ.get('APPDATA', '')) / 'npm' / 'clawhub.cmd'
 LOG = WS / '.tmp' / 'skill_scan_last.json'
 POOL = WS / 'memory' / 'skill_market_seen_pool.json'
 
-TOTAL_BUDGET = 200
+TOTAL_BUDGET = 280   # 2026-10-27：检索面补 8 个英文词后实测 170.7s，200s 太挤
 CLAWHUB_TIMEOUT = 15
 REG_TIMEOUT = 12
 GIT_TIMEOUT = 30
@@ -38,7 +38,11 @@ QUERIES = ['hotel', 'travel']
 # 2026-10-25 追加：向量检索连续 4 轮返回同一批占位条目（hotel/travel/travel-rule-check…），
 # 而 registry 关键词检索能翻到 hotel-price-monitor / hotel-price-finder / meituan-hotel-deals
 # 等真正有价值的技能（1304/1355/965 次下载）→ 增加关键词通道（互补，不替代向量通道）
-REG_QUERIES = ['酒店比价', '降价监控', '多平台比价', '采购价格', '美团', '高德',
+REG_QUERIES = [
+               'hotel price comparison', 'hotel rate comparison', 'hotel price monitoring',
+               'competitive pricing analysis', 'hotel competitor pricing',
+               'hotel revenue management', 'hotel rate shopping', 'dynamic pricing hotel',
+               '酒店比价', '降价监控', '多平台比价', '采购价格', '美团', '高德',
                'OTA', '竞品监控', '动态定价', '会员', '私域', '选址', '商圈',
                'hotel price compare', 'hotel price monitor',
                'competitor pricing', 'revenue intelligence']
@@ -82,6 +86,8 @@ def run(cmd, timeout):
     except Exception as e:
         return -2, '', str(e)
 
+
+
 def registry_search(query, limit=12):
     """只读查 ClawHub registry 关键词检索（不安装）
     返回 [{'slug','ref'(owner/slug),'desc','score','downloads','installs','version','owner'}]
@@ -116,7 +122,15 @@ def registry_search(query, limit=12):
                 'desc': (it.get('summary') or it.get('displayName') or '')[:110],
                 'score': str(it.get('score') or 0),
                 'downloads': it.get('downloads') or 0,
-                'installs': it.get('installs') or 0,
+                # 2026-10-27 修正：ClawHub search API **不返回 installs 字段**
+                #   （真实安装数藏在 install / metrics 对象里）-> 旧代码 it.get('installs')
+                #   恒为 0 -> THIN->FILLED 门槛(installs>=3) 永远判不出来。
+                #   抽不出时返回 -1 表示「未知」，与「真的是 0 次」区分开。
+                # 2026-10-27 修正：ClawHub search API **不提供安装数**
+                #   （install 对象只有 kind/reference/sourceUrl；metrics 只有 bookmarks/rolling60DayInstalls）
+                #   -> 旧代码 it.get('installs') 恒为 0，THIN->FILLED 门槛(installs>=3) 永远判不出。
+                #   search 阶段一律记 -1（未知，区别于真实的 0 次），由 manifest_enrich() 补权威值。
+                'installs': -1,
                 'version': it.get('version') or (it.get('tags') or {}).get('latest') or '',
                 'owner': owner,
                 'src': 'registry',
@@ -247,6 +261,88 @@ def _classify_gaps(cands):
                         'core': [c['slug'] for c in core][:6], 'adj': [a['slug'] for a in adj][:4]}
     return out
 
+
+
+
+def _manifest_fetch(slug, ref='', timeout=8):
+    """从 manifest 取权威 stats.installs / stats.downloads / tags.latest。
+    ClawHub search API 不提供安装数，只有 manifest 有。
+    同名多 owner（歧义 slug）会 409 -> 依次尝试 owner/slug 与 slug?ref= 形态。
+    返回 None = 取不到（调用方记 -1 未知，不得当 0）。
+    """
+    import ssl as _ssl
+    import urllib.request as _ur
+    cands = []
+    if ref and '/' in ref:
+        cands.append('https://clawhub.ai/api/v1/skills/' + ref)
+    cands.append('https://clawhub.ai/api/v1/skills/' + slug)
+    if ref and '/' in ref:
+        cands.append('https://clawhub.ai/api/v1/skills/' + slug + '?ref=' + ref)
+    _ctx = _ssl.create_default_context()
+    _ctx.check_hostname = False
+    _ctx.verify_mode = _ssl.CERT_NONE
+    for u in cands:
+        try:
+            raw = _ur.urlopen(_ur.Request(u, headers={'User-Agent': 'Mozilla/5.0', 'Accept': 'application/json'}),
+                              timeout=timeout, context=_ctx).read()
+            sk = (json.loads(raw.decode('utf-8', 'replace')).get('skill') or {})
+            st = sk.get('stats') or {}
+            return {'installs': st.get('installs'),
+                    'downloads': st.get('downloads'),
+                    'version': (sk.get('tags') or {}).get('latest') or sk.get('version') or ''}
+        except Exception:
+            continue
+    return None
+
+
+def manifest_enrich(reg_market, gaps, top_n=10, budget_s=55, workers=10):
+    """给候选补权威 installs/downloads/version（ClawHub search API 不提供安装数）。
+    2026-10-27 改并发：串行版实测 45s 只补 4/46（409 同名歧义 + 逐个 18s 超时吃光预算）；
+    改 10 并发 + 8s 超时后同量候选可在预算内补齐。
+    只补两类（控制请求数）：① 各 gap 的 core 候选（决定 THIN/FILLED，必须准）
+                            ② downloads 最高的 top_n（报告要显示真实热度与版本）
+    取不到的记 -1（未知），**不得当 0**（把未知当 0 会把 FILLED 误判成 THIN）。
+    """
+    import re as _re
+    import concurrent.futures as _cf
+    need = {}
+    for g in gaps:
+        try:
+            c1 = _re.compile(g['core_re'], _re.I)
+            c2 = _re.compile(g['core2_re'], _re.I)
+            ex = _re.compile(g['exclude_slug_re'], _re.I)
+        except Exception:
+            continue
+        for r in reg_market:
+            slug = r.get('slug') or ''
+            blob = '%s %s %s' % (slug, r.get('desc') or '', r.get('owner') or '')
+            if ex.search(slug):
+                continue
+            if c1.search(blob) and c2.search(blob):
+                need[slug] = r
+    for r in sorted(reg_market, key=lambda x: -(x.get('downloads') or 0))[:top_n]:
+        need.setdefault(r.get('slug') or '', r)
+    items = [(slug, r) for slug, r in need.items() if slug]
+    t0 = time.time()
+    ok = 0
+    if items:
+        with _cf.ThreadPoolExecutor(max_workers=workers) as _pool:
+            futs = {_pool.submit(_manifest_fetch, slug, r.get('ref') or ''): (slug, r) for slug, r in items}
+            for fut in _cf.as_completed(futs):
+                slug, r = futs[fut]
+                try:
+                    info = fut.result()
+                except Exception:
+                    info = None
+                if info:
+                    r['installs'] = info['installs'] if info['installs'] is not None else -1
+                    if info['downloads'] is not None:
+                        r['downloads'] = info['downloads']
+                    if info['version']:
+                        r['version'] = info['version']
+                    ok += 1
+    print('[manifest] 权威补数 %d/%d 个候选（并发 %d，请求 %.1fs）' % (ok, len(items), workers, time.time() - t0))
+    return ok, len(items)
 
 gap_status = _classify_gaps(reg_market)
 # 与上一轮对比 → 空白是否被填补（本扫描器最有价值的信号）
