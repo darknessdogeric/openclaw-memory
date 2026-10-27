@@ -88,6 +88,43 @@ def run(cmd, timeout):
 
 
 
+INSTALLS_CACHE = Path(__file__).resolve().parent.parent / 'memory' / 'skill_installs_cache.json'
+
+
+def _cache_load():
+    """官方 manifest 权威 installs 缓存（search API 不提供安装数 -> 判据只能取 manifest）。
+    现场逐个抓会因网络抖动让同一份事实给出不同结论（实测 FILLED<->THIN 翻转）-> 判定只读缓存。"""
+    try:
+        if INSTALLS_CACHE.exists():
+            return json.loads(INSTALLS_CACHE.read_text(encoding='utf-8', errors='replace'))
+    except Exception:
+        pass
+    return {}
+
+
+def _cache_lookup(cache, slug, owner=''):
+    """按 slug 查缓存；同名多 owner 时要求 owner 一致（取不到就返回 None = 未知）。"""
+    c = cache.get(slug)
+    if not c or c.get('installs') is None:
+        return None
+    co = (c.get('owner') or '').lower()
+    if co and owner and co != owner.lower():
+        return None
+    return c
+
+
+def _disp_inst(r):
+    """报告显示用：未知 installs 显示 ?（缺数要标未取得，不显示负数）"""
+    v = r.get('installs')
+    if v is None or (isinstance(v, int) and v < 0):
+        return '?'
+    return v
+
+
+
+_CACHE = _cache_load()
+
+
 def registry_search(query, limit=12):
     """只读查 ClawHub registry 关键词检索（不安装）
     返回 [{'slug','ref'(owner/slug),'desc','score','downloads','installs','version','owner'}]
@@ -360,6 +397,21 @@ def manifest_enrich(reg_market, gaps, top_n=10, budget_s=50, workers=10):
                 need[slug] = r
     for r in sorted(reg_market, key=lambda x: -(x.get('downloads') or 0))[:top_n]:
         need.setdefault(r.get('slug') or '', r)
+    # 2026-10-27 权威缓存优先：缓存命中直接用并**移出待抓列表**（避免被现场结果覆盖）
+    _cache_hit = 0
+    for _slug in list(need.keys()):
+        _c = _cache_lookup(_CACHE, _slug, need[_slug].get('owner') or '')
+        if not _c:
+            continue
+        _r = need[_slug]
+        _r['installs'] = _c['installs']
+        if _c.get('downloads') is not None:
+            _r['downloads'] = _c['downloads']
+        if _c.get('version'):
+            _r['version'] = _c['version']
+        del need[_slug]
+        _cache_hit += 1
+    print('[manifest] cache hit %d / live-miss %d' % (_cache_hit, len(need)))
     items = [(slug, r) for slug, r in need.items() if slug]
     t0 = time.time()
     ok = 0
@@ -391,6 +443,7 @@ def manifest_enrich(reg_market, gaps, top_n=10, budget_s=50, workers=10):
         ok, unknown, len(items), time.time() - t0))
     return ok, len(items)
 
+manifest_enrich(reg_market, _CAPABILITY_GAPS)
 gap_status = _classify_gaps(reg_market)
 # 与上一轮对比 → 空白是否被填补（本扫描器最有价值的信号）
 gap_delta = []
