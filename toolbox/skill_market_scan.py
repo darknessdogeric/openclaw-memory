@@ -125,6 +125,44 @@ def _disp_inst(r):
 _CACHE = _cache_load()
 
 
+GAP_UNIVERSE = Path(__file__).resolve().parent.parent / 'memory' / 'skill_gap_universe.json'
+
+
+def _gap_universe(reg_market):
+    """历史见过的候选全集（slug -> desc/owner/downloads/installs/version）。
+    能力空白的 core 判定若只基于「本轮 registry 检索集」，而该集每轮在 84~141 slug 间波动，
+    core 成员随检索波动 -> 同一份事实被报成 FILLED / THIN 来回翻。
+    市场供给不会因为某次搜索没返回就消失 -> 判定必须在稳定全集上做。
+    """
+    uni = {}
+    try:
+        if GAP_UNIVERSE.exists():
+            uni = json.loads(GAP_UNIVERSE.read_text(encoding='utf-8', errors='replace'))
+    except Exception:
+        uni = {}
+    for r in reg_market:
+        slug = r.get('slug') or ''
+        if not slug:
+            continue
+        ent = uni.setdefault(slug, {'slug': slug})
+        for k in ('desc', 'owner', 'downloads', 'version'):
+            v = r.get(k)
+            if v is None or v == '' or v == -1:
+                continue
+            ent[k] = v
+        v = r.get('installs')
+        if v is not None and v != -1:
+            ent['installs'] = v
+    try:
+        GAP_UNIVERSE.parent.mkdir(parents=True, exist_ok=True)
+        GAP_UNIVERSE.write_text(json.dumps(uni, ensure_ascii=False, indent=1, sort_keys=True),
+                                encoding='utf-8')
+    except Exception:
+        pass
+    return list(uni.values())
+
+
+
 def registry_search(query, limit=12):
     """只读查 ClawHub registry 关键词检索（不安装）
     返回 [{'slug','ref'(owner/slug),'desc','score','downloads','installs','version','owner'}]
@@ -444,7 +482,7 @@ def manifest_enrich(reg_market, gaps, top_n=10, budget_s=50, workers=10):
     return ok, len(items)
 
 manifest_enrich(reg_market, _CAPABILITY_GAPS)
-gap_status = _classify_gaps(reg_market)
+gap_status = _classify_gaps(_gap_universe(reg_market))
 # 与上一轮对比 → 空白是否被填补（本扫描器最有价值的信号）
 gap_delta = []
 # 2026-10-26 16:41 修正：单轮差分把「回流」误报为「新增」

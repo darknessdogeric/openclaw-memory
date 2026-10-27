@@ -1,0 +1,640 @@
+{
+ "afrexai-competitive-intel": {
+  "desc": "Comprehensive competitive intelligence system covering market mapping, product teardowns, pricing analysis, wi",
+  "downloads": 1373,
+  "owner": "1kalin",
+  "slug": "afrexai-competitive-intel"
+ },
+ "airbnb-prices": {
+  "desc": "Get a real Airbnb price quote for a listing and dates, then compare that property against the offers StayingAP",
+  "downloads": 606,
+  "owner": "stayingapi",
+  "slug": "airbnb-prices"
+ },
+ "amap": {
+  "desc": "高德地图 API 技能，支持路径规划、距离计算、地理位置搜索等。用于查询两地之间的骑行/驾车/步行路线、距离、时间等实时信息。需要配置高德地图 API Key（AMAP_API_KEY）。",
+  "downloads": 138,
+  "installs": 1,
+  "owner": "lanlan314",
+  "slug": "amap",
+  "version": "1.0.0"
+ },
+ "amap-cli-skill": {
+  "desc": "通过 CLI 命令行参数实时操控运行在容器中的高德地图 JSAPI 2.0 实例， 支持地图状态控制、路径规划、POI 搜索等，所有操作均以结构化 JSON 输出，适合 AI Agent 驱动的地图可视化交互场景。",
+  "downloads": 1733,
+  "installs": 44,
+  "owner": "lbs-amap",
+  "slug": "amap-cli-skill",
+  "version": "1.0.2"
+ },
+ "amap-jsapi-skill": {
+  "desc": "高德地图 JSAPI v2.0 (WebGL) 开发技能。涵盖地图生命周期管理、强制安全配置、3D 视图控制、覆盖物绘制及 LBS 服务集成。",
+  "downloads": 6077,
+  "installs": 161,
+  "owner": "lbs-amap",
+  "slug": "amap-jsapi-skill",
+  "version": "1.1.1"
+ },
+ "amap-jsapi-tool-free": {
+  "desc": "高德地图JSAPI v2.0开发助手,支持地图展示、标注点、地理编码与基础路径规划,适合个人开发者快速集成地图功能。Use when 需要API集成、接口对接、Webhook配置、系统连接时使用。不适用于逆向工程闭源AP",
+  "downloads": 700,
+  "installs": 2,
+  "owner": "thcjp",
+  "slug": "amap-jsapi-tool-free",
+  "version": "1.0.3"
+ },
+ "amap-jsapi-tool-pro": {
+  "desc": "企业级高德地图JSAPI专业版，支持WebGL渲染、矢量图层、实时路况、批量编码、自定义样式及货车路径规划。",
+  "downloads": 308,
+  "installs": 0,
+  "owner": "thcjp",
+  "slug": "amap-jsapi-tool-pro",
+  "version": "1.0.0"
+ },
+ "amap-lbs-skill": {
+  "desc": "高德地图综合服务，支持POI搜索、路径规划、旅游规划、周边搜索和热力图数据可视化",
+  "downloads": 8892,
+  "installs": 233,
+  "owner": "lbs-amap",
+  "slug": "amap-lbs-skill",
+  "version": "2.0.1"
+ },
+ "amazon-competitor-intelligence-monitor": {
+  "desc": "Amazon competitor intelligence engine. Produces analytical output focused on a defined set of competitors: eit",
+  "downloads": 1622,
+  "owner": "apiclaw",
+  "slug": "amazon-competitor-intelligence-monitor"
+ },
+ "amazon-pricing-command-center": {
+  "desc": "Data-driven pricing strategy engine for Amazon sellers. Given one or more ASINs, auto-detects each product's l",
+  "downloads": 1650,
+  "owner": "apiclaw",
+  "slug": "amazon-pricing-command-center"
+ },
+ "apify-competitor-intelligence": {
+  "desc": "Analyze competitor strategies, content, pricing, ads, and market positioning across Google Maps, Booking.com, ",
+  "downloads": 3290,
+  "installs": 75,
+  "owner": "apify",
+  "slug": "apify-competitor-intelligence",
+  "version": "1.0.1"
+ },
+ "bijia": {
+  "desc": "全网商品比价工具，一键对比淘宝京东拼多多抖音等各平台同款商品价格，结合优惠券和返利计算真实最低到手价。",
+  "downloads": 1011,
+  "installs": 20,
+  "owner": "fangshan101-coder",
+  "slug": "bijia",
+  "version": "0.1.0"
+ },
+ "booking-com-hotels": {
+  "desc": "Search Booking.com hotels by location, dates and occupancy in one unified schema, with cross-OTA price compari",
+  "downloads": 640,
+  "installs": 3,
+  "owner": "stayingapi",
+  "slug": "booking-com-hotels",
+  "version": "1.1.0"
+ },
+ "booking-com-prices": {
+  "desc": "Get a real Booking.com price quote for a listing and dates, then compare that property against the offers Stay",
+  "downloads": 630,
+  "owner": "stayingapi",
+  "slug": "booking-com-prices"
+ },
+ "brand-coupons": {
+  "desc": "美团优惠券，搜索连锁品牌全国通用优惠券。输入品牌名或品类关键词，返回覆盖50+城市的全国通用券，按销量排序。支持咖啡茶饮（瑞幸/库迪/霸王茶姬/星巴克/蜜雪冰城）、快餐连锁（肯德基/麦当劳/塔斯汀）、正餐火锅（海底捞/张",
+  "downloads": 810,
+  "owner": "cn-shopping",
+  "slug": "brand-coupons"
+ },
+ "china-hotel-price-compare": {
+  "desc": "先浏览再比价，TourMind+途牛+同程+美团+RollingGo五源并发比价，找出全网最低价。含评分、距离、早餐、取消政策等详细信息。暑期出行多平台比价，轻松找到最划算的住宿方案",
+  "downloads": 1629,
+  "installs": 14,
+  "owner": "travel-skills",
+  "slug": "china-hotel-price-compare",
+  "version": "4.1.7"
+ },
+ "cipher-market-research": {
+  "desc": "Market intelligence analyst — competitive analysis, pricing research, market sizing, trend reports. Every clai",
+  "downloads": 852,
+  "owner": "renoblabs",
+  "slug": "cipher-market-research"
+ },
+ "compare-hotels": {
+  "desc": "Compare hotel prices across multiple properties for the same dates. Side-by-side comparison table with ratings",
+  "downloads": 1660,
+  "installs": 38,
+  "owner": "dingtom336-gif",
+  "slug": "compare-hotels",
+  "version": "3.2.1"
+ },
+ "competitive-analysis": {
+  "desc": "# Competitive Analysis Skill ## Overview I help you systematically analyze competitors to inform strategic dec",
+  "downloads": 5120,
+  "owner": "claude-office-skills",
+  "slug": "competitive-analysis"
+ },
+ "competitor-analysis-report": {
+  "desc": "Generate structured competitive analysis reports with feature comparisons, pricing analysis, SWOT, and strateg",
+  "downloads": 3079,
+  "installs": 80,
+  "owner": "seanwyngaard",
+  "slug": "competitor-analysis-report",
+  "version": "1.0.0"
+ },
+ "competitor-intelligence": {
+  "desc": "Compare companies or products using Crawlora website extraction, traffic estimates, reviews, product listings,",
+  "downloads": 871,
+  "owner": "crawlora-org",
+  "slug": "competitor-intelligence"
+ },
+ "competitor-intelligence-monitor": {
+  "desc": "输入竞品名称/链接，自动生成竞品分析报告（定价策略/营销动作/SWOT/应对策略）",
+  "downloads": 916,
+  "owner": "amaxclaw",
+  "slug": "competitor-intelligence-monitor"
+ },
+ "competitor-monitor-ai": {
+  "desc": "竞品数据定时监控Skill，定时访问指定电商或社交平台页面，抓取点赞、评论、销量等数据，检测数据异常波动（如出现爆款），自动截图并发送提醒通知。适用于竞品分析、市场监控、爆款发现等场景。",
+  "downloads": 785,
+  "owner": "hwl1413520",
+  "slug": "competitor-monitor-ai"
+ },
+ "competitor-monitor-claw": {
+  "desc": "实时竞品监控虾 — 持续追踪竞品价格、评价与上新动作的情报哨兵。当以下情况时使用此 Skill：(1) 需要监控竞品价格变动并设置预警阈值；(2) 需要追踪竞品上新动态；(3) 需要分析竞品评价口碑（好评/差评关键词）；",
+  "downloads": 1077,
+  "owner": "tujinsama",
+  "slug": "competitor-monitor-claw"
+ },
+ "competitor-pricing-analysis": {
+  "desc": "Scores collected competitor prices against weighted criteria so a US team can see where its own pricing sits i",
+  "downloads": 155,
+  "owner": "rapidworker1",
+  "slug": "competitor-pricing-analysis"
+ },
+ "competitor-tracker": {
+  "desc": "竞品价格、销量、评价、活动全方位监控。适合电商卖家、市场分析师、品牌运营。",
+  "downloads": 890,
+  "owner": "275254cl-hash",
+  "slug": "competitor-tracker"
+ },
+ "ddt-amap-restaurant-expansion": {
+  "desc": "餐饮拓店机会区域、候选地址竞争与现场验证优先级分析。 可将高德地图中复制出的地点名称和地址文本作为地点输入；基于店店通已发布门店快照生成可核验结论。本 Skill 非高德地图官方产品，和高德地图不存在合作、授权或数据来源",
+  "downloads": 399,
+  "installs": 2,
+  "owner": "horacetu",
+  "slug": "ddt-amap-restaurant-expansion",
+  "version": "1.0.0"
+ },
+ "ddt-amap-restaurant-network": {
+  "desc": "餐饮品牌开关店、区域扩张、竞对密度与候选点机会分析。 可将高德地图中复制出的地点名称和地址文本作为地点输入；基于店店通已发布门店快照生成可核验结论。本 Skill 非高德地图官方产品，和高德地图不存在合作、授权或数据来源",
+  "downloads": 409,
+  "installs": 2,
+  "owner": "horacetu",
+  "slug": "ddt-amap-restaurant-network",
+  "version": "1.0.0"
+ },
+ "ddt-amap-retail-network": {
+  "desc": "零售品牌门店规模、业态结构、区域覆盖与候选点机会分析。 可将高德地图中复制出的地点名称和地址文本作为地点输入；基于店店通已发布门店快照生成可核验结论。本 Skill 非高德地图官方产品，和高德地图不存在合作、授权或数据来",
+  "downloads": 387,
+  "installs": 1,
+  "owner": "horacetu",
+  "slug": "ddt-amap-retail-network",
+  "version": "1.0.0"
+ },
+ "ddt-baidu-map-restaurant-expansion": {
+  "desc": "餐饮拓店机会区域、候选地址竞争与现场验证优先级分析。 可将百度地图中复制出的地点名称和地址文本作为地点输入；基于店店通已发布门店快照生成可核验结论。本 Skill 非百度地图官方产品，和百度地图不存在合作、授权或数据来源",
+  "downloads": 398,
+  "installs": 1,
+  "owner": "horacetu",
+  "slug": "ddt-baidu-map-restaurant-expansion",
+  "version": "1.0.0"
+ },
+ "ddt-restaurant-expansion-expert": {
+  "desc": "餐饮连锁拓店选址专家，基于已发布门店快照分析区域扩张、候选点竞对密度与选址风险。适用于拓展经理、选址团队和品牌负责人寻找机会城市、比较候选地址或制定拓店顺序。",
+  "downloads": 386,
+  "owner": "horacetu",
+  "slug": "ddt-restaurant-expansion-expert"
+ },
+ "ddt-tencent-map-restaurant-expansion": {
+  "desc": "餐饮拓店机会区域、候选地址竞争与现场验证优先级分析。 可将腾讯地图中复制出的地点名称和地址文本作为地点输入；基于店店通已发布门店快照生成可核验结论。本 Skill 非腾讯地图官方产品，和腾讯地图不存在合作、授权或数据来源",
+  "downloads": 395,
+  "installs": 1,
+  "owner": "horacetu",
+  "slug": "ddt-tencent-map-restaurant-expansion",
+  "version": "1.0.0"
+ },
+ "ddt-tencent-map-retail-expansion": {
+  "desc": "零售连锁的机会城市、候选地址竞争和拓店顺序分析。 可将腾讯地图中复制出的地点名称和地址文本作为地点输入；基于店店通已发布门店快照生成可核验结论。本 Skill 非腾讯地图官方产品，和腾讯地图不存在合作、授权或数据来源关系",
+  "downloads": 384,
+  "installs": 1,
+  "owner": "horacetu",
+  "slug": "ddt-tencent-map-retail-expansion",
+  "version": "1.0.0"
+ },
+ "eas-update-insights": {
+  "desc": "# EAS Update Insights > **EAS service - costs apply.** Insights cover updates published through EAS Update, a ",
+  "downloads": 36812,
+  "owner": "expo",
+  "slug": "eas-update-insights"
+ },
+ "ecommerce-competitor-monitor": {
+  "desc": "电商竞品价格监控系统 — 自动监控京东/淘宝/亚马逊等平台竞品价格变动、促销活动、库存变化。 定时抓取指定商品页面，比对历史数据，价格异常时立即告警。适合电商卖家、代运营、品牌方。 零代码配置，改个产品链接就能用。",
+  "downloads": 1053,
+  "owner": "lijinhao123-dot",
+  "slug": "ecommerce-competitor-monitor"
+ },
+ "ecommerce-competitor-price-monitor": {
+  "desc": "Analyze competitor ecommerce price history through Glasser. Match exact Amazon product variants, detect abnorm",
+  "downloads": 166,
+  "owner": "glasser-ai",
+  "slug": "ecommerce-competitor-price-monitor"
+ },
+ "food-store-location": {
+  "desc": "选址失误的代价极高，但很多人只看租金和面积，忽略人流方向、可见度、上下水、电力容量和证照条件。 输入：业态（快餐/正餐/饮品/小吃）、候选铺位信息、租金与面积、周边环境描述、预算与目标回本周期。输出：①选址评估表（可见度",
+  "downloads": 209,
+  "installs": 0,
+  "owner": "sxq0607",
+  "slug": "food-store-location",
+  "version": "1.0.0"
+ },
+ "gaode-map-pro": {
+  "desc": "免申请Key即用，17项地图能力全覆盖：地理编码、POI搜索、周边搜索、驾车/公交/步行/骑行路线规划、天气查询、IP定位，出行必备地图工具。暑期自驾路线规划。",
+  "downloads": 1533,
+  "installs": 14,
+  "owner": "travel-skills",
+  "slug": "gaode-map-pro",
+  "version": "2.0.9"
+ },
+ "gaode-taxi": {
+  "desc": "零配置即装即用，一键唤起高德地图APP打车，另含驾车/公交/步行/骑行路线规划、IP定位、周边搜索、POI搜索，免申请Key即用。暑期出行打车、目的地接送。",
+  "downloads": 1196,
+  "owner": "travel-skills",
+  "slug": "gaode-taxi"
+ },
+ "google-hotels-compare": {
+  "desc": "Find the cheapest available rate for one hotel via the Google Hotels backbone — the offers it exposes plus a c",
+  "downloads": 600,
+  "installs": 2,
+  "owner": "stayingapi",
+  "slug": "google-hotels-compare",
+  "version": "1.1.0"
+ },
+ "google-hotels-full": {
+  "desc": "Complete Google Hotels toolkit — search, availability, price and cross-OTA price comparison in one unified sch",
+  "downloads": 615,
+  "installs": 3,
+  "owner": "stayingapi",
+  "slug": "google-hotels-full",
+  "version": "1.1.0"
+ },
+ "google-hotels-prices": {
+  "desc": "Get a real Google Hotels price quote for a listing and dates, then compare that property against the offers St",
+  "downloads": 620,
+  "owner": "stayingapi",
+  "slug": "google-hotels-prices"
+ },
+ "hotel-booking-ai": {
+  "desc": "Hotel search, comparison, and booking with live room rates and real-time availability. Use for any hotel or ac",
+  "downloads": 2372,
+  "installs": 10,
+  "owner": "tourmind",
+  "slug": "hotel-booking-ai",
+  "version": "1.0.5"
+ },
+ "hotel-booking-journione": {
+  "desc": "Search and book hotels through TourMind using live hotel, room-rate, availability, policy, order, and payment ",
+  "downloads": 535,
+  "owner": "kaduzhu-ai",
+  "slug": "hotel-booking-journione"
+ },
+ "hotel-price-finder": {
+  "desc": "Compare hotel prices across Booking.com, Agoda, Trip.com in real-time. Free multi-OTA price comparison with di",
+  "downloads": 1368,
+  "installs": 29,
+  "owner": "yangms30",
+  "slug": "hotel-price-finder",
+  "version": "1.1.0"
+ },
+ "hotel-price-monitor": {
+  "desc": "酒店降价监控与多平台比价助手，同时搜索多个旅游平台实时价格帮你比价省钱，支持按酒店名称精确比价、按城市搜索酒店列表、创建降价监控任务，多旅游平台数据直连。暑期订酒店省钱，价格监控与实时比价",
+  "downloads": 1319,
+  "installs": 8,
+  "owner": "travel-skills",
+  "slug": "hotel-price-monitor",
+  "version": "1.1.7"
+ },
+ "hotel-procurement-price-check": {
+  "desc": "提供酒店餐饮农产品及电商全网实时价格对比，支持多数据源查询和成本参考分析。",
+  "downloads": 759,
+  "installs": 16,
+  "owner": "chaoliuzhu",
+  "slug": "hotel-procurement-price-check",
+  "version": "1.0.1"
+ },
+ "hotel-revenue-pacing-report": {
+  "desc": "Use this skill when a hotel revenue manager, director of revenue management, or general manager needs to draft",
+  "downloads": 618,
+  "owner": "archlab-space",
+  "slug": "hotel-revenue-pacing-report"
+ },
+ "hotel-search": {
+  "desc": "Search Google Hotels for hotel prices, ratings, and availability using browser automation. Use when user asks ",
+  "downloads": 1534,
+  "installs": 39,
+  "owner": "skillhq-ai",
+  "slug": "hotel-search",
+  "version": "1.0.1"
+ },
+ "hotel-smart-book": {
+  "desc": "多旅游平台酒店比价与订房决策助手，帮你找到最便宜的酒店并告诉你该订还是再等等，含低价日历和订房建议，多旅游平台数据直连。暑假聪明订酒店，智能推荐与比价",
+  "downloads": 1191,
+  "installs": 5,
+  "owner": "travel-skills",
+  "slug": "hotel-smart-book",
+  "version": "1.0.7"
+ },
+ "hotl": {
+  "desc": "Use the hotl CLI to search Google Hotels, compare prices, fetch hotel room/rate details, and return machine-re",
+  "downloads": 648,
+  "installs": 8,
+  "owner": "art22s",
+  "slug": "hotl",
+  "version": "0.1.1"
+ },
+ "industry-competition-landscape-analysis": {
+  "desc": "围绕招商项目、产业项目、投资项目在建设、运营、市场、政策、资金、审批、环保、安全 及区域承接等方面的潜在风险，系统评估项目从签约、建设、投产到运营全过程中可能面临的 不确定因素，形成项目落地风险识别、风险等级判断及风险应",
+  "downloads": 1242,
+  "owner": "daviddatamining",
+  "slug": "industry-competition-landscape-analysis"
+ },
+ "keyword-monitor": {
+  "desc": "关键词监控与内容采集自动化工具 — 多关键词并行监控、全网爆款内容自动抓取，每日生成结构化报告推送到飞书群。适用于内容运营、竞品监控、热点追踪、线索收集等场景。",
+  "downloads": 769,
+  "owner": "yesong-hue",
+  "slug": "keyword-monitor"
+ },
+ "koompi-hospitality": {
+  "desc": "Hotel and hospitality operations management — reservations, guest services, housekeeping, maintenance, revenue",
+  "downloads": 1096,
+  "owner": "rithythul",
+  "slug": "koompi-hospitality"
+ },
+ "linkfox-expert-amazon-competitor-monitor": {
+  "desc": "亚马逊竞品动态监控专家。适用于周期性跟踪竞品 ASIN、价格变化、BSR 波动、评论变化、Listing 改动、定时提醒和竞品动态报告的场景。",
+  "downloads": 488,
+  "owner": "linkfox-ai",
+  "slug": "linkfox-expert-amazon-competitor-monitor"
+ },
+ "majia-huiyuan": {
+  "desc": "会员数据顾问·马甲实战版（majia-huiyuan）。当核心交付物是会员指标口径、RFM、复购/留存/流失公式、核销率、客单价、会员分层/分群、人群圈选、标签体系、CDP、OneID 身份打通、Cohort、CRM/私",
+  "downloads": 1236,
+  "installs": 2,
+  "owner": "maojiebc",
+  "slug": "majia-huiyuan",
+  "version": "1.5.0"
+ },
+ "majia-siyu": {
+  "desc": "私域专家团 · 马甲实战版（majia-siyu）。处理朋友圈、群发、欢迎语、企微引流、私域诊断、整盘搭建、厂商选型/竞品/报价/市场地图、客户档案与任务后导航。涉及厂商、产品、价格、功能、案例、政策、平台规则或公司存续",
+  "downloads": 1478,
+  "owner": "maojiebc",
+  "slug": "majia-siyu"
+ },
+ "meituan-baodan": {
+  "desc": "美团爆单操盘手——本地生活商家美团团购方案设计工具。为推拿养生/医美口腔/丽人美容/餐饮/本地服务商家生成完整美团团购方案：片区竞对调研、团单设计、四层产品架构（引流/常规/盈利/高客单）、团购定价与折扣纵深建模、美团活",
+  "downloads": 345,
+  "owner": "mikogeyu-cell",
+  "slug": "meituan-baodan"
+ },
+ "meituan-c-user-auth": {
+  "desc": "美团C端用户Agent认证工具。为需要美团用户身份的 Skill（如发券、查订单等）提供手机号验证码登录认证，管理用户Token，实现“一次认证、持续有效”。当其他 Skill 需要校验用户身份、获取用户Token时，作",
+  "downloads": 1163,
+  "owner": "meituan-zhengchang",
+  "slug": "meituan-c-user-auth"
+ },
+ "meituan-coupon": {
+  "desc": "【美团官方】美团红包助手，支持外卖、餐饮团购、酒店住宿、门票度假、休闲娱乐、闪购、医药等多品类优惠券/红包/神券的一键领取与历史领取记录查询。核心能力：1）一键领券，覆盖上述多品类场景，领取秒到账；2）查询历史红包领取记",
+  "downloads": 1482,
+  "owner": "meituan-openplatform",
+  "slug": "meituan-coupon"
+ },
+ "meituan-coupon-get-tool": {
+  "desc": "【美团官方】美团红包助手，支持外卖、餐饮团购、酒店住宿、门票度假、休闲娱乐、闪购、医药等多品类优惠券/红包/神券的一键领取与历史领取记录查询。核心能力：1）一键领券，覆盖上述多品类场景，领取秒到账；2）查询历史红包领取记",
+  "downloads": 1535,
+  "owner": "meituan-zhengchang",
+  "slug": "meituan-coupon-get-tool"
+ },
+ "meituan-coupon-traffic": {
+  "desc": "【美团官方】美团出行助手，为用户提供出行优惠方案，让每个人轻松拥有美好旅程。核心能力：1）一键领券，覆盖美团机票和火车票优惠券场景，领取秒到账；2）智能查询历史红包领取记录，查看已领红包状态和有效期；3）内置美团官方账号",
+  "downloads": 803,
+  "owner": "meituan-open-platform",
+  "slug": "meituan-coupon-traffic"
+ },
+ "meituan-hotel-deals": {
+  "desc": "搜索美团全国连锁品牌酒店特价套餐，覆盖希尔顿、万豪、洲际、凯悦、香格里拉、亚朵、全季等品牌，低至2折起。支持按城市、品牌筛选，按折扣或价格排序。实时数据，含预订链接直跳美团下单。暑期特价酒店推荐，周末短途超值住宿",
+  "downloads": 977,
+  "installs": 2,
+  "owner": "travel-skills",
+  "slug": "meituan-hotel-deals",
+  "version": "1.0.19"
+ },
+ "meituan-travel-assistant": {
+  "desc": "零配置即装即用，本地旅行一站式查询，酒店/机票/火车票/景点门票/行程规划全覆盖，数据覆盖300+城市。暑期吃喝玩乐一站式，美团旅行全攻略",
+  "downloads": 1739,
+  "owner": "travel-skills",
+  "slug": "meituan-travel-assistant"
+ },
+ "meituan-waimai-coupon": {
+  "desc": "【美团官方】美团外卖红包助手，支持外卖、餐饮团购、酒店住宿、门票度假、休闲娱乐、闪购、医药等多品类优惠券/红包/神券的一键领取与历史领取记录查询。核心能力：1）一键领券，覆盖上述多品类场景，领取秒到账；2）查询历史红包领",
+  "downloads": 947,
+  "owner": "meituan-openplatform",
+  "slug": "meituan-waimai-coupon"
+ },
+ "membership-liability-check-free": {
+  "desc": "会员卡销售与核销明细表逐项核对（核销金额复算、期末负债勾稽、核销超可用余额、同一卡号重复销售、过期作废口径、关键字段缺失），每条结论引用原文行号。触发词包括 会员卡预收核对、会员卡销售与核销明细表对不上、预收负债核对、会",
+  "downloads": 277,
+  "installs": 1,
+  "owner": "chenqg618",
+  "slug": "membership-liability-check-free",
+  "version": "1.0.5"
+ },
+ "moment-writer": {
+  "desc": "朋友圈文案生成器（精简版），基于私域变现核心方法论",
+  "downloads": 1653,
+  "owner": "fengbabao0929",
+  "slug": "moment-writer"
+ },
+ "mt-paotui-for-client": {
+  "desc": "美团跑腿下单助手。支持场景：① 帮取送（A地取件送到B地，支持品类：餐饮、文件、生鲜、蛋糕、鲜花、数码、服饰、快递、五金、汽配等）② 帮买（代购商品）③ 帮取号（餐厅取号、医院挂号、其他取号）④ 帮搬装/帮扔杂物/其他帮",
+  "downloads": 1531,
+  "owner": "meituan-tech",
+  "slug": "mt-paotui-for-client"
+ },
+ "ota-commission-check-free": {
+  "desc": "渠道结算核对表逐项核对（佣金与净结算复算、合计勾稽、重复与空缺检测），每条结论引用原文行号。本免费版执行引擎声明的免费检查项。触发词包括 OTA佣金核对、携程美团结算、房费结算、佣金算错。",
+  "downloads": 550,
+  "owner": "chenqg618",
+  "slug": "ota-commission-check-free"
+ },
+ "otaku-wiki": {
+  "desc": "番剧/角色百科问答：用 AniList API 快速查番、查角色、查声优与作品关联（无需数据库）",
+  "downloads": 2091,
+  "installs": 62,
+  "owner": "robin797860",
+  "slug": "otaku-wiki",
+  "version": "1.0.0"
+ },
+ "price-drop-tracker": {
+  "desc": "降价监控+自动下单。用户设置目标价和截止日期后，系统定时轮询飞猪价格，达标后通知或自动下单。Use when user mentions 降价监控, 价格提醒, 等降价, 盯盘, 自动下单, price drop tra",
+  "downloads": 830,
+  "owner": "zhaorabbits",
+  "slug": "price-drop-tracker"
+ },
+ "pricewin-hotel-deal-finder": {
+  "desc": "Find the cheapest hotel deal by comparing live prices across Booking.com, Agoda, Google Hotels, and OpenTravel",
+  "downloads": 1428,
+  "installs": 0,
+  "owner": "cotghw",
+  "slug": "pricewin-hotel-deal-finder",
+  "version": "1.1.3"
+ },
+ "pricewin-price-comparison": {
+  "desc": "> Requires the `pricewin` MCP server. This skill issues no network calls of its own. # Price Comparison **MCP ",
+  "downloads": 691,
+  "installs": 0,
+  "owner": "price-win",
+  "slug": "pricewin-price-comparison",
+  "version": "1.0.3"
+ },
+ "pricing": {
+  "desc": "Sets, tests, and changes prices: value metric, tier packaging, discounts, price increases, and willingness-to-",
+  "downloads": 3049,
+  "installs": 78,
+  "owner": "ivangdavila",
+  "slug": "pricing",
+  "version": "1.0.2"
+ },
+ "pricing-calc": {
+  "desc": "Calculate pricing based on costs, margins, market positioning, and competitor analysis. For freelancers, produ",
+  "downloads": 1160,
+  "owner": "theshadowrose",
+  "slug": "pricing-calc"
+ },
+ "pricing-strategy-framework": {
+  "desc": "Provides structured pricing strategy frameworks, templates, and actionable recommendations based on cost, valu",
+  "downloads": 955,
+  "owner": "harrylabsj",
+  "slug": "pricing-strategy-framework"
+ },
+ "private-traffic-sop": {
+  "desc": "根据产品类型/用户画像，自动生成完整的私域运营 SOP（引流-培育-转化-复购）",
+  "downloads": 985,
+  "installs": 20,
+  "owner": "amaxclaw",
+  "slug": "private-traffic-sop",
+  "version": "1.0.0"
+ },
+ "project-site-selection-analysis": {
+  "desc": "围绕项目落地需求与目标区域承载条件，综合评估项目与区域在土地空间、产业基础、政策支持、 交通物流、人才供给、配套服务、成本条件及风险约束等方面的匹配度，形成系统化的项目选址 分析报告。本技能核心解决\"项目适不适合落在目标",
+  "downloads": 518,
+  "owner": "daviddatamining",
+  "slug": "project-site-selection-analysis"
+ },
+ "retail-member-points-check-free": {
+  "desc": "会员积分与储值卡核销核对表逐项核对（逐行复算、合计勾稽、重复与空缺检测），每条结论引用原文。本免费版执行引擎声明的免费检查项。触发词包括 会员积分与储值卡核销核对、会员积分与储值卡核销核对表对不上。",
+  "downloads": 421,
+  "installs": 1,
+  "owner": "chenqg618",
+  "slug": "retail-member-points-check-free",
+  "version": "1.0.51"
+ },
+ "reverse-costing": {
+  "desc": "Deconstruct competitor products to understand cost structure. Use for competitive pricing and cost analysis.",
+  "downloads": 873,
+  "owner": "linuszz",
+  "slug": "reverse-costing"
+ },
+ "rollinggo-hotel-booking-global": {
+  "desc": "Global 2 million hotels Booking + Price Monitoring + Alert skill. By world's #3 B2B travel platform. Covering ",
+  "downloads": 441,
+  "installs": 0,
+  "owner": "rollinggo-ai",
+  "slug": "rollinggo-hotel-booking-global",
+  "version": "0.1.0"
+ },
+ "rollinggo-hotel-skill-cn-new": {
+  "desc": "全球酒店预订&低价监控提醒Skill，200万+精选酒店，独家优惠价格，全球第三大旅游科技公司14年房源积累，让你的Agent轻松预订品质酒店，支持支付宝下单+查询历史订单，24 小时客服支持，全天候响应。本版本面向中国",
+  "downloads": 780,
+  "installs": 3,
+  "owner": "rollinggo-ai",
+  "slug": "rollinggo-hotel-skill-cn-new",
+  "version": "1.1.1"
+ },
+ "siyu-morning-evening-reporter": {
+  "desc": "自动为私域社群生成每日早晚报，包含天气、热点资讯、福利预告及风格化问候，提升社群活跃度与用户粘性。",
+  "downloads": 759,
+  "owner": "jessabuivolova-sketch",
+  "slug": "siyu-morning-evening-reporter"
+ },
+ "store-location-analysis": {
+  "desc": "开店选址综合分析助手。用户输入目标地址和开店类型，自动整合高德地图实时数据（地理编码、POI搜索、交通态势），从人流量、用户群体、客流特点、消费情况、竞品分析六大维度进行评估，生成交互式HTML可视化选址报告（含评分仪表",
+  "downloads": 506,
+  "installs": 0,
+  "owner": "bettermen",
+  "slug": "store-location-analysis",
+  "version": "1.0.0"
+ },
+ "store-site-analysis": {
+  "desc": "基于高德开放平台的商铺选址分析 Skill。支持单地址选址分析（竞品搜索、配套评估、交通态势、热力图可视化）和多地址对比分析（雷达图、柱状图、评分排名、聚合地图）。让 AI Agent 一句话完成开店选址评估。",
+  "downloads": 637,
+  "installs": 1,
+  "owner": "wukongmazi",
+  "slug": "store-site-analysis",
+  "version": "1.0.3"
+ },
+ "subscription-revenue-tracker": {
+  "desc": "SaaS and subscription business revenue intelligence. Track MRR/ARR, calculate churn rate, net revenue retentio",
+  "downloads": 905,
+  "owner": "samledger67-dotcom",
+  "slug": "subscription-revenue-tracker"
+ },
+ "travel-hotel-research": {
+  "desc": "Researches hotels, flights, attractions, short-term rentals, and live events via the Crawlora API — Booking.co",
+  "downloads": 1290,
+  "owner": "crawlora-org",
+  "slug": "travel-hotel-research"
+ },
+ "unihiker-k10-ota": {
+  "desc": "Add HTTP OTA (Over-The-Air) firmware update capability to Unihiker K10 Arduino projects, including AP/STA proj",
+  "downloads": 1239,
+  "owner": "rockets-cn",
+  "slug": "unihiker-k10-ota"
+ },
+ "upkuajing-map-merchants-search-zh": {
+  "desc": "依托 Google‑Maps 商业数据库挖掘海外本地企业、线下门店和服务商。可按照所在区域、行业分类、商家评分筛选精准目标客户，助力外贸销售团队完成海外市场布局和线下渠道获客。",
+  "downloads": 681,
+  "owner": "upkuajing",
+  "slug": "upkuajing-map-merchants-search-zh"
+ },
+ "vrbo-prices": {
+  "desc": "Get a real Vrbo price quote for a listing and dates, then compare that property against the offers StayingAPI ",
+  "downloads": 613,
+  "owner": "stayingapi",
+  "slug": "vrbo-prices"
+ },
+ "wechat-private-traffic-operations-assistant": {
+  "desc": "根据业务类型和客户画像，生成微信朋友圈剧本、社群SOP、群发话术及客户分层管理的私域流量运营方案。",
+  "downloads": 1094,
+  "owner": "jessabuivolova-sketch",
+  "slug": "wechat-private-traffic-operations-assistant"
+ },
+ "xiaxiayouhui-deals": {
+  "desc": "跨平台电商比价与优惠券聚合工具。当用户询问商品价格、查找优惠券、解析商品链接、寻找今日好价或本地生活优惠时调用。返回多个电商平台的同款商品价格对比和可用券信息。",
+  "downloads": 1158,
+  "installs": 20,
+  "owner": "cheese9102",
+  "slug": "xiaxiayouhui-deals",
+  "version": "1.6.1"
+ }
+}
