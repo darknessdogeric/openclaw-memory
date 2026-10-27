@@ -765,7 +765,7 @@ L.append('\n### registry 关键词检索 · 可安装候选（按下载量降序
 if reg_new:
     for r in reg_new[:15]:
         L.append('- **{}**  v{}  ↓{}次/装{}次  owner: {}  ref: `{}`  — {}\n'.format(
-            r['slug'], r['version'] or '?', r['downloads'], r['installs'],
+            r['slug'], r['version'] or '?', r['downloads'], _disp_inst(r),
             r['owner'] or '?', r['ref'], r['desc'][:90]))
 else:
     L.append('- 无（全部已本地安装）\n')
