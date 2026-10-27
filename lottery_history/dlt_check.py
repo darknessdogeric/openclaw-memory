@@ -162,6 +162,16 @@ for name, fn in (('sporttery', fetch_sporttery), ('cwl', fetch_cwl), ('500', fet
 # ---------------- 2. 交叉比对 ----------------
 # 关键：按【源】去重计票——同一源分页重复返回同一期不能算两票
 latest = None
+
+# 2026-10-27 状态保护（R-HEAL-31）：抓取失败时**不覆盖**上一次的有效状态。
+#   起因：2026-10-27 09:10 一次三源同时 SSL 失败的运行，把本状态文件覆写为空壳
+#   （issue=None / recent=0）-> 最近开奖数据丢失、下游复盘无数据可对。
+_STATE_BACKUP = None
+try:
+    if LOG.exists():
+        _STATE_BACKUP = LOG.read_text(encoding='utf-8', errors='replace')
+except Exception:
+    _STATE_BACKUP = None
 detail = {}
 for s in sources:
     for r in s['rows']:
@@ -430,3 +440,17 @@ print('下期待预测期号: {}'.format(result['next_issue']))
 print('报告: {}'.format(REPORT))
 print('JSON: {}'.format(OUT_JSON))
 print('用时 {:.1f}s'.format(time.time() - t0))
+
+
+# ---- 状态保护兜底（跑在所有写入之后）----
+if _STATE_BACKUP:
+    _bad = False
+    try:
+        _cur = json.loads(LOG.read_text(encoding='utf-8', errors='replace'))
+        _bad = (not _cur.get('issue')) or (not _cur.get('recent'))
+    except Exception:
+        _bad = True
+    if _bad:
+        LOG.write_text(_STATE_BACKUP, encoding='utf-8')
+        (LOG.parent / (LOG.name + '.failed')).write_text(LOG.read_text(encoding='utf-8', errors='replace'), encoding='utf-8')
+        print('[状态保护] 本轮未取到有效开奖 -> 已恢复上一次有效状态（失败详情见 %s.failed）' % LOG.name)
