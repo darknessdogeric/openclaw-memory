@@ -61,7 +61,7 @@
  },
  "amazon-competitor-intelligence-monitor": {
   "desc": "Amazon competitor intelligence engine. Produces analytical output focused on a defined set of competitors: eit",
-  "downloads": 1622,
+  "downloads": 1623,
   "owner": "apiclaw",
   "slug": "amazon-competitor-intelligence-monitor"
  },
@@ -143,6 +143,12 @@
   "slug": "competitor-analysis-report",
   "version": "1.0.0"
  },
+ "competitor-change": {
+  "desc": "按已支持周期摘要竞品商品快照变化",
+  "downloads": 779,
+  "owner": "funewa",
+  "slug": "competitor-change"
+ },
  "competitor-intelligence": {
   "desc": "Compare companies or products using Crawlora website extraction, traffic estimates, reviews, product listings,",
   "downloads": 871,
@@ -169,7 +175,7 @@
  },
  "competitor-pricing-analysis": {
   "desc": "Scores collected competitor prices against weighted criteria so a US team can see where its own pricing sits i",
-  "downloads": 155,
+  "downloads": 156,
   "owner": "rapidworker1",
   "slug": "competitor-pricing-analysis"
  },
@@ -213,7 +219,7 @@
  },
  "ddt-restaurant-expansion-expert": {
   "desc": "餐饮连锁拓店选址专家，基于已发布门店快照分析区域扩张、候选点竞对密度与选址风险。适用于拓展经理、选址团队和品牌负责人寻找机会城市、比较候选地址或制定拓店顺序。",
-  "downloads": 386,
+  "downloads": 387,
   "owner": "horacetu",
   "slug": "ddt-restaurant-expansion-expert"
  },
@@ -397,7 +403,7 @@
  },
  "majia-siyu": {
   "desc": "私域专家团 · 马甲实战版（majia-siyu）。处理朋友圈、群发、欢迎语、企微引流、私域诊断、整盘搭建、厂商选型/竞品/报价/市场地图、客户档案与任务后导航。涉及厂商、产品、价格、功能、案例、政策、平台规则或公司存续",
-  "downloads": 1478,
+  "downloads": 1480,
   "owner": "maojiebc",
   "slug": "majia-siyu"
  },
@@ -601,7 +607,7 @@
  },
  "travel-hotel-research": {
   "desc": "Researches hotels, flights, attractions, short-term rentals, and live events via the Crawlora API — Booking.co",
-  "downloads": 1290,
+  "downloads": 1291,
   "owner": "crawlora-org",
   "slug": "travel-hotel-research"
  },
@@ -613,7 +619,7 @@
  },
  "upkuajing-map-merchants-search-zh": {
   "desc": "依托 Google‑Maps 商业数据库挖掘海外本地企业、线下门店和服务商。可按照所在区域、行业分类、商家评分筛选精准目标客户，助力外贸销售团队完成海外市场布局和线下渠道获客。",
-  "downloads": 681,
+  "downloads": 682,
   "owner": "upkuajing",
   "slug": "upkuajing-map-merchants-search-zh"
  },
