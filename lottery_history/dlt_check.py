@@ -168,8 +168,8 @@ latest = None
 #   （issue=None / recent=0）-> 最近开奖数据丢失、下游复盘无数据可对。
 _STATE_BACKUP = None
 try:
-    if LOG.exists():
-        _STATE_BACKUP = LOG.read_text(encoding='utf-8', errors='replace')
+    if OUT_JSON.exists():
+        _STATE_BACKUP = OUT_JSON.read_text(encoding='utf-8', errors='replace')
 except Exception:
     _STATE_BACKUP = None
 detail = {}
@@ -446,11 +446,12 @@ print('用时 {:.1f}s'.format(time.time() - t0))
 if _STATE_BACKUP:
     _bad = False
     try:
-        _cur = json.loads(LOG.read_text(encoding='utf-8', errors='replace'))
-        _bad = (not _cur.get('issue')) or (not _cur.get('recent'))
+        _cur = json.loads(OUT_JSON.read_text(encoding='utf-8', errors='replace'))
+        # 判据只用 result 里确实存在的键：issue 为空 => 本轮没取到有效开奖
+        _bad = not _cur.get('issue')
     except Exception:
         _bad = True
     if _bad:
-        LOG.write_text(_STATE_BACKUP, encoding='utf-8')
-        (LOG.parent / (LOG.name + '.failed')).write_text(LOG.read_text(encoding='utf-8', errors='replace'), encoding='utf-8')
-        print('[状态保护] 本轮未取到有效开奖 -> 已恢复上一次有效状态（失败详情见 %s.failed）' % LOG.name)
+        OUT_JSON.write_text(_STATE_BACKUP, encoding='utf-8')
+        (OUT_JSON.parent / (OUT_JSON.name + '.failed')).write_text(OUT_JSON.read_text(encoding='utf-8', errors='replace'), encoding='utf-8')
+        print('[状态保护] 本轮未取到有效开奖 -> 已恢复上一次有效状态（失败详情见 %s.failed）' % OUT_JSON.name)

@@ -1,5 +1,5 @@
 {
-  "ts": "2026-10-27 09:13:17",
+  "ts": "2026-10-27 09:21:51",
   "ok": true,
   "conf": "🟢🟢",
   "conf_note": "含官方一手源（sporttery）",
@@ -18,69 +18,16 @@
   ],
   "votes": 2,
   "sources": {
-    "26122": {
-      "srcs": [
-        "500",
-        "sporttery"
-      ],
-      "votes": 2
-    },
-    "26121": {
-      "srcs": [
-        "500",
-        "sporttery"
-      ],
-      "votes": 2
-    },
-    "26120": {
-      "srcs": [
-        "500",
-        "sporttery"
-      ],
-      "votes": 2
-    },
-    "26119": {
-      "srcs": [
-        "500",
-        "sporttery"
-      ],
-      "votes": 2
-    },
-    "26118": {
-      "srcs": [
-        "500",
-        "sporttery"
-      ],
-      "votes": 2
-    },
-    "26117": {
-      "srcs": [
-        "500",
-        "sporttery"
-      ],
-      "votes": 2
-    },
-    "26116": {
-      "srcs": [
-        "500",
-        "sporttery"
-      ],
-      "votes": 2
-    },
-    "26115": {
-      "srcs": [
-        "500",
-        "sporttery"
-      ],
-      "votes": 2
-    }
+    "sporttery": 60,
+    "cwl": "FAIL:Expecting value: line 1 column 1 (char 0)",
+    "500": 23
   },
   "src_list": [
     "500",
     "sporttery"
   ],
   "review": null,
-  "tracker_updated": false,
+  "tracker_updated": true,
   "next_issue": "26123",
   "recent": [
     {
@@ -101,13 +48,12 @@
         "500",
         "sporttery"
       ],
+      "amounts": {},
       "votes": 2,
       "src_list": [
         "500",
         "sporttery"
-      ],
-      "conf": "🟢🟢",
-      "conf_note": "含官方一手源（sporttery）"
+      ]
     },
     {
       "issue": "26121",
@@ -127,13 +73,7 @@
         "500",
         "sporttery"
       ],
-      "votes": 2,
-      "src_list": [
-        "500",
-        "sporttery"
-      ],
-      "conf": "🟢🟢",
-      "conf_note": "含官方一手源（sporttery）"
+      "amounts": {}
     },
     {
       "issue": "26120",
@@ -153,13 +93,7 @@
         "500",
         "sporttery"
       ],
-      "votes": 2,
-      "src_list": [
-        "500",
-        "sporttery"
-      ],
-      "conf": "🟢🟢",
-      "conf_note": "含官方一手源（sporttery）"
+      "amounts": {}
     },
     {
       "issue": "26119",
@@ -179,13 +113,7 @@
         "500",
         "sporttery"
       ],
-      "votes": 2,
-      "src_list": [
-        "500",
-        "sporttery"
-      ],
-      "conf": "🟢🟢",
-      "conf_note": "含官方一手源（sporttery）"
+      "amounts": {}
     },
     {
       "issue": "26118",
@@ -205,13 +133,7 @@
         "500",
         "sporttery"
       ],
-      "votes": 2,
-      "src_list": [
-        "500",
-        "sporttery"
-      ],
-      "conf": "🟢🟢",
-      "conf_note": "含官方一手源（sporttery）"
+      "amounts": {}
     },
     {
       "issue": "26117",
@@ -231,13 +153,7 @@
         "500",
         "sporttery"
       ],
-      "votes": 2,
-      "src_list": [
-        "500",
-        "sporttery"
-      ],
-      "conf": "🟢🟢",
-      "conf_note": "含官方一手源（sporttery）"
+      "amounts": {}
     },
     {
       "issue": "26116",
@@ -257,13 +173,7 @@
         "500",
         "sporttery"
       ],
-      "votes": 2,
-      "src_list": [
-        "500",
-        "sporttery"
-      ],
-      "conf": "🟢🟢",
-      "conf_note": "含官方一手源（sporttery）"
+      "amounts": {}
     },
     {
       "issue": "26115",
@@ -283,14 +193,7 @@
         "500",
         "sporttery"
       ],
-      "votes": 2,
-      "src_list": [
-        "500",
-        "sporttery"
-      ],
-      "conf": "🟢🟢",
-      "conf_note": "含官方一手源（sporttery）"
+      "amounts": {}
     }
-  ],
-  "restored_from": "2026-10-27 09:10 三源全失败的一次运行把本文件覆写为空(issue=None/recent=0)"
+  ]
 }
