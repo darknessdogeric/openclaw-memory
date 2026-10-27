@@ -1,0 +1,296 @@
+{
+  "ts": "2026-10-27 09:13:17",
+  "ok": true,
+  "conf": "🟢🟢",
+  "conf_note": "含官方一手源（sporttery）",
+  "issue": "26122",
+  "date": "2026-10-26",
+  "front": [
+    2,
+    14,
+    21,
+    22,
+    24
+  ],
+  "back": [
+    2,
+    12
+  ],
+  "votes": 2,
+  "sources": {
+    "26122": {
+      "srcs": [
+        "500",
+        "sporttery"
+      ],
+      "votes": 2
+    },
+    "26121": {
+      "srcs": [
+        "500",
+        "sporttery"
+      ],
+      "votes": 2
+    },
+    "26120": {
+      "srcs": [
+        "500",
+        "sporttery"
+      ],
+      "votes": 2
+    },
+    "26119": {
+      "srcs": [
+        "500",
+        "sporttery"
+      ],
+      "votes": 2
+    },
+    "26118": {
+      "srcs": [
+        "500",
+        "sporttery"
+      ],
+      "votes": 2
+    },
+    "26117": {
+      "srcs": [
+        "500",
+        "sporttery"
+      ],
+      "votes": 2
+    },
+    "26116": {
+      "srcs": [
+        "500",
+        "sporttery"
+      ],
+      "votes": 2
+    },
+    "26115": {
+      "srcs": [
+        "500",
+        "sporttery"
+      ],
+      "votes": 2
+    }
+  },
+  "src_list": [
+    "500",
+    "sporttery"
+  ],
+  "review": null,
+  "tracker_updated": false,
+  "next_issue": "26123",
+  "recent": [
+    {
+      "issue": "26122",
+      "date": "2026-10-26",
+      "front": [
+        2,
+        14,
+        21,
+        22,
+        24
+      ],
+      "back": [
+        2,
+        12
+      ],
+      "srcs": [
+        "500",
+        "sporttery"
+      ],
+      "votes": 2,
+      "src_list": [
+        "500",
+        "sporttery"
+      ],
+      "conf": "🟢🟢",
+      "conf_note": "含官方一手源（sporttery）"
+    },
+    {
+      "issue": "26121",
+      "date": "2026-10-24",
+      "front": [
+        6,
+        8,
+        19,
+        24,
+        25
+      ],
+      "back": [
+        1,
+        8
+      ],
+      "srcs": [
+        "500",
+        "sporttery"
+      ],
+      "votes": 2,
+      "src_list": [
+        "500",
+        "sporttery"
+      ],
+      "conf": "🟢🟢",
+      "conf_note": "含官方一手源（sporttery）"
+    },
+    {
+      "issue": "26120",
+      "date": "2026-10-21",
+      "front": [
+        1,
+        6,
+        10,
+        15,
+        32
+      ],
+      "back": [
+        3,
+        4
+      ],
+      "srcs": [
+        "500",
+        "sporttery"
+      ],
+      "votes": 2,
+      "src_list": [
+        "500",
+        "sporttery"
+      ],
+      "conf": "🟢🟢",
+      "conf_note": "含官方一手源（sporttery）"
+    },
+    {
+      "issue": "26119",
+      "date": "2026-10-19",
+      "front": [
+        3,
+        6,
+        20,
+        24,
+        32
+      ],
+      "back": [
+        4,
+        7
+      ],
+      "srcs": [
+        "500",
+        "sporttery"
+      ],
+      "votes": 2,
+      "src_list": [
+        "500",
+        "sporttery"
+      ],
+      "conf": "🟢🟢",
+      "conf_note": "含官方一手源（sporttery）"
+    },
+    {
+      "issue": "26118",
+      "date": "2026-10-17",
+      "front": [
+        2,
+        9,
+        21,
+        26,
+        32
+      ],
+      "back": [
+        6,
+        12
+      ],
+      "srcs": [
+        "500",
+        "sporttery"
+      ],
+      "votes": 2,
+      "src_list": [
+        "500",
+        "sporttery"
+      ],
+      "conf": "🟢🟢",
+      "conf_note": "含官方一手源（sporttery）"
+    },
+    {
+      "issue": "26117",
+      "date": "2026-10-14",
+      "front": [
+        4,
+        13,
+        19,
+        29,
+        31
+      ],
+      "back": [
+        2,
+        12
+      ],
+      "srcs": [
+        "500",
+        "sporttery"
+      ],
+      "votes": 2,
+      "src_list": [
+        "500",
+        "sporttery"
+      ],
+      "conf": "🟢🟢",
+      "conf_note": "含官方一手源（sporttery）"
+    },
+    {
+      "issue": "26116",
+      "date": "2026-10-12",
+      "front": [
+        9,
+        18,
+        22,
+        25,
+        35
+      ],
+      "back": [
+        1,
+        10
+      ],
+      "srcs": [
+        "500",
+        "sporttery"
+      ],
+      "votes": 2,
+      "src_list": [
+        "500",
+        "sporttery"
+      ],
+      "conf": "🟢🟢",
+      "conf_note": "含官方一手源（sporttery）"
+    },
+    {
+      "issue": "26115",
+      "date": "2026-10-10",
+      "front": [
+        12,
+        20,
+        32,
+        33,
+        35
+      ],
+      "back": [
+        6,
+        7
+      ],
+      "srcs": [
+        "500",
+        "sporttery"
+      ],
+      "votes": 2,
+      "src_list": [
+        "500",
+        "sporttery"
+      ],
+      "conf": "🟢🟢",
+      "conf_note": "含官方一手源（sporttery）"
+    }
+  ],
+  "restored_from": "2026-10-27 09:10 三源全失败的一次运行把本文件覆写为空(issue=None/recent=0)"
+}

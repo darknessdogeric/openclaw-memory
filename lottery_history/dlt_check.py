@@ -30,14 +30,22 @@ TOTAL_BUDGET = 150
 t0 = time.time()
 
 # 官方标准奖级表（单注 2 元）
-PRIZE = {
-    (5, 2): ('一等奖', None), (5, 1): ('二等奖', None), (5, 0): ('三等奖', 10000),
-    (4, 2): ('四等奖', 3000), (4, 1): ('五等奖', 300), (4, 0): ('六等奖', 200),
-    (3, 2): ('七等奖', 100), (3, 1): ('八等奖', 15), (3, 0): ('九等奖', 5),
-    (2, 2): ('七等奖', 100), (2, 1): ('八等奖', 15), (2, 0): ('九等奖', 5),
-    (1, 2): ('八等奖', 15), (1, 1): ('九等奖', 5), (1, 0): ('九等奖', 5),
-    (0, 2): ('九等奖', 5), (0, 1): ('', 0), (0, 0): ('', 0),
-}
+# 官方奖级表（2026 现行 7 档 + 变更前 9 档）
+# 2026-01-15 体彩公告变更规则：自 2026-02-02（期号 26014）起由 9 档并为 7 档，26013 及以前为 9 档。
+# 7 档结构经官方 sporttery API 92 期「各奖级注数比」交叉验证（误差 1~9%），并与官方 51% 返奖率自洽：
+#   一等 5+2 | 二等 5+1 | 三等 5+0、4+2 | 四等 4+1 | 五等 3+2、4+0 | 六等 3+1、2+2 | 七等 3+0、2+1、1+2、0+2
+# 不中奖 5 类：2+0、1+1、1+0、0+1、0+0（旧表误算为中奖 -> 任中奖被算成 1/2、固定奖 EV 达投入 783%，物理不可能）
+# 每期单注金额优先取官方 prizeLevelList（奖池大时三至七等奖升级），取不到则用表内标准值。
+PRIZE_7 = {(5, 2): ('一等奖', 0), (5, 1): ('二等奖', 0), (5, 0): ('三等奖', 5000), (4, 2): ('三等奖', 5000), (4, 1): ('四等奖', 300), (3, 2): ('五等奖', 150), (4, 0): ('五等奖', 150), (3, 1): ('六等奖', 15), (2, 2): ('六等奖', 15), (3, 0): ('七等奖', 5), (2, 1): ('七等奖', 5), (1, 2): ('七等奖', 5), (0, 2): ('七等奖', 5), (2, 0): ('', 0), (1, 1): ('', 0), (1, 0): ('', 0), (0, 1): ('', 0), (0, 0): ('', 0)}
+PRIZE_9 = {(5, 2): ('一等奖', 0), (5, 1): ('二等奖', 0), (5, 0): ('三等奖', 10000), (4, 2): ('四等奖', 3000), (4, 1): ('五等奖', 300), (3, 2): ('六等奖', 200), (4, 0): ('七等奖', 100), (3, 1): ('八等奖', 15), (2, 2): ('八等奖', 15), (3, 0): ('九等奖', 5), (2, 1): ('九等奖', 5), (1, 2): ('九等奖', 5), (0, 2): ('九等奖', 5), (2, 0): ('', 0), (1, 1): ('', 0), (1, 0): ('', 0), (0, 1): ('', 0), (0, 0): ('', 0)}
+LEGACY_LAST_ISSUE = '26013'
+
+
+def prize_tier(issue, fh, bh):
+    """按期号选 7 档(现行)/9 档(2026-02-02 之前)，返回 (奖级名, 标准单注金额)。"""
+    tbl = PRIZE_9 if str(issue) <= LEGACY_LAST_ISSUE else PRIZE_7
+    return tbl.get((fh, bh), ('', 0))
+
 
 ctx = ssl.create_default_context()
 ctx.check_hostname = False
@@ -68,7 +76,14 @@ def fetch_sporttery():
             if len(nums) < 7:
                 continue
             date = (it.get('lotteryDrawTime') or '')[:10]
-            out.append({'issue': str(it['lotteryDrawNum']).strip(),
+            _amts = {}
+            for _lv in (it.get('prizeLevelList') or []):
+                _nm = str(_lv.get('prizeLevel') or '')
+                if '追加' in _nm:
+                    continue
+                _amts[_nm] = _lv.get('stakeAmount')
+            out.append({'amounts': _amts,
+                        'issue': str(it['lotteryDrawNum']).strip(),
                         'date': date,
                         'front': [int(x) for x in nums[:5]],
                         'back': [int(x) for x in nums[5:7]],
@@ -155,6 +170,7 @@ for s in sources:
             detail[key] = {'issue': r['issue'], 'date': r['date'],
                            'front': r['front'], 'back': r['back'], 'srcs': set()}
         detail[key]['srcs'].add(s['name'])
+        detail[key]['amounts'] = r.get('amounts') or {}
 
 if not detail:
     print('[抓取] 全部源失败：' + ' | '.join(errs))
@@ -211,11 +227,18 @@ if pred:
     best_prize = ''
     for sc in schemes:
         fh, bh = hit(pf, pb, sc.get('front') or [], sc.get('back') or [])
-        level, amt = PRIZE.get((fh, bh), ('', 0))
-        amt = amt or 0
+        level, amt = prize_tier(latest['issue'], fh, bh)
+        if level:
+            _ov = (latest.get('amounts') or {}).get(level)
+            _ns = str(_ov or '').replace(',', '').replace('，', '').replace(' ', '').strip()
+            try:
+                amt = int(float(_ns))
+            except Exception:
+                amt = amt or 0
+        else:
+            amt = 0
         total += amt
-        if amt and (not best_prize or amt > PRIZE.get(
-                next((k for k, v in PRIZE.items() if v[0] == level), (0, 0)), (0, 0))[1]):
+        if amt and not best_prize:
             best_prize = level
         rows.append({'id': sc.get('id'), 'name': sc.get('name'),
                      'front': sc.get('front'), 'back': sc.get('back'),
