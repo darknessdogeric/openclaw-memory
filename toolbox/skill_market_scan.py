@@ -255,8 +255,11 @@ def _classify_gaps(cands):
         elif not core:
             status = 'ADJACENT'
         else:
-            best = max(core, key=lambda x: ((x.get('installs') or 0), (x.get('downloads') or 0)))
-            status = 'FILLED' if (best.get('installs') or 0) >= 3 else 'THIN'
+            # 2026-10-27 修正：installs 未知(-1) 不能参与 max 比较当成 0 用
+            #   -> 只用**已知**的 installs 判定；全未知时按 THIN 保守处理并标注
+            _known = [c for c in core if (c.get('installs') or -1) >= 0]
+            _best = max(_known, key=lambda x: ((x.get('installs') or 0), (x.get('downloads') or 0))) if _known else None
+            status = 'FILLED' if (_best is not None and (_best.get('installs') or 0) >= 3) else 'THIN'
         out[g['id']] = {'title': g.get('title', g['id']), 'status': status,
                         'core': [c['slug'] for c in core][:6], 'adj': [a['slug'] for a in adj][:4]}
     return out
@@ -265,19 +268,19 @@ def _classify_gaps(cands):
 
 
 def _manifest_fetch(slug, ref='', timeout=8):
-    """从 manifest 取权威 stats.installs / stats.downloads / tags.latest。
-    ClawHub search API 不提供安装数，只有 manifest 有。
-    同名多 owner（歧义 slug）会 409 -> 依次尝试 owner/slug 与 slug?ref= 形态。
+    """取 manifest 权威 stats.installs / stats.downloads / tags.latest。
+    ClawHub search API 不提供安装数（install 对象只有 kind/reference/sourceUrl；
+    metrics 只有 bookmarks/rolling60DayInstalls）-> 判据只能用 manifest。
+    同名多 owner（歧义 slug）会 409 -> 依次尝试 owner 限定的 query 形态。
     返回 None = 取不到（调用方记 -1 未知，不得当 0）。
     """
     import ssl as _ssl
     import urllib.request as _ur
-    cands = []
+    cands = ['https://clawhub.ai/api/v1/skills/' + slug]
     if ref and '/' in ref:
-        cands.append('https://clawhub.ai/api/v1/skills/' + ref)
-    cands.append('https://clawhub.ai/api/v1/skills/' + slug)
-    if ref and '/' in ref:
-        cands.append('https://clawhub.ai/api/v1/skills/' + slug + '?ref=' + ref)
+        owner = ref.split('/', 1)[0]
+        cands.append('https://clawhub.ai/api/v1/skills?slug=' + slug + '&ownerHandle=' + owner)
+        cands.append('https://clawhub.ai/api/v1/skills?slug=' + slug + '&owner=' + owner)
     _ctx = _ssl.create_default_context()
     _ctx.check_hostname = False
     _ctx.verify_mode = _ssl.CERT_NONE
@@ -285,23 +288,62 @@ def _manifest_fetch(slug, ref='', timeout=8):
         try:
             raw = _ur.urlopen(_ur.Request(u, headers={'User-Agent': 'Mozilla/5.0', 'Accept': 'application/json'}),
                               timeout=timeout, context=_ctx).read()
-            sk = (json.loads(raw.decode('utf-8', 'replace')).get('skill') or {})
+            j = json.loads(raw.decode('utf-8', 'replace'))
+            sk = j.get('skill') or (j.get('items') or [{}])[0]
             st = sk.get('stats') or {}
+            if st.get('installs') is None and not st.get('downloads'):
+                continue
             return {'installs': st.get('installs'),
                     'downloads': st.get('downloads'),
-                    'version': (sk.get('tags') or {}).get('latest') or sk.get('version') or ''}
+                    'version': (sk.get('tags') or {}).get('latest') or sk.get('latestVersion') or ''}
         except Exception:
             continue
     return None
 
+def _bulk_index(pages=3, limit=200):
+    """批量取 registry 列表 -> {(owner, slug): item} 与 {slug: [items]}。
+    官方 /api/v1/skills 列表项自带 stats（含 installs）+ ownerHandle + latestVersion，
+    一次请求覆盖 200 个技能 -> 取代逐个 manifest 请求（46 候选 45s 只补 4 个）。
+    顺带解决同名多 owner 歧义（按 ownerHandle 精确匹配）。
+    """
+    import ssl as _ssl
+    import urllib.request as _ur
+    _ctx = _ssl.create_default_context()
+    _ctx.check_hostname = False
+    _ctx.verify_mode = _ssl.CERT_NONE
+    by_owner, by_slug, cursor = {}, {}, None
+    for _ in range(pages):
+        u = 'https://clawhub.ai/api/v1/skills?limit=%d' % limit
+        if cursor:
+            u += '&cursor=' + urllib.parse.quote(str(cursor))
+        try:
+            raw = _ur.urlopen(_ur.Request(u, headers={'User-Agent': 'Mozilla/5.0', 'Accept': 'application/json'}),
+                              timeout=20, context=_ctx).read()
+            j = json.loads(raw.decode('utf-8', 'replace'))
+        except Exception:
+            break
+        its = j.get('items') or []
+        for it in its:
+            sl = it.get('slug') or ''
+            ow = it.get('ownerHandle') or ''
+            if not sl:
+                continue
+            by_owner[(ow.lower(), sl.lower())] = it
+            by_slug.setdefault(sl.lower(), []).append(it)
+        cursor = j.get('nextCursor')
+        if not cursor or not its:
+            break
+    return by_owner, by_slug
+
 
 def manifest_enrich(reg_market, gaps, top_n=10, budget_s=55, workers=10):
-    """给候选补权威 installs/downloads/version（ClawHub search API 不提供安装数）。
-    2026-10-27 改并发：串行版实测 45s 只补 4/46（409 同名歧义 + 逐个 18s 超时吃光预算）；
-    改 10 并发 + 8s 超时后同量候选可在预算内补齐。
+    """给候选补权威 installs/downloads/version。
+    策略：① 批量索引（/api/v1/skills）覆盖到的直接取；② 未覆盖的并发逐个 manifest 兜底。
     只补两类（控制请求数）：① 各 gap 的 core 候选（决定 THIN/FILLED，必须准）
                             ② downloads 最高的 top_n（报告要显示真实热度与版本）
     取不到的记 -1（未知），**不得当 0**（把未知当 0 会把 FILLED 误判成 THIN）。
+    预算只限制**发起**新请求，已返回的结果一律采纳（2026-10-27 修：旧版把检查放在
+    结果到达之后 -> 55s 后完成的补数被整批丢弃 -> 出现 FILLED->THIN 假翻转）。
     """
     import re as _re
     import concurrent.futures as _cf
@@ -325,9 +367,37 @@ def manifest_enrich(reg_market, gaps, top_n=10, budget_s=55, workers=10):
     items = [(slug, r) for slug, r in need.items() if slug]
     t0 = time.time()
     ok = 0
-    if items:
+    bulk = 0
+    try:
+        by_owner, by_slug = _bulk_index()
+    except Exception:
+        by_owner, by_slug = {}, {}
+    if by_owner or by_slug:
+        for slug, r in items:
+            ow = (r.get('owner') or '').lower()
+            it = by_owner.get((ow, slug.lower()))
+            if it is None:
+                cand = by_slug.get(slug.lower()) or []
+                if len(cand) == 1:
+                    it = cand[0]
+            if it is None:
+                continue
+            st = it.get('stats') or {}
+            r['installs'] = st.get('installs') if st.get('installs') is not None else -1
+            if st.get('downloads') is not None:
+                r['downloads'] = st.get('downloads')
+            if it.get('latestVersion'):
+                r['version'] = it.get('latestVersion')
+            bulk += 1
+            ok += 1
+    todo = [(slug, r) for slug, r in items if (r.get('installs') in (None, -1))]
+    if todo:
         with _cf.ThreadPoolExecutor(max_workers=workers) as _pool:
-            futs = {_pool.submit(_manifest_fetch, slug, r.get('ref') or ''): (slug, r) for slug, r in items}
+            futs = {}
+            for slug, r in todo:
+                if time.time() - t0 > budget_s:
+                    break
+                futs[_pool.submit(_manifest_fetch, slug, r.get('ref') or '')] = (slug, r)
             for fut in _cf.as_completed(futs):
                 slug, r = futs[fut]
                 try:
@@ -341,7 +411,8 @@ def manifest_enrich(reg_market, gaps, top_n=10, budget_s=55, workers=10):
                     if info['version']:
                         r['version'] = info['version']
                     ok += 1
-    print('[manifest] 权威补数 %d/%d 个候选（并发 %d，请求 %.1fs）' % (ok, len(items), workers, time.time() - t0))
+    print('[manifest] 权威补数 %d/%d（批量 %d + 并发兜底 %d，请求 %.1fs）' % (
+        ok, len(items), bulk, ok - bulk, time.time() - t0))
     return ok, len(items)
 
 gap_status = _classify_gaps(reg_market)
