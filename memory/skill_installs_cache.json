@@ -1,0 +1,303 @@
+{
+ "amap": {
+  "downloads": 138,
+  "fetched_at": "2026-10-27 11:22",
+  "installs": 1,
+  "owner": "lanlan314",
+  "version": "1.0.0"
+ },
+ "amap-cli-skill": {
+  "downloads": 1733,
+  "fetched_at": "2026-10-27 11:22",
+  "installs": 44,
+  "owner": "lbs-amap",
+  "version": "1.0.2"
+ },
+ "amap-jsapi-skill": {
+  "downloads": 6077,
+  "fetched_at": "2026-10-27 11:22",
+  "installs": 161,
+  "owner": "lbs-amap",
+  "version": "1.1.1"
+ },
+ "amap-jsapi-tool-free": {
+  "downloads": 700,
+  "fetched_at": "2026-10-27 11:22",
+  "installs": 2,
+  "owner": "thcjp",
+  "version": "1.0.3"
+ },
+ "amap-jsapi-tool-pro": {
+  "downloads": 308,
+  "fetched_at": "2026-10-27 11:22",
+  "installs": 0,
+  "owner": "thcjp",
+  "version": "1.0.0"
+ },
+ "amap-lbs-skill": {
+  "downloads": 8892,
+  "fetched_at": "2026-10-27 11:22",
+  "installs": 233,
+  "owner": "lbs-amap",
+  "version": "2.0.1"
+ },
+ "apify-competitor-intelligence": {
+  "downloads": 3290,
+  "fetched_at": "2026-10-27 11:22",
+  "installs": 75,
+  "owner": "apify",
+  "version": "1.0.1"
+ },
+ "bijia": {
+  "downloads": 1011,
+  "fetched_at": "2026-10-27 11:22",
+  "installs": 20,
+  "owner": "fangshan101-coder",
+  "version": "0.1.0"
+ },
+ "booking-com-hotels": {
+  "downloads": 640,
+  "fetched_at": "2026-10-27 11:22",
+  "installs": 3,
+  "owner": "stayingapi",
+  "version": "1.1.0"
+ },
+ "china-hotel-price-compare": {
+  "downloads": 1629,
+  "fetched_at": "2026-10-27 11:22",
+  "installs": 14,
+  "owner": "travel-skills",
+  "version": "4.1.7"
+ },
+ "compare-hotels": {
+  "downloads": 1660,
+  "fetched_at": "2026-10-27 11:22",
+  "installs": 38,
+  "owner": "dingtom336-gif",
+  "version": "3.2.1"
+ },
+ "competitor-analysis-report": {
+  "downloads": 3079,
+  "fetched_at": "2026-10-27 11:22",
+  "installs": 80,
+  "owner": "seanwyngaard",
+  "version": "1.0.0"
+ },
+ "ddt-amap-restaurant-expansion": {
+  "downloads": 399,
+  "fetched_at": "2026-10-27 11:22",
+  "installs": 2,
+  "owner": "horacetu",
+  "version": "1.0.0"
+ },
+ "ddt-amap-restaurant-network": {
+  "downloads": 409,
+  "fetched_at": "2026-10-27 11:22",
+  "installs": 2,
+  "owner": "horacetu",
+  "version": "1.0.0"
+ },
+ "ddt-amap-retail-network": {
+  "downloads": 387,
+  "fetched_at": "2026-10-27 11:22",
+  "installs": 1,
+  "owner": "horacetu",
+  "version": "1.0.0"
+ },
+ "ddt-baidu-map-restaurant-expansion": {
+  "downloads": 398,
+  "fetched_at": "2026-10-27 11:22",
+  "installs": 1,
+  "owner": "horacetu",
+  "version": "1.0.0"
+ },
+ "ddt-tencent-map-restaurant-expansion": {
+  "downloads": 395,
+  "fetched_at": "2026-10-27 11:22",
+  "installs": 1,
+  "owner": "horacetu",
+  "version": "1.0.0"
+ },
+ "ddt-tencent-map-retail-expansion": {
+  "downloads": 384,
+  "fetched_at": "2026-10-27 11:22",
+  "installs": 1,
+  "owner": "horacetu",
+  "version": "1.0.0"
+ },
+ "food-store-location": {
+  "downloads": 209,
+  "fetched_at": "2026-10-27 11:22",
+  "installs": 0,
+  "owner": "sxq0607",
+  "version": "1.0.0"
+ },
+ "gaode-map-pro": {
+  "downloads": 1533,
+  "fetched_at": "2026-10-27 11:22",
+  "installs": 14,
+  "owner": "travel-skills",
+  "version": "2.0.9"
+ },
+ "google-hotels-compare": {
+  "downloads": 600,
+  "fetched_at": "2026-10-27 11:22",
+  "installs": 2,
+  "owner": "stayingapi",
+  "version": "1.1.0"
+ },
+ "google-hotels-full": {
+  "downloads": 615,
+  "fetched_at": "2026-10-27 11:22",
+  "installs": 3,
+  "owner": "stayingapi",
+  "version": "1.1.0"
+ },
+ "hotel-booking-ai": {
+  "downloads": 2372,
+  "fetched_at": "2026-10-27 11:22",
+  "installs": 10,
+  "owner": "tourmind",
+  "version": "1.0.5"
+ },
+ "hotel-price-finder": {
+  "downloads": 1368,
+  "fetched_at": "2026-10-27 11:22",
+  "installs": 29,
+  "owner": "yangms30",
+  "version": "1.1.0"
+ },
+ "hotel-price-monitor": {
+  "downloads": 1319,
+  "fetched_at": "2026-10-27 11:22",
+  "installs": 8,
+  "owner": "travel-skills",
+  "version": "1.1.7"
+ },
+ "hotel-procurement-price-check": {
+  "downloads": 759,
+  "fetched_at": "2026-10-27 11:22",
+  "installs": 16,
+  "owner": "chaoliuzhu",
+  "version": "1.0.1"
+ },
+ "hotel-search": {
+  "downloads": 1534,
+  "fetched_at": "2026-10-27 11:22",
+  "installs": 39,
+  "owner": "skillhq-ai",
+  "version": "1.0.1"
+ },
+ "hotel-smart-book": {
+  "downloads": 1191,
+  "fetched_at": "2026-10-27 11:22",
+  "installs": 5,
+  "owner": "travel-skills",
+  "version": "1.0.7"
+ },
+ "hotl": {
+  "downloads": 648,
+  "fetched_at": "2026-10-27 11:22",
+  "installs": 8,
+  "owner": "art22s",
+  "version": "0.1.1"
+ },
+ "majia-huiyuan": {
+  "downloads": 1236,
+  "fetched_at": "2026-10-27 11:22",
+  "installs": 2,
+  "owner": "maojiebc",
+  "version": "1.5.0"
+ },
+ "meituan-hotel-deals": {
+  "downloads": 977,
+  "fetched_at": "2026-10-27 11:22",
+  "installs": 2,
+  "owner": "travel-skills",
+  "version": "1.0.19"
+ },
+ "meituan-travel-assistant": {
+  "downloads": 1739,
+  "fetched_at": "2026-10-27 11:22",
+  "installs": 8,
+  "owner": "travel-skills",
+  "version": "2.0.4"
+ },
+ "membership-liability-check-free": {
+  "downloads": 277,
+  "fetched_at": "2026-10-27 11:22",
+  "installs": 1,
+  "owner": "chenqg618",
+  "version": "1.0.5"
+ },
+ "otaku-wiki": {
+  "downloads": 2091,
+  "fetched_at": "2026-10-27 11:22",
+  "installs": 62,
+  "owner": "robin797860",
+  "version": "1.0.0"
+ },
+ "pricewin-hotel-deal-finder": {
+  "downloads": 1428,
+  "fetched_at": "2026-10-27 11:22",
+  "installs": 0,
+  "owner": "cotghw",
+  "version": "1.1.3"
+ },
+ "pricing": {
+  "downloads": 3049,
+  "fetched_at": "2026-10-27 11:22",
+  "installs": 78,
+  "owner": "ivangdavila",
+  "version": "1.0.2"
+ },
+ "private-traffic-sop": {
+  "downloads": 985,
+  "fetched_at": "2026-10-27 11:22",
+  "installs": 20,
+  "owner": "amaxclaw",
+  "version": "1.0.0"
+ },
+ "retail-member-points-check-free": {
+  "downloads": 421,
+  "fetched_at": "2026-10-27 11:22",
+  "installs": 1,
+  "owner": "chenqg618",
+  "version": "1.0.51"
+ },
+ "rollinggo-hotel-booking-global": {
+  "downloads": 441,
+  "fetched_at": "2026-10-27 11:22",
+  "installs": 0,
+  "owner": "rollinggo-ai",
+  "version": "0.1.0"
+ },
+ "rollinggo-hotel-skill-cn-new": {
+  "downloads": 780,
+  "fetched_at": "2026-10-27 11:22",
+  "installs": 3,
+  "owner": "rollinggo-ai",
+  "version": "1.1.1"
+ },
+ "store-location-analysis": {
+  "downloads": 506,
+  "fetched_at": "2026-10-27 11:22",
+  "installs": 0,
+  "owner": "bettermen",
+  "version": "1.0.0"
+ },
+ "store-site-analysis": {
+  "downloads": 637,
+  "fetched_at": "2026-10-27 11:22",
+  "installs": 1,
+  "owner": "wukongmazi",
+  "version": "1.0.3"
+ },
+ "xiaxiayouhui-deals": {
+  "downloads": 1158,
+  "fetched_at": "2026-10-27 11:22",
+  "installs": 20,
+  "owner": "cheese9102",
+  "version": "1.6.1"
+ }
+}
