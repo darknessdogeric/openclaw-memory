@@ -1,0 +1,87 @@
+{
+  "snapshot_type": "session_config",
+  "r292_compliant": true,
+  "r66_checked": true,
+  "schema_version": "1.0",
+  "timestamp": "2026-09-03T23:31:16",
+  "trigger": "manual after OpenClaw 2026.8.2 upgrade + sidebar reset",
+  "groups": [
+    {
+      "name": "工作台",
+      "position": 0
+    },
+    {
+      "name": "安逸集团",
+      "position": 1
+    },
+    {
+      "name": "天马行空",
+      "position": 2
+    },
+    {
+      "name": "自动化任务",
+      "position": 3
+    }
+  ],
+  "sessions": [
+    {
+      "key": "agent:main:main",
+      "label": "主页",
+      "icon": "book",
+      "color": "blue",
+      "group": "工作台",
+      "pinned": true,
+      "statusNote": "AnYi D+35 · 当前主会话"
+    },
+    {
+      "key": "agent:main:cron:1abe7c29-24c1-4be8-8362-3554c6249c91",
+      "label": "Automation: B166ER-深度自迭代-晚上21点",
+      "group": "自动化任务"
+    },
+    {
+      "key": "agent:main:cron:92d261c3-b7ad-43e7-b3d1-840dce84b5ed",
+      "label": "Automation: Cron-PUSH-Emergence · 每日 21:30 涌现整理",
+      "group": "自动化任务"
+    },
+    {
+      "key": "agent:main:cron:0eced1e9-8729-47d8-b8d6-34eff13ed780",
+      "label": "Automation: Entity Extractor (每日21:30)",
+      "group": "自动化任务"
+    },
+    {
+      "key": "agent:main:cron:88ef7351-b377-44bb-b843-99872407dcdd",
+      "label": "Automation: Watch 20个入境旅游核心节点城市名单公布",
+      "group": "自动化任务"
+    },
+    {
+      "key": "agent:main:cron:7e149123-b2c9-4336-89fa-da9cae972679",
+      "label": "Automation: 每日全球情报简报-08:30",
+      "group": "自动化任务"
+    },
+    {
+      "key": "agent:main:cron:4b08cd6f-0ca5-45c9-86b5-b52a51ae653f",
+      "label": "Automation: B166ER-深度自迭代-上午10点",
+      "group": "自动化任务"
+    },
+    {
+      "key": "agent:main:cron:01679313-75d4-4ffa-8c99-ad1543869bc7",
+      "label": "Automation: B166ER-每日本地备份-02点",
+      "group": "自动化任务"
+    },
+    {
+      "key": "agent:main:cron:16c3811b-3fe5-49d0-be1a-0df19a86aef6",
+      "label": "Automation: 每日商业情报（20集团版）",
+      "group": "自动化任务"
+    }
+  ],
+  "_pending_groups": [
+    {
+      "name": "安逸集团",
+      "note": "等待 Eric 创建新 webchat 会话"
+    },
+    {
+      "name": "天马行空",
+      "note": "等待 Eric 创建新 webchat 会话"
+    }
+  ]
+}

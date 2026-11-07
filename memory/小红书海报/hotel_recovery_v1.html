@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><meta charset="UTF-8">
+<title>酒店行业景气度判断 v1.0</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap');
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{
+    width:1080px;height:1920px;background:#0E1626;color:#E8E4DA;overflow:hidden;
+    font-family:'Noto Sans SC','PingFang SC','Microsoft YaHei',sans-serif;
+    position:relative;
+  }
+  .stars{position:absolute;inset:0;z-index:0;}
+  .sec{position:relative;z-index:1;width:100%;padding:22px 46px;
+       display:flex;flex-direction:column;justify-content:center;gap:9px;}
+  .s1{height:240px;padding-top:52px;}
+  .s2{height:290px;}
+  .s3{height:200px;}
+  .s4{height:310px;}
+  .s5{height:210px;}
+  .s6{height:250px;}
+  .s7{height:246px;}
+  .s8{height:174px;justify-content:flex-end;}
+  .kick{font-size:17px;color:#D4A74A;letter-spacing:5px;font-weight:700;margin-bottom:8px;}
+  h1{font-size:46px;font-weight:900;line-height:1.18;letter-spacing:0;}
+  h1 .hl{color:#D4A74A;}
+  .sub{font-size:17px;color:#8A99B3;line-height:1.45;margin-top:10px;}
+  h2{font-size:26px;font-weight:800;color:#E8E4DA;letter-spacing:1px;display:flex;
+     align-items:center;gap:9px;margin-bottom:2px;}
+  h2 .num{font-size:12.5px;font-weight:700;color:#D4A74A;background:rgba(212,167,74,.15);
+          padding:2px 8px;border-radius:4px;letter-spacing:1px;}
+  b{color:#D4A74A;font-weight:700;}
+  /* s2 锚点区 */
+  .anchor{display:flex;gap:14px;margin-top:4px;}
+  .msibox{flex:1;background:rgba(255,255,255,.045);border:1px solid rgba(140,155,180,.16);
+           border-radius:9px;padding:12px 14px;}
+  .msibox .lbl{font-size:12.5px;color:#7E8CA5;letter-spacing:1px;margin-bottom:4px;}
+  .msibox .seq{display:flex;align-items:flex-end;gap:16px;}
+  .msibox .q{text-align:center;}
+  .msibox .q .qv{font-size:26px;font-weight:900;line-height:1;}
+  .msibox .q .qy{font-size:11px;color:#7E8CA5;margin-top:3px;}
+  .msibox .q.peak .qv{color:#D4A74A;}
+  .revbox{flex:0 0 300px;background:rgba(212,167,74,.10);border:1px solid rgba(212,167,74,.34);
+           border-radius:9px;padding:12px 14px;display:flex;flex-direction:column;justify-content:center;}
+  .revbox .lbl{font-size:12.5px;color:#C3B18A;letter-spacing:1px;}
+  .revbox .big{font-size:46px;font-weight:900;color:#D4A74A;line-height:1;margin:4px 0 3px;}
+  .revbox .sm{font-size:12.5px;color:#C3B18A;line-height:1.4;}
+  .msinote{margin-top:9px;font-size:14px;color:#C3B18A;line-height:1.5;
+           border-left:3px solid #D4A74A;padding-left:11px;}
+  .msinote b{color:#D4A74A;}
+  /* s3 四集团 */
+  .grp{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:6px;}
+  .g1c{background:rgba(255,255,255,.045);border:1px solid rgba(140,155,180,.16);
+        border-radius:8px;padding:11px 6px;text-align:center;}
+  .g1c .n{font-size:14.5px;color:#E8E4DA;font-weight:600;}
+  .g1c .v{font-size:27px;font-weight:900;margin-top:4px;line-height:1;}
+  .g1c .v.flat{color:#8A99B3;}
+  .g1c .v.dn{color:#7E9CB8;}
+  .g1c .t{font-size:11px;color:#7E8CA5;margin-top:4px;}
+  .grpn{margin-top:9px;font-size:13.5px;color:#8A99B3;text-align:center;}
+  /* s4 四个来源 */
+  .src4{display:flex;flex-direction:column;gap:7px;margin-top:4px;}
+  .sr{display:flex;align-items:center;gap:11px;background:rgba(255,255,255,.04);
+      border:1px solid rgba(140,155,180,.15);border-radius:8px;padding:9px 13px;}
+  .sr .tag{flex:0 0 62px;font-size:11.5px;font-weight:700;text-align:center;padding:3px 0;
+           border-radius:4px;background:rgba(140,155,180,.16);color:#9AA8BE;letter-spacing:.5px;}
+  .sr.real{border-color:rgba(212,167,74,.42);background:rgba(212,167,74,.09);}
+  .sr.real .tag{background:#D4A74A;color:#0E1626;}
+  .sr .tx{font-size:15px;color:#E8E4DA;line-height:1.4;}
+  .sr .tx i{font-style:normal;color:#8A99B3;font-size:13px;}
+  .sr.real .tx i{color:#C3B18A;}
+  /* s5 反证 */
+  .cnt2{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:4px;}
+  .cb{background:rgba(120,140,175,.09);border:1px solid rgba(140,155,180,.2);
+      border-radius:8px;padding:11px 13px;}
+  .cb .t{font-size:12.5px;color:#9AA8BE;letter-spacing:1px;margin-bottom:6px;}
+  .cb .li{font-size:13.5px;color:#C3B18A;line-height:1.55;}
+  .cb .li b{color:#8FB0D0;}
+  .cbnote{margin-top:8px;font-size:13.5px;color:#8A99B3;line-height:1.45;}
+  /* s6 范式对比 */
+  .shift{display:flex;align-items:stretch;gap:11px;margin-top:4px;}
+  .sd{flex:1;padding:11px 13px;border-radius:8px;background:rgba(255,255,255,.04);
+      border:1px solid rgba(140,155,180,.16);}
+  .sd .lb{font-size:11.5px;color:#7E8CA5;letter-spacing:2px;margin-bottom:6px;}
+  .sd .li{font-size:13.5px;color:#C3B18A;line-height:1.6;}
+  .sd.new{background:rgba(212,167,74,.10);border-color:#D4A74A;border-width:1.5px;}
+  .sd.new .lb{color:#D4A74A;}
+  .sd.new .li{color:#E8E4DA;font-weight:600;}
+  .shift .ar{flex:0 0 26px;display:flex;align-items:center;justify-content:center;
+             color:#D4A74A;font-size:21px;font-weight:900;}
+  .kdline{margin-top:9px;font-size:14.5px;color:#C3B18A;line-height:1.5;
+          border-top:1px solid rgba(212,167,74,.25);padding-top:8px;}
+  .kdline b{color:#D4A74A;}
+  /* s7 三路径 */
+  .pth{display:flex;flex-direction:column;gap:7px;margin-top:4px;}
+  .pt{display:flex;align-items:center;gap:11px;background:rgba(255,255,255,.04);
+      border:1px solid rgba(140,155,180,.15);border-radius:8px;padding:9px 13px;}
+  .pt .pct{flex:0 0 50px;font-size:20px;font-weight:900;color:#8A99B3;text-align:center;}
+  .pt.top .pct{color:#D4A74A;}
+  .pt.top{border-color:rgba(212,167,74,.4);background:rgba(212,167,74,.08);}
+  .pt .tx{font-size:14.5px;color:#E8E4DA;line-height:1.4;}
+  .pt .tx i{font-style:normal;display:block;font-size:12.5px;color:#8A99B3;margin-top:2px;}
+  .pt.top .tx i{color:#C3B18A;}
+  /* s8 指标 + 金句 */
+  .ind4{display:grid;grid-template-columns:repeat(4,1fr);gap:7px;margin-top:2px;}
+  .ic{background:rgba(255,255,255,.05);border:1px solid rgba(140,155,180,.16);
+      border-radius:7px;padding:9px 7px;text-align:center;}
+  .ic .n{font-size:11px;color:#7E8CA5;line-height:1.3;}
+  .ic .v{font-size:15px;font-weight:800;color:#D4A74A;margin-top:4px;line-height:1.2;}
+  .ic .v.dim{color:#C3B18A;}
+  .fin{margin-top:12px;text-align:center;}
+  .fin .q1{font-size:23px;font-weight:800;color:#E8E4DA;line-height:1.4;}
+  .fin .q1 b{color:#D4A74A;}
+  .fin .q2{font-size:12px;color:#6E7A94;margin-top:7px;line-height:1.5;}
+  .brand{position:absolute;top:12px;right:12px;z-index:10;width:56px;height:56px;
+         border-radius:8px;background:rgba(212,167,74,.92);border:1.5px solid #0E1626;
+         display:flex;flex-direction:column;align-items:center;justify-content:center;}
+  .brand .bn{font-size:22px;font-weight:900;color:#0E1626;line-height:1;}
+  .brand .bl{font-size:6.8px;color:#0E1626;letter-spacing:1.2px;margin-top:2px;line-height:1;}
+  .wm{position:absolute;bottom:6px;left:14px;z-index:10;font-size:9px;color:#5A6880;opacity:.85;
+      letter-spacing:1.6px;font-family:'Courier New',monospace;}
+</style>
+</head>
+<body>
+<svg class="stars" viewBox="0 0 1080 1920">__STARS__</svg>
+
+<div class="brand"><div class="bn">B</div><div class="bl">B166ER</div></div>
+
+<!-- 01 结论 -->
+<div class="sec s1">
+  <div class="kick">酒店行业景气度 · 2026 Q3 检验</div>
+  <h1>「行业在好转」<br>方向对，<span class="hl">时点早了两个季度</span></h1>
+  <div class="sub">供给端确实见底了 —— 但经营端还没转正</div>
+</div>
+
+<!-- 02 锚点：MSI 序列 + RevPAR -->
+<div class="sec s2">
+  <h2><span class="num">02</span>锚点数据：高点已经回落</h2>
+  <div class="anchor">
+    <div class="msibox">
+      <div class="lbl">厚海 MSI · 全国酒店市场综合景气指数</div>
+      <div class="seq">
+        <div class="q"><div class="qv">-21</div><div class="qy">2026 Q1</div></div>
+        <div class="q peak"><div class="qv">-9</div><div class="qy">Q2 · 高点</div></div>
+        <div class="q"><div class="qv">-17</div><div class="qy">Q3</div></div>
+      </div>
+    </div>
+    <div class="revbox">
+      <div class="lbl">2026 Q3 全国 RevPAR 同比</div>
+      <div class="big">-1%</div>
+      <div class="sm">华住 0% · 亚朵 0%<br>锦江 -2% · 首旅 -1%</div>
+    </div>
+  </div>
+  <div class="msinote">Q2 报告称「-9，较上一季度<b>回升 12 点</b>」→ 推得 Q1 = -21；Q3 报告（10-21 发布）为 <b>-17</b>，较 Q2 <b>回落 8 点</b>。<br>两个独立来源互证 —— <b>Q2 是季度高点，不是趋势拐点。</b></div>
+</div>
+
+<!-- 03 四个集团 -->
+<div class="sec s3">
+  <h2><span class="num">03</span>四个头部集团：没有一个转正</h2>
+  <div class="grp">
+    <div class="g1c"><div class="n">华住</div><div class="v flat">0%</div><div class="t">持平</div></div>
+    <div class="g1c"><div class="n">亚朵</div><div class="v flat">0%</div><div class="t">持平</div></div>
+    <div class="g1c"><div class="n">锦江</div><div class="v dn">-2%</div><div class="t">承压</div></div>
+    <div class="g1c"><div class="n">首旅</div><div class="v dn">-1%</div><div class="t">微降</div></div>
+  </div>
+  <div class="grpn">行业整体 RevPAR 同比 -1%（2026 Q3）</div>
+</div>
+
+<!-- 04 四个来源 -->
+<div class="sec s4">
+  <h2><span class="num">04</span>「好转感」的四个来源，只有一个算数</h2>
+  <div class="src4">
+    <div class="sr">
+      <div class="tag">错觉</div>
+      <div class="tx">MSI Q2 反弹 +12 点 <i>真实，但是季度高点，Q3 已回落 8 点</i></div>
+    </div>
+    <div class="sr">
+      <div class="tag">季节性</div>
+      <div class="tx">国庆酒店出租率 &gt;90%、星级房价 +3.36% <i>真实但属旺季峰值（北京仅 75%）</i></div>
+    </div>
+    <div class="sr">
+      <div class="tag">预期</div>
+      <div class="tx">股价先行：锦江两天 +2.69%，成交 1.85 亿 <i>市场提前交易 2027 供给出清</i></div>
+    </div>
+    <div class="sr real">
+      <div class="tag">结构性</div>
+      <div class="tx">供给收缩：2026 新开业减少、四大集团 pipeline 收缩 <i>唯一真实且最硬 —— 但作用在 2027</i></div>
+    </div>
+  </div>
+</div>
+
+<!-- 05 反证 -->
+<div class="sec s5">
+  <h2><span class="num">05</span>三条不能忽略的反证</h2>
+  <div class="cnt2">
+    <div class="cb">
+      <div class="t">国际集团 · 2025 大中华区</div>
+      <div class="li">万豪 <b>ADR -0.2%</b>（全球唯一下滑区域）<br>凯悦 <b>ADR -1.8%</b><br>洲际 <b>RevPAR -1.6%</b></div>
+    </div>
+    <div class="cb">
+      <div class="t">美国 · 2026 全年</div>
+      <div class="li">RevPAR <b>-2.8%</b><br>出租率 <b>-0.9%</b><br>ADR <b>-3.7%</b>（Q2 曾 +5.7%）</div>
+    </div>
+  </div>
+  <div class="cbnote">中国 2026 H1：ADR +4.7%，但出租率 <b>73.8%（同比 -1.2pp）</b> —— 增长全靠涨价扛</div>
+</div>
+
+<!-- 06 范式 -->
+<div class="sec s6">
+  <h2><span class="num">06</span>底层逻辑：这不是周期上行</h2>
+  <div class="shift">
+    <div class="sd">
+      <div class="lb">旧 范 式 · 增量时代</div>
+      <div class="li">需求爆发 + 供给无序扩张<br>→ 普涨 → 过剩 → 价格战</div>
+    </div>
+    <div class="ar">→</div>
+    <div class="sd new">
+      <div class="lb">新 范 式 · 存量时代</div>
+      <div class="li">需求平淡 + 供给主动收缩<br>→ 出清更快 → K 型分化 → 头部集中</div>
+    </div>
+  </div>
+  <div class="kdline">中国饭店协会《2026 酒店业发展报告》：<b>K 型分化</b> —— 头部/中高端/生活方式酒店增长，非连锁单体承压。<br>所谓「中高端成主要增长驱动」，是<b>低端产能退出后中高端相对份额被动上升</b>，不是需求爆发。</div>
+</div>
+
+<!-- 07 三路径 -->
+<div class="sec s7">
+  <h2><span class="num">07</span>三条路径与触发条件</h2>
+  <div class="pth">
+    <div class="pt top">
+      <div class="pct">55%</div>
+      <div class="tx">A · 温和复苏 <i>触发：MSI 连续 2 季回升 → Q4 &gt; -15、27Q1 &gt; -12 → 头部 RevPAR 转正 +2%</i></div>
+    </div>
+    <div class="pt">
+      <div class="pct">35%</div>
+      <div class="tx">B · K 型分化延续 <i>触发：连锁化率继续升、单体关停加速；头部 +2~5%，单体 -5~-10%，总量不涨</i></div>
+    </div>
+    <div class="pt">
+      <div class="pct">10%</div>
+      <div class="tx">C · 二次探底 <i>触发：宏观走弱 / ADR 由正转负 / MSI 跌破 -20</i></div>
+    </div>
+  </div>
+</div>
+
+<!-- 08 指标 + 金句 -->
+<div class="sec s8">
+  <div class="ind4">
+    <div class="ic"><div class="n">厚海 MSI</div><div class="v">-17</div><div class="v dim" style="font-size:11px;margin-top:3px;">转好 &gt; -12</div></div>
+    <div class="ic"><div class="n">头部 RevPAR</div><div class="v">0~-2%</div><div class="v dim" style="font-size:11px;margin-top:3px;">转正 &gt; +2%</div></div>
+    <div class="ic"><div class="n">星级房价</div><div class="v">+3.36%</div><div class="v dim" style="font-size:11px;margin-top:3px;">看淡季</div></div>
+    <div class="ic"><div class="n">新开业数</div><div class="v">↓</div><div class="v dim" style="font-size:11px;margin-top:3px;">看 pipeline</div></div>
+  </div>
+  <div class="fin">
+    <div class="q1">别赌「行业回暖」，赌<b>效率分层</b></div>
+    <div class="q2">增量红利结束的周期里，判断力比资本更值钱</div>
+  </div>
+</div>
+
+<div class="wm">B166ER · 2026-10-29 · 酒店行业景气度判断 v1.0 · 置信度 🟡🟡</div>
+</body>
+</html>

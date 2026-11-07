@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><meta charset="UTF-8">
+<title>计量单位变迁与新经济范式 v1.0</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap');
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{
+    width:1080px;height:1920px;background:#0E1626;color:#E8E4DA;overflow:hidden;
+    font-family:'Noto Sans SC','PingFang SC','Microsoft YaHei',sans-serif;
+    position:relative;
+  }
+  .stars{position:absolute;inset:0;z-index:0;}
+  .sec{position:relative;z-index:1;width:100%;padding:22px 46px;
+       display:flex;flex-direction:column;justify-content:center;gap:9px;}
+  .s1{height:260px;padding-top:56px;}
+  .s2{height:320px;}
+  .s3{height:195px;}
+  .s4{height:385px;}
+  .s5{height:210px;}
+  .s6{height:225px;}
+  .s7{height:215px;}
+  .s8{height:110px;justify-content:flex-end;}
+  .kick{font-size:17px;color:#D4A74A;letter-spacing:5px;font-weight:700;margin-bottom:8px;}
+  h1{font-size:54px;font-weight:900;line-height:1.14;letter-spacing:0;}
+  h1 .hl{color:#D4A74A;}
+  .sub{font-size:19px;color:#8A99B3;line-height:1.45;margin-top:10px;}
+  h2{font-size:27px;font-weight:800;color:#E8E4DA;letter-spacing:1px;display:flex;
+     align-items:center;gap:9px;margin-bottom:2px;}
+  h2 .num{font-size:12.5px;font-weight:700;color:#D4A74A;background:rgba(212,167,74,.15);
+          padding:2px 8px;border-radius:4px;letter-spacing:1px;}
+  b{color:#D4A74A;font-weight:700;}
+  /* s2 单位链 */
+  .chain{display:flex;align-items:stretch;gap:0;margin-top:4px;}
+  .un{flex:1;background:rgba(255,255,255,.045);border:1px solid rgba(212,167,74,.2);
+      border-radius:8px;padding:11px 8px;text-align:center;}
+  .un .y{font-size:12px;color:#7E8CA5;letter-spacing:1px;}
+  .un .n{font-size:22px;font-weight:900;color:#E8E4DA;line-height:1.2;margin:3px 0 2px;}
+  .un .w{font-size:13px;color:#8A99B3;}
+  .un.now{background:rgba(212,167,74,.13);border-color:#D4A74A;border-width:2px;}
+  .un.now .n{color:#D4A74A;}
+  .un.now .w{color:#C3B18A;}
+  .ar{flex:0 0 26px;display:flex;align-items:center;justify-content:center;
+      color:#D4A74A;font-size:19px;font-weight:900;}
+  .turn{margin-top:11px;background:rgba(212,167,74,.08);border-left:3px solid #D4A74A;
+        border-radius:0 7px 7px 0;padding:10px 13px;font-size:14.5px;color:#C3B18A;line-height:1.5;}
+  .turn b{color:#D4A74A;}
+  /* s3 计量对象 */
+  .objs{display:flex;gap:9px;margin-top:3px;}
+  .ob{flex:1;text-align:center;padding:11px 6px;border-radius:8px;
+      background:rgba(255,255,255,.04);border:1px solid rgba(140,155,180,.18);}
+  .ob .a{font-size:15px;color:#8A99B3;}
+  .ob .b2{font-size:19px;font-weight:800;color:#E8E4DA;margin-top:3px;}
+  .ob.hi{background:rgba(212,167,74,.13);border-color:#D4A74A;border-width:2px;}
+  .ob.hi .b2{color:#D4A74A;}
+  .ob.hi .a{color:#C3B18A;}
+  .obline{margin-top:10px;font-size:15.5px;color:#C3B18A;line-height:1.5;}
+  .obline b{color:#D4A74A;}
+  /* s4 三个数据 */
+  .d3{display:flex;flex-direction:column;gap:9px;margin-top:3px;}
+  .dat{background:rgba(255,255,255,.04);border:1px solid rgba(140,155,180,.16);
+       border-radius:8px;padding:11px 14px;display:flex;gap:13px;align-items:flex-start;}
+  .dat .no{flex:0 0 26px;width:26px;height:26px;border-radius:50%;
+           background:rgba(212,167,74,.16);color:#D4A74A;font-size:14px;font-weight:900;
+           display:flex;align-items:center;justify-content:center;}
+  .dat .c{flex:1;}
+  .dat .c .t{font-size:16px;font-weight:800;color:#E8E4DA;margin-bottom:4px;line-height:1.3;}
+  .dat .c .d{font-size:13.5px;color:#8A99B3;line-height:1.5;}
+  .dat .c .d b{color:#D4A74A;font-size:15px;}
+  .dat .c .d .lit{color:#C3B18A;}
+  /* s5 引言 */
+  .quote{background:rgba(255,255,255,.04);border-left:4px solid #D4A74A;
+        border-radius:0 8px 8px 0;padding:13px 16px;}
+  .quote .q{font-size:19px;line-height:1.5;color:#E8E4DA;}
+  .quote .q b{color:#D4A74A;}
+  .quote .a{font-size:13px;color:#7E8CA5;margin-top:8px;letter-spacing:1px;}
+  /* s6 新范式 */
+  .shift{display:flex;align-items:center;gap:12px;margin-top:2px;}
+  .shift .side{flex:1;padding:11px 12px;border-radius:8px;background:rgba(255,255,255,.04);
+               border:1px solid rgba(140,155,180,.16);}
+  .shift .side .lb{font-size:12px;color:#7E8CA5;letter-spacing:2px;margin-bottom:5px;}
+  .shift .side .li{font-size:15px;color:#C3B18A;line-height:1.55;}
+  .shift .side.new{background:rgba(212,167,74,.1);border-color:#D4A74A;border-width:2px;}
+  .shift .side.new .lb{color:#D4A74A;}
+  .shift .side.new .li{color:#E8E4DA;font-weight:700;font-size:15.5px;}
+  .shift .ar{flex:0 0 30px;text-align:center;color:#D4A74A;font-size:23px;font-weight:900;}
+  .keyline{margin-top:10px;font-size:15.5px;color:#C3B18A;line-height:1.5;
+           border-top:1px solid rgba(212,167,74,.25);padding-top:9px;}
+  .keyline b{color:#D4A74A;}
+  /* s7 我们的落点 */
+  .land{background:rgba(212,167,74,.09);border:1px solid rgba(212,167,74,.35);
+        border-radius:9px;padding:13px 15px;}
+  .land .lt{font-size:17px;font-weight:800;color:#D4A74A;margin-bottom:7px;}
+  .land .li{font-size:14px;color:#C3B18A;line-height:1.55;}
+  .land .li b{color:#E8E4DA;}
+  .land .fin{margin-top:8px;padding-top:7px;border-top:1px dashed rgba(212,167,74,.35);
+              font-size:14.5px;color:#E8E4DA;line-height:1.45;}
+  .land .fin b{color:#D4A74A;}
+  /* s8 金句 */
+  .fin2{text-align:center;}
+  .fin2 .q1{font-size:24px;font-weight:800;color:#E8E4DA;line-height:1.4;}
+  .fin2 .q1 b{color:#D4A74A;}
+  .fin2 .q2{font-size:13.5px;color:#7E8CA5;margin-top:8px;line-height:1.5;letter-spacing:.4px;}
+  .brand{position:absolute;top:12px;right:12px;z-index:10;width:56px;height:56px;
+         border-radius:8px;background:rgba(212,167,74,.92);border:1.5px solid #0E1626;
+         display:flex;flex-direction:column;align-items:center;justify-content:center;}
+  .brand .bn{font-size:22px;font-weight:900;color:#0E1626;line-height:1;}
+  .brand .bl{font-size:6.8px;color:#0E1626;letter-spacing:1.2px;margin-top:2px;line-height:1;}
+  .wm{position:absolute;bottom:6px;left:14px;z-index:10;font-size:9px;color:#5A6880;opacity:.85;
+      letter-spacing:1.6px;font-family:'Courier New',monospace;}
+</style>
+</head>
+<body>
+<svg class="stars" viewBox="0 0 1080 1920">__STARS__</svg>
+
+<div class="brand"><div class="bn">B</div><div class="bl">B166ER</div></div>
+
+<!-- 01 核心命题 -->
+<div class="sec s1">
+  <div class="kick">计量单位 · 价值逻辑 · 新范式</div>
+  <h1>决定一个人值多少钱的<br>那把<span class="hl">尺子</span>，正在换</h1>
+  <div class="sub">从 42 加仑到 Token —— 每一次产业革命，都伴随一个新的计量单位</div>
+</div>
+
+<!-- 02 单位变迁 -->
+<div class="sec s2">
+  <h2><span class="num">02</span>单位先有，定价才有，交易才有，市场才有</h2>
+  <div class="chain">
+    <div class="un"><div class="y">1860</div><div class="n">桶</div><div class="w">石油</div></div>
+    <div class="ar">→</div>
+    <div class="un"><div class="y">19c</div><div class="n">蒲式耳</div><div class="w">粮食</div></div>
+    <div class="ar">→</div>
+    <div class="un"><div class="y">19c</div><div class="n">千瓦时</div><div class="w">电</div></div>
+    <div class="ar">→</div>
+    <div class="un"><div class="y">20c</div><div class="n">比特</div><div class="w">信息</div></div>
+    <div class="ar">→</div>
+    <div class="un now"><div class="y">NOW</div><div class="n">Token</div><div class="w">智力</div></div>
+  </div>
+  <div class="turn">42 加仑不是科学算出来的 —— 1860 年宾夕法尼亚一帮油田老板<b>随手就定了</b>。<br>
+    就这一个随手决定，让石油从地方性矿，变成全球可定价、可对冲、可期货的东西。</div>
+</div>
+
+<!-- 03 Token 算什么 -->
+<div class="sec s3">
+  <h2><span class="num">03</span>Token 算的是什么</h2>
+  <div class="objs">
+    <div class="ob"><div class="a">蒲式耳算</div><div class="b2">粮食</div></div>
+    <div class="ob"><div class="a">桶算</div><div class="b2">油</div></div>
+    <div class="ob"><div class="a">比特算</div><div class="b2">信息量</div></div>
+    <div class="ob hi"><div class="a">Token 算</div><div class="b2">脑子</div></div>
+  </div>
+  <div class="obline">理解一段话、一张图、一段代码，或做一个判断 —— 这些以前只有人脑才能干的活，<b>第一次可以像买一度电一样按量买</b>。</div>
+</div>
+
+<!-- 04 三个数据 -->
+<div class="sec s4">
+  <h2><span class="num">04</span>三个数，量出一次范式迁移</h2>
+  <div class="d3">
+    <div class="dat">
+      <div class="no">1</div>
+      <div class="c">
+        <div class="t">规模 · 两年 1000 倍</div>
+        <div class="d">中国日均 Token 调用量：2024 年初 <b>1000 亿</b> → 2025 年底 <b>100 万亿</b> → 2026 年 3 月 <b>140 万亿</b></div>
+      </div>
+    </div>
+    <div class="dat">
+      <div class="no">2</div>
+      <div class="c">
+        <div class="t">悖论 · 越便宜，烧得越多</div>
+        <div class="d">GPT-4 级能力：$60 → 不足 $1 每百万 token（<b>跌 99%</b>）；同期全球 AI 基建支出 $1530 亿 → $3180 亿（<b>翻倍</b>）<br>
+          <span class="lit">19 世纪蒸汽机效率提高，煤反而烧得更多 —— 同理</span></div>
+      </div>
+    </div>
+    <div class="dat">
+      <div class="no">3</div>
+      <div class="c">
+        <div class="t">价值差 · 同一个模型，差 100 倍</div>
+        <div class="d">同样 1000 万 token：律师审合同避开上百万美元法律风险 vs 市场部写周报省半小时<br>
+          <span class="lit"><b>Token 的价值不在 Token 本身，全看谁在用</b></span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 05 黄仁勋的尺子 -->
+<div class="sec s5">
+  <h2><span class="num">05</span>黄仁勋换的那把尺子</h2>
+  <div class="quote">
+    <div class="q">"一个年薪 50 万美元的工程师，如果一年消耗不到 <b>25 万美元 Token</b>，我会很担心。"</div>
+    <div class="q" style="margin-top:8px;">"顶尖工程师说只用纸和笔 —— 跟芯片设计师说不用 EDA、手画一样荒谬。"</div>
+    <div class="a">— 黄仁勋 ｜ 卖显卡的人，但这句话不是广告</div>
+  </div>
+</div>
+
+<!-- 06 新范式 -->
+<div class="sec s6">
+  <h2><span class="num">06</span>新范式：竞争的东西换了</h2>
+  <div class="shift">
+    <div class="side">
+      <div class="lb">以 前 拼</div>
+      <div class="li">学历 · 工时 · 熬过几个通宵</div>
+    </div>
+    <div class="ar">→</div>
+    <div class="side new">
+      <div class="lb">以 后 拼</div>
+      <div class="li">你能调动多少智力<br>你能把它变成多少钱</div>
+    </div>
+  </div>
+  <div class="keyline">技术会普及，但<b>会用技术的人没有普及</b> —— 这才是下一个十年真正的分水岭。<br>
+    「AI 经济的终点依然是人」。</div>
+</div>
+
+<!-- 07 我们的落点 -->
+<div class="sec s7">
+  <h2><span class="num">07</span>落到我们这行：酒店业的尺子正在失效</h2>
+  <div class="land">
+    <div class="lt">RevPAR / ADR / OCC 计量的是"一间房"，不是"管理方创造的价值"</div>
+    <div class="li">轻资产分离后：<b>物业归业主、品牌归管理方</b>，而管理价值<b>没有计量单位</b> —— 只能按管理费这种粗颗粒分</div>
+    <div class="li" style="margin-top:6px;">缺的那个单位叫 <b>可归因增量</b>：管理方 B 端 Agent 贡献的增量营收</div>
+    <div class="fin">谁先定义这个单位，谁就定义下一轮酒店业的<b>定价权</b>。</div>
+  </div>
+</div>
+
+<!-- 08 收尾 -->
+<div class="sec s8">
+  <div class="fin2">
+    <div class="q1">一个人一年 AI 账单为零，<b>不是省钱</b> ——<br>是他一整年都用自己的脑子，开着一台挖掘机</div>
+    <div class="q2">资料来源：《Token 经济》腾讯研究院 · 黄仁勋 · 国家数据局 · OpenAI 定价</div>
+  </div>
+</div>
+
+<div class="wm">B166ER · 2026-10-26 · 计量单位变迁与新经济范式</div>
+</body>
+</html>

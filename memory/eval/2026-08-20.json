@@ -1,0 +1,51 @@
+{
+  "date": "2026-08-20",
+  "session": "Entity Extractor 08:01 (anomalous early cron fire)",
+  "trigger": "cron:0eced1e9-8729-47d8-b8d6-34eff13ed780 (scheduled 21:30 daily, fired 08:01)",
+  "r60_11_extraction": {
+    "mode": "--days 2 (catch 8/19 because 8/20 daily note absent)",
+    "files_scanned": ["2026-08-19.md"],
+    "new_entities": 12,
+    "new_relations": 0,
+    "entities_listed": [
+      "Person:Eric",
+      "Person:B166ER",
+      "Company:安逸酒店集团",
+      "Company:AHL",
+      "Company:首旅如家",
+      "Project:AHL",
+      "Project:深度自迭代",
+      "Project:R66监控",
+      "Project:R60规则",
+      "Event:入职",
+      "Place:四川",
+      "Tool:OpenClaw"
+    ],
+    "graph_total_lines": 832,
+    "relations_total": 16,
+    "projects_mentioned": ["AHL", "1244战略", "深度自迭代"]
+  },
+  "r65_r258_r69_compliance": {
+    "status": "DORMANT sustained (cron session)",
+    "decision": "no push_queue.py invocation (tool absent); Obsidian write = sedimentation (allowed); no proactive notification to Eric",
+    "obsidian_push": "executed via cron_to_obsidian (R60-11 mandatory channel)",
+    "obsidian_path": "D:\\B166ER-OpenClaw\\workspace\\obsidian-vault\\50-外部接入\\cron-outputs\\2026-08\\08-06-Entity-Extractor-实体抽取.md",
+    "appended_to_daily": false
+  },
+  "self_assessment": {
+    "anomaly_detected": "cron fired at 08:01 instead of 21:30 (13h+ early); second consecutive day with same pattern",
+    "adaptation": "switched from 'today' to '--days 2' to capture 8/19 content since 8/20 note absent",
+    "completeness": "R60-11 sedimentation 5/5 steps executed (graph/trend/dashboard/eval/obsidian)",
+    "compared_to_8_19": "same fallback pattern as 8/19 cron (08:02 vs 21:30); +1 new entity (首旅如家 from 8/19 content)"
+  },
+  "key_observations": {
+    "8_19_content_density": "very high (七夕 + 商业情报 M/W/F + 深度自迭代 evening recovery + 钟华 correction context)",
+    "8_20_signal": "Eric just woke up (08:01); no daily note yet; cron fired during sleep",
+    "extraction_gaps": "many 8/19 entities (朱镕基/朱雀三号/宇树科技/首旅如家/Jinjiang/钟华/平安) not in pattern dictionary except 首旅如家",
+    "push_queue_status": "tool absent at D:/B166ER-OpenClaw/workspace/toolbox/push_queue.py (fallback to Obsidian-only)"
+  },
+  "pending_questions": [
+    "Pattern dictionary should expand to cover recurring entities: 朱镕基/朱雀三号/宇树科技/钟华/平安/平安产险/国堰宾馆/樊登/陈保刚",
+    "Cron schedule review: 08:01 fire is second consecutive day; suggest investigating scheduler drift"
+  ]
+}

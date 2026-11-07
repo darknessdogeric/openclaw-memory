@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><meta charset="UTF-8">
+<title>2027 酒店行业全景预测 v1.0</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap');
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{
+    width:1080px;height:1440px;
+    font-family:'Noto Sans SC','PingFang SC',sans-serif;
+    background:#1a0a14;
+    color:#fff0f4;
+    padding:0;display:flex;flex-direction:column;
+    position:relative;overflow:hidden;
+  }
+  /* 高级金配色 (Eric 认可版式) */
+  .g{position:absolute;border-radius:50%;pointer-events:none;}
+  .g1{width:400px;height:400px;background:radial-gradient(circle,#e8a0b81a,transparent);top:-100px;right:-130px;}
+  .g2{width:320px;height:320px;background:radial-gradient(circle,#c9952a0e,transparent);bottom:120px;left:-90px;}
+  .sec{
+    width:100%;padding:26px 48px;
+    box-sizing:border-box;position:relative;z-index:1;
+    display:flex;flex-direction:column;justify-content:center;gap:6px;
+  }
+  .s1{height:236px;background:linear-gradient(180deg,#1a0a14 0%,#1a1424 100%);padding-top:56px;}
+  .s2{height:250px;background:#1a0a14;}
+  .s3{height:262px;background:linear-gradient(180deg,#1a0a14 0%,#1a0c14 100%);}
+  .s4{height:250px;background:#1a0a14;}
+  .s5{height:250px;background:linear-gradient(180deg,#1a0a14 0%,#0a0508 100%);}
+  .s6{height:112px;background:#0a0508;padding:18px 48px;}
+  /* 总高: 236+250+262+250+250+112 = 1360 + 80(B标) = 1440 */
+  .sec-tag{
+    position:absolute;top:8px;left:14px;z-index:2;
+    font-size:10px;color:#a07080;opacity:0.5;
+    letter-spacing:1.5px;font-family:'Courier New',monospace;
+  }
+  .kicker{font-size:16px;color:#e8a0b8;letter-spacing:5px;font-weight:600;margin-bottom:4px;}
+  h1{font-size:56px;font-weight:900;line-height:1.08;letter-spacing:2px;color:#fff0f4;margin-bottom:5px;}
+  h1 .hl{background:linear-gradient(135deg,#e8a0b8,#c9952a);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+  h2{font-size:28px;font-weight:800;color:#e8a0b8;margin-bottom:8px;letter-spacing:1.5px;display:flex;align-items:center;gap:8px;}
+  h2 .num{font-size:12px;font-weight:600;color:#a07080;background:rgba(255,255,255,0.03);padding:2px 7px;border-radius:3px;letter-spacing:1px;}
+  .sub{font-size:17px;color:#a07080;margin-top:4px;line-height:1.35;}
+  b{color:#e8a0b8;font-weight:700;}
+  /* 3 列季度卡 */
+  .q3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:7px;width:100%;}
+  .qc{
+    background:rgba(255,255,255,0.035);
+    border:1px solid rgba(232,160,184,0.16);
+    border-radius:6px;padding:9px 8px;
+    display:flex;flex-direction:column;
+  }
+  .qc .qh{font-size:15px;font-weight:800;color:#e8a0b8;margin-bottom:3px;letter-spacing:0.5px;}
+  .qc .qv{font-size:22px;font-weight:900;line-height:1;margin-bottom:2px;}
+  .qc .qd{font-size:10.5px;color:#a07080;line-height:1.3;}
+  .up{color:#a890c0;} .dn{color:#d8a0b0;} .nt{color:#f0b8c8;}
+  /* 2 列对比 (上行 vs 下行) */
+  .g2x{display:grid;grid-template-columns:1fr 1fr;gap:9px;width:100%;}
+  .c2{
+    background:rgba(255,255,255,0.035);
+    border:1px solid rgba(232,160,184,0.16);
+    border-radius:6px;padding:9px 11px;
+  }
+  .bull{border-color:rgba(168,144,192,0.4);background:rgba(168,144,192,0.055);}
+  .bear{border-color:rgba(216,160,176,0.4);background:rgba(216,160,176,0.055);}
+  .c2-h{font-size:17px;font-weight:800;margin-bottom:5px;}
+  .bull .c2-h{color:#a890c0;} .bear .c2-h{color:#d8a0b0;}
+  .c2-l{font-size:12.5px;color:#a07080;line-height:1.45;padding:1.5px 0;}
+  .c2-l b{color:#fff0f4;font-weight:600;}
+  /* 4 KPI 行 */
+  .kpi{display:grid;grid-template-columns:repeat(4,1fr);gap:7px;width:100%;}
+  .kc{
+    background:rgba(232,160,184,0.07);
+    border:1px solid rgba(232,160,184,0.2);
+    border-radius:6px;padding:9px 7px;text-align:center;
+  }
+  .kc .kn{font-size:23px;font-weight:900;color:#e8a0b8;line-height:1;margin-bottom:3px;}
+  .kc .kl{font-size:10px;color:#a07080;line-height:1.25;}
+  /* 底部 CTA */
+  .foot{
+    display:flex;align-items:center;justify-content:space-between;
+    border-top:1px solid rgba(232,160,184,0.2);padding-top:10px;
+  }
+  .foot .cta{font-size:19px;font-weight:800;color:#fff0f4;letter-spacing:1px;}
+  .foot .cta b{color:#e8a0b8;}
+  .foot .tags{font-size:10.5px;color:#a07080;letter-spacing:0.5px;text-align:right;line-height:1.35;}
+  /* B 标 top-right */
+  .brand{
+    position:absolute;top:12px;right:12px;z-index:10;
+    width:54px;height:54px;border-radius:7px;
+    background:rgba(232,160,184,0.92);
+    border:1.5px solid #fff0f4;
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
+  }
+  .brand .bn{font-size:21px;font-weight:900;color:#fff0f4;line-height:1;}
+  .brand .bl{font-size:6.5px;color:#fff0f4;letter-spacing:1.3px;margin-top:2px;line-height:1;}
+  .wm{
+    position:absolute;bottom:6px;left:14px;z-index:10;
+    font-size:8.5px;color:#a07080;opacity:0.5;
+    letter-spacing:1.8px;font-family:'Courier New',monospace;
+  }
+</style>
+</head>
+<body>
+  <div class="g g1"></div><div class="g g2"></div>
+  <div class="brand"><div class="bn">B</div><div class="bl">B166ER</div></div>
+
+  <!-- s1: Hook -->
+  <div class="sec s1">
+    <div class="sec-tag">01 / 06</div>
+    <div class="kicker">2027 酒店行业全景预测 v1.0</div>
+    <h1>2027 是<span class="hl">复苏元年</span><br>还是反弹尾巴?</h1>
+    <div class="sub">4 季走势 + 3 大转折点 + 多空分歧, 一页看清</div>
+  </div>
+
+  <!-- s2: 4 季 KPI 走势 -->
+  <div class="sec s2">
+    <div class="sec-tag">02 / 06</div>
+    <h2><span class="num">4 季</span>全年 3 大 KPI 走势 (RevPAR 同比)</h2>
+    <div class="q3">
+      <div class="qc">
+        <div class="qh">Q1 · 淡季</div>
+        <div class="qv nt">0~+2%</div>
+        <div class="qd">低位企稳, 商务弱<br>ADR 微跌</div>
+      </div>
+      <div class="qc">
+        <div class="qh">Q2 · 拐点</div>
+        <div class="qv up">+3~+5%</div>
+        <div class="qd"><b>全面复苏关键点</b><br>厚海 MSI 转正</div>
+      </div>
+      <div class="qc">
+        <div class="qh">Q3 · 旺季</div>
+        <div class="qv up">+5~+8%</div>
+        <div class="qd">暑期峰值<br>亲子 + 避暑</div>
+      </div>
+    </div>
+    <div class="q3" style="margin-top:7px;">
+      <div class="qc">
+        <div class="qh">Q4 · 新峰值</div>
+        <div class="qv up">+5~+10%</div>
+        <div class="qd">国庆 8.5 亿+<br>9000 亿+</div>
+      </div>
+      <div class="qc">
+        <div class="qh">全年 OCC</div>
+        <div class="qv up">65~70%</div>
+        <div class="qd">较 2026 回升<br>2-4pp</div>
+      </div>
+      <div class="qc">
+        <div class="qh">全年 ADR</div>
+        <div class="qv nt">持平</div>
+        <div class="qd">量增价平<br>结构改善</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- s3: 3 大转折点 -->
+  <div class="sec s3">
+    <div class="sec-tag">03 / 06</div>
+    <h2><span class="num">03</span>3 大转折点 (决定全年节奏)</h2>
+    <div class="g2x">
+      <div class="c2 bull">
+        <div class="c2-h">① 2027 Q2 复苏启动</div>
+        <div class="c2-l">厚海 MSI 回升至<b> -5~0</b><br>房价"补涨"开始<br>暑期前抢反弹窗口</div>
+      </div>
+      <div class="c2 bull">
+        <div class="c2-h">② 2027 Q4 新峰值</div>
+        <div class="c2-l">国庆 <b>8.5 亿人次</b><br>旅游收入 <b>9000 亿+</b><br>5 年追平里程碑</div>
+      </div>
+    </div>
+    <div class="g2x" style="margin-top:7px;">
+      <div class="c2 bull">
+        <div class="c2-h">③ 2028 H1 新常态</div>
+        <div class="c2-l">厚海 <b>+15~+25</b><br>房价补涨完成<br>结构性增长确立</div>
+      </div>
+      <div class="c2 bear">
+        <div class="c2-h">⚠ 反向风险</div>
+        <div class="c2-l">若 Q2 复苏延后<br>全年 <b>-2%</b> 下修<br>提前降本</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- s4: 多空分歧 -->
+  <div class="sec s4">
+    <div class="sec-tag">04 / 06</div>
+    <h2><span class="num">04</span>2027 多空分歧 (该信哪边)</h2>
+    <div class="g2x">
+      <div class="c2 bull">
+        <div class="c2-h">✓ 看多 4 条理由</div>
+        <div class="c2-l">· 5 国际 H1 全线正增长<br>· 入境游 +25% (雅高中国)<br>· 客流基数已抬高<br>· 供给增速放缓</div>
+      </div>
+      <div class="c2 bear">
+        <div class="c2-h">✗ 看空 4 条理由</div>
+        <div class="c2-l">· 厚海 MSI 仍 -17 未转正<br>· 房价 -8.7% 承压<br>· 京广 5A 已见顶<br>· 中端供给过剩</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- s5: 6 城 + Anyi -->
+  <div class="sec s5">
+    <div class="sec-tag">05 / 06</div>
+    <h2><span class="num">05</span>6 城复苏波次 + Anyi 6 区域</h2>
+    <div class="q3">
+      <div class="qc">
+        <div class="qh">第 1 波</div>
+        <div class="qv up">2026 Q4</div>
+        <div class="qd">成都/上海/深圳/南京<br>反弹最强劲</div>
+      </div>
+      <div class="qc">
+        <div class="qh">第 2 波</div>
+        <div class="qv up">2027 Q1</div>
+        <div class="qd">武汉/广州/西安<br>补涨启动</div>
+      </div>
+      <div class="qc">
+        <div class="qh">第 3 波</div>
+        <div class="qv nt">Q2-Q3</div>
+        <div class="qd">杭州/南京/长沙<br>青岛/厦门/海口</div>
+      </div>
+    </div>
+    <div class="c2" style="margin-top:7px;background:rgba(232,160,184,0.06);border-color:#e8a0b8;">
+      <div class="c2-l" style="font-size:13.5px;line-height:1.5;">
+        <b>Anyi 1244 · 5 年追平</b>：锦著 <b>6 → 35</b>(2027 Q2) → <b>70</b>(2027 Q4) → <b>120</b>(2028 H1)<br>
+        6 大改造开业窗口 = <b>2027 Q2</b>（成都 → 重庆 → 都江堰 → 西昌 → 乐山 → 阿坝）
+      </div>
+    </div>
+  </div>
+
+  <!-- s6: 4 大 KPI + CTA -->
+  <div class="sec s6">
+    <div class="sec-tag">06 / 06</div>
+    <h2 style="font-size:22px;margin-bottom:6px;"><span class="num">06</span>2027 全年 4 大 KPI</h2>
+    <div class="kpi">
+      <div class="kc"><div class="kn up">+4%</div><div class="kl">全年 RevPAR<br>(区间 +3~+5)</div></div>
+      <div class="kc"><div class="kn up">67%</div><div class="kl">全年 OCC<br>(区间 65-70)</div></div>
+      <div class="kc"><div class="kn nt">0%</div><div class="kl">全年 ADR<br>量增价平</div></div>
+      <div class="kc"><div class="kn up">+25%</div><div class="kl">入境增速<br>(雅高对标)</div></div>
+    </div>
+    <div class="foot" style="margin-top:8px;">
+      <div class="cta">2027 = <b>量增价平</b> · 复苏靠结构不靠涨价</div>
+      <div class="tags">#酒店投资 #行业预测 #RevPAR<br>#商业洞察 #位置为王</div>
+    </div>
+  </div>
+
+  <div class="wm">B166ER · 2026-10-21 · 2027 酒店行业全景预测 v1.0</div>
+</body>
+</html>

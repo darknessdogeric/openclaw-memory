@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><meta charset="UTF-8">
+<title>酒店选址真相 v2.2 - 品牌橙</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap');
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{
+    width:1080px;height:1440px;
+    font-family:'Noto Sans SC','PingFang SC',sans-serif;
+    background:#1a0a14;
+    color:#fff0f4;
+    padding:0;display:flex;flex-direction:column;
+    position:relative;overflow:hidden;
+  }
+  /* ===== 全局呼吸节奏: 8px baseline ===== */
+  /* v2.2 改进:
+     - sections padding 36→40 (留出更多空气感)
+     - section 标题加序号标签 (Section 1/5)
+     - 关键数据点加 "card-stat" 高亮块
+  */
+  .sec{
+    width:100%;padding:40px 52px;          /* 40px vertical 留白 */
+    box-sizing:border-box;position:relative;
+    display:flex;flex-direction:column;
+    justify-content:center;gap:10px;
+  }
+  .s1{height:288px;background:linear-gradient(180deg,#1a0a14 0%,#1a1424 100%);}
+  .s2{height:288px;background:#1a0a14;}
+  .s3{height:288px;background:linear-gradient(180deg,#1a0a14 0%,#1a0c14 100%);}
+  .s4{height:288px;background:#1a0a14;}
+  .s5{height:288px;background:linear-gradient(180deg,#1a0a14 0%,#0a0503 100%);}
+  /* ===== Section 序号标签 (Section X / 5) ===== */
+  .sec-tag{
+    position:absolute;top:8px;right:14px;
+    font-size:11px;color:#a07080;opacity:0.5;
+    letter-spacing:1.5px;font-family:'Courier New',monospace;
+  }
+  /* ===== B 标 v2.2: 移至左上角 (signature 印章) ===== */
+  .brand-top-left{
+    position:absolute;top:14px;left:14px;
+    width:64px;height:64px;border-radius:6px;
+    background:rgba(232,160,184,0.9);
+    border:1.5px solid #fff0f4;
+    display:flex;flex-direction:column;
+    align-items:center;justify-content:center;
+    font-family:'Noto Sans SC',sans-serif;
+    z-index:10;
+  }
+  .brand-top-left .b-num{font-size:22px;font-weight:900;color:#fff0f4;line-height:1;}
+  .brand-top-left .b-label{font-size:7px;color:#fff0f4;letter-spacing:1.5px;margin-top:2px;line-height:1;}
+  /* ===== 右下水印 (低调品牌) ===== */
+  .brand-watermark{
+    position:absolute;bottom:6px;right:10px;
+    font-size:9px;color:#a07080;opacity:0.5;
+    letter-spacing:2px;font-family:'Courier New',monospace;
+  }
+  /* ===== 字号 v2.2 终版 ===== */
+  .kicker{font-size:16px;color:#e8a0b8;letter-spacing:5px;font-weight:600;margin-bottom:6px;}
+  h1{font-size:60px;font-weight:900;line-height:1.1;letter-spacing:2px;color:#fff0f4;margin-bottom:6px;}
+  h1 .hl{color:#e8a0b8;}
+  h2{font-size:30px;font-weight:800;color:#e8a0b8;margin-bottom:10px;letter-spacing:1.5px;display:flex;align-items:center;gap:10px;}
+  h2 .num{font-size:14px;font-weight:600;color:#a07080;background:rgba(255,255,255,0.04);padding:2px 8px;border-radius:4px;letter-spacing:1px;}
+  h3{font-size:20px;font-weight:700;color:#fff0f4;margin-bottom:6px;letter-spacing:1px;}
+  .sub{font-size:18px;color:#a07080;margin-top:6px;line-height:1.35;}
+  p{font-size:18px;line-height:1.4;color:#fff0f4;margin-bottom:4px;}
+  b{color:#e8a0b8;font-weight:700;}
+  .quote{
+    font-size:20px;line-height:1.4;color:#fff0f4;
+    border-left:4px solid #e8a0b8;padding:10px 14px;
+    background:rgba(232,160,184,0.06);border-radius:0 6px 6px 0;
+  }
+  /* ===== 3 列卡片 (v2.2 加 column 序号) ===== */
+  .grid3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;width:100%;}
+  .card3{
+    background:rgba(255,255,255,0.04);
+    border:1px solid rgba(232,160,184,0.18);
+    border-radius:6px;padding:10px 8px;
+    display:flex;flex-direction:column;
+  }
+  .c3-num{
+    font-size:24px;font-weight:900;color:#e8a0b8;
+    line-height:1;margin-bottom:3px;
+  }
+  .c3-t{font-size:15px;font-weight:700;color:#fff0f4;margin-bottom:4px;line-height:1.15;}
+  .c3-d{font-size:13px;color:#a07080;line-height:1.3;}
+  .c3-d b{color:#fff0f4;font-weight:600;}
+  /* ===== 2 列对比 (v2.2 紧凑) ===== */
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px;width:100%;}
+  .card2{
+    background:rgba(255,255,255,0.04);
+    border:1px solid rgba(232,160,184,0.18);
+    border-radius:6px;padding:10px 12px;
+  }
+  .bad{border-color:rgba(216,160,180,0.4);background:rgba(216,160,180,0.06);}
+  .good{border-color:rgba(160,144,192,0.4);background:rgba(160,144,192,0.06);}
+  .c2-h{font-size:20px;font-weight:700;margin-bottom:6px;}
+  .bad .c2-h{color:#d8a0b0;}
+  .good .c2-h{color:#a890c0;}
+  .c2-d{font-size:15px;color:#a07080;line-height:1.4;}
+  .c2-d b{color:#fff0f4;}
+  /* ===== 三步行动 (v2.2 紧凑) ===== */
+  .steps{display:flex;flex-direction:column;gap:4px;margin-top:4px;}
+  .step{display:flex;align-items:center;gap:8px;font-size:15px;color:#fff0f4;}
+  .step .sn{font-size:18px;font-weight:900;color:#e8a0b8;width:24px;}
+  /* ===== 页脚 (v2.2 调整) ===== */
+  .footer{
+    margin-top:auto;padding-top:8px;
+    border-top:1px solid rgba(232,160,184,0.2);
+    text-align:center;
+  }
+  .footer .cta{font-size:20px;font-weight:700;color:#fff0f4;margin-bottom:4px;}
+  .footer .cta b{color:#e8a0b8;}
+  .footer .tags{font-size:13px;color:#a07080;letter-spacing:1px;}
+</style>
+</head>
+<body>
+  <!-- ===== B 标 (左上角 signature 印章) ===== -->
+  <div class="brand-top-left">
+    <div class="b-num">B</div>
+    <div class="b-label">B166ER</div>
+  </div>
+
+  <!-- ===== Section 1 / 5: Hook + 反常识 ===== -->
+  <div class="sec s1">
+    <div class="sec-tag">SECTION 1 / 5</div>
+    <div class="kicker">酒店选址真相 v2.2</div>
+    <h1>客人 <span class="hl">不冲</span><br>你的酒店来</h1>
+    <div class="sub">客人 是冲 <b>酒店所在的目的地</b> 来的</div>
+  </div>
+
+  <!-- ===== Section 2 / 5: 核心洞察 ===== -->
+  <div class="sec s2">
+    <div class="sec-tag">SECTION 2 / 5</div>
+    <h2><span class="num">02</span>核心洞察</h2>
+    <div class="quote">
+      酒店建的再漂亮，<b>也吸引不来客人</b>。<br>
+      酒店的命运，<b>最终取决于酒店所在的地方</b>。<br>
+      酒店 = 人流的"<b>切口</b>"，目的地客群的<b>刚需</b>。
+    </div>
+  </div>
+
+  <!-- ===== Section 3 / 5: 三件事（基建/政策+一带一路/商业） ===== -->
+  <div class="sec s3">
+    <div class="sec-tag">SECTION 3 / 5</div>
+    <h2><span class="num">03</span>选址三件事（必须全部跟）</h2>
+    <div class="grid3">
+      <div class="card3">
+        <div class="c3-num">①</div>
+        <div class="c3-t">跟 基建 走</div>
+        <div class="c3-d">高铁站 · 地铁口<br>新机场 · 新高速<br><b>5-30 年红利</b></div>
+      </div>
+      <div class="card3">
+        <div class="c3-num">②</div>
+        <div class="c3-t">跟 政策 走</div>
+        <div class="c3-d">新区 · 自贸区 · 度假区<br><b>一带一路节点城市</b><br><b>5-10 年定位</b></div>
+      </div>
+      <div class="card3">
+        <div class="c3-num">③</div>
+        <div class="c3-t">跟 商业 走</div>
+        <div class="c3-d">新 CBD · 夜经济<br>文旅商融合区<br><b>长期复利</b></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== Section 4 / 5: 短命 vs 长命 对比 ===== -->
+  <div class="sec s4">
+    <div class="sec-tag">SECTION 4 / 5</div>
+    <h2><span class="num">04</span>短命 vs 长命</h2>
+    <div class="grid2">
+      <div class="card2 bad">
+        <div class="c2-h">✕ 短命的（不能跟）</div>
+        <div class="c2-d">• <b>旅游热度</b> — 一时一地<br>• <b>网红流量</b> — 来去一阵风<br>• <b>节日效应</b> — 3-12 个月窗口<br>• <b>景区周边</b> — 旺丁不旺财</div>
+      </div>
+      <div class="card2 good">
+        <div class="c2-h">✓ 长命的（必须跟）</div>
+        <div class="c2-d">• <b>基建布局</b> — 5-30 年红利<br>• <b>政策方向</b> — 5-10 年定位<br>• <b>商业趋势</b> — 长期复利<br>• <b>一带一路</b> — 跨境红利</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== Section 5 / 5: 结论 + CTA + 右下水印 ===== -->
+  <div class="sec s5">
+    <div class="sec-tag">SECTION 5 / 5</div>
+    <div class="quote" style="font-size:22px;line-height:1.35;">
+      <b>选址的真相</b>：选的不是「房子能建在哪里」，<br>
+      选的是「<b>人流会涌向哪里</b>」。<br>
+      <b>位置错了，再多装修也白搭。</b>
+    </div>
+    <div class="steps">
+      <div class="step"><span class="sn">1</span>查「基建」：高铁 · 地铁 · 高速</div>
+      <div class="step"><span class="sn">2</span>查「政策+一带一路」：新区 · 自贸 · 节点城市</div>
+      <div class="step"><span class="sn">3</span>查「商业」：CBD · 夜经济 · 文旅区</div>
+    </div>
+    <div class="footer">
+      <div class="cta">看清大势 · 提前布局</div>
+      <div class="tags">#小红书 #酒店投资 #选址 #民宿 #商业真相 #位置为王 #一带一路</div>
+    </div>
+  </div>
+
+  <!-- ===== 右下水印 (低调品牌) ===== -->
+  <div class="brand-watermark">B166ER · 2026-10-17</div>
+</body>
+</html>

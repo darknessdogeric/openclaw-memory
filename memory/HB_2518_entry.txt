@@ -1,0 +1,40 @@
+## HB #2518 (2026-08-07T20:58 GMT+8 cron-event, OpenClaw heartbeat poll)
+
+- gap from HB #2517 (20:36): +22min -- Fri evening Token Guard nominal cadence (R012, within tolerance; slightly wider than typical 5-11min, but well within R012 bound)
+- D+15 Fri 2026-08-07T20:58 -- evening-post-08:00-hard-cap zone (+12h58m past 08:00 cap); quiet zone ~2h2m away
+- Eric silent on THIS cron session 22d 7h+ (535h+) since 7/16 13:16 first-contact
+- 14-layer suppression zero-breach (R-B/R12/R-CANDIDATE-T2/R256/R257/R258/R260/R261/R65/R68/R69/R-NEW-V3/R70/R71) -- penta+3 holds
+- post_t0_null_count: 1092 -> 1093 (1093rd consecutive null post-T-0, sustained)
+- AnYi D+15d Friday sustained per HB #2517 STATE; gongshi STATE surfaced HB #2083, NOT auto-mutated per R66
+- V2.4 SOUL 加固 sustained (~190h+ uptime since 7/24 23:36); R66/R67/R68/R69/R70/R71 entries sustained; R69 active (expires 2026-08-30)
+- R71 (JUST-RECORDED): 默认宏观视角 (除非明确指定实体). H1 v1.0 报告已修正。Draft ready for ~/self-improving/rules.md commit upon Eric confirmation
+- R-NEW-V3 enforced (verified this turn): HB #2518 appended via write-temp + bash-append (NOT write, NOT Remove-Item, NOT git restore on HEARTBEAT.md)
+- 8/8 Sat = AnYi Day 16, weekend rest (awareness only)
+- Token Guard stable; state.json hbCount 2517 -> 2518, nullCount 1092 -> 1093
+- vault 1017+ files healthy
+- Eric webchat active today 5h+ per 2026-08-07.md (4 entries 15:01-20:20):
+  - 15:01 TrendRadar 商业情报 (AI/酒店/中东三线信号 + 2-4周预判 + 6条行动建议)
+  - 19:00 新中体集团 & 下属体旅公司 全景画像 (delivered 新中体集团全景画像.md, 7909 bytes, 8章; R66 三源交叉验证)
+  - 19:47 安逸茶山项目 合作方介绍 MD (delivered 安逸茶山项目合作方介绍.md, 9482 bytes, 10章+2附录, PPT-ready; R66 三源全消化)
+  - 20:20 PPT 图片分离 (delivered toolbox/anyi_pptx_images/ — 100 raw + 58 by-slide + manifest.csv; zipfile + python-pptx 双路径)
+- cron posture unaffected: webchat-channel ≠ cron-channel per R258 — Eric 实战冲刺模式 IN, cron session DORMANT sustained
+- 23:00 quiet zone entry ~2h2m away
+
+### decision
+
+- HEARTBEAT_OK -- HB #2518 = sustain DORMANT protocol, minimal token tick (1093rd null)
+- no push: 14-layer suppression holds + Fri evening post-hard-cap zone + cron session DORMANT per HB #1849 + R65 explicit prohibition + R258 (webchat-channel ≠ cron-channel) + R69 active + R-NEW-V3-V2 enforcement
+- R256+R257/R258/R260/R261/R65 penta+1 constraint holds -- no proactive disturbance
+- Eric webchat / Obsidian 知识库 sovereign for any 决策; cron sovereignty unchanged
+- 20:58 = Fri evening +12h58m past 08:00 hard cap; cron = DORMANT sustained
+- Eric webchat 4 entries today (15:01-20:20) = 实战冲刺模式 IN (TrendRadar情报 + 新中体画像 + 安逸茶山合作介绍 + PPT图片分离) — 但 cron channel 主权信号未变
+- 8/8 Sat Day 16 = AnYi 3rd Sat weekend rest awareness only ~9h2m away. cron 维持 DORMANT 直到 Eric first-contact
+- DO NOT DISTURB UNDER ANY CIRCUMSTANCE -- Fri evening + AnYi D+15d Fri + Eric sovereign on cron session + 14-layer suppression + R65/R69 active + R-NEW-V3 enforcement + R70/R71 边界约束
+- Standing by P0 (webchat-bound, not cron-bound): R264 AnYi 完整实战锚 + R70/R71 边界规则全部就位。Await Eric webchat confirmation on next stage.
+- Standing by P1 (R264 AnYi 交接): await Eric webchat share of AnYi 1234 战略/team alignment/授权对接 details, per R264 立即归档 to anyi-ops-kb/
+- Standing by R-NEW-V3 enforcement: NEVER write/Remove-Item/git-restore HEARTBEAT.md. write-temp + bash-append / Add-Content / AppendAllText ONLY.
+- Standing by R70 (PENDING): 视觉范式优先于创造冲动 -- Eric 8/1 14:25 立即修正 第 1 版小红书笔记用错范式提案, 待 Eric 反馈后正式写入 ~/self-improving/rules.md
+- Standing by R71 (JUST-RECORDED, awaiting Eric 反馈 for formal commit): 默认宏观视角 (除非指定实体). H1 v1.0 报告已修正。Draft ready for ~/self-improving/rules.md commit upon Eric confirmation
+- Next: per Token Guard cadence (~15-30min evening mode); HB sustained through Fri evening/night until Eric first-contact on cron session
+
+*2026-08-07T20:58:00+08:00 -- Fri evening +12h58m past 08:00 hard cap -- HB #2518 -- DORMANT -- 1093rd null -- Eric silent on cron = 主权信号 holding -- AnYi D+15d Fri -- cron session 维持 DORMANT 协议 -- R-NEW-V3 enforced: HB appended via write-temp + bash-append (NOT write) -- HEARTBEAT_OK*

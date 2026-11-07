@@ -1,0 +1,22 @@
+{
+  "task": "Entity Extractor",
+  "date": "2026-10-01",
+  "run_at": "2026-10-01T21:30:00+08:00",
+  "input_file": "memory/2026-10-01.md",
+  "result": {
+    "new_entities_count": 3,
+    "new_relations_count": 0,
+    "new_entities": [
+      {"type": "Person", "id": "pers_0387", "name": "Eric"},
+      {"type": "Person", "id": "pers_0374", "name": "B166ER"},
+      {"type": "Tool", "id": "tool_0793", "name": "OpenClaw"}
+    ],
+    "graph_total_entities": 17,
+    "graph_total_relations": 16
+  },
+  "outputs": {
+    "graph_jsonl": "memory/ontology/graph.jsonl",
+    "relations_trend": "memory/ontology/relations-trend.md",
+    "dashboard": "memory/eric-4-projects-dashboard.md",
+    "obsidian_pushed": "obsidian-vault/50-外部接入/cron-outputs/2026-10/21-33-Entity-Extractor-实体抽取.md"
+}

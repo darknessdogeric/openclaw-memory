@@ -1,0 +1,57 @@
+{
+  "_meta": {
+    "rule": "R16",
+    "created": "2026-07-16",
+    "trigger_event": "daily-briefing 6/29-7/11 12 份被未知清理流程回收，Eric 19 天断粮",
+    "purpose": "决策资产白名单 —— 任何清理/压实/L0-L1 析出 必须跳过这些路径",
+    "override_clause": "唯一例外：Eric 本人在主会话明确说'清理 X'"
+  },
+  "protected_paths": [
+    {
+      "path": "memory/world-intelligence/**",
+      "reason": "每日全球情报简报（cron 7e149123）",
+      "stakes": "决策锚点，19 天断粮已造成过严重教训"
+    },
+    {
+      "path": "memory/predictions/**",
+      "reason": "宏观/资本市场预测 jsonl",
+      "stakes": "预测可验证、不可事后重生成"
+    },
+    {
+      "path": "memory/eric-4-projects-dashboard.md",
+      "reason": "Eric 4 项目状态仪表板",
+      "stakes": "项目状态连续性（AHL/安逸/入境指南/医养）"
+    },
+    {
+      "path": "memory/glossary.md",
+      "reason": "B166ER 术语表",
+      "stakes": "长期认知资产，构筑概念网"
+    },
+    {
+      "path": "eval/YYYY-MM-DD.json",
+      "reason": "每日执行评估记录",
+      "stakes": "R12 / R7 验证证据链"
+    },
+    {
+      "path": "reports/daily-briefing/**",
+      "reason": "Eric 唯一可检索简报入口",
+      "stakes": "INDEX.md 维护链条不可断（2026-07-16 已断 18 天）"
+    },
+    {
+      "path": "memory/push_queue.jsonl",
+      "reason": "推送队列",
+      "stakes": "跨会话异步通信骨干"
+    },
+    {
+      "path": "memory/world-intelligence/.archive/**",
+      "reason": "世界情报归档备份",
+      "stakes": "单一日出错可恢复"
+    }
+  ],
+  "verification_command_examples": [
+    "ls -la memory/world-intelligence/ | wc -l   # 应持续增长",
+    "ls -la memory/predictions/ | wc -l         # 应持续增长",
+    "test -f memory/eric-4-projects-dashboard.md && echo OK"
+  ],
+  "_open_question": "root cause 6/29-7/11 文件丢失仍未定位 —— 需要后台 trace 哪个脚本/事件触发了删除。建议加入下一次 self-improving 周期复盘。"
+}

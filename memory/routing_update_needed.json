@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-10-25 03:58:04",
-  "indexed_md_total": 732,
-  "kb_candidates": 168,
-  "already_routed": 168,
+  "generated_at": "2026-10-26 13:12:52",
+  "indexed_md_total": 7029,
+  "kb_candidates": 1285,
+  "already_routed": 1285,
   "new_routes_needed": 0,
   "routing_table": [],
   "status": "OK",

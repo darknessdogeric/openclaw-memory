@@ -1,0 +1,61 @@
+{
+  "date": "2026-07-14",
+  "report_type": "每日全球情报简报",
+  "time": "08:30",
+  "model": "minimax/MiniMax-M2.7-highspeed",
+  "r12_status": {
+    "description": "R12: 所有视觉产出必须调 protect_output()",
+    "applied": true,
+    "note": "本报告为纯文本情报报告，无视觉产出，无水印需求"
+  },
+  "r60_11_sediment": {
+    "glossary_updated": true,
+    "new_terms_added": 5,
+    "terms": [
+      "双航道方案 (Dual-Channel Hormuz Plan)",
+      "Co-Co模式 (Co-Development & Co-Profit Model)",
+      "霍尔木兹过路费 (Hormuz Transit Fee)",
+      "超节点 (SuperPod)",
+      "万亿参数大模型 (Trillion-Parameter LLM)"
+    ],
+    "predictions_updated": true,
+    "predictions_count": 5,
+    "predictions_included": [
+      "USD_CNY_6.7862",
+      "WTI_crude_73.37",
+      "gold_below_4100",
+      "VIX_rising",
+      "China_Q2_GDP_4.4pct"
+    ],
+    "projects_dashboard_updated": true,
+    "eval_written": true,
+    "obsidian_push": true
+  },
+  "report_quality": {
+    "sections_completed": 16,
+    "word_count_estimate": 3500,
+    "key_intelligence_sources": [
+      "华尔街见闻",
+      "财联社早报",
+      "凤凰网",
+      "TrendRadar MCP",
+      "外交部声明"
+    ],
+    "top_3_events": [
+      "霍尔木兹海峡关闭+美伊直接对抗（最高级别地缘风险）",
+      "14国南海联合声明+外交部反驳",
+      "WAIC 2026倒计时+华为Atlas 950首秀"
+    ]
+  },
+  "data_loss_prevention": {
+    "r_new_20260713_1_applied": true,
+    "write_tool_usage": "edit (not write) for all file modifications",
+    "memory_files_touched": [
+      "memory/world-intelligence/2026-07-14.md",
+      "memory/glossary.md",
+      "memory/predictions/macro.jsonl",
+      "memory/eric-4-projects-dashboard.md",
+      "memory/eval/2026-07-14.json"
+    ]
+  }
+}

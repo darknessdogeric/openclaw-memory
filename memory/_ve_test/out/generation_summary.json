@@ -1,0 +1,36 @@
+{
+  "plan": "D:\\B166ER-openclaw\\workspace\\memory\\_ve_test\\plan.json",
+  "created_at": "2026-10-24 20:11:34",
+  "provider_default": "command",
+  "model_default": null,
+  "resolution_default": "4k",
+  "aspectRatio_default": "16:9",
+  "generated": [
+    {
+      "slide": 3,
+      "status": "SUCCESS",
+      "provider": "command",
+      "model": null,
+      "path": "D:\\B166ER-openclaw\\workspace\\memory\\_ve_test\\out\\slide-03.png",
+      "attempts": [
+        {
+          "status": "SUCCESS",
+          "provider": "mock",
+          "model": null,
+          "command": "python D:/B166ER-openclaw/workspace/memory/_mock_provider.py",
+          "provider_response": {
+            "status": "SUCCESS",
+            "provider": "mock",
+            "image_path": "D:\\B166ER-openclaw\\workspace\\memory\\_ve_test\\tmp\\mock-slide-03.png"
+          },
+          "image_path": "D:\\B166ER-openclaw\\workspace\\memory\\_ve_test\\tmp\\mock-slide-03.png",
+          "attempt": 1
+        }
+      ],
+      "image_source": "path",
+      "image_path": "D:\\B166ER-openclaw\\workspace\\memory\\_ve_test\\tmp\\mock-slide-03.png"
+    }
+  ],
+  "failed": [],
+  "skipped": []
+}

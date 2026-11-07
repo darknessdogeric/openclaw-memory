@@ -1,0 +1,38 @@
+{
+  "date": "2026-08-18",
+  "session": "深度自迭代上午 10:00",
+  "r66_execution": {
+    "today": 0,
+    "reason": "cron DORMANT, 无新输入",
+    "yesterday_total": 14,
+    "cumulative": "全部单钳 ✓"
+  },
+  "r282_mechanism": {
+    "status": "已激活",
+    "description": "DORMANT期间主动标注战略信号",
+    "boundary_risk": "需明确主动标注 vs 主动推送的边界"
+  },
+  "self_assessment": {
+    "strengths": [
+      "R66 14项全部单钳",
+      "v1.1-v1.2被动响应 → v1.3主动识别战略升级",
+      "17层抑制零突破"
+    ],
+    "risks": [
+      "DORMANT协议过深可能导致信号漏识别",
+      "R69沉默期接近最后4天窗口"
+    ]
+  },
+  "r12_application": null,
+  "new_rule_proposed": null,
+  "key_findings": [
+    "v1.3路径B(集团自投五星)是元结构改变，不是细节修正",
+    "数字化 = 战略前提",
+    "8/19锦江MOU T-1明天到期",
+    "华住Q2 RevPAR +1.1%靠ADR驱动"
+  ],
+  "pending_questions": [
+    "路径B是否代表集团战略野心的终极表达？",
+    "在地文创酒店作为对外品牌名是否成立？"
+  ]
+}

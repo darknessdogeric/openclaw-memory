@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{width:1587px;height:1122px;overflow:hidden;background:#F6F2EA;
+ font-family:"Microsoft YaHei","Source Han Sans SC","Noto Sans CJK SC","SimHei",sans-serif;
+ color:#241F1A;-webkit-font-smoothing:antialiased}
+.serif{font-family:"Source Han Serif SC","Noto Serif CJK SC","STZhongsong","SimSun",serif}
+.page{width:1587px;height:1122px;display:flex;flex-direction:column;padding:26px 30px 16px}
+
+/* ── 带一 战略层 ── */
+.top{background:#1C1B19;color:#F2EDE3;padding:20px 26px 18px;position:relative;overflow:hidden;flex:0 0 auto}
+.wave{position:absolute;right:-30px;top:-40px;width:640px;height:300px;opacity:.13}
+.tagline{display:flex;align-items:center;gap:12px;margin-bottom:9px}
+.tagline .lbl{background:#B08D57;color:#1C1B19;font-size:12px;font-weight:bold;padding:3px 10px;letter-spacing:2px}
+.tagline .sub{font-size:12.5px;color:#BFB4A0;letter-spacing:.6px}
+h1{font-size:31px;font-weight:700;letter-spacing:2.5px;margin-bottom:3px}
+.sub1{font-size:12.5px;color:#A89C86;letter-spacing:.5px}
+.strat{margin-top:13px;padding-top:12px;border-top:1px solid rgba(176,141,87,.38)}
+.strat .quote{font-size:16.5px;line-height:1.55;color:#F5F1E8;letter-spacing:.4px}
+.strat .quote b{color:#D9B979;font-weight:bold}
+.path{display:flex;gap:9px;margin-top:11px}
+.path .p{flex:1;background:rgba(255,255,255,.055);border-left:2px solid #B08D57;padding:8px 11px}
+.path .p .h{font-size:12px;color:#D9B979;font-weight:bold;letter-spacing:1.4px;margin-bottom:3px}
+.path .p .d{font-size:11.5px;line-height:1.5;color:#CFC5B4}
+
+/* ── 主体两带 ── */
+.mid{flex:1 1 auto;display:grid;grid-template-columns:1fr 1fr;gap:11px;margin-top:11px;min-height:0}
+.band{background:#FFF;padding:13px 15px;display:flex;flex-direction:column;min-height:0}
+.band.b1{grid-column:1/2}
+.band.b2{grid-column:2/3;justify-content:flex-start}
+.bh{display:flex;align-items:baseline;gap:9px;border-bottom:1.5px solid #B08D57;padding-bottom:6px;margin-bottom:9px}
+.bh .n{font-size:15.5px;font-weight:bold;color:#1C1B19;letter-spacing:1.2px}
+.bh .d{font-size:10.5px;color:#8A8072}
+.bh .sp{flex:1}
+
+.row{display:flex;gap:9px}
+.col{display:flex;flex-direction:column;min-width:0}
+.k{font-size:10.5px;color:#7C7367;letter-spacing:1px;margin-bottom:5px}
+
+/* 基准数卡 */
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:7px}
+.st{background:#FAF7F1;border:1px solid #E4DACB;padding:7px 9px}
+.st .v{font-size:22px;font-weight:bold;color:#1C1B19;line-height:1.05;letter-spacing:-.3px}
+.st .v small{font-size:12px;font-weight:normal;color:#6B6357;margin-left:2px}
+.st .k2{font-size:10.5px;color:#7C7367;margin-top:2px}
+.st.hl{background:#F3EEE3;border-color:#C9B48C}
+.st.hl .v{color:#8A5A33}
+
+/* 坐标条 */
+.bar{margin-bottom:5px}
+.bar .t{display:flex;justify-content:space-between;font-size:11px;margin-bottom:2px}
+.bar .t b{font-weight:bold;color:#2E6E7E}
+.bar .t span{color:#6B6357}
+.bar .bg{height:9px;background:#EFE9DE}
+.bar .bf{height:9px;background:#2E6E7E}
+.bar.self .bf{background:#B08D57}
+.bar.self .t b{color:#8A5A33}
+.bar .t small{font-size:9.5px;color:#9A9080;margin-left:4px}
+
+/* 误判卡 */
+.mis{border-left:3px solid #8A5A33;background:#FBF7F0;padding:9px 11px;margin-bottom:8px;flex:1 1 0;display:flex;flex-direction:column;justify-content:center}
+.mis .t{font-size:13px;font-weight:bold;color:#1C1B19;margin-bottom:3px}
+.mis .t .x{color:#8A5A33}
+.mis .d{font-size:11.5px;line-height:1.62;color:#4A443C}
+.mis .d b{color:#2E6E7E}
+.mis .d em{font-style:normal;color:#8A5A33;font-weight:bold}
+
+/* 八讲 */
+.talks{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}
+.tk{background:#FAF7F1;border:1px solid #E4DACB;padding:6px 8px;position:relative}
+.tk .no{font-size:9.5px;color:#B08D57;font-weight:bold;letter-spacing:1px}
+.tk .t{font-size:11.5px;font-weight:bold;color:#1C1B19;margin:1px 0 2px;line-height:1.25}
+.tk .d{font-size:10px;color:#6B6357;line-height:1.4;min-height:26px}
+.tk .w{position:absolute;top:6px;right:7px;font-size:9.5px;color:#fff;background:#2E6E7E;padding:1px 5px}
+.tk .w.p5{background:#8A8072}
+.tk .w.p10{background:#4C7A5C}
+
+/* 入境客 + 目标 */
+.opp{background:#F1F5F4;border:1px solid #CFE0DA;padding:8px 10px;margin-bottom:8px}
+.opp .h{font-size:12px;font-weight:bold;color:#2E6E7E;margin-bottom:4px;letter-spacing:.6px}
+.opp .g{display:grid;grid-template-columns:1fr 1fr;gap:3px 10px;font-size:10.5px;color:#3F4A48}
+.opp .g b{color:#1C1B19}
+.goal{display:grid;grid-template-columns:1fr 1fr 1fr;gap:7px;margin-bottom:8px}
+.gl{background:#F4F7F2;border:1px solid #CFE0D0;padding:7px;text-align:center}
+.gl .f{font-size:10px;color:#5E6B5C}
+.gl .v{font-size:15px;font-weight:bold;color:#4C7A5C;margin:2px 0}
+.gl .d{font-size:9.5px;color:#7C7367;line-height:1.35}
+.rule{background:#1C1B19;color:#F2EDE3;padding:8px 11px;margin-bottom:7px}
+.rule .h{font-size:10.5px;color:#D9B979;letter-spacing:1.2px;margin-bottom:2px}
+.rule .d{font-size:11px;line-height:1.5}
+.rule .d b{color:#fff}
+.end{font-size:10.5px;color:#6B6357;line-height:1.5;background:#FBF7F0;border:1px dashed #D5C9B6;padding:7px 10px}
+.end b{color:#1C1B19}
+
+.foot{margin-top:8px;display:flex;justify-content:space-between;align-items:flex-end;font-size:9.5px;color:#8A8072;line-height:1.5}
+.foot .r{text-align:right}
+</style></head><body>
+<div class="page">
+
+<div class="top">
+  <svg class="wave" viewBox="0 0 640 300" fill="none">
+    <path d="M0 120 C80 90 160 150 240 120 S400 60 480 100 560 150 640 120" stroke="#B08D57" stroke-width="1.1"/>
+    <path d="M0 150 C80 120 160 180 240 150 S400 90 480 130 560 180 640 150" stroke="#B08D57" stroke-width="1.1"/>
+    <path d="M0 180 C80 150 160 210 240 180 S400 120 480 160 560 210 640 180" stroke="#B08D57" stroke-width="1.1"/>
+    <path d="M0 210 C80 180 160 240 240 210 S400 150 480 190 560 240 640 210" stroke="#B08D57" stroke-width="1.1"/>
+    <path d="M0 240 C80 210 160 270 240 240 S400 180 480 220 560 270 640 240" stroke="#B08D57" stroke-width="1.1"/>
+  </svg>
+  <div class="tagline"><span class="lbl">董事长培训</span><span class="sub">安逸酒店集团产业发展部 · 都江堰国堰宾馆 · 2026 年 10 月</span></div>
+  <h1 class="serif">国堰宾馆 · 营销进阶培训要点与经营方向</h1>
+  <div class="sub1">战略高度：从单店样板到可复制模型　｜　战术落地：八讲实战标准与 90 天责任到人</div>
+  <div class="strat">
+    <div class="quote serif">国堰不是逆势下滑，是<strong>两年原地踏步</strong>：RevPAR 同比 +2.94%，优于锦江中端 −1.02%、全服务 −1.94%、首旅 −6.10%。<b>破局点在"量"与"客源结构"，而这两样恰恰是营销能解的</b>——改造解决产品，营销解决流量，两者必须同步。</div>
+    <div class="path">
+      <div class="p"><div class="h">战略层　样板</div><div class="d">品牌重塑＋主题文化改造＋策展联营＋数智化穿透，投资上限 3,600 万元（隐蔽工程 500 万），单店突破后反哺集团</div></div>
+      <div class="p"><div class="h">战术层　八讲</div><div class="d">数据基线／RFP／TMC／入境客／本地生活新媒体／分级分类／限制性功能本地化／落地考核</div></div>
+      <div class="p"><div class="h">复制层　外溢</div><div class="d">基础通用标准＋在地文化定制，承接省内各地市州国资楼堂馆所划转资产</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="mid">
+  <div class="band b1">
+    <div class="bh"><span class="n">一　现状</span><span class="d">2026-01-01 至 10-24　平台直接读取（297 天）</span><span class="sp"></span></div>
+    <div class="row" style="flex:1">
+      <div class="col" style="width:46%">
+        <div class="k">五个必须统一口径的基准数</div>
+        <div class="stats">
+          <div class="st"><div class="v">1,296<small>万元</small></div><div class="k2">总营收</div></div>
+          <div class="st hl"><div class="v">38.47<small>%</small></div><div class="k2">出租率 OCC</div></div>
+          <div class="st"><div class="v">266.80<small>元</small></div><div class="k2">平均房价 ADR</div></div>
+          <div class="st hl"><div class="v">102.63<small>元</small></div><div class="k2">单店 RevPAR</div></div>
+          <div class="st" style="grid-column:1/3"><div class="v">44.66<small>%</small></div><div class="k2">非房收入占比　客房 55.34%　餐饮 37.26%　会议 5.53%　其他 1.88%</div></div>
+        </div>
+        <div class="rule" style="margin-top:9px">
+          <div class="h">定价铁律</div>
+          <div class="d">门市价 ¥488　实际成交 ¥266.80　成交/门市 <b>54.7%</b>（折扣深度约 45%）。<b>一切报价、协议价、套餐价锚定 R1 实际 ADR 266.80，不是门市价 488。</b></div>
+        </div>
+      </div>
+      <div class="col" style="width:54%">
+        <div class="k">三个坐标　RevPAR 对标</div>
+        <div class="bar self"><div class="t"><b>国堰（YTD）</b><span>102.63　ADR 266.80　OCC 38.47%</span></div><div class="bg"><div class="bf" style="width:31.7%"></div></div></div>
+        <div class="bar"><div class="t"><b>都江堰区域 4–5 星</b><span>247–324　ADR 380–450　OCC 65–72%</span></div><div class="bg"><div class="bf" style="width:100%"></div></div></div>
+        <div class="bar"><div class="t"><b>华住中国 Q2</b><span>238　ADR 298　OCC 79.8%</span></div><div class="bg"><div class="bf" style="width:73.5%"></div></div></div>
+        <div class="bar"><div class="t"><b>锦江境内中端</b><span>159.09　低 35.5%</span></div><div class="bg"><div class="bf" style="width:49.1%"></div></div></div>
+        <div class="bar"><div class="t"><b>锦江境内有限服务型</b><span>146.66　ADR 229.44　OCC 63.92%　低 30.0%</span></div><div class="bg"><div class="bf" style="width:45.3%"></div></div></div>
+        <div class="bar"><div class="t"><b>锦江境内经济型</b><span>99.80　国堰高 2.8%</span></div><div class="bg"><div class="bf" style="width:30.8%"></div></div></div>
+        <div style="margin-top:7px;font-size:10.5px;line-height:1.5;color:#4A443C;background:#F1F5F4;border-left:3px solid #2E6E7E;padding:6px 9px">
+          <b style="color:#2E6E7E">全国尺度确认：</b>挂四星，RevPAR 表现对应经济型——<b style="color:#1C1B19">身份与产品错位</b>。且 ADR 比锦江有限服务型还高 16.3%，<b style="color:#1C1B19">靠提价解决不了问题，缺的是量</b>（OCC 低 25.5–41.3pp）。
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="band b2">
+    <div class="bh"><span class="n">二　三个必须破除的误判</span><span class="d">讲透，才不会用错力气</span><span class="sp"></span></div>
+    <div class="mis">
+      <div class="t">误判一　<span class="x">"国堰价格倒挂、卖不出价"</span>　<span style="font-weight:normal;font-size:11px;color:#6B6357">不准确</span></div>
+      <div class="d">1–8 月 ADR 216.99（区域 48%–57%）；<b>9/1–10/24 ADR 已达 450.9</b>，是区域 380–450 的 <b>100%–119%，已达标</b>。全年 266.80 是被淡季拖下来的。<em>旺季定价能力已被验证</em>，症结是<b>淡季价撑不住、且淡季没量</b>。</div>
+    </div>
+    <div class="mis">
+      <div class="t">误判二　<span class="x">"国堰是度假酒店、靠度假客"</span>　<span style="font-weight:normal;font-size:11px;color:#6B6357">不成立</span></div>
+      <div class="d">平台市场渠道占比：<b>休闲度假仅 0.01%–0.02%</b>。真实客源是<b>中介 40.45%</b>（订房代理/OTA 供应商）＋<b>协议 31.36%</b>（政务+商务）。一家挂"度假"招牌的酒店几乎没有度假客源——<em>这是产品定位与客源结构的错位，也是最大的改造空间</em>。</div>
+    </div>
+    <div class="mis">
+      <div class="t">误判三　<span class="x">"协议盘是政务护城河、很稳"</span>　<span style="font-weight:normal;font-size:11px;color:#6B6357">正在塌</span></div>
+      <div class="d">OTA <b>43.5%（+156.7%）</b>、上门散客 <b>23.3%（+400.6%）</b>在补；酒店协议客户 <em>19.0%（−83.7%）</em>、旅游团 <em>14.2%（−52.9%）</em>在掉。<em>补上来的是更高佣金、更低忠诚度的流量</em>——集团要的是量，集团拿到的是佣金。</div>
+    </div>
+    <div style="margin-top:auto;font-size:10px;color:#7C7367;background:#FBF7F0;border:1px dashed #D5C9B6;padding:6px 9px;line-height:1.45">
+      <b style="color:#1C1B19">数据纪律：</b>同一份数据，区间错判会让所有结论错 12 倍（按 24 天反推需 2,912 间房，不成立）。统一以 297 天平台实测口径为准。
+    </div>
+  </div>
+</div>
+
+<div class="mid" style="grid-template-columns:1.32fr 1fr;margin-top:11px;flex:0 0 auto">
+  <div class="band" style="padding:12px 15px">
+    <div class="bh"><span class="n">三　培训要点　八讲实战标准</span><span class="d">教学对象：营销/销售/前厅/收益管理/餐饮/会议服务　班额 20–30 人</span><span class="sp"></span></div>
+    <div class="talks">
+      <div class="tk"><span class="w p10">10%</span><div class="no">第一讲　30min</div><div class="t">数据基线</div><div class="d">统一数字口径，破除三个误判，先看清国堰站在哪</div></div>
+      <div class="tk"><span class="w">25%</span><div class="no">第二讲　70min</div><div class="t">RFP 采购应答</div><div class="d">政企与 MICE，零佣金批量客源入口</div></div>
+      <div class="tk"><span class="w">20%</span><div class="no">第三讲　60min</div><div class="t">TMC 差旅对接</div><div class="d">重建 B 端稳定通道，协议价按 R1 重设</div></div>
+      <div class="tk"><span class="w">20%</span><div class="no">第四讲　60min</div><div class="t">入境客拓展</div><div class="d">全市最大增量 × 国堰最大错配</div></div>
+      <div class="tk"><span class="w">15%</span><div class="no">第五讲　70min</div><div class="t">新媒体营销</div><div class="d">以本地生活为主，绕开中介佣金、直连本地成交</div></div>
+      <div class="tk"><span class="w p5">5%</span><div class="no">第六讲　30min</div><div class="t">酒店分级分类</div><div class="d">分级决定投标资格与限价</div></div>
+      <div class="tk"><span class="w p5">5%</span><div class="no">第七讲　60min</div><div class="t">限制性功能本地化</div><div class="d">用稀缺性做溢价，不靠打折</div></div>
+      <div class="tk"><span class="w p5">考核</span><div class="no">第八讲　30min</div><div class="t">落地路线图</div><div class="d">90／180／365 天责任到人</div></div>
+    </div>
+  </div>
+
+  <div class="band" style="padding:12px 15px">
+    <div class="bh"><span class="n">四　未来发展方向</span><span class="d">从"政务招待所"到"都江堰目的地品牌"</span><span class="sp"></span></div>
+    <div class="opp">
+      <div class="h">战略机会　入境客：全市最大增量</div>
+      <div class="g">
+        <div>都江堰重点景区接待入境游客　<b>49.8 万人次</b>（2025）</div>
+        <div>住宿业登记境外人员　<b>22.1 万人次</b>（两年 +55.6%）</div>
+        <div>青城山—都江堰境外游客　<b>+55.68%</b>（2026 H1）</div>
+        <div>基础设施　<b>41 种货币结算</b>、300 余台外卡 POS</div>
+      </div>
+    </div>
+    <div class="goal">
+      <div class="gl"><div class="f">出租率</div><div class="v">38.47% → 60%+</div><div class="d">区域 55–65%，差距 30pp</div></div>
+      <div class="gl"><div class="f">价格段</div><div class="v">266.80 → 350–450</div><div class="d">区域中端均价，ADR +60–100%</div></div>
+      <div class="gl"><div class="f">对标基准</div><div class="v">4–5 星中端 76–80%</div><div class="d">不是对标 5 星 65%</div></div>
+    </div>
+    <div class="end">
+      <b>结业标准：</b>笔试 ≥ 80 分　＋　提交《本岗位 90 天行动清单》一份<br>
+      <b>授课形式：</b>讲授 60%　＋　案例 20%　＋　分组练习 20%　　<b>教学目标：</b>让每位岗位知道自己在 90 天内做什么、做到什么数
+    </div>
+  </div>
+</div>
+
+<div class="foot">
+  <div>数据口径：2026-01-01 至 10-24（297 天）平台直接读取；区域与全国对标见培训手册 v5.1 R1 锚点校准版（2026-10-25）。<br>来源：国堰宾馆营销实战标准培训课件 v1.0（2026-10-25）· 深度营销进阶培训手册 v5.1（2026-10-25）· 集团 1–8 月财务报表</div>
+  <div class="r">安逸酒店集团产业发展部<br>都江堰国堰宾馆文创改造项目　2026 年 10 月</div>
+</div>
+
+</div></body></html>

@@ -1,0 +1,167 @@
+{
+  "title": "工作汇报 PPT",
+  "total_slides": 10,
+  "style_preset": "corporate_pro",
+  "style_goal": "面向「直属上级与跨部门负责人」的工作汇报演示",
+  "image_provider": "runninghub_g31",
+  "resolution": "4k",
+  "aspect_ratio": "16:9",
+  "brief": {
+    "total_slides": 10,
+    "style_preset": "corporate_pro",
+    "audience": {
+      "who": "直属上级与跨部门负责人",
+      "knows": "本季度的业务盘子与日常经营数据",
+      "wants": "确认本季度执行是否到位、下季度资源该往哪投",
+      "action": "当场同意或调整下季度的资源分配方案"
+    },
+    "required_sections": [
+      {
+        "name": "结论先行",
+        "conclusion": "本季度整体达标，但增长集中在两个门店",
+        "slides": 1
+      },
+      {
+        "name": "核心数据",
+        "conclusion": "营收同比 +18%，其中 62% 来自两家标杆店",
+        "slides": 2
+      },
+      {
+        "name": "增长拆解",
+        "conclusion": "增量来自房价而非入住率，出租率反而下滑 3pp",
+        "slides": 2
+      },
+      {
+        "name": "问题定位",
+        "conclusion": "出租率下滑集中在新改造的 6 家店",
+        "slides": 2
+      },
+      {
+        "name": "行动建议",
+        "conclusion": "6 家店进入二次调优，两家标杆店输出 SOP",
+        "slides": 3
+      }
+    ],
+    "data_sources": [
+      {
+        "type": "internal",
+        "where": "本季度门店经营台账 (Word/Excel)",
+        "confidence": "🟢🟢 一手"
+      },
+      {
+        "type": "internal",
+        "where": "去年同期同口径数据",
+        "confidence": "🟢🟢 一手"
+      }
+    ],
+    "explicit_constraints": [
+      "不出现个人绩效排名",
+      "同比与环比口径必须标注",
+      "所有对比用同口径"
+    ],
+    "success_check": "听众能复述'增长来自哪两家、问题出在哪六家、下季度先动哪里'",
+    "scenario": "工作汇报",
+    "kimi_reference_prompt": "我把这季度门店销售数据转成word文档转成10页PPT，商业风格，突出增长趋势"
+  },
+  "slides": [
+    {
+      "slide_number": 1,
+      "page_type": "cover",
+      "page_goal": "开场给结论, 不给目录",
+      "content": "结论先行",
+      "style_preset": "corporate_pro",
+      "text_density": "medium",
+      "note": "TODO: 补 approved_text_lines / prompt_override"
+    },
+    {
+      "slide_number": 2,
+      "page_type": "dashboard",
+      "page_goal": "3-4 个关键指标卡 + 同比",
+      "content": "核心数据总览",
+      "style_preset": "corporate_pro",
+      "text_density": "medium",
+      "note": "TODO: 补 approved_text_lines / prompt_override"
+    },
+    {
+      "slide_number": 3,
+      "page_type": "chart",
+      "page_goal": "API 改的第3页结论",
+      "content": "增长拆解",
+      "style_preset": "corporate_pro",
+      "text_density": "medium",
+      "note": "TODO: 补 approved_text_lines / prompt_override",
+      "approved_text_lines": [
+        "API标题",
+        "API要点A"
+      ]
+    },
+    {
+      "slide_number": 4,
+      "page_type": "comparison",
+      "page_goal": "改造店 vs 未改造店",
+      "content": "新老店对比",
+      "style_preset": "corporate_pro",
+      "text_density": "medium",
+      "note": "TODO: 补 approved_text_lines / prompt_override"
+    },
+    {
+      "slide_number": 5,
+      "page_type": "diagnostic",
+      "page_goal": "修改后的新结论: 增长集中在两家标杆店",
+      "content": "问题定位",
+      "style_preset": "corporate_pro",
+      "text_density": "medium",
+      "note": "TODO: 补 approved_text_lines / prompt_override",
+      "approved_text_lines": [
+        "修改后的标题",
+        "新的要点A",
+        "新的要点B"
+      ]
+    },
+    {
+      "slide_number": 6,
+      "page_type": "path",
+      "page_goal": "二次调优三步走",
+      "content": "行动路径",
+      "style_preset": "corporate_pro",
+      "text_density": "medium",
+      "note": "TODO: 补 approved_text_lines / prompt_override"
+    },
+    {
+      "slide_number": 7,
+      "page_type": "cards",
+      "page_goal": "两家标杆店的四条经验",
+      "content": "标杆 SOP 输出",
+      "style_preset": "corporate_pro",
+      "text_density": "medium",
+      "note": "TODO: 补 approved_text_lines / prompt_override"
+    },
+    {
+      "slide_number": 8,
+      "page_type": "data",
+      "page_goal": "下季度资源投向",
+      "content": "资源分配建议",
+      "style_preset": "corporate_pro",
+      "text_density": "medium",
+      "note": "TODO: 补 approved_text_lines / prompt_override"
+    },
+    {
+      "slide_number": 9,
+      "page_type": "cards",
+      "page_goal": "三个风险 + 对应预案",
+      "content": "风险与预案",
+      "style_preset": "corporate_pro",
+      "text_density": "medium",
+      "note": "TODO: 补 approved_text_lines / prompt_override"
+    },
+    {
+      "slide_number": 10,
+      "page_type": "conclusion",
+      "page_goal": "要什么决策",
+      "content": "收尾",
+      "style_preset": "corporate_pro",
+      "text_density": "medium",
+      "note": "TODO: 补 approved_text_lines / prompt_override"
+    }
+  ]
+}

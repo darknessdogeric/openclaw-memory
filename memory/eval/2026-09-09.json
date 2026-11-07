@@ -1,0 +1,51 @@
+{
+  "date": "2026-09-09",
+  "task": "Entity Extractor 实体抽取 · 每日 21:30",
+  "trigger_time": "2026-09-09T21:30:00+08:00",
+  "execution_time": "2026-09-09T21:33:22+08:00",
+  "trigger_delay_min": 3,
+  "model": "minimax/MiniMax-M3",
+  "overall_score": "8.5/10",
+  "input_files_found": 1,
+  "input_file_used": "memory/2026-09-07.md",
+  "scan_strategy": "today → 0 files, fallback --days 3 → 1 file (2026-09-07.md)",
+  "new_entities": 20,
+  "new_relations": 0,
+  "deliverables": [
+    "toolbox/.tmp/entities-2026-09-09.md (full extraction report)",
+    "memory/ontology/graph.jsonl (20 entity entries appended)",
+    "memory/ontology/relations-trend.md (updated with cumulative counts)",
+    "memory/eric-4-projects-dashboard.md (3 projects marked 今日提及)",
+    "obsidian-vault/50-外部接入/cron-outputs/2026-09/21-33-Entity-Extractor-实体抽取.md"
+  ],
+  "graph_jsonl_writes": 20,
+  "relations_trend_writes": 1,
+  "eric_dashboard_writes": 1,
+  "obsidian_push": "completed",
+  "obsidian_path": "obsidian-vault/50-外部接入/cron-outputs/2026-09/21-33-Entity-Extractor-实体抽取.md",
+  "entities_breakdown": {
+    "Person": 2,
+    "Company": 7,
+    "Project": 4,
+    "Event": 2,
+    "Place": 3,
+    "Tool": 3
+  },
+  "key_insights": [
+    "今日 2026-09-09.md daily note 不存在 → fallback 到 --days 3 命中 2026-09-07.md",
+    "Eric 连续 2 天未写 daily note（2026-09-08.md 0 字节，2026-09-09.md 缺失）→ 抽取输入面收窄",
+    "2026-09-07.md 内容偏 dashboard/heartbeat 输出，缺主谓关系句 → 0 关系抽取",
+    "20 实体覆盖 AHL/医养/R66/R60/党委会 等核心 schema，关系网络扩展点已就位",
+    "上午 09:33 的 off-schedule 触发（timezone 漂移）已存为 anomaly，本次 21:33 正点执行正常"
+  ],
+  "macro_focus": "world monitor · 持续后台监控，无新外部触发",
+  "anomalies": [
+    "今日 daily note 缺失（连续 2 天）",
+    "2026-09-08.md 文件存在但为 0 字节",
+    "relations 抽取为 0（输入文本格式偏 dashboard 摘要，无主谓结构）"
+  ],
+  "recommendations": [
+    "daily note 缺失需要 Eric 提示，但 cron 不主动打扰（遵守 R294 / 不污染 dashboard）",
+    "entity_extractor 可增加 dashboard 类文本的关系模式（mention co-occurrence）"
+  ]
+}

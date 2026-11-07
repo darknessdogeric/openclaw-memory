@@ -1,0 +1,45 @@
+{
+  "date": "2026-08-19",
+  "session": "Entity Extractor 08:02 (anomalous early cron fire)",
+  "trigger": "cron:0eced1e9-8729-47d8-b8d6-34eff13ed780 (scheduled 21:30 daily, fired 08:02)",
+  "r60_11_extraction": {
+    "mode": "--days 2 (catch 8/18 because 8/19 daily note absent)",
+    "files_scanned": ["2026-08-18.md"],
+    "new_entities": 11,
+    "new_relations": 0,
+    "entities_listed": [
+      "Person:Eric",
+      "Person:B166ER",
+      "Company:安逸酒店集团",
+      "Company:AHL",
+      "Project:AHL",
+      "Project:深度自迭代",
+      "Project:R66监控",
+      "Project:R60规则",
+      "Event:入职",
+      "Place:四川",
+      "Tool:OpenClaw"
+    ],
+    "graph_total_lines": 820,
+    "relations_total": 16
+  },
+  "r65_r258_r69_compliance": {
+    "status": "DORMANT sustained (cron session)",
+    "decision": "no push_queue.py invocation; Obsidian write = sedimentation (allowed), no proactive notification to Eric",
+    "obsidian_push": "executed via cron_to_obsidian (R60-11 mandatory channel)"
+  },
+  "self_assessment": {
+    "anomaly_detected": "cron fired at 08:02 instead of 21:30 (12h+ early); possible missed-run replay or system test",
+    "adaptation": "switched from 'today' to '--days 2' to capture 8/18 content since 8/19 note absent",
+    "completeness": "R60-11 sedimentation 5/5 steps executed (graph/trend/dashboard/eval/obsidian)"
+  },
+  "key_observations": {
+    "8_18_content_density": "very high (v1.3 strategy upgrade + 2 meeting absorptions + 钟华 correction + R282 draft + Jinjiang MOU T-0)",
+    "8_19_signal": "Jinjiang MOU day (T-0, P0, Eric sovereign on webchat; cron does NOT push)",
+    "extraction_gaps": "many 8/18 entities (钟华/平安/平安产险/国堰宾馆/樊登/陈保刚/董事长) not in pattern dictionary; manual extraction may be needed"
+  },
+  "pending_questions": [
+    "Pattern dictionary should expand to cover 8/18新词: 钟华/平安/平安产险/国堰宾馆/樊登/中华/于秀/钟华/陈保刚",
+    "Cron schedule review: 08:02 fire suggests missed 8/18 21:30 run; investigate why"
+  ]
+}

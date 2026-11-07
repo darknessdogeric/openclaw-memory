@@ -1,0 +1,105 @@
+{
+ "props": {
+  "pageProps": {
+   "initialState": {
+    "fixedTop": false,
+    "active": "",
+    "history": [],
+    "historyDestination": [],
+    "suggestList": [],
+    "loading": true,
+    "searchKeywords": "安逸 花园宾馆 成都 春熙路",
+    "searchFocus": false,
+    "searchList": [],
+    "searchGeoList": [],
+    "total": 0,
+    "searchType": "",
+    "hasSugResults": false,
+    "geoKeywords": "全球范围",
+    "includeDataTypes": [],
+    "lastkeywords": "安逸 花园宾馆 成都 春熙路",
+    "positionGeo": {
+     "lat": "",
+     "lon": ""
+    },
+    "searchGeoId": "",
+    "showSearch": false,
+    "showPagi": true
+   },
+   "key": "/Search?q=%E5%AE%89%E9%80%B8%20%E8%8A%B1%E5%9B%AD%E5%AE%BE%E9%A6%86%20%E6%88%90%E9%83%BD%20%E6%98%A5%E7%86%99%E8%B7%AF",
+   "pathname": "/searchList",
+   "query": {
+    "renderPlatform": "",
+    "seo": 1,
+    "envObj": {
+     "env": "prod",
+     "isCtrip": false,
+     "pro": true,
+     "dev": false,
+     "currentUrl": "https://www.google.com/",
+     "routerParams": [
+      "Search"
+     ],
+     "routerObj": {},
+     "plat": "unknow",
+     "phoneModel": "",
+     "isSupportWebP": true,
+     "configData": null
+    },
+    "q": "安逸 花园宾馆 成都 春熙路"
+   },
+   "asPath": "/Search?q=%E5%AE%89%E9%80%B8%20%E8%8A%B1%E5%9B%AD%E5%AE%BE%E9%A6%86%20%E6%88%90%E9%83%BD%20%E6%98%A5%E7%86%99%E8%B7%AF",
+   "pageId": 10650092370,
+   "realPath": "/Search?q=%E5%AE%89%E9%80%B8%20%E8%8A%B1%E5%9B%AD%E5%AE%BE%E9%A6%86%20%E6%88%90%E9%83%BD%20%E6%98%A5%E7%86%99%E8%B7%AF"
+  }
+ },
+ "page": "/searchList",
+ "query": {
+  "renderPlatform": "",
+  "seo": 1,
+  "envObj": {
+   "env": "prod",
+   "isCtrip": false,
+   "pro": true,
+   "dev": false,
+   "currentUrl": "https://www.google.com/",
+   "routerParams": [
+    "Search"
+   ],
+   "routerObj": {},
+   "plat": "unknow",
+   "phoneModel": "",
+   "isSupportWebP": true,
+   "configData": null
+  },
+  "q": "安逸 花园宾馆 成都 春熙路"
+ },
+ "buildId": "xxx",
+ "assetPrefix": "https://bd-s.tripcdn.cn/ares/NFES/100029210/1793069392456",
+ "runtimeConfig": {
+  "appPrefix": "",
+  "routerConfig": [],
+  "AppID": "100029210",
+  "useAres2": true
+ },
+ "isFallback": false,
+ "customServer": true,
+ "gip": true,
+ "isSSR": true,
+ "isForceRender": false,
+ "isServerGetData": true,
+ "__pd": "{\"pd\":{\"r\":4,\"_d\":0,\"_p\":4}}",
+ "version": "6.18.1",
+ "i18nCaptchaURL": "https://bd-s.tripcdn.cn/modules/infosec/jigsawCaptcha/jigsaw-captcha.min.70c6e6893d555dd045d1a4110c14953a.macro.js",
+ "__nfesGlobalDatas": {
+  "nfesSharkData": {
+   "key.nfes.errorPage.tip": "Failed to load. Please try again later.",
+   "key.nfes.errorPage.retry": "Retry",
+   "key.nfes.errorPage.back": "Back"
+  }
+ },
+ "company": "",
+ "fullUrl": "http://tapc.you.ctripcorp.com/Search?q=%E5%AE%89%E9%80%B8%20%E8%8A%B1%E5%9B%AD%E5%AE%BE%E9%A6%86%20%E6%88%90%E9%83%BD%20%E6%98%A5%E7%86%99%E8%B7%AF",
+ "isRTL": "",
+ "scriptLoader": []
+}

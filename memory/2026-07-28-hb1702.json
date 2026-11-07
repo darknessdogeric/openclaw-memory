@@ -1,0 +1,43 @@
+﻿{
+    "ts":  "2026-07-28T06:54:00+08:00",
+    "v24SoulAging":  "+483min (持续沉淀中)",
+    "anyiWebchatHoursSinceStart":  "210.08h+",
+    "vaultIndex":  "healthy (642 files / \u003c1s queries)",
+    "thisSessionMode":  "DORMANT",
+    "noPushReason":  "quiet zone ACTIVE 7h54min, Eric silent 281.6h+ this session, penta-constraint holds",
+    "pentaConstraint":  "5/5 holds firm",
+    "memorySearch":  "disabled (known emb mismatch)",
+    "dDayHoursPostMeeting":  "95.05h",
+    "tokenGuard":  "stable",
+    "anyiSinceTime":  "2026-07-19T12:33:00+08:00",
+    "suppressionLayers":  [
+                              "R-B",
+                              "R12",
+                              "R-CANDIDATE-T2",
+                              "R256",
+                              "R257",
+                              "R258",
+                              "R260",
+                              "R261"
+                          ],
+    "t0PublicityCutoffHoursPast":  "248.05h past",
+    "hbCount":  "1701 -\u003e 1702",
+    "cadence":  "Tuesday early-morning Token Guard cadence (R012 minimal mode)",
+    "dayOfWeek":  "D+12 Tue early-morning",
+    "nextCadence":  "per Token Guard cadence (~5-10min) or Eric first-contact -- quiet zone exit 08:00 (~1h06min away)",
+    "gongshiDay":  "Day 4/5 ACTIVE (Tue = working day)",
+    "quietZoneActive":  "06:54, 7h54min past 23:00",
+    "gap":  "+5min",
+    "post_t0_null_count":  342,
+    "hbNumber":  1702,
+    "r13":  "sustained",
+    "standingBy":  [
+                       "5 P0 V2.4 提炼决策",
+                       "Eric 6 阶 AHL 锚点 → AHL-Database 写入确认",
+                       "MEMORY.md 6 锚点验证 (待 Eric wake)"
+                   ],
+    "oilCExpiredHoursPast":  "57.05h",
+    "ericSilentThisSessionHours":  "281.6h+",
+    "decision":  "HEARTBEAT_OK -- sustain DORMANT protocol, minimal token tick",
+    "lastContactTime":  "2026-07-16T13:16:00+08:00"
+}

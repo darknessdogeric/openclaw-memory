@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{width:1080px;background:#F5F1E9;color:#241F1A;
+ font-family:"Microsoft YaHei","Source Han Sans SC","Noto Sans CJK SC","SimHei",sans-serif;
+ -webkit-font-smoothing:antialiased}
+.serif{font-family:"Source Han Serif SC","Noto Serif CJK SC","STZhongsong","SimSun",serif}
+.wrap{width:1080px;padding:0 0 40px}
+
+/* 页眉 */
+.hd{background:#1C1B19;color:#F2EDE3;padding:44px 46px 38px;position:relative;overflow:hidden}
+.hd .wv{position:absolute;right:-60px;top:-70px;width:620px;height:340px;opacity:.11}
+.lab{display:inline-block;background:#B08D57;color:#1C1B19;font-size:22px;font-weight:bold;padding:6px 16px;letter-spacing:4px}
+.hd h1{font-size:50px;font-weight:700;letter-spacing:3px;margin:20px 0 8px}
+.hd .sub{font-size:24px;color:#B3A794;letter-spacing:1px}
+.hd .kw{margin-top:26px;padding-top:22px;border-top:1px solid rgba(176,141,87,.4)}
+.hd .kw .q{font-size:30px;line-height:1.55;color:#F5F1E8;letter-spacing:.5px}
+.hd .kw .q b{color:#D9B979}
+.hd .meta{margin-top:20px;font-size:21px;color:#8E8371;letter-spacing:.5px}
+
+/* 通用节 */
+.sec{padding:40px 46px 6px}
+.sh{display:flex;align-items:center;gap:16px;margin-bottom:24px}
+.sh .no{width:62px;height:62px;background:#1C1B19;color:#D9B979;font-size:30px;font-weight:bold;display:flex;align-items:center;justify-content:center;flex:0 0 auto}
+.sh .tx .t{font-size:40px;font-weight:bold;letter-spacing:2px;line-height:1.15}
+.sh .tx .d{font-size:21px;color:#7C7367;margin-top:3px;letter-spacing:.5px}
+.rule{height:3px;background:#B08D57;margin:18px 0 22px}
+
+/* 数据块 */
+.nums{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:16px}
+.nm{background:#FFF;border:1px solid #E4DACB;padding:20px 22px}
+.nm .v{font-size:52px;font-weight:bold;line-height:1;color:#1C1B19;letter-spacing:-1px}
+.nm .v small{font-size:24px;font-weight:normal;color:#6B6357;margin-left:4px}
+.nm .k{font-size:22px;color:#7C7367;margin-top:8px}
+.nm.wide{grid-column:1/3}
+.nm.acc{background:#FBF4EE;border-color:#D9C3A4}
+.nm.acc .v{color:#8A5A33}
+
+.mix{display:flex;height:56px;margin:8px 0 6px;border-radius:3px;overflow:hidden;font-size:21px;color:#fff}
+.mix div{display:flex;align-items:center;justify-content:center;white-space:nowrap}
+.mxl{font-size:20px;color:#6B6357;margin-bottom:20px}
+
+/* 条形 */
+.bar{margin-bottom:15px}
+.bar .t{display:flex;justify-content:space-between;font-size:22px;margin-bottom:5px}
+.bar .t b{font-weight:bold;color:#2E6E7E}
+.bar .t span{color:#6B6357;font-size:21px}
+.bar .bg{height:17px;background:#EAE3D6}
+.bar .bf{height:17px;background:#2E6E7E}
+.bar.self .bf{background:#B08D57}
+.bar.self .t b{color:#8A5A33}
+
+/* 表格 */
+table{width:100%;border-collapse:collapse;font-size:22px;margin-bottom:18px}
+th{background:#1C1B19;color:#F2EDE3;font-weight:normal;text-align:left;padding:13px 14px;font-size:21px}
+td{padding:13px 14px;border-bottom:1px solid #E4DACB;color:#3A352E}
+td b{color:#1C1B19}
+td .up{color:#4C7A5C;font-weight:bold}
+td .dn{color:#B0492F;font-weight:bold}
+
+/* 问题卡 */
+.iss{background:#FFF;border:1px solid #E4DACB;border-left:8px solid #8A5A33;padding:22px 24px;margin-bottom:16px}
+.iss .t{font-size:29px;font-weight:bold;color:#1C1B19;margin-bottom:4px}
+.iss .t span{color:#8A5A33}
+.iss .d{font-size:23px;line-height:1.62;color:#4A443C}
+.iss .d b{color:#1C1B19}
+.iss .d em{font-style:normal;color:#B0492F;font-weight:bold}
+
+/* 结论条 */
+.concl{background:#1C1B19;color:#F2EDE3;padding:24px 26px;margin-top:8px;font-size:24px;line-height:1.62}
+.concl b{color:#D9B979}
+
+/* 定位 */
+.pos{background:#FFF;border:1px solid #E4DACB;padding:26px 28px;margin-bottom:18px}
+.pos .sh1{font-size:29px;font-weight:bold;color:#1C1B19;margin-bottom:6px}
+.pos .sh2{font-size:23px;color:#2E6E7E;margin-bottom:14px;letter-spacing:.5px}
+.pos .q3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px}
+.pos .q3 div{background:#F7F3EA;padding:16px 14px;font-size:22px;line-height:1.45;color:#4A443C}
+.pos .q3 div b{display:block;color:#1C1B19;font-size:23px;margin-bottom:4px}
+.pos .q3 div s{text-decoration:none;color:#A79C8B}
+
+.seg{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:18px}
+.seg .c{padding:18px 20px}
+.seg .c .h{font-size:26px;font-weight:bold;margin-bottom:4px}
+.seg .c .p{font-size:22px;line-height:1.5;color:#4A443C}
+.seg .c .d{font-size:20px;color:#7C7367;margin-top:5px}
+.c.shou{background:#F1F5F4;border:1px solid #CFE0DA}
+.c.shou .h{color:#2E6E7E}
+.c.gong{background:#F4F7F2;border:1px solid #CFE0D0}
+.c.gong .h{color:#4C7A5C}
+.c.yang{background:#FBF4EE;border:1px solid #D9C3A4}
+.c.yang .h{color:#8A5A33}
+.c.la{background:#F4F1F8;border:1px solid #D6CCE6}
+.c.la .h{color:#5B4A7D}
+
+/* 动作卡 */
+.act{background:#FFF;border:2px solid #1C1B19;margin-bottom:18px}
+.act .ah{background:#1C1B19;color:#F2EDE3;padding:16px 24px;display:flex;align-items:center;gap:14px}
+.act .ah .n{font-size:26px;font-weight:bold;color:#D9B979;letter-spacing:2px}
+.act .ah .t{font-size:29px;font-weight:bold;letter-spacing:1px}
+.act .ab{padding:22px 24px}
+.act .ab p{font-size:23px;line-height:1.62;color:#4A443C;margin-bottom:12px}
+.act .ab p:last-child{margin-bottom:0}
+.act .ab p b{color:#1C1B19}
+.act .ab .lab2{font-size:21px;color:#8A5A33;font-weight:bold;margin-right:8px}
+.kpi{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:4px}
+.kpi div{background:#F7F3EA;padding:13px 15px;font-size:22px;color:#4A443C;line-height:1.45}
+.kpi div b{color:#1C1B19;display:block;font-size:23px}
+
+.tl{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:12px;margin-top:6px}
+.tl div{background:#FFF;border:1px solid #E4DACB;padding:16px 14px}
+.tl .d{font-size:21px;color:#B08D57;font-weight:bold;letter-spacing:1px;margin-bottom:4px}
+.tl .t{font-size:23px;font-weight:bold;color:#1C1B19;margin-bottom:4px}
+.tl .s{font-size:20px;color:#6B6357;line-height:1.45}
+
+.ft{margin:26px 46px 0;padding-top:22px;border-top:1px solid #D8CFC0;font-size:19px;color:#8A8072;line-height:1.6}
+.ft b{color:#1C1B19}
+</style></head><body><div class="wrap">
+
+<div class="hd">
+  <svg class="wv" viewBox="0 0 640 340" fill="none">
+    <path d="M0 130 C80 95 160 160 240 125 S400 60 480 105 560 160 640 125" stroke="#B08D57" stroke-width="1.4"/>
+    <path d="M0 165 C80 130 160 195 240 160 S400 95 480 140 560 195 640 160" stroke="#B08D57" stroke-width="1.4"/>
+    <path d="M0 200 C80 165 160 230 240 195 S400 130 480 175 560 230 640 195" stroke="#B08D57" stroke-width="1.4"/>
+    <path d="M0 235 C80 200 160 265 240 230 S400 165 480 210 560 265 640 230" stroke="#B08D57" stroke-width="1.4"/>
+    <path d="M0 270 C80 235 160 300 240 265 S400 200 480 245 560 300 640 265" stroke="#B08D57" stroke-width="1.4"/>
+  </svg>
+  <span class="lab">董事长汇报</span>
+  <h1 class="serif">都江堰国堰宾馆</h1>
+  <div class="sub" style="font-size:30px;color:#D9B979;margin-bottom:6px">现状判断与下一步动作</div>
+  <div class="sub">安逸酒店集团产业发展部 · 2026 年 10 月 30 日</div>
+  <div class="kw">
+    <div class="q serif">国堰<b>不是逆势下滑，是两年原地踏步</b>：RevPAR 同比 +2.94%，优于锦江中端 −1.02%、全服务 −1.94%、首旅 −6.10%。<br>破局点不在"装修"，在<b>渠道、展示与收益管理</b>——这三样都不在改造清单里。</div>
+  </div>
+  <div class="meta">数据口径：2026-01-01 至 10-24（297 天）平台实测；区域与全国对标见培训手册 v5.1 R1 锚点校准版</div>
+</div>
+
+<div class="sec">
+  <div class="sh"><div class="no">一</div><div class="tx"><div class="t">国堰的情况</div><div class="d">先把数字和位置摆清楚</div></div></div>
+  <div class="rule"></div>
+  <div class="nums">
+    <div class="nm"><div class="v">1,296<small>万元</small></div><div class="k">总营收（297 天）</div></div>
+    <div class="nm"><div class="v">266.80<small>元</small></div><div class="k">平均房价 ADR</div></div>
+    <div class="nm acc"><div class="v">38.47<small>%</small></div><div class="k">出租率 OCC</div></div>
+    <div class="nm acc"><div class="v">102.63<small>元</small></div><div class="k">单店 RevPAR</div></div>
+    <div class="nm wide"><div class="v" style="font-size:44px">44.66<small>%</small></div><div class="k">非房收入占比</div></div>
+  </div>
+  <div class="mix">
+    <div style="width:55.34%;background:#1C1B19">客房 55.34%</div>
+    <div style="width:37.26%;background:#2E6E7E">餐饮 37.26%</div>
+    <div style="width:5.53%;background:#4C7A5C">会议</div>
+    <div style="width:1.87%;background:#B08D57"></div>
+  </div>
+  <div class="mxl">收入结构：客房 55.34% ｜ 餐饮 37.26% ｜ 会议 5.53% ｜ 其他 1.88%</div>
+
+  <table>
+    <tr><th style="width:44%">客源与渠道结构（平台口径）</th><th>占比</th></tr>
+    <tr><td>中介（订房代理 / OTA 供应商）</td><td><b>40.45%</b></td></tr>
+    <tr><td>协议（政务 + 商务）</td><td><b>31.36%</b></td></tr>
+    <tr><td>休闲度假</td><td><b>0.01%–0.02%</b></td></tr>
+  </table>
+
+  <table>
+    <tr><th style="width:40%">渠道同比（日均口径）</th><th>营收占比</th><th>同比</th><th>ADR</th></tr>
+    <tr><td>OTA</td><td>43.5%</td><td class="up">+156.7%</td><td>268.46</td></tr>
+    <tr><td>上门散客</td><td>23.3%</td><td class="up">+400.6%</td><td>310.67</td></tr>
+    <tr><td>酒店协议客户</td><td>19.0%</td><td class="dn">−83.7%</td><td>308.89</td></tr>
+    <tr><td>旅游团</td><td>14.2%</td><td class="dn">−52.9%</td><td>260.00</td></tr>
+  </table>
+
+  <div style="font-size:24px;font-weight:bold;color:#1C1B19;margin:26px 0 12px">RevPAR 对标：国堰的位置</div>
+  <div class="bar self"><div class="t"><b>国堰（YTD）</b><span>102.63　ADR 266.80　OCC 38.47%</span></div><div class="bg"><div class="bf" style="width:31.7%"></div></div></div>
+  <div class="bar"><div class="t"><b>都江堰区域 4–5 星</b><span>247–324　OCC 65–72%</span></div><div class="bg"><div class="bf" style="width:100%"></div></div></div>
+  <div class="bar"><div class="t"><b>华住中国 Q2</b><span>238　OCC 79.8%</span></div><div class="bg"><div class="bf" style="width:73.5%"></div></div></div>
+  <div class="bar"><div class="t"><b>锦江境内中端</b><span>159.09　低 35.5%</span></div><div class="bg"><div class="bf" style="width:49.1%"></div></div></div>
+  <div class="bar"><div class="t"><b>锦江境内经济型</b><span>99.80　国堰高 2.8%</span></div><div class="bg"><div class="bf" style="width:30.8%"></div></div></div>
+
+  <div class="concl" style="margin-top:22px">门市价 <b>¥488</b>　实际成交 <b>¥266.80</b>　成交/门市 <b>54.7%</b>（折扣深度约 45%）<br>全国尺度确认：<b>挂四星，RevPAR 表现对应经济型</b>，仅为都江堰区域 4–5 星的 32%–42%；且 ADR 比锦江有限服务型还高 16.3%——<b>缺的是量，不是价</b>。</div>
+</div>
+
+<div class="sec">
+  <div class="sh"><div class="no">二</div><div class="tx"><div class="t">国堰的真实问题</div><div class="d">四个问题，都不在改造清单里</div></div></div>
+  <div class="rule"></div>
+
+  <div class="iss">
+    <div class="t"><span>问题一</span>　渠道客源不够</div>
+    <div class="d">中介占 <b>40.45%</b> 压顶，佣金直接吃掉利润；协议盘在塌（<em>−83.7%</em>）、旅游团在塌（<em>−52.9%</em>）。补上来的 OTA（<b>+156.7%</b>）与上门散客（<b>+400.6%</b>）是<b>更高佣金、更低忠诚度</b>的流量——集团要的是量，集团拿到的是佣金。</div>
+  </div>
+  <div class="iss">
+    <div class="t"><span>问题二</span>　对外展示不够，新媒体阵地完全缺失</div>
+    <div class="d">平台休闲度假客源仅 <b>0.01%–0.02%</b>，几乎为零；抖音、小红书、美团点评<b>没有阵地、没有内容资产、没有私域沉淀</b>。结果是：客人知道都江堰，不知道国堰；我们花 3,600 万把产品做出来，却<b>没有任何自然流量入口</b>把它送出去。</div>
+  </div>
+  <div class="iss">
+    <div class="t"><span>问题三</span>　收益管理短板，价格体系没有长出能力</div>
+    <div class="d">挂牌 488、成交 266.80，<b>折让 45%</b>；全年 ADR 低于区域 380–450 约 30%–50%。但 9/1–10/24 已做到 <b>450.9</b>，是区域价的 100%–119%——<b>说明旺季能卖高价，能力却留在个人手里、没有沉淀成机制</b>。没有日常的房态与价格决策规则，收益就随行就市。</div>
+  </div>
+  <div class="iss">
+    <div class="t"><span>问题四</span>　身份与产品错位</div>
+    <div class="d">挂四星，RevPAR 却<b>高于锦江经济型 2.8%</b>；挂"度假酒店"的招牌，休闲度假客源<b>几乎为零</b>。产品没对准客群，客群也没被产品吸引——这是最贵的错位：投入花在了硬件上，回报却压在渠道和展示上。</div>
+  </div>
+
+  <div class="concl">这四条合起来是一句话：<b>国堰不是产品不行，是产品没有被"接住"。</b>渠道不主动、展示不主动、定价不主动、预订不主动——四个"不主动"把一个区位一流、四星挂牌的存量资产，做成了原地踏步。</div>
+</div>
+
+<div class="sec">
+  <div class="sh"><div class="no">三</div><div class="tx"><div class="t">国堰的市场定位</div><div class="d">从"政务招待所"到"都江堰目的地品牌"</div></div></div>
+  <div class="rule"></div>
+
+  <div class="pos">
+    <div class="sh1">三种差异化</div>
+    <div class="sh2">竞争格局：周边酒店都在打同一张牌（江景、温泉、亲子房），缺一个有文化主张、有生活方式态度的品牌占位</div>
+    <div class="q3">
+      <div><b>我住在都江堰</b><s>→ 我住进了都江堰的安逸里</s></div>
+      <div><b>卖房间和江景</b><s>→ 卖四川人最认同的生活状态</s></div>
+      <div><b>一家酒店</b><s>→ 目的地生活方式</s></div>
+    </div>
+  </div>
+
+  <div style="font-size:24px;font-weight:bold;color:#1C1B19;margin:24px 0 12px">四盘客群　守 · 攻 · 养 · 拉</div>
+  <div class="seg">
+    <div class="c shou"><div class="h">守　基本盘</div><div class="p">政务 / 党校</div><div class="d">体面、专业、有文化记忆点；国堰主场、规范会务。已有国资委党校三个教学点基础</div></div>
+    <div class="c gong"><div class="h">攻　增长盘</div><div class="p">亲子研学</div><div class="d">孩子能学、家长能躺；少年国学院课程；研学季季大展承接</div></div>
+    <div class="c yang"><div class="h">养　留存盘</div><div class="p">康养度假</div><div class="d">安静、养身、长住；图艾康养 3–7 天山居套餐；汤池 11 个</div></div>
+    <div class="c la"><div class="h">拉　潜力盘</div><div class="p">年轻文创</div><div class="d">好拍、好逛；线上种草驱动；有幸遇见文创零售与本地生活</div></div>
+  </div>
+
+  <div class="pos">
+    <div class="sh1">对标基准与战略位置</div>
+    <div class="sh2">按四星同期基准校准，不按五星幻想</div>
+    <div class="q3">
+      <div><b>OCC 76–80%</b><s>对标都江堰 4–5 星中端，不是对标 5 星 65%</s></div>
+      <div><b>ADR 350–450</b><s>价格段上移，对齐区域中端均价</s></div>
+      <div><b>单点突破样板</b><s>基础通用标准＋在地文化定制，复制到省内各地市州国资楼堂馆所</s></div>
+    </div>
+  </div>
+
+  <div class="concl" style="margin-top:18px">定位一句话：<b>国堰不是"都江堰的商务酒店"，是"都江堰的安逸生活方式载体"</b>——以水文化为唯一母题，母品牌统一形象与品质信任，道、养、潮三条主线对应四盘客群。</div>
+</div>
+
+<div class="sec">
+  <div class="sh"><div class="no">四</div><div class="tx"><div class="t">下一步应该做哪些动作</div><div class="d">五个动作，前三个是组织与机制，后两个是渠道与产品</div></div></div>
+  <div class="rule"></div>
+
+  <div class="act">
+    <div class="ah"><span class="n">动作一</span><span class="t">设立专门的渠道管理</span></div>
+    <div class="ab">
+      <p><span class="lab2">设岗</span>新增<b>渠道管理岗</b>，对 OTA、中介、协议、TMC 全渠道负责，并牵头 RFP 与 TMC 对接；不再由前厅、客房兼职代管。</p>
+      <p><span class="lab2">职责</span>渠道结构与<b>佣金红线</b>；价格与库存在渠道间的分配；协议价与团队客户管理；渠道客户档案与复购。</p>
+      <div class="kpi">
+        <div><b>中介占比</b>40.45% → 25%</div>
+        <div><b>协议占比</b>回升，止住 −83.7%</div>
+        <div><b>直销 + TMC</b>成为第四增长极</div>
+        <div><b>综合佣金率</b>逐季下降，纳入考核</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="act">
+    <div class="ah"><span class="n">动作二</span><span class="t">预订岗位可以撤，但预订管理功能与机制必须健全</span></div>
+    <div class="ab">
+      <p><span class="lab2">原则</span><b>撤岗不撤机制。</b>岗位可以精简，但预订的<b>管理功能与规则体系</b>必须保留——否则房态、库存、价格在无人负责的状态下运行，收益管理无从谈起。</p>
+      <p><span class="lab2">必留六项机制</span>① 房态与库存的唯一口径；② 价格与折扣的决策规则；③ 渠道分配与配额；④ 提前期与最小入住；⑤ 协议与团队锁房；⑥ 超售与拒售规则。</p>
+      <p><span class="lab2">落法</span>机制写入<b>系统权限与经营日报</b>，由收益管理岗承接；每一次价格变动可追溯、可复盘、可问责。<b>不留"没人管"。</b></p>
+    </div>
+  </div>
+
+  <div class="act">
+    <div class="ah"><span class="n">动作三</span><span class="t">均价怎么提升，产品怎么打造</span></div>
+    <div class="ab">
+      <p><span class="lab2">定价铁律</span>一切报价、协议价、套餐价<b>锚定 R1 实际 ADR 266.80</b>，不是门市价 488。以门市价为锚的折扣设计全是虚的。</p>
+      <p><span class="lab2">价格路径</span>266.80 → <b>350–450</b>：靠<b>房型结构</b>（主题房、观景房、套房占比）、<b>日历与淡旺季定价</b>、协议价按 R1 重设三件事同时推。</p>
+      <p><span class="lab2">产品路径</span>四盘客群各有一条可售产品线：<b>政务会议与党建套餐</b>／<b>少年国学院亲子研学</b>／<b>图艾 3–7 天康养套餐</b>／<b>有幸遇见文创零售与本地生活</b>——让 ADR 抬升有产品可卖，而不只是有价目表。</p>
+    </div>
+  </div>
+
+  <div class="act">
+    <div class="ah"><span class="n">动作四</span><span class="t">新媒体阵地从 0 到 1</span></div>
+    <div class="ab">
+      <p><span class="lab2">先做三件事</span>抖音本地生活、美团点评、小红书内容矩阵；配合<b>英文点评运营</b>（最低成本的高回报动作，直接接入境客）。</p>
+      <p><span class="lab2">配资源</span>内容排期与达人清单、拍摄与运营预算在集团新媒体矩阵内<b>为国堰单列</b>；考核看<b>内容曝光 → 咨询 → 预订</b>的完整链路，不看播放量。</p>
+      <p><span class="lab2">要结果</span>平台休闲度假客源占比从 0.01%–0.02% 做到<b>看得见的量</b>；让"知道都江堰"的人也知道"国堰"。</p>
+    </div>
+  </div>
+
+  <div class="act">
+    <div class="ah"><span class="n">动作五</span><span class="t">建立收益管理机制，与动作三配套</span></div>
+    <div class="ab">
+      <p><span class="lab2">每日</span>OCC、ADR、RevPAR 与<b>渠道结构</b>复盘，出当日价格与库存动作。</p>
+      <p><span class="lab2">每周</span>滚动调整未来 30 天日历定价与渠道配额，清理折扣过深的渠道。</p>
+      <p><span class="lab2">每月</span>校准产品与价格策略：哪条产品线卖不动、哪个渠道该砍、哪类房型该提价。</p>
+    </div>
+  </div>
+
+  <div style="font-size:24px;font-weight:bold;color:#1C1B19;margin:28px 0 12px">动作节奏：责任到人</div>
+  <div class="tl">
+    <div><div class="d">30 天</div><div class="t">机制与岗位</div><div class="s">渠道管理岗到位；预订六项机制上线；定价铁律宣贯到人</div></div>
+    <div><div class="d">90 天</div><div class="t">渠道结构与价格</div><div class="s">中介占比下降；ADR 站上 300；新媒体三平台开号并跑通一条内容到预订的链路</div></div>
+    <div><div class="d">180 天</div><div class="t">产品与展示</div><div class="s">四条产品线全部可售；四季主题策展落地；品牌与 VI 到位</div></div>
+    <div><div class="d">365 天</div><div class="t">RevPAR 与资产</div><div class="s">ADR 进入 350–450 区间；RevPAR 对标区域 4–5 星中端；样板可复制到地市州</div></div>
+  </div>
+</div>
+
+<div class="ft">
+  <b>数据纪律：</b>同一份数据，区间错判会让所有结论错 12 倍（按 24 天反推需 2,912 间房，不成立）。统一以 297 天平台实测口径为准。<br>
+  <b>来源：</b>国堰宾馆营销实战标准培训课件 v1.0（2026-10-25）· 深度营销进阶培训手册 v5.1 R1 锚点校准版（2026-10-25）· 集团 1–8 月财务报表 · 国堰宾馆改造方案（2026-10-28）<br>
+  <b>提示：</b>渠道管理、预订机制、收益管理三项与新媒体阵地，属运营与组织动作，不在 3,600 万元改造投资范围内，需单列资源与考核。
+</div>
+
+</div></body></html>

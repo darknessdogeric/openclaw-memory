@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><meta charset="UTF-8">
+<title>AI 概念全景 v1.0 (9:16)</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap');
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{
+    width:1080px;height:1920px;
+    font-family:'Noto Sans SC','PingFang SC',sans-serif;
+    background:#F7F3EC;
+    color:#1E3A5F;
+    padding:0;display:flex;flex-direction:column;
+    position:relative;overflow:hidden;
+  }
+  .sec{
+    width:100%;padding:24px 44px;
+    box-sizing:border-box;position:relative;
+    display:flex;flex-direction:column;justify-content:center;gap:8px;
+  }
+  .s1{height:290px;background:linear-gradient(180deg,#F7F3EC 0%,#EFE8DA 100%);padding-top:66px;}
+  .s2{height:340px;background:#F7F3EC;}
+  .s3{height:400px;background:linear-gradient(180deg,#F7F3EC 0%,#F2ECE0 100%);}
+  .s4{height:310px;background:#F7F3EC;}
+  .s5{height:320px;background:linear-gradient(180deg,#F7F3EC 0%,#EFE8DA 100%);}
+  .s6{height:180px;background:#EFE8DA;}
+  .sec-tag{
+    position:absolute;top:8px;left:14px;
+    font-size:12px;color:#8A7A5E;opacity:0.75;
+    letter-spacing:1.6px;font-family:'Courier New',monospace;
+  }
+  .kicker{font-size:20px;color:#C8963E;letter-spacing:5px;font-weight:700;margin-bottom:6px;}
+  h1{font-size:64px;font-weight:900;line-height:1.08;letter-spacing:1px;color:#1E3A5F;margin-bottom:8px;}
+  h1 .hl{color:#C8963E;}
+  h2{font-size:33px;font-weight:800;color:#1E3A5F;margin-bottom:10px;letter-spacing:1px;display:flex;align-items:center;gap:9px;}
+  h2 .num{font-size:14px;font-weight:700;color:#C8963E;background:rgba(200,150,62,0.13);padding:2px 9px;border-radius:5px;letter-spacing:1px;}
+  .sub{font-size:20px;color:#6B5C42;margin-top:6px;line-height:1.35;}
+  b{color:#C8963E;font-weight:700;}
+  /* 概念谱系 2x3 */
+  .g6{display:grid;grid-template-columns:1fr 1fr;gap:8px;width:100%;}
+  .cc{
+    background:rgba(255,255,255,0.8);
+    border:1px solid rgba(200,150,62,0.22);
+    border-radius:9px;padding:10px 12px;
+    box-shadow:0 1px 4px rgba(30,58,95,0.06);
+  }
+  .cc .cn{font-size:17px;font-weight:800;color:#1E3A5F;margin-bottom:2px;display:flex;align-items:baseline;gap:6px;}
+  .cc .cn .cy{font-size:12px;font-weight:700;color:#C8963E;background:rgba(200,150,62,0.12);padding:1px 6px;border-radius:4px;}
+  .cc .cd{font-size:13.5px;color:#6B5C42;line-height:1.32;}
+  .cc.now{border-color:#C8963E;border-width:2px;background:rgba(200,150,62,0.08);}
+  .cc.fut{border-style:dashed;border-color:rgba(200,150,62,0.42);}
+  /* 时间轴 */
+  .tl{width:100%;position:relative;padding-left:82px;}
+  .tl::before{content:'';position:absolute;left:60px;top:8px;bottom:8px;width:2.5px;background:rgba(200,150,62,0.28);}
+  .ti{position:relative;margin-bottom:9px;}
+  .ti:last-child{margin-bottom:0;}
+  .ti .ty{
+    position:absolute;left:-82px;top:0;width:54px;text-align:right;
+    font-size:15px;font-weight:900;color:#C8963E;
+  }
+  .ti .tt{font-size:16.5px;font-weight:800;color:#1E3A5F;margin-bottom:1px;}
+  .ti .td{font-size:12.5px;color:#6B5C42;line-height:1.3;}
+  .ti.key .ty{color:#B4503E;}
+  .ti.key .tt::after{content:' ★';color:#C8963E;font-size:13px;}
+  /* 双栏 */
+  .g2{display:grid;grid-template-columns:1fr 1fr;gap:10px;width:100%;}
+  .c2{
+    background:rgba(255,255,255,0.8);
+    border:1px solid rgba(30,58,95,0.16);
+    border-radius:9px;padding:11px 13px;
+    box-shadow:0 1px 4px rgba(30,58,95,0.06);
+  }
+  .bull{border-color:rgba(46,125,82,0.36);background:rgba(46,125,82,0.055);}
+  .bear{border-color:rgba(180,80,62,0.36);background:rgba(180,80,62,0.055);}
+  .c2-h{font-size:19px;font-weight:800;margin-bottom:6px;}
+  .bull .c2-h{color:#2E7D52;} .bear .c2-h{color:#B4503E;}
+  .c2-l{font-size:14px;color:#3D4A5C;line-height:1.52;padding:2px 0;}
+  .c2-l b{color:#1E3A5F;}
+  /* 未来 4 阶段 */
+  .fut{display:grid;grid-template-columns:1fr 1fr;gap:8px;width:100%;}
+  .fc{
+    background:rgba(255,255,255,0.8);
+    border:1px solid rgba(200,150,62,0.24);
+    border-radius:9px;padding:10px 12px;
+    box-shadow:0 1px 4px rgba(30,58,95,0.06);
+  }
+  .fc .fy{font-size:15px;font-weight:900;color:#C8963E;margin-bottom:2px;}
+  .fc .ft{font-size:16px;font-weight:800;color:#1E3A5F;margin-bottom:2px;}
+  .fc .fd{font-size:12.5px;color:#6B5C42;line-height:1.3;}
+  .fc.unk{border-style:dashed;background:rgba(200,150,62,0.07);}
+  .fc.unk .fy{color:#C8963E;}
+  /* 底部 */
+  .fin{
+    display:flex;align-items:center;justify-content:space-between;
+    border-top:2px solid rgba(200,150,62,0.3);padding-top:11px;margin-top:6px;
+  }
+  .fin .q{font-size:23px;font-weight:800;color:#1E3A5F;letter-spacing:0.5px;line-height:1.3;}
+  .fin .q b{color:#C8963E;}
+  .fin .tg{font-size:12px;color:#8A7A5E;text-align:right;line-height:1.45;letter-spacing:0.4px;}
+  .brand{
+    position:absolute;top:12px;right:12px;z-index:10;
+    width:60px;height:60px;border-radius:9px;
+    background:rgba(200,150,62,0.94);
+    border:1.5px solid #F7F3EC;
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
+    box-shadow:0 2px 8px rgba(30,58,95,0.14);
+  }
+  .brand .bn{font-size:24px;font-weight:900;color:#F7F3EC;line-height:1;}
+  .brand .bl{font-size:7px;color:#F7F3EC;letter-spacing:1.3px;margin-top:2px;line-height:1;}
+  .wm{
+    position:absolute;bottom:6px;left:14px;z-index:10;
+    font-size:9.5px;color:#8A7A5E;opacity:0.7;
+    letter-spacing:1.8px;font-family:'Courier New',monospace;
+  }
+</style>
+</head>
+<body>
+  <div class="brand"><div class="bn">B</div><div class="bl">B166ER</div></div>
+
+  <!-- s1 Hook -->
+  <div class="sec s1">
+    <div class="sec-tag">01 / 06</div>
+    <div class="kicker">AI 概念全景 v1.0</div>
+    <h1>大语言模型 · Agent<br><span class="hl">到底是什么</span>？</h1>
+    <div class="sub">概念谱系 · 70 年脉络 · 当下现状 · 未来 5 年</div>
+  </div>
+
+  <!-- s2 概念谱系 -->
+  <div class="sec s2">
+    <div class="sec-tag">02 / 06 · 概念谱系</div>
+    <h2><span class="num">02</span>6 个核心概念，一层层包上去</h2>
+    <div class="g6">
+      <div class="cc">
+        <div class="cn">AI 人工智能 <span class="cy">1956</span></div>
+        <div class="cd">让机器表现出"智能"的统称。1956 达特茅斯会议正式命名。</div>
+      </div>
+      <div class="cc">
+        <div class="cn">ML 机器学习 <span class="cy">1980s</span></div>
+        <div class="cd">不手工写规则，改成"喂数据自己学规律"。AI 的第一次实用化。</div>
+      </div>
+      <div class="cc">
+        <div class="cn">DL 深度学习 <span class="cy">2012</span></div>
+        <div class="cd">多层神经网络。AlexNet 一战成名，之后横扫图像与语音。</div>
+      </div>
+      <div class="cc">
+        <div class="cn">LLM 大语言模型 <span class="cy">2020</span></div>
+        <div class="cd">千亿参数规模的文本模型，本质是"预测下一个词"。ChatGPT 让它出圈。</div>
+      </div>
+      <div class="cc now">
+        <div class="cn">Agent 智能体 <span class="cy">2023</span></div>
+        <div class="cd">会拆解任务、会调工具、能多步执行。从"回答问题"变成"替你做事"。</div>
+      </div>
+      <div class="cc fut">
+        <div class="cn">AGI 通用人工智能 <span class="cy">?</span></div>
+        <div class="cd">像人一样跨领域学习迁移。尚未实现，路径与时间点争议极大。</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- s3 历史沿革 -->
+  <div class="sec s3">
+    <div class="sec-tag">03 / 06 · 历史沿革</div>
+    <h2><span class="num">03</span>70 年：从"机器能思考吗"到 Agent</h2>
+    <div class="tl">
+      <div class="ti">
+        <div class="ty">1950</div>
+        <div class="tt">图灵测试</div>
+        <div class="td">"机器能思考吗"——可证伪性的起点，AI 的哲学原点</div>
+      </div>
+      <div class="ti">
+        <div class="ty">1956</div>
+        <div class="tt">达特茅斯会议</div>
+        <div class="td">"Artificial Intelligence"正式命名，学科诞生</div>
+      </div>
+      <div class="ti">
+        <div class="ty">2012</div>
+        <div class="tt">AlexNet 引爆深度学习</div>
+        <div class="td">ImageNet 识别率碾压传统方法，AI 第二次春天</div>
+      </div>
+      <div class="ti">
+        <div class="ty">2017</div>
+        <div class="tt">Transformer 架构</div>
+        <div class="td">注意力机制替代 RNN，可大规模并行——LLM 的技术母体</div>
+      </div>
+      <div class="ti key">
+        <div class="ty">2020</div>
+        <div class="tt">GPT-3 涌现能力</div>
+        <div class="td">1750 亿参数，少样本学习显能力涌现，LLM 路线确立</div>
+      </div>
+      <div class="ti key">
+        <div class="ty">2022</div>
+        <div class="tt">ChatGPT 发布</div>
+        <div class="td">两个月破 1 亿用户，AI 进入大众视野</div>
+      </div>
+      <div class="ti key">
+        <div class="ty">2024+</div>
+        <div class="tt">Agent 时代</div>
+        <div class="td">工具调用、多步执行、长程任务，从对话走向干活</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- s4 当下现状 -->
+  <div class="sec s4">
+    <div class="sec-tag">04 / 06 · 当下现状</div>
+    <h2><span class="num">04</span>2026 现状：能力普及，可靠性待解</h2>
+    <div class="g2">
+      <div class="c2 bull">
+        <div class="c2-h">✓ 已兑现的</div>
+        <div class="c2-l">· LLM 能力<b>商品化</b>，不再是壁垒<br>· Agent 从 demo 进生产环境<br>· 多模态：文/图/音/视频一体<br>· 推理成本<b>年降 10 倍级</b></div>
+      </div>
+      <div class="c2 bear">
+        <div class="c2-h">✗ 仍未解决</div>
+        <div class="c2-l">· 长任务<b>累积误差</b>，可靠性不足<br>· 幻觉与事实核查仍是难题<br>· 训练数据<b>时效性衰减</b><br>· 长上下文成本依然高</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- s5 未来 -->
+  <div class="sec s5">
+    <div class="sec-tag">05 / 06 · 未来 5 年</div>
+    <h2><span class="num">05</span>2026 → 2031：四个方向</h2>
+    <div class="fut">
+      <div class="fc">
+        <div class="fy">2027</div>
+        <div class="ft">Agent 自治化</div>
+        <div class="fd">从"每步指挥"到"目标交付"，长任务成功率是关键指标</div>
+      </div>
+      <div class="fc">
+        <div class="fy">2028</div>
+        <div class="ft">具身智能</div>
+        <div class="fd">AI 进入物理世界，机器人 + 大模型结合落地</div>
+      </div>
+      <div class="fc">
+        <div class="fy">2029</div>
+        <div class="ft">多智能体协作</div>
+        <div class="fd">群体分工与协议层互联，组织形态被重新定义</div>
+      </div>
+      <div class="fc unk">
+        <div class="fy">2031?</div>
+        <div class="ft">AGI 悬而未决</div>
+        <div class="fd">是否达成、什么路径达成，学界与产业界无共识</div>
+      </div>
+    </div>
+    <div class="c2" style="margin-top:8px;background:rgba(200,150,62,0.09);border-color:#C8963E;border-width:2px;">
+      <div class="c2-l" style="font-size:15.5px;">
+        <b>核心判断</b>：AI 的下半场不在"更聪明"，而在<b>更可靠</b>——可靠性、成本、可验证性，才是产业化的真门槛。
+      </div>
+    </div>
+  </div>
+
+  <!-- s6 收尾 -->
+  <div class="sec s6">
+    <div class="sec-tag">06 / 06</div>
+    <div class="fin" style="margin-top:0;border-top:none;padding-top:0;">
+      <div class="q">从"AI 会思考"<br>到"AI <b>会干活</b>"</div>
+      <div class="tg">#AI #大语言模型 #Agent<br>#技术趋势 #认知框架</div>
+    </div>
+  </div>
+
+  <div class="wm">B166ER · 2026-10-21 · AI 概念全景 v1.0</div>
+</body>
+</html>

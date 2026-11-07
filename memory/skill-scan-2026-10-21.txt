@@ -1,0 +1,9 @@
+﻿=== HOTEL ===
+
+=== PROJECT ===
+airtable-automation  airtable-automation  (2040.000)
+changelog-automation  changelog-automation  (2040.000)
+omnifocus-automation  OmniFocus Automation  (2040.000)
+
+=== AI ===
+

@@ -1,0 +1,42 @@
+{
+ "com": {
+  "status": 403,
+  "final_url": "https://www.tripadvisor.com/",
+  "title": "tripadvisor.com",
+  "lang": "zh",
+  "textlen": 0,
+  "nav_chain": [
+   [
+    403,
+    "https://www.tripadvisor.com/"
+   ],
+   [
+    200,
+    "https://geo.captcha-delivery.com/captcha/?initialCid=AHrlqAAAAAMAAr-ERxhBl0UAw_Xb5w%3D%3D&hash=2F05D671381DB06"
+   ]
+  ],
+  "head": ""
+ },
+ "cn": {
+  "status": 200,
+  "final_url": "https://www.tripadvisor.cn/",
+  "title": "旅游景点点评-酒店预订-餐厅美食点评-猫途鹰Tripadvisor",
+  "lang": "en",
+  "textlen": 916,
+  "nav_chain": [
+   [
+    200,
+    "https://www.tripadvisor.cn/"
+   ],
+   [
+    302,
+    "https://ad.doubleclick.net/ddm/ad/N758367.125687TRIPADVISOR/B25098566.291669377;sz=1x1;ord=223592212;dc_lat=;d"
+   ],
+   [
+    200,
+    "https://ad.doubleclick.net/ddm/ad/N758367.125687TRIPADVISOR/B25098566.291669377;dc_pre=CIeS2eHF6pcDFUe96QUd9SU"
+   ]
+  ],
+  "head": "猫途鹰:景点、酒店、美食十亿条点评\n\n下载app享优惠\n\n资质与规则\n点评\n旅行\n登录\n酒店\n景点体验\n美食\n旅行者之选\n更多\n旅游攻略推荐\n更多哈瓦那酒店\n沃亚精品酒店\n406点评\n奢华，浪漫\n伊波罗之星大帕卡德酒店\n3,740点评\n商务，时尚\nMelia Cohiba\n5,542点评\n奢华，城市景观\nRoyalton Habana\n1,842点评\n奢华，城市景观\nLa Posada de Chacón\n145点评\n中档，精品\nMystique Regis Habana by Royalton\n885点评\n迷人，浪漫\nResidencia Santa Clara\n291点评\n中档，精品\nClaxon Hotel Boutique\n253点评\n浪漫，精品\nEl Candil Boutique Hotel\n294点评\n迷人，靠近居民区\nAlhabana\n143点评\n浪漫，商务\n旅行者喜爱的目的地\n北美洲纳帕\n北美洲圣彼德斯堡\n北美洲马拉松\n北美洲布鲁克林\n北美洲普罗温斯敦\n北美洲西黄石镇\n北美洲荷马\n北美洲尤里卡斯普林斯\n北美洲波特兰\n北美洲卡纳布\n旅行者之选\n至尊奖\n查看获奖者\n世界旅游推荐\n亚洲旅游\n欧洲旅游\n非洲旅游\n南太平洋旅游\n南极洲旅游\n南美洲旅游\n中东旅游\n中美洲旅游\n关于我们\n|\n新闻动态\n|\n商务合作\n|\n会员中心\n|\n业主中心\n|\n业主通\n|\n常见问题\n|\n意见反馈\n|\n联系我们\n|\n营业执照\n© 2026 Tripadvisor 版权所有。使用条款 |隐私政策 |网站工作原理\n部分照片由 VFM Leonardo 提供。\n* Tripadvisor不是旅"
+ }
+}

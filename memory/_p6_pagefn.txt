@@ -1,0 +1,23 @@
+
+
+def page(idx, total, kicker, title_html, sub, body, foot_q="", foot_s="", extra_head=""):
+    h = []
+    h.append('<div class="wrap">')
+    h.append('<div class="head">')
+    h.append('<div class="kick">' + kicker + '</div>')
+    h.append(title_html)
+    if sub:
+        h.append('<div class="sub">' + sub + '</div>')
+    h.append(extra_head)
+    h.append('</div>')
+    h.append('<div class="body">' + body + '</div>')
+    h.append('<div class="foot">')
+    if foot_q:
+        h.append('<div class="q">' + foot_q + '</div>')
+    if foot_s:
+        h.append('<div class="s">' + foot_s + '</div>')
+    h.append('</div></div>')
+    h.append('<div class="brand"><div class="bn">B</div><div class="bl">B166ER</div></div>')
+    h.append('<div class="wm">先驱者系列 · ' + str(idx) + ' / ' + str(total) + ' &middot; 2026-11-01</div>')
+    return ('<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><title>' + kicker +
+            '</title><style>' + CSS + '</style></head><body>' + bg_svg() + "".join(h) + '</body></html>')

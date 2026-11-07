@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><meta charset="UTF-8">
+<title>酒店选址真相 - 高级金</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap');
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{
+    width:1080px;height:1440px;
+    font-family:'Noto Sans SC','PingFang SC',sans-serif;
+    background:#0a0a0f;
+    padding:40px 36px 20px;
+    display:flex;flex-direction:column;
+    position:relative;overflow:hidden;
+  }
+  .g{position:absolute;border-radius:50%;pointer-events:none;}
+  .g1{width:400px;height:400px;background:radial-gradient(circle,#d4a74a22,transparent);top:-80px;right:-120px;}
+  .g2{width:300px;height:300px;background:radial-gradient(circle,#c9952a11,transparent);bottom:100px;left:-80px;}
+  .hdr{position:relative;z-index:1;text-align:center;margin-bottom:14px;}
+  .hdr .kicker{font-size:12px;color:#d4a74a;letter-spacing:4px;margin-bottom:6px;}
+  .hdr h1{font-size:44px;font-weight:900;color:#e8dcc8;letter-spacing:3px;line-height:1.15;}
+  .hdr h1 .hl{background:linear-gradient(135deg,#d4a74a,#c9952a);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+  .hdr .sub{font-size:14px;color:#6a5a4a;letter-spacing:2px;margin-top:6px;}
+  .mid{position:relative;z-index:1;flex:1;display:flex;flex-direction:column;gap:14px;}
+  .quote{
+    font-size:18px;color:#6a5a4a;
+    padding:14px 18px;border-left:3px solid #d4a74a;
+    background:rgba(212,167,74,0.06);
+    border-radius:0 8px 8px 0;line-height:1.5;
+  }
+  .quote b{color:#e8dcc8;}
+  .quote .hl{color:#d4a74a;font-weight:700;}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;width:100%;}
+  .card{
+    background:rgba(255,255,255,0.02);
+    border:1px solid rgba(212,167,74,0.10);
+    border-radius:8px;padding:14px 16px;
+  }
+  .card .c-label{
+    font-size:14px;color:#d4a74a;font-weight:600;
+    letter-spacing:2px;margin-bottom:8px;
+    border-bottom:1px solid rgba(212,167,74,0.12);
+    padding-bottom:6px;
+  }
+  .card .c-points{list-style:none;padding:0;}
+  .card .c-points li{
+    font-size:13px;color:#6a5a4a;padding:5px 0;
+    border-bottom:1px solid rgba(255,255,255,0.03);
+  }
+  .card .c-points li:last-child{border:none;}
+  .card .c-points li b{color:#e8dcc8;}
+  .card .c-points li .x{color:#d4a74a;font-weight:700;margin-right:6px;}
+  .method{
+    position:relative;z-index:1;
+    background:rgba(212,167,74,0.06);
+    border:1px solid #d4a74a;
+    border-radius:8px;padding:14px 18px;
+  }
+  .method .m-title{
+    font-size:15px;color:#d4a74a;font-weight:700;
+    letter-spacing:3px;margin-bottom:8px;
+  }
+  .method .m-list{display:flex;gap:14px;}
+  .method .m-step{
+    flex:1;background:rgba(0,0,0,0.3);
+    border-radius:6px;padding:10px 12px;
+  }
+  .method .m-step .n{font-size:22px;color:#d4a74a;font-weight:700;}
+  .method .m-step .t{font-size:13px;color:#e8dcc8;margin-top:2px;}
+  .method .m-step .d{font-size:10px;color:#6a5a4a;margin-top:3px;line-height:1.4;}
+  .bot{
+    position:relative;z-index:1;
+    border-top:1px solid rgba(212,167,74,0.12);
+    padding-top:12px;text-align:center;margin-top:8px;
+  }
+  .conclusion{
+    font-size:18px;color:#e8dcc8;
+    text-align:center;letter-spacing:1px;line-height:1.5;
+    margin-bottom:8px;
+  }
+  .conclusion .hl{color:#d4a74a;font-weight:700;}
+  .stats{display:flex;justify-content:center;gap:30px;margin-bottom:8px;}
+  .stat{text-align:center;}
+  .stat .s-num{font-size:22px;font-weight:700;color:#d4a74a;}
+  .stat .s-label{font-size:10px;color:#6a5a4a;letter-spacing:1px;}
+  .ft{font-size:11px;color:#6a5a4a;opacity:0.3;letter-spacing:2px;margin-top:6px;}
+  .b166er-brand{font-size:10px;color:#d4a74a;opacity:0.5;letter-spacing:1px;margin-top:4px;}
+</style>
+</head>
+<body>
+  <div class="g g1"></div><div class="g g2"></div>
+  <div class="hdr">
+    <div class="kicker">B166ER · 酒店选址真相 · v1.0</div>
+    <h1>客人 <span class="hl">不冲你的酒店来</span></h1>
+    <div class="sub">客人 是冲 酒店所在的目的地 来的</div>
+  </div>
+
+  <div class="mid">
+    <div class="quote">
+      酒店建的再漂亮，也<span class="hl">吸引不来客人</span>。<br>
+      酒店的命运，最终取决于<span class="hl">酒店所在的地方</span>。<br>
+      酒店 = 人流的"切口"，目的地客群的"刚需"。
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <div class="c-label">❶ 短命的（不能跟）</div>
+        <ul class="c-points">
+          <li><span class="x">✕</span><b>旅游热度</b> — 一时一地</li>
+          <li><span class="x">✕</span><b>网红流量</b> — 来去一阵风</li>
+          <li><span class="x">✕</span><b>节日效应</b> — 3-12 个月窗口</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="c-label">❷ 长命的（必须跟）</div>
+        <ul class="c-points">
+          <li><span class="x">✓</span><b>基建布局</b> — 5-30 年红利</li>
+          <li><span class="x">✓</span><b>政策方向</b> — 5-10 年定位</li>
+          <li><span class="x">✓</span><b>商业趋势</b> — 长期复利</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="method">
+      <div class="m-title">▍ 选址 三件事（必须全部跟）</div>
+      <div class="m-list">
+        <div class="m-step">
+          <div class="n">①</div>
+          <div class="t">跟 基建 走</div>
+          <div class="d">高铁站 · 地铁口<br>新机场 · 新高速</div>
+        </div>
+        <div class="m-step">
+          <div class="n">②</div>
+          <div class="t">跟 政策 走</div>
+          <div class="d">城市新区 · 自贸区<br>度假区 · 乡村振兴</div>
+        </div>
+        <div class="m-step">
+          <div class="n">③</div>
+          <div class="t">跟 商业 走</div>
+          <div class="d">新 CBD · 夜经济<br>文旅商融合区</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bot">
+    <div class="conclusion">位置错了，<span class="hl">再多装修也白搭</span></div>
+    <div class="stats">
+      <div class="stat"><div class="s-num">3 件</div><div class="s-label">选址必跟</div></div>
+      <div class="stat"><div class="s-num">×N</div><div class="s-label">基建/政策/商业红利</div></div>
+      <div class="stat"><div class="s-num">5-30 年</div><div class="s-label">长命复利</div></div>
+    </div>
+    <div class="ft">看清大势 · 提前布局</div>
+    <div class="b166er-brand">#小红书 #酒店投资 #选址 #民宿 #商业真相 #位置为王</div>
+  </div>
+</body>
+</html>

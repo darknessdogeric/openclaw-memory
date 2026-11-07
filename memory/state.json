@@ -1,0 +1,15 @@
+{
+    "lastTick": "2026-08-27T10:04:49+08:00",
+    "workday_zone": "weekday-morning",
+    "eric_webchat_idle_min": null,
+    "note": "SILENCE_EXPIRED: R69沉默协议已到期，5天静默断层识别(8/22-8/27)，R288规则提案中，等待Eric确认重启",
+    "anyi_day": 30,
+    "r69_silence": "EXPIRED_APPROX_2026-08-30",
+    "silence_gap_days": 5,
+    "last_hb": {
+        "n": 3744,
+        "ts": "2026-08-22T18:09:50+08:00"
+    },
+    "hbCount": 3744,
+    "lastHB": "2026-08-22T18:09:50+08:00"
+}
