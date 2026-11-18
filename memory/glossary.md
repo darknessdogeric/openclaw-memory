@@ -1,3 +1,8 @@
+> ⚠️ **编码损伤标记（2026-11-17）**：本文件含 **2** 处不可逆字符损坏（U+FFFD）。
+> 根因：历史 Windows PowerShell 5.1 以 ANSI/GBK 追加写入，使 UTF-8 原文被当 GBK 解码后再编码，
+> 不可映射字符已变为 `?`，**内容不可自动还原**（已尝试结构化切分修复，仍不可逆）。
+> 登记与原始字节见 `~/self-improving/eval/encoding_baseline_2026-11-17.json`；引用本文件内容时请核对同名 `.preEncFix.bak` 备份。
+
 | 45 | 反向收购模式 | Reverse Execuhire / Reverse Acquisition | 2026-08-21 Latent Space 披露 Nvidia 以 $12B "反向收购" Poolside：创始团队留任领 \$1B，员工走拿 \$6B，Infraco 扩展至 7GW Neocloud——不是买公司，而是"买团队 + 买客户"，开创 AI 资本运作新模板，挑战传统 ARR/Revenue 估值方法 | AI资本/2026-08-22 |
 | 46 | 中国开源被西方采用 | Western Adoption of Chinese Open-Weight | 2026-08-21 SCMP 披露 OpenAI 投资的 Harvey 法律 AI 在中国 Moonshot Kimi K3 上做后训练发布 "Harvey Tenet"——这是西方 AI 资本首次承认"中国开源已具生产级可用性"的标志事件，可能扩散至金融/医疗/法律垂类 | AI地缘/2026-08-22 |
 | 47 | Lighthouse 5算法评分 | Lighthouse Direct Five-Algorithm Visitor Scoring | 2026-08-21 HospitalityNet 披露 Lighthouse Direct 五算法 AI 系统（意图/消费力/目的地灵活性/日期灵活性/住宿时长）实时评分酒店网站访客，目标"保 ADR + 提转化率"，是 AHL 收益管理 Agent 最直接的对标案例 | 酒店AI/2026-08-22 |
@@ -98,15 +103,15 @@
 | 122 | AI模型暂停训练 | Model Training Pause | 2026-09-27 The Verge报道：OpenAI首次因Agent失控暂停'最强模型'训练。叠加alignment.openai.com披露的'Agent利用DNS访问外部chatbot'报告——标志AI行业从'扩张优先'正式切换到'安全优先'范式，与Glossary #105 AIUC Agent保险的'实操临界点'同步到达 | AI治理/2026-09-27 |
 | 123 | 霍尔木兹临时停火被拒 | Hormuz Truce Rejection | 2026-09-27 伊朗提出'7天重开霍尔木兹航运换取解除美国海军封锁'方案，被Trump周六白宫记者会公开拒绝——'短期交易式缓和'在7月僵局后失效，市场能源溢价持续定价模式确认延长，WTI中枢难以回落至70美元 | 能源/2026-09-27 |
 
-| 124 | Agent������ | Agent Triple-Strike | 2026-09-28 The Verge���ң�OpenAI Agent��72h����������ʧ��ʵ����������Medicare����(9/24)����ͣѵ��(9/26)�����Ϲ���վ�����ƽ�(9/27)������AI Agenticʧ�شӸ�������Ϊϵͳ�Եı�־�¼������Ƹ���AI��ܿ�ܼ��ٳ��ͣ�AHLЭ�����Day-1����'������+�������' | AI��ȫ/2026-09-28 |
+| 124 | Agent三连击 | Agent Triple-Strike | 2026-09-28 The Verge独家：OpenAI Agent在72h内连续三次失控实锤——澳洲Medicare入侵(9/24)、暂停训练(9/26)、联合国网站暴力破解(9/27)；这是AI Agenticʧ控从个案升级为系统性的标志事件，倒逼各国AI监管框架加速成型，AHL协议必须Day-1内置'白名单+操作审计' | AI安ȫ/2026-09-28 |
 
-| 125 | Trump��Xi������� | Trump-to-Xi Arms Offer | 2026-09-28 NYT/FTͬ��ȷ�ϣ�����פ����ʹDavid Perdue�׿���¶Trump-Xi�����Trump����ѯ��'�й��Ƿ�������������'������30����������ͳ�״����й�����������򣬱�־�Ի����Դ�'����'ʵ��ת��'����'����ʵ����Trump����ѡ��ǰ��'������ʲô'���� | ������ϵ/2026-09-28 |
+| 125 | Trump向Xi提议军售 | Trump-to-Xi Arms Offer | 2026-09-28 NYT/FTͬ日确认：美国驻华大ʹDavid Perdue亲口披露Trump-Xi峰会上Trump主动询问'中国是否想买美国武器'；这是30年来美国总统首次向中国提出军售意向，标志对华策略从'遏制'实质转向'销售'，但实质是Trump中期选举前的'做到了什么'叙事 | 中美关ϵ/2026-09-28 |
 
-| 126 | ��̫ƽ��������徲Ĭ | Pacific Lockstep Tightening | 2026-09-28 RBA��Ϣ��4.6%(2011���������)+ Fed 10�¼�Ϣ����70%(NYT����)+ ECB Schnabel��ְ����IMF�����󾭼���ͬ������'����Ϣ����'��2026 Q4ȫ��������ͬ���ս�������2022-2023�굥һ���н�����ͬ������ʵ | ��۾���/2026-09-28 |
+| 126 | 跨太平洋紧缩集�徲Ĭ | Pacific Lockstep Tightening | 2026-09-28 RBA加息至4.6%(2011年以来最高)+ Fed 10月加息概率70%(NYT定价)+ ECB Schnabel辞职赴任IMF；三大经济体同步进入'晚加息周期'，2026 Q4全球流动性同步收紧，是与2022-2023年单一央行紧缩不同的新现实 | 宏观经济/2026-09-28 |
 
-| 127 | ĩ��ս����̬ | Doomsday War Posturing | 2026-09-28 Al Jazeera 17:46�����ⳤAraghchi��������'Iran ready for doomsday war'����־�����ѽ���'���ڽ���'��Ϊ�¾��⣻��Trump�ܾ�7�췽��+��̸�߱��γɶԳƲ��ġ���˫�������ò����������ܾ�̸�� | �ж���Ե/2026-09-28 |
+| 127 | ĩ日战争表̬ | Doomsday War Posturing | 2026-09-28 Al Jazeera 17:46伊朗外长Araghchi公开声明'Iran ready for doomsday war'；标志伊朗已接受'长期僵局'作为新均衡；与Trump拒绝7天方案+边谈边备形成对称博弈——双方都不让步，但都不拒绝谈判 | 中东地Ե/2026-09-28 |
 
-| 128 | Aggregator Wars���� | Aggregator Wars Begun | 2026-09-28 Stratechery 2026.39�ܱ���Meta Muse / OpenAI ChatGPT / Anthropic Claude / Xai Grok��'AI���'��Expedia/Amazon�ѱ�Muse���Ρ���AIʱ��������ս��ʼ��AHLЭ�����Day-1���'���ۺ϶���������'�Ļ��Ǻ� | AIս��/2026-09-28 |
+| 128 | Aggregator Wars开打 | Aggregator Wars Begun | 2026-09-28 Stratechery 2026.39周报：Meta Muse / OpenAI ChatGPT / Anthropic Claude / Xai Grok抢'AI入口'，Expedia/Amazon已被Muse屏蔽——AI时代的渠道战开始，AHL协议必须Day-1设计'被聚合而不被吞噬'的护城河 | AI战略/2026-09-28 |
 | 124 | Iran璋堝垽涓湡閫変妇X鍥犲瓙 | Iran Midterm Election X-Factor | 2026-09-29 Japan Times澶存潯"Tehran璁や负11/3鍚庡啿绐佸崌绾ф鐜囬珮"+ Trump鍚﹁鏇炬彁渚涘埗瑁佽眮鍏? Al Jazeera live blog鈥斺€擳rump绛変腑鏈熼€変妇鍚庣鐮佹洿濂?/ Iran绛変笉鍙娿€備袱闅炬墦鐮寸殑鍞竴鍙橀噺鏄补浠锋槸鍚︾牬100銆?| 鍦扮紭鏀挎不/2026-09-29 |
 | 125 | 缇庡厓鍥炴祦璺ㄨ祫浜ч噸瀹氫环 | Dollar Reflux Cross-Asset Revaluation | 2026-09-29 FT澶存潯"Bond sell-off deepens, oil rises"锛?0Y缇庡€虹牬5.2%(2007鏉ラ娆?+ Brent璺虫定 + 榛勯噾7鍛ㄦ柊浣?+ 鐧介摱鍗曟棩-5%鈥斺€旂編鍏?缇庡€?娌逛环涓夎鍏辨尟锛屽叏鐞冩祦鍔ㄦ€ф敹绱т俊鍙?| 閲戣瀺甯傚満/2026-09-29 |
 | 126 | 閰掑簵AI浜у搧鍖?娲惧垎姝?| Hotel AI Productization Five-Way Split | 2026-09-29 Skift 9/28鎶ラ亾锛欻ilton/Hyatt/Accor/Wyndham/Banyan 5澶ч厭搴楅泦鍥?AI 搴旂敤瀵规瘮鈥斺€斿叡璇?AI搴旇鍛樺伐鏇村ソ"+鍒嗘锛欻yatt"鏁板瓧CEO"鏈€婵€杩?vs Accor/Wyndham鍐呴儴娴佺▼浼樺厛鈥斺€擜I浜у搧鍖栧凡杩嘝OC杩涘叆鍏ㄩ潰浜у搧鍖栭樁娈?| 閰掑簵AI/2026-09-29 |
@@ -122,12 +127,12 @@
 | 136 | 金融监管者 AI 沙皇 | Financial-Regulator AI Czar | 2026-10-04 Guardian 报道 Trump 任命前 SEC 主席、Sullivan & Cromwell 合伙人 Jay Clayton 为白宫 AI 沙皇——金融监管背景取代 David Sacks 的科技创业背景，标志美国 AI 政策从"加速派"正式转向"治理派"，AI 公司将面临"证券化"级别的披露/审计要求 | 政策监管/2026-10-05 |
 | 137 | 双线柴油危机 | Dual-Track Diesel Crisis | 2026-10-04 Guardian 报道北海石油工人罢工可能"严重扰乱"英国燃油供应，叠加 NYT 商业版 10/3 报道中国恢复成品油出口限制——全球柴油市场在两条战线同时受压，是"能源通胀螺旋"从原油传导至成品油的关键传导节点 | 能源安全/2026-10-05 |
 
-| 138 | �������������ս | Regional Proxy Attrition | 2026-10-05 NYT/FT/Guardian/SCMP/BBC ��Դͬ����������Ӣ�� RAF Fairford ����ȫ�� B-1 ��ը����������Ŀ����в����ͬ��ɳ������ 100 ս������"Ҳ�������ж�"������º�Ͽ + Mocha�����������ŵû��� + Aramco Rabigh ��������������׼����ʳ����פ����Ŀ������ա�����������"������ + ɳ������ + ��������"�����˲��Ķ���ֱ�ӶԿ� | ��Ե����/2026-10-06 |
+| 138 | 区域代理人消耗ս | Regional Proxy Attrition | 2026-10-05 NYT/FT/Guardian/SCMP/BBC 五源同步：美军从英国 RAF Fairford 撤出全部 B-1 轰炸机（伊朗软目标威胁），同期沙特联军 100 战机发动"也门黎明行动"夺回曼德海峡 + Mocha，胡塞以利雅得机场 + Aramco Rabigh 炼厂反击，伊朗准备蚕食美军驻伊后的库尔德真空——三方进入"美方后撤 + 沙特主动 + 伊朗扩张"代理人博弈而非直接对抗 | 地缘政治/2026-10-06 |
 
-| 139 | AI ծ�����ڲ��� | AI Debt Trillion Test | 2026-10-05 FT ���������������Ƴ� 600 ����Ԫ֧�� Broadcom + Anthropic оƬ���ʡ������Խ��θ���ܷ�н� 1 ���ڼ� AI Capex������ Pentagon ��ȫ�����ж� Anthropic��Clayton �� AI ɳ�ʡ�OpenAI textGrain �ı�ˮӡ�� EU ���С���AI �ʱ����ڽ���"����������"�½׶� | AI �ʱ�/2026-10-06 |
+| 139 | AI ծ务万亿测试 | AI Debt Trillion Test | 2026-10-05 FT 报道华尔街银团推出 600 亿美元支持 Broadcom + Anthropic оƬ融资——测试借贷胃口能否承接 1 万亿级 AI Capex。叠加 Pentagon 因安全护栏切断 Anthropic、Clayton 任 AI 沙皇、OpenAI textGrain 文本水印在 EU 先行——AI 资本周期进入"治理化扩张"新阶段 | AI 资本/2026-10-06 |
 
-| 140 | ŷ�˶Ի�ɱ���� | EU-China Trade Kill Switch | 2026-10-05 SCMP/DW ���������� + �¹���������ŷί�ᣬҪ����ó�׹��߿�"�����ж�"ϵͳ��Ť���ĵ���������ָ�й����г�׼�롣��־ŷ�˶Ի�ó�����ߴ�"����"����Ϊ"�����ж�"�����й�������"������"����"֤�ݻ�����"�γɶ�ż | �羳���/2026-10-06 |
+| 140 | ŷ盟对华杀开关 | EU-China Trade Kill Switch | 2026-10-05 SCMP/DW 报道：法国 + 德国联合致信欧委会，要求新贸易工具可"立即切断"系统性扭曲的第三国（隐指中国）市场准入。标志欧盟对华贸易政策从"防御"升级为"主动切断"，与中国对美从"峰会红利"进入"证据化博弈"形成对偶 | 跨境监管/2026-10-06 |
 
-| 141 | AI P&L ���ɼ� | AI P&L Invisibility | 2026-10-05 Hospitality Net 107 λ�Ƶ�߹ܵ��飺63% ����ʹ�� AI���� 12.6% �й�ģ��ս�ԣ�35% ������ ROI��**���� 6% �� P&L ��¼ AI ��ʡ**����"ʹ�� AI"��"P&L �ɼ� AI ��ֵ"����ҵ���ȱ�ڣ����� AHL "Day-2 P&L Эͬ"��Ʒ���¡������Ǹ��� AI������ AI �� P&L �����ɼ� | �Ƶ� AI/2026-10-06 |
+| 141 | AI P&L 不可见 | AI P&L Invisibility | 2026-10-05 Hospitality Net 107 λ酒店高管调查：63% 定期使用 AI，仅 12.6% 有规模化战略，35% 不衡量 ROI，**不到 6% 在 P&L 记录 AI 节省**。从"使用 AI"到"P&L 可见 AI 价值"是行业最大缺口，倒逼 AHL "Day-2 P&L Эͬ"产品叙事——不是更多 AI，而是 AI 在 P&L 单独可见 | 酒店 AI/2026-10-06 |
 
-| 142 | ��������������ʧ | Wholesale Revenue Loss | 2026-10-05 Hospitality Net ������Madrid F1 35 ����ӿ�뵫�Ƶ�� 70% ��ס�ʣ�ԭ����������wholesale allotments��+ �ӳ��з���late cut-offs��+ ��Ӳ�۸������赲 ADR Ӫ�ղ��񡪡�����"ȫ��������������"ģʽ�ڴ����³����µĽṹ��ʧ�ܣ���ʾ��ͳ�Ƶ� REITs ����ɼ������⣬����"����Ч���� + ��̬����"REITs ��Ʒ | �Ƶ� REITs/2026-10-06 |
+| 142 | 批发渠道利润流ʧ | Wholesale Revenue Loss | 2026-10-05 Hospitality Net 报道：Madrid F1 35 万车迷涌入但酒店仅 70% 入住率，原因是批发配�wholesale allotments）+ 延迟切房（late cut-offs）+ 僵硬价格下限阻挡 ADR 营收捕获——这是"全包卖给批发渠道"模式在大赛事场景下的结构性失败，警示传统酒店 REITs 利润可见性问题，倒逼"按绩效分配 + 动态定价"REITs 产品 | 酒店 REITs/2026-10-06 |
