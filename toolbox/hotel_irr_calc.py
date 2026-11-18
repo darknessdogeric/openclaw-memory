@@ -93,6 +93,19 @@ def calc_depreciation_annual(asset_value, life):
     return asset_value / min(life, 10)
 
 
+def build_dep_schedule(assets, years=10):
+    """按资产类别清单生成逐年折旧。
+    assets: [(名称, 金额万, 年限), ...] → 返回长度 years 的列表
+    """
+    sched = [0.0] * years
+    for _name, amt, life in assets:
+        if life <= 0 or amt <= 0:
+            continue
+        for i in range(min(life, years)):
+            sched[i] += amt / life
+    return sched
+
+
 def calc_depreciation_schedule(asset_class, asset_value):
     """按资产类别返回逐年折旧（10 年）"""
     for name, life, _ in DEPRECIATION:
@@ -130,6 +143,17 @@ def calc_hotel_project(params):
             可选字段:
             - electromechanical_value: 机电原值（默认 = 总投资 × 25%）
             - building_value: 房屋建筑物原值（默认 = 总投资 × 60%）
+
+            [R67 扩展 2026-11-18 · 经营压力约束模型] 全部默认 None/关闭 → 默认行为一字不变（回归已验证）
+            - capacity_discount: 长度 10 的列表（0-1）· 每年可供售间夜折损（改造期边营业边改的产能损失）
+            - room_revenue_direct: 长度 10 的列表（万元）· 直接给定客房收入序列，覆盖 ADR×OCC 推算
+            - non_room_capacity: 标量或长度 10 列表（万元/年）· 非房收入上限（不再让非房无上限倒挤）
+            - non_room_floor: 标量或长度 10 列表（万元/年）· 非房刚性下限（如餐饮基线，不得低于）
+            - non_room_mode: 'ratio'（默认·沿用旧行为·非房按结构倒挤）｜'capacity'（★ 非房由能力独立确定，
+              总收入 = 客房(市场定) + 非房(能力定)，收入结构变成【输出】而不是输入）
+            - gop_rate_room / gop_rate_nonroom: 客房/非房分部毛利率（None → 沿用综合 gop_rate）
+              ★ 用途：测「非房占比从 50% 提到 60%」到底是加权变好还是被低毛利餐饮拖累
+            - invest_phasing: 长度 11 的列表 · 分期投入比例（Y0 + Y1..Y10），None → 全部 Y0
     """
     p = params.copy()
     p.setdefault('discount_rate', 0.08)
@@ -152,12 +176,36 @@ def calc_hotel_project(params):
 
     # 每年 ADR / OCC / RevPAR
     yearly = []
+    _cap_disc = p.get('capacity_discount')
+    _rr_direct = p.get('room_revenue_direct')
+    _nr_cap = p.get('non_room_capacity')
+    _nr_floor = p.get('non_room_floor')
     for y in range(10):
         adr_y = peak_adr * ramp['adr'][y]
         occ_y = peak_occ * ramp['occ'][y]
         revpar = adr_y * occ_y
-        room_revenue = adr_y * occ_y * available_room_nights / 10000  # 万元
-        total_revenue = room_revenue / (1 - non_room_ratio)
+        if _cap_disc:
+            room_revenue = adr_y * occ_y * available_room_nights * _cap_disc[y] / 10000  # 万元
+        else:
+            room_revenue = adr_y * occ_y * available_room_nights / 10000  # 万元
+        if _rr_direct:
+            # [R67 修] 直接给定客房收入时，产能折损仍必须生效（否则改造期折损被静默吞掉）
+            room_revenue = _rr_direct[y] * (_cap_disc[y] if _cap_disc else 1.0)
+        if _nr_cap is not None or _nr_floor is not None:
+            # [R67] 非房独立定：不再让「非房 = 倒挤剩余」无上限膨胀
+            nr_by_ratio = room_revenue * non_room_ratio / (1 - non_room_ratio)
+            cap_y = _nr_cap[y] if isinstance(_nr_cap, (list, tuple)) else _nr_cap
+            floor_y = _nr_floor[y] if isinstance(_nr_floor, (list, tuple)) else _nr_floor
+            if p.get('non_room_mode') == 'capacity' and cap_y is not None:
+                # 非房由【能力】独立确定（市场定客房 + 能力定非房），结构变成输出
+                nr = cap_y
+            else:
+                nr = min(nr_by_ratio, cap_y) if cap_y is not None else nr_by_ratio
+            if floor_y is not None:
+                nr = max(nr, floor_y)
+            total_revenue = room_revenue + nr
+        else:
+            total_revenue = room_revenue / (1 - non_room_ratio)
         yearly.append({
             'year': y + 1,
             'stage': ['爬坡', '成熟', '峰值', '峰值', '稳定', '微降', '微降', '回落', '回落', '回升'][[0, 1, 2, 3, 4, 5, 6, 7, 8, 9][min(y, 9)] if y < 5 else (5 if y < 7 else (7 if y < 9 else 9))],
@@ -170,10 +218,17 @@ def calc_hotel_project(params):
     # 成本（按综合 GOP 率口径，与川宾 5000 万文档匹配）
     # 总成本率 = 1 - gop_rate（包含部门直接+未分配+管理费）
     gop_rate_target = p.get('gop_rate', 0.55)
+    _gr = p.get('gop_rate_room')
+    _gn = p.get('gop_rate_nonroom')
     for y in yearly:
         # 采用综合 GOP 率口径：直接算出 GOP，不拆分部门
-        gop = y['total_revenue'] * gop_rate_target
         non_room_revenue = y['total_revenue'] - y['room_revenue']
+        if _gr is not None and _gn is not None and y['total_revenue']:
+            # [R67] 分部毛利率加权：客房与非房毛利率不同 → 结构变化会改变综合 GOP
+            _eff_gop = (y['room_revenue'] * _gr + non_room_revenue * _gn) / y['total_revenue']
+        else:
+            _eff_gop = gop_rate_target
+        gop = y['total_revenue'] * _eff_gop
         incentive_mgmt = gop * 0.06
         gop_net = gop - incentive_mgmt
         gop_rate = gop_rate_target
@@ -181,7 +236,9 @@ def calc_hotel_project(params):
         # 非经营费用
         building_value = p['building_value']
         electromechanical_value = p['electromechanical_value']
-        annual_depreciation = building_value / 10  # 简化：房屋建筑按 10 年计算
+        _ds = p.get('dep_schedule')
+        _yi = max(0, min(9, int(y.get('year', 1)) - 1))
+        annual_depreciation = _ds[_yi] if _ds else building_value / 10
         property_tax = building_value * 0.7 * 0.012
         property_insurance = p['total_invest'] * 0.00035
         machine_insurance = electromechanical_value * 0.00045
@@ -201,6 +258,9 @@ def calc_hotel_project(params):
         y['rent'] = round(rent_actual, 1)
 
         labor_deduct = 0.0 if p.get('labor_in_gop', True) else p['labor_cost_annual']
+        # 人工差额：GOP 率内已含 labor_cost_annual，超过部分需额外扣减
+        if p.get('labor_delta'):
+            labor_deduct += p['labor_delta']
         profit_before = gop_net - annual_depreciation - property_tax - property_insurance - machine_insurance - rent_actual - labor_deduct
         tax = max(0, profit_before * p['tax_rate'])
         net_profit = profit_before - tax
@@ -225,7 +285,17 @@ def calc_hotel_project(params):
         })
 
     # 现金流序列（含 Y0 投资）
-    cashflows = [-p['total_invest']] + [y['cash_flow'] for y in yearly]
+    _ph = p.get('invest_phasing')
+    if _ph:
+        # [R67] 分期投入：边营业边改 → 后续年追加投入
+        _cf = []
+        for i in range(11):
+            ratio = _ph[i] if i < len(_ph) else 0.0
+            base = 0.0 if i == 0 else yearly[i - 1]['cash_flow']
+            _cf.append(base - p['total_invest'] * ratio)
+        cashflows = _cf
+    else:
+        cashflows = [-p['total_invest']] + [y['cash_flow'] for y in yearly]
 
     # 累计现金流（静态回收期）
     cumulative = []
@@ -554,4 +624,29 @@ if __name__ == '__main__':
         print(f'  Y{y}: {c:,.1f} 万元')
 
     if len(sys.argv) > 2 and sys.argv[2] == 'excel':
-        write_excel_report(result, f'{preset_name}_report.xlsx')
+        write_excel_report(result, f'{preset_name}_report.xlsx')# -*- coding: utf-8 -*-
+# ===== 国堰专属爬升曲线（Eric 2026-11-07 17:10 锚点） =====
+def make_guoyan_ramp(peak_adr, peak_occ, start_adr=280.0, start_occ=0.50):
+    """国堰专属爬升曲线
+
+    爬升期起点固定：ADR 280 元 / OCC 50%
+    峰值：ADR peak_adr / OCC peak_occ（主案例 350 元 / 65%，Y4 达峰）
+    之后：稳定 → 微降 → 回落 → 回升（按峰值比例衰减）
+    """
+    rise = [0.0, 0.55, 0.85, 1.0]
+    adr = [start_adr + r * (peak_adr - start_adr) for r in rise]
+    occ = [start_occ + r * (peak_occ - start_occ) for r in rise]
+    adr.append(peak_adr)
+    occ.append(peak_occ)
+    for a_f, o_f in [(0.98, 0.969), (0.96, 0.938), (0.93, 0.892), (0.90, 0.862), (0.87, 0.831)]:
+        adr.append(peak_adr * a_f)
+        occ.append(peak_occ * o_f)
+    return {
+        'adr': [a / peak_adr for a in adr],
+        'occ': [o / peak_occ for o in occ],
+        'adr_abs': adr,
+        'occ_abs': occ,
+    }
+
+
+RAMP_CURVES['guoyan'] = make_guoyan_ramp(350.0, 0.65)
