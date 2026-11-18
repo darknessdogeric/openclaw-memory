@@ -491,6 +491,63 @@ def c24():
     return True, "有交付分层项目 %d 个 ｜ 索引齐备" % n, []
 
 
+# ---------------- C25 测算引擎默认行为不得静默漂移 ----------------
+@check("C25", "测算引擎默认行为不得静默漂移（基准逐项锁定）", "R67 扩展测算引擎后，若有人改坏默认值，国堰的 IRR/NPV 会静默变化而无人察觉")
+def c25():
+    import importlib
+    bl_path = os.path.join(ROOT, "toolbox", "_baseline", "irr_baseline_2026-11-18.json")
+    if not os.path.exists(bl_path):
+        return True, "无基线文件（未触发）", []
+    try:
+        base = json.load(open(bl_path, encoding="utf-8"))
+    except Exception as e:
+        return False, "基线读取失败 %s" % str(e)[:50], []
+    if ROOT not in sys.path:
+        sys.path.insert(0, ROOT)
+    sys.path.insert(0, os.path.join(ROOT, "toolbox"))
+    try:
+        mod = importlib.import_module("hotel_irr_calc")
+        importlib.reload(mod)
+    except Exception as e:
+        return False, "引擎导入失败 %s" % str(e)[:50], []
+    cases = {
+        "guoyan_A3_3000w_ADR600": dict(rooms=236, total_invest=3000, peak_adr=600, peak_occ=0.70,
+            non_room_ratio=0.30, ramp_type='cultural', labor_cost_annual=800, rent_annual=221,
+            discount_rate=0.08, tax_rate=0.25, gop_rate=0.38, labor_in_gop=True),
+        "guoyan_B3_3000w_ADR320": dict(rooms=236, total_invest=3000, peak_adr=320, peak_occ=0.65,
+            non_room_ratio=0.30, ramp_type='cultural', labor_cost_annual=800, rent_annual=221,
+            discount_rate=0.08, tax_rate=0.25, gop_rate=0.38, labor_in_gop=True),
+        "guoyan_v310_main_3600w": dict(rooms=236, total_invest=3600, peak_adr=330, peak_occ=0.55,
+            non_room_ratio=0.50, ramp_type='cultural', labor_cost_annual=800, rent_annual=221,
+            discount_rate=0.08, tax_rate=0.25, gop_rate=0.34, labor_in_gop=True),
+        "legacy_default_labor_double": dict(rooms=236, total_invest=3000, peak_adr=600, peak_occ=0.70,
+            non_room_ratio=0.30, ramp_type='cultural', labor_cost_annual=800, rent_annual=221,
+            discount_rate=0.08, tax_rate=0.25, gop_rate=0.38),
+    }
+    diffs = []
+    for name, p in cases.items():
+        b = base.get(name)
+        if not b:
+            diffs.append(name + ": 基线缺失")
+            continue
+        try:
+            r = mod.calc_hotel_project(p)
+        except Exception as e:
+            diffs.append("%s: 执行异常 %s" % (name, str(e)[:40]))
+            continue
+        got = {
+            "irr": round(r["irr"], 6), "static_payback": round(r["static_payback"], 4),
+            "dynamic_payback": round(r["dynamic_payback"], 4) if r.get("dynamic_payback") else None,
+            "npv": round(r["npv"], 2),
+        }
+        for k, v in got.items():
+            if b.get(k) != v:
+                diffs.append("%s.%s: 基线 %s ≠ 现值 %s" % (name, k, b.get(k), v))
+    if diffs:
+        return False, "漂移 %d 项: %s" % (len(diffs), "; ".join(diffs[:3])), diffs[:5]
+    return True, "4 组基准逐项一致（IRR/静态/动态回收/NPV）｜引擎默认行为未漂移", []
+
+
 def run(as_json=False):
     res = []
     npass = 0
