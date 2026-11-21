@@ -95,7 +95,7 @@
 [main/sessions/main/5be7eb87-2503-4ae9-bde8-dfff077d4de1.jsonl#L39] User: 用之前沉淀的小红书范式，同时应该有B标
 [main/sessions/main/5be7eb87-2503-4ae9-bde8-dfff077d4de1.jsonl#L40] Assistant: 收到。两个动作：① 查之前沉淀的「小红书范式」；② 确认「B标」的具体形态（B166ER 出品标识/水印规范）。
 [main/sessions/main/5be7eb87-2503-4ae9-bde8-dfff077d4de1.jsonl#L43] Assistant: 找到了关键沉淀。让我读取完整模板库，确认 **V0（B标/Logo体系）** 和 **V6（东方气韵实战版，Eric 真正主视觉）** 的精确规范。
-[main/sessions/main/5be7eb87-2503-4ae9-bde8-dfff077d4de1.jsonl#L45] Assistant: 完全清楚了。沉淀里有明确结论： - **小红书范式（商业分析/研报式）** = **V4 麦肯锡**（白底 + 深蓝 #0A2540 + 麦肯锡红 #C8102E，⭐⭐⭐⭐⭐ 4 轮定稿），脚本在 `toolbox/xhs_mckinsey.py` - **B标** = **V0 主标识**（左上 E 圆标 + ERIC×B166ER + 右下 B166ER EST. 标 + 红方块，必带 IP 资产） 我先读现有脚本，复用它的设计系统（而不是我自创的深蓝风）。
+[main/sessions/main/5be7eb87-2503-4ae9-bde8-dfff077d4de1.jsonl#L45] Assistant: 完全清楚了。沉淀里有明确结论： - **小红书范式（商业分析/研报式）** = **V4 麦肯锡**（白底 + 深蓝 #0A2540 + 麦肯锡红 #C8102E，⭐⭐⭐⭐⭐ 4 轮定稿），脚本在 `toolbox/xhs_mckinsey.py` - **B标** = **V0 主标识**（左上 E 圆标 + ERIC & B166ER + 右下 B166ER EST. 标 + 红方块，必带 IP 资产） 我先读现有脚本，复用它的设计系统（而不是我自创的深蓝风）。
 [main/sessions/main/5be7eb87-2503-4ae9-bde8-dfff077d4de1.jsonl#L54] Assistant: 完全清楚了。沉淀的范式是 **V3 Swiss Modern（小红书研报式，Eric 定稿）**：燕麦白底 + 黑 + 朱红 `#d62828` + 暗蓝 + IBM Plex Mono 小标 + Cormorant Garamond 衬线数字 + 网格线背景；**B标** = 黑底金字 B 圆徽章 + 统一署名「ERIC的B166ER出品」+ 盲水印。还明确「no italics（Eric 三令五申）」。 我现在按这个范式整体重做 16 张图。
 [main/sessions/main/5be7eb87-2503-4ae9-bde8-dfff077d4de1.jsonl#L70] Assistant: 第 3 张卡在 Google Fonts 外网加载（国内网络超时）。修复：移除外网字体请求，改用 Windows 本地字体（微软雅黑/宋体/Georgia/Consolas）。
 [main/sessions/main/5be7eb87-2503-4ae9-bde8-dfff077d4de1.jsonl#L86] Assistant: 进程因 exec 的 180s 超时被杀（盲水印让每张变慢，16 张需 ~400s）。改用后台运行，不受超时限制。

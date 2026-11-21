@@ -548,6 +548,439 @@ def c25():
     return True, "4 组基准逐项一致（IRR/静态/动态回收/NPV）｜引擎默认行为未漂移", []
 
 
+# ---------------- C26 直觉预判台账必须可审计 ----------------
+@check("C26", "直觉预判台账每条记录必须有 falsifier 与数字 confidence", "R68：Eric 的强直觉若只在事后自我评分，则永远无法证伪、无法校准、无法升级为资产；登记即必须带证伪条件与数字置信度")
+def c26():
+    p = os.path.join(ROOT, "memory", "predictions", "intuition.jsonl")
+    if not os.path.exists(p):
+        return True, "无台账文件（未触发）", []
+    bad = []
+    n = 0
+    try:
+        with open(p, encoding="utf-8") as f:
+            for i, line in enumerate(f, 1):
+                line = line.strip()
+                if not line:
+                    continue
+                n += 1
+                try:
+                    r = json.loads(line)
+                except Exception as e:
+                    bad.append("第%d行 JSON 解析失败 %s" % (i, str(e)[:40]))
+                    continue
+                rid = r.get("id", "?")
+                if not str(r.get("claim", "")).strip():
+                    bad.append("%s claim 为空" % rid)
+                if not str(r.get("falsifier", "")).strip():
+                    bad.append("%s 缺 falsifier" % rid)
+                c = r.get("confidence")
+                if not isinstance(c, (int, float)) or not (0 <= float(c) <= 1):
+                    bad.append("%s confidence 非 0-1 数字: %r" % (rid, c))
+                if r.get("registration") not in ("live", "retrospective"):
+                    bad.append("%s registration 非法: %r" % (rid, r.get("registration")))
+                for k in ("as_of", "domain", "direction", "horizon_months", "basis"):
+                    if r.get(k) in (None, ""):
+                        bad.append("%s 缺 %s" % (rid, k))
+    except Exception as e:
+        return False, "台账读取失败 %s" % str(e)[:60], []
+    if bad:
+        return False, "台账 %d 条中 %d 项不合规: %s" % (n, len(bad), "; ".join(bad[:3])), bad[:5]
+    return True, "台账 %d 条全部含 falsifier＋数字 confidence＋合法 registration" % n, []
+
+
+# ---------------- CC27 纹样底库可检索（2026-11-19 纹样内化新增） ----------------
+@check("C27", "纹样底库须存在、可检索、且技能已入注册表", "《纹样设计速查手册》内化后必须能被路由调用，否则等于没吸收")
+def c27():
+    idx = os.path.join(ROOT, "output", "book_纹样设计速查手册", "纹样索引.json")
+    sk = os.path.join(ROOT, "skills", "pattern-design-cn", "SKILL.md")
+    if not os.path.exists(idx):
+        return False, "缺纹样索引", []
+    if not os.path.exists(sk):
+        return False, "缺 pattern-design-cn 技能", []
+    try:
+        P = json.load(open(idx, encoding="utf-8"))
+    except Exception as e:
+        return False, "索引解析失败 " + str(e)[:50], []
+    n = len(P.get("index_meihua", [])) + len(P.get("numbered_4722198", []))
+    if n < 100:
+        return False, "底库条目仅 " + str(n) + " 条，覆盖不足", []
+    reg = os.path.join(ROOT, "output", "audit_skills", "SKILL_REGISTRY.json")
+    if not os.path.exists(reg):
+        return False, "缺技能注册表", []
+    names = {x["name"] for x in json.load(open(reg, encoding="utf-8"))}
+    if "pattern-design-cn" not in names:
+        return False, "pattern-design-cn 未入注册表（路由不到）", []
+    try:
+        out = subprocess.run([sys.executable,
+                              os.path.join(ROOT, "skills", "pattern-design-cn", "scripts", "pattern_index.py"),
+                              "search", "水"], capture_output=True, timeout=90)
+        o = out.stdout.decode("utf-8", "replace")
+    except Exception as e:
+        return False, "检索器执行失败 " + str(e)[:40], []
+    if "命中" not in o:
+        return False, "检索器无输出", []
+    return True, "纹样底库 " + str(n) + " 条 ｜ 技能已入册 ｜ 检索器可执行", []
+
+# ---------------- C27 履历真源一致性：虚构任职实体清零 ----------------
+@check("C28", "履历真源一致性：虚构任职实体清零 + 真源文件存在", "R69：把乱码猜成履历并据此写人物画像＝虚构材料→虚构引语→虚构结论；引用 Eric 履历只认唯一真源")
+def c27():
+    forbid = ["国宾凯悦", "国奥元禧", "重庆博升", "瑞珀酒店集团"]
+    bad = []
+    for rel in ("MEMORY.md", "USER.md"):
+        p = os.path.join(ROOT, rel)
+        if not os.path.exists(p):
+            continue
+        c = open(p, encoding="utf-8", errors="replace").read()
+        for k in forbid:
+            if k in c:
+                bad.append("%s 含 %s" % (rel, k))
+    auth = os.path.join(ROOT, "memory", "eric-career-authoritative.md")
+    if not os.path.exists(auth):
+        bad.append("缺 memory/eric-career-authoritative.md")
+    else:
+        ac = open(auth, encoding="utf-8", errors="replace").read()
+        for k in forbid:
+            if k not in ac:
+                bad.append("真源未列禁用实体 %s" % k)
+        for need in ("岷山", "远途", "丽苑维景", "共享维景", "安逸", "中旅"):
+            if need not in ac:
+                bad.append("真源缺节点 %s" % need)
+    mdir = os.path.join(ROOT, "memory")
+    for dp, dn, fn in os.walk(mdir):
+        dn[:] = [x for x in dn if x != "__pycache__"]
+        for f in fn:
+            if not f.endswith(".md"):
+                continue
+            p = os.path.join(dp, f)
+            c = open(p, encoding="utf-8", errors="replace").read()
+            for k in forbid:
+                if k in c and not any(m in c for m in ("虚构", "严禁", "污染", "禁用")):
+                    bad.append("%s 含 %s 且无错误标记" % (os.path.relpath(p, ROOT), k))
+    if bad:
+        return False, "履历真源不一致 %d 项: %s" % (len(bad), "; ".join(bad[:4])), bad[:6]
+    return True, "MEMORY/USER 虚构任职实体清零｜真源存在且六节点齐全｜memory 残留均带错误标记", []
+
+
+# ---------------- C28 首日档案必须带乱码标注并由解码正本替代 ----------------
+@check("C29", "首日档案必须降级标注并由真源替代引用", "R69：首日档案是 2026-02-12 简历 PDF 视觉转写(OCR)产物，含转写错字；只能作背景参考，引用必须经真源")
+def c29():
+    p = os.path.join(ROOT, "memory", "user-knowledge-base.md")
+    auth = os.path.join(ROOT, "memory", "eric-career-authoritative.md")
+    if not os.path.exists(p):
+        return True, "无首日档案（未触发）", []
+    if not os.path.exists(auth):
+        return False, "缺真源 memory/eric-career-authoritative.md", ["缺真源"]
+    ac = open(auth, encoding="utf-8", errors="replace").read()
+    bad = []
+    for need in ("背景参考", "OCR", "源优先级", "维景", "远途"):
+        if need not in ac:
+            bad.append("真源缺标注 %s" % need)
+    u = os.path.join(ROOT, "USER.md")
+    if os.path.exists(u):
+        uc = open(u, encoding="utf-8", errors="replace").read()
+        if "eric-career-authoritative" not in uc:
+            bad.append("USER.md 未指向真源")
+        if "首日档案" not in uc or "背景参考" not in uc:
+            bad.append("USER.md 未标注首日档案为背景参考")
+    if bad:
+        return False, "首日档案治理不完整 %d 项: %s" % (len(bad), "; ".join(bad[:4])), bad[:6]
+    return True, "首日档案已降级为背景参考｜真源含源优先级与维景/远途口径｜USER.md 已指向真源", []
+
+
+# ---------------- C30 履历口径一致性（维景/远途） ----------------
+@check("C30", "履历口径一致性：真源履历表与 USER.md 同为维景/远途口径，OCR 错字与虚构实体清零", "R69-b/R69-c：首日档案的「美居/元图」是 OCR 错字（正解维景/远途），且不得用行业常识补全出虚构实体")
+def c30():
+    auth = os.path.join(ROOT, "memory", "eric-career-authoritative.md")
+    u = os.path.join(ROOT, "USER.md")
+    bad = []
+    if not os.path.exists(auth):
+        return False, "缺真源 memory/eric-career-authoritative.md", ["缺真源"]
+    ac = open(auth, encoding="utf-8", errors="replace").read()
+    for need in ("维景", "远途", "禁用清单", "源优先级"):
+        if need not in ac:
+            bad.append("真源缺 %s" % need)
+    FORBID = ("美居", "元图", "国宾凯悦", "国奥元禧", "重庆博升", "瑞珀酒店集团", "首旅如家")
+    # 真源 §1 履历表内：零容忍
+    m = re.search(r"## 1\..*?(?=\n## 2\.)", ac, re.S)
+    if not m:
+        bad.append("真源找不到 §1 履历表")
+    else:
+        rows = [x for x in m.group(0).splitlines() if x.strip().startswith("|")]
+        for forbid in FORBID:
+            for row in rows:
+                if forbid in row:
+                    bad.append("真源履历表含禁用实体 %s" % forbid)
+    # 真源其余部分：若提及禁用实体，必须带标注（说明它是 OCR 错字/禁用项）
+    for n, l in enumerate(ac.splitlines(), 1):
+        for forbid in FORBID:
+            if forbid in l and not any(k in l for k in ("OCR", "错字", "禁用", "虚构", "转写", "行业对标", "合理性检验")):
+                bad.append("真源 L%d 提及 %s 但无标注" % (n, forbid))
+    # USER.md：履历表内零容忍；表外提及必须带标注
+    if os.path.exists(u):
+        uc = open(u, encoding="utf-8", errors="replace").read()
+        for need in ("丽苑维景", "共享维景"):
+            if need not in uc:
+                bad.append("USER.md 缺 %s" % need)
+        mm = re.search(r"### 实际工作经历.*?(?=\n### )", uc, re.S)
+        if not mm:
+            bad.append("USER.md 找不到实际工作经历表")
+        else:
+            rows = [x for x in mm.group(0).splitlines() if x.strip().startswith("|")]
+            for forbid in FORBID:
+                for row in rows:
+                    if forbid in row:
+                        bad.append("USER.md 履历表含禁用实体 %s" % forbid)
+        for n, l in enumerate(uc.splitlines(), 1):
+            for forbid in FORBID:
+                if forbid in l and not any(k in l for k in ("OCR", "错字", "禁用", "虚构", "转写", "背景参考", "行业对标", "首日档案")):
+                    bad.append("USER.md L%d 提及 %s 但无标注" % (n, forbid))
+    if bad:
+        return False, "履历口径不一致 %d 项: %s" % (len(bad), "; ".join(bad[:4])), bad[:6]
+    return True, "真源与 USER.md 履历表同为维景/远途口径｜OCR 错字与虚构实体清零（仅存标注式说明）", []
+
+
+# ---------------- C31 工具层：一次性 PDF 抽取脚本不得回流 toolbox 根目录 ----------------
+@check("C31", "一次性 PDF 抽取脚本不得回流 toolbox 根目录", "2026-11-20 教训：每遇一份新 PDF 就复制一份 dump_pdf_xx.py，逻辑完全相同只改写死路径 —— 5 件并存把 C07 顶到 FAIL。正本已参数化落到 skills/pdf-extract/scripts/pdf_extract.py")
+def c31():
+    tb = os.path.join(ROOT, "toolbox")
+    bad = []
+    for p in glob.glob(os.path.join(tb, "dump_pdf*.py")):
+        bad.append(os.path.basename(p))
+    skill = os.path.join(ROOT, "skills", "pdf-extract")
+    script = os.path.join(skill, "scripts", "pdf_extract.py")
+    sk_md = os.path.join(skill, "SKILL.md")
+    if not os.path.exists(script):
+        bad.append("缺正本 skills/pdf-extract/scripts/pdf_extract.py")
+    if not os.path.exists(sk_md):
+        bad.append("缺 skills/pdf-extract/SKILL.md")
+    else:
+        t = open(sk_md, encoding="utf-8", errors="replace").read()
+        if "description:" not in t:
+            bad.append("pdf-extract/SKILL.md 缺 description（无法被路由命中）")
+        if "PDF" not in t and "pdf" not in t:
+            bad.append("pdf-extract/SKILL.md 缺触发词")
+    arc = os.path.join(tb, "_archive", "pdf_dump_family_2026-11-20")
+    if not os.path.isdir(arc):
+        bad.append("缺归档目录 pdf_dump_family_2026-11-20")
+    else:
+        if not os.path.exists(os.path.join(arc, "00_归档清单_可回滚.md")):
+            bad.append("归档目录缺《00_归档清单_可回滚.md》")
+        kept = len([f for f in os.listdir(arc) if f.endswith(".py")])
+        if kept < 5:
+            bad.append("归档件仅 %d 件（应为 5 件，payload 全保留）" % kept)
+    if bad:
+        return False, "工具层 PDF 抽取治理未闭环: %s" % "; ".join(bad[:4]), bad[:6]
+    return True, "toolbox 根目录无 dump_pdf* ｜ 正本 pdf_extract.py 已落技能层 ｜ 归档 5 件带可回滚清单", []
+
+
+# ---------------- C32 KB 副本单一化：不得扫最旧副本下结论 ----------------
+@check("C32", "KB 检索须指向主副本，不得扫最旧副本", "2026-11-20 教训：判三份原件已丢失前只扫了 D:\anyi-ops-kb（旧副本，新媒体件只到 10-02），而它们完整存在于 workspace\anyi-ops-kb 主副本。11-06 全盘扫描已写明该教训，本次重复犯错")
+def c32():
+    primary = os.path.join(ROOT, "anyi-ops-kb")
+    guide = os.path.join(primary, "README_主副本说明.md")
+    bad = []
+    if not os.path.isdir(primary):
+        bad.append("主副本不存在 %s" % primary)
+    else:
+        if not os.path.exists(guide):
+            bad.append("主副本缺 README_主副本说明.md（KB 检索入口指引）")
+        else:
+            g = open(guide, encoding="utf-8", errors="replace").read()
+            for token in ("anyi-ops-kb", "README_主副本说明", "主副本"):
+                if token not in g:
+                    bad.append("主副本说明缺要素 %s" % token)
+        n = len([f for f in glob.glob(os.path.join(primary, "**", "*"), recursive=True)
+                 if os.path.isfile(f)])
+        if n < 1500:
+            bad.append("主副本文件数仅 %d（应 > 1500，疑似被误当作旧副本）" % n)
+    # 会话档案里的 KB 引用不得指向旧副本
+    for mem in ("anyi-newmedia-session-init_v2.md",):
+        mp = os.path.join(ROOT, "memory", mem)
+        if os.path.exists(mp):
+            t = open(mp, encoding="utf-8", errors="replace").read()
+            if "D:\anyi-ops-kb" in t and "workspace" not in t:
+                bad.append("%s 的 KB 引用指向旧副本 D:\anyi-ops-kb" % mem)
+    if bad:
+        return False, "KB 副本纪律未闭环: %s" % "; ".join(bad[:4]), bad[:6]
+    return True, "主副本 README 已立 ｜ 主副本文件数 > 1500 ｜ 会话档案引用指向主副本", []
+
+
+# ---------------- C33 原件层双跑：KB 是二手，桌面才是原件 ----------------
+@check("C33", "检索须 Desktop + KB 双跑，不得只查 KB", "2026-11-20 教训：11-06 桌面原件扫描已写明「KB ≠ 原件，任何全盘扫描必须 Desktop + KB 双跑」，但本轮仍只查 KB，漏掉桌面原件层，致拍板清单两条建议与原件矛盾。新增断言：原件层索引须存在、本板块会话档案须引用桌面原件路径")
+def c33():
+    primary = os.path.join(ROOT, "anyi-ops-kb")
+    idx = os.path.join(primary, "09_来源材料", "README_原件层索引.md")
+    bad = []
+    if not os.path.exists(idx):
+        bad.append("主副本缺 09_来源材料/README_原件层索引.md（KB≠原件 的检索入口）")
+    else:
+        g = open(idx, encoding="utf-8", errors="replace").read()
+        for token in ("Desktop", "双跑", "原件层", "桌面"):
+            if token not in g:
+                bad.append("原件层索引缺要素 %s" % token)
+        if "Desktop" not in g and "桌面" not in g:
+            bad.append("原件层索引未指向桌面原件路径")
+    # 本板块会话档案必须引用桌面原件层路径（否则下个会话又会只查 KB）
+    for mem in ("anyi-newmedia-session-init_v2.md",):
+        mp = os.path.join(ROOT, "memory", mem)
+        if os.path.exists(mp):
+            t = open(mp, encoding="utf-8", errors="replace").read()
+            if ("产业发展部" not in t) or ("Desktop" not in t and "桌面" not in t):
+                bad.append("%s 未引用桌面原件层路径" % mem)
+    if bad:
+        return False, "原件层双跑纪律未闭环: %s" % "; ".join(bad[:4]), bad[:6]
+    return True, "原件层索引已立 ｜ 桌面+KB 双跑纪律已写入 ｜ 会话档案引用桌面原件路径", []
+
+
+# ---------------- C34 交付件结构断言：存在 不等于 对位 ----------------
+@check("C34", "交付件须过结构校验：条款在位、编号连续、无残留", 
+"2026-11-20 教训：脚本锚点形态不匹配时静默跳过，条款丢失而断言不报；校验须含结构断言而非只查关键词")
+def c34():
+    desk = os.path.join("C:/Users/ericz/Desktop", "产业发展部", "新媒体业务")
+    docs = {
+        "安逸集团小红书矩阵建设需求标准_V1.1修订对照表_v1.2_2026-11-20.docx": ["C7", "C8", "C9", "C10", "C11", "审读", "3.0%"],
+        "安逸集团小红书矩阵_服务商方案重新征集函_草稿_v1.2_2026-11-20.docx": ["C7", "C8", "C9", "C10", "C11", "审读", "3.0%"],
+        "国堰单店闭环打样_执行清单_v1.0_2026-11-20.docx": ["213", "266.80", "40.45", "85%", "美舍", "W1", "审读", "C10"],
+        "D1过时表述_存量排查底稿_v1.0_2026-11-20.docx": ["唯一高星级涉外", "对外沟通记录", "温泉酒店", "管道", "19 条独立表述"],
+    }
+    bad = []
+    try:
+        import docx
+    except Exception:
+        return True, "未装 python-docx，跳过结构校验", []
+    for fn, kws in docs.items():
+        fp = os.path.join(desk, fn)
+        if not os.path.exists(fp):
+            bad.append("缺交付件 %s" % fn)
+            continue
+        try:
+            d = docx.Document(fp)
+        except Exception as e:
+            bad.append("无法解析 %s: %s" % (fn, str(e)[:30]))
+            continue
+        txt = [para.text for para in d.paragraphs]
+        for tb in d.tables:
+            for r in tb.rows:
+                txt.append(" | ".join(c.text for c in r.cells))
+        full = chr(10).join(txt)
+        for k in kws:
+            if k not in full:
+                bad.append("%s 缺要素 %s" % (fn, k))
+        if chr(0xFFFD) in full:
+            bad.append("%s 含 U+FFFD 编码损坏" % fn)
+        resid = [l for l in txt if l.strip().startswith("|")]
+        if resid:
+            bad.append("%s 有 %d 行 Markdown 残留" % (fn, len(resid)))
+        empty = sum(1 for tb in d.tables for r in tb.rows for c in r.cells if not c.text.strip())
+        if empty:
+            bad.append("%s 有 %d 个空单元格" % (fn, empty))
+        if not d.tables:
+            bad.append("%s 无表格" % fn)
+    # 有序列表编号连续性（征集函提交材料 1 至 16），不用正则避免转义坑
+    letter = os.path.join(desk, "安逸集团小红书矩阵_服务商方案重新征集函_草稿_v1.2_2026-11-20.docx")
+    if os.path.exists(letter):
+        d2 = docx.Document(letter)
+        nums = set()
+        for para in d2.paragraphs:
+            t = para.text.strip()
+            head = t.split(".", 1)[0]
+            if head.isdigit() and t[len(head):len(head) + 1] == ".":
+                nums.add(int(head))
+        miss = [i for i in range(1, 17) if i not in nums]
+        if miss:
+            bad.append("征集函提交材料编号缺失: %s" % miss)
+    if bad:
+        return False, "交付件结构校验未过: %s" % "; ".join(bad[:4]), bad[:6]
+    return True, "交付件结构校验通过 ｜ 要素在位 ｜ 提交材料 1-16 编号连续 ｜ 无残留无空单元格", []
+
+# ---------------- C35 Markdown 表格结构通则（源文件级） ----------------
+@check("C35", "md 表格块须唯一分隔行，docx 不得有垃圾分隔行", "2026-11-20 教训：修复脚本对每一行都补分隔符，一次修复反而制造垃圾行；断言须在 md 源级校验表格块，并在 docx 级校验无残留分隔行")
+def c35():
+    try:
+        import importlib.util
+        spec = importlib.util.spec_from_file_location("_c35_impl", os.path.join(ROOT, "toolbox", "_c35_impl.py"))
+        mod = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(mod)
+        desk = os.path.join("C:/Users/ericz/Desktop", "产业发展部", "新媒体业务")
+        return mod.check(ROOT, desk)
+    except Exception as e:
+        return False, "C35 执行异常 %s" % str(e)[:60], []
+
+
+# ---------------- C36 入境游数据卡（2026-11-20 新增） ----------------
+@check("C36", "入境游数据卡须齐备且生成器在库", "免签红利这条曲线是对外材料高频引用项：缺版/尺寸不符/生成器丢失 = 无法复现也无法交付")
+def c36():
+    out = os.path.join(ROOT, 'output', 'info_inbound')
+    need = {'inbound_9x16.png': (2160, 3840), 'inbound_3x4.png': (2160, 2880)}
+    miss = []
+    for fn, wh in need.items():
+        p = os.path.join(out, fn)
+        if not os.path.exists(p):
+            miss.append(fn + ':缺文件'); continue
+        try:
+            from PIL import Image
+            with Image.open(p) as im:
+                if (im.width, im.height) != wh:
+                    miss.append('%s:%dx%d' % (fn, im.width, im.height))
+        except Exception as e:
+            miss.append(fn + ':' + str(e)[:30])
+    if miss:
+        return False, '入境游数据卡缺失或尺寸不符: ' + '; '.join(miss[:3]), miss[:3]
+    gen = os.path.join(ROOT, 'skills', 'source-matrix-infographic', 'scripts', 'make_inbound_chart.py')
+    if not os.path.exists(gen):
+        return False, '缺 make_inbound_chart.py（不可复现）', []
+    tpl = os.path.join(ROOT, 'skills', 'source-matrix-infographic', 'data', 'tpl_inbound.html')
+    if not os.path.exists(tpl):
+        return False, '缺 tpl_inbound.html', []
+    return True, '两版齐备（2160×3840 / 2160×2880）｜生成器与模板在库', []
+
+# ---------------- C37 B 标品牌串统一（2026-11-21 新增） ----------------
+@check("C37", "B 标品牌串须统一为 ERIC & B166ER", "Eric 2026-11-21 明确：凡 ERIC<分隔符>B166ER 一律改 ERIC & B166ER；旧形态回流即此断言 FAIL")
+def c37():
+    import re as _re
+    seps = "\\s*[\\u00d7\\u2715Xx\\uff38*\\u00b7]\\s*"
+    old1 = _re.compile("ERIC" + seps + "B166ER", _re.I)
+    old2 = _re.compile("B166ER" + seps + "ERIC", _re.I)
+    exts = (".md", ".txt", ".html", ".htm", ".css", ".js", ".json", ".py", ".csv")
+    skip = {"node_modules", ".git", "__pycache__", "_archive", "site-packages", ".venv", "venv", "brand_rename_2026-11-21"}
+    roots = [os.path.join(ROOT, x) for x in ("memory", "toolbox", "anyi-ops-kb", "skills")]
+    bad = []
+    for rt in roots:
+        if not os.path.isdir(rt):
+            continue
+        for base, dirs, fs in os.walk(rt):
+            dirs[:] = [d for d in dirs if d not in skip and not d.startswith(".")]
+            for f in fs:
+                if os.path.splitext(f)[1].lower() not in exts:
+                    continue
+                p = os.path.join(base, f)
+                try:
+                    if os.path.getsize(p) > 6000000:
+                        continue
+                    tx = open(p, encoding="utf-8", errors="replace").read()
+                except Exception:
+                    continue
+                n = len(old1.findall(tx)) + len(old2.findall(tx))
+                if n:
+                    bad.append(os.path.relpath(p, ROOT) + ":" + str(n))
+    if bad:
+        return False, "旧 B 标形态残留 " + str(len(bad)) + " 处: " + "; ".join(bad[:3]), bad[:3]
+    return True, "B 标统一 ERIC & B166ER ｜ 两向旧形态 0 残留", []
+
+# ---------------- C38 B 标旧形态补扫（2026-11-21 新增） ----------------
+# 补 C37 的两个漏洞：① 扫描根补 outputs/ 与 obsidian-vault/ ② 判定改为逐行不跨行
+@check("C38", "B 标旧形态须在 outputs/ 与 obsidian-vault/ 一并归零", "2026-11-21 实测：C37 只扫 4 根且用跨行正则, outputs/ 与 obsidian-vault/ 长期漏网; 实现见 toolbox/_c38_impl.py")
+def c38():
+    try:
+        import importlib.util
+        spec = importlib.util.spec_from_file_location("_c38_impl", os.path.join(ROOT, "toolbox", "_c38_impl.py"))
+        mod = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(mod)
+        return mod.check(ROOT)
+    except Exception as e:
+        return False, "C38 执行异常 %s" % str(e)[:60], []
+
+
 def run(as_json=False):
     res = []
     npass = 0

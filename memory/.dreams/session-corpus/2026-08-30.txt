@@ -95,10 +95,10 @@
 [main/sessions/main/cec8c253-febc-4dc4-b07d-df52119e8e2a.jsonl#L85] Assistant: 你是对的。我去调你的经营分析范式。
 [main/sessions/main/867c586c-986d-4782-af9b-2d0fade32b4d.jsonl#L91] Assistant: 收到 5 条反馈。先搞清楚两件事：①「已有模板」在哪、长什么样；②「B标」指什么。
 [main/sessions/main/867c586c-986d-4782-af9b-2d0fade32b4d.jsonl#L95] Assistant: 找到了。「B标」= B166ER 主标识（V0 模板，五星级必带），「已有模板」= V6 东方气韵实战版（Eric 真正的主视觉）。让我读完整模板库规格 + 找到现有模板脚本。
-[main/sessions/main/867c586c-986d-4782-af9b-2d0fade32b4d.jsonl#L97] Assistant: 完全清楚了。关键结论： - **模板** = **V6 东方气韵实战版**（米黄渐变 + 朱红 + 黑 + 金边，Eric 主视觉 ⭐⭐⭐⭐⭐，酒店行业分析专用） - **B标** = V0 主标识（左上 E 圆标 + ERIC × B166ER，右下 B166ER EST 标 + 红方块） - V6 脚本在模板库里标注「缺失」，但案例 HTML 文件应该还在。我去找到实际模板文件。
+[main/sessions/main/867c586c-986d-4782-af9b-2d0fade32b4d.jsonl#L97] Assistant: 完全清楚了。关键结论： - **模板** = **V6 东方气韵实战版**（米黄渐变 + 朱红 + 黑 + 金边，Eric 主视觉 ⭐⭐⭐⭐⭐，酒店行业分析专用） - **B标** = V0 主标识（左上 E 圆标 + ERIC & B166ER，右下 B166ER EST 标 + 红方块） - V6 脚本在模板库里标注「缺失」，但案例 HTML 文件应该还在。我去找到实际模板文件。
 [main/sessions/main/867c586c-986d-4782-af9b-2d0fade32b4d.jsonl#L106] Assistant: 找到 V3-Pro 案例（含 B标 的 HTML）。V6 脚本缺失，但规格清晰。我先读 V3-Pro 的实际 HTML 看 B标 实现 + 整体骨架，再找 V6 东方气韵的案例源。
 [main/sessions/main/867c586c-986d-4782-af9b-2d0fade32b4d.jsonl#L109] Assistant: V3-Pro 的 B标 实现我拿到了（底部三栏：`PART 01/07` + `ERIC的B166ER出品` 红点标 + 右侧定位语）。现在看 V6 东方气韵的实际 PNG 确认它的视觉风格。
-[main/sessions/main/867c586c-986d-4782-af9b-2d0fade32b4d.jsonl#L115] Assistant: 完全清楚了。我之前用的是 V1「深空金色」风格（模板库里标注 ❌「模板不行」被否），**完全用错模板**。 正确做法：**V6 东方气韵实战版**（米黄纸底 + 暖褐 + 朱红 + 金边 + 圆形 B 标 + 居中 + 高密度），这是 Eric 的主视觉 ⭐⭐⭐⭐⭐。 B标 已确认：左上圆形深底「B」logo + `ERIC × B166ER`，右下同款 B logo，底部页脚署名。 现在重写脚本，用 V6 模板 + 提炼延展内容 + 居中 + 高密度。
+[main/sessions/main/867c586c-986d-4782-af9b-2d0fade32b4d.jsonl#L115] Assistant: 完全清楚了。我之前用的是 V1「深空金色」风格（模板库里标注 ❌「模板不行」被否），**完全用错模板**。 正确做法：**V6 东方气韵实战版**（米黄纸底 + 暖褐 + 朱红 + 金边 + 圆形 B 标 + 居中 + 高密度），这是 Eric 的主视觉 ⭐⭐⭐⭐⭐。 B标 已确认：左上圆形深底「B」logo + `ERIC & B166ER`，右下同款 B logo，底部页脚署名。 现在重写脚本，用 V6 模板 + 提炼延展内容 + 居中 + 高密度。
 [main/sessions/main/867c586c-986d-4782-af9b-2d0fade32b4d.jsonl#L121] Assistant: 6 张图生成。检查视觉质量（B标、居中、密度、配色）。
 [main/sessions/main/867c586c-986d-4782-af9b-2d0fade32b4d.jsonl#L123] Assistant: 图1、3、6 都确认到位（B标+居中+米黄朱红+密度都对）。图4 的检测有混淆，单独确认 2、4、5 三张。
 [main/sessions/main/867c586c-986d-4782-af9b-2d0fade32b4d.jsonl#L125] Assistant: 6 张图全部确认到位：B标、居中、米黄朱红、信息密度全部达标。替换桌面版本。

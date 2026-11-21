@@ -195,9 +195,9 @@ def draw_brand_b(draw, x, y, size=64, with_text=True):
     # 副文字 (右侧)
     if with_text:
         text_x = x + size + 16
-        # ERIC × B166ER
+        # ERIC & B166ER
         ef = fnt(int(size * 0.28), bold=True)
-        draw.text((text_x, y + size // 5), "ERIC × B166ER", fill=COL_INK, font=ef)
+        draw.text((text_x, y + size // 5), "ERIC & B166ER", fill=COL_INK, font=ef)
         # 共研出品
         cf = fnt(int(size * 0.22), bold=False)
         draw.text((text_x, y + size // 2 + 6), "共研出品", fill=COL_GRAY, font=cf)
@@ -402,7 +402,7 @@ def draw_page_v5(page, page_num, total_pages):
     # 左 B 标
     draw_brand_b(draw, side, bot_y + 25, size=64, with_text=True)
     # 右 日期
-    date_text = "ERIC × B166ER 共研出品 · 2026"
+    date_text = "ERIC & B166ER 共研出品 · 2026"
     df = fnt(20, bold=False)
     bbox = draw.textbbox((0, 0), date_text, font=df)
     dw = bbox[2] - bbox[0]
