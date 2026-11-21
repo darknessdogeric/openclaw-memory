@@ -1,0 +1,255 @@
+{
+ "stamp": "2026-11-21 11:06:19",
+ "new_form": "ERIC & B166ER / B166ER & ERIC",
+ "scope": "v3 清单同范围（AGENTS.md 排除：规则文档须引用被禁形态作举例）",
+ "fix": "v4 安全正则（不跨行）+ difflib 逐行校验 + 行数/尺寸写法双核",
+ "incident": "v3 用 \\s* 跨行匹配吞掉文档内容（AGENTS.md 42951->2948 B），已全量回滚并重做",
+ "items": [
+  {
+   "file": ".scratch/poster_v14_optimize.py",
+   "occurrences": 1,
+   "tracked": false,
+   "backup": "output/brand_rename_2026-11-21/backup/.scratch/poster_v14_optimize.py"
+  },
+  {
+   "file": "anyi/anyi-ops-kb/04_方法论/设计内化/B166ER设计方法手册_v1.0_2026-10-11.md",
+   "occurrences": 1,
+   "tracked": false,
+   "backup": "output/brand_rename_2026-11-21/backup/anyi/anyi-ops-kb/04_方法论/设计内化/B166ER设计方法手册_v1.0_2026-10-11.md"
+  },
+  {
+   "file": "anyi/anyi-ops-kb/04_行业研究/2026国庆酒店行业全景/小红书9图/p03_value.html",
+   "occurrences": 2,
+   "tracked": false,
+   "backup": "output/brand_rename_2026-11-21/backup/anyi/anyi-ops-kb/04_行业研究/2026国庆酒店行业全景/小红书9图/p03_value.html"
+  },
+  {
+   "file": "anyi/anyi-ops-kb/04_行业研究/2026国庆酒店行业全景/小红书9图/p04_audience.html",
+   "occurrences": 2,
+   "tracked": false,
+   "backup": "output/brand_rename_2026-11-21/backup/anyi/anyi-ops-kb/04_行业研究/2026国庆酒店行业全景/小红书9图/p04_audience.html"
+  },
+  {
+   "file": "anyi/anyi-ops-kb/04_行业研究/2026国庆酒店行业全景/小红书9图/p05_chapters.html",
+   "occurrences": 2,
+   "tracked": false,
+   "backup": "output/brand_rename_2026-11-21/backup/anyi/anyi-ops-kb/04_行业研究/2026国庆酒店行业全景/小红书9图/p05_chapters.html"
+  },
+  {
+   "file": "anyi/anyi-ops-kb/04_行业研究/2026国庆酒店行业全景/小红书9图/p06_templates.html",
+   "occurrences": 2,
+   "tracked": false,
+   "backup": "output/brand_rename_2026-11-21/backup/anyi/anyi-ops-kb/04_行业研究/2026国庆酒店行业全景/小红书9图/p06_templates.html"
+  },
+  {
+   "file": "anyi/anyi-ops-kb/04_行业研究/2026国庆酒店行业全景/小红书9图/p07_quotes.html",
+   "occurrences": 2,
+   "tracked": false,
+   "backup": "output/brand_rename_2026-11-21/backup/anyi/anyi-ops-kb/04_行业研究/2026国庆酒店行业全景/小红书9图/p07_quotes.html"
+  },
+  {
+   "file": "anyi/anyi-ops-kb/04_行业研究/2026国庆酒店行业全景/小红书9图/p08_delivery.html",
+   "occurrences": 2,
+   "tracked": false,
+   "backup": "output/brand_rename_2026-11-21/backup/anyi/anyi-ops-kb/04_行业研究/2026国庆酒店行业全景/小红书9图/p08_delivery.html"
+  },
+  {
+   "file": "anyi/anyi-ops-kb/04_行业研究/2026国庆酒店行业全景/小红书9图/p09_cta.html",
+   "occurrences": 2,
+   "tracked": false,
+   "backup": "output/brand_rename_2026-11-21/backup/anyi/anyi-ops-kb/04_行业研究/2026国庆酒店行业全景/小红书9图/p09_cta.html"
+  },
+  {
+   "file": "anyi/anyi-ops-kb/07_战略与改革/安逸数字化运营_三平台方法论_v1.0_已被v2.0取代_2026-08-24.md",
+   "occurrences": 1,
+   "tracked": false,
+   "backup": "output/brand_rename_2026-11-21/backup/anyi/anyi-ops-kb/07_战略与改革/安逸数字化运营_三平台方法论_v1.0_已被v2.0取代_2026-08-24.md"
+  },
+  {
+   "file": "memory/.dreams/session-corpus/2026-07-13.txt",
+   "occurrences": 1,
+   "tracked": true,
+   "backup": "output/brand_rename_2026-11-21/backup/memory/.dreams/session-corpus/2026-07-13.txt"
+  },
+  {
+   "file": "memory/.dreams/session-corpus/2026-07-25.txt",
+   "occurrences": 1,
+   "tracked": true,
+   "backup": "output/brand_rename_2026-11-21/backup/memory/.dreams/session-corpus/2026-07-25.txt"
+  },
+  {
+   "file": "memory/.dreams/session-corpus/2026-08-06.txt",
+   "occurrences": 1,
+   "tracked": true,
+   "backup": "output/brand_rename_2026-11-21/backup/memory/.dreams/session-corpus/2026-08-06.txt"
+  },
+  {
+   "file": "memory/.dreams/session-corpus/2026-08-08.txt",
+   "occurrences": 2,
+   "tracked": true,
+   "backup": "output/brand_rename_2026-11-21/backup/memory/.dreams/session-corpus/2026-08-08.txt"
+  },
+  {
+   "file": "memory/.dreams/session-corpus/2026-08-09.txt",
+   "occurrences": 2,
+   "tracked": true,
+   "backup": "output/brand_rename_2026-11-21/backup/memory/.dreams/session-corpus/2026-08-09.txt"
+  },
+  {
+   "file": "memory/.dreams/session-corpus/2026-08-26.txt",
+   "occurrences": 1,
+   "tracked": true,
+   "backup": "output/brand_rename_2026-11-21/backup/memory/.dreams/session-corpus/2026-08-26.txt"
+  },
+  {
+   "file": "memory/.dreams/session-corpus/2026-08-30.txt",
+   "occurrences": 2,
+   "tracked": true,
+   "backup": "output/brand_rename_2026-11-21/backup/memory/.dreams/session-corpus/2026-08-30.txt"
+  },
+  {
+   "file": "memory/.dreams/session-corpus/2026-09-19.txt",
+   "occurrences": 4,
+   "tracked": true,
+   "backup": "output/brand_rename_2026-11-21/backup/memory/.dreams/session-corpus/2026-09-19.txt"
+  },
+  {
+   "file": "obsidian-vault/.obsidian/app.json",
+   "occurrences": 1,
+   "tracked": true,
+   "backup": "output/brand_rename_2026-11-21/backup/obsidian-vault/.obsidian/app.json"
+  },
+  {
+   "file": "obsidian-vault/01-日记/2026-06-14.md",
+   "occurrences": 3,
+   "tracked": true,
+   "backup": "output/brand_rename_2026-11-21/backup/obsidian-vault/01-日记/2026-06-14.md"
+  },
+  {
+   "file": "obsidian-vault/20-我们共同维护的/00-Dashboard.md",
+   "occurrences": 1,
+   "tracked": true,
+   "backup": "output/brand_rename_2026-11-21/backup/obsidian-vault/20-我们共同维护的/00-Dashboard.md"
+  },
+  {
+   "file": "obsidian-vault/50-外部接入/B166ER-范式/B标-标准用法指南.html",
+   "occurrences": 11,
+   "tracked": true,
+   "backup": "output/brand_rename_2026-11-21/backup/obsidian-vault/50-外部接入/B166ER-范式/B标-标准用法指南.html"
+  },
+  {
+   "file": "obsidian-vault/50-外部接入/B166ER-范式/README-MOC.md",
+   "occurrences": 3,
+   "tracked": true,
+   "backup": "output/brand_rename_2026-11-21/backup/obsidian-vault/50-外部接入/B166ER-范式/README-MOC.md"
+  },
+  {
+   "file": "obsidian-vault/50-外部接入/B166ER-范式/supply-chain-gen-scripts/gen_v5_pillow.py",
+   "occurrences": 3,
+   "tracked": true,
+   "backup": "output/brand_rename_2026-11-21/backup/obsidian-vault/50-外部接入/B166ER-范式/supply-chain-gen-scripts/gen_v5_pillow.py"
+  },
+  {
+   "file": "obsidian-vault/50-外部接入/B166ER-范式/supply-chain-gen-scripts/gen_v6_fed.py",
+   "occurrences": 1,
+   "tracked": true,
+   "backup": "output/brand_rename_2026-11-21/backup/obsidian-vault/50-外部接入/B166ER-范式/supply-chain-gen-scripts/gen_v6_fed.py"
+  },
+  {
+   "file": "obsidian-vault/50-外部接入/cron-outputs/2026-07/10-34-B166ER-自进化周复合.md",
+   "occurrences": 1,
+   "tracked": false,
+   "backup": "output/brand_rename_2026-11-21/backup/obsidian-vault/50-外部接入/cron-outputs/2026-07/10-34-B166ER-自进化周复合.md"
+  },
+  {
+   "file": "obsidian-vault/50-外部接入/cron-outputs/2026-07/2026-07-20/10-35-B166ER-自进化周复合.md",
+   "occurrences": 1,
+   "tracked": false,
+   "backup": "output/brand_rename_2026-11-21/backup/obsidian-vault/50-外部接入/cron-outputs/2026-07/2026-07-20/10-35-B166ER-自进化周复合.md"
+  },
+  {
+   "file": "obsidian-vault/50-外部接入/cron-outputs/2026-08/10-34-B166ER-自进化周复合-1.md",
+   "occurrences": 1,
+   "tracked": false,
+   "backup": "output/brand_rename_2026-11-21/backup/obsidian-vault/50-外部接入/cron-outputs/2026-08/10-34-B166ER-自进化周复合-1.md"
+  },
+  {
+   "file": "obsidian-vault/50-外部接入/cron-outputs/2026-08/10-34-B166ER-自进化周复合.md",
+   "occurrences": 1,
+   "tracked": false,
+   "backup": "output/brand_rename_2026-11-21/backup/obsidian-vault/50-外部接入/cron-outputs/2026-08/10-34-B166ER-自进化周复合.md"
+  },
+  {
+   "file": "obsidian-vault/50-外部接入/cron-outputs/2026-08/13-15-B166ER-自进化周复合.md",
+   "occurrences": 1,
+   "tracked": false,
+   "backup": "output/brand_rename_2026-11-21/backup/obsidian-vault/50-外部接入/cron-outputs/2026-08/13-15-B166ER-自进化周复合.md"
+  },
+  {
+   "file": "obsidian-vault/50-外部接入/新媒体产品线/独立酒店境外市场拓展_交付包/01_主报告/完整版.md",
+   "occurrences": 19,
+   "tracked": false,
+   "backup": "output/brand_rename_2026-11-21/backup/obsidian-vault/50-外部接入/新媒体产品线/独立酒店境外市场拓展_交付包/01_主报告/完整版.md"
+  },
+  {
+   "file": "obsidian-vault/50-外部接入/新媒体产品线/酒管公司供应链工程-交付包-v1.0/XHS-output/小红书详情页-v2.0.md",
+   "occurrences": 2,
+   "tracked": false,
+   "backup": "output/brand_rename_2026-11-21/backup/obsidian-vault/50-外部接入/新媒体产品线/酒管公司供应链工程-交付包-v1.0/XHS-output/小红书详情页-v2.0.md"
+  },
+  {
+   "file": "outputs/report-2026-08_pred_v1_p1.html",
+   "occurrences": 1,
+   "tracked": false,
+   "backup": "output/brand_rename_2026-11-21/backup/outputs/report-2026-08_pred_v1_p1.html"
+  },
+  {
+   "file": "outputs/report-2026-08_pred_v1_p2.html",
+   "occurrences": 1,
+   "tracked": false,
+   "backup": "output/brand_rename_2026-11-21/backup/outputs/report-2026-08_pred_v1_p2.html"
+  },
+  {
+   "file": "outputs/report-2026-08_pred_v1_p3.html",
+   "occurrences": 1,
+   "tracked": false,
+   "backup": "output/brand_rename_2026-11-21/backup/outputs/report-2026-08_pred_v1_p3.html"
+  },
+  {
+   "file": "outputs/report-2026-Q2_review_p1.html",
+   "occurrences": 1,
+   "tracked": false,
+   "backup": "output/brand_rename_2026-11-21/backup/outputs/report-2026-Q2_review_p1.html"
+  },
+  {
+   "file": "outputs/report-2026-Q2_review_p2.html",
+   "occurrences": 1,
+   "tracked": false,
+   "backup": "output/brand_rename_2026-11-21/backup/outputs/report-2026-Q2_review_p2.html"
+  },
+  {
+   "file": "outputs/report-2026-Q2_review_p3.html",
+   "occurrences": 1,
+   "tracked": false,
+   "backup": "output/brand_rename_2026-11-21/backup/outputs/report-2026-Q2_review_p3.html"
+  },
+  {
+   "file": "outputs/国庆海报_朋友圈_1x1_2026-10-01.html",
+   "occurrences": 1,
+   "tracked": false,
+   "backup": "output/brand_rename_2026-11-21/backup/outputs/国庆海报_朋友圈_1x1_2026-10-01.html"
+  },
+  {
+   "file": "outputs/酒管公司供应链工程-交付包-v1.0/05-网盘说明.txt",
+   "occurrences": 1,
+   "tracked": false,
+   "backup": "output/brand_rename_2026-11-21/backup/outputs/酒管公司供应链工程-交付包-v1.0/05-网盘说明.txt"
+  },
+  {
+   "file": "xhs_ota_refund_v6/gen_v6.py",
+   "occurrences": 1,
+   "tracked": false,
+   "backup": "output/brand_rename_2026-11-21/backup/xhs_ota_refund_v6/gen_v6.py"
+  }
+ ]
+}

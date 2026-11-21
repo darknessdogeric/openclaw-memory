@@ -190,7 +190,7 @@ def draw_brand_b(draw, x, y, size=64, with_text=True):
     if with_text:
         text_x = x + size + 16
         ef = fnt(int(size * 0.28), bold=True)
-        draw.text((text_x, y + size // 5), "ERIC × B166ER", fill=COL_INK, font=ef)
+        draw.text((text_x, y + size // 5), "ERIC & B166ER", fill=COL_INK, font=ef)
         cf = fnt(int(size * 0.22), bold=False)
         draw.text((text_x, y + size // 2 + 6), "共研出品", fill=COL_GRAY, font=cf)
 

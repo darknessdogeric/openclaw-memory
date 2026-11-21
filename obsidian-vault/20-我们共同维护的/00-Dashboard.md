@@ -8,7 +8,7 @@ recovered: true
 recovered_from: B166ER session context (post-2026-07-12 12:25)
 ---
 
-# 🌏 ERIC × B166ER 战略引擎
+# 🌏 ERIC & B166ER 战略引擎
 > **唯一入口**。每天打开 Obsidian 看这一页就够了。
 > **设计原则**： 展开看 = 当日全貌 / 展开看 = 当日重点
 > **这是 Eric 友好视图**，不是 agent 索引页
