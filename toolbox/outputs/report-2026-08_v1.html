@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { width: 1080px; height: 1440px; background: #1a1f3a;
+         font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+         color: #f2ed3; overflow: hidden; }
+  .header { padding: 60px 50px 30px;
+            background: linear-gradient(135deg, #2d3561 0%, #1a1f3a 100%);
+            border-bottom: 2px solid #c9a96e; }
+  .badge { display: inline-block; padding: 8px 20px;
+           background: #c9a96e; color: #1a1f3a;
+           font-size: 22px; font-weight: 700;
+           border-radius: 24px; letter-spacing: 4px; }
+  .title { font-size: 56px; font-weight: 800; color: #f2ede3;
+           margin-top: 24px; line-height: 1.1;
+           letter-spacing: 2px; }
+  .subtitle { font-size: 24px; color: #c9a96e;
+              margin-top: 12px; letter-spacing: 6px; }
+  .meta { font-size: 18px; color: #9aa3c4; margin-top: 16px;
+          letter-spacing: 1px; }
+  .section { padding: 36px 50px 0; }
+  .section-title { font-size: 30px; font-weight: 700;
+                   color: #c9a96e; margin-bottom: 18px;
+                   display: flex; align-items: center;
+                   letter-spacing: 2px; }
+  .section-title::before { content: "▍"; color: #c9a96e;
+                            font-size: 36px; margin-right: 12px; }
+  .decision { background: rgba(45, 53, 97, 0.6);
+              padding: 20px 24px; margin-bottom: 14px;
+              border-left: 4px solid #c9a96e;
+              border-radius: 0 12px 12px 0; }
+  .decision-num { display: inline-block; width: 36px; height: 36px;
+                  background: #c9a96e; color: #1a1f3a;
+                  font-size: 20px; font-weight: 800;
+                  border-radius: 50%; text-align: center;
+                  line-height: 36px; margin-right: 12px; }
+  .decision-title { font-size: 22px; font-weight: 700;
+                    color: #f2ede3; margin-bottom: 8px; }
+  .decision-text { font-size: 18px; color: #d8def0;
+                   line-height: 1.55; }
+  .data-grid { display: grid; grid-template-columns: 1fr 1fr;
+               gap: 14px; margin-bottom: 16px; }
+  .data-card { background: rgba(45, 53, 97, 0.6);
+               padding: 18px; border-radius: 12px;
+               border: 1px solid rgba(201, 169, 110, 0.3); }
+  .data-label { font-size: 16px; color: #9aa3c4;
+                letter-spacing: 1px; margin-bottom: 8px; }
+  .data-value { font-size: 36px; font-weight: 800;
+                color: #f2ede3; line-height: 1;
+                font-family: "Helvetica Neue", Arial, sans-serif; }
+  .data-trend { font-size: 16px; margin-top: 6px; }
+  .trend-up { color: #6bcf7f; }
+  .trend-down { color: #ff7a7a; }
+  .trend-flat { color: #c9a96e; }
+  .compare { font-size: 14px; color: #9aa3c4;
+             margin-top: 4px; }
+  .footer { padding: 28px 50px;
+            background: rgba(26, 31, 58, 0.8);
+            border-top: 1px solid rgba(201, 169, 110, 0.3);
+            margin-top: 24px;
+            position: absolute; bottom: 0; width: 100%; }
+  .footer-line { font-size: 14px; color: #9aa3c4;
+                 text-align: center; letter-spacing: 2px; }
+  .footer-line strong { color: #c9a96e; }
+</style>
+</head>
+<body>
+  <div class="header">
+    <span class="badge">月度复盘 · 2026.08</span>
+    <div class="title">八月经营回顾</div>
+    <div class="subtitle">STR数据 · 集团经营 · 决策复盘</div>
+    <div class="meta">2026 年 9 月 15 日 09:00 GMT+8 编制</div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">本月 3 大决策</div>
+    <div class="decision">
+      <div class="decision-title">
+        <span class="decision-num">1</span>1244 战略升级版定型
+      </div>
+      <div class="decision-text">从既有 1234 战略升级为 1 战略定位+2 大功能+4 大业务+4 大行动,确立"政务保障+资产运营"双轮驱动框架。</div>
+    </div>
+    <div class="decision">
+      <div class="decision-title">
+        <span class="decision-num">2</span>6 大改造清单与锦江合资过会
+      </div>
+      <div class="decision-text">6 大改造(四川宾馆/花园/深圳川宾/华龙/总府皇冠/新良)投资 4.01 亿,改造后年现金毛流量+7500 万;锦江合资 51:49 股东协议通过。</div>
+    </div>
+    <div class="decision">
+      <div class="decision-title">
+        <span class="decision-num">3</span>十五五规划修订稿内化
+      </div>
+      <div class="decision-text">"以重为主、以重育轻"确立为五年核心原则,放弃轻资产输出优先的初期设想,2030 利润底线 ≥5,000 万。</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">行业关键数据 · STR</div>
+    <div class="data-grid">
+      <div class="data-card">
+        <div class="data-label">YTD 7 月 OCC</div>
+        <div class="data-value">99</div>
+        <div class="data-trend trend-down">↓ 1%</div>
+        <div class="compare">2025=100 基期</div>
+      </div>
+      <div class="data-card">
+        <div class="data-label">YTD 7 月 ADR</div>
+        <div class="data-value">102</div>
+        <div class="data-trend trend-up">↑ 2%</div>
+        <div class="compare">仅奢华+经济型正增长</div>
+      </div>
+      <div class="data-card">
+        <div class="data-label">暑期客房收入</div>
+        <div class="data-value">-0.4%</div>
+        <div class="data-trend trend-down">转负</div>
+        <div class="compare">供给 +2.4% / 需求 +0.3%</div>
+      </div>
+      <div class="data-card">
+        <div class="data-label">成渝暑期排名</div>
+        <div class="data-value">倒 1-3</div>
+        <div class="data-trend trend-down">重庆 -14% / 成都 -11%</div>
+        <div class="compare">24 个主要城市中垫底</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">安逸集团 2030 关键指标</div>
+    <div class="data-grid">
+      <div class="data-card">
+        <div class="data-label">管理酒店</div>
+        <div class="data-value">180+</div>
+        <div class="data-trend trend-up">家</div>
+        <div class="compare">当前 60+ 家</div>
+      </div>
+      <div class="data-card">
+        <div class="data-label">2030 利润底线</div>
+        <div class="data-value">5,000万</div>
+        <div class="data-trend trend-up">↑</div>
+        <div class="compare">力争 6,000 万</div>
+      </div>
+      <div class="data-card">
+        <div class="data-label">2025 实际利润</div>
+        <div class="data-value">-6,843万</div>
+        <div class="data-trend trend-down">↓</div>
+        <div class="compare">亏损面 ~50%</div>
+      </div>
+      <div class="data-card">
+        <div class="data-label">亏损面目标</div>
+        <div class="data-value">≤10%</div>
+        <div class="data-trend trend-up">↓ 40pp</div>
+        <div class="compare">2030 控制目标</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="footer-line">数据来源:STR 西部酒店峰会 2026 · 锦江/华住/亚朵财报 · 十五五规划修订稿 · anyi-ops-kb</div>
+    <div class="footer-line"><strong>3 大决策 · 4 项行业指标 · 4 项集团指标</strong> · 完整报告 memory/2026-08-月报.md</div>
+  </div>
+</body>
+</html>

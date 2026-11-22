@@ -1,0 +1,26 @@
+﻿{
+  "date": "2026-08-30",
+  "report_version": "v1.2",
+  "data_source": "web_search(2026-08-25~08-30) + trendradar昨日库(2026-08-29)",
+  "data_freshness_note": "trendradar MCP无2026-08-30数据(最新2026-08-29)，本报告以web_search实时数据为主",
+  "rss_fetch_status": "SIGKILL (进程超时)，使用昨日库+web_search补充",
+  "sections_completed": 16,
+  "key_findings": [
+    "美伊战争进入第6个月：经济战全面开打(Bessant经济D-Day+海军封锁)，战事进入消耗战阶段",
+    "中国房地产金融制度大革命：首付降至15%/贷款最长40年/预售先拿房再还贷，2021年以来最彻底改革",
+    "县域旅游超级周期确认：2797个县域/高星占比23%/80后均价526元，结构性升级非脉冲",
+    "GLM-5.3-Flash编程对标Claude旗舰，中国AI token使用量超60%（OpenRouter平台）",
+    "全球债券收益率飙升：美30Y 5.31%/英30Y 5.83%/德10Y 3.26%(2011最高)"
+  ],
+  "index_updated": true,
+  "glossary_entries_added": 5,
+  "predictions_entries_added": 5,
+  "dashboard_updated": false,
+  "obsidian_pushed": false,
+  "eval_metrics": {
+    "length_chars": 9702,
+    "sections_all_present": true,
+    "methodology_followed": true,
+    "output_path_correct": true
+  }
+}

@@ -1,0 +1,3456 @@
+{
+ "meta": {
+  "title": "纹样设计速查手册",
+  "author": "红糖美学 著",
+  "publisher": "人民邮电出版社（绘客）",
+  "pub_date": "2024-08",
+  "isbn": "9787115643353",
+  "pages": 328,
+  "price": 129.0,
+  "clc": "J51-62",
+  "keywords": "纹样设计-手册",
+  "scale": "1200多个中国传统纹样，13 大类，全彩铜版，32 开",
+  "sibling": {
+   "title": "纹样之美：中国传统经典纹样速查手册",
+   "publisher": "北京大学出版社",
+   "pub_date": "2024",
+   "isbn": "978-7-301-34428-6",
+   "pages": 239,
+   "note": "同作者姊妹版，目录更细（带页码），第一章为纹样简史"
+  }
+ },
+ "chapters_13": [
+  {
+   "no": "一",
+   "title": "云纹"
+  },
+  {
+   "no": "二",
+   "title": "几何纹"
+  },
+  {
+   "no": "三",
+   "title": "莲纹"
+  },
+  {
+   "no": "四",
+   "title": "牡丹纹"
+  },
+  {
+   "no": "五",
+   "title": "宝相花纹"
+  },
+  {
+   "no": "六",
+   "title": "缠枝纹"
+  },
+  {
+   "no": "七",
+   "title": "瓜果纹"
+  },
+  {
+   "no": "八",
+   "title": "龙纹"
+  },
+  {
+   "no": "九",
+   "title": "凤纹"
+  },
+  {
+   "no": "十",
+   "title": "兽面纹"
+  },
+  {
+   "no": "十一",
+   "title": "鸟纹"
+  },
+  {
+   "no": "十二",
+   "title": "蝶纹"
+  },
+  {
+   "no": "十三",
+   "title": "人物纹"
+  }
+ ],
+ "index_meihua": [
+  {
+   "name": "新石器時代的纹样特點",
+   "name_raw": "新石器時代的紋樣特點",
+   "page": 14,
+   "chapter_no": "一",
+   "chapter": "纹样简史"
+  },
+  {
+   "name": "商周時期的纹样特點",
+   "name_raw": "商周時期的紋樣特點",
+   "page": 15,
+   "chapter_no": "一",
+   "chapter": "纹样简史"
+  },
+  {
+   "name": "春秋戰國時期的纹样特點",
+   "name_raw": "春秋戰國時期的紋樣特點",
+   "page": 16,
+   "chapter_no": "一",
+   "chapter": "纹样简史"
+  },
+  {
+   "name": "六朝漢唐時期的纹样特點",
+   "name_raw": "六朝漢唐時期的紋樣特點",
+   "page": 17,
+   "chapter_no": "一",
+   "chapter": "纹样简史"
+  },
+  {
+   "name": "宋元時期的纹样特點",
+   "name_raw": "宋元時期的紋樣特點",
+   "page": 18,
+   "chapter_no": "一",
+   "chapter": "纹样简史"
+  },
+  {
+   "name": "明清時期的纹样特點",
+   "name_raw": "明清時期的紋樣特點",
+   "page": 19,
+   "chapter_no": "一",
+   "chapter": "纹样简史"
+  },
+  {
+   "name": "常見的纹样演变",
+   "name_raw": "常見的紋樣演變",
+   "page": 20,
+   "chapter_no": "一",
+   "chapter": "纹样简史"
+  },
+  {
+   "name": "龙纹的演变",
+   "name_raw": "龍紋的演變",
+   "page": 20,
+   "chapter_no": "一",
+   "chapter": "纹样简史"
+  },
+  {
+   "name": "凤纹的演变",
+   "name_raw": "鳳紋的演變",
+   "page": 21,
+   "chapter_no": "一",
+   "chapter": "纹样简史"
+  },
+  {
+   "name": "宝相花纹的演变",
+   "name_raw": "寶相花紋的演變",
+   "page": 22,
+   "chapter_no": "一",
+   "chapter": "纹样简史"
+  },
+  {
+   "name": "缠枝纹的演变",
+   "name_raw": "纏枝紋的演變",
+   "page": 23,
+   "chapter_no": "一",
+   "chapter": "纹样简史"
+  },
+  {
+   "name": "云纹",
+   "name_raw": "云紋",
+   "page": 26,
+   "chapter_no": "二",
+   "chapter": "几何物语"
+  },
+  {
+   "name": "云气纹",
+   "name_raw": "云氣紋",
+   "page": 27,
+   "chapter_no": "二",
+   "chapter": "几何物语"
+  },
+  {
+   "name": "变形云纹",
+   "name_raw": "變形云紋",
+   "page": 28,
+   "chapter_no": "二",
+   "chapter": "几何物语"
+  },
+  {
+   "name": "连锁卷云纹",
+   "name_raw": "連鎖卷云紋",
+   "page": 29,
+   "chapter_no": "二",
+   "chapter": "几何物语"
+  },
+  {
+   "name": "云頭十字纹",
+   "name_raw": "云頭十字紋",
+   "page": 29,
+   "chapter_no": "二",
+   "chapter": "几何物语"
+  },
+  {
+   "name": "变飾云气纹",
+   "name_raw": "變飾云氣紋",
+   "page": 29,
+   "chapter_no": "二",
+   "chapter": "几何物语"
+  },
+  {
+   "name": "云气走兽纹",
+   "name_raw": "云氣走獸紋",
+   "page": 29,
+   "chapter_no": "二",
+   "chapter": "几何物语"
+  },
+  {
+   "name": "四合云龙纹",
+   "name_raw": "四合云龍紋",
+   "page": 29,
+   "chapter_no": "二",
+   "chapter": "几何物语"
+  },
+  {
+   "name": "四合云鶴纹",
+   "name_raw": "四合云鶴紋",
+   "page": 30,
+   "chapter_no": "二",
+   "chapter": "几何物语"
+  },
+  {
+   "name": "连续云頭纹",
+   "name_raw": "連續云頭紋",
+   "page": 31,
+   "chapter_no": "二",
+   "chapter": "几何物语"
+  },
+  {
+   "name": "卷云纹",
+   "name_raw": "卷云紋",
+   "page": 31,
+   "chapter_no": "二",
+   "chapter": "几何物语"
+  },
+  {
+   "name": "云頭邊飾纹",
+   "name_raw": "云頭邊飾紋",
+   "page": 31,
+   "chapter_no": "二",
+   "chapter": "几何物语"
+  },
+  {
+   "name": "缠枝如意云纹",
+   "name_raw": "纏枝如意云紋",
+   "page": 31,
+   "chapter_no": "二",
+   "chapter": "几何物语"
+  },
+  {
+   "name": "四合如意云纹",
+   "name_raw": "四合如意云紋",
+   "page": 31,
+   "chapter_no": "二",
+   "chapter": "几何物语"
+  },
+  {
+   "name": "回纹",
+   "name_raw": "回紋",
+   "page": 32,
+   "chapter_no": "二",
+   "chapter": "几何物语"
+  },
+  {
+   "name": "如意回纹",
+   "name_raw": "如意回紋",
+   "page": 33,
+   "chapter_no": "二",
+   "chapter": "几何物语"
+  },
+  {
+   "name": "团龙回纹",
+   "name_raw": "團龍回紋",
+   "page": 34,
+   "chapter_no": "二",
+   "chapter": "几何物语"
+  },
+  {
+   "name": "如意连续回纹",
+   "name_raw": "如意連續回紋",
+   "page": 35,
+   "chapter_no": "二",
+   "chapter": "几何物语"
+  },
+  {
+   "name": "牡丹回纹",
+   "name_raw": "牡丹回紋",
+   "page": 35,
+   "chapter_no": "二",
+   "chapter": "几何物语"
+  },
+  {
+   "name": "四合如意回纹",
+   "name_raw": "四合如意回紋",
+   "page": 35,
+   "chapter_no": "二",
+   "chapter": "几何物语"
+  },
+  {
+   "name": "团龙万字回纹",
+   "name_raw": "團龍萬字回紋",
+   "page": 35,
+   "chapter_no": "二",
+   "chapter": "几何物语"
+  },
+  {
+   "name": "螭龙兽面回纹",
+   "name_raw": "螭龍獸面回紋",
+   "page": 35,
+   "chapter_no": "二",
+   "chapter": "几何物语"
+  },
+  {
+   "name": "盘肠纹",
+   "name_raw": "盤腸紋",
+   "page": 36,
+   "chapter_no": "二",
+   "chapter": "几何物语"
+  },
+  {
+   "name": "圓形盘肠纹",
+   "name_raw": "圓形盤腸紋",
+   "page": 37,
+   "chapter_no": "二",
+   "chapter": "几何物语"
+  },
+  {
+   "name": "朵花盘肠纹",
+   "name_raw": "朵花盤腸紋",
+   "page": 38,
+   "chapter_no": "二",
+   "chapter": "几何物语"
+  },
+  {
+   "name": "龟背盘肠纹",
+   "name_raw": "龜背盤腸紋",
+   "page": 38,
+   "chapter_no": "二",
+   "chapter": "几何物语"
+  },
+  {
+   "name": "龟背八宝盘肠纹",
+   "name_raw": "龜背八寶盤腸紋",
+   "page": 38,
+   "chapter_no": "二",
+   "chapter": "几何物语"
+  },
+  {
+   "name": "金鱼盘肠纹",
+   "name_raw": "金魚盤腸紋",
+   "page": 38,
+   "chapter_no": "二",
+   "chapter": "几何物语"
+  },
+  {
+   "name": "万字梅花盘肠纹",
+   "name_raw": "萬字梅花盤腸紋",
+   "page": 39,
+   "chapter_no": "二",
+   "chapter": "几何物语"
+  },
+  {
+   "name": "福寿盘肠纹",
+   "name_raw": "福壽盤腸紋",
+   "page": 39,
+   "chapter_no": "二",
+   "chapter": "几何物语"
+  },
+  {
+   "name": "葫蘆盘肠纹",
+   "name_raw": "葫蘆盤腸紋",
+   "page": 39,
+   "chapter_no": "二",
+   "chapter": "几何物语"
+  },
+  {
+   "name": "缠枝盘肠纹",
+   "name_raw": "纏枝盤腸紋",
+   "page": 39,
+   "chapter_no": "二",
+   "chapter": "几何物语"
+  },
+  {
+   "name": "锁子纹",
+   "name_raw": "鎖子紋",
+   "page": 40,
+   "chapter_no": "二",
+   "chapter": "几何物语"
+  },
+  {
+   "name": "回纹锁子纹",
+   "name_raw": "回紋鎖子紋",
+   "page": 41,
+   "chapter_no": "二",
+   "chapter": "几何物语"
+  },
+  {
+   "name": "夔龙朵花锁子纹",
+   "name_raw": "夔龍朵花鎖子紋",
+   "page": 42,
+   "chapter_no": "二",
+   "chapter": "几何物语"
+  },
+  {
+   "name": "朵花锁子纹",
+   "name_raw": "朵花鎖子紋",
+   "page": 43,
+   "chapter_no": "二",
+   "chapter": "几何物语"
+  },
+  {
+   "name": "锁子邊飾纹",
+   "name_raw": "鎖子邊飾紋",
+   "page": 43,
+   "chapter_no": "二",
+   "chapter": "几何物语"
+  },
+  {
+   "name": "如意锁子纹",
+   "name_raw": "如意鎖子紋",
+   "page": 43,
+   "chapter_no": "二",
+   "chapter": "几何物语"
+  },
+  {
+   "name": "龟背锁子纹",
+   "name_raw": "龜背鎖子紋",
+   "page": 43,
+   "chapter_no": "二",
+   "chapter": "几何物语"
+  },
+  {
+   "name": "几何锁子纹",
+   "name_raw": "幾何鎖子紋",
+   "page": 43,
+   "chapter_no": "二",
+   "chapter": "几何物语"
+  },
+  {
+   "name": "万字纹",
+   "name_raw": "萬字紋",
+   "page": 44,
+   "chapter_no": "二",
+   "chapter": "几何物语"
+  },
+  {
+   "name": "万字蝠纹",
+   "name_raw": "萬字蝠紋",
+   "page": 45,
+   "chapter_no": "二",
+   "chapter": "几何物语"
+  },
+  {
+   "name": "喜相逢朵花万字纹",
+   "name_raw": "喜相逢朵花萬字紋",
+   "page": 46,
+   "chapter_no": "二",
+   "chapter": "几何物语"
+  },
+  {
+   "name": "万字歲寒三友纹",
+   "name_raw": "萬字歲寒三友紋",
+   "page": 47,
+   "chapter_no": "二",
+   "chapter": "几何物语"
+  },
+  {
+   "name": "不斷頭万字纹",
+   "name_raw": "不斷頭萬字紋",
+   "page": 47,
+   "chapter_no": "二",
+   "chapter": "几何物语"
+  },
+  {
+   "name": "连续万字纹",
+   "name_raw": "連續萬字紋",
+   "page": 47,
+   "chapter_no": "二",
+   "chapter": "几何物语"
+  },
+  {
+   "name": "寿字万字纹",
+   "name_raw": "壽字萬字紋",
+   "page": 47,
+   "chapter_no": "二",
+   "chapter": "几何物语"
+  },
+  {
+   "name": "梅花方格万字纹",
+   "name_raw": "梅花方格萬字紋",
+   "page": 47,
+   "chapter_no": "二",
+   "chapter": "几何物语"
+  },
+  {
+   "name": "方胜纹",
+   "name_raw": "方勝紋",
+   "page": 48,
+   "chapter_no": "二",
+   "chapter": "几何物语"
+  },
+  {
+   "name": "方胜夔龙缠枝莲纹",
+   "name_raw": "方勝夔龍纏枝蓮紋",
+   "page": 49,
+   "chapter_no": "二",
+   "chapter": "几何物语"
+  },
+  {
+   "name": "山茶梅花方胜纹",
+   "name_raw": "山茶梅花方勝紋",
+   "page": 50,
+   "chapter_no": "二",
+   "chapter": "几何物语"
+  },
+  {
+   "name": "连錢方胜纹",
+   "name_raw": "連錢方勝紋",
+   "page": 50,
+   "chapter_no": "二",
+   "chapter": "几何物语"
+  },
+  {
+   "name": "几何方胜纹",
+   "name_raw": "幾何方勝紋",
+   "page": 50,
+   "chapter_no": "二",
+   "chapter": "几何物语"
+  },
+  {
+   "name": "缠枝方胜纹",
+   "name_raw": "纏枝方勝紋",
+   "page": 50,
+   "chapter_no": "二",
+   "chapter": "几何物语"
+  },
+  {
+   "name": "朵花方胜纹",
+   "name_raw": "朵花方勝紋",
+   "page": 51,
+   "chapter_no": "二",
+   "chapter": "几何物语"
+  },
+  {
+   "name": "云纹方胜纹",
+   "name_raw": "云紋方勝紋",
+   "page": 51,
+   "chapter_no": "二",
+   "chapter": "几何物语"
+  },
+  {
+   "name": "靈芝方胜纹",
+   "name_raw": "靈芝方勝紋",
+   "page": 51,
+   "chapter_no": "二",
+   "chapter": "几何物语"
+  },
+  {
+   "name": "勾莲方胜纹",
+   "name_raw": "勾蓮方勝紋",
+   "page": 51,
+   "chapter_no": "二",
+   "chapter": "几何物语"
+  },
+  {
+   "name": "龟背纹",
+   "name_raw": "龜背紋",
+   "page": 52,
+   "chapter_no": "二",
+   "chapter": "几何物语"
+  },
+  {
+   "name": "团夔龙朵花龟背纹",
+   "name_raw": "團夔龍朵花龜背紋",
+   "page": 53,
+   "chapter_no": "二",
+   "chapter": "几何物语"
+  },
+  {
+   "name": "球路龟背纹",
+   "name_raw": "球路龜背紋",
+   "page": 54,
+   "chapter_no": "二",
+   "chapter": "几何物语"
+  },
+  {
+   "name": "朵花龟背纹",
+   "name_raw": "朵花龜背紋",
+   "page": 55,
+   "chapter_no": "二",
+   "chapter": "几何物语"
+  },
+  {
+   "name": "几何龟背纹",
+   "name_raw": "幾何龜背紋",
+   "page": 55,
+   "chapter_no": "二",
+   "chapter": "几何物语"
+  },
+  {
+   "name": "团花龟背纹",
+   "name_raw": "團花龜背紋",
+   "page": 55,
+   "chapter_no": "二",
+   "chapter": "几何物语"
+  },
+  {
+   "name": "卷草几何龟背纹",
+   "name_raw": "卷草幾何龜背紋",
+   "page": 55,
+   "chapter_no": "二",
+   "chapter": "几何物语"
+  },
+  {
+   "name": "交腳龟背纹",
+   "name_raw": "交腳龜背紋",
+   "page": 55,
+   "chapter_no": "二",
+   "chapter": "几何物语"
+  },
+  {
+   "name": "如意纹",
+   "name_raw": "如意紋",
+   "page": 56,
+   "chapter_no": "二",
+   "chapter": "几何物语"
+  },
+  {
+   "name": "如意花卉纹",
+   "name_raw": "如意花卉紋",
+   "page": 57,
+   "chapter_no": "二",
+   "chapter": "几何物语"
+  },
+  {
+   "name": "八仙四合如意纹",
+   "name_raw": "八仙四合如意紋",
+   "page": 58,
+   "chapter_no": "二",
+   "chapter": "几何物语"
+  },
+  {
+   "name": "四合如意连续纹",
+   "name_raw": "四合如意連續紋",
+   "page": 59,
+   "chapter_no": "二",
+   "chapter": "几何物语"
+  },
+  {
+   "name": "如意靈芝纹",
+   "name_raw": "如意靈芝紋",
+   "page": 59,
+   "chapter_no": "二",
+   "chapter": "几何物语"
+  },
+  {
+   "name": "如意花草纹",
+   "name_raw": "如意花草紋",
+   "page": 59,
+   "chapter_no": "二",
+   "chapter": "几何物语"
+  },
+  {
+   "name": "玉蘭富貴如意纹",
+   "name_raw": "玉蘭富貴如意紋",
+   "page": 59,
+   "chapter_no": "二",
+   "chapter": "几何物语"
+  },
+  {
+   "name": "朵花四合如意纹",
+   "name_raw": "朵花四合如意紋",
+   "page": 59,
+   "chapter_no": "二",
+   "chapter": "几何物语"
+  },
+  {
+   "name": "八達暈纹",
+   "name_raw": "八達暈紋",
+   "page": 60,
+   "chapter_no": "二",
+   "chapter": "几何物语"
+  },
+  {
+   "name": "凤蝶八達暈纹",
+   "name_raw": "鳳蝶八達暈紋",
+   "page": 61,
+   "chapter_no": "二",
+   "chapter": "几何物语"
+  },
+  {
+   "name": "几何八達暈纹",
+   "name_raw": "幾何八達暈紋",
+   "page": 62,
+   "chapter_no": "二",
+   "chapter": "几何物语"
+  },
+  {
+   "name": "莲瓣八達暈纹",
+   "name_raw": "蓮瓣八達暈紋",
+   "page": 63,
+   "chapter_no": "二",
+   "chapter": "几何物语"
+  },
+  {
+   "name": "多邊形八達暈纹",
+   "name_raw": "多邊形八達暈紋",
+   "page": 63,
+   "chapter_no": "二",
+   "chapter": "几何物语"
+  },
+  {
+   "name": "朵花八達暈纹",
+   "name_raw": "朵花八達暈紋",
+   "page": 63,
+   "chapter_no": "二",
+   "chapter": "几何物语"
+  },
+  {
+   "name": "如意几何八達暈纹",
+   "name_raw": "如意幾何八達暈紋",
+   "page": 63,
+   "chapter_no": "二",
+   "chapter": "几何物语"
+  },
+  {
+   "name": "宝相花纹",
+   "name_raw": "寶相花紋",
+   "page": 66,
+   "chapter_no": "三",
+   "chapter": "植物之美"
+  },
+  {
+   "name": "折枝宝相花纹",
+   "name_raw": "折枝寶相花紋",
+   "page": 67,
+   "chapter_no": "三",
+   "chapter": "植物之美"
+  },
+  {
+   "name": "忍冬宝相花纹",
+   "name_raw": "忍冬寶相花紋",
+   "page": 68,
+   "chapter_no": "三",
+   "chapter": "植物之美"
+  },
+  {
+   "name": "牡丹宝相花纹",
+   "name_raw": "牡丹寶相花紋",
+   "page": 69,
+   "chapter_no": "三",
+   "chapter": "植物之美"
+  },
+  {
+   "name": "宝相变飾纹",
+   "name_raw": "寶相變飾紋",
+   "page": 69,
+   "chapter_no": "三",
+   "chapter": "植物之美"
+  },
+  {
+   "name": "卷草宝相花纹",
+   "name_raw": "卷草寶相花紋",
+   "page": 69,
+   "chapter_no": "三",
+   "chapter": "植物之美"
+  },
+  {
+   "name": "石榴花宝相花纹",
+   "name_raw": "石榴花寶相花紋",
+   "page": 69,
+   "chapter_no": "三",
+   "chapter": "植物之美"
+  },
+  {
+   "name": "团窠宝相花纹",
+   "name_raw": "團窠寶相花紋",
+   "page": 70,
+   "chapter_no": "三",
+   "chapter": "植物之美"
+  },
+  {
+   "name": "卷草莲瓣宝相花纹",
+   "name_raw": "卷草蓮瓣寶相花紋",
+   "page": 71,
+   "chapter_no": "三",
+   "chapter": "植物之美"
+  },
+  {
+   "name": "朵花宝相花纹",
+   "name_raw": "朵花寶相花紋",
+   "page": 71,
+   "chapter_no": "三",
+   "chapter": "植物之美"
+  },
+  {
+   "name": "朵花卷草宝相花纹",
+   "name_raw": "朵花卷草寶相花紋",
+   "page": 71,
+   "chapter_no": "三",
+   "chapter": "植物之美"
+  },
+  {
+   "name": "三兔宝相花纹",
+   "name_raw": "三兔寶相花紋",
+   "page": 71,
+   "chapter_no": "三",
+   "chapter": "植物之美"
+  },
+  {
+   "name": "团花纹",
+   "name_raw": "團花紋",
+   "page": 72,
+   "chapter_no": "三",
+   "chapter": "植物之美"
+  },
+  {
+   "name": "皮球团花花頭纹",
+   "name_raw": "皮球團花花頭紋",
+   "page": 73,
+   "chapter_no": "三",
+   "chapter": "植物之美"
+  },
+  {
+   "name": "卷草莲花团花纹",
+   "name_raw": "卷草蓮花團花紋",
+   "page": 74,
+   "chapter_no": "三",
+   "chapter": "植物之美"
+  },
+  {
+   "name": "小团花邊飾纹",
+   "name_raw": "小團花邊飾紋",
+   "page": 75,
+   "chapter_no": "三",
+   "chapter": "植物之美"
+  },
+  {
+   "name": "半团花卉纹",
+   "name_raw": "半團花卉紋",
+   "page": 75,
+   "chapter_no": "三",
+   "chapter": "植物之美"
+  },
+  {
+   "name": "花籃寿桃团花纹",
+   "name_raw": "花籃壽桃團花紋",
+   "page": 75,
+   "chapter_no": "三",
+   "chapter": "植物之美"
+  },
+  {
+   "name": "折枝团花纹",
+   "name_raw": "折枝團花紋",
+   "page": 75,
+   "chapter_no": "三",
+   "chapter": "植物之美"
+  },
+  {
+   "name": "聯珠团花纹",
+   "name_raw": "聯珠團花紋",
+   "page": 76,
+   "chapter_no": "三",
+   "chapter": "植物之美"
+  },
+  {
+   "name": "朵花团花纹",
+   "name_raw": "朵花團花紋",
+   "page": 77,
+   "chapter_no": "三",
+   "chapter": "植物之美"
+  },
+  {
+   "name": "茶花团花纹",
+   "name_raw": "茶花團花紋",
+   "page": 77,
+   "chapter_no": "三",
+   "chapter": "植物之美"
+  },
+  {
+   "name": "如意石榴团花纹",
+   "name_raw": "如意石榴團花紋",
+   "page": 77,
+   "chapter_no": "三",
+   "chapter": "植物之美"
+  },
+  {
+   "name": "莲瓣牡丹团花纹",
+   "name_raw": "蓮瓣牡丹團花紋",
+   "page": 77,
+   "chapter_no": "三",
+   "chapter": "植物之美"
+  },
+  {
+   "name": "柿蒂纹",
+   "name_raw": "柿蒂紋",
+   "page": 78,
+   "chapter_no": "三",
+   "chapter": "植物之美"
+  },
+  {
+   "name": "鸟兽柿蒂纹",
+   "name_raw": "鳥獸柿蒂紋",
+   "page": 79,
+   "chapter_no": "三",
+   "chapter": "植物之美"
+  },
+  {
+   "name": "圈頭几何柿蒂纹",
+   "name_raw": "圈頭幾何柿蒂紋",
+   "page": 80,
+   "chapter_no": "三",
+   "chapter": "植物之美"
+  },
+  {
+   "name": "连续柿蒂纹",
+   "name_raw": "連續柿蒂紋",
+   "page": 81,
+   "chapter_no": "三",
+   "chapter": "植物之美"
+  },
+  {
+   "name": "如意柿蒂纹",
+   "name_raw": "如意柿蒂紋",
+   "page": 81,
+   "chapter_no": "三",
+   "chapter": "植物之美"
+  },
+  {
+   "name": "小花柿蒂纹",
+   "name_raw": "小花柿蒂紋",
+   "page": 81,
+   "chapter_no": "三",
+   "chapter": "植物之美"
+  },
+  {
+   "name": "忍冬圈頭柿蒂纹",
+   "name_raw": "忍冬圈頭柿蒂紋",
+   "page": 81,
+   "chapter_no": "三",
+   "chapter": "植物之美"
+  },
+  {
+   "name": "柿蒂缠枝花卉纹",
+   "name_raw": "柿蒂纏枝花卉紋",
+   "page": 81,
+   "chapter_no": "三",
+   "chapter": "植物之美"
+  },
+  {
+   "name": "牡丹纹",
+   "name_raw": "牡丹紋",
+   "page": 82,
+   "chapter_no": "三",
+   "chapter": "植物之美"
+  },
+  {
+   "name": "折枝牡丹纹",
+   "name_raw": "折枝牡丹紋",
+   "page": 83,
+   "chapter_no": "三",
+   "chapter": "植物之美"
+  },
+  {
+   "name": "柿蒂缠枝牡丹纹",
+   "name_raw": "柿蒂纏枝牡丹紋",
+   "page": 84,
+   "chapter_no": "三",
+   "chapter": "植物之美"
+  },
+  {
+   "name": "折枝葡萄牡丹纹",
+   "name_raw": "折枝葡萄牡丹紋",
+   "page": 84,
+   "chapter_no": "三",
+   "chapter": "植物之美"
+  },
+  {
+   "name": "牡丹寿字纹",
+   "name_raw": "牡丹壽字紋",
+   "page": 84,
+   "chapter_no": "三",
+   "chapter": "植物之美"
+  },
+  {
+   "name": "回纹牡丹纹",
+   "name_raw": "回紋牡丹紋",
+   "page": 84,
+   "chapter_no": "三",
+   "chapter": "植物之美"
+  },
+  {
+   "name": "连续缠枝牡丹纹",
+   "name_raw": "連續纏枝牡丹紋",
+   "page": 85,
+   "chapter_no": "三",
+   "chapter": "植物之美"
+  },
+  {
+   "name": "卷草牡丹纹",
+   "name_raw": "卷草牡丹紋",
+   "page": 85,
+   "chapter_no": "三",
+   "chapter": "植物之美"
+  },
+  {
+   "name": "缠枝花瓶牡丹纹",
+   "name_raw": "纏枝花瓶牡丹紋",
+   "page": 85,
+   "chapter_no": "三",
+   "chapter": "植物之美"
+  },
+  {
+   "name": "花瓶牡丹纹",
+   "name_raw": "花瓶牡丹紋",
+   "page": 85,
+   "chapter_no": "三",
+   "chapter": "植物之美"
+  },
+  {
+   "name": "莲纹",
+   "name_raw": "蓮紋",
+   "page": 86,
+   "chapter_no": "三",
+   "chapter": "植物之美"
+  },
+  {
+   "name": "如意勾莲纹",
+   "name_raw": "如意勾蓮紋",
+   "page": 87,
+   "chapter_no": "三",
+   "chapter": "植物之美"
+  },
+  {
+   "name": "三多勾莲纹",
+   "name_raw": "三多勾蓮紋",
+   "page": 88,
+   "chapter_no": "三",
+   "chapter": "植物之美"
+  },
+  {
+   "name": "云頭莲花纹",
+   "name_raw": "云頭蓮花紋",
+   "page": 89,
+   "chapter_no": "三",
+   "chapter": "植物之美"
+  },
+  {
+   "name": "莲荷纹",
+   "name_raw": "蓮荷紋",
+   "page": 89,
+   "chapter_no": "三",
+   "chapter": "植物之美"
+  },
+  {
+   "name": "莲花邊飾纹",
+   "name_raw": "蓮花邊飾紋",
+   "page": 89,
+   "chapter_no": "三",
+   "chapter": "植物之美"
+  },
+  {
+   "name": "莲花团花纹",
+   "name_raw": "蓮花團花紋",
+   "page": 89,
+   "chapter_no": "三",
+   "chapter": "植物之美"
+  },
+  {
+   "name": "变體莲花纹",
+   "name_raw": "變體蓮花紋",
+   "page": 89,
+   "chapter_no": "三",
+   "chapter": "植物之美"
+  },
+  {
+   "name": "缠枝纹",
+   "name_raw": "纏枝紋",
+   "page": 90,
+   "chapter_no": "三",
+   "chapter": "植物之美"
+  },
+  {
+   "name": "缠枝莲纹",
+   "name_raw": "纏枝蓮紋",
+   "page": 91,
+   "chapter_no": "三",
+   "chapter": "植物之美"
+  },
+  {
+   "name": "缠枝牡丹纹",
+   "name_raw": "纏枝牡丹紋",
+   "page": 92,
+   "chapter_no": "三",
+   "chapter": "植物之美"
+  },
+  {
+   "name": "缠枝花叶邊飾纹",
+   "name_raw": "纏枝花葉邊飾紋",
+   "page": 93,
+   "chapter_no": "三",
+   "chapter": "植物之美"
+  },
+  {
+   "name": "缠枝草藤纹",
+   "name_raw": "纏枝草藤紋",
+   "page": 93,
+   "chapter_no": "三",
+   "chapter": "植物之美"
+  },
+  {
+   "name": "缠枝花卉纹",
+   "name_raw": "纏枝花卉紋",
+   "page": 93,
+   "chapter_no": "三",
+   "chapter": "植物之美"
+  },
+  {
+   "name": "渦形缠枝莲纹",
+   "name_raw": "渦形纏枝蓮紋",
+   "page": 93,
+   "chapter_no": "三",
+   "chapter": "植物之美"
+  },
+  {
+   "name": "八宝缠枝花卉纹",
+   "name_raw": "八寶纏枝花卉紋",
+   "page": 94,
+   "chapter_no": "三",
+   "chapter": "植物之美"
+  },
+  {
+   "name": "缠枝菊纹",
+   "name_raw": "纏枝菊紋",
+   "page": 95,
+   "chapter_no": "三",
+   "chapter": "植物之美"
+  },
+  {
+   "name": "蝶花缠枝纹",
+   "name_raw": "蝶花纏枝紋",
+   "page": 95,
+   "chapter_no": "三",
+   "chapter": "植物之美"
+  },
+  {
+   "name": "芙蓉缠枝纹",
+   "name_raw": "芙蓉纏枝紋",
+   "page": 95,
+   "chapter_no": "三",
+   "chapter": "植物之美"
+  },
+  {
+   "name": "菊花缠枝团花纹",
+   "name_raw": "菊花纏枝團花紋",
+   "page": 95,
+   "chapter_no": "三",
+   "chapter": "植物之美"
+  },
+  {
+   "name": "忍冬纹",
+   "name_raw": "忍冬紋",
+   "page": 96,
+   "chapter_no": "三",
+   "chapter": "植物之美"
+  },
+  {
+   "name": "变形茎蔓忍冬纹",
+   "name_raw": "變形莖蔓忍冬紋",
+   "page": 97,
+   "chapter_no": "三",
+   "chapter": "植物之美"
+  },
+  {
+   "name": "忍冬团花纹",
+   "name_raw": "忍冬團花紋",
+   "page": 98,
+   "chapter_no": "三",
+   "chapter": "植物之美"
+  },
+  {
+   "name": "几何忍冬纹",
+   "name_raw": "幾何忍冬紋",
+   "page": 99,
+   "chapter_no": "三",
+   "chapter": "植物之美"
+  },
+  {
+   "name": "连锁忍冬纹",
+   "name_raw": "連鎖忍冬紋",
+   "page": 99,
+   "chapter_no": "三",
+   "chapter": "植物之美"
+  },
+  {
+   "name": "忍冬花卉邊飾纹",
+   "name_raw": "忍冬花卉邊飾紋",
+   "page": 99,
+   "chapter_no": "三",
+   "chapter": "植物之美"
+  },
+  {
+   "name": "莲花忍冬纹",
+   "name_raw": "蓮花忍冬紋",
+   "page": 99,
+   "chapter_no": "三",
+   "chapter": "植物之美"
+  },
+  {
+   "name": "花卉忍冬纹",
+   "name_raw": "花卉忍冬紋",
+   "page": 99,
+   "chapter_no": "三",
+   "chapter": "植物之美"
+  },
+  {
+   "name": "卷草纹",
+   "name_raw": "卷草紋",
+   "page": 100,
+   "chapter_no": "三",
+   "chapter": "植物之美"
+  },
+  {
+   "name": "密體卷草纹",
+   "name_raw": "密體卷草紋",
+   "page": 101,
+   "chapter_no": "三",
+   "chapter": "植物之美"
+  },
+  {
+   "name": "缠枝卷草花卉纹",
+   "name_raw": "纏枝卷草花卉紋",
+   "page": 102,
+   "chapter_no": "三",
+   "chapter": "植物之美"
+  },
+  {
+   "name": "缠枝卷草纹",
+   "name_raw": "纏枝卷草紋",
+   "page": 102,
+   "chapter_no": "三",
+   "chapter": "植物之美"
+  },
+  {
+   "name": "如意莲花卷草纹",
+   "name_raw": "如意蓮花卷草紋",
+   "page": 102,
+   "chapter_no": "三",
+   "chapter": "植物之美"
+  },
+  {
+   "name": "花叶卷草团花纹",
+   "name_raw": "花葉卷草團花紋",
+   "page": 102,
+   "chapter_no": "三",
+   "chapter": "植物之美"
+  },
+  {
+   "name": "如意卷草纹",
+   "name_raw": "如意卷草紋",
+   "page": 103,
+   "chapter_no": "三",
+   "chapter": "植物之美"
+  },
+  {
+   "name": "西番莲缠枝卷草纹",
+   "name_raw": "西番蓮纏枝卷草紋",
+   "page": 103,
+   "chapter_no": "三",
+   "chapter": "植物之美"
+  },
+  {
+   "name": "卷草团花纹",
+   "name_raw": "卷草團花紋",
+   "page": 103,
+   "chapter_no": "三",
+   "chapter": "植物之美"
+  },
+  {
+   "name": "番莲花卷草纹",
+   "name_raw": "番蓮花卷草紋",
+   "page": 103,
+   "chapter_no": "三",
+   "chapter": "植物之美"
+  },
+  {
+   "name": "石榴纹",
+   "name_raw": "石榴紋",
+   "page": 104,
+   "chapter_no": "三",
+   "chapter": "植物之美"
+  },
+  {
+   "name": "石榴花結纹",
+   "name_raw": "石榴花結紋",
+   "page": 105,
+   "chapter_no": "三",
+   "chapter": "植物之美"
+  },
+  {
+   "name": "石榴花团花纹",
+   "name_raw": "石榴花團花紋",
+   "page": 106,
+   "chapter_no": "三",
+   "chapter": "植物之美"
+  },
+  {
+   "name": "石榴花邊飾纹",
+   "name_raw": "石榴花邊飾紋",
+   "page": 107,
+   "chapter_no": "三",
+   "chapter": "植物之美"
+  },
+  {
+   "name": "缠枝茶花石榴纹",
+   "name_raw": "纏枝茶花石榴紋",
+   "page": 107,
+   "chapter_no": "三",
+   "chapter": "植物之美"
+  },
+  {
+   "name": "卷草石榴纹",
+   "name_raw": "卷草石榴紋",
+   "page": 107,
+   "chapter_no": "三",
+   "chapter": "植物之美"
+  },
+  {
+   "name": "石榴花团花纹",
+   "name_raw": "石榴花團花紋",
+   "page": 107,
+   "chapter_no": "三",
+   "chapter": "植物之美"
+  },
+  {
+   "name": "蕉叶纹",
+   "name_raw": "蕉葉紋",
+   "page": 108,
+   "chapter_no": "三",
+   "chapter": "植物之美"
+  },
+  {
+   "name": "勾莲蕉叶纹",
+   "name_raw": "勾蓮蕉葉紋",
+   "page": 109,
+   "chapter_no": "三",
+   "chapter": "植物之美"
+  },
+  {
+   "name": "变形蕉叶纹",
+   "name_raw": "變形蕉葉紋",
+   "page": 110,
+   "chapter_no": "三",
+   "chapter": "植物之美"
+  },
+  {
+   "name": "回形蕉叶纹",
+   "name_raw": "回形蕉葉紋",
+   "page": 111,
+   "chapter_no": "三",
+   "chapter": "植物之美"
+  },
+  {
+   "name": "如意蕉叶纹",
+   "name_raw": "如意蕉葉紋",
+   "page": 111,
+   "chapter_no": "三",
+   "chapter": "植物之美"
+  },
+  {
+   "name": "蕉叶纹团花纹",
+   "name_raw": "蕉葉紋團花紋",
+   "page": 111,
+   "chapter_no": "三",
+   "chapter": "植物之美"
+  },
+  {
+   "name": "缠枝莲蕉叶纹",
+   "name_raw": "纏枝蓮蕉葉紋",
+   "page": 111,
+   "chapter_no": "三",
+   "chapter": "植物之美"
+  },
+  {
+   "name": "兽面蕉叶纹",
+   "name_raw": "獸面蕉葉紋",
+   "page": 111,
+   "chapter_no": "三",
+   "chapter": "植物之美"
+  },
+  {
+   "name": "折枝纹",
+   "name_raw": "折枝紋",
+   "page": 112,
+   "chapter_no": "三",
+   "chapter": "植物之美"
+  },
+  {
+   "name": "折枝花蝶纹",
+   "name_raw": "折枝花蝶紋",
+   "page": 113,
+   "chapter_no": "三",
+   "chapter": "植物之美"
+  },
+  {
+   "name": "折枝花卉天华纹",
+   "name_raw": "折枝花卉天華紋",
+   "page": 114,
+   "chapter_no": "三",
+   "chapter": "植物之美"
+  },
+  {
+   "name": "折枝海棠纹",
+   "name_raw": "折枝海棠紋",
+   "page": 115,
+   "chapter_no": "三",
+   "chapter": "植物之美"
+  },
+  {
+   "name": "折枝牡丹邊飾纹",
+   "name_raw": "折枝牡丹邊飾紋",
+   "page": 115,
+   "chapter_no": "三",
+   "chapter": "植物之美"
+  },
+  {
+   "name": "折枝玉蘭纹",
+   "name_raw": "折枝玉蘭紋",
+   "page": 115,
+   "chapter_no": "三",
+   "chapter": "植物之美"
+  },
+  {
+   "name": "折枝蝴蝶牡丹纹",
+   "name_raw": "折枝蝴蝶牡丹紋",
+   "page": 115,
+   "chapter_no": "三",
+   "chapter": "植物之美"
+  },
+  {
+   "name": "折枝牡丹团花纹",
+   "name_raw": "折枝牡丹團花紋",
+   "page": 115,
+   "chapter_no": "三",
+   "chapter": "植物之美"
+  },
+  {
+   "name": "梅花纹",
+   "name_raw": "梅花紋",
+   "page": 116,
+   "chapter_no": "三",
+   "chapter": "植物之美"
+  },
+  {
+   "name": "折枝梅花纹",
+   "name_raw": "折枝梅花紋",
+   "page": 117,
+   "chapter_no": "三",
+   "chapter": "植物之美"
+  },
+  {
+   "name": "连续梅纹",
+   "name_raw": "連續梅紋",
+   "page": 118,
+   "chapter_no": "三",
+   "chapter": "植物之美"
+  },
+  {
+   "name": "落花流水梅纹",
+   "name_raw": "落花流水梅紋",
+   "page": 119,
+   "chapter_no": "三",
+   "chapter": "植物之美"
+  },
+  {
+   "name": "折枝梅竹纹",
+   "name_raw": "折枝梅竹紋",
+   "page": 119,
+   "chapter_no": "三",
+   "chapter": "植物之美"
+  },
+  {
+   "name": "梅蝶纹",
+   "name_raw": "梅蝶紋",
+   "page": 119,
+   "chapter_no": "三",
+   "chapter": "植物之美"
+  },
+  {
+   "name": "松竹梅纹",
+   "name_raw": "松竹梅紋",
+   "page": 119,
+   "chapter_no": "三",
+   "chapter": "植物之美"
+  },
+  {
+   "name": "冰梅纹",
+   "name_raw": "冰梅紋",
+   "page": 119,
+   "chapter_no": "三",
+   "chapter": "植物之美"
+  },
+  {
+   "name": "葫蘆纹",
+   "name_raw": "葫蘆紋",
+   "page": 120,
+   "chapter_no": "三",
+   "chapter": "植物之美"
+  },
+  {
+   "name": "橫臥葫蘆纹",
+   "name_raw": "橫臥葫蘆紋",
+   "page": 121,
+   "chapter_no": "三",
+   "chapter": "植物之美"
+  },
+  {
+   "name": "海螺葫蘆纹",
+   "name_raw": "海螺葫蘆紋",
+   "page": 122,
+   "chapter_no": "三",
+   "chapter": "植物之美"
+  },
+  {
+   "name": "缠枝葫蘆纹",
+   "name_raw": "纏枝葫蘆紋",
+   "page": 122,
+   "chapter_no": "三",
+   "chapter": "植物之美"
+  },
+  {
+   "name": "葫蘆寿字纹",
+   "name_raw": "葫蘆壽字紋",
+   "page": 122,
+   "chapter_no": "三",
+   "chapter": "植物之美"
+  },
+  {
+   "name": "葫蘆万字纹",
+   "name_raw": "葫蘆萬字紋",
+   "page": 122,
+   "chapter_no": "三",
+   "chapter": "植物之美"
+  },
+  {
+   "name": "折枝葫蘆纹",
+   "name_raw": "折枝葫蘆紋",
+   "page": 123,
+   "chapter_no": "三",
+   "chapter": "植物之美"
+  },
+  {
+   "name": "蝙蝠葫蘆团花纹",
+   "name_raw": "蝙蝠葫蘆團花紋",
+   "page": 123,
+   "chapter_no": "三",
+   "chapter": "植物之美"
+  },
+  {
+   "name": "葫蘆团花纹",
+   "name_raw": "葫蘆團花紋",
+   "page": 123,
+   "chapter_no": "三",
+   "chapter": "植物之美"
+  },
+  {
+   "name": "缠枝如意葫蘆纹",
+   "name_raw": "纏枝如意葫蘆紋",
+   "page": 123,
+   "chapter_no": "三",
+   "chapter": "植物之美"
+  },
+  {
+   "name": "龙纹",
+   "name_raw": "龍紋",
+   "page": 126,
+   "chapter_no": "四",
+   "chapter": "祥瑞兽谱"
+  },
+  {
+   "name": "云蝠八宝金龙纹",
+   "name_raw": "云蝠八寶金龍紋",
+   "page": 127,
+   "chapter_no": "四",
+   "chapter": "祥瑞兽谱"
+  },
+  {
+   "name": "對龙云纹",
+   "name_raw": "對龍云紋",
+   "page": 128,
+   "chapter_no": "四",
+   "chapter": "祥瑞兽谱"
+  },
+  {
+   "name": "祥云行龙纹",
+   "name_raw": "祥云行龍紋",
+   "page": 129,
+   "chapter_no": "四",
+   "chapter": "祥瑞兽谱"
+  },
+  {
+   "name": "對龙纹",
+   "name_raw": "對龍紋",
+   "page": 129,
+   "chapter_no": "四",
+   "chapter": "祥瑞兽谱"
+  },
+  {
+   "name": "如意雙龙纹",
+   "name_raw": "如意雙龍紋",
+   "page": 129,
+   "chapter_no": "四",
+   "chapter": "祥瑞兽谱"
+  },
+  {
+   "name": "疊云团龙纹",
+   "name_raw": "疊云團龍紋",
+   "page": 129,
+   "chapter_no": "四",
+   "chapter": "祥瑞兽谱"
+  },
+  {
+   "name": "云龙戲珠纹",
+   "name_raw": "云龍戲珠紋",
+   "page": 130,
+   "chapter_no": "四",
+   "chapter": "祥瑞兽谱"
+  },
+  {
+   "name": "聯龕對立龙纹",
+   "name_raw": "聯龕對立龍紋",
+   "page": 131,
+   "chapter_no": "四",
+   "chapter": "祥瑞兽谱"
+  },
+  {
+   "name": "聯珠龙纹",
+   "name_raw": "聯珠龍紋",
+   "page": 131,
+   "chapter_no": "四",
+   "chapter": "祥瑞兽谱"
+  },
+  {
+   "name": "山石雙龙纹",
+   "name_raw": "山石雙龍紋",
+   "page": 131,
+   "chapter_no": "四",
+   "chapter": "祥瑞兽谱"
+  },
+  {
+   "name": "戲珠火龙纹",
+   "name_raw": "戲珠火龍紋",
+   "page": 131,
+   "chapter_no": "四",
+   "chapter": "祥瑞兽谱"
+  },
+  {
+   "name": "夔龙纹",
+   "name_raw": "夔龍紋",
+   "page": 132,
+   "chapter_no": "四",
+   "chapter": "祥瑞兽谱"
+  },
+  {
+   "name": "单體夔龙纹",
+   "name_raw": "單體夔龍紋",
+   "page": 133,
+   "chapter_no": "四",
+   "chapter": "祥瑞兽谱"
+  },
+  {
+   "name": "连续夔龙纹",
+   "name_raw": "連續夔龍紋",
+   "page": 134,
+   "chapter_no": "四",
+   "chapter": "祥瑞兽谱"
+  },
+  {
+   "name": "卷草夔龙纹",
+   "name_raw": "卷草夔龍紋",
+   "page": 135,
+   "chapter_no": "四",
+   "chapter": "祥瑞兽谱"
+  },
+  {
+   "name": "拐子夔龙纹",
+   "name_raw": "拐子夔龍紋",
+   "page": 135,
+   "chapter_no": "四",
+   "chapter": "祥瑞兽谱"
+  },
+  {
+   "name": "夔龙邊飾纹",
+   "name_raw": "夔龍邊飾紋",
+   "page": 135,
+   "chapter_no": "四",
+   "chapter": "祥瑞兽谱"
+  },
+  {
+   "name": "卷草雙夔龙纹",
+   "name_raw": "卷草雙夔龍紋",
+   "page": 135,
+   "chapter_no": "四",
+   "chapter": "祥瑞兽谱"
+  },
+  {
+   "name": "卷草寿字對夔龙纹",
+   "name_raw": "卷草壽字對夔龍紋",
+   "page": 135,
+   "chapter_no": "四",
+   "chapter": "祥瑞兽谱"
+  },
+  {
+   "name": "螭纹",
+   "name_raw": "螭紋",
+   "page": 136,
+   "chapter_no": "四",
+   "chapter": "祥瑞兽谱"
+  },
+  {
+   "name": "变形蟠螭纹",
+   "name_raw": "變形蟠螭紋",
+   "page": 137,
+   "chapter_no": "四",
+   "chapter": "祥瑞兽谱"
+  },
+  {
+   "name": "散點螭龙寿字纹",
+   "name_raw": "散點螭龍壽字紋",
+   "page": 138,
+   "chapter_no": "四",
+   "chapter": "祥瑞兽谱"
+  },
+  {
+   "name": "卷草螭纹",
+   "name_raw": "卷草螭紋",
+   "page": 139,
+   "chapter_no": "四",
+   "chapter": "祥瑞兽谱"
+  },
+  {
+   "name": "蟠螭龙纹",
+   "name_raw": "蟠螭龍紋",
+   "page": 139,
+   "chapter_no": "四",
+   "chapter": "祥瑞兽谱"
+  },
+  {
+   "name": "雙螭龙纹",
+   "name_raw": "雙螭龍紋",
+   "page": 139,
+   "chapter_no": "四",
+   "chapter": "祥瑞兽谱"
+  },
+  {
+   "name": "四花四螭纹",
+   "name_raw": "四花四螭紋",
+   "page": 139,
+   "chapter_no": "四",
+   "chapter": "祥瑞兽谱"
+  },
+  {
+   "name": "花卉云螭纹",
+   "name_raw": "花卉云螭紋",
+   "page": 139,
+   "chapter_no": "四",
+   "chapter": "祥瑞兽谱"
+  },
+  {
+   "name": "麒麟纹",
+   "name_raw": "麒麟紋",
+   "page": 140,
+   "chapter_no": "四",
+   "chapter": "祥瑞兽谱"
+  },
+  {
+   "name": "海水麒麟纹",
+   "name_raw": "海水麒麟紋",
+   "page": 141,
+   "chapter_no": "四",
+   "chapter": "祥瑞兽谱"
+  },
+  {
+   "name": "雙麒麟云纹",
+   "name_raw": "雙麒麟云紋",
+   "page": 142,
+   "chapter_no": "四",
+   "chapter": "祥瑞兽谱"
+  },
+  {
+   "name": "海水麒麟纹",
+   "name_raw": "海水麒麟紋",
+   "page": 142,
+   "chapter_no": "四",
+   "chapter": "祥瑞兽谱"
+  },
+  {
+   "name": "麒麟踏云纹",
+   "name_raw": "麒麟踏云紋",
+   "page": 142,
+   "chapter_no": "四",
+   "chapter": "祥瑞兽谱"
+  },
+  {
+   "name": "雙麒麟四合云纹",
+   "name_raw": "雙麒麟四合云紋",
+   "page": 142,
+   "chapter_no": "四",
+   "chapter": "祥瑞兽谱"
+  },
+  {
+   "name": "麒麟瓦當邊飾纹",
+   "name_raw": "麒麟瓦當邊飾紋",
+   "page": 143,
+   "chapter_no": "四",
+   "chapter": "祥瑞兽谱"
+  },
+  {
+   "name": "花草如意麒麟纹",
+   "name_raw": "花草如意麒麟紋",
+   "page": 143,
+   "chapter_no": "四",
+   "chapter": "祥瑞兽谱"
+  },
+  {
+   "name": "卷草麒麟祥云纹",
+   "name_raw": "卷草麒麟祥云紋",
+   "page": 143,
+   "chapter_no": "四",
+   "chapter": "祥瑞兽谱"
+  },
+  {
+   "name": "飞凤麒麟纹",
+   "name_raw": "飛鳳麒麟紋",
+   "page": 143,
+   "chapter_no": "四",
+   "chapter": "祥瑞兽谱"
+  },
+  {
+   "name": "四神纹",
+   "name_raw": "四神紋",
+   "page": 144,
+   "chapter_no": "四",
+   "chapter": "祥瑞兽谱"
+  },
+  {
+   "name": "四神銘文纹",
+   "name_raw": "四神銘文紋",
+   "page": 145,
+   "chapter_no": "四",
+   "chapter": "祥瑞兽谱"
+  },
+  {
+   "name": "单獨四神纹",
+   "name_raw": "單獨四神紋",
+   "page": 146,
+   "chapter_no": "四",
+   "chapter": "祥瑞兽谱"
+  },
+  {
+   "name": "青龙白虎纹",
+   "name_raw": "青龍白虎紋",
+   "page": 147,
+   "chapter_no": "四",
+   "chapter": "祥瑞兽谱"
+  },
+  {
+   "name": "四方神邊飾纹",
+   "name_raw": "四方神邊飾紋",
+   "page": 147,
+   "chapter_no": "四",
+   "chapter": "祥瑞兽谱"
+  },
+  {
+   "name": "白虎輔首纹",
+   "name_raw": "白虎輔首紋",
+   "page": 147,
+   "chapter_no": "四",
+   "chapter": "祥瑞兽谱"
+  },
+  {
+   "name": "兽面四神纹",
+   "name_raw": "獸面四神紋",
+   "page": 147,
+   "chapter_no": "四",
+   "chapter": "祥瑞兽谱"
+  },
+  {
+   "name": "八卦四神纹",
+   "name_raw": "八卦四神紋",
+   "page": 147,
+   "chapter_no": "四",
+   "chapter": "祥瑞兽谱"
+  },
+  {
+   "name": "兽面纹",
+   "name_raw": "獸面紋",
+   "page": 148,
+   "chapter_no": "四",
+   "chapter": "祥瑞兽谱"
+  },
+  {
+   "name": "雙鸟夔龙兽面纹",
+   "name_raw": "雙鳥夔龍獸面紋",
+   "page": 149,
+   "chapter_no": "四",
+   "chapter": "祥瑞兽谱"
+  },
+  {
+   "name": "聯珠兽面纹",
+   "name_raw": "聯珠獸面紋",
+   "page": 150,
+   "chapter_no": "四",
+   "chapter": "祥瑞兽谱"
+  },
+  {
+   "name": "對鸟兽面纹",
+   "name_raw": "對鳥獸面紋",
+   "page": 150,
+   "chapter_no": "四",
+   "chapter": "祥瑞兽谱"
+  },
+  {
+   "name": "虎頭兽面纹",
+   "name_raw": "虎頭獸面紋",
+   "page": 150,
+   "chapter_no": "四",
+   "chapter": "祥瑞兽谱"
+  },
+  {
+   "name": "回纹兽面纹",
+   "name_raw": "回紋獸面紋",
+   "page": 150,
+   "chapter_no": "四",
+   "chapter": "祥瑞兽谱"
+  },
+  {
+   "name": "兽面卷云纹",
+   "name_raw": "獸面卷云紋",
+   "page": 151,
+   "chapter_no": "四",
+   "chapter": "祥瑞兽谱"
+  },
+  {
+   "name": "云雷兽面纹",
+   "name_raw": "云雷獸面紋",
+   "page": 151,
+   "chapter_no": "四",
+   "chapter": "祥瑞兽谱"
+  },
+  {
+   "name": "雙龙兽面纹",
+   "name_raw": "雙龍獸面紋",
+   "page": 151,
+   "chapter_no": "四",
+   "chapter": "祥瑞兽谱"
+  },
+  {
+   "name": "凤纹",
+   "name_raw": "鳳紋",
+   "page": 154,
+   "chapter_no": "五",
+   "chapter": "鸟鸣花落"
+  },
+  {
+   "name": "雙凤菊花纹",
+   "name_raw": "雙鳳菊花紋",
+   "page": 155,
+   "chapter_no": "五",
+   "chapter": "鸟鸣花落"
+  },
+  {
+   "name": "卷草团凤纹",
+   "name_raw": "卷草團鳳紋",
+   "page": 156,
+   "chapter_no": "五",
+   "chapter": "鸟鸣花落"
+  },
+  {
+   "name": "祥云飞凤纹",
+   "name_raw": "祥云飛鳳紋",
+   "page": 157,
+   "chapter_no": "五",
+   "chapter": "鸟鸣花落"
+  },
+  {
+   "name": "聯珠夔凤纹",
+   "name_raw": "聯珠夔鳳紋",
+   "page": 157,
+   "chapter_no": "五",
+   "chapter": "鸟鸣花落"
+  },
+  {
+   "name": "折枝雙凤纹",
+   "name_raw": "折枝雙鳳紋",
+   "page": 157,
+   "chapter_no": "五",
+   "chapter": "鸟鸣花落"
+  },
+  {
+   "name": "八团夔凤纹",
+   "name_raw": "八團夔鳳紋",
+   "page": 157,
+   "chapter_no": "五",
+   "chapter": "鸟鸣花落"
+  },
+  {
+   "name": "夔凤銜花纹",
+   "name_raw": "夔鳳銜花紋",
+   "page": 158,
+   "chapter_no": "五",
+   "chapter": "鸟鸣花落"
+  },
+  {
+   "name": "朵花對凤纹",
+   "name_raw": "朵花對鳳紋",
+   "page": 159,
+   "chapter_no": "五",
+   "chapter": "鸟鸣花落"
+  },
+  {
+   "name": "飞凤花卉纹",
+   "name_raw": "飛鳳花卉紋",
+   "page": 159,
+   "chapter_no": "五",
+   "chapter": "鸟鸣花落"
+  },
+  {
+   "name": "花叶卷云雙凤纹",
+   "name_raw": "花葉卷云雙鳳紋",
+   "page": 159,
+   "chapter_no": "五",
+   "chapter": "鸟鸣花落"
+  },
+  {
+   "name": "對凤銜花纹",
+   "name_raw": "對鳳銜花紋",
+   "page": 159,
+   "chapter_no": "五",
+   "chapter": "鸟鸣花落"
+  },
+  {
+   "name": "鸟纹",
+   "name_raw": "鳥紋",
+   "page": 160,
+   "chapter_no": "五",
+   "chapter": "鸟鸣花落"
+  },
+  {
+   "name": "飞禽銜花纹",
+   "name_raw": "飛禽銜花紋",
+   "page": 161,
+   "chapter_no": "五",
+   "chapter": "鸟鸣花落"
+  },
+  {
+   "name": "聯珠對鸟銜花纹",
+   "name_raw": "聯珠對鳥銜花紋",
+   "page": 162,
+   "chapter_no": "五",
+   "chapter": "鸟鸣花落"
+  },
+  {
+   "name": "聯珠立鸟纹",
+   "name_raw": "聯珠立鳥紋",
+   "page": 163,
+   "chapter_no": "五",
+   "chapter": "鸟鸣花落"
+  },
+  {
+   "name": "回纹鸟纹",
+   "name_raw": "回紋鳥紋",
+   "page": 163,
+   "chapter_no": "五",
+   "chapter": "鸟鸣花落"
+  },
+  {
+   "name": "花蝶鱼鸟纹",
+   "name_raw": "花蝶魚鳥紋",
+   "page": 163,
+   "chapter_no": "五",
+   "chapter": "鸟鸣花落"
+  },
+  {
+   "name": "對鸟团花纹",
+   "name_raw": "對鳥團花紋",
+   "page": 163,
+   "chapter_no": "五",
+   "chapter": "鸟鸣花落"
+  },
+  {
+   "name": "回纹對鸟团花纹",
+   "name_raw": "回紋對鳥團花紋",
+   "page": 163,
+   "chapter_no": "五",
+   "chapter": "鸟鸣花落"
+  },
+  {
+   "name": "蝠纹",
+   "name_raw": "蝠紋",
+   "page": 164,
+   "chapter_no": "五",
+   "chapter": "鸟鸣花落"
+  },
+  {
+   "name": "缠枝蝠纹",
+   "name_raw": "纏枝蝠紋",
+   "page": 165,
+   "chapter_no": "五",
+   "chapter": "鸟鸣花落"
+  },
+  {
+   "name": "斜万字蝠纹",
+   "name_raw": "斜萬字蝠紋",
+   "page": 166,
+   "chapter_no": "五",
+   "chapter": "鸟鸣花落"
+  },
+  {
+   "name": "万福賀寿纹",
+   "name_raw": "萬福賀壽紋",
+   "page": 166,
+   "chapter_no": "五",
+   "chapter": "鸟鸣花落"
+  },
+  {
+   "name": "八团云蝠纹",
+   "name_raw": "八團云蝠紋",
+   "page": 166,
+   "chapter_no": "五",
+   "chapter": "鸟鸣花落"
+  },
+  {
+   "name": "五福捧寿纹",
+   "name_raw": "五福捧壽紋",
+   "page": 166,
+   "chapter_no": "五",
+   "chapter": "鸟鸣花落"
+  },
+  {
+   "name": "五蝠纹",
+   "name_raw": "五蝠紋",
+   "page": 167,
+   "chapter_no": "五",
+   "chapter": "鸟鸣花落"
+  },
+  {
+   "name": "云蝠纹",
+   "name_raw": "云蝠紋",
+   "page": 167,
+   "chapter_no": "五",
+   "chapter": "鸟鸣花落"
+  },
+  {
+   "name": "馨纹",
+   "name_raw": "馨紋",
+   "page": 167,
+   "chapter_no": "五",
+   "chapter": "鸟鸣花落"
+  },
+  {
+   "name": "五福寿字纹",
+   "name_raw": "五福壽字紋",
+   "page": 167,
+   "chapter_no": "五",
+   "chapter": "鸟鸣花落"
+  },
+  {
+   "name": "鸳鸯纹",
+   "name_raw": "鴛鴦紋",
+   "page": 168,
+   "chapter_no": "五",
+   "chapter": "鸟鸣花落"
+  },
+  {
+   "name": "鱼莲鸳鸯纹",
+   "name_raw": "魚蓮鴛鴦紋",
+   "page": 169,
+   "chapter_no": "五",
+   "chapter": "鸟鸣花落"
+  },
+  {
+   "name": "蕉叶莲花鸳鸯纹",
+   "name_raw": "蕉葉蓮花鴛鴦紋",
+   "page": 170,
+   "chapter_no": "五",
+   "chapter": "鸟鸣花落"
+  },
+  {
+   "name": "花卉對鸳鸯纹",
+   "name_raw": "花卉對鴛鴦紋",
+   "page": 171,
+   "chapter_no": "五",
+   "chapter": "鸟鸣花落"
+  },
+  {
+   "name": "柿蒂窠花卉對鸳鸯纹",
+   "name_raw": "柿蒂窠花卉對鴛鴦紋",
+   "page": 171,
+   "chapter_no": "五",
+   "chapter": "鸟鸣花落"
+  },
+  {
+   "name": "荷塘鸳鸯纹",
+   "name_raw": "荷塘鴛鴦紋",
+   "page": 171,
+   "chapter_no": "五",
+   "chapter": "鸟鸣花落"
+  },
+  {
+   "name": "鸳鸯海水纹",
+   "name_raw": "鴛鴦海水紋",
+   "page": 171,
+   "chapter_no": "五",
+   "chapter": "鸟鸣花落"
+  },
+  {
+   "name": "鶴纹",
+   "name_raw": "鶴紋",
+   "page": 172,
+   "chapter_no": "五",
+   "chapter": "鸟鸣花落"
+  },
+  {
+   "name": "莲鶴纹",
+   "name_raw": "蓮鶴紋",
+   "page": 173,
+   "chapter_no": "五",
+   "chapter": "鸟鸣花落"
+  },
+  {
+   "name": "飞鶴銜花纹",
+   "name_raw": "飛鶴銜花紋",
+   "page": 174,
+   "chapter_no": "五",
+   "chapter": "鸟鸣花落"
+  },
+  {
+   "name": "卷云飞鶴纹",
+   "name_raw": "卷云飛鶴紋",
+   "page": 174,
+   "chapter_no": "五",
+   "chapter": "鸟鸣花落"
+  },
+  {
+   "name": "四合云鶴纹",
+   "name_raw": "四合云鶴紋",
+   "page": 174,
+   "chapter_no": "五",
+   "chapter": "鸟鸣花落"
+  },
+  {
+   "name": "對鶴銜花纹",
+   "name_raw": "對鶴銜花紋",
+   "page": 174,
+   "chapter_no": "五",
+   "chapter": "鸟鸣花落"
+  },
+  {
+   "name": "万字飞鶴纹",
+   "name_raw": "萬字飛鶴紋",
+   "page": 175,
+   "chapter_no": "五",
+   "chapter": "鸟鸣花落"
+  },
+  {
+   "name": "松鶴纹",
+   "name_raw": "松鶴紋",
+   "page": 175,
+   "chapter_no": "五",
+   "chapter": "鸟鸣花落"
+  },
+  {
+   "name": "卷云团鶴朝陽纹",
+   "name_raw": "卷云團鶴朝陽紋",
+   "page": 175,
+   "chapter_no": "五",
+   "chapter": "鸟鸣花落"
+  },
+  {
+   "name": "四合云飞鶴纹",
+   "name_raw": "四合云飛鶴紋",
+   "page": 175,
+   "chapter_no": "五",
+   "chapter": "鸟鸣花落"
+  },
+  {
+   "name": "蝶纹",
+   "name_raw": "蝶紋",
+   "page": 176,
+   "chapter_no": "五",
+   "chapter": "鸟鸣花落"
+  },
+  {
+   "name": "勾莲蝴蝶纹",
+   "name_raw": "勾蓮蝴蝶紋",
+   "page": 177,
+   "chapter_no": "五",
+   "chapter": "鸟鸣花落"
+  },
+  {
+   "name": "折枝蝴蝶纹",
+   "name_raw": "折枝蝴蝶紋",
+   "page": 178,
+   "chapter_no": "五",
+   "chapter": "鸟鸣花落"
+  },
+  {
+   "name": "梅蘭竹菊团蝶纹",
+   "name_raw": "梅蘭竹菊團蝶紋",
+   "page": 178,
+   "chapter_no": "五",
+   "chapter": "鸟鸣花落"
+  },
+  {
+   "name": "雙喜繞蝶纹",
+   "name_raw": "雙喜繞蝶紋",
+   "page": 178,
+   "chapter_no": "五",
+   "chapter": "鸟鸣花落"
+  },
+  {
+   "name": "万花蝶纹",
+   "name_raw": "萬花蝶紋",
+   "page": 178,
+   "chapter_no": "五",
+   "chapter": "鸟鸣花落"
+  },
+  {
+   "name": "蝶戀花纹",
+   "name_raw": "蝶戀花紋",
+   "page": 179,
+   "chapter_no": "五",
+   "chapter": "鸟鸣花落"
+  },
+  {
+   "name": "蝶戀芍藥纹",
+   "name_raw": "蝶戀芍藥紋",
+   "page": 179,
+   "chapter_no": "五",
+   "chapter": "鸟鸣花落"
+  },
+  {
+   "name": "缠枝瓜蝶纹",
+   "name_raw": "纏枝瓜蝶紋",
+   "page": 179,
+   "chapter_no": "五",
+   "chapter": "鸟鸣花落"
+  },
+  {
+   "name": "花卉雙蝶团花纹",
+   "name_raw": "花卉雙蝶團花紋",
+   "page": 179,
+   "chapter_no": "五",
+   "chapter": "鸟鸣花落"
+  },
+  {
+   "name": "鸚鵡纹",
+   "name_raw": "鸚鵡紋",
+   "page": 180,
+   "chapter_no": "五",
+   "chapter": "鸟鸣花落"
+  },
+  {
+   "name": "石榴鸚鵡纹",
+   "name_raw": "石榴鸚鵡紋",
+   "page": 181,
+   "chapter_no": "五",
+   "chapter": "鸟鸣花落"
+  },
+  {
+   "name": "团龙鸚鵡纹",
+   "name_raw": "團龍鸚鵡紋",
+   "page": 182,
+   "chapter_no": "五",
+   "chapter": "鸟鸣花落"
+  },
+  {
+   "name": "几何對鸚鵡纹",
+   "name_raw": "幾何對鸚鵡紋",
+   "page": 183,
+   "chapter_no": "五",
+   "chapter": "鸟鸣花落"
+  },
+  {
+   "name": "卷草鸚鵡纹",
+   "name_raw": "卷草鸚鵡紋",
+   "page": 183,
+   "chapter_no": "五",
+   "chapter": "鸟鸣花落"
+  },
+  {
+   "name": "花卉鸚鵡纹",
+   "name_raw": "花卉鸚鵡紋",
+   "page": 183,
+   "chapter_no": "五",
+   "chapter": "鸟鸣花落"
+  },
+  {
+   "name": "卷草花卉鸚鵡纹",
+   "name_raw": "卷草花卉鸚鵡紋",
+   "page": 183,
+   "chapter_no": "五",
+   "chapter": "鸟鸣花落"
+  },
+  {
+   "name": "雁纹",
+   "name_raw": "雁紋",
+   "page": 184,
+   "chapter_no": "五",
+   "chapter": "鸟鸣花落"
+  },
+  {
+   "name": "雁銜瓔珞茶花纹",
+   "name_raw": "雁銜瓔珞茶花紋",
+   "page": 185,
+   "chapter_no": "五",
+   "chapter": "鸟鸣花落"
+  },
+  {
+   "name": "朵花团窠對雁纹",
+   "name_raw": "朵花團窠對雁紋",
+   "page": 186,
+   "chapter_no": "五",
+   "chapter": "鸟鸣花落"
+  },
+  {
+   "name": "蘆雁纹",
+   "name_raw": "蘆雁紋",
+   "page": 187,
+   "chapter_no": "五",
+   "chapter": "鸟鸣花落"
+  },
+  {
+   "name": "雁銜蘆纹",
+   "name_raw": "雁銜蘆紋",
+   "page": 187,
+   "chapter_no": "五",
+   "chapter": "鸟鸣花落"
+  },
+  {
+   "name": "花草對雁纹",
+   "name_raw": "花草對雁紋",
+   "page": 187,
+   "chapter_no": "五",
+   "chapter": "鸟鸣花落"
+  },
+  {
+   "name": "飞雁宝相花纹",
+   "name_raw": "飛雁寶相花紋",
+   "page": 187,
+   "chapter_no": "五",
+   "chapter": "鸟鸣花落"
+  },
+  {
+   "name": "鸡纹",
+   "name_raw": "雞紋",
+   "page": 190,
+   "chapter_no": "六",
+   "chapter": "万物生灵"
+  },
+  {
+   "name": "山石牡丹雉鸡纹",
+   "name_raw": "山石牡丹雉雞紋",
+   "page": 191,
+   "chapter_no": "六",
+   "chapter": "万物生灵"
+  },
+  {
+   "name": "朵花斗鸡纹",
+   "name_raw": "朵花斗雞紋",
+   "page": 192,
+   "chapter_no": "六",
+   "chapter": "万物生灵"
+  },
+  {
+   "name": "朵花對鸡纹",
+   "name_raw": "朵花對雞紋",
+   "page": 193,
+   "chapter_no": "六",
+   "chapter": "万物生灵"
+  },
+  {
+   "name": "三鸡纹",
+   "name_raw": "三雞紋",
+   "page": 193,
+   "chapter_no": "六",
+   "chapter": "万物生灵"
+  },
+  {
+   "name": "錦鸡纹",
+   "name_raw": "錦雞紋",
+   "page": 193,
+   "chapter_no": "六",
+   "chapter": "万物生灵"
+  },
+  {
+   "name": "山石全家福鸡纹",
+   "name_raw": "山石全家福雞紋",
+   "page": 193,
+   "chapter_no": "六",
+   "chapter": "万物生灵"
+  },
+  {
+   "name": "獅纹",
+   "name_raw": "獅紋",
+   "page": 194,
+   "chapter_no": "六",
+   "chapter": "万物生灵"
+  },
+  {
+   "name": "七獅戲球纹",
+   "name_raw": "七獅戲球紋",
+   "page": 195,
+   "chapter_no": "六",
+   "chapter": "万物生灵"
+  },
+  {
+   "name": "八達暈雙獅戲球纹",
+   "name_raw": "八達暈雙獅戲球紋",
+   "page": 196,
+   "chapter_no": "六",
+   "chapter": "万物生灵"
+  },
+  {
+   "name": "對獅纹",
+   "name_raw": "對獅紋",
+   "page": 197,
+   "chapter_no": "六",
+   "chapter": "万物生灵"
+  },
+  {
+   "name": "立獅花卉邊飾纹",
+   "name_raw": "立獅花卉邊飾紋",
+   "page": 197,
+   "chapter_no": "六",
+   "chapter": "万物生灵"
+  },
+  {
+   "name": "雙獅戲球纹",
+   "name_raw": "雙獅戲球紋",
+   "page": 197,
+   "chapter_no": "六",
+   "chapter": "万物生灵"
+  },
+  {
+   "name": "流水獅云纹",
+   "name_raw": "流水獅云紋",
+   "page": 197,
+   "chapter_no": "六",
+   "chapter": "万物生灵"
+  },
+  {
+   "name": "团窠對獅纹",
+   "name_raw": "團窠對獅紋",
+   "page": 197,
+   "chapter_no": "六",
+   "chapter": "万物生灵"
+  },
+  {
+   "name": "鹿纹",
+   "name_raw": "鹿紋",
+   "page": 198,
+   "chapter_no": "六",
+   "chapter": "万物生灵"
+  },
+  {
+   "name": "桃鹿纹",
+   "name_raw": "桃鹿紋",
+   "page": 199,
+   "chapter_no": "六",
+   "chapter": "万物生灵"
+  },
+  {
+   "name": "花樹對鹿纹",
+   "name_raw": "花樹對鹿紋",
+   "page": 200,
+   "chapter_no": "六",
+   "chapter": "万物生灵"
+  },
+  {
+   "name": "雙鹿銜花纹",
+   "name_raw": "雙鹿銜花紋",
+   "page": 201,
+   "chapter_no": "六",
+   "chapter": "万物生灵"
+  },
+  {
+   "name": "卷草奔鹿纹",
+   "name_raw": "卷草奔鹿紋",
+   "page": 201,
+   "chapter_no": "六",
+   "chapter": "万物生灵"
+  },
+  {
+   "name": "朵花团窠對鹿纹",
+   "name_raw": "朵花團窠對鹿紋",
+   "page": 201,
+   "chapter_no": "六",
+   "chapter": "万物生灵"
+  },
+  {
+   "name": "缠枝花卉雙鹿纹",
+   "name_raw": "纏枝花卉雙鹿紋",
+   "page": 201,
+   "chapter_no": "六",
+   "chapter": "万物生灵"
+  },
+  {
+   "name": "鱼纹",
+   "name_raw": "魚紋",
+   "page": 202,
+   "chapter_no": "六",
+   "chapter": "万物生灵"
+  },
+  {
+   "name": "万蝠鱼藻纹",
+   "name_raw": "萬蝠魚藻紋",
+   "page": 203,
+   "chapter_no": "六",
+   "chapter": "万物生灵"
+  },
+  {
+   "name": "吉祥對鱼纹",
+   "name_raw": "吉祥對魚紋",
+   "page": 204,
+   "chapter_no": "六",
+   "chapter": "万物生灵"
+  },
+  {
+   "name": "雜宝鱼纹",
+   "name_raw": "雜寶魚紋",
+   "page": 204,
+   "chapter_no": "六",
+   "chapter": "万物生灵"
+  },
+  {
+   "name": "吉慶花果雙鱼纹",
+   "name_raw": "吉慶花果雙魚紋",
+   "page": 204,
+   "chapter_no": "六",
+   "chapter": "万物生灵"
+  },
+  {
+   "name": "缠枝牡丹雙鱼纹",
+   "name_raw": "纏枝牡丹雙魚紋",
+   "page": 204,
+   "chapter_no": "六",
+   "chapter": "万物生灵"
+  },
+  {
+   "name": "鱼藻纹",
+   "name_raw": "魚藻紋",
+   "page": 205,
+   "chapter_no": "六",
+   "chapter": "万物生灵"
+  },
+  {
+   "name": "蛙鱼纹",
+   "name_raw": "蛙魚紋",
+   "page": 205,
+   "chapter_no": "六",
+   "chapter": "万物生灵"
+  },
+  {
+   "name": "海水雙鱼纹",
+   "name_raw": "海水雙魚紋",
+   "page": 205,
+   "chapter_no": "六",
+   "chapter": "万物生灵"
+  },
+  {
+   "name": "雜宝雙鱼团花纹",
+   "name_raw": "雜寶雙魚團花紋",
+   "page": 205,
+   "chapter_no": "六",
+   "chapter": "万物生灵"
+  },
+  {
+   "name": "羊纹",
+   "name_raw": "羊紋",
+   "page": 206,
+   "chapter_no": "六",
+   "chapter": "万物生灵"
+  },
+  {
+   "name": "缠枝花卉三陽開泰纹",
+   "name_raw": "纏枝花卉三陽開泰紋",
+   "page": 207,
+   "chapter_no": "六",
+   "chapter": "万物生灵"
+  },
+  {
+   "name": "孔雀對羊纹",
+   "name_raw": "孔雀對羊紋",
+   "page": 208,
+   "chapter_no": "六",
+   "chapter": "万物生灵"
+  },
+  {
+   "name": "几何對羊纹",
+   "name_raw": "幾何對羊紋",
+   "page": 209,
+   "chapter_no": "六",
+   "chapter": "万物生灵"
+  },
+  {
+   "name": "菱形雙羊纹",
+   "name_raw": "菱形雙羊紋",
+   "page": 209,
+   "chapter_no": "六",
+   "chapter": "万物生灵"
+  },
+  {
+   "name": "球路聯珠雙羊纹",
+   "name_raw": "球路聯珠雙羊紋",
+   "page": 209,
+   "chapter_no": "六",
+   "chapter": "万物生灵"
+  },
+  {
+   "name": "牡丹樹對羊纹",
+   "name_raw": "牡丹樹對羊紋",
+   "page": 209,
+   "chapter_no": "六",
+   "chapter": "万物生灵"
+  },
+  {
+   "name": "马纹",
+   "name_raw": "馬紋",
+   "page": 210,
+   "chapter_no": "六",
+   "chapter": "万物生灵"
+  },
+  {
+   "name": "五彩天马纹",
+   "name_raw": "五彩天馬紋",
+   "page": 211,
+   "chapter_no": "六",
+   "chapter": "万物生灵"
+  },
+  {
+   "name": "聯珠對马纹",
+   "name_raw": "聯珠對馬紋",
+   "page": 212,
+   "chapter_no": "六",
+   "chapter": "万物生灵"
+  },
+  {
+   "name": "宝马纹",
+   "name_raw": "寶馬紋",
+   "page": 213,
+   "chapter_no": "六",
+   "chapter": "万物生灵"
+  },
+  {
+   "name": "聯珠翼马纹",
+   "name_raw": "聯珠翼馬紋",
+   "page": 213,
+   "chapter_no": "六",
+   "chapter": "万物生灵"
+  },
+  {
+   "name": "卷云翼马纹",
+   "name_raw": "卷云翼馬紋",
+   "page": 213,
+   "chapter_no": "六",
+   "chapter": "万物生灵"
+  },
+  {
+   "name": "海马八吉祥纹",
+   "name_raw": "海馬八吉祥紋",
+   "page": 213,
+   "chapter_no": "六",
+   "chapter": "万物生灵"
+  },
+  {
+   "name": "飞天纹",
+   "name_raw": "飛天紋",
+   "page": 216,
+   "chapter_no": "七",
+   "chapter": "人物之美"
+  },
+  {
+   "name": "卷云飞天纹",
+   "name_raw": "卷云飛天紋",
+   "page": 217,
+   "chapter_no": "七",
+   "chapter": "人物之美"
+  },
+  {
+   "name": "莲花伎樂飞天纹",
+   "name_raw": "蓮花伎樂飛天紋",
+   "page": 218,
+   "chapter_no": "七",
+   "chapter": "人物之美"
+  },
+  {
+   "name": "伎樂飞天纹",
+   "name_raw": "伎樂飛天紋",
+   "page": 219,
+   "chapter_no": "七",
+   "chapter": "人物之美"
+  },
+  {
+   "name": "祥云飞天纹",
+   "name_raw": "祥云飛天紋",
+   "page": 219,
+   "chapter_no": "七",
+   "chapter": "人物之美"
+  },
+  {
+   "name": "莲花三兔飞天纹",
+   "name_raw": "蓮花三兔飛天紋",
+   "page": 219,
+   "chapter_no": "七",
+   "chapter": "人物之美"
+  },
+  {
+   "name": "瑞兽伎樂飞天纹",
+   "name_raw": "瑞獸伎樂飛天紋",
+   "page": 219,
+   "chapter_no": "七",
+   "chapter": "人物之美"
+  },
+  {
+   "name": "人物纹",
+   "name_raw": "人物紋",
+   "page": 220,
+   "chapter_no": "七",
+   "chapter": "人物之美"
+  },
+  {
+   "name": "琺花人物纹",
+   "name_raw": "琺花人物紋",
+   "page": 221,
+   "chapter_no": "七",
+   "chapter": "人物之美"
+  },
+  {
+   "name": "团窠人物纹",
+   "name_raw": "團窠人物紋",
+   "page": 222,
+   "chapter_no": "七",
+   "chapter": "人物之美"
+  },
+  {
+   "name": "人物故事纹",
+   "name_raw": "人物故事紋",
+   "page": 223,
+   "chapter_no": "七",
+   "chapter": "人物之美"
+  },
+  {
+   "name": "人物莲瓣纹",
+   "name_raw": "人物蓮瓣紋",
+   "page": 223,
+   "chapter_no": "七",
+   "chapter": "人物之美"
+  },
+  {
+   "name": "几何花卉人物纹",
+   "name_raw": "幾何花卉人物紋",
+   "page": 223,
+   "chapter_no": "七",
+   "chapter": "人物之美"
+  },
+  {
+   "name": "三仙人物纹",
+   "name_raw": "三仙人物紋",
+   "page": 223,
+   "chapter_no": "七",
+   "chapter": "人物之美"
+  },
+  {
+   "name": "狩獵纹",
+   "name_raw": "狩獵紋",
+   "page": 224,
+   "chapter_no": "七",
+   "chapter": "人物之美"
+  },
+  {
+   "name": "浮雕狩獵纹",
+   "name_raw": "浮雕狩獵紋",
+   "page": 225,
+   "chapter_no": "七",
+   "chapter": "人物之美"
+  },
+  {
+   "name": "花卉狩獵纹",
+   "name_raw": "花卉狩獵紋",
+   "page": 226,
+   "chapter_no": "七",
+   "chapter": "人物之美"
+  },
+  {
+   "name": "狩獵出行纹",
+   "name_raw": "狩獵出行紋",
+   "page": 227,
+   "chapter_no": "七",
+   "chapter": "人物之美"
+  },
+  {
+   "name": "卷云狩獵纹",
+   "name_raw": "卷云狩獵紋",
+   "page": 227,
+   "chapter_no": "七",
+   "chapter": "人物之美"
+  },
+  {
+   "name": "山石花卉狩獵纹",
+   "name_raw": "山石花卉狩獵紋",
+   "page": 227,
+   "chapter_no": "七",
+   "chapter": "人物之美"
+  },
+  {
+   "name": "聯珠狩獵纹",
+   "name_raw": "聯珠狩獵紋",
+   "page": 227,
+   "chapter_no": "七",
+   "chapter": "人物之美"
+  },
+  {
+   "name": "八仙纹",
+   "name_raw": "八仙紋",
+   "page": 228,
+   "chapter_no": "七",
+   "chapter": "人物之美"
+  },
+  {
+   "name": "海水八仙纹",
+   "name_raw": "海水八仙紋",
+   "page": 229,
+   "chapter_no": "七",
+   "chapter": "人物之美"
+  },
+  {
+   "name": "八卦花卉八仙纹",
+   "name_raw": "八卦花卉八仙紋",
+   "page": 230,
+   "chapter_no": "七",
+   "chapter": "人物之美"
+  },
+  {
+   "name": "暗八仙纹",
+   "name_raw": "暗八仙紋",
+   "page": 231,
+   "chapter_no": "七",
+   "chapter": "人物之美"
+  },
+  {
+   "name": "八仙過海纹",
+   "name_raw": "八仙過海紋",
+   "page": 231,
+   "chapter_no": "七",
+   "chapter": "人物之美"
+  },
+  {
+   "name": "八仙人物故事纹",
+   "name_raw": "八仙人物故事紋",
+   "page": 231,
+   "chapter_no": "七",
+   "chapter": "人物之美"
+  },
+  {
+   "name": "八仙賀寿纹",
+   "name_raw": "八仙賀壽紋",
+   "page": 231,
+   "chapter_no": "七",
+   "chapter": "人物之美"
+  },
+  {
+   "name": "嬰戲纹",
+   "name_raw": "嬰戲紋",
+   "page": 232,
+   "chapter_no": "七",
+   "chapter": "人物之美"
+  },
+  {
+   "name": "莲瓣如意嬰戲纹",
+   "name_raw": "蓮瓣如意嬰戲紋",
+   "page": 233,
+   "chapter_no": "七",
+   "chapter": "人物之美"
+  },
+  {
+   "name": "庭院嬰戲纹",
+   "name_raw": "庭院嬰戲紋",
+   "page": 234,
+   "chapter_no": "七",
+   "chapter": "人物之美"
+  },
+  {
+   "name": "缠枝莲嬰戲纹",
+   "name_raw": "纏枝蓮嬰戲紋",
+   "page": 235,
+   "chapter_no": "七",
+   "chapter": "人物之美"
+  },
+  {
+   "name": "折枝嬰戲纹",
+   "name_raw": "折枝嬰戲紋",
+   "page": 235,
+   "chapter_no": "七",
+   "chapter": "人物之美"
+  },
+  {
+   "name": "缠枝輔首嬰戲纹",
+   "name_raw": "纏枝輔首嬰戲紋",
+   "page": 235,
+   "chapter_no": "七",
+   "chapter": "人物之美"
+  },
+  {
+   "name": "舞樂纹",
+   "name_raw": "舞樂紋",
+   "page": 236,
+   "chapter_no": "七",
+   "chapter": "人物之美"
+  },
+  {
+   "name": "聯珠莲瓣舞樂纹",
+   "name_raw": "聯珠蓮瓣舞樂紋",
+   "page": 237,
+   "chapter_no": "七",
+   "chapter": "人物之美"
+  },
+  {
+   "name": "团窠聯珠舞樂纹",
+   "name_raw": "團窠聯珠舞樂紋",
+   "page": 238,
+   "chapter_no": "七",
+   "chapter": "人物之美"
+  }
+ ],
+ "numbered_4722198": [
+  {
+   "no": 1,
+   "name": "涡形卷云纹",
+   "chapter": "云纹"
+  },
+  {
+   "no": 2,
+   "name": "凤鸟卷云纹",
+   "chapter": "云纹"
+  },
+  {
+   "no": 3,
+   "name": "菱形旋涡连续卷云纹",
+   "chapter": "云纹"
+  },
+  {
+   "no": 4,
+   "name": "云雷纹",
+   "chapter": "云纹"
+  },
+  {
+   "no": 5,
+   "name": "变形云雷纹",
+   "chapter": "云纹"
+  },
+  {
+   "no": 6,
+   "name": "正反卷云纹",
+   "chapter": "云纹"
+  },
+  {
+   "no": 7,
+   "name": "云头卷云纹",
+   "chapter": "云纹"
+  },
+  {
+   "no": 8,
+   "name": "斜角云雷纹",
+   "chapter": "云纹"
+  },
+  {
+   "no": 9,
+   "name": "卷云鸟纹",
+   "chapter": "云纹"
+  },
+  {
+   "no": 10,
+   "name": "云气茱萸纹",
+   "chapter": "云纹"
+  },
+  {
+   "no": 11,
+   "name": "三角卷云纹",
+   "chapter": "云纹"
+  },
+  {
+   "no": 12,
+   "name": "环形几何卷云纹",
+   "chapter": "云纹"
+  },
+  {
+   "no": 13,
+   "name": "几何勾云纹",
+   "chapter": "云纹"
+  },
+  {
+   "no": 14,
+   "name": "勾云纹",
+   "chapter": "云纹"
+  },
+  {
+   "no": 15,
+   "name": "涡形水云纹",
+   "chapter": "云纹"
+  },
+  {
+   "no": 16,
+   "name": "叶云纹",
+   "chapter": "云纹"
+  },
+  {
+   "no": 17,
+   "name": "水涡云纹",
+   "chapter": "云纹"
+  },
+  {
+   "no": 18,
+   "name": "几何心云纹",
+   "chapter": "云纹"
+  },
+  {
+   "no": 19,
+   "name": "网心云纹",
+   "chapter": "云纹"
+  },
+  {
+   "no": 20,
+   "name": "山云纹",
+   "chapter": "云纹"
+  },
+  {
+   "no": 21,
+   "name": "任意心云纹",
+   "chapter": "云纹"
+  },
+  {
+   "no": 22,
+   "name": "水云纹",
+   "chapter": "云纹"
+  },
+  {
+   "no": 23,
+   "name": "凤鸟云纹",
+   "chapter": "云纹"
+  },
+  {
+   "no": 24,
+   "name": "云鹤纹",
+   "chapter": "云纹"
+  },
+  {
+   "no": 25,
+   "name": "网心叶云纹",
+   "chapter": "云纹"
+  },
+  {
+   "no": 26,
+   "name": "飞鹤云纹",
+   "chapter": "云纹"
+  },
+  {
+   "no": 27,
+   "name": "变形云纹",
+   "chapter": "云纹"
+  },
+  {
+   "no": 28,
+   "name": "“万世如意”卷云纹",
+   "chapter": "云纹"
+  },
+  {
+   "no": 29,
+   "name": "云气花卉纹",
+   "chapter": "云纹"
+  },
+  {
+   "no": 30,
+   "name": "连续云纹",
+   "chapter": "云纹"
+  },
+  {
+   "no": 31,
+   "name": "卷云几何纹",
+   "chapter": "云纹"
+  },
+  {
+   "no": 32,
+   "name": "星云纹",
+   "chapter": "云纹"
+  },
+  {
+   "no": 33,
+   "name": "云气树纹",
+   "chapter": "云纹"
+  },
+  {
+   "no": 34,
+   "name": "云气走兽纹",
+   "chapter": "云纹"
+  },
+  {
+   "no": 35,
+   "name": "云气忍冬纹",
+   "chapter": "云纹"
+  },
+  {
+   "no": 36,
+   "name": "连续流云纹",
+   "chapter": "云纹"
+  },
+  {
+   "no": 37,
+   "name": "变形朵云纹",
+   "chapter": "云纹"
+  },
+  {
+   "no": 38,
+   "name": "山石云鸟纹",
+   "chapter": "云纹"
+  },
+  {
+   "no": 39,
+   "name": "朵花朵云纹",
+   "chapter": "云纹"
+  },
+  {
+   "no": 40,
+   "name": "连续云纹",
+   "chapter": "云纹"
+  },
+  {
+   "no": 41,
+   "name": "莲花云头纹",
+   "chapter": "云纹"
+  },
+  {
+   "no": 42,
+   "name": "花鸟云纹",
+   "chapter": "云纹"
+  },
+  {
+   "no": 43,
+   "name": "朵云花卉纹",
+   "chapter": "云纹"
+  },
+  {
+   "no": 44,
+   "name": "茶花云气纹",
+   "chapter": "云纹"
+  },
+  {
+   "no": 45,
+   "name": "百草云头纹",
+   "chapter": "云纹"
+  },
+  {
+   "no": 46,
+   "name": "对称云头纹",
+   "chapter": "云纹"
+  },
+  {
+   "no": 47,
+   "name": "流云纹",
+   "chapter": "云纹"
+  },
+  {
+   "no": 48,
+   "name": "卷云四出纹",
+   "chapter": "云纹"
+  },
+  {
+   "no": 49,
+   "name": "如意对称云纹",
+   "chapter": "云纹"
+  },
+  {
+   "no": 50,
+   "name": "云头十字纹",
+   "chapter": "云纹"
+  },
+  {
+   "no": 51,
+   "name": "不规则朵云纹",
+   "chapter": "云纹"
+  },
+  {
+   "no": 52,
+   "name": "双鹤卷云纹",
+   "chapter": "云纹"
+  },
+  {
+   "no": 53,
+   "name": "鹤鸟云纹",
+   "chapter": "云纹"
+  },
+  {
+   "no": 54,
+   "name": "云凤鸟纹",
+   "chapter": "云纹"
+  },
+  {
+   "no": 55,
+   "name": "对鹤卷云纹",
+   "chapter": "云纹"
+  },
+  {
+   "no": 56,
+   "name": "双凤团云纹",
+   "chapter": "云纹"
+  },
+  {
+   "no": 57,
+   "name": "团凤云纹",
+   "chapter": "云纹"
+  },
+  {
+   "no": 58,
+   "name": "叠云纹",
+   "chapter": "云纹"
+  },
+  {
+   "no": 59,
+   "name": "堆云纹",
+   "chapter": "云纹"
+  },
+  {
+   "no": 60,
+   "name": "散点朵云纹",
+   "chapter": "云纹"
+  },
+  {
+   "no": 61,
+   "name": "环套卷云纹",
+   "chapter": "云纹"
+  },
+  {
+   "no": 62,
+   "name": "卷云纹",
+   "chapter": "云纹"
+  },
+  {
+   "no": 63,
+   "name": "如意云纹",
+   "chapter": "云纹"
+  },
+  {
+   "no": 64,
+   "name": "菊花云纹",
+   "chapter": "云纹"
+  },
+  {
+   "no": 65,
+   "name": "四合如意连云纹",
+   "chapter": "云纹"
+  },
+  {
+   "no": 66,
+   "name": "万事如意云纹",
+   "chapter": "云纹"
+  },
+  {
+   "no": 67,
+   "name": "云莲纹",
+   "chapter": "云纹"
+  },
+  {
+   "no": 68,
+   "name": "四合云鹤纹",
+   "chapter": "云纹"
+  },
+  {
+   "no": 69,
+   "name": "连云纹",
+   "chapter": "云纹"
+  },
+  {
+   "no": 70,
+   "name": "团窠卷云纹",
+   "chapter": "云纹"
+  },
+  {
+   "no": 71,
+   "name": "四合如意卷云纹",
+   "chapter": "云纹"
+  },
+  {
+   "no": 72,
+   "name": "连续朵云纹",
+   "chapter": "云纹"
+  },
+  {
+   "no": 73,
+   "name": "对称莲花云纹",
+   "chapter": "云纹"
+  },
+  {
+   "no": 74,
+   "name": "散点云蝠纹",
+   "chapter": "云纹"
+  },
+  {
+   "no": 75,
+   "name": "松竹如意流云纹",
+   "chapter": "云纹"
+  },
+  {
+   "no": 76,
+   "name": "如意四合云团龙纹",
+   "chapter": "云纹"
+  },
+  {
+   "no": 77,
+   "name": "葵瓣式云鹤纹",
+   "chapter": "云纹"
+  },
+  {
+   "no": 78,
+   "name": "八团云蝠纹",
+   "chapter": "云纹"
+  },
+  {
+   "no": 79,
+   "name": "八宝云蝠纹",
+   "chapter": "云纹"
+  },
+  {
+   "no": 80,
+   "name": "云气动物纹",
+   "chapter": "云纹"
+  },
+  {
+   "no": 81,
+   "name": "如意云凤纹",
+   "chapter": "云纹"
+  }
+ ],
+ "sources": [
+  {
+   "name": "国家出版发行信息公共服务平台",
+   "url": "https://book.cppinfo.cn/Encyclopedias/home/index?id=4722198",
+   "use": "权威书目信息 + 13 章结构 + 编号表开头"
+  },
+  {
+   "name": "三民網路書店",
+   "url": "https://www.sanmin.com.tw/product/index/013227577",
+   "use": "《纹样之美》完整目录（含页码），用于反推纹样分布与页序"
+  },
+  {
+   "name": "香港大書城",
+   "url": "https://www.megbook.com.hk/mall/detail.jsp?proID=4017068",
+   "use": "出版社编辑推荐 8 条 + 内容简介 + 作者简介"
+  }
+ ]
+}

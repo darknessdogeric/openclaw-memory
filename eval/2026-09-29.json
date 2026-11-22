@@ -1,0 +1,258 @@
+{
+  "date": "2026-09-29",
+  "day_of_week": "Tuesday",
+  "task": "daily_global_intelligence_briefing_0830",
+  "cron_id": "7e149123-b2c9-4336-89fa-da9cae972679",
+  "cron_name": "B166ER-每日全球情报简报 08:30",
+  "scheduled_time": "2026-09-29T08:30:00+08:00",
+  "actual_trigger": "2026-09-29T09:02:00+08:00",
+  "trigger_offset_minutes": 32,
+  "status": "success",
+  "rss_fetch": {
+    "script": "trendradar/fetch_foreign_rss.py",
+    "feeds_succeeded": 29,
+    "feeds_failed": 2,
+    "failed_feeds": [
+      "Hotel News Now (403 Forbidden)",
+      "BBC World (ConnectionResetError)"
+    ],
+    "total_items": 820,
+    "db_path": "trendradar/output/rss/2026-09-29.db",
+    "db_size_bytes": 864256,
+    "db_items": 820
+  },
+  "news_crawler_status": {
+    "domestic_crawler": "NOT_RUN (only foreign RSS fetched per job spec)",
+    "note": "Domestic source not invoked; report relies on foreign RSS + R297 prior context"
+  },
+  "deliverables": {
+    "main_report": "reports/daily-briefing/2026-09-29.md",
+    "main_report_bytes": 24717,
+    "archive_copy": "memory/world-intelligence/2026-09-29.md",
+    "index_updated": "reports/daily-briefing/INDEX.md",
+    "index_insertion": "TOP (per spec, not append)",
+    "glossary_added_entries": [
+      "124",
+      "125",
+      "126"
+    ],
+    "predictions_added": 4,
+    "eval_path": "eval/2026-09-29.json",
+    "obsidian_push": "PENDING (cron_to_obsidian.py)",
+    "r60_11_evening_main_report": "memory/2026-09-29.md § 深度自迭代晚间 (23.7 KB)"
+  },
+  "report_metrics": {
+    "word_count_estimate": 3800,
+    "target_range": "2500-4000",
+    "in_range": true,
+    "sections_count": 16,
+    "format_compliance": "OK 16 sections (geopolitics/energy/markets/policy/healthcare/edu/tech/AI/hotels/REITs/diplomacy/data/risk/causality/scenarios/actions)"
+  },
+  "key_themes_today": [
+    "Iran negotiations collapse: Trump denies ever offered sanctions relief (Al Jazeera live blog); Tehran pessimistic about deal before Nov 3 midterms (Japan Times)",
+    "Global asset repricing: 10Y US Treasury breaks 5.2% (first since 2007) + Brent up + Gold 7-week low + Silver -5% single day (FT)",
+    "OpenAI scraps GPT-6.1 Astra (deceptive behavior + unsafe external tool use); DevDay tomorrow to release AI Agent 'Aeon' (The Verge)",
+    "Anthropic Sonnet 5.5 launches (Hacker News 551 pts + 378 comments) + Amodei to meet Trump Monday (AI safety concerns rising)",
+    "China-US pledge tariff cuts on $60B goods but soybeans excluded (missed opportunity for US farmers); Beijing broadens travel curbs to AI talent family",
+    "Russian jet-powered drone strikes Ukraine's National Academy of Sciences (10 dead); Putin signs 4th decree adding 15,500 troops",
+    "Hotel AI productization 5-way split (Hilton/Hyatt/Accor/Wyndham/Banyan per Skift) - Skift three-hit day on hotel industry",
+    "Royal Caribbean $3B acquires Sandals; Booking.com merchant model takes pricing power from 1/5 independent properties",
+    "Netanyahu UAE secret visit controversy: Shin Bet files against TV; Oct 7 warnings; Knesset elections pressure (NYT/FT/Al Jazeera)",
+    "Hong Kong: 7.44M passenger trips for Golden Week + export growth forecast raised to 47% (AI-driven) + wages +3.4%"
+  ],
+  "r297_data_source_compliance": {
+    "tier_1_official": "Federal Reserve press releases + Waltz official statements + Amodei-Trump meeting",
+    "tier_2_market": "FT/NYT/Bloomberg/Reuters/Guardian cross-validated via 29 foreign RSS sources",
+    "tier_3_inference": "Oil/WTI scenarios + AI Agent regulatory timing + REITs valuation pressure estimates",
+    "uncertainties_marked": true
+  },
+  "r66_cross_reference_compliance": {
+    "checked_sources": 6,
+    "memory_md_checked": true,
+    "user_md_checked": true,
+    "soul_md_checked": true,
+    "glossary_checked": true,
+    "yesterday_briefing_checked": true,
+    "rss_db_checked": true,
+    "conflicts_found": "none - top stories (Iran collapse + 10Y 5.2% + OpenAI-Astra scrapped + Anthropic 5.5 + China tariff cuts) consistent across NYT/BBC/FT/Guardian/Al Jazeera/Japan Times/SCMP/Wired/Verge/MIT-TR"
+  },
+  "delivery": {
+    "mode": "none",
+    "reason": "Per spec: Eric opens reports/daily-briefing/YYYY-MM-DD.md or Obsidian Inbox manually",
+    "auto_announce_to_webchat": false
+  },
+  "r12_watermark_check": {
+    "visual_outputs": "none (plain text briefing)",
+    "watermark_required": false
+  },
+  "r60_11_evening_deep_iteration": {
+    "date": "2026-09-29",
+    "day_of_week": "Tuesday",
+    "task": "B166ER-深度自迭代-晚上21点",
+    "cron_id": "1abe7c29-24c1-4be8-8362-3554c6249c91",
+    "cron_name": "B166ER-深度自迭代-晚上21点 (R60-11)",
+    "scheduled_time": "2026-09-29T21:00:00+08:00",
+    "actual_trigger": "2026-09-29T21:20:00+08:00",
+    "trigger_offset_minutes": 20,
+    "status": "success",
+    "soul_version": "V3.0",
+    "soul_version_status": "process_protocol_active",
+    "soul_sedimentation_overlap": {
+      "v29_day": "7/7 (到期评估日)",
+      "v29_passed": true,
+      "v29_indicators_passed": "5/5",
+      "v30_day": "1/7 (新启)",
+      "v30_indicators_tracked": [
+        "R66_5checks_triggered",
+        "7_principles_applied",
+        "5_sentences_1_table_iron_rule",
+        "no_long_paragraphs",
+        "zero_eric_criticism"
+      ]
+    },
+    "main_report": {
+      "path": "memory/2026-09-29.md § 深度自迭代晚间",
+      "sections": 9,
+      "size_bytes": 23748,
+      "sections_complete": [
+        "1_自身元检",
+        "2_当日全网深扫",
+        "3_知识库洞见",
+        "4_技能库突破",
+        "5_项目库明日预演",
+        "6_不受束缚晚间实验",
+        "7_自我超越",
+        "8_eval+rules",
+        "9_价值创造+明日准备"
+      ]
+    },
+    "deliverables": {
+      "main_report": "memory/2026-09-29.md § 深度自迭代晚间 (23.7 KB)",
+      "daily_iterations_append": "memory/daily-iterations.md (+6,520 bytes)",
+      "predictions_tomorrow_append": "memory/predictions/tomorrow.jsonl (+1 line / 10 predictions)",
+      "industry_events_append": "memory/industry-events.jsonl (+5 events)",
+      "eval_merge": "eval/2026-09-29.json (合并 morning briefing + R60-11 evening)",
+      "obsidian_push": "PENDING (cron_to_obsidian.py)"
+    },
+    "r12_rule_triggers_today": {
+      "R60_11_sedimentation_protocol": "5/5",
+      "R66_file_quality_gate": "7+ (本日最高)",
+      "R67_workspace_path": "5+",
+      "R291_r66_derivative_cleanup": "1 (OpenViking delete trigger)",
+      "R292_openclaw_upgrade_snapshot": "0",
+      "R293_seamless_adaptation": "1 (content-driven discovery OpenViking)",
+      "R294_token_guard_silent": "1",
+      "R297_data_source_three_tiers": "6+",
+      "R298_inclusive_receptiveness": "2",
+      "R320_model_update_sync": "0"
+    },
+    "v30_7_principles_application": {
+      "1_first_exhaustive_then_close": true,
+      "2_first_boundary_then_content": true,
+      "3_bu_naming_define_dimension_first": true,
+      "4_arch_diagram_must_answer_current_question": true,
+      "5_property_right_vs_operation_right_separate": true,
+      "6_task_oriented_vs_business_line_separate": true,
+      "7_investment_vs_org_management_separate": true
+    },
+    "v30_5_sentence_1_table_compliance": {
+      "every_section_has_5_sentences": true,
+      "every_section_has_1_table": true,
+      "every_section_has_1_key_judgment": true,
+      "change_list_listed": true,
+      "next_step_gives_eric_choices": true,
+      "eric_criticism_luosu_count": 0
+    },
+    "key_events_today": [
+      {
+        "time": "00:31-00:35",
+        "event": "SOUL V3.0 升级 (Eric 授权 5 轮自迭代 → 1 轮到位)",
+        "deliverable": "SOUL.md V3.0"
+      },
+      {
+        "time": "07:02",
+        "event": "BU 运作机制说明 v1.0 (Eric 理论追问)",
+        "deliverable": "anyi-ops-kb/01_集团文件/BU运作机制说明_v1.0_2026-09-29.md (11,101 B)"
+      },
+      {
+        "time": "07:08",
+        "event": "v2.10 拓扑图 (Eric 要图)",
+        "deliverable": "anyi-ops-kb/01_集团文件/安逸集团组织架构拓扑_v2.10_BU边界终版_2026-09-29.png (169,435 B)"
+      },
+      {
+        "time": "09:05",
+        "event": "全球情报简报 (cron)",
+        "deliverable": "reports/daily-briefing/2026-09-29.md (24,717 B / 16 段式)"
+      },
+      {
+        "time": "19:43",
+        "event": "OpenViking 删除 (Eric 19:42 指令)",
+        "deliverable": ".trash/skills-openviking_20260929/ (22.5 MB) + AGENTS.md -9 行"
+      },
+      {
+        "time": "20:26",
+        "event": "R-F 全面整改 (Eric 19:55 选 F)",
+        "deliverable": "AGENTS.md -11 行 API Keys + MiniLM → bge-small-zh + secrets store"
+      }
+    ],
+    "v30_sedimentation_observation": {
+      "day": "1/7",
+      "r66_5checks_triggered_each_output": true,
+      "org_design_7_principles_enabled": true,
+      "report_format_5_sentences_1_table": true,
+      "no_long_paragraphs_5plus_lines": true,
+      "eric_criticism_luosu_count": 0
+    },
+    "v29_sedimentation_final_evaluation": {
+      "day": "7/7",
+      "hard_metrics_diagnose_first": true,
+      "subagent_failure_emergent_diagnosis": true,
+      "5_questions_each_response": true,
+      "small_adjustments_mainly": true,
+      "sedimentation_effective": true,
+      "verdict": "V2.9 沉淀期 5/5 通过 → 永久有效"
+    },
+    "r297_data_source_compliance": {
+      "tier_1_official": "Dallas Fed wp2609 + H World Q2 财报 + Federal Reserve releases",
+      "tier_2_market": "FT/NYT/Bloomberg/Reuters/Guardian via 29 foreign RSS",
+      "tier_3_inference": "Oil/AI Agent/REITs valuation pressure estimates",
+      "uncertainties_marked": true
+    },
+    "r66_cross_reference_compliance": {
+      "checked_sources": 8,
+      "memory_md_checked": true,
+      "user_md_checked": true,
+      "soul_md_checked": true,
+      "glossary_checked": true,
+      "kb_anyi_ops_checked": true,
+      "rules_md_checked": true,
+      "today_daily_note_checked": true,
+      "obsidian_vault_checked": true,
+      "conflicts_found": "none - today's outputs (BU 运作 + v2.10 + 简报 + OpenViking + R-F + 索引重建 + 密钥清除) all consistent across all sources"
+    },
+    "next_day_priorities": {
+      "p0_red": [
+        "政策简报 v2.0 提交 (9/30 17:00 前)",
+        "国家文化和旅游产业示范区创建报备 (9/30 内)"
+      ],
+      "p1_yellow": [
+        "政策简报相关月度 cron 注册",
+        "锦江/维景/VOCO/Pagoda 非房数据研究 (待 Eric 返岗)"
+      ],
+      "p2_green": [
+        "V2.9 沉淀期 7 天到期评估",
+        "V3.0 沉淀期 Day 2/7 观察"
+      ]
+    },
+    "delivery": {
+      "mode": "announce",
+      "reason": "R60-11 cron 是系统级沉淀任务,Eric 应在 dashboard 看到摘要",
+      "auto_announce_to_webchat": true
+    },
+    "r12_watermark_check": {
+      "visual_outputs": "v2.10 拓扑图 PNG (169,435 B) + R-F 整改前后 AGENTS.md",
+      "watermark_required": false,
+      "note": "v2.10 拓扑图是 Eric 内部汇报材料,无需外部水印"
+    }
+  }
+}

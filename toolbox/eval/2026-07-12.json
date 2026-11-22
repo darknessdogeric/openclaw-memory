@@ -1,0 +1,41 @@
+{
+  "date": "2026-07-12",
+  "task": "Entity Extractor 实体抽取",
+  "entities_extracted": 19,
+  "relations_extracted": 0,
+  "source_files": [
+    "2026-07-12.md"
+  ],
+  "entity_breakdown": {
+    "Person": [
+      "Eric",
+      "B166ER"
+    ],
+    "Company": [
+      "安逸酒店集团",
+      "四川旅游投",
+      "AHL",
+      "首旅如家",
+      "OpenAI",
+      "Anthropic",
+      "特斯拉"
+    ],
+    "Project": [
+      "AHL",
+      "1244战略",
+      "深度自迭代",
+      "B166ER深度自迭代",
+      "R60规则"
+    ],
+    "Event": [
+      "党委会",
+      "D-day",
+      "入职",
+      "STR6月数据",
+      "STR数据发布"
+    ]
+  },
+  "status": "completed",
+  "obsidian_push": "failed_encoding",
+  "timestamp": "2026-07-12T21:34:10.446358"
+}

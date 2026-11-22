@@ -1,0 +1,38 @@
+{
+  "date": "2026-09-04",
+  "weekday": "Friday",
+  "anyi_d": null,
+  "ahl_d": null,
+  "macro_conditions": {
+    "iran_conflict": "escalating",
+    "us_equity": "止跌反弹",
+    "labor_market": "显著放缓",
+    "fed_policy": "降息压力↑",
+    "china_stimulus": "无新信号",
+    "oil_wti": "$78-82区间",
+    "ai_sentiment": "看多"
+  },
+  "key_events": [
+    "伊朗导弹致大量美军死伤 + 特朗普随时准备新一轮打击",
+    "ADP 8月仅3.8万人（预期12-15万）",
+    "美银警告9月买盘仅90亿美元 vs 潜在1630亿美元卖盘",
+    "博通豪迈业绩指引震惊市场",
+    "两种小金属卡AI脖子，中国供应链主导",
+    "G20财长会公报难产（中方分歧）"
+  ],
+  "sentiment_indicators": {
+    "geopolitical": "risk_on",
+    "equity": "neutral_bullish",
+    "employment": "risk_off",
+    "fed_odds": "rate_cut_up",
+    "oil": "stable"
+  },
+  "data_sources": {
+    "primary": "trendradar_batch_2026-09-03",
+    "rss": "unavailable_2026-09-04",
+    "platforms": 11,
+    "items": 80
+  },
+  "produced_by": "B166ER_cron_08:30",
+  "report_file": "reports/daily-briefing/2026-09-04.md"
+}

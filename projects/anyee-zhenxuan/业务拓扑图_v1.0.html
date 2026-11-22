@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>安逸臻选二销业务拓扑图 v1.0</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, "Microsoft YaHei", "PingFang SC", sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 100%);
+    color: #1a1a1a;
+    padding: 24px;
+    min-height: 100vh;
+  }
+  .container {
+    max-width: 1400px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+    padding: 32px;
+  }
+  .header {
+    text-align: center;
+    border-bottom: 3px solid #C8102E;
+    padding-bottom: 20px;
+    margin-bottom: 28px;
+  }
+  .header h1 {
+    font-size: 28px;
+    color: #C8102E;
+    margin-bottom: 6px;
+    letter-spacing: 1px;
+  }
+  .header .subtitle {
+    font-size: 14px;
+    color: #666;
+    font-style: italic;
+  }
+  .meta {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 12px;
+    font-size: 12px;
+    color: #888;
+  }
+  .layers {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .layer {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 16px;
+    align-items: stretch;
+  }
+  .layer-label {
+    background: linear-gradient(135deg, var(--c), color-mix(in srgb, var(--c) 70%, white));
+    color: white;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 12px 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  }
+  .layer-label small {
+    font-size: 11px;
+    font-weight: normal;
+    margin-top: 4px;
+    opacity: 0.95;
+  }
+  .layer-content {
+    display: grid;
+    gap: 12px;
+  }
+  .node-group {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .node {
+    flex: 1 1 auto;
+    min-width: 130px;
+    background: white;
+    border: 2px solid var(--c);
+    border-radius: 10px;
+    padding: 10px 12px;
+    text-align: center;
+    font-size: 13px;
+    color: #333;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+    transition: all 0.2s ease;
+    cursor: default;
+  }
+  .node:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+    background: color-mix(in srgb, var(--c) 8%, white);
+  }
+  .node b {
+    display: block;
+    color: var(--c);
+    margin-bottom: 4px;
+    font-size: 13px;
+  }
+  .node .desc {
+    font-size: 11px;
+    color: #888;
+    line-height: 1.4;
+  }
+  .node.highlight {
+    background: linear-gradient(135deg, #FFD700, #FFC107);
+    border-color: #FF8F00;
+    color: #5D4037;
+  }
+  .node.highlight b { color: #E65100; }
+
+  /* 层颜色 */
+  .l5 { --c: #C8102E; }
+  .l4 { --c: #E07B00; }
+  .l3 { --c: #1B6E3F; }
+  .l2 { --c: #0078A8; }
+  .l1 { --c: #4A4A4A; }
+
+  /* 流向箭头 */
+  .arrow {
+    text-align: center;
+    color: #999;
+    font-size: 20px;
+    margin: -4px 0;
+  }
+
+  /* 关键判断框 */
+  .callout {
+    background: #FFF9E6;
+    border-left: 4px solid #FFD700;
+    padding: 12px 16px;
+    border-radius: 0 8px 8px 0;
+    margin-top: 16px;
+    font-size: 13px;
+    color: #5D4037;
+  }
+  .callout b { color: #E65100; }
+
+  /* 图例 */
+  .legend {
+    margin-top: 24px;
+    padding: 16px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    font-size: 12px;
+  }
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .legend-color {
+    width: 16px;
+    height: 16px;
+    border-radius: 4px;
+  }
+
+  /* 打印样式 */
+  @media print {
+    body { background: white; padding: 0; }
+    .container { box-shadow: none; padding: 16px; }
+    .node:hover { transform: none; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <div class="header">
+    <h1>安逸臻选二销业务拓扑图 v1.0</h1>
+    <div class="subtitle">5 层业务架构 × 商投 4 角色 × 巴蜀特色 10 大主线</div>
+    <div class="meta">
+      <span>编制：安逸酒店集团 产业发展部</span>
+      <span>版本：v1.0</span>
+      <span>日期：2026-10-19</span>
+      <span>密级：内部</span>
+    </div>
+  </div>
+
+  <div class="layers">
+
+    <!-- L5 品牌层 -->
+    <div class="layer l5">
+      <div class="layer-label">L5<br>品牌层<small>4 大母体</small></div>
+      <div class="layer-content">
+        <div class="node-group">
+          <div class="node"><b>安逸臻选</b><div class="desc">商业品牌<br>国企背书</div></div>
+          <div class="node"><b>汉茶风华</b><div class="desc">文化母体<br>蒙顶山</div></div>
+          <div class="node"><b>千里江山图</b><div class="desc">流量 IP<br>央视背书</div></div>
+          <div class="node"><b>书山茶海</b><div class="desc">文化活动 IP<br>帆书联运</div></div>
+        </div>
+      </div>
+    </div>
+    <div class="arrow">▲ 品牌输出 ▼</div>
+
+    <!-- L4 场景层 -->
+    <div class="layer l4">
+      <div class="layer-label">L4<br>场景层<small>4+3+2 类</small></div>
+      <div class="layer-content">
+        <div class="node-group">
+          <div class="node" style="flex: 0 0 22%"><b>线下 4 类</b></div>
+          <div class="node">酒店点位</div>
+          <div class="node">客房入货<br>(mini-bar/伴手礼)</div>
+          <div class="node">主题房 3 档</div>
+          <div class="node">自动售货机 24h</div>
+        </div>
+        <div class="node-group">
+          <div class="node" style="flex: 0 0 22%"><b>线上 3 类</b></div>
+          <div class="node">自建电商平台<br>(有赞/微盟)</div>
+          <div class="node">代运营+新媒体<br>(云孚里/自在云)</div>
+          <div class="node">商投私域桥接<br>(曙光汇 700 万)</div>
+        </div>
+        <div class="node-group">
+          <div class="node" style="flex: 0 0 22%"><b>跨境 2 类</b></div>
+          <div class="node">亚马逊 US/JP<br>TikTok Shop</div>
+          <div class="node">丝路易购<br>阿里国际站</div>
+          <div class="node" style="visibility: hidden">占位</div>
+        </div>
+        <div class="node-group">
+          <div class="node" style="flex: 0 0 22%"><b>外部合作 4 模式</b></div>
+          <div class="node">青城山/峨眉山<br>主题房授权</div>
+          <div class="node">巴蜀周边民宿<br>汉茶风华认证</div>
+          <div class="node">全国连锁<br>亚朵/华住/锦江</div>
+        </div>
+      </div>
+    </div>
+    <div class="arrow">▲ 消费采购 ▼</div>
+
+    <!-- L3 产品层 -->
+    <div class="layer l3">
+      <div class="layer-label">L3<br>产品层<small>巴蜀特色<br>10 大主线</small></div>
+      <div class="layer-content">
+        <div class="node-group">
+          <div class="node"><b>1. 蒙顶甘露</b><div class="desc">世界茶文化发源地</div></div>
+          <div class="node"><b>2. 蒙顶黄芽</b><div class="desc">三黄特色</div></div>
+          <div class="node"><b>3. 雅红工夫</b><div class="desc">蜀地红茶</div></div>
+          <div class="node"><b>4. 古蜀藏茶</b><div class="desc">茶马古道起点</div></div>
+          <div class="node"><b>5. 茶器</b><div class="desc">竹编/蜀锦</div></div>
+        </div>
+        <div class="node-group">
+          <div class="node"><b>6. 茶食</b><div class="desc">川点/茶宴</div></div>
+          <div class="node"><b>7. 茶宠</b><div class="desc">熊猫/三星堆</div></div>
+          <div class="node"><b>8. 非遗联名</b><div class="desc">川剧/变脸</div></div>
+          <div class="node"><b>9. 书山茶海文创</b><div class="desc">帆书联运</div></div>
+          <div class="node"><b>10. 千里江山图</b><div class="desc">央视 IP 衍生</div></div>
+        </div>
+        <div class="node highlight" style="margin: 0 auto; max-width: 600px;">
+          <b>★ 巴蜀文化锚 ★</b>
+          <div class="desc">世界茶文化发源地 · 茶马古道起点 · 国宝 IP · 央视背书</div>
+        </div>
+      </div>
+    </div>
+    <div class="arrow">▲ 采购支撑 ▼</div>
+
+    <!-- L2 供应链层 -->
+    <div class="layer l2">
+      <div class="layer-label">L2<br>供应链<small>商投 4 角色</small></div>
+      <div class="layer-content">
+        <div class="node-group">
+          <div class="node"><b>角色 1</b><div class="desc">线下点位互换方<br>不涉钱·资源互换</div></div>
+          <div class="node"><b>角色 2</b><div class="desc">安逸酒店供应商<br>走安逸购·B 端集采</div></div>
+          <div class="node highlight"><b>角色 3 ⭐</b><div class="desc">茶业独立供应商<br>涉钱·独立采购</div></div>
+          <div class="node"><b>角色 4</b><div class="desc">流量互嵌方<br>曙光汇 700 万 ↔ 安逸 160 万</div></div>
+        </div>
+        <div class="node-group" style="margin-top: 8px;">
+          <div class="node" style="flex: 0 0 auto; background: #0078A8; color: white; border: none;">
+            <b style="color: white;">商投 4 板块</b>
+          </div>
+          <div class="node" style="background: #E3F2FD; border-color: #0078A8;">民生消费<br>(红旗连锁)</div>
+          <div class="node" style="background: #E3F2FD; border-color: #0078A8;">商贸物流<br>(三文鱼)</div>
+          <div class="node" style="background: #E3F2FD; border-color: #0078A8;">农产品供应链<br>(天府菜油)</div>
+          <div class="node" style="background: #E3F2FD; border-color: #0078A8;">战略物资保供</div>
+        </div>
+      </div>
+    </div>
+    <div class="arrow">▲ 资源整合 ▼</div>
+
+    <!-- L1 集团/政策层 -->
+    <div class="layer l1">
+      <div class="layer-label">L1<br>集团<br>政策层</div>
+      <div class="layer-content">
+        <div class="node-group">
+          <div class="node"><b>安逸集团</b><div class="desc">品牌+战略<br>167 家酒店·160 万会员</div></div>
+          <div class="node"><b>商投集团</b><div class="desc">供应链+渠道<br>省国资委直属·100 亿</div></div>
+          <div class="node"><b>旅投集团</b><div class="desc">战略背书<br>省属国企</div></div>
+          <div class="node"><b>蒙顶山茶业</b><div class="desc">培育主体<br>5 亿注册资本·5A 龙头</div></div>
+        </div>
+        <div class="node-group" style="margin-top: 8px;">
+          <div class="node" style="background: #FFD700; border-color: #FF8F00; color: #5D4037;">
+            <b style="color: #E65100;">1200 万省级奖补</b>
+            <div class="desc">已获·事中激励</div>
+          </div>
+          <div class="node" style="background: #FFD700; border-color: #FF8F00; color: #5D4037;">
+            <b style="color: #E65100;">浙川协作机制</b>
+            <div class="desc">千万工程</div>
+          </div>
+          <div class="node" style="background: #FFD700; border-color: #FF8F00; color: #5D4037;">
+            <b style="color: #E65100;">陈宗懋院士工作站</b>
+            <div class="desc">茶科技背书</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- 关键判断 -->
+  <div class="callout">
+    <b>★ 关键判断（Eric 10-18 明确）</b><br>
+    ① <b>酒店分成</b>：只涉及在酒店展销的线下部分 → 茶业 ↔ 酒店/景区<br>
+    ② <b>商投集团点位互换</b>：不涉及利润分成（资源互换行为）<br>
+    ③ <b>真正需要分配的是线上部分</b>：自建平台 GMV 分账（茶业/集团/运营方）<br>
+    ④ <b>集团</b>：试点期免品牌授权费，复制期按 GMV 5-8% 抽成<br>
+    ⑤ <b>酒店分润参考全网</b>：亚朵 30% / 全季 25% / 桔子 30-40%（IP 联名款）
+  </div>
+
+  <div class="callout" style="background: #E8F5E9; border-left-color: #1B6E3F; color: #1B5E20;">
+    <b>★ 巴蜀特色 6 大锚点（线下场景的差异化设计）</b><br>
+    ① <b>汉茶文化</b>（西汉吴理真·千年贡茶）<br>
+    ② <b>千里江山图</b>（央视《新闻联播》3 次聚焦·外交部推荐·成雅高铁穿越）<br>
+    ③ <b>茶马古道</b>（雅安起点）<br>
+    ④ <b>三星堆/熊猫</b>（国宝 IP 茶宠/茶器）<br>
+    ⑤ <b>蜀锦/竹编</b>（非遗包装）<br>
+    ⑥ <b>川菜大师+茶</b>（茶味冰粉/茶味花椒糖/麻酱茶酥）
+  </div>
+
+  <!-- 图例 -->
+  <div class="legend">
+    <div class="legend-item"><div class="legend-color" style="background: #C8102E;"></div>品牌层（L5）</div>
+    <div class="legend-item"><div class="legend-color" style="background: #E07B00;"></div>场景层（L4）</div>
+    <div class="legend-item"><div class="legend-color" style="background: #1B6E3F;"></div>产品层（L3）</div>
+    <div class="legend-item"><div class="legend-color" style="background: #0078A8;"></div>供应链层（L2）</div>
+    <div class="legend-item"><div class="legend-color" style="background: #4A4A4A;"></div>集团/政策层（L1）</div>
+    <div class="legend-item"><div class="legend-color" style="background: #FFD700;"></div>重点 / 巴蜀</div>
+  </div>
+
+  <div style="text-align: center; margin-top: 20px; color: #999; font-size: 11px;">
+    安逸酒店集团有限责任公司 产业发展部 · 2026-10-19
+  </div>
+
+</div>
+</body>
+</html>

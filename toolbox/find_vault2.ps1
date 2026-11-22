@@ -1,0 +1,1 @@
+Get-ChildItem D:\Users\ericz -Directory | Select-Object Name | Format-Table -HideTableHeaders

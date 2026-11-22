@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>AHL · 双矩阵 + TOKEN 经济循环</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body {
+    width: 1080px;
+    height: 1920px;
+    font-family: "Source Han Sans SC", "Noto Sans CJK SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+    background: radial-gradient(ellipse at top, #0a1a3a 0%, #050a1f 50%, #02060f 100%);
+    color: #e8f4ff;
+    overflow: hidden;
+    position: relative;
+  }
+  body::before {
+    content: "";
+    position: absolute; inset: 0;
+    background-image:
+      radial-gradient(1px 1px at 12% 8%, #ffffff, transparent),
+      radial-gradient(1px 1px at 28% 22%, #b4d4ff, transparent),
+      radial-gradient(1px 1px at 45% 12%, #ffffff, transparent),
+      radial-gradient(1px 1px at 65% 35%, #88aaff, transparent),
+      radial-gradient(1px 1px at 78% 18%, #ffffff, transparent),
+      radial-gradient(1px 1px at 92% 28%, #d4d4ff, transparent),
+      radial-gradient(1px 1px at 18% 62%, #ffffff, transparent),
+      radial-gradient(1px 1px at 52% 78%, #b4d4ff, transparent),
+      radial-gradient(1px 1px at 85% 65%, #ffffff, transparent),
+      radial-gradient(1px 1px at 8% 92%, #88aaff, transparent),
+      radial-gradient(2px 2px at 38% 88%, rgba(0,212,255,0.4), transparent),
+      radial-gradient(2px 2px at 72% 92%, rgba(255,215,0,0.3), transparent);
+    opacity: 0.55;
+    pointer-events: none;
+  }
+  .topbar {
+    width: 100%; height: 8px;
+    background: linear-gradient(90deg, #00d4ff 0%, #0066ff 35%, #8b5cf6 65%, #ffd700 100%);
+    box-shadow: 0 0 20px rgba(0, 212, 255, 0.6);
+  }
+  .container { padding: 40px 56px 50px; position: relative; z-index: 2; }
+
+  /* HEADER */
+  .header { text-align: center; margin-bottom: 24px; }
+  .header .tag {
+    display: inline-block; font-size: 16px; letter-spacing: 6px;
+    color: #00d4ff; border: 1px solid rgba(0,212,255,0.5);
+    padding: 4px 18px; border-radius: 30px; margin-bottom: 14px;
+    background: rgba(0, 212, 255, 0.08);
+  }
+  .header h1 {
+    font-size: 50px; font-weight: 900; letter-spacing: 2px; line-height: 1.15;
+    background: linear-gradient(90deg, #00d4ff 0%, #8b5cf6 50%, #ffd700 100%);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    background-clip: text; margin-bottom: 8px;
+    text-shadow: 0 0 30px rgba(0, 212, 255, 0.4);
+  }
+  .header .sub-en { font-size: 18px; color: #8b9fcf; letter-spacing: 5px; margin-bottom: 12px; font-weight: 300; }
+  .header .sub-cn { font-size: 26px; color: #ffd700; font-weight: 600; letter-spacing: 2px; text-shadow: 0 0 20px rgba(255, 215, 0, 0.4); }
+
+  .section-label {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 19px; color: #00d4ff;
+    letter-spacing: 3px; margin: 18px 0 14px;
+    font-weight: 600;
+  }
+  .section-label .num {
+    background: linear-gradient(135deg, #00d4ff, #0066ff);
+    color: #fff; width: 30px; height: 30px;
+    border-radius: 7px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 17px; font-weight: 800;
+    box-shadow: 0 0 12px rgba(0,212,255,0.5);
+  }
+  .divider {
+    height: 1px; margin: 18px 0;
+    background: linear-gradient(90deg, transparent 0%, rgba(0,212,255,0.6) 50%, transparent 100%);
+    position: relative;
+  }
+  .divider::before {
+    content: ""; position: absolute; left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: #00d4ff;
+    box-shadow: 0 0 15px #00d4ff;
+  }
+
+  /* SECTION 1: 4-step paradigm (UPDATED with TOKEN) */
+  .paradigm-4step {
+    display: grid;
+    grid-template-columns: 1fr 30px 1fr 30px 1fr 30px 1.3fr;
+    gap: 6px; align-items: stretch;
+  }
+  .step {
+    border-radius: 12px; padding: 16px 12px;
+    position: relative; overflow: hidden;
+  }
+  .step-1 { background: linear-gradient(160deg, rgba(80,95,120,0.18), rgba(40,55,80,0.18)); border: 1px solid rgba(120,140,170,0.3); }
+  .step-2 { background: linear-gradient(160deg, rgba(0,212,255,0.10), rgba(139,92,246,0.08)); border: 1px solid rgba(0,212,255,0.35); }
+  .step-3 { background: linear-gradient(160deg, rgba(255,215,0,0.10), rgba(0,212,255,0.10)); border: 1px solid rgba(255,215,0,0.4); }
+  .step-4 {
+    background: linear-gradient(160deg, rgba(74,222,128,0.15), rgba(0,212,255,0.15));
+    border: 1.5px solid #4ade80;
+    box-shadow: 0 0 25px rgba(74,222,128,0.3), inset 0 0 15px rgba(0,212,255,0.1);
+  }
+  .step .step-num {
+    position: absolute; top: 6px; right: 10px;
+    font-size: 32px; font-weight: 900; line-height: 1;
+    opacity: 0.16;
+  }
+  .step-1 .step-num { color: #8b9fcf; }
+  .step-2 .step-num { color: #00d4ff; }
+  .step-3 .step-num { color: #ffd700; opacity: 0.25; }
+  .step-4 .step-num { color: #4ade80; opacity: 0.4; }
+  .step h3 { font-size: 22px; margin-bottom: 4px; letter-spacing: 2px; }
+  .step-1 h3 { color: #8b9fcf; }
+  .step-2 h3 { color: #00d4ff; }
+  .step-3 h3 {
+    background: linear-gradient(90deg, #00d4ff, #ffd700);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .step-4 h3 {
+    background: linear-gradient(90deg, #4ade80, #00d4ff);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .step .en { font-size: 10px; letter-spacing: 3px; margin-bottom: 10px; font-weight: 400; }
+  .step-1 .en { color: #6b7a99; }
+  .step-2 .en { color: #b4d4ff; }
+  .step-3 .en { color: #ffe88a; }
+  .step-4 .en { color: #86efac; }
+  .step .desc { font-size: 11px; line-height: 1.55; color: #c4d4ef; }
+  .step .desc strong { color: #ffd700; font-weight: 700; }
+  .step-4 .desc strong { color: #4ade80; font-weight: 700; }
+  .step .mini-icon { font-size: 30px; margin-bottom: 6px; display: block; }
+  .step-arrow {
+    display: flex; align-items: center; justify-content: center;
+    color: #ffd700; font-size: 22px;
+    text-shadow: 0 0 10px rgba(255,215,0,0.7);
+  }
+
+  /* SECTION 2: DUAL MATRIX + TOKEN FLOW (核心改造) */
+  .matrix-wrap {
+    border-radius: 14px;
+    background: linear-gradient(180deg, rgba(0,212,255,0.05), rgba(255,215,0,0.05));
+    border: 1px solid rgba(0,212,255,0.3);
+    overflow: hidden;
+    position: relative;
+  }
+  .matrix-c { padding: 16px 20px; background: linear-gradient(90deg, rgba(0,212,255,0.15), rgba(0,212,255,0.04)); border-bottom: 1px solid rgba(0,212,255,0.25); position: relative; }
+  .matrix-b { padding: 16px 20px; background: linear-gradient(90deg, rgba(255,215,0,0.04), rgba(255,215,0,0.15)); border-top: 1px solid rgba(255,215,0,0.3); position: relative; }
+  .matrix-label { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
+  .matrix-label .name { font-size: 18px; font-weight: 800; letter-spacing: 2px; }
+  .matrix-c .name { color: #00d4ff; }
+  .matrix-b .name { color: #ffd700; }
+  .matrix-label .en { font-size: 10px; color: #6b7a99; letter-spacing: 3px; }
+  .matrix-c .en { color: #88aaff; }
+  .matrix-b .en { color: #ffe88a; }
+  .matrix-label .count {
+    font-size: 10px; padding: 1px 8px;
+    border-radius: 10px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.15);
+    color: #c4d4ef;
+    letter-spacing: 1px;
+  }
+  .agent-row { display: flex; gap: 8px; justify-content: space-between; }
+  .agent {
+    flex: 1; text-align: center;
+    padding: 8px 4px;
+    border-radius: 8px;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    position: relative;
+  }
+  .agent .avatar { font-size: 22px; line-height: 1; margin-bottom: 3px; display: block; }
+  .agent .name { font-size: 11px; font-weight: 600; letter-spacing: 1px; }
+  .matrix-c .agent .name { color: #b4d4ff; }
+  .matrix-b .agent .name { color: #ffe88a; }
+  .agent .role { font-size: 8px; color: #6b7a99; letter-spacing: 1px; margin-top: 2px; }
+
+  /* ==== NEW: TOKEN ECONOMY BAND ==== */
+  .token-band {
+    padding: 14px 20px;
+    background: linear-gradient(90deg, transparent, rgba(74,222,128,0.18), rgba(255,215,0,0.18), rgba(0,212,255,0.18), transparent);
+    text-align: center;
+    border-top: 1px dashed rgba(74,222,128,0.5);
+    border-bottom: 1px dashed rgba(74,222,128,0.5);
+    position: relative;
+  }
+  .token-band .token-name {
+    font-size: 22px; font-weight: 900;
+    letter-spacing: 4px;
+    background: linear-gradient(90deg, #4ade80, #ffd700, #00d4ff);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 0 0 15px rgba(74,222,128,0.6);
+  }
+  .token-band .token-sub {
+    font-size: 11px; color: #b4d4ff; letter-spacing: 3px; margin-top: 4px;
+  }
+  .token-band .meter {
+    display: inline-flex; align-items: center; gap: 6px;
+    margin-top: 6px;
+    font-size: 11px; color: #4ade80;
+    border: 1px solid rgba(74,222,128,0.5);
+    padding: 2px 10px; border-radius: 12px;
+    background: rgba(74,222,128,0.08);
+    letter-spacing: 1px;
+    font-weight: 600;
+  }
+
+  /* ==== NEW: TOKEN FLOW DIAGRAM ==== */
+  .token-flow {
+    margin-top: 12px;
+    padding: 14px 18px 16px;
+    background: rgba(0,0,0,0.35);
+    border-radius: 12px;
+    border: 1px solid rgba(74,222,128,0.3);
+  }
+  .token-flow .flow-title {
+    font-size: 12px; color: #4ade80; letter-spacing: 3px; font-weight: 700;
+    text-align: center; margin-bottom: 8px;
+  }
+  .flow-svg { width: 100%; height: 220px; }
+  .flow-legend {
+    display: flex; justify-content: space-around;
+    font-size: 10px; color: #c4d4ef; letter-spacing: 1px;
+    margin-top: 6px;
+  }
+  .flow-legend span { display: flex; align-items: center; gap: 4px; }
+  .flow-legend .dot { width: 8px; height: 8px; border-radius: 50%; display: inline-block; }
+  .flow-legend .dot-c { background: #00d4ff; box-shadow: 0 0 6px #00d4ff; }
+  .flow-legend .dot-b { background: #ffd700; box-shadow: 0 0 6px #ffd700; }
+  .flow-legend .dot-t { background: #4ade80; box-shadow: 0 0 6px #4ade80; }
+  .flow-legend .line-green { width: 16px; height: 1.5px; display: inline-block; background: #4ade80; box-shadow: 0 0 4px #4ade80; }
+  .flow-legend .line-flow { width: 16px; height: 1.5px; display: inline-block; background: linear-gradient(90deg, #00d4ff, #ffd700); }
+
+  /* Analog: 电费 vs TOKEN */
+  .analog-row {
+    display: grid;
+    grid-template-columns: 1fr 30px 1fr;
+    gap: 10px;
+    margin-top: 12px;
+  }
+  .analog {
+    border-radius: 10px;
+    padding: 12px 14px;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.1);
+  }
+  .analog-old {
+    background: linear-gradient(135deg, rgba(80,95,120,0.18), rgba(40,55,80,0.18));
+    border-color: rgba(120,140,170,0.3);
+  }
+  .analog-new {
+    background: linear-gradient(135deg, rgba(74,222,128,0.18), rgba(0,212,255,0.18));
+    border-color: rgba(74,222,128,0.5);
+    box-shadow: 0 0 18px rgba(74,222,128,0.2);
+  }
+  .analog-title { font-size: 13px; font-weight: 700; letter-spacing: 2px; margin-bottom: 8px; text-align: center; }
+  .analog-old .analog-title { color: #8b9fcf; }
+  .analog-new .analog-title { color: #4ade80; }
+  .analog-table {
+    width: 100%;
+    font-size: 10px;
+    color: #c4d4ef;
+    line-height: 1.6;
+  }
+  .analog-table td {
+    padding: 1px 4px;
+  }
+  .analog-table td:first-child { color: #8b9fcf; }
+  .analog-new .analog-table td:last-child { color: #4ade80; font-weight: 600; }
+  .analog-eq {
+    display: flex; align-items: center; justify-content: center;
+    font-size: 26px; color: #ffd700;
+    text-shadow: 0 0 12px rgba(255,215,0,0.8);
+  }
+
+  .matrix-foot {
+    text-align: center; padding: 10px;
+    font-size: 14px; color: #4ade80; letter-spacing: 2px; font-weight: 700;
+    background: rgba(0,0,0,0.2);
+    border-top: 1px solid rgba(74,222,128,0.3);
+  }
+  .matrix-foot small {
+    display: block; font-size: 10px; color: #8b9fcf; letter-spacing: 1px;
+    margin-top: 2px; font-weight: 400;
+  }
+
+  /* ==== SECTION 3: TOKEN CIRCLE (independent module) ==== */
+  .token-cycle {
+    margin-top: 6px;
+    padding: 16px 18px 18px;
+    background: linear-gradient(135deg, rgba(74,222,128,0.08), rgba(0,212,255,0.08));
+    border-radius: 12px;
+    border: 1px solid rgba(74,222,128,0.3);
+  }
+  .token-cycle .tc-title {
+    font-size: 13px; color: #4ade80; letter-spacing: 3px; font-weight: 700;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  .cycle-steps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+  }
+  .cycle-step {
+    background: rgba(0,0,0,0.3);
+    border-radius: 8px;
+    padding: 10px 8px;
+    border: 1px solid rgba(74,222,128,0.25);
+    text-align: center;
+    position: relative;
+  }
+  .cycle-step .step-icon { font-size: 26px; margin-bottom: 4px; display: block; }
+  .cycle-step .step-title { font-size: 12px; color: #4ade80; font-weight: 700; letter-spacing: 1px; }
+  .cycle-step .step-desc { font-size: 9px; color: #8b9fcf; margin-top: 3px; line-height: 1.4; }
+  .cycle-step .token-amt {
+    display: inline-block; margin-top: 4px;
+    font-size: 11px; color: #ffd700; font-weight: 700;
+    border: 1px solid rgba(255,215,0,0.4);
+    padding: 1px 6px; border-radius: 8px;
+    background: rgba(255,215,0,0.08);
+  }
+  .cycle-arrows {
+    position: absolute;
+    right: -10px; top: 50%;
+    transform: translateY(-50%);
+    color: #4ade80; font-size: 14px;
+    text-shadow: 0 0 6px rgba(74,222,128,0.8);
+    z-index: 2;
+  }
+  .cycle-step:last-child .cycle-arrows { display: none; }
+
+  /* ==== SECTION 4: UNIVERSAL ==== */
+  .universal-grid {
+    display: grid; grid-template-columns: repeat(5, 1fr);
+    gap: 10px; margin-top: 4px;
+  }
+  .u-tile {
+    border-radius: 10px; padding: 14px 6px;
+    text-align: center;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.1);
+  }
+  .u-tile .emoji { font-size: 28px; line-height: 1; margin-bottom: 5px; display: block; }
+  .u-tile .label { font-size: 13px; font-weight: 600; letter-spacing: 2px; }
+  .u-tile .en { font-size: 9px; color: #8b9fcf; margin-top: 2px; letter-spacing: 1px; }
+  .u1 { box-shadow: 0 0 18px rgba(0,212,255,0.25); border-color: rgba(0,212,255,0.5); }
+  .u1 .label { color: #00d4ff; }
+  .u2 { box-shadow: 0 0 18px rgba(34,197,94,0.25); border-color: rgba(34,197,94,0.5); }
+  .u2 .label { color: #4ade80; }
+  .u3 { box-shadow: 0 0 18px rgba(59,130,246,0.25); border-color: rgba(59,130,246,0.5); }
+  .u3 .label { color: #60a5fa; }
+  .u4 { box-shadow: 0 0 18px rgba(139,92,246,0.3); border-color: rgba(139,92,246,0.5); }
+  .u4 .label { color: #a78bfa; }
+  .u5 { box-shadow: 0 0 18px rgba(255,215,0,0.3); border-color: rgba(255,215,0,0.5); }
+  .u5 .label { color: #ffd700; }
+  .univ-caption {
+    text-align: center; font-size: 14px; color: #c4d4ef;
+    margin-top: 10px; letter-spacing: 1px; line-height: 1.5;
+  }
+  .univ-caption strong { color: #4ade80; }
+
+  /* FOOTER */
+  .footer-callout {
+    margin-top: 14px; text-align: center; padding: 12px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, rgba(74,222,128,0.12), rgba(255,215,0,0.12));
+    border: 1px solid rgba(74,222,128,0.4);
+  }
+  .footer-callout .tagline {
+    font-size: 20px; font-weight: 800;
+    background: linear-gradient(90deg, #4ade80, #00d4ff, #ffd700);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: 2px; line-height: 1.4;
+  }
+  .signoff {
+    display: flex; justify-content: space-between; align-items: center;
+    margin-top: 10px; padding-top: 8px;
+    border-top: 1px solid rgba(0,212,255,0.2);
+  }
+  .signoff .contact { font-size: 12px; color: #8b9fcf; letter-spacing: 1px; }
+  .signoff .contact strong { color: #00d4ff; font-weight: 600; }
+  .signoff .watermark { font-size: 11px; color: #4a5575; letter-spacing: 3px; }
+
+</style>
+</head>
+<body>
+  <div class="topbar"></div>
+  <div class="container">
+
+    <!-- HEADER -->
+    <div class="header">
+      <span class="tag">AHL · TOKEN-ECONOMY DUAL MATRIX</span>
+      <h1>AHL · 双矩阵 + TOKEN 经济循环</h1>
+      <div class="sub-en">C - M A T R I X &nbsp; ⇄ &nbsp; B - M A T R I X &nbsp; · &nbsp; T O K E N &nbsp; F L O W</div>
+      <div class="sub-cn">协议不抽水 · 算力即价值 · TOKEN 是 Agent 经济的电费</div>
+    </div>
+
+    <!-- SECTION 1: 4-step paradigm -->
+    <div class="section-label">
+      <span class="num">01</span>
+      <span>范式四阶 / 4-STEP PARADIGM</span>
+    </div>
+
+    <div class="paradigm-4step">
+      <div class="step step-1">
+        <span class="step-num">1</span>
+        <span class="mini-icon">🏬</span>
+        <h3>货架</h3>
+        <div class="en">SHELF</div>
+        <div class="desc">位置 = 流量<br>抽水者：房东</div>
+      </div>
+
+      <div class="step-arrow">→</div>
+
+      <div class="step step-2">
+        <span class="step-num">2</span>
+        <span class="mini-icon">🎯</span>
+        <h3>匹配</h3>
+        <div class="en">MATCH</div>
+        <div class="desc">算法 = 撮合<br>抽水者：OTA</div>
+      </div>
+
+      <div class="step-arrow">→</div>
+
+      <div class="step step-3">
+        <span class="step-num">3</span>
+        <span class="mini-icon">⚡</span>
+        <h3>直接</h3>
+        <div class="en">DIRECT</div>
+        <div class="desc">协议 = 握手<br>抽水者：无</div>
+      </div>
+
+      <div class="step-arrow">→</div>
+
+      <div class="step step-4">
+        <span class="step-num">4</span>
+        <span class="mini-icon">💎</span>
+        <h3>TOKEN</h3>
+        <div class="en">TOKEN · AHL</div>
+        <div class="desc"><strong>算力 = 价值</strong><br>计量：每一次握手</div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- SECTION 2: DUAL MATRIX + TOKEN FLOW -->
+    <div class="section-label">
+      <span class="num">02</span>
+      <span>双矩阵架构 + TOKEN 流 / DUAL MATRIX & TOKEN FLOW</span>
+    </div>
+
+    <div class="matrix-wrap">
+
+      <!-- TOP: C Matrix -->
+      <div class="matrix-c">
+        <div class="matrix-label">
+          <span class="name">C 矩阵 · CONSUMER MATRIX</span>
+          <span class="en">客人侧 AGENT 群</span>
+          <span class="count">× N 个 Agent</span>
+        </div>
+        <div class="agent-row">
+          <div class="agent"><span class="avatar">📱</span><div class="name">商务客</div><div class="role">出差型</div></div>
+          <div class="agent"><span class="avatar">🎒</span><div class="name">背包客</div><div class="role">性价比</div></div>
+          <div class="agent"><span class="avatar">👨‍👩‍👧</span><div class="name">亲子客</div><div class="role">需求多元</div></div>
+          <div class="agent"><span class="avatar">🌏</span><div class="name">入境客</div><div class="role">语言 / 偏好</div></div>
+          <div class="agent"><span class="avatar">🐶</span><div class="name">宠物客</div><div class="role">特殊需求</div></div>
+        </div>
+      </div>
+
+      <!-- TOKEN BAND -->
+      <div class="token-band">
+        <div class="token-name">⚡ TOKEN 经济层 · TOKEN LAYER</div>
+        <div class="token-sub">算力即货币 · 握手即计费 · 类比"电费"</div>
+        <div class="meter">⚡ 1 握手 = X TOKEN · 1 TOKEN = Y 算力</div>
+      </div>
+
+      <!-- P2P mesh + TOKEN flow visualization -->
+      <div class="token-flow">
+        <div class="flow-title">握手即计费 · TOKEN 在双矩阵间流转 / HANDSHAKE = TOKEN BURN</div>
+        <svg class="flow-svg" viewBox="0 0 960 220" preserveAspectRatio="none">
+          <defs>
+            <linearGradient id="p2pGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#00d4ff" stop-opacity="0.5"/>
+              <stop offset="50%" stop-color="#8b5cf6" stop-opacity="0.4"/>
+              <stop offset="100%" stop-color="#ffd700" stop-opacity="0.5"/>
+            </linearGradient>
+            <linearGradient id="tokenGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#4ade80"/>
+              <stop offset="100%" stop-color="#ffd700"/>
+            </linearGradient>
+          </defs>
+
+          <!-- C nodes (top row) -->
+          <g>
+            <circle cx="80" cy="40" r="10" fill="#00d4ff"/>
+            <circle cx="80" cy="40" r="16" fill="none" stroke="#00d4ff" stroke-opacity="0.4"/>
+            <text x="80" y="22" text-anchor="middle" fill="#b4d4ff" font-size="11">C1</text>
+
+            <circle cx="240" cy="40" r="10" fill="#00d4ff"/>
+            <circle cx="240" cy="40" r="16" fill="none" stroke="#00d4ff" stroke-opacity="0.4"/>
+            <text x="240" y="22" text-anchor="middle" fill="#b4d4ff" font-size="11">C2</text>
+
+            <circle cx="400" cy="40" r="10" fill="#00d4ff"/>
+            <circle cx="400" cy="40" r="16" fill="none" stroke="#00d4ff" stroke-opacity="0.4"/>
+            <text x="400" y="22" text-anchor="middle" fill="#b4d4ff" font-size="11">C3</text>
+
+            <circle cx="560" cy="40" r="10" fill="#00d4ff"/>
+            <circle cx="560" cy="40" r="16" fill="none" stroke="#00d4ff" stroke-opacity="0.4"/>
+            <text x="560" y="22" text-anchor="middle" fill="#b4d4ff" font-size="11">C4</text>
+
+            <circle cx="720" cy="40" r="10" fill="#00d4ff"/>
+            <circle cx="720" cy="40" r="16" fill="none" stroke="#00d4ff" stroke-opacity="0.4"/>
+            <text x="720" y="22" text-anchor="middle" fill="#b4d4ff" font-size="11">C5</text>
+
+            <circle cx="880" cy="40" r="10" fill="#00d4ff"/>
+            <circle cx="880" cy="40" r="16" fill="none" stroke="#00d4ff" stroke-opacity="0.4"/>
+            <text x="880" y="22" text-anchor="middle" fill="#b4d4ff" font-size="11">C6</text>
+          </g>
+
+          <!-- B nodes (bottom row) -->
+          <g>
+            <circle cx="120" cy="190" r="10" fill="#ffd700"/>
+            <circle cx="120" cy="190" r="16" fill="none" stroke="#ffd700" stroke-opacity="0.4"/>
+            <text x="120" y="210" text-anchor="middle" fill="#ffe88a" font-size="10">B1 酒店</text>
+
+            <circle cx="280" cy="190" r="10" fill="#ffd700"/>
+            <circle cx="280" cy="190" r="16" fill="none" stroke="#ffd700" stroke-opacity="0.4"/>
+            <text x="280" y="210" text-anchor="middle" fill="#ffe88a" font-size="10">B2 餐饮</text>
+
+            <circle cx="440" cy="190" r="10" fill="#ffd700"/>
+            <circle cx="440" cy="190" r="16" fill="none" stroke="#ffd700" stroke-opacity="0.4"/>
+            <text x="440" y="210" text-anchor="middle" fill="#ffe88a" font-size="10">B3 零售</text>
+
+            <circle cx="600" cy="190" r="10" fill="#ffd700"/>
+            <circle cx="600" cy="190" r="16" fill="none" stroke="#ffd700" stroke-opacity="0.4"/>
+            <text x="600" y="210" text-anchor="middle" fill="#ffe88a" font-size="10">B4 娱乐</text>
+
+            <circle cx="760" cy="190" r="10" fill="#ffd700"/>
+            <circle cx="760" cy="190" r="16" fill="none" stroke="#ffd700" stroke-opacity="0.4"/>
+            <text x="760" y="210" text-anchor="middle" fill="#ffe88a" font-size="10">B5 服务</text>
+
+            <circle cx="900" cy="190" r="10" fill="#ffd700"/>
+            <circle cx="900" cy="190" r="16" fill="none" stroke="#ffd700" stroke-opacity="0.4"/>
+            <text x="900" y="210" text-anchor="middle" fill="#ffe88a" font-size="10">B6 本地</text>
+          </g>
+
+          <!-- P2P connections -->
+          <g stroke="url(#p2pGrad)" stroke-width="1.2" fill="none" opacity="0.75">
+            <path d="M 80,40 Q 100,110 120,190" stroke-dasharray="3,2"/>
+            <path d="M 80,40 Q 180,110 280,190" stroke-dasharray="3,2"/>
+            <path d="M 240,40 Q 260,110 280,190" stroke-dasharray="3,2"/>
+            <path d="M 240,40 Q 340,110 440,190" stroke-dasharray="3,2"/>
+            <path d="M 400,40 Q 420,110 440,190" stroke-dasharray="3,2"/>
+            <path d="M 400,40 Q 500,110 600,190" stroke-dasharray="3,2"/>
+            <path d="M 560,40 Q 580,110 600,190" stroke-dasharray="3,2"/>
+            <path d="M 560,40 Q 660,110 760,190" stroke-dasharray="3,2"/>
+            <path d="M 720,40 Q 740,110 760,190" stroke-dasharray="3,2"/>
+            <path d="M 720,40 Q 800,110 900,190" stroke-dasharray="3,2"/>
+            <path d="M 880,40 Q 880,115 900,190" stroke-dasharray="3,2"/>
+            <path d="M 880,40 Q 820,115 760,190" stroke-dasharray="3,2"/>
+          </g>
+
+          <!-- TOKEN labels along the P2P flows -->
+          <g fill="#4ade80" font-size="9" font-weight="700">
+            <text x="140" y="115" text-anchor="middle">⚡ +3</text>
+            <text x="320" y="115" text-anchor="middle">⚡ +5</text>
+            <text x="480" y="115" text-anchor="middle">⚡ +2</text>
+            <text x="640" y="115" text-anchor="middle">⚡ +8</text>
+            <text x="800" y="115" text-anchor="middle">⚡ +4</text>
+          </g>
+
+          <!-- "X NO HUB" center -->
+          <text x="480" y="155" text-anchor="middle" fill="#4ade80" font-size="11" font-weight="700" letter-spacing="2">
+            ✕ NO HUB
+          </text>
+        </svg>
+
+        <div class="flow-legend">
+          <span><span class="dot dot-c"></span>C 矩阵节点</span>
+          <span><span class="line-flow"></span>P2P 直接握手</span>
+          <span><span class="dot dot-t"></span>TOKEN 流转</span>
+          <span><span class="dot dot-b"></span>B 矩阵节点</span>
+        </div>
+      </div>
+
+      <!-- BOTTOM: B Matrix -->
+      <div class="matrix-b">
+        <div class="matrix-label">
+          <span class="name">B 矩阵 · BUSINESS MATRIX</span>
+          <span class="en">商家侧 AGENT 群</span>
+          <span class="count">× N 个 Agent</span>
+        </div>
+        <div class="agent-row">
+          <div class="agent"><span class="avatar">🏨</span><div class="name">单体酒店</div><div class="role">独立运营</div></div>
+          <div class="agent"><span class="avatar">🏢</span><div class="name">连锁集团</div><div class="role">百店规模</div></div>
+          <div class="agent"><span class="avatar">🍽️</span><div class="name">餐饮门店</div><div class="role">坪效优先</div></div>
+          <div class="agent"><span class="avatar">🛍️</span><div class="name">零售小店</div><div class="role">流量稀缺</div></div>
+          <div class="agent"><span class="avatar">🛎️</span><div class="name">本地生活</div><div class="role">服务上门</div></div>
+        </div>
+      </div>
+
+      <div class="matrix-foot">
+        AHL = 协议层 · 计量 TOKEN · 不当中间商
+        <small>Standardizes the meter · 0% commission</small>
+      </div>
+    </div>
+
+    <!-- Analog: 电费 vs TOKEN -->
+    <div class="analog-row">
+      <div class="analog analog-old">
+        <div class="analog-title">⚡ 工业时代 / ELECTRIC ERA</div>
+        <table class="analog-table">
+          <tr><td>成本单位</td><td>电费 (度)</td></tr>
+          <tr><td>基础设施</td><td>电网 / 电力公司</td></tr>
+          <tr><td>计量</td><td>电表</td></tr>
+          <tr><td>价值流</td><td>工厂 → 电网 → 工人</td></tr>
+          <tr><td>支撑</td><td>工业经济循环</td></tr>
+        </table>
+      </div>
+
+      <div class="analog-eq">≈</div>
+
+      <div class="analog analog-new">
+        <div class="analog-title">💎 AI 时代 / TOKEN ERA</div>
+        <table class="analog-table">
+          <tr><td>成本单位</td><td>TOKEN (算力)</td></tr>
+          <tr><td>基础设施</td><td>AHL 协议层</td></tr>
+          <tr><td>计量</td><td>握手计量器</td></tr>
+          <tr><td>价值流</td><td>C Agent ↔ B Agent → 算力</td></tr>
+          <tr><td>支撑</td><td>Agent 经济循环</td></tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- SECTION 3: TOKEN CYCLE -->
+    <div class="section-label">
+      <span class="num">03</span>
+      <span>TOKEN 经济循环 / TOKEN CYCLE</span>
+    </div>
+
+    <div class="token-cycle">
+      <div class="tc-title">4 步循环 · 4-STEP TOKEN CIRCULATION</div>
+      <div class="cycle-steps">
+        <div class="cycle-step">
+          <span class="step-icon">🤝</span>
+          <div class="step-title">1. 握手</div>
+          <div class="step-desc">C Agent 与 B Agent 直接对话</div>
+          <div class="token-amt">消耗 TOKEN</div>
+          <span class="cycle-arrows">→</span>
+        </div>
+        <div class="cycle-step">
+          <span class="step-icon">⚡</span>
+          <div class="step-title">2. 计量</div>
+          <div class="step-desc">AHL 协议层标准化计费</div>
+          <div class="token-amt">按算力计价</div>
+          <span class="cycle-arrows">→</span>
+        </div>
+        <div class="cycle-step">
+          <span class="step-icon">💎</span>
+          <div class="step-title">3. 流转</div>
+          <div class="step-desc">TOKEN 流向算力提供方</div>
+          <div class="token-amt">收益归属</div>
+          <span class="cycle-arrows">→</span>
+        </div>
+        <div class="cycle-step">
+          <span class="step-icon">🔄</span>
+          <div class="step-title">4. 喂养</div>
+          <div class="step-desc">数据回流反哺 Agent 进化</div>
+          <div class="token-amt">闭环越转越快</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- SECTION 4: UNIVERSAL -->
+    <div class="section-label">
+      <span class="num">04</span>
+      <span>泛用性 / UNIVERSAL</span>
+    </div>
+
+    <div class="universal-grid">
+      <div class="u-tile u1"><span class="emoji">🏬</span><div class="label">商业地产</div><div class="en">MALL</div></div>
+      <div class="u-tile u2"><span class="emoji">🏥</span><div class="label">医院</div><div class="en">HOSPITAL</div></div>
+      <div class="u-tile u3"><span class="emoji">🚚</span><div class="label">物流</div><div class="en">LOGISTICS</div></div>
+      <div class="u-tile u4"><span class="emoji">🎓</span><div class="label">教育</div><div class="en">EDUCATION</div></div>
+      <div class="u-tile u5"><span class="emoji">🏛️</span><div class="label">政务</div><div class="en">GOV</div></div>
+    </div>
+
+    <div class="univ-caption">
+      双矩阵 + TOKEN 循环 · 任何 <strong>Agent 握手场景</strong> 都适用
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer-callout">
+      <div class="tagline">
+        算力即价值 · TOKEN 是 Agent 经济的电费<br>
+        协议层之上 · 价值归创造者
+      </div>
+    </div>
+
+    <div class="signoff">
+      <div class="contact">
+        联系：<strong>17760348653</strong> &nbsp;|&nbsp; 张实 · Eric
+      </div>
+      <div class="watermark">ERIC的B166ER出品</div>
+    </div>
+
+  </div>
+</body>
+</html>

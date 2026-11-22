@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>AHL · 三层级 · 酒店 → 集团 → 文旅</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body {
+    width: 1080px;
+    height: 1920px;
+    font-family: "Source Han Sans SC", "Noto Sans CJK SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+    background: radial-gradient(ellipse at top, #0a1a3a 0%, #050a1f 50%, #02060f 100%);
+    color: #e8f4ff;
+    overflow: hidden;
+    position: relative;
+  }
+  body::before {
+    content: "";
+    position: absolute; inset: 0;
+    background-image:
+      radial-gradient(1px 1px at 12% 8%, #ffffff, transparent),
+      radial-gradient(1px 1px at 28% 22%, #b4d4ff, transparent),
+      radial-gradient(1px 1px at 45% 12%, #ffffff, transparent),
+      radial-gradient(1px 1px at 65% 35%, #88aaff, transparent),
+      radial-gradient(1px 1px at 78% 18%, #ffffff, transparent),
+      radial-gradient(1px 1px at 92% 28%, #d4d4ff, transparent),
+      radial-gradient(1px 1px at 18% 62%, #ffffff, transparent),
+      radial-gradient(1px 1px at 52% 78%, #b4d4ff, transparent),
+      radial-gradient(1px 1px at 85% 65%, #ffffff, transparent),
+      radial-gradient(1px 1px at 8% 92%, #88aaff, transparent),
+      radial-gradient(2px 2px at 38% 88%, rgba(0,212,255,0.4), transparent),
+      radial-gradient(2px 2px at 72% 92%, rgba(255,215,0,0.3), transparent);
+    opacity: 0.5;
+    pointer-events: none;
+  }
+  .topbar {
+    width: 100%; height: 8px;
+    background: linear-gradient(90deg, #00d4ff 0%, #8b5cf6 50%, #ffd700 100%);
+    box-shadow: 0 0 20px rgba(0, 212, 255, 0.6);
+  }
+  .container { padding: 70px 90px 60px; position: relative; z-index: 2; }
+
+  /* HEADER - 极简 */
+  .header { text-align: center; margin-bottom: 50px; }
+  .header .tag {
+    display: inline-block; font-size: 16px; letter-spacing: 6px;
+    color: #00d4ff; border: 1px solid rgba(0,212,255,0.5);
+    padding: 4px 18px; border-radius: 30px; margin-bottom: 20px;
+    background: rgba(0, 212, 255, 0.08);
+  }
+  .header h1 {
+    font-size: 64px; font-weight: 900; letter-spacing: 4px; line-height: 1.1;
+    background: linear-gradient(90deg, #00d4ff 0%, #8b5cf6 50%, #ffd700 100%);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 0 0 30px rgba(0, 212, 255, 0.4);
+    margin-bottom: 16px;
+  }
+  .header .sub-cn { font-size: 26px; color: #ffd700; font-weight: 600; letter-spacing: 3px; text-shadow: 0 0 18px rgba(255, 215, 0, 0.4); }
+
+  /* TOKEN 贯穿 - 右侧浮动光带 */
+  .token-spine {
+    position: absolute;
+    right: 35px; top: 280px;
+    width: 6px;
+    height: 1100px;
+    background: linear-gradient(180deg, #00d4ff 0%, #8b5cf6 50%, #ffd700 100%);
+    border-radius: 3px;
+    box-shadow: 0 0 20px rgba(255,215,0,0.5);
+    z-index: 1;
+  }
+  .token-spine-label {
+    position: absolute;
+    right: 12px; top: 260px;
+    writing-mode: vertical-rl;
+    font-size: 14px;
+    color: #ffd700;
+    letter-spacing: 6px;
+    font-weight: 700;
+    text-shadow: 0 0 10px rgba(255,215,0,0.6);
+    z-index: 1;
+  }
+
+  /* 三个层级 */
+  .level {
+    position: relative;
+    margin-bottom: 60px;
+    padding: 36px 40px;
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+  }
+  .level-1 {
+    background: linear-gradient(135deg, rgba(0,212,255,0.18), rgba(0,212,255,0.04));
+    border: 1px solid rgba(0,212,255,0.4);
+    box-shadow: 0 0 40px rgba(0,212,255,0.15);
+  }
+  .level-2 {
+    background: linear-gradient(135deg, rgba(139,92,246,0.18), rgba(139,92,246,0.04));
+    border: 1px solid rgba(139,92,246,0.4);
+    box-shadow: 0 0 40px rgba(139,92,246,0.15);
+  }
+  .level-3 {
+    background: linear-gradient(135deg, rgba(255,215,0,0.18), rgba(255,215,0,0.04));
+    border: 1.5px solid rgba(255,215,0,0.5);
+    box-shadow: 0 0 40px rgba(255,215,0,0.2);
+  }
+
+  .level-icon {
+    flex-shrink: 0;
+    width: 240px; height: 240px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    position: relative;
+    font-size: 140px;
+    line-height: 1;
+  }
+  .level-1 .level-icon {
+    background: radial-gradient(circle, rgba(0,212,255,0.3), rgba(0,212,255,0.05));
+    border: 2px solid #00d4ff;
+    box-shadow: 0 0 40px rgba(0,212,255,0.6), inset 0 0 30px rgba(0,212,255,0.2);
+  }
+  .level-2 .level-icon {
+    background: radial-gradient(circle, rgba(139,92,246,0.3), rgba(139,92,246,0.05));
+    border: 2px solid #8b5cf6;
+    box-shadow: 0 0 40px rgba(139,92,246,0.6), inset 0 0 30px rgba(139,92,246,0.2);
+  }
+  .level-3 .level-icon {
+    background: radial-gradient(circle, rgba(255,215,0,0.3), rgba(255,215,0,0.05));
+    border: 2px solid #ffd700;
+    box-shadow: 0 0 50px rgba(255,215,0,0.7), inset 0 0 30px rgba(255,215,0,0.2);
+  }
+
+  /* 图标周围的"轨道"小图标 */
+  .orbit-icons {
+    position: absolute; inset: 0;
+    pointer-events: none;
+  }
+  .orbit-icons .mini {
+    position: absolute;
+    font-size: 22px;
+    background: rgba(0,0,0,0.6);
+    width: 36px; height: 36px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    border: 1px solid rgba(255,255,255,0.15);
+  }
+  .level-1 .mini { color: #00d4ff; }
+  .level-2 .mini { color: #8b5cf6; }
+  .level-3 .mini { color: #ffd700; }
+
+  .level-content { flex: 1; min-width: 0; }
+  .level-tag {
+    display: inline-block;
+    font-size: 12px; letter-spacing: 3px;
+    padding: 3px 10px;
+    border-radius: 12px;
+    margin-bottom: 14px;
+    font-weight: 600;
+  }
+  .level-1 .level-tag { background: rgba(0,212,255,0.15); color: #00d4ff; border: 1px solid rgba(0,212,255,0.4); }
+  .level-2 .level-tag { background: rgba(139,92,246,0.15); color: #a78bfa; border: 1px solid rgba(139,92,246,0.4); }
+  .level-3 .level-tag { background: rgba(255,215,0,0.15); color: #ffd700; border: 1px solid rgba(255,215,0,0.4); }
+
+  .level-title {
+    font-size: 56px;
+    font-weight: 900;
+    letter-spacing: 4px;
+    margin-bottom: 6px;
+    line-height: 1;
+  }
+  .level-1 .level-title { color: #00d4ff; text-shadow: 0 0 25px rgba(0,212,255,0.4); }
+  .level-2 .level-title { color: #a78bfa; text-shadow: 0 0 25px rgba(139,92,246,0.4); }
+  .level-3 .level-title {
+    background: linear-gradient(90deg, #ffd700, #00d4ff);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 0 0 25px rgba(255,215,0,0.4);
+  }
+  .level-en {
+    font-size: 16px;
+    letter-spacing: 5px;
+    margin-bottom: 18px;
+    font-weight: 400;
+  }
+  .level-1 .level-en { color: #88aaff; }
+  .level-2 .level-en { color: #c4b5fd; }
+  .level-3 .level-en { color: #ffe88a; }
+
+  .level-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 14px;
+  }
+  .pill {
+    font-size: 13px;
+    padding: 5px 12px;
+    border-radius: 14px;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.12);
+    color: #c4d4ef;
+    letter-spacing: 1px;
+  }
+  .level-1 .pill { color: #b4d4ff; border-color: rgba(0,212,255,0.3); }
+  .level-2 .pill { color: #c4b5fd; border-color: rgba(139,92,246,0.3); }
+  .level-3 .pill { color: #ffe88a; border-color: rgba(255,215,0,0.3); }
+
+  .level-value {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #e8f4ff;
+    padding-top: 12px;
+    border-top: 1px dashed rgba(255,255,255,0.15);
+  }
+  .level-1 .level-value strong { color: #00d4ff; font-weight: 700; }
+  .level-2 .level-value strong { color: #a78bfa; font-weight: 700; }
+  .level-3 .level-value strong { color: #ffd700; font-weight: 700; }
+
+  /* 三层级之间的虚线连接 */
+  .connectors {
+    position: relative;
+    height: 50px;
+    margin: -10px 0 -10px 250px;
+  }
+  .connector-line {
+    position: absolute;
+    left: 0; top: 50%;
+    transform: translateY(-50%);
+    width: 4px; height: 50px;
+    background: linear-gradient(180deg, rgba(0,212,255,0.6) 0%, rgba(139,92,246,0.6) 50%, rgba(255,215,0,0.6) 100%);
+    border-radius: 2px;
+    box-shadow: 0 0 12px rgba(255,215,0,0.4);
+  }
+  .connector-label {
+    position: absolute;
+    left: 28px; top: 50%;
+    transform: translateY(-50%);
+    font-size: 13px;
+    color: #8b9fcf;
+    letter-spacing: 2px;
+  }
+
+  /* 底部金句 */
+  .footer-callout {
+    margin-top: 50px;
+    text-align: center;
+    padding: 28px 20px;
+    border-radius: 18px;
+    background: linear-gradient(135deg, rgba(0,212,255,0.10), rgba(139,92,246,0.10), rgba(255,215,0,0.10));
+    border: 1px solid rgba(0,212,255,0.4);
+    position: relative;
+  }
+  .footer-callout .tagline {
+    font-size: 30px;
+    font-weight: 800;
+    background: linear-gradient(90deg, #00d4ff, #8b5cf6, #ffd700);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: 3px;
+    line-height: 1.5;
+  }
+  .footer-callout .small {
+    font-size: 14px;
+    color: #8b9fcf;
+    margin-top: 12px;
+    letter-spacing: 4px;
+  }
+
+  .signoff {
+    display: flex; justify-content: space-between; align-items: center;
+    margin-top: 30px;
+    padding-top: 16px;
+    border-top: 1px solid rgba(0,212,255,0.2);
+  }
+  .signoff .contact { font-size: 16px; color: #8b9fcf; letter-spacing: 1px; }
+  .signoff .contact strong { color: #00d4ff; font-weight: 600; }
+  .signoff .watermark { font-size: 13px; color: #4a5575; letter-spacing: 4px; }
+
+</style>
+</head>
+<body>
+  <div class="topbar"></div>
+  <div class="container">
+
+    <!-- HEADER -->
+    <div class="header">
+      <span class="tag">AHL · 3 - T I E R &nbsp; A P P L I C A T I O N</span>
+      <h1>AHL · 三层级适用</h1>
+      <div class="sub-cn">酒店 → 酒店集团 → 文旅产业</div>
+    </div>
+
+    <!-- TOKEN 贯穿光带 -->
+    <div class="token-spine"></div>
+    <div class="token-spine-label">⚡ TOKEN 流贯穿</div>
+
+    <!-- LEVEL 1: 单体酒店 -->
+    <div class="level level-1">
+      <div class="level-icon">
+        🏨
+        <div class="orbit-icons">
+          <div class="mini" style="top: 10px; left: 50%; transform: translateX(-50%);">📱</div>
+          <div class="mini" style="right: 8px; top: 50%; transform: translateY(-50%);">⚡</div>
+          <div class="mini" style="bottom: 10px; left: 50%; transform: translateX(-50%);">💎</div>
+          <div class="mini" style="left: 8px; top: 50%; transform: translateY(-50%);">🤖</div>
+        </div>
+      </div>
+      <div class="level-content">
+        <span class="level-tag">LEVEL 01 · 单 体 酒 店</span>
+        <div class="level-title">酒店</div>
+        <div class="level-en">SINGLE HOTEL · INDEPENDENT</div>
+        <div class="level-pills">
+          <span class="pill">1 家店</span>
+          <span class="pill">1 个 B Agent</span>
+          <span class="pill">独立运营</span>
+          <span class="pill">流量稀缺</span>
+        </div>
+        <div class="level-value">
+          AHL 让单体酒店以 <strong>最低门槛</strong> 接入 Agent 网络，<br>
+          获得连锁集团才有的 <strong>流量 + 数据</strong>。
+        </div>
+      </div>
+    </div>
+
+    <!-- CONNECTOR -->
+    <div class="connectors">
+      <div class="connector-line"></div>
+      <div class="connector-label">↓ N → N ↑</div>
+    </div>
+
+    <!-- LEVEL 2: 酒店集团 -->
+    <div class="level level-2">
+      <div class="level-icon">
+        🏢
+        <div class="orbit-icons">
+          <div class="mini" style="top: 10px; left: 50%; transform: translateX(-50%);">🏨</div>
+          <div class="mini" style="right: 8px; top: 50%; transform: translateY(-50%);">🏨</div>
+          <div class="mini" style="bottom: 10px; left: 50%; transform: translateX(-50%);">🏨</div>
+          <div class="mini" style="left: 8px; top: 50%; transform: translateY(-50%);">🏨</div>
+        </div>
+      </div>
+      <div class="level-content">
+        <span class="level-tag">LEVEL 02 · 酒 店 集 团</span>
+        <div class="level-title">集团</div>
+        <div class="level-en">HOTEL GROUP · MULTI-AGENT</div>
+        <div class="level-pills">
+          <span class="pill">N 家门店</span>
+          <span class="pill">B Agent 矩阵</span>
+          <span class="pill">中台统一</span>
+          <span class="pill">数据喂养</span>
+        </div>
+        <div class="level-value">
+          AHL 让集团跨店 <strong>Agent 协同</strong> + 跨品牌 <strong>价值流转</strong>，<br>
+          从"加盟体系"升级到 <strong>Agent 网络</strong>。
+        </div>
+      </div>
+    </div>
+
+    <!-- CONNECTOR -->
+    <div class="connectors">
+      <div class="connector-line"></div>
+      <div class="connector-label">↓ 跨业态 ↓</div>
+    </div>
+
+    <!-- LEVEL 3: 文旅产业 -->
+    <div class="level level-3">
+      <div class="level-icon">
+        🌏
+        <div class="orbit-icons">
+          <div class="mini" style="top: 10px; left: 50%; transform: translateX(-50%);">🏨</div>
+          <div class="mini" style="right: 12px; top: 18%; transform: translateY(-50%);">🍽️</div>
+          <div class="mini" style="right: 6px; bottom: 18%;">🎭</div>
+          <div class="mini" style="bottom: 10px; left: 50%; transform: translateX(-50%);">🚗</div>
+          <div class="mini" style="left: 6px; bottom: 18%;">🛍️</div>
+          <div class="mini" style="left: 12px; top: 18%; transform: translateY(-50%);">🎫</div>
+        </div>
+      </div>
+      <div class="level-content">
+        <span class="level-tag">LEVEL 03 · 文 旅 产 业</span>
+        <div class="level-title">文旅</div>
+        <div class="level-en">CULTURE · TOURISM · FULL STACK</div>
+        <div class="level-pills">
+          <span class="pill">跨业态 Agent 网</span>
+          <span class="pill">酒店 + 餐饮 + 零售 + 娱乐 + 交通 + 景区</span>
+          <span class="pill">全产业链 TOKEN</span>
+        </div>
+        <div class="level-value">
+          AHL 让文旅全产业链 <strong>跨业态握手</strong>，<br>
+          从"产业内卷"走向 <strong>产业共生</strong>。
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer-callout">
+      <div class="tagline">
+        一张协议 · 三层适用 · TOKEN 贯穿
+      </div>
+      <div class="small">ONE PROTOCOL · THREE TIERS · TOKEN-ECONOMY</div>
+    </div>
+
+    <div class="signoff">
+      <div class="contact">
+        联系：<strong>17760348653</strong> &nbsp;|&nbsp; 张实 · Eric
+      </div>
+      <div class="watermark">ERIC的B166ER出品</div>
+    </div>
+
+  </div>
+</body>
+</html>

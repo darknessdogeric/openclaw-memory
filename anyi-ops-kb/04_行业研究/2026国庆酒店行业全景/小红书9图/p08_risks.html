@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>V5 GS Hotel Style - p08_risks</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&family=Inter:wght@400;500;600;700;800;900&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"Noto Sans SC","Inter",sans-serif;background:#1a1d2e;display:flex;justify-content:center;align-items:center;min-height:100vh;padding:20px}
+.poster{width:1080px;height:1440px;position:relative;overflow:hidden;color:#e8e8e8;font-family:"Noto Sans SC",sans-serif;background:linear-gradient(180deg,#1a1d2e 0%,#1a1d2e 60%,#0d0f1a 100%)}
+
+/* 顶部品牌条 */
+.brand-bar{position:absolute;top:54px;left:60px;right:60px;display:flex;justify-content:space-between;align-items:center;font-family:"Noto Sans SC",sans-serif;font-size:18px;font-weight:700;letter-spacing:0;z-index:10}
+.brand-bar .left{color:#e8e8e8}
+.brand-bar .left .accent{color:#5bcfc9}
+.brand-bar .right{color:#5bcfc9;font-weight:500}
+
+/* 主区 */
+.main{position:absolute;top:130px;bottom:130px;left:60px;right:60px;display:flex;flex-direction:column;z-index:5}
+
+/* 标题（GS 范式：双行大标题，副标小字） */
+.title-main{font-family:"Noto Sans SC",sans-serif;font-size:62px;font-weight:900;line-height:1.15;color:#e8e8e8;letter-spacing:0;margin-bottom:0}
+.title-sub{font-family:"Noto Sans SC",sans-serif;font-size:24px;font-weight:500;line-height:1.4;color:#d4a85f;margin-top:14px;margin-bottom:0;letter-spacing:0}
+.title-sub .yellow{color:#d4a85f}
+
+/* 描述（灰色小字） */
+.lede{font-family:"Noto Sans SC",sans-serif;font-size:15px;font-weight:400;line-height:1.6;color:#9a9daa;margin-top:18px;letter-spacing:0}
+
+/* 段落标签（带 emoji 前缀） */
+.section-tag{font-family:"Noto Sans SC",sans-serif;font-size:24px;font-weight:700;color:#e8e8e8;margin-bottom:14px;margin-top:0;display:flex;align-items:center;gap:8px}
+
+/* 数字徽章 */
+.badge{display:inline-block;width:36px;height:36px;border-radius:8px;background:rgba(212,168,95,.15);border:1px solid rgba(212,168,95,.35);text-align:center;line-height:36px;font-family:"Noto Sans SC",sans-serif;font-size:20px;font-weight:900;color:#d4a85f;flex-shrink:0}
+
+/* 段落行（GS 范式：1 行标题 + 1 行描述） */
+.row{display:flex;gap:14px;padding:16px 20px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:8px;align-items:flex-start}
+.row .text-block{flex:1}
+.row .text-block .h{font-family:"Noto Sans SC",sans-serif;font-size:18px;font-weight:700;color:#e8e8e8;line-height:1.3}
+.row .text-block .d{font-family:"Noto Sans SC",sans-serif;font-size:14px;font-weight:400;color:#9a9daa;margin-top:6px;line-height:1.5}
+
+/* 段落之间的细线 */
+.divider{height:1px;background:rgba(255,255,255,.08);margin:12px 0;width:100%}
+
+/* 底部三列 box（GS 范式：3 大商业价值） */
+.tri-col{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.tri-col .col{padding:18px 20px;background:rgba(91,207,201,.05);border:1px solid rgba(91,207,201,.2);border-radius:8px;text-align:center}
+.tri-col .col .tag{font-family:"Noto Sans SC",sans-serif;font-size:13px;font-weight:700;color:#5bcfc9;letter-spacing:.04em;margin-bottom:10px}
+.tri-col .col .h{font-family:"Noto Sans SC",sans-serif;font-size:17px;font-weight:900;color:#e8e8e8;line-height:1.3;margin-bottom:6px}
+.tri-col .col .d{font-family:"Noto Sans SC",sans-serif;font-size:13px;font-weight:400;color:#9a9daa;line-height:1.4}
+
+/* 警告框（GS 范式：红色三角警示） */
+.warn-box{padding:14px 20px;background:rgba(232,89,89,.08);border:1px solid rgba(232,89,89,.25);border-radius:8px;display:flex;gap:12px;align-items:flex-start}
+.warn-box .icon{color:#e85959;font-family:"Noto Sans SC",sans-serif;font-size:18px;font-weight:900;flex-shrink:0;line-height:1.4}
+.warn-box .text{flex:1}
+.warn-box .text .h{font-family:"Noto Sans SC",sans-serif;font-size:17px;font-weight:700;color:#e85959;line-height:1.3}
+.warn-box .text .d{font-family:"Noto Sans SC",sans-serif;font-size:14px;font-weight:400;color:#9a9daa;margin-top:6px;line-height:1.5}
+
+/* 底栏 */
+.foot{position:absolute;bottom:54px;left:60px;right:60px;display:flex;justify-content:space-between;align-items:center;font-family:"Noto Sans SC",sans-serif;font-size:14px;font-weight:500;letter-spacing:0;z-index:10}
+.foot .b{color:#5bcfc9;font-weight:700;letter-spacing:.04em}
+.foot .mid{color:#9a9daa}
+.foot .right{color:#5bcfc9;text-align:right;font-weight:500}
+
+/* 结论行（GS 范式：底部青绿背景高亮） */
+.conclusion{margin-top:auto;padding:18px 24px;background:rgba(91,207,201,.12);border:1px solid rgba(91,207,201,.35);border-radius:8px;text-align:center}
+.conclusion .h{font-family:"Noto Sans SC",sans-serif;font-size:21px;font-weight:900;color:#5bcfc9;line-height:1.4}
+.conclusion .h .y{color:#d4a85f}
+
+/* 顶部黄色文字 */
+.hl-yellow{color:#d4a85f;font-weight:700}
+.hl-cyan{color:#5bcfc9;font-weight:700}
+.hl-red{color:#e85959;font-weight:700}
+</style>
+</head>
+<body>
+<div class="poster">
+  
+<div class="brand-bar">
+  <div class="left">7 大<span class="accent">·</span>风险</div>
+  <div class="right">RISKS · Q4</div>
+</div>
+
+<div class="main">
+  <div class="title-main">7 大<em style="font-style:normal;color:#d4a85f">风险</em></div>
+  <div class="title-sub">国庆后 2 周 + Q4 节假日 + 长期变量</div>
+  <div class="lede">🟡 = 中等风险 · 时间窗口标注</div>
+  
+  <div class="divider"></div>
+  
+  <div class="row">
+    <div class="badge">01</div>
+    <div class="text-block">
+      <div class="h">需求分散下滑</div>
+      <div class="d">🟡 中 · 4 号后需求分散 · 国庆后 2 周</div>
+    </div>
+  </div>
+  <div class="divider"></div>
+  <div class="row">
+    <div class="badge">02</div>
+    <div class="text-block">
+      <div class="h">Q4 商务透支</div>
+      <div class="d">🟡 中 · 长假期消耗需求 · 商务回暖待验证</div>
+    </div>
+  </div>
+  <div class="divider"></div>
+  <div class="row">
+    <div class="badge">03</div>
+    <div class="text-block">
+      <div class="h">集团增速放缓</div>
+      <div class="d">🟡 中 · 开店继续放缓 · Q4 财报</div>
+    </div>
+  </div>
+  <div class="divider"></div>
+  <div class="row">
+    <div class="badge">04</div>
+    <div class="text-block">
+      <div class="h">价格战反弹</div>
+      <div class="d">🟡 中 · 中端内卷 · Q4 节假日</div>
+    </div>
+  </div>
+  <div class="divider"></div>
+  <div class="row">
+    <div class="badge">05</div>
+    <div class="text-block">
+      <div class="h">中端供给过快</div>
+      <div class="d">🟡 中 · 连锁化继续 · 2027 天花板</div>
+    </div>
+  </div>
+  <div class="divider"></div>
+  <div class="row">
+    <div class="badge">06</div>
+    <div class="text-block">
+      <div class="h">国际宏观</div>
+      <div class="d">🟡 中 · 中东/中美地缘 · 持续</div>
+    </div>
+  </div>
+  <div class="divider"></div>
+  <div class="warn-box" style="background:rgba(232,89,89,.1);border-color:rgba(232,89,89,.3)">
+    <div class="icon">⚠</div>
+    <div class="text">
+      <div class="h" style="color:#e85959">07 · 人口结构（长期）</div>
+      <div class="d">新生人口 -33% · 学龄儿童减少 · 5-10 年后家庭游萎缩 · 2035 重构</div>
+    </div>
+  </div>
+</div>
+
+<div class="foot">
+  <div><span class="b">B166ER</span> <span class="mid">· 7 风险</span></div>
+  <div class="right">🟡 全为中等风险</div>
+</div>
+
+</div>
+</body>
+</html>

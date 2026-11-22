@@ -2,7 +2,7 @@
 skill_id: "skill-vetter"
 title: "Untitled"
 category: "AI/ML"
-description: ""
+description: 技能评估器：在安装任何来自 ClawdHub / GitHub 的技能之前先做质量与风险评估（评分、重复度、权限风险、是否已被本地替代）。触发：评估技能、安装技能前审查、skill review、装之前先验。
 when_to_use: "Before installing any skill from ClawdHub | Before running skills from GitHub repos | When evaluating skills shared by other agents"
 size_kb: 4.6
 refactored: "2026-06-24"

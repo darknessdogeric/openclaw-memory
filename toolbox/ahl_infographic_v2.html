@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>AHL · 住宿业垂系大模型联动</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  @font-face { font-family: 'Source Han'; }
+  html, body {
+    width: 1080px;
+    height: 1920px;
+    font-family: "Source Han Sans SC", "Noto Sans CJK SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+    background: radial-gradient(ellipse at top, #0a1a3a 0%, #050a1f 50%, #02060f 100%);
+    color: #e8f4ff;
+    overflow: hidden;
+    position: relative;
+  }
+  /* 星云底纹 */
+  body::before {
+    content: "";
+    position: absolute; inset: 0;
+    background-image:
+      radial-gradient(1px 1px at 12% 8%, #ffffff, transparent),
+      radial-gradient(1px 1px at 28% 22%, #b4d4ff, transparent),
+      radial-gradient(1px 1px at 45% 12%, #ffffff, transparent),
+      radial-gradient(1px 1px at 65% 35%, #88aaff, transparent),
+      radial-gradient(1px 1px at 78% 18%, #ffffff, transparent),
+      radial-gradient(1px 1px at 92% 28%, #d4d4ff, transparent),
+      radial-gradient(1px 1px at 18% 62%, #ffffff, transparent),
+      radial-gradient(1px 1px at 52% 78%, #b4d4ff, transparent),
+      radial-gradient(1px 1px at 85% 65%, #ffffff, transparent),
+      radial-gradient(1px 1px at 8% 92%, #88aaff, transparent),
+      radial-gradient(2px 2px at 38% 88%, rgba(0,212,255,0.4), transparent),
+      radial-gradient(2px 2px at 72% 92%, rgba(255,215,0,0.3), transparent);
+    background-size: 100% 100%;
+    opacity: 0.55;
+    pointer-events: none;
+  }
+  /* 顶部品牌条 */
+  .topbar {
+    width: 100%;
+    height: 8px;
+    background: linear-gradient(90deg, #00d4ff 0%, #0066ff 35%, #8b5cf6 65%, #ffd700 100%);
+    box-shadow: 0 0 20px rgba(0, 212, 255, 0.6);
+  }
+
+  .container {
+    padding: 60px 70px 70px;
+    position: relative;
+    z-index: 2;
+  }
+
+  /* 标题区 */
+  .header { text-align: center; margin-bottom: 50px; }
+  .header .tag {
+    display: inline-block;
+    font-size: 22px;
+    letter-spacing: 8px;
+    color: #00d4ff;
+    border: 1px solid rgba(0,212,255,0.5);
+    padding: 6px 22px;
+    border-radius: 30px;
+    margin-bottom: 26px;
+    background: rgba(0, 212, 255, 0.08);
+  }
+  .header h1 {
+    font-size: 78px;
+    font-weight: 900;
+    background: linear-gradient(90deg, #00d4ff 0%, #8b5cf6 50%, #ffd700 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: 4px;
+    line-height: 1.1;
+    margin-bottom: 14px;
+    text-shadow: 0 0 30px rgba(0, 212, 255, 0.4);
+  }
+  .header .sub-en {
+    font-size: 26px;
+    color: #8b9fcf;
+    letter-spacing: 6px;
+    margin-bottom: 22px;
+    font-weight: 300;
+  }
+  .header .sub-cn {
+    font-size: 38px;
+    color: #ffd700;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
+  }
+
+  /* 分隔线 */
+  .divider {
+    height: 1px;
+    margin: 35px 0;
+    background: linear-gradient(90deg, transparent 0%, rgba(0,212,255,0.6) 50%, transparent 100%);
+    position: relative;
+  }
+  .divider::before {
+    content: "";
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: #00d4ff;
+    box-shadow: 0 0 15px #00d4ff;
+  }
+
+  /* 第一段：范式对比 */
+  .section-label {
+    display: flex; align-items: center; gap: 14px;
+    font-size: 24px; color: #00d4ff;
+    letter-spacing: 4px; margin-bottom: 28px;
+    font-weight: 600;
+  }
+  .section-label .num {
+    background: linear-gradient(135deg, #00d4ff, #0066ff);
+    color: #fff;
+    width: 38px; height: 38px;
+    border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 22px; font-weight: 800;
+    box-shadow: 0 0 15px rgba(0,212,255,0.5);
+  }
+
+  .paradigm-row {
+    display: grid;
+    grid-template-columns: 1fr 90px 1fr;
+    gap: 18px;
+    align-items: stretch;
+    margin-bottom: 8px;
+  }
+
+  .panel {
+    border-radius: 18px;
+    padding: 36px 30px;
+    position: relative;
+    overflow: hidden;
+  }
+  .panel-old {
+    background: linear-gradient(160deg, rgba(80,95,120,0.18), rgba(40,55,80,0.18));
+    border: 1px solid rgba(120, 140, 170, 0.3);
+    backdrop-filter: blur(4px);
+  }
+  .panel-new {
+    background: linear-gradient(160deg, rgba(0,212,255,0.15), rgba(139,92,246,0.15));
+    border: 1px solid rgba(0, 212, 255, 0.5);
+    box-shadow: 0 0 40px rgba(0,212,255,0.2), inset 0 0 30px rgba(139,92,246,0.1);
+  }
+  .panel h3 {
+    font-size: 36px;
+    margin-bottom: 8px;
+    letter-spacing: 2px;
+  }
+  .panel-old h3 { color: #8b9fcf; }
+  .panel-new h3 {
+    background: linear-gradient(90deg, #00d4ff, #ffd700);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .panel .en {
+    font-size: 18px;
+    color: #6b7a99;
+    letter-spacing: 4px;
+    margin-bottom: 22px;
+    font-weight: 400;
+  }
+  .panel-new .en { color: #b4d4ff; }
+
+  .panel-visual {
+    height: 200px;
+    border-radius: 12px;
+    margin-bottom: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 90px;
+    position: relative;
+    overflow: hidden;
+  }
+  .panel-old .panel-visual {
+    background: linear-gradient(135deg, #2a3550, #1a2440);
+    border: 1px solid rgba(120,140,170,0.2);
+    color: #6b7a99;
+  }
+  .panel-old .visual-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 4px;
+    width: 90%;
+    height: 80%;
+  }
+  .panel-old .store {
+    background: linear-gradient(135deg, #3a4565, #2a3550);
+    border: 1px solid #4a5575;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    color: #8b9fcf;
+  }
+  .panel-new .panel-visual {
+    background: radial-gradient(circle, rgba(0,212,255,0.25), rgba(139,92,246,0.15) 60%, transparent);
+    border: 1px solid rgba(0,212,255,0.3);
+  }
+  .panel-new .neural-net {
+    position: relative;
+    width: 90%;
+    height: 90%;
+  }
+  .panel-new .node {
+    position: absolute;
+    width: 14px; height: 14px;
+    background: #00d4ff;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #00d4ff;
+  }
+  .panel-new .node-hub {
+    width: 28px; height: 28px;
+    background: radial-gradient(circle, #ffd700, #00d4ff);
+    box-shadow: 0 0 25px rgba(255,215,0,0.8), 0 0 50px rgba(0,212,255,0.4);
+    animation: pulse 2s infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.15); }
+  }
+
+  .panel .caption {
+    font-size: 22px;
+    line-height: 1.7;
+    color: #b4d4ff;
+  }
+  .panel-old .caption { color: #8b9fcf; }
+  .panel-old .caption strong { color: #c4d4ef; }
+  .panel-new .caption strong { color: #ffd700; font-weight: 700; }
+
+  /* 中间范式箭头 */
+  .arrow-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+  }
+  .arrow-col .vertical-text {
+    writing-mode: vertical-rl;
+    font-size: 22px;
+    color: #8b5cf6;
+    letter-spacing: 6px;
+    font-weight: 700;
+    text-shadow: 0 0 10px rgba(139,92,246,0.6);
+  }
+  .arrow-col .arrow-down {
+    font-size: 36px;
+    color: #ffd700;
+    text-shadow: 0 0 15px rgba(255,215,0,0.8);
+    animation: down 2s infinite;
+  }
+  @keyframes down {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(8px); }
+  }
+
+  /* 第二段：架构 */
+  .arch-stack {
+    margin-top: 12px;
+    border-radius: 16px;
+    overflow: hidden;
+    background: linear-gradient(180deg, rgba(0,212,255,0.06), rgba(255,215,0,0.06));
+    border: 1px solid rgba(0,212,255,0.25);
+  }
+  .layer {
+    padding: 24px 30px;
+    position: relative;
+  }
+  .layer-top {
+    background: linear-gradient(90deg, rgba(0,212,255,0.18), rgba(0,212,255,0.05));
+    border-bottom: 1px solid rgba(0,212,255,0.3);
+  }
+  .layer-mid {
+    background: linear-gradient(90deg, rgba(139,92,246,0.22), rgba(0,212,255,0.12), rgba(255,215,0,0.18));
+    padding: 30px;
+    text-align: center;
+    border-bottom: 1px solid rgba(255,215,0,0.3);
+  }
+  .layer-bot {
+    background: linear-gradient(90deg, rgba(255,215,0,0.18), rgba(255,215,0,0.05));
+  }
+  .layer-head {
+    display: flex; justify-content: space-between; align-items: center;
+    margin-bottom: 14px;
+  }
+  .layer-title {
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 2px;
+  }
+  .layer-top .layer-title { color: #00d4ff; }
+  .layer-bot .layer-title { color: #ffd700; }
+  .layer-en {
+    font-size: 14px;
+    color: #6b7a99;
+    letter-spacing: 3px;
+    font-weight: 400;
+  }
+
+  .icons-row {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+  }
+  .icon-item {
+    display: flex; flex-direction: column; align-items: center; gap: 6px;
+    font-size: 14px;
+    color: #c4d4ef;
+    padding: 6px 10px;
+    border-radius: 8px;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    flex: 1;
+  }
+  .icon-item .emoji { font-size: 30px; line-height: 1; }
+  .icon-item .label { font-size: 13px; letter-spacing: 1px; }
+  .layer-top .icon-item .label { color: #b4d4ff; }
+  .layer-bot .icon-item .label { color: #ffd700; }
+  .icon-item .tag {
+    font-size: 10px;
+    color: #8b9fcf;
+    border: 1px solid rgba(139,159,207,0.4);
+    padding: 1px 6px;
+    border-radius: 8px;
+    margin-top: 2px;
+  }
+
+  /* 中间 Hub */
+  .hub-wrap {
+    display: flex; align-items: center; justify-content: center; gap: 18px;
+    margin: 10px 0;
+  }
+  .hub-shape {
+    width: 90px; height: 90px;
+    background: linear-gradient(135deg, #8b5cf6, #00d4ff, #ffd700);
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 0 40px rgba(139,92,246,0.6);
+  }
+  .hub-shape-inner {
+    width: 78px; height: 78px;
+    background: #050a1f;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    display: flex; align-items: center; justify-content: center;
+    color: #ffd700;
+    font-size: 22px;
+    font-weight: 800;
+  }
+  .hub-text { text-align: left; }
+  .hub-text .cn {
+    font-size: 24px;
+    color: #fff;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-shadow: 0 0 15px rgba(255,255,255,0.4);
+  }
+  .hub-text .en {
+    font-size: 13px;
+    color: #b4d4ff;
+    letter-spacing: 3px;
+    margin-top: 4px;
+  }
+  .hub-text .proto {
+    display: inline-block;
+    margin-top: 8px;
+    font-size: 14px;
+    color: #ffd700;
+    border: 1px solid rgba(255,215,0,0.5);
+    padding: 3px 12px;
+    border-radius: 12px;
+    background: rgba(255,215,0,0.08);
+    letter-spacing: 2px;
+  }
+
+  .vertical-link {
+    text-align: center;
+    font-size: 16px;
+    color: #8b5cf6;
+    padding: 8px 0;
+    letter-spacing: 4px;
+    font-weight: 600;
+    background: linear-gradient(90deg, transparent, rgba(139,92,246,0.1), transparent);
+    border-top: 1px dashed rgba(139,92,246,0.3);
+    border-bottom: 1px dashed rgba(139,92,246,0.3);
+  }
+
+  /* 第三段：泛用性 */
+  .universal-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 14px;
+    margin-top: 8px;
+  }
+  .u-tile {
+    border-radius: 12px;
+    padding: 18px 8px;
+    text-align: center;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.1);
+    position: relative;
+    overflow: hidden;
+  }
+  .u-tile .emoji {
+    font-size: 38px;
+    line-height: 1;
+    margin-bottom: 8px;
+    display: block;
+  }
+  .u-tile .label { font-size: 16px; font-weight: 600; letter-spacing: 2px; }
+  .u-tile .en { font-size: 11px; color: #8b9fcf; margin-top: 4px; letter-spacing: 1px; }
+  .u1 { box-shadow: 0 0 25px rgba(0,212,255,0.25); border-color: rgba(0,212,255,0.5); }
+  .u1 .label { color: #00d4ff; }
+  .u2 { box-shadow: 0 0 25px rgba(34,197,94,0.25); border-color: rgba(34,197,94,0.5); }
+  .u2 .label { color: #4ade80; }
+  .u3 { box-shadow: 0 0 25px rgba(59,130,246,0.25); border-color: rgba(59,130,246,0.5); }
+  .u3 .label { color: #60a5fa; }
+  .u4 { box-shadow: 0 0 25px rgba(139,92,246,0.3); border-color: rgba(139,92,246,0.5); }
+  .u4 .label { color: #a78bfa; }
+  .u5 { box-shadow: 0 0 25px rgba(255,215,0,0.3); border-color: rgba(255,215,0,0.5); }
+  .u5 .label { color: #ffd700; }
+
+  .univ-caption {
+    text-align: center;
+    font-size: 20px;
+    color: #c4d4ef;
+    margin-top: 18px;
+    letter-spacing: 2px;
+    line-height: 1.6;
+  }
+  .univ-caption strong {
+    color: #ffd700;
+    border-bottom: 1px dashed rgba(255,215,0,0.4);
+    padding-bottom: 2px;
+  }
+
+  /* 底部金句 */
+  .footer-callout {
+    margin-top: 38px;
+    text-align: center;
+    padding: 22px;
+    border-radius: 14px;
+    background: linear-gradient(135deg, rgba(0,212,255,0.12), rgba(255,215,0,0.12));
+    border: 1px solid rgba(0,212,255,0.4);
+  }
+  .footer-callout .tagline {
+    font-size: 32px;
+    font-weight: 800;
+    background: linear-gradient(90deg, #00d4ff, #ffd700);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: 3px;
+    line-height: 1.5;
+  }
+
+  /* 底部署名 */
+  .signoff {
+    display: flex; justify-content: space-between; align-items: center;
+    margin-top: 22px;
+    padding-top: 18px;
+    border-top: 1px solid rgba(0,212,255,0.2);
+  }
+  .signoff .contact { font-size: 18px; color: #8b9fcf; letter-spacing: 1px; }
+  .signoff .contact strong { color: #00d4ff; font-weight: 600; }
+  .signoff .watermark {
+    font-size: 14px;
+    color: #4a5575;
+    letter-spacing: 4px;
+  }
+
+</style>
+</head>
+<body>
+  <div class="topbar"></div>
+  <div class="container">
+
+    <!-- HEADER -->
+    <div class="header">
+      <span class="tag">AHL · ARCHITECTURE BRIEF</span>
+      <h1>AHL · 住宿业垂系大模型联动</h1>
+      <div class="sub-en">A I &nbsp; H O T E L &nbsp; L A N G U A G E</div>
+      <div class="sub-cn">从货架经济到匹配经济 — 一场静悄悄的范式革命</div>
+    </div>
+
+    <!-- SECTION 1: PARADIGM CONTRAST -->
+    <div class="section-label">
+      <span class="num">01</span>
+      <span>范式跃迁 / PARADIGM SHIFT</span>
+    </div>
+
+    <div class="paradigm-row">
+      <!-- LEFT: 货架 -->
+      <div class="panel panel-old">
+        <h3>货架经济</h3>
+        <div class="en">SHELF ECONOMY · 旧范式</div>
+        <div class="panel-visual">
+          <div class="visual-grid">
+            <div class="store">店</div>
+            <div class="store">店</div>
+            <div class="store">店</div>
+            <div class="store">店</div>
+            <div class="store">店</div>
+            <div class="store">店</div>
+            <div class="store">店</div>
+            <div class="store">店</div>
+          </div>
+        </div>
+        <div class="caption">
+          商品<strong>摆出来</strong>，等人挑<br>
+          <strong>位置 = 流量 = 租金</strong><br>
+          价值锚：地段的稀缺性
+        </div>
+      </div>
+
+      <!-- MIDDLE ARROW -->
+      <div class="arrow-col">
+        <div class="vertical-text">跃迁</div>
+        <div class="arrow-down">↓</div>
+      </div>
+
+      <!-- RIGHT: 匹配 -->
+      <div class="panel panel-new">
+        <h3>匹配经济</h3>
+        <div class="en">MATCHING ECONOMY · 新范式</div>
+        <div class="panel-visual">
+          <svg viewBox="0 0 400 200" style="width:90%; height:90%;">
+            <defs>
+              <radialGradient id="hubGlow">
+                <stop offset="0%" stop-color="#ffd700" stop-opacity="0.8"/>
+                <stop offset="50%" stop-color="#00d4ff" stop-opacity="0.4"/>
+                <stop offset="100%" stop-color="#00d4ff" stop-opacity="0"/>
+              </radialGradient>
+            </defs>
+            <!-- Hub glow -->
+            <circle cx="200" cy="100" r="55" fill="url(#hubGlow)"/>
+            <!-- Connection lines -->
+            <g stroke="#00d4ff" stroke-width="1" opacity="0.6">
+              <line x1="200" y1="100" x2="50" y2="40"/>
+              <line x1="200" y1="100" x2="350" y2="40"/>
+              <line x1="200" y1="100" x2="30" y2="120"/>
+              <line x1="200" y1="100" x2="370" y2="120"/>
+              <line x1="200" y1="100" x2="60" y2="170"/>
+              <line x1="200" y1="100" x2="340" y2="170"/>
+              <line x1="200" y1="100" x2="200" y2="20"/>
+              <line x1="200" y1="100" x2="200" y2="180"/>
+            </g>
+            <!-- Nodes -->
+            <g fill="#00d4ff">
+              <circle cx="50" cy="40" r="5"/>
+              <circle cx="350" cy="40" r="5"/>
+              <circle cx="30" cy="120" r="5"/>
+              <circle cx="370" cy="120" r="5"/>
+              <circle cx="60" cy="170" r="5"/>
+              <circle cx="340" cy="170" r="5"/>
+              <circle cx="200" cy="20" r="5"/>
+              <circle cx="200" cy="180" r="5"/>
+            </g>
+            <!-- Hub center -->
+            <circle cx="200" cy="100" r="22" fill="#ffd700" opacity="0.95"/>
+            <circle cx="200" cy="100" r="14" fill="#fff" opacity="0.7"/>
+            <text x="200" y="106" text-anchor="middle" fill="#050a1f" font-size="13" font-weight="800">AHL</text>
+          </svg>
+        </div>
+        <div class="caption">
+          需求<strong>出来</strong>，主动找人 / 找服务<br>
+          <strong>匹配精度 = 转化 = 价值</strong><br>
+          价值锚：算法的精准度
+        </div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- SECTION 2: ARCHITECTURE -->
+    <div class="section-label">
+      <span class="num">02</span>
+      <span>架构模式 / ARCHITECTURE IN COMMERCIAL SPACES</span>
+    </div>
+
+    <div class="arch-stack">
+      <!-- LAYER TOP: 触达层 -->
+      <div class="layer layer-top">
+        <div class="layer-head">
+          <div class="layer-title">触达层 · ACCESS</div>
+          <div class="layer-en">ANY AI = ENTRY POINT</div>
+        </div>
+        <div class="icons-row">
+          <div class="icon-item"><span class="emoji">📱</span><span class="label">手机</span></div>
+          <div class="icon-item"><span class="emoji">🔊</span><span class="label">智能音箱</span></div>
+          <div class="icon-item"><span class="emoji">🤖</span><span class="label">DeepSeek</span></div>
+          <div class="icon-item"><span class="emoji">🦾</span><span class="label">机器人</span></div>
+          <div class="icon-item"><span class="emoji">🚗</span><span class="label">车载</span></div>
+          <div class="icon-item"><span class="emoji">💬</span><span class="label">豆包</span></div>
+        </div>
+      </div>
+
+      <div class="vertical-link">↓ &nbsp; 流 &nbsp; 入 &nbsp; ↓</div>
+
+      <!-- LAYER MID: 匹配引擎 -->
+      <div class="layer layer-mid">
+        <div class="hub-wrap">
+          <div class="hub-shape">
+            <div class="hub-shape-inner">AHL</div>
+          </div>
+          <div class="hub-text">
+            <div class="cn">匹配引擎 · MATCHING ENGINE</div>
+            <div class="en">THE CORE · NOT A LAYER</div>
+            <div class="proto">MCP / A2A 协议</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="vertical-link">↓ &nbsp; 调 &nbsp; 度 &nbsp; ↓</div>
+
+      <!-- LAYER BOT: 供给层 -->
+      <div class="layer layer-bot">
+        <div class="layer-head">
+          <div class="layer-title">供给层 · SUPPLY</div>
+          <div class="layer-en">MERCHANT = AGENT</div>
+        </div>
+        <div class="icons-row">
+          <div class="icon-item">
+            <span class="emoji">🏨</span>
+            <span class="label">酒店</span>
+            <span class="tag">B端 Agent</span>
+          </div>
+          <div class="icon-item">
+            <span class="emoji">🍽️</span>
+            <span class="label">餐饮</span>
+            <span class="tag">B端 Agent</span>
+          </div>
+          <div class="icon-item">
+            <span class="emoji">🛍️</span>
+            <span class="label">零售</span>
+            <span class="tag">B端 Agent</span>
+          </div>
+          <div class="icon-item">
+            <span class="emoji">🎭</span>
+            <span class="label">娱乐</span>
+            <span class="tag">B端 Agent</span>
+          </div>
+          <div class="icon-item">
+            <span class="emoji">🛎️</span>
+            <span class="label">服务</span>
+            <span class="tag">B端 Agent</span>
+          </div>
+        </div>
+      </div>
+
+      <div style="text-align:center; padding: 14px; font-size:18px; color:#8b5cf6; letter-spacing: 3px; font-weight:600; background: rgba(139,92,246,0.08);">
+        AI GDS = 酒店行业的基础设施
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- SECTION 3: UNIVERSAL -->
+    <div class="section-label">
+      <span class="num">03</span>
+      <span>泛用性 / UNIVERSAL APPLICABILITY</span>
+    </div>
+
+    <div class="universal-grid">
+      <div class="u-tile u1">
+        <span class="emoji">🏬</span>
+        <div class="label">商业地产</div>
+        <div class="en">MALL</div>
+      </div>
+      <div class="u-tile u2">
+        <span class="emoji">🏥</span>
+        <div class="label">医院</div>
+        <div class="en">HOSPITAL</div>
+      </div>
+      <div class="u-tile u3">
+        <span class="emoji">🚚</span>
+        <div class="label">物流</div>
+        <div class="en">LOGISTICS</div>
+      </div>
+      <div class="u-tile u4">
+        <span class="emoji">🎓</span>
+        <div class="label">教育</div>
+        <div class="en">EDUCATION</div>
+      </div>
+      <div class="u-tile u5">
+        <span class="emoji">🏛️</span>
+        <div class="label">政务</div>
+        <div class="en">GOV</div>
+      </div>
+    </div>
+
+    <div class="univ-caption">
+      凡是 <strong>供给 × 需求 × 时空约束</strong> 需要匹配的行业，<br>
+      这套架构模式 <strong>都适用</strong>。
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- FOOTER -->
+    <div class="footer-callout">
+      <div class="tagline">
+        用数字员工重新定义空间服务<br>
+        用去中介化交易重塑行业价值链
+      </div>
+    </div>
+
+    <div class="signoff">
+      <div class="contact">
+        联系：<strong>17760348653</strong> &nbsp;|&nbsp; 张实 · Eric
+      </div>
+      <div class="watermark">ERIC的B166ER出品</div>
+    </div>
+
+  </div>
+</body>
+</html>

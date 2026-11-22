@@ -1,0 +1,1 @@
+Get-ScheduledTask | Where-Object { $_.TaskName -like '*heartbeat*' -or $_.TaskName -like '*B166ER*' -or $_.TaskName -like '*cron*' -or $_.TaskName -like '*openclaw*' } | Select-Object TaskName, State, LastRunTime, NextRunTime | Format-Table -AutoSize

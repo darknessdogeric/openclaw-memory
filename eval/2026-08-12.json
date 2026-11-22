@@ -1,0 +1,164 @@
+{
+  "date": "2026-08-12",
+  "task": "每日商业情报（20集团版）",
+  "execution_time": "2026-08-12T10:30:00+08:00",
+  "summary_3_points": [
+    "美伊僵局升级：伊朗密集换将+霍尔木兹不开放，油价冲高，黄金从+7%回落（短期缓解）",
+    "英伟达循环融资风暴：黄仁勋+大摩双重回应5,000亿美元质疑，纳指-0.6%",
+    "A股科技分化：沪指终结5连阳缩量探底；宇树科技中签确认；算力租赁逆势活跃；明日CPI高盛/汇丰押注鸽派惊喜"
+  ],
+  "five_main_themes": {
+    "美伊地缘": {
+      "status": "僵局升级",
+      "confidence": 95
+    },
+    "AI泡沫担忧": {
+      "status": "循环融资风暴+纳指跌",
+      "confidence": 90
+    },
+    "A股科技分化": {
+      "status": "中签确认+算力逆势",
+      "confidence": 85
+    },
+    "外资撤离": {
+      "status": "三重叠加",
+      "confidence": 80
+    },
+    "CPI预期": {
+      "status": "高盛+汇丰押注鸽派",
+      "confidence": 75
+    }
+  },
+  "top_20_signals": [
+    {
+      "group": "英伟达",
+      "signal": "循环融资风暴+纳指-0.6%",
+      "intensity": 4,
+      "trend": "down"
+    },
+    {
+      "group": "宇树科技",
+      "signal": "中签号出炉IPO关键时刻",
+      "intensity": 5,
+      "trend": "up"
+    },
+    {
+      "group": "美伊地缘",
+      "signal": "换将+霍尔木兹不开放+油价冲高",
+      "intensity": 5,
+      "trend": "down"
+    },
+    {
+      "group": "腾讯",
+      "signal": "明日发财报",
+      "intensity": 4,
+      "trend": "watch"
+    },
+    {
+      "group": "京东",
+      "signal": "明日发财报",
+      "intensity": 4,
+      "trend": "watch"
+    },
+    {
+      "group": "寒武纪",
+      "signal": "算力租赁逆势活跃",
+      "intensity": 4,
+      "trend": "up"
+    },
+    {
+      "group": "安逸集团",
+      "signal": "待正式报到",
+      "intensity": 4,
+      "trend": "stable"
+    },
+    {
+      "group": "高盛汇丰CPI",
+      "signal": "押注鸽派惊喜",
+      "intensity": 4,
+      "trend": "watch"
+    },
+    {
+      "group": "黄金",
+      "signal": "从+7%回落至+",
+      "intensity": 3,
+      "trend": "down"
+    },
+    {
+      "group": "外资撤离",
+      "signal": "韩国+9个月+李嘉诚三重叠加",
+      "intensity": 4,
+      "trend": "down"
+    }
+  ],
+  "predict_aug_13_cpi": {
+    "scenario": [
+      "鸽派惊喜<2.8%",
+      "符合预期2.8-3.0%",
+      "鹰派意外>3.1%"
+    ],
+    "probability": [
+      35,
+      50,
+      15
+    ],
+    "market_reaction": [
+      "纳指+1.5%港股+1%",
+      "观望",
+      "纳指-1%外资加速撤"
+    ]
+  },
+  "recommendations": {
+    "安逸_AHL": [
+      "入职准备-关注报到时间",
+      "AHL-v3.0-方向印证正确"
+    ],
+    "港股持仓": [
+      "发财报前不加仓",
+      "CPI后操作"
+    ],
+    "外资撤离": [
+      "不重仓港股",
+      "CPI鸽派可少量参与反弹"
+    ],
+    "watch_only": [
+      "NVDA等待8/28财报",
+      "黄金"
+    ]
+  },
+  "key_tomorrow": [
+    {
+      "time": "08:30",
+      "event": "腾讯发财报",
+      "importance": 4
+    },
+    {
+      "time": "20:30",
+      "event": "美国7月CPI公布",
+      "importance": 5
+    },
+    {
+      "time": "全天",
+      "event": "京东发财报",
+      "importance": 3
+    }
+  ],
+  "macro_calendar": {
+    "2026-08-11": "宇树科技打新（已完成）",
+    "2026-08-12": "美伊僵局升级",
+    "2026-08-13": "CPI最大变量+腾讯/京东/茅台发财报",
+    "2026-08-14": "国内油价调整窗口",
+    "2026-08-28": "英伟达财报"
+  },
+  "data_sources": [
+    "trendradar-11平台热榜",
+    "财联社",
+    "华尔街见闻",
+    "知乎热搜"
+  ],
+  "cron_session": "cron:16c3811b-3fe5-49d0-be1a-0df19a86aef6",
+  "output_files": [
+    "/tmp/business-intel-2026-08-12.md",
+    "memory/2026-08-12.md-商业情报section"
+  ]
+}

@@ -1,0 +1,150 @@
+{
+  "date": "2026-08-31",
+  "task": "每日商业情报（20集团版）",
+  "trigger": "cron:M/W/F 10:00",
+  "execution_time": "2026-08-31 10:34-10:38 GMT+8",
+  "model": "minimax/MiniMax-M3",
+  "data_window": "2026-08-25 to 2026-08-31",
+  "data_coverage": {
+    "platforms": 11,
+    "rss_sources": 28,
+    "total_news_scanned": "~450",
+    "total_signals_extracted": 18
+  },
+  "method": "6-step cycle: Scan → Discover → Integrate → Compare → Predict → Recommend",
+  "top_signals": [
+    {
+      "rank": 1,
+      "type": "宏观政策",
+      "event": "房地产五项新规：房贷30年→40年 + 现房销售 + 主办银行制度",
+      "date": "2026-08-29",
+      "platforms": ["财联社", "澎湃", "华尔街见闻", "抖音"],
+      "verification": "多平台+多日持续，⭐⭐⭐⭐⭐",
+      "eric_impact": "安逸集团重资产策略需重估；商旅/会议短期受抑，休闲度假长期受益"
+    },
+    {
+      "rank": 2,
+      "type": "AI产业",
+      "event": "Google智能体酒店预订登陆AI Mode + NVIDIA $13B收购HuggingFace + OpenAI Astra首测",
+      "date": "2026-08-26 to 2026-08-31",
+      "platforms": ["Skift", "Latent Space", "Stratechery", "华尔街见闻"],
+      "verification": "多源+核心AI媒体，⭐⭐⭐⭐⭐",
+      "eric_impact": "AHL '去中心化酒店智能体'战略卡位窗口紧迫；9/1高参峰会必须包含此主题"
+    },
+    {
+      "rank": 3,
+      "type": "美联储/全球流动性",
+      "event": "沃什 Jackson Hole鹰派讲话 + 美伊互袭 + 黄金-3%",
+      "date": "2026-08-29 to 2026-08-31",
+      "platforms": ["财联社", "华尔街见闻", "凤凰网", "微博"],
+      "verification": "Jackson Hole原文+市场反应，⭐⭐⭐⭐⭐",
+      "eric_impact": "9/15 FOMC前最大宏观风险；A股/AHL高估值承压，硬资产/红利股受益"
+    },
+    {
+      "rank": 4,
+      "type": "酒店行业",
+      "event": "Booking vs Expedia B2B Booking领先客房夜数 + Airbnb测自带来客低佣金 + Hotelbeds利润下滑",
+      "date": "2026-08-28 to 2026-08-29",
+      "platforms": ["Skift"],
+      "verification": "单源权威+多篇交叉，⭐⭐⭐⭐",
+      "eric_impact": "AHL跨境B2B API价值上升；'去中心化流量'趋势验证AHL模式"
+    },
+    {
+      "rank": 5,
+      "type": "AI算力国产化",
+      "event": "下周重磅打新：国产AI芯片龙头 + 长鑫LPDDR6量产 + 宇树科技2366亿",
+      "date": "2026-08-29 to 2026-08-31",
+      "platforms": ["财联社", "华尔街见闻", "bilibili"],
+      "verification": "多平台+重磅连续，⭐⭐⭐⭐",
+      "eric_impact": "AHL算力成本下行利好；具身智能+酒店场景对接窗口"
+    },
+    {
+      "rank": 6,
+      "type": "地缘政治",
+      "event": "美伊近一个月首次互袭 + 原油迅速拉升 + 俄乌缺和谈条件",
+      "date": "2026-08-31",
+      "platforms": ["凤凰网", "财联社", "微博"],
+      "verification": "实时+多源，⭐⭐⭐⭐",
+      "eric_impact": "油价↑→交通成本↑；川西自驾或受益（替代出国）"
+    },
+    {
+      "rank": 7,
+      "type": "A股策略",
+      "event": "十大券商：市场反弹可能持续到9月下旬",
+      "date": "2026-08-31",
+      "platforms": ["财联社"],
+      "verification": "券商共识，⭐⭐⭐",
+      "eric_impact": "9/15前偏多，沃什鹰派是反向风险"
+    }
+  ],
+  "anomalies_detected": [
+    "AI行业进入'算力即护城河'决战时刻：OpenAI自研芯片9个月超Blackwell，NVIDIA反手买HuggingFace生态",
+    "房贷延期+现房销售=房地产从'金融属性'切回'消费属性'",
+    "沃什鹰派+美伊互袭=全球流动性收紧+风险溢价上行",
+    "Google智能体酒店预订=OTA入口正被AI吃掉，AHL窗口紧迫",
+    "宇树2366亿+3000亿+具身智能=中国具身智能进入IPO窗口"
+  ],
+  "predictions_2_4w": {
+    "short_term": [
+      "A股偏多至9月下旬（十大券商共识）",
+      "Google智能体酒店预订将引发OTA圈讨论",
+      "国产AI芯片打新大概率被爆炒",
+      "房贷新政9月初落地数据将公布",
+      "G20峰会：中美对话窗口",
+      "9/1高参峰会Eric关键节点"
+    ],
+    "medium_term": [
+      "9/15-17 FOMC沃什路径兑现是关键",
+      "AI泡沫论9-10月被证实概率上升",
+      "宇树上市进度是具身智能风向标",
+      "Motel 6/Prism IPO路径",
+      "中秋+国庆长线预订数据",
+      "AHL试点5-10家酒店落地或抢出窗口"
+    ]
+  },
+  "recommendations": {
+    "P0_personal": [
+      "AHL跨境OTA对接加速（9/1-15）",
+      "9/1高参峰会准备'AHL AI智能体时代酒店入口'主题演讲",
+      "古尔沟会议v8.0已就绪",
+      "关注9/15 FOMC沃什路径"
+    ],
+    "P1_anyi": [
+      "房贷延期+现房销售：安逸集团重资产策略需重估",
+      "沃什鹰派：新兴市场承压，海外资产配置需关注",
+      "Motel 6/Prism IPO路径：经济型酒店证券化可参考"
+    ],
+    "P2_learning": [
+      "R299通用基准陷阱规则→self-improving/rules.md",
+      "古尔沟v8.0川渝温泉度假特定基准→anyi-ops-kb",
+      "AI智能体酒店预订信号→AHL战略文档更新"
+    ]
+  },
+  "risks": [
+    {"name": "沃什鹰派兑现加息", "probability": "中", "impact": "美股/A股双杀", "mitigation": "9/15前降仓位"},
+    {"name": "美伊冲突升级", "probability": "中", "impact": "油价→通胀→紧缩螺旋", "mitigation": "关注避险资产"},
+    {"name": "AI泡沫破灭", "probability": "低-中", "impact": "高估值科技股", "mitigation": "AHL算力成本反受益"},
+    {"name": "国内消费疲软", "probability": "中", "impact": "酒店RevPAR压力", "mitigation": "度假/医养长住产品"}
+  ],
+  "top_3_takeaways": [
+    "🔴 全球流动性转向鹰派：沃什Jackson Hole+美伊互袭=9/15 FOMC前最大宏观风险，黄金/比特币/硬资产是避风港",
+    "🟢 AI入口之争白热化：Google智能体酒店预订+NVIDIA 130亿收购HuggingFace+OpenAI Astra=AHL'去中心化酒店智能体'战略卡位窗口紧迫",
+    "🟡 中国房地产转向消费属性：房贷30→40年+现房销售+地方附加税法=房地产高增长时代结束，安逸集团重资产策略需重估"
+  ],
+  "quality_score": 9.0,
+  "eric_action_items": {
+    "today": [
+      "10:00 古尔沟会议 v8.0 已就绪",
+      "9/1高参峰会材料补充：AHL AI智能体酒店主题"
+    ],
+    "this_week": [
+      "9/1 高参峰会（AHL跨境战略输出窗口）",
+      "AHL跨境OTA对接加速（Booking B2B API）",
+      "R299规则写入self-improving"
+    ]
+  },
+  "memory_file": "memory/2026-08-31.md § 商业情报",
+  "obsidian_pushed": true,
+  "push_status": "已推送",
+  "obsidian_path": "obsidian-vault/50-外部接入/cron-outputs/2026-08/10-40-每日商业情报.md"
+}

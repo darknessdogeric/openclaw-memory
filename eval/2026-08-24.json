@@ -1,0 +1,47 @@
+{
+  "date": "2026-08-24",
+  "day": "Monday",
+  "tasks": [
+    {
+      "task": "Entity Extractor 每日21:30 (R60-11)",
+      "source": "memory/2026-08-24.md",
+      "result": {
+        "new_entities": 14,
+        "new_relations": 0,
+        "entities": [
+          "Person:Eric",
+          "Person:B166ER",
+          "Company:安逸酒店集团",
+          "Company:AHL",
+          "Company:携程",
+          "Company:美团",
+          "Project:AHL",
+          "Project:医养酒店",
+          "Project:深度自迭代",
+          "Project:R60规则",
+          "Place:成都",
+          "Place:四川",
+          "Tool:TrendRadar",
+          "Tool:scrape_matrix"
+        ],
+        "categories": {
+          "Person": 2,
+          "Company": 4,
+          "Project": 4,
+          "Place": 2,
+          "Tool": 2
+        }
+      },
+      "post_actions": {
+        "graph_jsonl": "updated (104KB)",
+        "relations_trend_md": "updated",
+        "eric_4_projects_dashboard": "updated (4 projects mentioned today)",
+        "eval_json": "written",
+        "obsidian_push": "success - D:\\B166ER-OpenClaw\\workspace\\obsidian-vault\\50-外部接入\\cron-outputs\\2026-08\\21-32-Entity-Extractor-实体抽取-4.md"
+      },
+      "R60-11_compliance": "full (5/5 steps completed)"
+    }
+  ],
+  "eval_timestamp": "2026-08-24T21:32:28+08:00",
+  "cron_trigger": "0eced1e9-8729-47d8-b8d6-34eff13ed780"
+}

@@ -1,0 +1,40 @@
+
+============================================================================================
+### QUERY: luxury hotel management agreement fee structure base fee incentive fee FF&E reserve percentage
+============================================================================================
+[ERR] HTTPError: 401 Client Error: Unauthorized for url: https://api.tavily.com/search
+
+============================================================================================
+### QUERY: luxury hotel GOP margin benchmark 2025 2026 STR luxury upper upscale operating margin
+============================================================================================
+[ERR] HTTPError: 401 Client Error: Unauthorized for url: https://api.tavily.com/search
+
+============================================================================================
+### QUERY: luxury hotel revenue mix rooms F&B spa percentage of total revenue
+============================================================================================
+[ERR] HTTPError: 401 Client Error: Unauthorized for url: https://api.tavily.com/search
+
+============================================================================================
+### QUERY: luxury hotel renovation reduce number of rooms increase ADR total revenue case study
+============================================================================================
+[ERR] HTTPError: 401 Client Error: Unauthorized for url: https://api.tavily.com/search
+
+============================================================================================
+### QUERY: USALI hotel operating statement structure owner operator management fee reserve accounts
+============================================================================================
+[ERR] HTTPError: 401 Client Error: Unauthorized for url: https://api.tavily.com/search
+
+============================================================================================
+### QUERY: luxury hotel per key renovation cost per room 2025 2026 high end full service
+============================================================================================
+[ERR] HTTPError: 401 Client Error: Unauthorized for url: https://api.tavily.com/search
+
+============================================================================================
+### QUERY: luxury hotel staffing ratio employees per room benchmark full service five star
+============================================================================================
+[ERR] HTTPError: 401 Client Error: Unauthorized for url: https://api.tavily.com/search
+
+============================================================================================
+### QUERY: Rosewood Regent Peninsula Mandarin Oriental management fee structure luxury brand economics
+============================================================================================
+[ERR] HTTPError: 401 Client Error: Unauthorized for url: https://api.tavily.com/search

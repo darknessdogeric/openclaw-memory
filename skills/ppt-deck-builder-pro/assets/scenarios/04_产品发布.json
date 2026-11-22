@@ -1,0 +1,182 @@
+{
+  "title": "产品发布 PPT",
+  "total_slides": 12,
+  "style_preset": "gradient_modern",
+  "style_goal": "面向「发布会现场 + 线上看直播的潜在客户与媒体」的产品发布演示",
+  "image_provider": "runninghub_g31",
+  "resolution": "4k",
+  "aspect_ratio": "16:9",
+  "brief": {
+    "total_slides": 12,
+    "style_preset": "gradient_modern",
+    "audience": {
+      "who": "发布会现场 + 线上看直播的潜在客户与媒体",
+      "knows": "知道 AI 写作这个品类存在, 但没用过我们的产品",
+      "wants": "相信这个产品真能解决我的问题, 并记住它叫什么",
+      "action": "发布会后试用并进入付费转化流程"
+    },
+    "required_sections": [
+      {
+        "name": "痛点",
+        "conclusion": "写不出来不是能力问题, 是流程问题",
+        "slides": 2
+      },
+      {
+        "name": "解决方案",
+        "conclusion": "把写作拆成 5 步, 每步都有 AI 兜底",
+        "slides": 2
+      },
+      {
+        "name": "核心功能",
+        "conclusion": "3 个功能构成闭环, 单个都不够",
+        "slides": 3
+      },
+      {
+        "name": "定价",
+        "conclusion": "按坐席收费, 不按字数, 无隐藏项",
+        "slides": 2
+      },
+      {
+        "name": "行动",
+        "conclusion": "现场扫码领 30 天全功能",
+        "slides": 3
+      }
+    ],
+    "data_sources": [
+      {
+        "type": "internal",
+        "where": "产品实测录屏 + 前后对比数据",
+        "confidence": "🟢🟢 一手"
+      },
+      {
+        "type": "internal",
+        "where": "定价表与套餐",
+        "confidence": "🟢🟢 一手"
+      },
+      {
+        "type": "web",
+        "where": "品类市场数据 (发布会背景)",
+        "confidence": "🟡🟡 多源"
+      }
+    ],
+    "explicit_constraints": [
+      "不承诺未上线功能",
+      "竞品不点名比较",
+      "价格必须与销售口径一致",
+      "涉及客户名的必须已获授权"
+    ],
+    "success_check": "观众能复述产品名、3 个核心功能、起步价, 并知道下一步做什么",
+    "scenario": "产品发布",
+    "kimi_reference_prompt": "为一次AI写作工具产品发布会制作演示PPT，包含痛点、解决方案、核心功能、定价"
+  },
+  "slides": [
+    {
+      "slide_number": 1,
+      "page_type": "cover",
+      "page_goal": "产品名 + 一句话",
+      "content": "封面",
+      "style_preset": "gradient_modern",
+      "text_density": "medium",
+      "note": "TODO: 补 approved_text_lines / prompt_override"
+    },
+    {
+      "slide_number": 2,
+      "page_type": "cards",
+      "page_goal": "写不出来",
+      "content": "痛点 1",
+      "style_preset": "gradient_modern",
+      "text_density": "medium",
+      "note": "TODO: 补 approved_text_lines / prompt_override"
+    },
+    {
+      "slide_number": 3,
+      "page_type": "cards",
+      "page_goal": "改不完",
+      "content": "痛点 2",
+      "style_preset": "gradient_modern",
+      "text_density": "medium",
+      "note": "TODO: 补 approved_text_lines / prompt_override"
+    },
+    {
+      "slide_number": 4,
+      "page_type": "path",
+      "page_goal": "5 步流程",
+      "content": "解决方案总览",
+      "style_preset": "gradient_modern",
+      "text_density": "medium",
+      "note": "TODO: 补 approved_text_lines / prompt_override"
+    },
+    {
+      "slide_number": 5,
+      "page_type": "cards",
+      "page_goal": "功能 + 演示",
+      "content": "核心功能 1",
+      "style_preset": "gradient_modern",
+      "text_density": "medium",
+      "note": "TODO: 补 approved_text_lines / prompt_override"
+    },
+    {
+      "slide_number": 6,
+      "page_type": "cards",
+      "page_goal": "功能 + 演示",
+      "content": "核心功能 2",
+      "style_preset": "gradient_modern",
+      "text_density": "medium",
+      "note": "TODO: 补 approved_text_lines / prompt_override"
+    },
+    {
+      "slide_number": 7,
+      "page_type": "cards",
+      "page_goal": "功能 + 演示",
+      "content": "核心功能 3",
+      "style_preset": "gradient_modern",
+      "text_density": "medium",
+      "note": "TODO: 补 approved_text_lines / prompt_override"
+    },
+    {
+      "slide_number": 8,
+      "page_type": "comparison",
+      "page_goal": "同一篇稿子",
+      "content": "使用前后对比",
+      "style_preset": "gradient_modern",
+      "text_density": "medium",
+      "note": "TODO: 补 approved_text_lines / prompt_override"
+    },
+    {
+      "slide_number": 9,
+      "page_type": "data",
+      "page_goal": "时间与质量",
+      "content": "效率数据",
+      "style_preset": "gradient_modern",
+      "text_density": "medium",
+      "note": "TODO: 补 approved_text_lines / prompt_override"
+    },
+    {
+      "slide_number": 10,
+      "page_type": "cards",
+      "page_goal": "套餐表",
+      "content": "定价方案",
+      "style_preset": "gradient_modern",
+      "text_density": "medium",
+      "note": "TODO: 补 approved_text_lines / prompt_override"
+    },
+    {
+      "slide_number": 11,
+      "page_type": "cards",
+      "page_goal": "2 条",
+      "content": "客户证言",
+      "style_preset": "gradient_modern",
+      "text_density": "medium",
+      "note": "TODO: 补 approved_text_lines / prompt_override"
+    },
+    {
+      "slide_number": 12,
+      "page_type": "conclusion",
+      "page_goal": "扫码 + 落地页",
+      "content": "行动号召",
+      "style_preset": "gradient_modern",
+      "text_density": "medium",
+      "note": "TODO: 补 approved_text_lines / prompt_override"
+    }
+  ]
+}

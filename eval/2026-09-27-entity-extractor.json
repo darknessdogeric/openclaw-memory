@@ -1,0 +1,85 @@
+{
+  "date": "2026-09-27",
+  "cron_id": "0eced1e9-8729-47d8-b8d6-34eff13ed780",
+  "cron_name": "Entity Extractor (每日21:30)",
+  "r_rule": "R60-11",
+  "scheduled_time": "2026-09-27T21:30:00+08:00",
+  "actual_trigger": "2026-09-27T21:32:00+08:00",
+  "status": "success",
+  "extraction": {
+    "mode": "today",
+    "days_scanned": 1,
+    "files_scanned": ["2026-09-27.md"],
+    "unique_new_entities": 12,
+    "unique_new_relations": 0,
+    "new_entity_types": {
+      "Person": 2,
+      "Company": 2,
+      "Project": 3,
+      "Place": 4,
+      "Tool": 1
+    },
+    "new_entity_names": [
+      "Eric",
+      "B166ER",
+      "安逸酒店集团",
+      "亚朵",
+      "深度自迭代",
+      "R66监控",
+      "R60规则",
+      "成都",
+      "重庆",
+      "四川",
+      "北京",
+      "DeepSeek"
+    ]
+  },
+  "outputs": {
+    "graph_jsonl": {
+      "path": "memory/ontology/graph.jsonl",
+      "updated": true,
+      "today_entries": 12
+    },
+    "relations_trend": {
+      "path": "memory/ontology/relations-trend.md",
+      "updated": true,
+      "total_relations_today": 0,
+      "cumulative_relations": 16
+    },
+    "dashboard": {
+      "path": "memory/eric-4-projects-dashboard.md",
+      "updated": true,
+      "projects_mentioned_today": 1
+    },
+    "eval_json": {
+      "path": "eval/2026-09-27-entity-extractor.json",
+      "updated": true
+    },
+    "obsidian_push": {
+      "attempted": true,
+      "tool": "toolbox/cron_to_obsidian.py",
+      "content_file": "toolbox/.tmp/2026-09-27_entity-extractor/entities-2026-09-27.md",
+      "output_file": "obsidian-vault/50-外部接入/cron-outputs/2026-09/21-33-Entity-Extractor-实体抽取-3.md",
+      "status": "success",
+      "pushed_at": "2026-09-27T21:33:48",
+      "appended_to_daily": false
+    }
+  },
+  "r60_11_compliance": {
+    "step_1_graph_jsonl": "done",
+    "step_2_relations_trend": "done",
+    "step_3_dashboard": "done",
+    "step_4_eval_json": "done",
+    "step_5_obsidian_push": "done"
+  },
+  "notes": [
+    "周日（Sunday）日常抽取，12 实体入 graph，0 新关系",
+    "实体覆盖 Eric 4 核心项目（安逸/AHL/1244/医养）—— 今日 1 个项目被提及",
+    "0 新关系（累计 16 稳定关系）",
+    "类型分布：Person 2 + Company 2 + Project 3 + Place 4 + Tool 1",
+    "无 R66 修订类变更",
+    "Obsidian 推送成功；append-daily 未生效（01-日记/2026-09-27.md 尚不存在）"
+  ],
+  "next_run": "2026-09-28T21:30:00+08:00",
+  "generated_by": "B166ER entity_extractor.py + R60-11"
+}

@@ -1,0 +1,204 @@
+{
+  "title": "课程课件 PPT",
+  "total_slides": 15,
+  "style_preset": "whiteboard_handdrawn",
+  "style_goal": "面向「非技术背景的产品经理 (10-20 人)」的课程课件演示",
+  "image_provider": "runninghub_g31",
+  "resolution": "4k",
+  "aspect_ratio": "16:9",
+  "brief": {
+    "total_slides": 15,
+    "style_preset": "whiteboard_handdrawn",
+    "audience": {
+      "who": "非技术背景的产品经理 (10-20 人)",
+      "knows": "会用 AI 对话, 但不懂技术原理",
+      "wants": "理解 Agent 是什么、能干什么、怎么在自己业务里用起来",
+      "action": "回去挑一个自己的业务场景试做一次"
+    },
+    "required_sections": [
+      {
+        "name": "是什么",
+        "conclusion": "Agent = 会用工具并自己完成目标的 AI",
+        "slides": 3
+      },
+      {
+        "name": "和 ChatGPT 差在哪",
+        "conclusion": "差在'能不能自己动手'，不在'能不能聊'",
+        "slides": 3
+      },
+      {
+        "name": "怎么用",
+        "conclusion": "三步: 目标 / 工具 / 验收标准",
+        "slides": 4
+      },
+      {
+        "name": "案例",
+        "conclusion": "一个产品经理本周就能跑通的例子",
+        "slides": 3
+      },
+      {
+        "name": "进阶",
+        "conclusion": "多 Agent 协作与踩坑清单",
+        "slides": 2
+      }
+    ],
+    "data_sources": [
+      {
+        "type": "doc",
+        "where": "讲义与真实产品截图 (脱敏)",
+        "confidence": "🟢🟢 一手"
+      },
+      {
+        "type": "demo",
+        "where": "可现场演示的最小 Agent",
+        "confidence": "🟢🟢 一手"
+      }
+    ],
+    "explicit_constraints": [
+      "全程用类比, 不用代码",
+      "每个概念配一个产品经理 daily 的例子",
+      "术语首次出现给一句话解释",
+      "不做技术选型对比"
+    ],
+    "success_check": "学员能用自己的话向同事解释 Agent, 并说出一个能试的场景",
+    "scenario": "课程课件",
+    "kimi_reference_prompt": "我做一份从AGENT入门到进阶的PPT，适合非技术背景的产品经理，15页左右"
+  },
+  "slides": [
+    {
+      "slide_number": 1,
+      "page_type": "cover",
+      "page_goal": "标题 + 一句话承诺",
+      "content": "封面",
+      "style_preset": "whiteboard_handdrawn",
+      "text_density": "medium",
+      "note": "TODO: 补 approved_text_lines / prompt_override"
+    },
+    {
+      "slide_number": 2,
+      "page_type": "diagnostic",
+      "page_goal": "3 个具体问题",
+      "content": "今天解决什么",
+      "style_preset": "whiteboard_handdrawn",
+      "text_density": "medium",
+      "note": "TODO: 补 approved_text_lines / prompt_override"
+    },
+    {
+      "slide_number": 3,
+      "page_type": "cards",
+      "page_goal": "3 个要素",
+      "content": "Agent 是什么",
+      "style_preset": "whiteboard_handdrawn",
+      "text_density": "medium",
+      "note": "TODO: 补 approved_text_lines / prompt_override"
+    },
+    {
+      "slide_number": 4,
+      "page_type": "comparison",
+      "page_goal": "对话 vs 动手",
+      "content": "ChatGPT vs Agent",
+      "style_preset": "whiteboard_handdrawn",
+      "text_density": "medium",
+      "note": "TODO: 补 approved_text_lines / prompt_override"
+    },
+    {
+      "slide_number": 5,
+      "page_type": "path",
+      "page_goal": "目标/工具/验收",
+      "content": "Agent 干活三步",
+      "style_preset": "whiteboard_handdrawn",
+      "text_density": "medium",
+      "note": "TODO: 补 approved_text_lines / prompt_override"
+    },
+    {
+      "slide_number": 6,
+      "page_type": "cards",
+      "page_goal": "工具即能力",
+      "content": "工具长什么样",
+      "style_preset": "whiteboard_handdrawn",
+      "text_density": "medium",
+      "note": "TODO: 补 approved_text_lines / prompt_override"
+    },
+    {
+      "slide_number": 7,
+      "page_type": "cards",
+      "page_goal": "从需求到产出",
+      "content": "案例 1: 竞品日报",
+      "style_preset": "whiteboard_handdrawn",
+      "text_density": "medium",
+      "note": "TODO: 补 approved_text_lines / prompt_override"
+    },
+    {
+      "slide_number": 8,
+      "page_type": "cards",
+      "page_goal": "从需求到产出",
+      "content": "案例 2: 需求文档",
+      "style_preset": "whiteboard_handdrawn",
+      "text_density": "medium",
+      "note": "TODO: 补 approved_text_lines / prompt_override"
+    },
+    {
+      "slide_number": 9,
+      "page_type": "cards",
+      "page_goal": "从需求到产出",
+      "content": "案例 3: 客服话术",
+      "style_preset": "whiteboard_handdrawn",
+      "text_density": "medium",
+      "note": "TODO: 补 approved_text_lines / prompt_override"
+    },
+    {
+      "slide_number": 10,
+      "page_type": "diagnostic",
+      "page_goal": "越权/幻觉/不验收",
+      "content": "最容易踩的 3 个坑",
+      "style_preset": "whiteboard_handdrawn",
+      "text_density": "medium",
+      "note": "TODO: 补 approved_text_lines / prompt_override"
+    },
+    {
+      "slide_number": 11,
+      "page_type": "cards",
+      "page_goal": "可判定的标准",
+      "content": "验收标准怎么写",
+      "style_preset": "whiteboard_handdrawn",
+      "text_density": "medium",
+      "note": "TODO: 补 approved_text_lines / prompt_override"
+    },
+    {
+      "slide_number": 12,
+      "page_type": "data",
+      "page_goal": "什么场景值得上",
+      "content": "能力与场景矩阵",
+      "style_preset": "whiteboard_handdrawn",
+      "text_density": "medium",
+      "note": "TODO: 补 approved_text_lines / prompt_override"
+    },
+    {
+      "slide_number": 13,
+      "page_type": "cards",
+      "page_goal": "什么时候需要",
+      "content": "进阶: 多 Agent",
+      "style_preset": "whiteboard_handdrawn",
+      "text_density": "medium",
+      "note": "TODO: 补 approved_text_lines / prompt_override"
+    },
+    {
+      "slide_number": 14,
+      "page_type": "cards",
+      "page_goal": "需要什么账号/权限",
+      "content": "进阶: 资源准备",
+      "style_preset": "whiteboard_handdrawn",
+      "text_density": "medium",
+      "note": "TODO: 补 approved_text_lines / prompt_override"
+    },
+    {
+      "slide_number": 15,
+      "page_type": "conclusion",
+      "page_goal": "本周做一件事",
+      "content": "行动清单",
+      "style_preset": "whiteboard_handdrawn",
+      "text_density": "medium",
+      "note": "TODO: 补 approved_text_lines / prompt_override"
+    }
+  ]
+}

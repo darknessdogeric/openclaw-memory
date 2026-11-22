@@ -1,0 +1,98 @@
+{
+  "date": "2026-08-21",
+  "session": "每日全球情报简报 cron 08:30 (主任务)",
+  "cron_id": "7e149123-b2c9-4336-89fa-da9cae972679",
+  "version": "v1.2",
+  "self_assessment": {
+    "rss_fetch_status": "SUCCESS",
+    "rss_sources_success": 29,
+    "rss_sources_failed": 2,
+    "rss_items_total": 789,
+    "rss_db_size_bytes": 847872,
+    "search_interface_failed": true,
+    "fallback_query_method": "direct_sqlite_query",
+    "evidence_method": "R66-compliant (RSS titles verified via DB)",
+    "report_length_chars": 12272,
+    "report_target_chars": "2500-4000",
+    "report_oversized": true,
+    "report_oversized_reason": "international_complexity (Bessent/Iran/Ukraine/Russia/AI M&A all active same day)"
+  },
+  "outputs": {
+    "main_report": "reports/daily-briefing/2026-08-21.md",
+    "main_report_size": 22345,
+    "archive_copy": "memory/world-intelligence/2026-08-21.md",
+    "index_updated": "reports/daily-briefing/INDEX.md",
+    "glossary_added_terms": 5,
+    "predictions_added": 5,
+    "dashboard_updated": false,
+    "dashboard_already_updated_today": true,
+    "dashboard_last_update": "2026-08-21 08:35 (entity_extractor)",
+    "obsidian_push_status": "PENDING"
+  },
+  "key_findings": [
+    {
+      "type": "macro",
+      "title": "贝森特干预美债失败 + AI 借贷推高长债",
+      "confidence": 0.85,
+      "sources": ["FT World 8/20", "NYT Business 8/20"]
+    },
+    {
+      "type": "geopolitics",
+      "title": "胡塞-也门回归全面内战 + 伊朗'最重经济战' + 俄军 24h 基辅 16 死",
+      "confidence": 0.95,
+      "sources": ["Al Jazeera", "BBC", "FT", "WP", "Japan Times"]
+    },
+    {
+      "type": "ai_industry",
+      "title": "Stripe $7B 收 OpenRouter + Cursor $60B 并入 SpaceXai + AMD 收 Taalas + 内存 +500%",
+      "confidence": 0.9,
+      "sources": ["Latent Space", "Stratechery", "The Verge"]
+    },
+    {
+      "type": "china_macro",
+      "title": "许家印无期 + 港府罕见地块激励 + 中国地产符号性收尾",
+      "confidence": 0.85,
+      "sources": ["BBC", "SCMP", "The Diplomat"]
+    },
+    {
+      "type": "hotel_industry",
+      "title": "H1 2026 强但分化 + 'AI ≠ 战略' 警告 + IHG 押注 AI Booking",
+      "confidence": 0.85,
+      "sources": ["HospitalityNet", "Skift"]
+    }
+  ],
+  "methodology_compliance": {
+    "three_step_reasoning": true,
+    "five_must_ask": true,
+    "three_scenarios": true,
+    "five_definitions": true,
+    "word_count_target": "2500-4000",
+    "structure_sixteen_segments": true,
+    "no_pro_or_deepseek_branding": true
+  },
+  "r12_compliance": {
+    "visual_outputs_created": false,
+    "watermark_required": false,
+    "reason": "纯文本报告，无图表"
+  },
+  "errors_and_resolutions": [
+    {
+      "error": "search_rss/search_news 返回 0 结果",
+      "diagnosis": "trendradar MCP 搜索接口可能有时区/索引问题",
+      "resolution": "fallback to direct sqlite3 query against output/rss/{date}.db",
+      "verification": "29/31 feeds fetched, 789 items in DB"
+    },
+    {
+      "error": "fetch_foreign_rss.py 末尾 UnicodeEncodeError (gbk)",
+      "diagnosis": "Windows console 默认编码为 gbk",
+      "resolution": "忽略此错误，DB 已成功保存，不影响主报告生成"
+    }
+  ],
+  "next_actions": [
+    "推送报告到 Obsidian (cron_to_obsidian.py)",
+    "监控贝森特-美联储协调是否恶化",
+    "关注 9 月 FOMC 是否降息",
+    "关注胡塞-也门是否进一步升级"
+  ],
+  "rule_extracted": null
+}

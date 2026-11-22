@@ -1,0 +1,105 @@
+{
+  "date": "2026-08-10",
+  "report_version": "v2.0",
+  "model": "minimax/MiniMax-M3",
+  "cron_id": "16c3811b-3fe5-49d0-be1a-0df19a86aef6",
+  "session_id": "b09b4870-3334-452b-a1f6-7bd2a90bc236",
+  "generation_time": "2026-08-10 10:34:35 +08:00",
+  "data_sources": {
+    "domestic_platforms": {
+      "count": 11,
+      "items": 255,
+      "sources": ["toutiao", "baidu", "wallstreetcn-hot", "thepaper", "bilibili-hot-search", "cls-hot", "ifeng", "tieba", "weibo", "douyin", "zhihu"]
+    },
+    "rss_feeds": {
+      "count": 28,
+      "items": 60,
+      "days": 3,
+      "sources": ["scmp-feed", "guardian-world", "nyt-world", "bbc-world", "aljazeera-all", "japan-times", "dw-world", "ft-world", "nyt-business", "washington-post-world", "hacker-news", "theverge", "skift", "wired-top", "bbc-asia", "latent-space", "the-diplomat", "stratechery", "mit-tech-review", "ecb-press", "foreignaffairs", "federalreserve-speeches", "federalreserve-press", "import-ai", "merics-china", "wsj-world", "cnn-world", "csis-analysis"]
+    },
+    "total_signals": 315
+  },
+  "top_events": [
+    "宇树科技今日打新，人形机器人第一股（中一签缴7.54万，预期赚20万）",
+    "黄金周涨7%突破4300美元（避险三件套同涨）",
+    "Netanyahu罕见公开拒绝Trump 15点加沙方案（美以裂痕公开化）",
+    "万斯称美伊'博弈中段'，伊朗开'重开海峡6大条件'（地缘僵局）",
+    "白海豚台风登陆浙江（14级），上海多条地铁停运",
+    "7月CPI +0.5% / PPI +3.5%（通胀拐点信号）",
+    "摩尔线程营收+147%，赴港IPO（国产GPU估值锚）",
+    "Apple智能+阿里千问合作落地（中美AI合作首个具体案例）",
+    "胡塞袭击沙特炼油厂（沙特刚签防御协议）",
+    "伯克希尔Q2净利翻倍，净买入200亿股票"
+  ],
+  "three_main_themes": {
+    "geopolitical_risk": {
+      "narrative": "周末地缘风险集中爆发（伊朗换将+Netanyahu拒绝Trump+胡塞袭击沙特）",
+      "market_reaction": "黄金+7%突破4300 / 油价涨 / 股指跌",
+      "2_4_week_outlook": "60%概率阶段性缓和 / 80%概率美以裂痕持续 / 黄金继续看多至4500"
+    },
+    "china_tech_rotation": {
+      "narrative": "宇树打新+摩尔线程IPO+Apple+千问=科技主线强化",
+      "sector": "人形机器人/国产GPU/AI应用",
+      "1_2_week_outlook": "震荡向上，关注中报披露"
+    },
+    "inflation_inflection": {
+      "narrative": "CPI 0.5% + PPI 3.5%，通胀拐点初现",
+      "policy_window": "Q3降准概率50% / Q4降准概率70% / Q4降息概率40%",
+      "asset_impact": "债牛延续 / 利率敏感资产受益 / PPI转正利好中游制造业"
+    }
+  },
+  "confidence_scores": {
+    "geopolitical": 0.78,
+    "energy": 0.80,
+    "china_policy": 0.75,
+    "ai_tech": 0.85,
+    "hotel_reits": 0.70,
+    "consumer_downgrade": 0.72,
+    "gold": 0.82
+  },
+  "scenario_probabilities": {
+    "iran_breakthrough_aug": 0.40,
+    "iran_stalemate_q3": 0.45,
+    "iran_escalation_q3": 0.15,
+    "rr_cut_q3": 0.50,
+    "rr_cut_q4": 0.70,
+    "rate_cut_q4": 0.40,
+    "gold_break_4500": 0.55,
+    "yushu_premium_50_100pct": 0.75,
+    "ahl_huadong_delay": 0.65
+  },
+  "ahl_impact": {
+    "east_china_pilot": "delay_risk (typhoon disruption 1 week)",
+    "energy_cost_assumption": "+10% (oil price pressure)",
+    "policy_window": "positive_q3 (RR cut probability rising)",
+    "ai_compliance_risk": "medium (global AI safety cases rising)",
+    "hotel_segment_pressure": "mid_range_down / premium_up (consumer bifurcation)"
+  },
+  "eric_business_signals": {
+    "anyi_east_china": "关注上海/浙江门店（台风持续1周）",
+    "consumer_downgrade": "中端酒店承压，精品/差异化仍有结构性机会",
+    "gold_position": "4300已破，已涨7%，不追高",
+    "china_tech_emotion": "情绪拐点，不追高"
+  },
+  "data_gaps": [
+    "A股周一开盘数据尚未生成（10:34生成报告，市场9:30开盘）",
+    "WTI油价实时数据未获取",
+    "人民币汇率中间价未实时获取"
+  ],
+  "report_metrics": {
+    "report_length_chars": 7404,
+    "sections_completed": 6,
+    "data_processing_seconds": 48,
+    "platforms_covered": 11,
+    "rss_sources_covered": 28
+  },
+  "key_predictions": [
+    "黄金2-4周内看向4500美元（避险情绪持续）",
+    "宇树上市后溢价50-100%概率75%",
+    "Q3央行降准概率50%",
+    "AHL华东试点因台风推迟概率65%",
+    "Apple+千问模式或引发更多中美AI合作公告（2-4周）"
+  ],
+  "next_run": "2026-08-12 (Wed) 10:00 / 2026-08-14 (Fri) 10:00",
+  "supersedes": "v1.2 from 2026-08-10 08:35 (used 8/9 cached data, now updated with real-time 8/10 data)"
+}

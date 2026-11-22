@@ -1,0 +1,26 @@
+{
+  "date": "2026-08-30",
+  "task": "Entity Extractor",
+  "cron_id": "0eced1e9-8729-47d8-b8d6-34eff13ed780",
+  "run_time": "2026-08-30 21:31 (Asia/Shanghai)",
+  "source_file": "memory/2026-08-30.md",
+  "new_entities": 16,
+  "new_relations": 0,
+  "cumulative_entities": "已加载 0 实体, 16 关系 → 增量后约 16 实体 (本轮)",
+  "cumulative_relations": 16,
+  "new_entity_types": {
+    "Person": ["Eric", "B166ER"],
+    "Company": ["安逸酒店集团", "AHL", "亚朵", "携程", "OpenAI"],
+    "Project": ["AHL", "1244战略", "深度自迭代", "R66监控", "R60规则"],
+    "Place": ["成都", "四川"],
+    "Tool": ["TrendRadar", "scrape_matrix"]
+  },
+  "dashboard_updated": true,
+  "projects_mentioned_today": 4,
+  "relations_trend_updated": true,
+  "graph_jsonl_updated": true,
+  "obsidian_pushed": true,
+  "obsidian_target": "vault_sync + cron_to_obsidian",
+  "errors": [],
+  "status": "ok"
+}

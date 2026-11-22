@@ -1,0 +1,108 @@
+物业资科PROPERTYINFORMATION
+物业名称Property;
+目前品牌Current brand:
+皇冠假日CROWNEPLAZA
+建议品牌Proposedbrand:
+皇冠假日CROWNEPLAZA
+城市 City:
+省 Province:
+CHENGDU
+SICHUAN
+物业地址Propertyaddress:
+总府街31号SichuanSheng，ChengduShi,JinjiangQu,
+地图位置Maplocation:
+皇文精坊
+Wenghs
+SprsSh
+CROWNE PLAZA
+重大广场
+中心
+MTE
+Galery
+min fmt Roed
+Chentdu
+欢光广场
+中心
+城市之心
+CityHesrt
+停车场
+楼层层数Floors:
+开业年份Yearopened:
+1997年
+29
+城市商City
+宴会厅Banquet
+酒店类型Hoteltype:
+Yes (w/kitchen)
+会议室Meeting:
+Yes (10)
+总客房数Keys:
+402
+餐饮F&BOutlets:
+康体设施Recreation：
+墅总Villas:
+Pool, Fitness; SPA
+调查资料SURVEYINFORMATION
+调查日期Surveydate
+报告日期Reportdate
+2019-9-12
+修订版本Revisiondate
+调查人员Conductedby
+S Marinelli
+酒店设施FACILITIES
+GFA: x m2
+GFA/Key: x
+室外EXTERIOR
+楼层Floors:
+29
+停车场CarPark:
+地下停车场Underground
+车辆通道PorteCochere/Canopy:
+大型车停车场BusPark:
+车辆通道Porte Cochere
+地上 Above ground
+自行车停车场CyclePark:
+无 No
+公共区域PUBLICAREAS
+大堂区 Lobby:
+m2
+客梯数量Guestlifts:
+接待处Stations:
+服务电梯数量Servicelifts:
+升降机Dumbwaiter(s):
+餐饮F&B
+大堂酒廊 Lobby Lounge:
+有 Yes (x seats)
+中餐厅Chinese:
+有 Yes (x pax)
+行政酒廊 Exec Lounge:
+有 Yes (x seats)
+餐厅Restaurant:
+全日餐厅ADD：
+有 Yes (x pax)
+餐厅 Restaurant:
+会议MEETING
+宴会厅Ballroom:
+有 Yes (450 m2)
+商业中心BusinessCentre：
+有 Yes
+小宴会厅JuniorBallroom:
+无 No
+婚礼宴会销售WeddingSales:
+无 No
+会议室 Meeting Rooms:
+有 Yes; 10
+休闲设施RECREATION
+泳池 Pool:
+有 Yes
+游戏室 Game Rooms:
+无 No
+健身房Fitness:
+有 Yes
+儿童俱乐部Children:
+无 No
+水疗 Spa:
+有 Yes
+网球场Tennis Court:
+无 No
+客房GUESTROOMS

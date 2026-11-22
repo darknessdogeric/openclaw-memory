@@ -1,0 +1,60 @@
+{
+  "date": "2026-10-02",
+  "day_of_week": "Friday",
+  "task": "daily_global_intelligence_briefing_0830",
+  "cron_id": "7e149123-b2c9-4336-89fa-da9cae972679",
+  "cron_name": "B166ER-每日全球情报简报 08:30",
+  "scheduled_time": "2026-10-02T08:30:00+08:00",
+  "actual_trigger": "2026-10-02T08:30:00+08:00",
+  "trigger_offset_minutes": 0,
+  "status": "success",
+  "rss_fetch": {
+    "script": "trendradar/fetch_foreign_rss.py",
+    "feeds_succeeded": 30,
+    "feeds_failed": 1,
+    "failed_feeds": [
+      "Hotel News Now (403 Forbidden)"
+    ],
+    "total_items": 814,
+    "db_path": "trendradar/output/rss/2026-10-02.db",
+    "db_size_bytes": 872448,
+    "db_items": 814,
+    "note": "cosmetic GBK print error on per-feed summary (UnicodeEncodeError on checkmark); data saved successfully"
+  },
+  "news_crawler_status": {
+    "domestic_crawler": "NOT_RUN (only foreign RSS fetched per job spec)",
+    "note": "Domestic 热榜 data stale — latest available news date 2026-09-23 (DATA_NOT_FOUND for 2026-10-02); report relies on 814 foreign RSS items"
+  },
+  "deliverables": {
+    "main_report": "reports/daily-briefing/2026-10-02.md",
+    "main_report_bytes": 15089,
+    "archive_copy": "memory/world-intelligence/2026-10-02.md",
+    "index_updated": "reports/daily-briefing/INDEX.md",
+    "index_insertion": "TOP (per spec, not append)",
+    "glossary_added_entries": [
+      "129",
+      "130",
+      "131",
+      "132",
+      "133"
+    ],
+    "predictions_added": 4,
+    "eval_path": "eval/2026-10-02.json",
+    "obsidian_push": "PENDING (cron_to_obsidian.py)",
+    "dashboard_updated": false
+  },
+  "report_metrics": {
+    "word_count_estimate": 3500,
+    "target_range": "2500-4000",
+    "in_range": true,
+    "sections_count": 16,
+    "format_compliance": "OK 16 sections (geopolitics/energy/markets/policy/healthcare/edu/tech/AI/hotels/REITs/diplomacy/data/risk/causality/scenarios/actions)"
+  },
+  "top_stories": [
+    "US moves 2000 Marines to Middle East, tanker hit in Hormuz (Iran war escalation)",
+    "Global diesel crisis: US tells European allies to lower diesel prices immediately",
+    "FlyDubai radicalized co-pilot attack",
+    "Putin rules out Ukraine ceasefire",
+    "Hotel AI cost>benefit paradox (Skift P&L Doesn't Lie)"
+  ]
+}

@@ -1,0 +1,26 @@
+[Content_Types].xml                                              1664
+_rels/                                                              0
+_rels/.rels                                                       737
+docProps/                                                           0
+docProps/app.xml                                                  532
+docProps/core.xml                                                 600
+docProps/custom.xml                                              1279
+word/                                                               0
+word/_rels/                                                         0
+word/_rels/document.xml.rels                                     1207
+word/document.xml                                               74215
+word/fontTable.xml                                               4174
+word/footer1.xml                                                 1624
+word/media/                                                         0
+word/media/image1.jpeg                                          38404
+word/media/image2.jpeg                                         137619
+word/numbering.xml                                               1983
+word/settings.xml                                                3767
+word/styles.xml                                                 25512
+word/theme/                                                         0
+word/theme/theme1.xml                                            4370
+
+=== media ===
+word/media/
+word/media/image1.jpeg
+word/media/image2.jpeg

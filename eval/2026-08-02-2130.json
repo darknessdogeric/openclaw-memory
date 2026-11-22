@@ -1,0 +1,42 @@
+{
+  "date": "2026-08-02",
+  "session": "21:30 Entity Extractor cron",
+  "cron_id": "0eced1e9-8729-47d8-b8d6-34eff13ed780",
+  "theme": "world monitor 实体抽取",
+  "status": "executed",
+  "rules_applied": [
+    "R60-11:实体抽取沉淀动作",
+    "R66:文件接收质量门控(输出前自检)"
+  ],
+  "source_file": "memory/2026-08-02.md",
+  "source_size_bytes": 8999,
+  "metrics": {
+    "new_entities": 14,
+    "new_relations": 0,
+    "projects_mentioned_today": 5,
+    "graph_total_entities_after": "见 graph.jsonl",
+    "graph_total_relations_after": 14,
+    "duration_seconds": "~5"
+  },
+  "entities_by_type": {
+    "Person": 2,
+    "Company": 2,
+    "Project": 6,
+    "Event": 2,
+    "Tool": 2
+  },
+  "key_signals": [
+    "携程首次入图 → 跨境OTA抓取场景已落地",
+    "霍尔木兹海峡事件入图 → Eric持续关注地缘政治",
+    "B166ER深度自迭代+R60规则同框 → 自我迭代机制稳定运行",
+    "0新关系 → 关系模式词典待下次更新"
+  ],
+  "outputs": {
+    "graph_jsonl": "memory/ontology/graph.jsonl (appended)",
+    "relations_trend": "memory/ontology/relations-trend.md (regenerated)",
+    "dashboard": "memory/eric-4-projects-dashboard.md (updated)",
+    "eval": "eval/2026-08-02-2130.json (this file)",
+    "obsidian_push": "已调度 cron_to_obsidian.py"
+  },
+  "next_action": "等待下次cron触发,关系词典待优化"
+}

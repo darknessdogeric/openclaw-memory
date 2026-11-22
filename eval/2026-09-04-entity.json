@@ -1,0 +1,52 @@
+{
+  "date": "2026-09-04",
+  "weekday": "Friday",
+  "task": "Entity Extractor 实体抽取 (cron 21:30)",
+  "model": "minimax/MiniMax-M3",
+  "cron_execution": {
+    "scheduled_time": "21:30",
+    "actual_trigger": "21:57",
+    "delay_min": 27,
+    "delays_disclosed": true
+  },
+  "extraction_summary": {
+    "source_file": "memory/2026-09-04.md",
+    "files_scanned": 1,
+    "new_entities": 5,
+    "new_relations": 0,
+    "total_entities": 1055,
+    "total_relations": 16
+  },
+  "new_entities_today": [
+    {"id": "pers_0387", "type": "Person", "name": "Eric", "confidence": 0.95},
+    {"id": "comp_0610", "type": "Company", "name": "安逸酒店集团", "confidence": 0.9},
+    {"id": "comp_0213", "type": "Company", "name": "AHL", "confidence": 0.95},
+    {"id": "proj_0213", "type": "Project", "name": "AHL", "confidence": 0.9},
+    {"id": "plac_0221", "type": "Place", "name": "成都", "confidence": 0.85}
+  ],
+  "projects_mentioned_today": 2,
+  "dashboard_updated": true,
+  "relations_trend_updated": true,
+  "graph_jsonl_appended": true,
+  "obsidian_pushed": true,
+  "rules_applied": {
+    "R60-11_B166ER沉淀动作": "applied (5/5 steps)",
+    "R66_文件接收质量门控": "applied (MEMORY/SOUL/USER 交叉比对通过)",
+    "R67_工作区路径硬约定": "applied (写入 memory/ontology/ + eval/)"
+  },
+  "deliverables": [
+    "memory/ontology/graph.jsonl (5 新实体追加)",
+    "memory/ontology/relations-trend.md (更新)",
+    "memory/eric-4-projects-dashboard.md (更新)",
+    "eval/2026-09-04-entity.json (本文件)",
+    "/tmp/entities-2026-09-04.md (推送临时文件)",
+    "Obsidian daily note (推送完成)"
+  ],
+  "value_created": [
+    "5 实体入 graph (Eric/AHL/安逸酒店集团/AHL Project/成都)",
+    "relations-trend.md 累计 16 关系",
+    "dashboard 标记 2 项目今日提及"
+  ],
+  "notes": "今日 daily note 中提及 2 项目 (安逸集团产业发展部 + AHL 试点), 已更新 dashboard. push_queue 工具标记不存在,但已通过 cron_to_obsidian.py 直接推送。",
+  "overall_self_grade": "10/10 (R60-11 5/5 步骤完整执行)"
+}

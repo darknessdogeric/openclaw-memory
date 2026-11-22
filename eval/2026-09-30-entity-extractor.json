@@ -1,0 +1,84 @@
+{
+  "date": "2026-09-30",
+  "cron_id": "0eced1e9-8729-47d8-b8d6-34eff13ed780",
+  "cron_name": "Entity Extractor (每日21:30)",
+  "r_rule": "R60-11",
+  "scheduled_time": "2026-09-30T21:30:00+08:00",
+  "actual_trigger": "2026-09-30T23:36:00+08:00",
+  "status": "success",
+  "extraction": {
+    "mode": "today",
+    "days_scanned": 1,
+    "files_scanned": ["2026-09-30.md"],
+    "unique_new_entities": 8,
+    "unique_new_relations": 0,
+    "new_entity_types": {
+      "Person": 1,
+      "Company": 3,
+      "Project": 1,
+      "Place": 2,
+      "Tool": 1
+    },
+    "new_entity_names": [
+      "Eric",
+      "安逸酒店集团",
+      "美团",
+      "Anthropic",
+      "R66监控",
+      "成都",
+      "四川",
+      "OpenClaw"
+    ]
+  },
+  "outputs": {
+    "graph_jsonl": {
+      "path": "memory/ontology/graph.jsonl",
+      "updated": true,
+      "today_entries": 8
+    },
+    "relations_trend": {
+      "path": "memory/ontology/relations-trend.md",
+      "updated": true,
+      "total_relations_today": 0,
+      "cumulative_relations": 16
+    },
+    "dashboard": {
+      "path": "memory/eric-4-projects-dashboard.md",
+      "updated": true,
+      "projects_mentioned_today": 0
+    },
+    "eval_json": {
+      "path": "eval/2026-09-30-entity-extractor.json",
+      "updated": true
+    },
+    "entities_markdown": {
+      "path": "/tmp/entities-2026-09-30.md",
+      "updated": true
+    },
+    "obsidian_push": {
+      "attempted": true,
+      "tool": "toolbox/cron_to_obsidian.py",
+      "content_file": "/tmp/entities-2026-09-30.md",
+      "output_file": "obsidian-vault/50-外部接入/cron-outputs/2026-09/23-39-Entity-Extractor-实体抽取.md",
+      "status": "success",
+      "pushed_at": "2026-09-30T23:39:02",
+      "appended_to_daily": false
+    }
+  },
+  "r60_11_compliance": {
+    "step_1_graph_jsonl": "done",
+    "step_2_relations_trend": "done",
+    "step_3_dashboard": "done",
+    "step_4_eval_json": "done",
+    "step_5_obsidian_push": "done"
+  },
+  "notes": [
+    "今日 8 实体（Eric + 3 公司 + 1 项目 + 2 地名 + 1 工具）",
+    "0 新增关系（今日 memory 偏操作类，不触发关系模式）",
+    "记忆主线：图像范式工具集 / 安逸臻选议案 / 国庆酒店预测 / OhMyPPT 升级",
+    "Push_queue 工具不存在，已降级到 cron_to_obsidian.py 通道",
+    "Type 分布：Person 1 + Company 3 + Project 1 + Place 2 + Tool 1"
+  ],
+  "next_run": "2026-10-01T21:30:00+08:00",
+  "generated_by": "B166ER entity_extractor.py + R60-11"
+}

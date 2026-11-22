@@ -1,0 +1,36 @@
+=== P8 style=Heading 1 align=JUSTIFY (3) first_indent=459105 ===
+  text: 2026年，安逸酒店集团聚焦能力建设和体系建设，持续深化市场化改革，抓实职业经理人契约化管理，稳步推进“大运管中心”建设，按照前中后台定位优
+   run0  bold=True  sz=18.0  name=Times New Roman '2026'
+   run1  bold=True  sz=18.0  name=仿宋_GB2312      '年，安逸酒店集团聚焦能力建设和体系建设，持续深化市场化改革，抓实职业经理人契'
+
+=== P9 style=Heading 1 align=JUSTIFY (3) first_indent=459105 ===
+  text: 1.深化市场改革，激发企业活力。把推行职业经理人制度作为持续深化国企市场化改革、激发经理层活力、构建市场化经营机制的重要抓手，在重构传统经营
+   run0  bold=True  sz=18.0  name=Times New Roman '1.'
+   run1  bold=True  sz=18.0  name=仿宋_GB2312      '深化市场改革，激发企业活力。把推行职业经理人制度作为持续深化国企市场化改革、'
+   run2  bold=True  sz=18.0  name=Times New Roman '1'
+   run3  bold=True  sz=18.0  name=仿宋_GB2312      '名。立足酒店行业市场化运营、品牌提质、效益提升发展需求，系统搭建职业经理人管'
+
+=== P15 style=Heading 1 align=JUSTIFY (3) first_indent=459105 ===
+  text: 7.持续深耕会员体系和酒店供应链，筑牢酒店集团核心能力。坚持会员体系与酒店供应链双轮驱动，持续筑强集团核心竞争能力。实现自有会员体系“安逸会
+   run0  bold=True  sz=18.0  name=Times New Roman '7.'
+   run1  bold=True  sz=16.0  name=仿宋_GB2312      '持续深耕会员体系和酒店供应链，筑牢酒店集团核心能力。'
+   run2  bold=False sz=16.0  name=仿宋_GB2312      '坚持会员体系与酒店供应链双轮驱动，持续筑强集团核心竞争能力。实现自有会员体系'
+   run3  bold=False sz=16.0  name=Times New Roman Regular '"'
+   run4  bold=False sz=16.0  name=仿宋_GB2312      '抱团取暖'
+   run5  bold=False sz=16.0  name=Times New Roman Regular '"'
+   run6  bold=False sz=16.0  name=仿宋_GB2312      '，逐步降低对'
+   run7  bold=False sz=16.0  name=Times New Roman Regular 'OTA'
+   run8  bold=False sz=16.0  name=仿宋_GB2312      '渠道的依赖与渠道成本遏制。重点打造'
+   run9  bold=False sz=16.0  name=Times New Roman Regular '"'
+   run10 bold=False sz=16.0  name=仿宋_GB2312      '安逸会'
+   run11 bold=False sz=16.0  name=Times New Roman Regular '"'
+   run12 bold=False sz=16.0  name=仿宋_GB2312      '积分体系，会员总数预计突破200万，同比增长25%。自主可控的会员增长主阵地'
+
+=== P20 style=Heading 1 align=JUSTIFY (3) first_indent=443865 ===
+  text: 一是加强作为酒店集团的能力建设和体系建设。（运管）集团内部要取得共识，安逸集团作为二级酒店集团平台的核心能力就是品牌、会员和集采，要坚定不移
+   run0  bold=True  sz=18.0  name=仿宋_GB2312      '一是加强作为酒店集团的能力建设和体系建设。（运管）'
+   run1  bold=False sz=16.0  name=仿宋_GB2312      '集团内部要取得共识，安逸集团作为二级酒店集团平台的核心能力就是品牌、会员和集'
+
+=== P31 style=Heading 1 align=JUSTIFY (3) first_indent=443865 ===
+  text: 八是轻资产拓展，有能力承接更多划转酒店资产；提升安逸的品牌影响力；加大投资。（运管、资产、产业）
+   run0  bold=True  sz=18.0  name=仿宋_GB2312      '八是轻资产拓展，有能力承接更多划转酒店资产；提升安逸的品牌影响力；加大投资。'

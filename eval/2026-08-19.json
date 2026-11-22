@@ -1,0 +1,109 @@
+{
+  "date": "2026-08-19",
+  "weekday": "周三",
+  "festival": "七夕节",
+  "task": "每日商业情报（20集团版）",
+  "trigger_time": "2026-08-19 19:48 GMT+8",
+  "methodology": "Scan→Discover→Integrate→Compare→Predict→Recommend",
+  "data_sources": {
+    "platforms_covered": 11,
+    "rss_items": 30,
+    "news_total": 255,
+    "news_aggregated": 234,
+    "cross_platform_hits": 12,
+    "deduplication_rate": "8.2%"
+  },
+  "tier1_signals": [
+    {
+      "title": "朱镕基同志遗体在京火化",
+      "platforms": ["bilibili 热搜", "抖音", "微博", "澎湃新闻"],
+      "weight": 179.5,
+      "category": "政治"
+    },
+    {
+      "title": "中国首次实现火箭陆地回收（朱雀三号）",
+      "platforms": ["百度热搜", "bilibili 热搜", "抖音", "今日头条", "微博"],
+      "weight": 257,
+      "category": "硬科技"
+    },
+    {
+      "title": "美股早报：存储/光通信大幅回落 + 宇树科技上市",
+      "platforms": ["财联社热门"],
+      "weight": 73,
+      "category": "金融+硬科技"
+    },
+    {
+      "title": "杭州酒局事件：房企高管刑拘",
+      "platforms": ["澎湃新闻", "今日头条", "百度热搜", "抖音"],
+      "weight": 71.5,
+      "category": "社会/反腐"
+    }
+  ],
+  "key_anomalies": [
+    {
+      "id": "A1",
+      "title": "航天×AI双拐点同日发生",
+      "interpretation": "朱雀三号（蓝箭航天）+ 宇树科技IPO，中国硬科技从政策驱动切换到商业化驱动"
+    },
+    {
+      "id": "A2",
+      "title": "美股AI见顶4重共振",
+      "interpretation": "Gundlach警告+表外负债3万亿+长端利率突破+板块轮动（医药/红利替代）"
+    },
+    {
+      "id": "A3",
+      "title": "USCC报告：建议美国效仿中国数据资产化",
+      "interpretation": "中美科技路线首次官方级互认"
+    },
+    {
+      "id": "A4",
+      "title": "人民币国际化小突破",
+      "interpretation": "香港FPS人民币交易7月达3503亿（6月新高，环比+34%）"
+    }
+  ],
+  "predictions": {
+    "high_confidence": [
+      {"horizon": "T+5d", "event": "商业航天板块短期情绪溢价", "probability": 0.75},
+      {"horizon": "T+10d", "event": "人形机器人板块集体高估回归", "probability": 0.70},
+      {"horizon": "T+14d", "event": "美股AI技术性反弹→二次探底", "probability": 0.75}
+    ],
+    "medium_confidence": [
+      {"horizon": "T+14d", "event": "A股硬科技vs AI应用分化", "probability": 0.60},
+      {"horizon": "T+21d", "event": "公积金新规释放3-4线装修/物业资金", "probability": 0.55},
+      {"horizon": "T+21d", "event": "县域消费政策落地，安逸集团下沉窗口期", "probability": 0.55}
+    ],
+    "low_confidence": [
+      {"horizon": "T+30d", "event": "霍尔木兹海峡美伊军事升级", "probability": 0.30},
+      {"horizon": "T+30d", "event": "韩国OPCON+核潜艇立项落地", "probability": 0.40}
+    ]
+  },
+  "eric_recommendations": {
+    "anyi_internal": [
+      "不主动提航天/AI话题（避免个人业务关联解读）",
+      "饭局零容忍（朱镕基遗体火化+杭州酒局刑拘双重政治氛围）",
+      "借县域消费+60万亿新空间推动下沉酒店布局",
+      "借公积金可提取装修/物业费推动老客翻新计划"
+    ],
+    "personal_business": [
+      "AHL：硬科技IPO估值方法论研究（周三晚）",
+      "AHL：人民币跨境memo（FPS新高窗口期）",
+      "独立酒店指南：下沉市场生存指南内容选题（周末）"
+    ],
+    "quant": [
+      "美股AI：技术性反弹减仓/对冲",
+      "A股：关注自主可控/半导体设备/国产软件",
+      "大宗：原油+农产品风险定价"
+    ],
+    "red_lines": [
+      "不在安逸集团场景提朱雀三号/宇树科技",
+      "不在朋友圈评价朱镕基/杭州酒局事件",
+      "不关联安逸集团与上述事件"
+    ]
+  },
+  "output_files": {
+    "main_report": "/tmp/business-intel-2026-08-19.md",
+    "daily_memory": "memory/2026-08-19.md",
+    "eval_json": "eval/2026-08-19.json",
+    "obsidian_push": "pending"
+  }
+}

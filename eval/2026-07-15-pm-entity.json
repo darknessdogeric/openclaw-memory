@@ -1,0 +1,46 @@
+{
+  "date": "2026-07-15",
+  "time": "21:35 CST",
+  "type": "entity-extractor",
+  "trigger": "cron:0eced1e9-8729-47d8-b8d6-34eff13ed780",
+  "rule": "R60-11 B166ER 沉淀动作",
+  "extraction_summary": {
+    "files_scanned": ["memory/2026-07-15.md"],
+    "new_entities": 6,
+    "new_relations": 1,
+    "cumulative_entities": "≥30",
+    "cumulative_relations": 13
+  },
+  "new_entities": [
+    {"id": "pers_0387", "type": "Person", "name": "Eric", "confidence": 0.95},
+    {"id": "pers_0374", "type": "Person", "name": "B166ER", "confidence": 0.95},
+    {"id": "proj_0673", "type": "Project", "name": "深度自迭代", "confidence": 0.85},
+    {"id": "proj_0469", "type": "Project", "name": "R60规则", "confidence": 0.85},
+    {"id": "even_0195", "type": "Event", "name": "STR数据发布", "confidence": 0.85},
+    {"id": "tool_0793", "type": "Tool", "name": "OpenClaw", "confidence": 0.95}
+  ],
+  "new_relations": [
+    {"from": "tool_B166ER", "relation": "运行", "to": "event_cron任务", "confidence": 0.9}
+  ],
+  "projects_mentioned_today": [
+    {"name": "深度自迭代", "status": "今日提及", "confidence": 0.95}
+  ],
+  "r60_11_actions": {
+    "1_entities_to_graph_jsonl": "✅ 完成",
+    "2_relations_trend_md": "✅ 完成（13 累计关系）",
+    "3_eric_4_projects_dashboard": "✅ 完成（4 项目状态刷新）",
+    "4_eval_write": "✅ 完成（eval/2026-07-15-pm-entity.json）",
+    "5_obsidian_push": "✅ 完成（00-Inbox-待整理\\cron-push\\2026-07-15\\21-37-Entity-Extractor-实体抽取.md）"
+  },
+  "notes": [
+    "今日实体抽取：核心低频高价值（Eric/B166ER/OpenClaw 主体持续维护）",
+    "新项目 R60规则 进入图谱——深度自迭代体系开始被结构化捕获",
+    "STR数据发布=新事件，可能关联7月酒店业市场情报"
+  ],
+  "output_files": [
+    "memory/ontology/graph.jsonl",
+    "memory/ontology/relations-trend.md",
+    "memory/eric-4-projects-dashboard.md",
+    "eval/2026-07-15-pm-entity.json"
+  ]
+}

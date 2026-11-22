@@ -1,0 +1,38 @@
+{
+  "date": "2026-07-22",
+  "task": "Entity Extractor 每日21:30",
+  "source_file": "memory/2026-07-22.md",
+  "new_entities": 18,
+  "new_relations": 0,
+  "entities": [
+    {"type": "Person", "name": "Eric"},
+    {"type": "Person", "name": "B166ER"},
+    {"type": "Company", "name": "安逸酒店集团"},
+    {"type": "Company", "name": "AHL"},
+    {"type": "Company", "name": "亚朵"},
+    {"type": "Project", "name": "AHL"},
+    {"type": "Project", "name": "1244战略"},
+    {"type": "Project", "name": "深度自迭代"},
+    {"type": "Project", "name": "B166ER深度自迭代"},
+    {"type": "Project", "name": "R60规则"},
+    {"type": "Event", "name": "党委会"},
+    {"type": "Event", "name": "入职"},
+    {"type": "Place", "name": "成都"},
+    {"type": "Place", "name": "重庆"},
+    {"type": "Place", "name": "北京"},
+    {"type": "Tool", "name": "DeepSeek"},
+    {"type": "Tool", "name": "Playwright"},
+    {"type": "Tool", "name": "scrape_matrix"}
+  ],
+  "relations": [],
+  "files_updated": [
+    "memory/ontology/graph.jsonl",
+    "memory/ontology/relations-trend.md",
+    "memory/eric-4-projects-dashboard.md"
+  ],
+  "obsidian_push": {
+    "success": true,
+    "file": "obsidian-vault/50-外部接入/cron-outputs/2026-07/21-32-Entity-Extractor-实体抽取.md",
+    "pushed_at": "2026-07-22T21:32:34"
+  }
+}

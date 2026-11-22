@@ -1,0 +1,13 @@
+﻿=== Vault 鏈綋 (D:\obsidian) 椤跺眰 ===
+
+locales  
+log      
+resources
+
+
+
+=== Vault 椤跺眰 .md 鏂囦欢 (鐪嬬湅鏈夋病鏈?README / MOC 鍏ュ彛) ===
+
+=== D 鐩樺叾瀹冧笌鐭ヨ瘑鐩稿叧鐨勭洰褰?===
+D:\my-project                            files=    0  size=0.0MB
+D:\minimax                               files=    0  size=0.0MB

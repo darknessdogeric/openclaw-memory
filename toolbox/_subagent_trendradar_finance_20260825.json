@@ -1,0 +1,351 @@
+{
+  "date": "2026-08-25",
+  "data_date_note": "News DB: 2026-08-24 (last available), RSS DB: 2026-08-25",
+  "keywords": [
+    "原油WTI",
+    "布伦特",
+    "天然气",
+    "美股S&P500",
+    "纳斯达克",
+    "美联储",
+    "利率",
+    "人民币",
+    "A股",
+    "港股"
+  ],
+  "results": [
+    {
+      "ok": true,
+      "name": "news_原油WTI",
+      "data": {
+        "success": true,
+        "results": [],
+        "total": 0,
+        "query": "原油WTI",
+        "search_mode": "keyword",
+        "time_range": "2026-08-24",
+        "message": "未找到匹配的新闻（查询范围: 2026-08-24，可用数据: 2025-12-21 至 2026-08-24）"
+      }
+    },
+    {
+      "ok": true,
+      "name": "news_布伦特",
+      "data": {
+        "success": true,
+        "results": [],
+        "total": 0,
+        "query": "布伦特",
+        "search_mode": "keyword",
+        "time_range": "2026-08-24",
+        "message": "未找到匹配的新闻（查询范围: 2026-08-24，可用数据: 2025-12-21 至 2026-08-24）"
+      }
+    },
+    {
+      "ok": true,
+      "name": "news_天然气",
+      "data": {
+        "success": true,
+        "results": [],
+        "total": 0,
+        "query": "天然气",
+        "search_mode": "keyword",
+        "time_range": "2026-08-24",
+        "message": "未找到匹配的新闻（查询范围: 2026-08-24，可用数据: 2025-12-21 至 2026-08-24）"
+      }
+    },
+    {
+      "ok": true,
+      "name": "news_美股S&P500",
+      "data": {
+        "success": true,
+        "results": [],
+        "total": 0,
+        "query": "美股S&P500",
+        "search_mode": "keyword",
+        "time_range": "2026-08-24",
+        "message": "未找到匹配的新闻（查询范围: 2026-08-24，可用数据: 2025-12-21 至 2026-08-24）"
+      }
+    },
+    {
+      "ok": true,
+      "name": "news_纳斯达克",
+      "data": {
+        "success": true,
+        "results": [],
+        "total": 0,
+        "query": "纳斯达克",
+        "search_mode": "keyword",
+        "time_range": "2026-08-24",
+        "message": "未找到匹配的新闻（查询范围: 2026-08-24，可用数据: 2025-12-21 至 2026-08-24）"
+      }
+    },
+    {
+      "ok": true,
+      "name": "news_美联储",
+      "data": {
+        "success": true,
+        "results": [],
+        "total": 0,
+        "query": "美联储",
+        "search_mode": "keyword",
+        "time_range": "2026-08-24",
+        "message": "未找到匹配的新闻（查询范围: 2026-08-24，可用数据: 2025-12-21 至 2026-08-24）"
+      }
+    },
+    {
+      "ok": true,
+      "name": "news_利率",
+      "data": {
+        "success": true,
+        "results": [],
+        "total": 0,
+        "query": "利率",
+        "search_mode": "keyword",
+        "time_range": "2026-08-24",
+        "message": "未找到匹配的新闻（查询范围: 2026-08-24，可用数据: 2025-12-21 至 2026-08-24）"
+      }
+    },
+    {
+      "ok": true,
+      "name": "news_人民币",
+      "data": {
+        "success": true,
+        "results": [],
+        "total": 0,
+        "query": "人民币",
+        "search_mode": "keyword",
+        "time_range": "2026-08-24",
+        "message": "未找到匹配的新闻（查询范围: 2026-08-24，可用数据: 2025-12-21 至 2026-08-24）"
+      }
+    },
+    {
+      "ok": true,
+      "name": "news_A股",
+      "data": {
+        "success": true,
+        "summary": {
+          "description": "新闻搜索结果（keyword模式）",
+          "total_found": 1,
+          "returned": 1,
+          "requested_limit": 20,
+          "search_mode": "keyword",
+          "query": "A股",
+          "platforms": "所有平台",
+          "time_range": "2026-08-24",
+          "sort_by": "weight"
+        },
+        "data": [
+          {
+            "title": "A股科技板块进入右侧配置窗口？投资主线有哪些？十大券商策略来了",
+            "platform": "cls-hot",
+            "platform_name": "财联社热门",
+            "date": "2026-08-24",
+            "similarity_score": 1.0,
+            "ranks": [
+              2
+            ],
+            "count": 1,
+            "rank": 2
+          }
+        ]
+      }
+    },
+    {
+      "ok": true,
+      "name": "news_港股",
+      "data": {
+        "success": true,
+        "results": [],
+        "total": 0,
+        "query": "港股",
+        "search_mode": "keyword",
+        "time_range": "2026-08-24",
+        "message": "未找到匹配的新闻（查询范围: 2026-08-24，可用数据: 2025-12-21 至 2026-08-24）"
+      }
+    },
+    {
+      "ok": true,
+      "name": "rss_原油WTI",
+      "data": {
+        "success": true,
+        "summary": {
+          "description": "RSS 搜索结果（关键词: 原油WTI）",
+          "total": 0,
+          "returned": 0,
+          "keyword": "原油WTI",
+          "feeds": "全部订阅源",
+          "days": 1
+        },
+        "data": []
+      }
+    },
+    {
+      "ok": true,
+      "name": "rss_布伦特",
+      "data": {
+        "success": true,
+        "summary": {
+          "description": "RSS 搜索结果（关键词: 布伦特）",
+          "total": 0,
+          "returned": 0,
+          "keyword": "布伦特",
+          "feeds": "全部订阅源",
+          "days": 1
+        },
+        "data": []
+      }
+    },
+    {
+      "ok": true,
+      "name": "rss_天然气",
+      "data": {
+        "success": true,
+        "summary": {
+          "description": "RSS 搜索结果（关键词: 天然气）",
+          "total": 0,
+          "returned": 0,
+          "keyword": "天然气",
+          "feeds": "全部订阅源",
+          "days": 1
+        },
+        "data": []
+      }
+    },
+    {
+      "ok": true,
+      "name": "rss_美股S&P500",
+      "data": {
+        "success": true,
+        "summary": {
+          "description": "RSS 搜索结果（关键词: 美股S&P500）",
+          "total": 0,
+          "returned": 0,
+          "keyword": "美股S&P500",
+          "feeds": "全部订阅源",
+          "days": 1
+        },
+        "data": []
+      }
+    },
+    {
+      "ok": true,
+      "name": "rss_纳斯达克",
+      "data": {
+        "success": true,
+        "summary": {
+          "description": "RSS 搜索结果（关键词: 纳斯达克）",
+          "total": 0,
+          "returned": 0,
+          "keyword": "纳斯达克",
+          "feeds": "全部订阅源",
+          "days": 1
+        },
+        "data": []
+      }
+    },
+    {
+      "ok": true,
+      "name": "rss_美联储",
+      "data": {
+        "success": true,
+        "summary": {
+          "description": "RSS 搜索结果（关键词: 美联储）",
+          "total": 0,
+          "returned": 0,
+          "keyword": "美联储",
+          "feeds": "全部订阅源",
+          "days": 1
+        },
+        "data": []
+      }
+    },
+    {
+      "ok": true,
+      "name": "rss_利率",
+      "data": {
+        "success": true,
+        "summary": {
+          "description": "RSS 搜索结果（关键词: 利率）",
+          "total": 0,
+          "returned": 0,
+          "keyword": "利率",
+          "feeds": "全部订阅源",
+          "days": 1
+        },
+        "data": []
+      }
+    },
+    {
+      "ok": true,
+      "name": "rss_人民币",
+      "data": {
+        "success": true,
+        "summary": {
+          "description": "RSS 搜索结果（关键词: 人民币）",
+          "total": 0,
+          "returned": 0,
+          "keyword": "人民币",
+          "feeds": "全部订阅源",
+          "days": 1
+        },
+        "data": []
+      }
+    },
+    {
+      "ok": true,
+      "name": "rss_A股",
+      "data": {
+        "success": true,
+        "summary": {
+          "description": "RSS 搜索结果（关键词: A股）",
+          "total": 0,
+          "returned": 0,
+          "keyword": "A股",
+          "feeds": "全部订阅源",
+          "days": 1
+        },
+        "data": []
+      }
+    },
+    {
+      "ok": true,
+      "name": "rss_港股",
+      "data": {
+        "success": true,
+        "summary": {
+          "description": "RSS 搜索结果（关键词: 港股）",
+          "total": 0,
+          "returned": 0,
+          "keyword": "港股",
+          "feeds": "全部订阅源",
+          "days": 1
+        },
+        "data": []
+      }
+    },
+    {
+      "ok": true,
+      "name": "trending",
+      "data": {
+        "success": false,
+        "error": {
+          "code": "DATA_NOT_FOUND",
+          "message": "未找到 2026-08-25 的 news 数据",
+          "suggestion": "请先运行爬虫或检查日期是否正确"
+        }
+      }
+    },
+    {
+      "ok": true,
+      "name": "latest_news",
+      "data": {
+        "success": false,
+        "error": {
+          "code": "DATA_NOT_FOUND",
+          "message": "未找到 2026-08-25 的 news 数据",
+          "suggestion": "请先运行爬虫或检查日期是否正确"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+段落数=55 表格数=0
+
+P31  [Heading 1] first=443865
+   bold=True  sz=18.0  仿宋_GB2312      '八是轻资产拓展，有能力承接更多划转酒店资产；提升安逸的品牌影响力；加大投资。（运管、资产、产业）'
+
+P32  [Heading 1] first=443865
+   bold=False sz=16.0  仿宋_GB2312      '2027年，'
+   bold=False sz=16.0  仿宋_GB2312      '集团'
+   bold=False sz=16.0  仿宋_GB2312      '将围绕品牌赋能与产业增量孵化，推动前期已形成的框架协议、资源通道和策划成果转化为落地项目。'
+
+P33  [Heading 1] first=443865
+   bold=True  sz=18.0  Times New Roman '1.'
+   bold=True  sz=16.0  仿宋_GB2312      '完善品牌标准与轻资产授权体系。'
+   bold=False sz=16.0  仿宋_GB2312      '统一品牌定位、视觉识别、产品服务配置与筹建改造要求，配套投资模型和软'
+   bold=False sz=16.0  仿宋_GB2312      '品牌'
+   bold=False sz=16.0  仿宋_GB2312      '、'
+   bold=False sz=16.0  仿宋_GB2312      '品牌'
+   bold=False sz=16.0  仿宋_GB2312      '加盟、管理合同三类授权文本及合作方准入评审机制，形成可交付、可复制的轻资产输出工具，为承接划转酒店、拓展品牌授权'
+
+P34  [Heading 1] first=443865
+   bold=True  sz=18.0  Times New Roman '2.'
+   bold=True  sz=16.0  仿宋_GB2312      '做强安逸新零售，形成第二增长曲线。'
+   bold=False sz=16.0  仿宋_GB2312      '由蒙顶山茶业公司承接二销业务，商投集团作为主要货源供应链，'
+   bold=False sz=16.0  仿宋_GB2312      '并'
+   bold=False sz=16.0  仿宋_GB2312      '完成'
+   bold=False sz=16.0  仿宋_GB2312      '双方线下场景'
+   bold=False sz=16.0  仿宋_GB2312      '点位互换。2027年计划拓展线下点位10'
+   bold=False sz=16.0  仿宋_GB2312      '0'
+   bold=False sz=16.0  仿宋_GB2312      '个以上、首期上架产品50个以上、接入运营商3家以上，建成私域商城'
+   bold=False sz=16.0  仿宋_GB2312      '平台'
+   bold=False sz=16.0  仿宋_GB2312      '并单开外贸体系，落地销售数据周报；同步推动集团战略合作框架协议签订，拓展航司'
+   bold=False sz=16.0  仿宋_GB2312      '，'
+   bold=False sz=16.0  仿宋_GB2312      '邮轮'
+   bold=False sz=16.0  仿宋_GB2312      '等外部渠道商品合作。'
+
+P35  [Heading 1] first=443865
+   bold=True  sz=18.0  Times New Roman '3.'
+   bold=True  sz=16.0  仿宋_GB2312      '以数字化提升产业运营效能。'
+   bold=False sz=16.0  仿宋_GB2312      '推进AI与数据中台建设，形成业务智能体、客户需求洞察、'
+   bold=False sz=16.0  仿宋_GB2312      '产业资源衔接'
+   bold=False sz=16.0  仿宋_GB2312      '三类应用，与集团数字化中台二期建设衔接，深化数据治理和业务链路贯通，推动人工智能在收益管理、需求预测、新零售运营'
+
+P36  [Heading 1] first=443865
+   bold=True  sz=18.0  Times New Roman '4.'
+   bold=True  sz=16.0  仿宋_GB2312      '推进存量改造策划与增量项目转化。'
+   bold=True  sz=16.0  仿宋_GB2312      '优化'
+   bold=False sz=16.0  仿宋_GB2312      '存量酒店改造的定位研判、改造标准制定与品牌落地跟踪，向投资资产条线提供品牌定位、溢价空间、目标客群等策划参数；推'
+   bold=False sz=16.0  仿宋_GB2312      '运营'
+   bold=False sz=16.0  仿宋_GB2312      '，深化与'
+   bold=False sz=16.0  仿宋_GB2312      '丽呈集团，'
+   bold=False sz=16.0  仿宋_GB2312      '悦榕集团、'
+   bold=False sz=16.0  仿宋_GB2312      '东部集团、中国旅游集团、'
+   bold=False sz=16.0  仿宋_GB2312      '西藏航空等外部品牌'
+   bold=False sz=16.0  仿宋_GB2312      '和机构'
+   bold=False sz=16.0  仿宋_GB2312      '的联合联合开发'
+   bold=False sz=16.0  仿宋_GB2312      '与'
+   bold=False sz=16.0  仿宋_GB2312      '合作'
+   bold=False sz=16.0  仿宋_GB2312      '。'
+   bold=False sz=16.0  仿宋_GB2312      '并逐步'
+   bold=False sz=16.0  仿宋_GB2312      '探索轻重分离下的高端度假品牌输出路径。'
+
+P37  [Heading 1] first=443865
+   bold=True  sz=18.0  Times New Roman '5.'
+   bold=True  sz=16.0  仿宋_GB2312      '深化平台渠道合作，提升集团渠道赋能与直销质效。'
+   bold=False sz=16.0  仿宋_GB2312      '集团已与小红书、抖音、美团等平台建立合作基础：抖音集团账号后台授权已完成，可获取委托管理项目与执行项目全量抖音数'
+
+P38  [Heading 1] first=459105
+   bold=True  sz=18.0  黑体             '三、工作建议'
+
+=== 完整性抽查 ===
+  一、2026年度任务完成情况           -> [3]
+  二、2027年度工作举措             -> [18]
+  三是大运管中心建设                -> [22]
+  八是轻资产拓展                  -> [31]
+  1.完善品牌标准                 -> [33]
+  4.推进存量改造策划               -> [36]
+  5.深化平台渠道合作               -> [37]
+  三、工作建议                   -> [38]
+  附件：1.                    -> [47]

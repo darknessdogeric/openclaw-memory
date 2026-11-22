@@ -1,0 +1,27 @@
+{
+  "date": "2026-08-09",
+  "generated": "2026-08-09T21:30:00",
+  "source": "Entity Extractor cron 21:30",
+  "entities_extracted": 14,
+  "relations_extracted": 0,
+  "entity_list": [
+    {"type": "Person", "name": "Eric", "new": true},
+    {"type": "Person", "name": "B166ER", "new": true},
+    {"type": "Company", "name": "安逸酒店集团", "new": true},
+    {"type": "Company", "name": "AHL", "new": true},
+    {"type": "Project", "name": "AHL", "new": true},
+    {"type": "Project", "name": "1244战略", "new": true},
+    {"type": "Project", "name": "医养酒店", "new": true},
+    {"type": "Project", "name": "深度自迭代", "new": true},
+    {"type": "Project", "name": "R66监控", "new": true},
+    {"type": "Event", "name": "党委会", "new": true},
+    {"type": "Event", "name": "入职", "new": true},
+    {"type": "Tool", "name": "OpenClaw", "new": true},
+    {"type": "Tool", "name": "Playwright", "new": true},
+    {"type": "Tool", "name": "scrape_matrix", "new": true}
+  ],
+  "graph_updated": true,
+  "relations_trend_updated": true,
+  "dashboard_updated": true,
+  "notes": "14个实体已入graph.jsonl，relations-trend.md已更新，dashboard已更新"
+}

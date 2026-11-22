@@ -1,0 +1,467 @@
+{
+  "meta": {
+    "scan_time": "2026-07-28T21:11:07",
+    "scan_date": "2026-07-28",
+    "tool_count": 6,
+    "parallel": true,
+    "latency_ms": {
+      "get_trending_topics": 197.1,
+      "analyze_sentiment_hotel": 195.1,
+      "analyze_sentiment_ai": 306.6,
+      "analyze_topic_trend_reits": 310.0,
+      "analyze_topic_trend_oil": 239.3,
+      "get_latest_news": 91.2
+    },
+    "data_source": "TrendRadar MCP v6.10.0 (FastMCP 2.12.5)"
+  },
+  "top_events": [
+    {
+      "rank": 1,
+      "keyword": "AI",
+      "frequency": 7,
+      "matched_news": 7,
+      "trend": "stable",
+      "weight_score": 0.0
+    },
+    {
+      "rank": 2,
+      "keyword": "BLG",
+      "frequency": 6,
+      "matched_news": 5,
+      "trend": "stable",
+      "weight_score": 0.0
+    },
+    {
+      "rank": 3,
+      "keyword": "Bin",
+      "frequency": 3,
+      "matched_news": 3,
+      "trend": "stable",
+      "weight_score": 0.0
+    },
+    {
+      "rank": 4,
+      "keyword": "苹果重返市值第一",
+      "frequency": 2,
+      "matched_news": 2,
+      "trend": "stable",
+      "weight_score": 0.0
+    },
+    {
+      "rank": 5,
+      "keyword": "网红景区",
+      "frequency": 2,
+      "matched_news": 2,
+      "trend": "stable",
+      "weight_score": 0.0
+    },
+    {
+      "rank": 6,
+      "keyword": "人遇难",
+      "frequency": 2,
+      "matched_news": 2,
+      "trend": "stable",
+      "weight_score": 0.0
+    },
+    {
+      "rank": 7,
+      "keyword": "父子景区划桨板遇台风落水爸爸去世",
+      "frequency": 2,
+      "matched_news": 1,
+      "trend": "stable",
+      "weight_score": 0.0
+    },
+    {
+      "rank": 8,
+      "keyword": "nm",
+      "frequency": 2,
+      "matched_news": 1,
+      "trend": "stable",
+      "weight_score": 0.0
+    },
+    {
+      "rank": 9,
+      "keyword": "岁女孩从",
+      "frequency": 2,
+      "matched_news": 2,
+      "trend": "stable",
+      "weight_score": 0.0
+    },
+    {
+      "rank": 10,
+      "keyword": "DRAM",
+      "frequency": 2,
+      "matched_news": 2,
+      "trend": "stable",
+      "weight_score": 0.0
+    },
+    {
+      "rank": 11,
+      "keyword": "日本作家东野圭吾去世",
+      "frequency": 2,
+      "matched_news": 2,
+      "trend": "stable",
+      "weight_score": 0.0
+    },
+    {
+      "rank": 12,
+      "keyword": "央媒调查",
+      "frequency": 2,
+      "matched_news": 2,
+      "trend": "stable",
+      "weight_score": 0.0
+    },
+    {
+      "rank": 13,
+      "keyword": "股市值最高公司",
+      "frequency": 2,
+      "matched_news": 2,
+      "trend": "stable",
+      "weight_score": 0.0
+    },
+    {
+      "rank": 14,
+      "keyword": "UP",
+      "frequency": 2,
+      "matched_news": 2,
+      "trend": "stable",
+      "weight_score": 0.0
+    },
+    {
+      "rank": 15,
+      "keyword": "复盘",
+      "frequency": 2,
+      "matched_news": 2,
+      "trend": "stable",
+      "weight_score": 0.0
+    }
+  ],
+  "hotel_sentiment": {
+    "success": false,
+    "error": {
+      "code": "DATA_NOT_FOUND",
+      "message": "未找到相关新闻（今天）",
+      "suggestion": "请尝试其他话题、日期范围或平台"
+    },
+    "note": "今日(2026-07-28) TrendRadar 监控源中未出现「酒店」关键词相关新闻"
+  },
+  "ai_sentiment": {
+    "success": true,
+    "topic": "AI",
+    "time_range": "2026-07-28",
+    "total_found": 8,
+    "platforms": [
+      "华尔街见闻",
+      "澎湃新闻",
+      "贴吧",
+      "bilibili 热搜",
+      "微博",
+      "今日头条"
+    ],
+    "sorted_by_weight": true,
+    "news": [
+      {
+        "platform": "华尔街见闻",
+        "title": "AI忧虑盖过油价下跌，纳指承压，半导体指数一度跌超5%，中概股逆市收涨",
+        "ranks": [
+          1
+        ],
+        "count": 1,
+        "date": "2026-07-28"
+      },
+      {
+        "platform": "微博",
+        "title": "各个行业被AI取代的概率",
+        "ranks": [
+          8
+        ],
+        "count": 1,
+        "date": "2026-07-28"
+      },
+      {
+        "platform": "bilibili 热搜",
+        "title": "全球AI竞争将如何发展",
+        "ranks": [
+          29
+        ],
+        "count": 1,
+        "date": "2026-07-28"
+      },
+      {
+        "platform": "澎湃新闻",
+        "title": "全网厌恶AI脸，但这个被裁掉的女孩绕过了“恐怖谷”",
+        "ranks": [
+          17
+        ],
+        "count": 1,
+        "date": "2026-07-28"
+      },
+      {
+        "platform": "贴吧",
+        "title": "OpenAI失控入侵,遭索赔1亿算力",
+        "ranks": [
+          15
+        ],
+        "count": 1,
+        "date": "2026-07-28"
+      },
+      {
+        "platform": "贴吧",
+        "title": "侵权零成本!电竞选手遭AI换脸",
+        "ranks": [
+          20
+        ],
+        "count": 1,
+        "date": "2026-07-28"
+      },
+      {
+        "platform": "今日头条",
+        "title": "佛得角门将签约泪洒现场？图是AI的",
+        "ranks": [
+          11
+        ],
+        "count": 1,
+        "date": "2026-07-28"
+      },
+      {
+        "platform": "微博",
+        "title": "电视开始播放AI剧集了",
+        "ranks": [
+          29
+        ],
+        "count": 1,
+        "date": "2026-07-28"
+      }
+    ],
+    "method": "ai_prompt_generation",
+    "usage_note": "请将 ai_prompt 字段的内容发送给 AI 进行情感分析",
+    "ai_prompt_preview": "请分析以下关于「AI」的新闻标题的情感倾向。\n\n分析要求：\n1. 识别每条新闻的情感倾向（正面/负面/中性）\n2. 统计各情感类别的数量和百分比\n3. 分析不同平台的情感差异\n4. 总结整体情感趋势\n5. 列举典型的正面和负面新闻样本\n\n数据概览：\n- 总新闻数：8\n- 覆盖平台：6\n- 时间范围：2026-07-28\n\n新闻列表（按平台分类，已按重要性排序）：\n\n【bilibili 热搜】(1 ..."
+  },
+  "reits_trend": {
+    "success": true,
+    "topic": "酒店REITs",
+    "date_range": {
+      "start": "2026-07-25",
+      "end": "2026-07-28",
+      "total_days": 4
+    },
+    "granularity": "day",
+    "total_mentions": 0,
+    "average_mentions": 0.0,
+    "peak_count": 0,
+    "peak_time": "2026-07-25",
+    "change_rate": 0,
+    "trend_direction": "稳定",
+    "daily_series": [
+      {
+        "date": "2026-07-25",
+        "count": 0,
+        "sample_titles": []
+      },
+      {
+        "date": "2026-07-26",
+        "count": 0,
+        "sample_titles": []
+      },
+      {
+        "date": "2026-07-27",
+        "count": 0,
+        "sample_titles": []
+      },
+      {
+        "date": "2026-07-28",
+        "count": 0,
+        "sample_titles": []
+      }
+    ],
+    "note": "酒店REITs 关键词在监控源4天内均无命中，关注度极低"
+  },
+  "oil_trend": {
+    "success": true,
+    "topic": "油价",
+    "date_range": {
+      "start": "2026-07-25",
+      "end": "2026-07-28",
+      "total_days": 4
+    },
+    "granularity": "day",
+    "total_mentions": 5,
+    "average_mentions": 1.25,
+    "peak_count": 2,
+    "peak_time": "2026-07-27",
+    "change_rate": 100.0,
+    "trend_direction": "上升",
+    "daily_series": [
+      {
+        "date": "2026-07-25",
+        "count": 1,
+        "sample_titles": [
+          "【早报】美股芯片股重挫；油价跳水、黄金微涨；视网膜芯片获准在欧上市；宁德时代抛出A股史上最大规模回购方案"
+        ]
+      },
+      {
+        "date": "2026-07-26",
+        "count": 0,
+        "sample_titles": []
+      },
+      {
+        "date": "2026-07-27",
+        "count": 2,
+        "sample_titles": [
+          "【早报】长鑫科技，今日上市；美暂停打击伊朗；油价大跌、黄金反弹；宁德时代启动A股史上最大规模回购",
+          "霍尔木兹风险再度升级 油价重返100美元 海湾国家加速重构原油出口网络"
+        ]
+      },
+      {
+        "date": "2026-07-28",
+        "count": 2,
+        "sample_titles": [
+          "AI忧虑盖过油价下跌，纳指承压，半导体指数一度跌超5%，中概股逆市收涨",
+          "美伊暂停交火提振市场情绪 美股期指上涨 油价大幅回落 | 今夜看点"
+        ]
+      }
+    ]
+  },
+  "latest_news": [
+    {
+      "title": "网红景区10人遇难 三次预警为何失效",
+      "platform_id": "baidu",
+      "platform_name": "百度热搜",
+      "rank": 1,
+      "timestamp": "2026-07-28 08:33:52"
+    },
+    {
+      "title": "如何看长鑫市值超英特尔",
+      "platform_id": "bilibili-hot-search",
+      "platform_name": "bilibili 热搜",
+      "rank": 1,
+      "timestamp": "2026-07-28 08:33:52"
+    },
+    {
+      "title": "美宣称拟对中国人工智能企业开展调查并实施制裁，中方回应",
+      "platform_id": "cls-hot",
+      "platform_name": "财联社热门",
+      "rank": 1,
+      "timestamp": "2026-07-28 08:33:52"
+    },
+    {
+      "title": "合肥国资持股长鑫市值超1万亿",
+      "platform_id": "douyin",
+      "platform_name": "抖音",
+      "rank": 1,
+      "timestamp": "2026-07-28 08:33:52"
+    },
+    {
+      "title": "高市早苗黑历史，再被曝光",
+      "platform_id": "ifeng",
+      "platform_name": "凤凰网",
+      "rank": 1,
+      "timestamp": "2026-07-28 08:33:52"
+    },
+    {
+      "title": "日本作家东野圭吾去世，终年68岁",
+      "platform_id": "thepaper",
+      "platform_name": "澎湃新闻",
+      "rank": 1,
+      "timestamp": "2026-07-28 08:33:52"
+    },
+    {
+      "title": "真逗,DeepSeek说要去吃饭",
+      "platform_id": "tieba",
+      "platform_name": "贴吧",
+      "rank": 1,
+      "timestamp": "2026-07-28 08:33:52"
+    },
+    {
+      "title": "美股迎芯片风暴 苹果重返市值第一",
+      "platform_id": "toutiao",
+      "platform_name": "今日头条",
+      "rank": 1,
+      "timestamp": "2026-07-28 08:33:52"
+    },
+    {
+      "title": "AI忧虑盖过油价下跌，纳指承压，半导体指数一度跌超5%，中概股逆市收涨",
+      "platform_id": "wallstreetcn-hot",
+      "platform_name": "华尔街见闻",
+      "rank": 1,
+      "timestamp": "2026-07-28 08:33:52"
+    },
+    {
+      "title": "美股",
+      "platform_id": "weibo",
+      "platform_name": "微博",
+      "rank": 1,
+      "timestamp": "2026-07-28 08:33:52"
+    },
+    {
+      "title": "美国校园午餐被曝牛奶黏稠似史莱姆、胡萝卜可被磁铁吸起，可能有什么「科技狠活」？对健康有伤害吗？",
+      "platform_id": "zhihu",
+      "platform_name": "知乎",
+      "rank": 1,
+      "timestamp": "2026-07-28 08:33:52"
+    },
+    {
+      "title": "美股芯片股“血流成河”",
+      "platform_id": "baidu",
+      "platform_name": "百度热搜",
+      "rank": 2,
+      "timestamp": "2026-07-28 08:33:52"
+    },
+    {
+      "title": "台风白海豚将成超强台风",
+      "platform_id": "bilibili-hot-search",
+      "platform_name": "bilibili 热搜",
+      "rank": 2,
+      "timestamp": "2026-07-28 08:33:52"
+    },
+    {
+      "title": "又一波增持回购潮，近20家公司集中宣布！工业富联拟最高回购20亿",
+      "platform_id": "cls-hot",
+      "platform_name": "财联社热门",
+      "rank": 2,
+      "timestamp": "2026-07-28 08:33:52"
+    },
+    {
+      "title": "“红霞”停止编号",
+      "platform_id": "douyin",
+      "platform_name": "抖音",
+      "rank": 2,
+      "timestamp": "2026-07-28 08:33:52"
+    },
+    {
+      "title": "承认莫迪只说“妹妹”没说“美丽”，高市：我好失望",
+      "platform_id": "ifeng",
+      "platform_name": "凤凰网",
+      "rank": 2,
+      "timestamp": "2026-07-28 08:33:52"
+    },
+    {
+      "title": "芯片巨舰长鑫科技上市：一个人，一座城，与一个国家的存储产业十年",
+      "platform_id": "thepaper",
+      "platform_name": "澎湃新闻",
+      "rank": 2,
+      "timestamp": "2026-07-28 08:33:52"
+    },
+    {
+      "title": "国Gal坠机,全因主创未成年",
+      "platform_id": "tieba",
+      "platform_name": "贴吧",
+      "rank": 2,
+      "timestamp": "2026-07-28 08:33:52"
+    },
+    {
+      "title": "网红景区10人遇难 3次预警为何失效",
+      "platform_id": "toutiao",
+      "platform_name": "今日头条",
+      "rank": 2,
+      "timestamp": "2026-07-28 08:33:52"
+    },
+    {
+      "title": "长鑫上市前，高盛紧急召开电话会：中国DRAM产能有望翻倍",
+      "platform_id": "wallstreetcn-hot",
+      "platform_name": "华尔街见闻",
+      "rank": 2,
+      "timestamp": "2026-07-28 08:33:52"
+    }
+  ]
+}

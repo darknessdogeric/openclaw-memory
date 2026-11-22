@@ -1,0 +1,213 @@
+max_row=35 max_col=7
+
+=== 每行填充色（列A序号 / 列B重点工作 / 各列fill） ===
+[R1] no='近期重点工作进展 投资+资管+产发' name=None
+      C1:None|rgb=00000000 theme=None indexed=None
+      C2:None|rgb=00000000 theme=None indexed=None
+      C3:None|rgb=00000000 theme=None indexed=None
+      C4:None|rgb=00000000 theme=None indexed=None
+      C5:None|rgb=00000000 theme=None indexed=None
+[R2] no=None name=None
+      C1:None|rgb=00000000 theme=None indexed=None
+      C2:None|rgb=00000000 theme=None indexed=None
+      C3:None|rgb=00000000 theme=None indexed=None
+      C4:None|rgb=00000000 theme=None indexed=None
+      C5:None|rgb=00000000 theme=None indexed=None
+[R3] no='序号' name='重点工作'
+      C1:None|rgb=00000000 theme=None indexed=None
+      C2:None|rgb=00000000 theme=None indexed=None
+      C3:None|rgb=00000000 theme=None indexed=None
+      C4:None|rgb=00000000 theme=None indexed=None
+      C5:None|rgb=00000000 theme=None indexed=None
+[R4] no=1 name='古尔沟对外租赁'
+      C1:None|rgb=00000000 theme=None indexed=None
+      C2:None|rgb=00000000 theme=None indexed=None
+      C3:solid|rgb=None theme=5 indexed=None
+      C4:solid|rgb=None theme=5 indexed=None
+      C5:None|rgb=00000000 theme=None indexed=None
+[R5] no=2 name='6个酒店改造'
+      C1:None|rgb=00000000 theme=None indexed=None
+      C2:None|rgb=00000000 theme=None indexed=None
+      C3:None|rgb=00000000 theme=None indexed=None
+      C4:None|rgb=00000000 theme=None indexed=None
+      C5:None|rgb=00000000 theme=None indexed=None
+[R6] no=3 name='小川宾改造投资'
+      C1:None|rgb=00000000 theme=None indexed=None
+      C2:None|rgb=00000000 theme=None indexed=None
+      C3:None|rgb=00000000 theme=None indexed=None
+      C4:None|rgb=00000000 theme=None indexed=None
+      C5:None|rgb=00000000 theme=None indexed=None
+[R7] no=4 name='安逸连锁门店转租'
+      C1:None|rgb=00000000 theme=None indexed=None
+      C2:solid|rgb=None theme=6 indexed=None
+      C3:solid|rgb=None theme=5 indexed=None
+      C4:solid|rgb=None theme=5 indexed=None
+      C5:solid|rgb=None theme=6 indexed=None
+[R8] no=5 name='向锦江宾馆增资'
+      C1:None|rgb=00000000 theme=None indexed=None
+      C2:None|rgb=00000000 theme=None indexed=None
+      C3:None|rgb=00000000 theme=None indexed=None
+      C4:None|rgb=00000000 theme=None indexed=None
+      C5:None|rgb=00000000 theme=None indexed=None
+[R9] no=6 name='重庆文旅集团合作'
+      C1:None|rgb=00000000 theme=None indexed=None
+      C2:None|rgb=00000000 theme=None indexed=None
+      C3:None|rgb=00000000 theme=None indexed=None
+      C4:None|rgb=00000000 theme=None indexed=None
+      C5:None|rgb=00000000 theme=None indexed=None
+[R10] no=7 name='安逸的小股东的股权调整'
+      C1:solid|rgb=None theme=6 indexed=None
+      C2:solid|rgb=None theme=6 indexed=None
+      C3:solid|rgb=None theme=5 indexed=None
+      C4:solid|rgb=None theme=5 indexed=None
+      C5:solid|rgb=None theme=6 indexed=None
+[R11] no=8 name='大理拓展项目合作'
+      C1:None|rgb=00000000 theme=None indexed=None
+      C2:None|rgb=00000000 theme=None indexed=None
+      C3:None|rgb=00000000 theme=None indexed=None
+      C4:None|rgb=00000000 theme=None indexed=None
+      C5:None|rgb=00000000 theme=None indexed=None
+[R12] no=9 name='上海锦江合资公司'
+      C1:None|rgb=00000000 theme=None indexed=None
+      C2:None|rgb=00000000 theme=None indexed=None
+      C3:None|rgb=00000000 theme=None indexed=None
+      C4:None|rgb=00000000 theme=None indexed=None
+      C5:None|rgb=00000000 theme=None indexed=None
+[R13] no=10 name='安逸礼物(暂定名)合作项目工作'
+      C1:solid|rgb=FFFFFF00 theme=None indexed=None
+      C2:solid|rgb=FFFFFF00 theme=None indexed=None
+      C3:solid|rgb=FFFFFF00 theme=None indexed=None
+      C4:solid|rgb=FFFFFF00 theme=None indexed=None
+      C5:solid|rgb=FFFFFF00 theme=None indexed=None
+[R14] no=11 name='天府山庄资产处置'
+      C1:None|rgb=00000000 theme=None indexed=None
+      C2:None|rgb=00000000 theme=None indexed=None
+      C3:solid|rgb=None theme=5 indexed=None
+      C4:solid|rgb=None theme=5 indexed=None
+      C5:None|rgb=00000000 theme=None indexed=None
+[R15] no=12 name='梦温泉资产处置'
+      C1:None|rgb=00000000 theme=None indexed=None
+      C2:None|rgb=00000000 theme=None indexed=None
+      C3:solid|rgb=None theme=5 indexed=None
+      C4:solid|rgb=None theme=5 indexed=None
+      C5:None|rgb=00000000 theme=None indexed=None
+[R16] no=13 name='亚丁宾馆'
+      C1:None|rgb=00000000 theme=None indexed=None
+      C2:None|rgb=00000000 theme=None indexed=None
+      C3:solid|rgb=None theme=5 indexed=None
+      C4:solid|rgb=None theme=5 indexed=None
+      C5:None|rgb=00000000 theme=None indexed=None
+[R17] no=14 name='百丈湖'
+      C1:None|rgb=00000000 theme=None indexed=None
+      C2:None|rgb=00000000 theme=None indexed=None
+      C3:solid|rgb=None theme=5 indexed=None
+      C4:solid|rgb=None theme=5 indexed=None
+      C5:None|rgb=00000000 theme=None indexed=None
+[R18] no=15 name='惠州市淡水镇闲置住宅土地'
+      C1:None|rgb=00000000 theme=None indexed=None
+      C2:None|rgb=00000000 theme=None indexed=None
+      C3:solid|rgb=None theme=5 indexed=None
+      C4:solid|rgb=None theme=5 indexed=None
+      C5:None|rgb=00000000 theme=None indexed=None
+[R19] no=16 name='十五五规划'
+      C1:None|rgb=00000000 theme=None indexed=None
+      C2:None|rgb=00000000 theme=None indexed=None
+      C3:None|rgb=00000000 theme=None indexed=None
+      C4:None|rgb=00000000 theme=None indexed=None
+      C5:None|rgb=00000000 theme=None indexed=None
+[R20] no=17 name='两资企业清单'
+      C1:None|rgb=00000000 theme=None indexed=None
+      C2:None|rgb=00000000 theme=None indexed=None
+      C3:solid|rgb=None theme=5 indexed=None
+      C4:solid|rgb=None theme=5 indexed=None
+      C5:None|rgb=00000000 theme=None indexed=None
+[R21] no=18 name='亏损控股子公司的关停'
+      C1:None|rgb=00000000 theme=None indexed=None
+      C2:None|rgb=00000000 theme=None indexed=None
+      C3:solid|rgb=None theme=5 indexed=None
+      C4:solid|rgb=None theme=5 indexed=None
+      C5:None|rgb=00000000 theme=None indexed=None
+[R22] no=19 name='参股企业管理'
+      C1:None|rgb=00000000 theme=None indexed=None
+      C2:None|rgb=00000000 theme=None indexed=None
+      C3:solid|rgb=None theme=5 indexed=None
+      C4:solid|rgb=None theme=5 indexed=None
+      C5:None|rgb=00000000 theme=None indexed=None
+[R23] no=20 name='成立安逸资产处置专班'
+      C1:None|rgb=00000000 theme=None indexed=None
+      C2:None|rgb=00000000 theme=None indexed=None
+      C3:None|rgb=00000000 theme=None indexed=None
+      C4:None|rgb=00000000 theme=None indexed=None
+      C5:None|rgb=00000000 theme=None indexed=None
+[R24] no=21 name='对接集团科创部各项事务'
+      C1:solid|rgb=FFFFFF00 theme=None indexed=None
+      C2:solid|rgb=FFFFFF00 theme=None indexed=None
+      C3:solid|rgb=FFFFFF00 theme=None indexed=None
+      C4:solid|rgb=FFFFFF00 theme=None indexed=None
+      C5:solid|rgb=FFFFFF00 theme=None indexed=None
+[R25] no=22 name='对接集团产发部各项事务'
+      C1:solid|rgb=FFFFFF00 theme=None indexed=None
+      C2:solid|rgb=FFFFFF00 theme=None indexed=None
+      C3:solid|rgb=FFFFFF00 theme=None indexed=None
+      C4:solid|rgb=FFFFFF00 theme=None indexed=None
+      C5:solid|rgb=FFFFFF00 theme=None indexed=None
+[R26] no=23 name='集团持有的7家公司股权划转（梦温泉、茶业公司、广州2家、天府山庄、三'
+      C1:None|rgb=00000000 theme=None indexed=None
+      C2:None|rgb=00000000 theme=None indexed=None
+      C3:None|rgb=00000000 theme=None indexed=None
+      C4:None|rgb=00000000 theme=None indexed=None
+      C5:None|rgb=00000000 theme=None indexed=None
+[R27] no=24 name='国堰宾馆主题文化酒店改造项目'
+      C1:solid|rgb=FFFFFF00 theme=None indexed=None
+      C2:solid|rgb=FFFFFF00 theme=None indexed=None
+      C3:solid|rgb=FFFFFF00 theme=None indexed=None
+      C4:solid|rgb=FFFFFF00 theme=None indexed=None
+      C5:solid|rgb=FFFFFF00 theme=None indexed=None
+[R28] no=25 name='旅游列车项目'
+      C1:solid|rgb=FFFFFF00 theme=None indexed=None
+      C2:solid|rgb=FFFFFF00 theme=None indexed=None
+      C3:solid|rgb=FFFFFF00 theme=None indexed=None
+      C4:solid|rgb=FFFFFF00 theme=None indexed=None
+      C5:solid|rgb=FFFFFF00 theme=None indexed=None
+[R29] no=26 name='总府皇冠改造方案'
+      C1:solid|rgb=FFFFFF00 theme=None indexed=None
+      C2:solid|rgb=FFFFFF00 theme=None indexed=None
+      C3:solid|rgb=FFFFFF00 theme=None indexed=None
+      C4:solid|rgb=FFFFFF00 theme=None indexed=None
+      C5:solid|rgb=FFFFFF00 theme=None indexed=None
+[R30] no=27 name='其他跟进项目'
+      C1:solid|rgb=FFFFFF00 theme=None indexed=None
+      C2:solid|rgb=FFFFFF00 theme=None indexed=None
+      C3:solid|rgb=FFFFFF00 theme=None indexed=None
+      C4:solid|rgb=FFFFFF00 theme=None indexed=None
+      C5:solid|rgb=FFFFFF00 theme=None indexed=None
+[R31] no=28 name='锦绣天府号列车试运行主题活动'
+      C1:solid|rgb=FFFFFF00 theme=None indexed=None
+      C2:solid|rgb=None theme=0 indexed=None
+      C3:solid|rgb=None theme=0 indexed=None
+      C4:solid|rgb=None theme=0 indexed=None
+      C5:solid|rgb=None theme=0 indexed=None
+[R32] no=30 name='旅服集团太阳谷项目'
+      C1:solid|rgb=None theme=0 indexed=None
+      C2:solid|rgb=None theme=0 indexed=None
+      C3:solid|rgb=None theme=0 indexed=None
+      C4:solid|rgb=None theme=0 indexed=None
+      C5:solid|rgb=None theme=0 indexed=None
+[R33] no=31 name='清算深圳新川科技公司'
+      C1:solid|rgb=None theme=0 indexed=None
+      C2:solid|rgb=None theme=0 indexed=None
+      C3:solid|rgb=None theme=0 indexed=None
+      C4:solid|rgb=None theme=0 indexed=None
+      C5:solid|rgb=None theme=0 indexed=None
+[R34] no=32 name='希尔顿花园酒店项目'
+      C1:solid|rgb=None theme=0 indexed=None
+      C2:solid|rgb=None theme=0 indexed=None
+      C3:solid|rgb=None theme=0 indexed=None
+      C4:solid|rgb=None theme=0 indexed=None
+      C5:solid|rgb=None theme=0 indexed=None
+[R35] no=33 name='系统解决方案'
+      C1:solid|rgb=None theme=0 indexed=None
+      C2:solid|rgb=None theme=0 indexed=None
+      C3:solid|rgb=None theme=0 indexed=None
+      C4:solid|rgb=None theme=0 indexed=None
+      C5:solid|rgb=None theme=0 indexed=None

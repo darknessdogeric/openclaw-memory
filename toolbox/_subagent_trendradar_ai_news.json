@@ -1,0 +1,903 @@
+{
+  "date": "2026-08-25",
+  "keywords": [
+    "AI大模型",
+    "OpenAI",
+    "ChatGPT",
+    "Anthropic",
+    "Claude",
+    "通用人工智能AGI",
+    "科技公司动态"
+  ],
+  "summary": {
+    "search_news:AI大模型": {
+      "ok": true,
+      "elapsed_ms": 55.1,
+      "keys": [
+        "success",
+        "results",
+        "total",
+        "query",
+        "search_mode",
+        "time_range",
+        "message"
+      ]
+    },
+    "search_news:OpenAI": {
+      "ok": true,
+      "elapsed_ms": 54.1,
+      "keys": [
+        "success",
+        "results",
+        "total",
+        "query",
+        "search_mode",
+        "time_range",
+        "message"
+      ]
+    },
+    "search_news:ChatGPT": {
+      "ok": true,
+      "elapsed_ms": 53.4,
+      "keys": [
+        "success",
+        "results",
+        "total",
+        "query",
+        "search_mode",
+        "time_range",
+        "message"
+      ]
+    },
+    "search_news:Anthropic": {
+      "ok": true,
+      "elapsed_ms": 52.7,
+      "keys": [
+        "success",
+        "results",
+        "total",
+        "query",
+        "search_mode",
+        "time_range",
+        "message"
+      ]
+    },
+    "search_news:Claude": {
+      "ok": true,
+      "elapsed_ms": 52.1,
+      "keys": [
+        "success",
+        "results",
+        "total",
+        "query",
+        "search_mode",
+        "time_range",
+        "message"
+      ]
+    },
+    "search_news:通用人工智能AGI": {
+      "ok": true,
+      "elapsed_ms": 44.5,
+      "keys": [
+        "success",
+        "results",
+        "total",
+        "query",
+        "search_mode",
+        "time_range",
+        "message"
+      ]
+    },
+    "search_news:科技公司动态": {
+      "ok": true,
+      "elapsed_ms": 36.0,
+      "keys": [
+        "success",
+        "results",
+        "total",
+        "query",
+        "search_mode",
+        "time_range",
+        "message"
+      ]
+    },
+    "search_rss:AI大模型": {
+      "ok": true,
+      "elapsed_ms": 1091.0,
+      "keys": [
+        "success",
+        "summary",
+        "data"
+      ]
+    },
+    "search_rss:OpenAI": {
+      "ok": true,
+      "elapsed_ms": 1060.1,
+      "keys": [
+        "success",
+        "summary",
+        "data"
+      ]
+    },
+    "search_rss:ChatGPT": {
+      "ok": true,
+      "elapsed_ms": 1117.2,
+      "keys": [
+        "success",
+        "summary",
+        "data"
+      ]
+    },
+    "search_rss:Anthropic": {
+      "ok": true,
+      "elapsed_ms": 1070.1,
+      "keys": [
+        "success",
+        "summary",
+        "data"
+      ]
+    },
+    "search_rss:Claude": {
+      "ok": true,
+      "elapsed_ms": 1007.7,
+      "keys": [
+        "success",
+        "summary",
+        "data"
+      ]
+    },
+    "search_rss:通用人工智能AGI": {
+      "ok": true,
+      "elapsed_ms": 1093.9,
+      "keys": [
+        "success",
+        "summary",
+        "data"
+      ]
+    },
+    "search_rss:科技公司动态": {
+      "ok": true,
+      "elapsed_ms": 1116.0,
+      "keys": [
+        "success",
+        "summary",
+        "data"
+      ]
+    },
+    "get_trending_topics": {
+      "ok": true,
+      "elapsed_ms": 18.4,
+      "keys": [
+        "success",
+        "error"
+      ]
+    },
+    "get_latest_news": {
+      "ok": true,
+      "elapsed_ms": 99.5,
+      "keys": [
+        "success",
+        "error"
+      ]
+    }
+  },
+  "results": [
+    {
+      "ok": true,
+      "name": "search_news:AI大模型",
+      "elapsed_ms": 55.1,
+      "data": {
+        "success": true,
+        "results": [],
+        "total": 0,
+        "query": "AI大模型",
+        "search_mode": "keyword",
+        "time_range": "今天",
+        "message": "未找到匹配的新闻（查询范围: 今天，可用数据: 2025-12-21 至 2026-08-24）"
+      }
+    },
+    {
+      "ok": true,
+      "name": "search_news:OpenAI",
+      "elapsed_ms": 54.1,
+      "data": {
+        "success": true,
+        "results": [],
+        "total": 0,
+        "query": "OpenAI",
+        "search_mode": "keyword",
+        "time_range": "今天",
+        "message": "未找到匹配的新闻（查询范围: 今天，可用数据: 2025-12-21 至 2026-08-24）"
+      }
+    },
+    {
+      "ok": true,
+      "name": "search_news:ChatGPT",
+      "elapsed_ms": 53.4,
+      "data": {
+        "success": true,
+        "results": [],
+        "total": 0,
+        "query": "ChatGPT",
+        "search_mode": "keyword",
+        "time_range": "今天",
+        "message": "未找到匹配的新闻（查询范围: 今天，可用数据: 2025-12-21 至 2026-08-24）"
+      }
+    },
+    {
+      "ok": true,
+      "name": "search_news:Anthropic",
+      "elapsed_ms": 52.7,
+      "data": {
+        "success": true,
+        "results": [],
+        "total": 0,
+        "query": "Anthropic",
+        "search_mode": "keyword",
+        "time_range": "今天",
+        "message": "未找到匹配的新闻（查询范围: 今天，可用数据: 2025-12-21 至 2026-08-24）"
+      }
+    },
+    {
+      "ok": true,
+      "name": "search_news:Claude",
+      "elapsed_ms": 52.1,
+      "data": {
+        "success": true,
+        "results": [],
+        "total": 0,
+        "query": "Claude",
+        "search_mode": "keyword",
+        "time_range": "今天",
+        "message": "未找到匹配的新闻（查询范围: 今天，可用数据: 2025-12-21 至 2026-08-24）"
+      }
+    },
+    {
+      "ok": true,
+      "name": "search_news:通用人工智能AGI",
+      "elapsed_ms": 44.5,
+      "data": {
+        "success": true,
+        "results": [],
+        "total": 0,
+        "query": "通用人工智能AGI",
+        "search_mode": "keyword",
+        "time_range": "今天",
+        "message": "未找到匹配的新闻（查询范围: 今天，可用数据: 2025-12-21 至 2026-08-24）"
+      }
+    },
+    {
+      "ok": true,
+      "name": "search_news:科技公司动态",
+      "elapsed_ms": 36.0,
+      "data": {
+        "success": true,
+        "results": [],
+        "total": 0,
+        "query": "科技公司动态",
+        "search_mode": "keyword",
+        "time_range": "今天",
+        "message": "未找到匹配的新闻（查询范围: 今天，可用数据: 2025-12-21 至 2026-08-24）"
+      }
+    },
+    {
+      "ok": true,
+      "name": "search_rss:AI大模型",
+      "elapsed_ms": 1091.0,
+      "data": {
+        "success": true,
+        "summary": {
+          "description": "RSS 搜索结果（关键词: AI大模型）",
+          "total": 0,
+          "returned": 0,
+          "keyword": "AI大模型",
+          "feeds": "全部订阅源",
+          "days": 7
+        },
+        "data": []
+      }
+    },
+    {
+      "ok": true,
+      "name": "search_rss:OpenAI",
+      "elapsed_ms": 1060.1,
+      "data": {
+        "success": true,
+        "summary": {
+          "description": "RSS 搜索结果（关键词: OpenAI）",
+          "total": 17,
+          "returned": 17,
+          "keyword": "OpenAI",
+          "feeds": "全部订阅源",
+          "days": 7
+        },
+        "data": [
+          {
+            "title": "OpenAI-backed legal tech firm pivots to Chinese Kimi K3 open-weight model",
+            "feed_id": "scmp-feed",
+            "feed_name": "[D] 南华早报 SCMP",
+            "url": "https://www.scmp.com/tech/tech-trends/article/3364827/openai-backed-legal-tech-firm-pivots-chinese-kimi-k3-open-weight-model?utm_source=rss_feed",
+            "published_at": "2026-08-21T14:00:10",
+            "author": "Xinmei Shen",
+            "date": "2026-08-22",
+            "summary": "A US artificial intelligence start-up backed by OpenAI has built its first in-house model on Chinese lab Moonshot AI’s Kimi K3, highlighting a growing shift by Western tech firms towards Chinese open-weight systems amid soaring development costs. San Francisco-based legal tech provider Harvey, whose high-profile backers also include Sequoia Capital and Andreessen Horowitz, said on Thursday that its new model, Harvey Tenet, was post-trained on top of the open-weight Kimi K3 base. The company said..."
+          },
+          {
+            "title": "It’s Greg Brockman’s OpenAI now",
+            "feed_id": "theverge",
+            "feed_name": "[C] The Verge",
+            "url": "https://www.theverge.com/ai-artificial-intelligence/982774/greg-brockman-openai-role-expansion",
+            "published_at": "2026-08-20T15:45:55",
+            "author": "Hayden Field",
+            "date": "2026-08-21",
+            "summary": "OpenAI has had a hell of a year. The company spent months battling former cofounder Elon Musk in a sensational jury trial, was hit with a high-profile trade secrets lawsuit from Apple, and faced widespread scrutiny after an unreleased model hacked another AI company. As it prepares for an IPO, a steady string of executives […]"
+          },
+          {
+            "title": "OpenAI hit the brakes. Now what?",
+            "feed_id": "theverge",
+            "feed_name": "[C] The Verge",
+            "url": "https://www.theverge.com/ai-artificial-intelligence/982323/openai-hit-brakes-voluntary-pacing-ai",
+            "published_at": "2026-08-19T17:10:09",
+            "author": "Robert Hart",
+            "date": "2026-08-20",
+            "summary": "With a looming IPO, intense competition from Anthropic, and Chinese and open-weight rivals nipping at its heels, OpenAI has plenty of reasons to move fast. Instead, it hit the brakes. On Tuesday, the company said it had slowed the pace of some AI development while it tightened security and safeguards. That included a two-week pause […]"
+          },
+          {
+            "title": "ChatGPT starts selling ads in Europe next week, but hotels can't buy them directly yet",
+            "feed_id": "hospitalitynet",
+            "feed_name": "[A] Hospitality Net",
+            "url": "https://www.hospitalitynet.org/opinion/4134009/chatgpt-starts-selling-ads-in-europe-next-week-but-hotels-cant-buy-them-directly-yet",
+            "published_at": "2026-08-19T09:34:18",
+            "author": "",
+            "date": "2026-08-20",
+            "summary": "OpenAI's ChatGPT Ads launch across 31 European countries next week, but hotel advertisers must go through agency partners until self-serve access opens, and ads appear below AI responses without influencing them."
+          },
+          {
+            "title": "Norway should buy OpenAI",
+            "feed_id": "hacker-news",
+            "feed_name": "Hacker News",
+            "url": "https://www.onethousandmeans.com/p/norway-should-buy-openai",
+            "published_at": "2026-08-18T19:30:29",
+            "author": "alexeigannon",
+            "date": "2026-08-19",
+            "summary": "Article URL: https://www.onethousandmeans.com/p/norway-should-buy-openai Comments URL: https://news.ycombinator.com/item?id=49351330 Points: 193 # Comments: 222"
+          },
+          {
+            "title": "OpenAI lays out new security changes after its AI hacked Hugging Face",
+            "feed_id": "theverge",
+            "feed_name": "[C] The Verge",
+            "url": "https://www.theverge.com/ai-artificial-intelligence/981640/openai-security-changes-ai-hugging-face-hack",
+            "published_at": "2026-08-18T19:28:30",
+            "author": "Jay Peters",
+            "date": "2026-08-19",
+            "summary": "OpenAI is announcing security updates following the July news that its AI broke out of a sandboxed environment and accidentally hacked Hugging Face, including improvements to its research environments, monitoring, and alignment techniques. The company had already put the brakes on a new model, Astra, that it thinks could have \"critical\" cybersecurity capabilities, and the […]"
+          },
+          {
+            "title": "OpenAI Overhauls Safety Protocols After Its AI Agents Went Rogue",
+            "feed_id": "wired-top",
+            "feed_name": "[C] Wired 头条",
+            "url": "https://www.wired.com/story/openai-overhauls-safety-protocols-after-its-ai-agents-went-rogue/",
+            "published_at": "2026-08-18T18:33:11",
+            "author": "Maxwell Zeff",
+            "date": "2026-08-21",
+            "summary": "The ChatGPT maker says its upcoming Astra model may have reached “critical” cyber capabilities, prompting it to halt a significant number of training runs while it tightens internal safeguards."
+          },
+          {
+            "title": "Pacing model development in an era of cyber-critical capabilities",
+            "feed_id": "hacker-news",
+            "feed_name": "Hacker News",
+            "url": "https://openai.com/index/pacing-model-development-cyber-capabilities/",
+            "published_at": "2026-08-18T18:14:59",
+            "author": "j4mie",
+            "date": "2026-08-19",
+            "summary": "Article URL: https://openai.com/index/pacing-model-development-cyber-capabilities/ Comments URL: https://news.ycombinator.com/item?id=49350031 Points: 68 # Comments: 40"
+          },
+          {
+            "title": "Meet the Chinese AI star who splashed a reported US$70m on a California mansion",
+            "feed_id": "scmp-feed",
+            "feed_name": "[D] 南华早报 SCMP",
+            "url": "https://www.scmp.com/tech/big-tech/article/3364380/meet-chinese-ai-star-who-splashed-reported-us70m-california-mansion?utm_source=rss_feed",
+            "published_at": "2026-08-18T14:00:05",
+            "author": "Iris Deng",
+            "date": "2026-08-19",
+            "summary": "Tony Wu Yuhuai, the China-born co-founder of Elon Musk’s artificial intelligence lab, sparked discussions across Chinese social media after reportedly spending US$70 million on a six-bedroom Californian mega-mansion. The property deal, the largest so far this year in the Bay Area, pushed the thirty-something AI star under the spotlight, alongside other Silicon Valley-based Chinese talent that has contributed to frontier AI labs from OpenAI to Meta Platforms. Wu appeared to be the buyer of a..."
+          },
+          {
+            "title": "The Download: how people really use AI, and Flock’s design choices",
+            "feed_id": "mit-tech-review",
+            "feed_name": "[C] MIT Technology Review",
+            "url": "https://www.technologyreview.com/2026/08/18/1142229/the-download-how-people-use-ai-flock-cameras-design/",
+            "published_at": "2026-08-18T12:10:00",
+            "author": "Thomas Macaulay",
+            "date": "2026-08-21",
+            "summary": "This is today’s edition of The Download, our weekday newsletter that provides a daily dose of what’s going on in the world of technology. We still don’t know how people are really using AI AI companies like Anthropic and OpenAI regularly publish reports on how people are using their products. But they only release the…"
+          },
+          {
+            "title": "Alibaba’s lightweight Qwen model takes on larger AI systems from OpenAI, DeepSeek, Zhipu",
+            "feed_id": "scmp-feed",
+            "feed_name": "[D] 南华早报 SCMP",
+            "url": "https://www.scmp.com/tech/tech-trends/article/3364404/alibabas-lightweight-qwen-model-takes-larger-ai-systems-openai-deepseek-zhipu?utm_source=rss_feed",
+            "published_at": "2026-08-18T12:00:05",
+            "author": "Xinmei Shen",
+            "date": "2026-08-19",
+            "summary": "Alibaba Group Holding’s new lightweight AI model Qwen3.8-27B has matched much larger near-frontier rivals while being able to run on everyday hardware, impressing developers as local AI gains momentum. The Qwen3.8-27B, a small model with 27 billion parameters, performed on par with OpenAI’s GPT-5.6 Luna, which was billed as the most cost-efficient model in the US lab’s latest flagship series, benchmark firm Artificial Analysis said on Monday. It nearly matched leading open-weight models from..."
+          },
+          {
+            "title": "OpenAI adds stricter controls for teens on ChatGPT amid backlash",
+            "feed_id": "ft-world",
+            "feed_name": "[D] FT 世界",
+            "url": "https://www.ft.com/content/9eccad94-56f5-4adf-aa61-c39e2e542226?syn-25a6b1a6=1",
+            "published_at": "2026-08-18T11:00:04",
+            "author": "",
+            "date": "2026-08-19",
+            "summary": "AI start-up overhauls its chatbot for young people after high-profile lawsuits"
+          },
+          {
+            "title": "We still don’t know how people are really using AI",
+            "feed_id": "mit-tech-review",
+            "feed_name": "[C] MIT Technology Review",
+            "url": "https://www.technologyreview.com/2026/08/18/1142226/how-people-use-ai/",
+            "published_at": "2026-08-18T10:06:43",
+            "author": "Eileen Guo",
+            "date": "2026-08-21",
+            "summary": "AI companies like Anthropic and OpenAI regularly publish reports on how people are using products like Claude and ChatGPT, but they only release the data they want us to see, AI researchers say. “There is no independent source to corroborate it,” says Anka Reuel, a computer science PhD candidate at the Stanford Trustworthy AI Research…"
+          },
+          {
+            "title": "Nvidia Backs OpenAI Data Center, Anthropic News, Google Buys Spirit Airlines Data",
+            "feed_id": "stratechery",
+            "feed_name": "[C] Stratechery (Ben Thompson)",
+            "url": "https://stratechery.com/2026/nvidia-backs-openai-data-center-anthropic-news-google-buys-spirit-airlines-data/",
+            "published_at": "2026-08-18T10:00:00",
+            "author": "Ben Thompson",
+            "date": "2026-08-25",
+            "summary": "Nvidia makes another deal, this time with a frontier lab; Anthropic's revenue continues to amaze; and maybe data finally is oil."
+          },
+          {
+            "title": "Nvidia to provide up to $105 billion guarantee for OpenAI's Ohio data center",
+            "feed_id": "yahoo-finance",
+            "feed_name": "雅虎财经",
+            "url": "https://finance.yahoo.com/technology/ai/articles/nvidia-invest-1-5-billion-124300582.html",
+            "published_at": "2026-08-17T12:43:00",
+            "author": "",
+            "date": "2026-08-19",
+            "summary": ""
+          },
+          {
+            "title": "2026.32: Earnings and Learnings",
+            "feed_id": "stratechery",
+            "feed_name": "[C] Stratechery (Ben Thompson)",
+            "url": "https://stratechery.com/2026/earnings-and-learnings/",
+            "published_at": "2026-08-07T17:29:02",
+            "author": "Ben Thompson",
+            "date": "2026-08-25",
+            "summary": "The best Stratechery content from the week of August 3, 2026, including earnings exposure, OpenAI's answer to Apple, and all about LeBron in Philly."
+          },
+          {
+            "title": "Import AI 466: The bitter lesson for robotics, AIs complete week-long programming tasks; and OpenAI's accidental AI hacker",
+            "feed_id": "import-ai",
+            "feed_name": "[C] Import AI (Jack Clark)",
+            "url": "https://importai.substack.com/p/import-ai-466-the-bitter-lesson-for",
+            "published_at": "2026-07-27T13:30:53",
+            "author": "Jack Clark",
+            "date": "2026-08-24",
+            "summary": "The warning shots will continue until civilization wakes up"
+          }
+        ]
+      }
+    },
+    {
+      "ok": true,
+      "name": "search_rss:ChatGPT",
+      "elapsed_ms": 1117.2,
+      "data": {
+        "success": true,
+        "summary": {
+          "description": "RSS 搜索结果（关键词: ChatGPT）",
+          "total": 9,
+          "returned": 9,
+          "keyword": "ChatGPT",
+          "feeds": "全部订阅源",
+          "days": 7
+        },
+        "data": [
+          {
+            "title": "Kids outlearn AI—and we still don’t know why",
+            "feed_id": "mit-tech-review",
+            "feed_name": "[C] MIT Technology Review",
+            "url": "https://www.technologyreview.com/2026/08/24/1141740/kids-machines-language-learning/",
+            "published_at": "2026-08-24T09:00:00",
+            "author": "Elise Cutts",
+            "date": "2026-08-25",
+            "summary": "People have been talking to each other for at least 100,000 years, as best we can tell. And in all that time, there has been only one thing in the world that could learn a human language to perfect fluency: a human child. Now there are two. Four short years after the release of ChatGPT,…"
+          },
+          {
+            "title": "IHG's Kim Smith on How Hotels Must Rebuild Content for AI, ChatGPT Ads Launch Across Europe Next Week, Stripe's $7B OpenRouter Buy Creates AI Cost Opacity",
+            "feed_id": "hospitalitynet",
+            "feed_name": "[A] Hospitality Net",
+            "url": "https://www.hospitalitynet.org/editorial/4134024/ihgs-kim-smith-on-how-hotels-must-rebuild-content-for-ai-chatgpt-ads-launch-across-europe-next-week-stripes-7b-openrouter-buy-creates-ai-cost-opacity",
+            "published_at": "2026-08-19T14:43:00",
+            "author": "",
+            "date": "2026-08-21",
+            "summary": "Wednesday brought IHG's SVP of Digital Direct Channels on why hotels must restructure content for AI-driven discovery and what Google-powered conversational search on IHG.com is already showing, hospitality.today's warning that ChatGPT Ads launch across 31 European countries next week but hotels..."
+          },
+          {
+            "title": "ChatGPT starts selling ads in Europe next week, but hotels can't buy them directly yet",
+            "feed_id": "hospitalitynet",
+            "feed_name": "[A] Hospitality Net",
+            "url": "https://www.hospitalitynet.org/opinion/4134009/chatgpt-starts-selling-ads-in-europe-next-week-but-hotels-cant-buy-them-directly-yet",
+            "published_at": "2026-08-19T09:34:18",
+            "author": "",
+            "date": "2026-08-20",
+            "summary": "OpenAI's ChatGPT Ads launch across 31 European countries next week, but hotel advertisers must go through agency partners until self-serve access opens, and ads appear below AI responses without influencing them."
+          },
+          {
+            "title": "OpenAI Overhauls Safety Protocols After Its AI Agents Went Rogue",
+            "feed_id": "wired-top",
+            "feed_name": "[C] Wired 头条",
+            "url": "https://www.wired.com/story/openai-overhauls-safety-protocols-after-its-ai-agents-went-rogue/",
+            "published_at": "2026-08-18T18:33:11",
+            "author": "Maxwell Zeff",
+            "date": "2026-08-21",
+            "summary": "The ChatGPT maker says its upcoming Astra model may have reached “critical” cyber capabilities, prompting it to halt a significant number of training runs while it tightens internal safeguards."
+          },
+          {
+            "title": "Your Next Guest Is A Robot: How AI Is Rewriting The Path To Booking",
+            "feed_id": "hospitalitynet",
+            "feed_name": "[A] Hospitality Net",
+            "url": "https://www.hospitalitynet.org/opinion/4133994/your-next-guest-is-a-robot-how-ai-is-rewriting-the-path-to-booking",
+            "published_at": "2026-08-18T11:35:55",
+            "author": "",
+            "date": "2026-08-19",
+            "summary": "As AI tools like ChatGPT increasingly influence hotel discovery and trip planning, hotels must now optimize their digital presence for both human guests and the AI agents acting on their behalf."
+          },
+          {
+            "title": "OpenAI adds stricter controls for teens on ChatGPT amid backlash",
+            "feed_id": "ft-world",
+            "feed_name": "[D] FT 世界",
+            "url": "https://www.ft.com/content/9eccad94-56f5-4adf-aa61-c39e2e542226?syn-25a6b1a6=1",
+            "published_at": "2026-08-18T11:00:04",
+            "author": "",
+            "date": "2026-08-19",
+            "summary": "AI start-up overhauls its chatbot for young people after high-profile lawsuits"
+          },
+          {
+            "title": "We still don’t know how people are really using AI",
+            "feed_id": "mit-tech-review",
+            "feed_name": "[C] MIT Technology Review",
+            "url": "https://www.technologyreview.com/2026/08/18/1142226/how-people-use-ai/",
+            "published_at": "2026-08-18T10:06:43",
+            "author": "Eileen Guo",
+            "date": "2026-08-21",
+            "summary": "AI companies like Anthropic and OpenAI regularly publish reports on how people are using products like Claude and ChatGPT, but they only release the data they want us to see, AI researchers say. “There is no independent source to corroborate it,” says Anka Reuel, a computer science PhD candidate at the Stanford Trustworthy AI Research…"
+          },
+          {
+            "title": "ChatGPT Disagrees With Michael Burry Over Nebius (NBIS)",
+            "feed_id": "yahoo-finance",
+            "feed_name": "雅虎财经",
+            "url": "https://finance.yahoo.com/markets/stocks/articles/chatgpt-disagrees-michael-burry-over-131506607.html",
+            "published_at": "2026-08-17T13:15:06",
+            "author": "",
+            "date": "2026-08-19",
+            "summary": ""
+          },
+          {
+            "title": "Unpacking ChatGPT Work: the Agent for a Billion Users",
+            "feed_id": "latent-space",
+            "feed_name": "[C] Latent Space",
+            "url": "https://www.latent.space/p/unpacking-chatgpt-work",
+            "published_at": "2026-08-04T18:20:14",
+            "author": "Shlok Khemani",
+            "date": "2026-08-22",
+            "summary": "An external reconstruction of how Memory, Proactivity, Scheduling, Browser Use, Plugins, Skills and Tools work in the new ChatGPT Work."
+          }
+        ]
+      }
+    },
+    {
+      "ok": true,
+      "name": "search_rss:Anthropic",
+      "elapsed_ms": 1070.1,
+      "data": {
+        "success": true,
+        "summary": {
+          "description": "RSS 搜索结果（关键词: Anthropic）",
+          "total": 12,
+          "returned": 12,
+          "keyword": "Anthropic",
+          "feeds": "全部订阅源",
+          "days": 7
+        },
+        "data": [
+          {
+            "title": "FirstFT: Kevin Warsh seeks to calm investors’ nerves as signs of economic strain grow",
+            "feed_id": "ft-world",
+            "feed_name": "[D] FT 世界",
+            "url": "https://www.ft.com/content/63e11e59-1f21-488a-b89b-de4abbdd7396?syn-25a6b1a6=1",
+            "published_at": "2026-08-23T21:27:25",
+            "author": "",
+            "date": "2026-08-24",
+            "summary": "Also in this newsletter: Alibaba announces $10.2bn share placement and Anthropic’s best AI model struggles to attract users"
+          },
+          {
+            "title": "Feature Request: Support AGENTS.md",
+            "feed_id": "hacker-news",
+            "feed_name": "Hacker News",
+            "url": "https://github.com/anthropics/claude-code/issues/6235",
+            "published_at": "2026-08-19T21:19:50",
+            "author": "fg137",
+            "date": "2026-08-20",
+            "summary": "Article URL: https://github.com/anthropics/claude-code/issues/6235 Comments URL: https://news.ycombinator.com/item?id=49367350 Points: 110 # Comments: 55"
+          },
+          {
+            "title": "OpenAI hit the brakes. Now what?",
+            "feed_id": "theverge",
+            "feed_name": "[C] The Verge",
+            "url": "https://www.theverge.com/ai-artificial-intelligence/982323/openai-hit-brakes-voluntary-pacing-ai",
+            "published_at": "2026-08-19T17:10:09",
+            "author": "Robert Hart",
+            "date": "2026-08-20",
+            "summary": "With a looming IPO, intense competition from Anthropic, and Chinese and open-weight rivals nipping at its heels, OpenAI has plenty of reasons to move fast. Instead, it hit the brakes. On Tuesday, the company said it had slowed the pace of some AI development while it tightened security and safeguards. That included a two-week pause […]"
+          },
+          {
+            "title": "Coders Say They Already Found Workarounds to Claude’s Invisible Watermarks",
+            "feed_id": "wired-top",
+            "feed_name": "[C] Wired 头条",
+            "url": "https://www.wired.com/story/coders-say-they-already-found-workarounds-to-claudes-invisible-watermarks/",
+            "published_at": "2026-08-19T16:44:07",
+            "author": "Isabella Ward",
+            "date": "2026-08-22",
+            "summary": "Anthropic announced last week it would include invisible watermarks in AI-generated content to comply with new EU rules. Within hours, overrides were being touted online."
+          },
+          {
+            "title": "Anthropic could beat Elon Musk's SpaceX for largest 2026 IPO, prediction markets show",
+            "feed_id": "yahoo-finance",
+            "feed_name": "雅虎财经",
+            "url": "https://finance.yahoo.com/markets/stocks/article/anthropic-could-beat-elon-musks-spacex-for-largest-2026-ipo-prediction-markets-show-122619825.html",
+            "published_at": "2026-08-18T12:26:19",
+            "author": "",
+            "date": "2026-08-20",
+            "summary": ""
+          },
+          {
+            "title": "The Download: how people really use AI, and Flock’s design choices",
+            "feed_id": "mit-tech-review",
+            "feed_name": "[C] MIT Technology Review",
+            "url": "https://www.technologyreview.com/2026/08/18/1142229/the-download-how-people-use-ai-flock-cameras-design/",
+            "published_at": "2026-08-18T12:10:00",
+            "author": "Thomas Macaulay",
+            "date": "2026-08-21",
+            "summary": "This is today’s edition of The Download, our weekday newsletter that provides a daily dose of what’s going on in the world of technology. We still don’t know how people are really using AI AI companies like Anthropic and OpenAI regularly publish reports on how people are using their products. But they only release the…"
+          },
+          {
+            "title": "We still don’t know how people are really using AI",
+            "feed_id": "mit-tech-review",
+            "feed_name": "[C] MIT Technology Review",
+            "url": "https://www.technologyreview.com/2026/08/18/1142226/how-people-use-ai/",
+            "published_at": "2026-08-18T10:06:43",
+            "author": "Eileen Guo",
+            "date": "2026-08-21",
+            "summary": "AI companies like Anthropic and OpenAI regularly publish reports on how people are using products like Claude and ChatGPT, but they only release the data they want us to see, AI researchers say. “There is no independent source to corroborate it,” says Anka Reuel, a computer science PhD candidate at the Stanford Trustworthy AI Research…"
+          },
+          {
+            "title": "Nvidia Backs OpenAI Data Center, Anthropic News, Google Buys Spirit Airlines Data",
+            "feed_id": "stratechery",
+            "feed_name": "[C] Stratechery (Ben Thompson)",
+            "url": "https://stratechery.com/2026/nvidia-backs-openai-data-center-anthropic-news-google-buys-spirit-airlines-data/",
+            "published_at": "2026-08-18T10:00:00",
+            "author": "Ben Thompson",
+            "date": "2026-08-25",
+            "summary": "Nvidia makes another deal, this time with a frontier lab; Anthropic's revenue continues to amaze; and maybe data finally is oil."
+          },
+          {
+            "title": "Anthropic’s Watermarking, How It (Probably) Works, Worse Than It Seems",
+            "feed_id": "stratechery",
+            "feed_name": "[C] Stratechery (Ben Thompson)",
+            "url": "https://stratechery.com/2026/anthropics-watermarking-how-it-probably-works-worse-than-it-seems/",
+            "published_at": "2026-08-12T10:00:00",
+            "author": "Ben Thompson",
+            "date": "2026-08-25",
+            "summary": "Anthropic is adding watermarking in response to the E.U.'s AI law. It's a terrible idea, first and foremost for philosophical reasons."
+          },
+          {
+            "title": "Google Earnings, The Frontier Case, Amazon Earnings",
+            "feed_id": "stratechery",
+            "feed_name": "[C] Stratechery (Ben Thompson)",
+            "url": "https://stratechery.com/2026/google-earnings-the-frontier-case-amazon-earnings/",
+            "published_at": "2026-08-05T10:00:00",
+            "author": "Ben Thompson",
+            "date": "2026-08-24",
+            "summary": "Google's earnings seemed to confirm the Anthropic hedge; it was Andy Jassy who explained why their — and Amazon's — capex was justifiable."
+          },
+          {
+            "title": "Anthropic IPO: What to know before you buy the stock",
+            "feed_id": "yahoo-finance",
+            "feed_name": "雅虎财经",
+            "url": "https://finance.yahoo.com/personal-finance/investing/article/anthropic-ipo-what-to-know-before-you-buy-the-stock-170741665.html",
+            "published_at": "2026-06-16T17:07:41",
+            "author": "",
+            "date": "2026-08-23",
+            "summary": ""
+          },
+          {
+            "title": "Import AI 460: Reward hacking society, RSI data from Anthropic; and RL-based quadcopter racing",
+            "feed_id": "import-ai",
+            "feed_name": "[C] Import AI (Jack Clark)",
+            "url": "https://importai.substack.com/p/import-ai-460-reward-hacking-society",
+            "published_at": "2026-06-08T12:31:32",
+            "author": "Jack Clark",
+            "date": "2026-08-24",
+            "summary": "When will markets price the singularity?"
+          }
+        ]
+      }
+    },
+    {
+      "ok": true,
+      "name": "search_rss:Claude",
+      "elapsed_ms": 1007.7,
+      "data": {
+        "success": true,
+        "summary": {
+          "description": "RSS 搜索结果（关键词: Claude）",
+          "total": 9,
+          "returned": 9,
+          "keyword": "Claude",
+          "feeds": "全部订阅源",
+          "days": 7
+        },
+        "data": [
+          {
+            "title": "Show HN: Make your logo extra bright on HDR screens",
+            "feed_id": "hacker-news",
+            "feed_name": "Hacker News",
+            "url": "https://www.soverybright.com/",
+            "published_at": "2026-08-22T18:43:03",
+            "author": "telecuda",
+            "date": "2026-08-23",
+            "summary": "Certain logos started standing out to me on LinkedIn as brighter/whiter than everything else around them.I dug in and found out this is accomplished by adding a gain-map to an existing JPEG, visible only on HDR screens like a newer MacBook Pro. LinkedIn is the only social network I've found that isn't stripping them out, but of course you serve them up on your own site.I worked with Claude Code to turn it into a little browser-based utility (no registration) and hope you find it useful! Comments..."
+          },
+          {
+            "title": "A week of using Codex more than Claude",
+            "feed_id": "hacker-news",
+            "feed_name": "Hacker News",
+            "url": "https://allaboutcoding.ghinda.com/a-week-of-using-codex-more-than-claude/",
+            "published_at": "2026-08-21T19:51:48",
+            "author": "speckx",
+            "date": "2026-08-23",
+            "summary": "Article URL: https://allaboutcoding.ghinda.com/a-week-of-using-codex-more-than-claude/ Comments URL: https://news.ycombinator.com/item?id=49393051 Points: 115 # Comments: 113"
+          },
+          {
+            "title": "Claudette: Make Claude stop talking like a BuzzFeed article",
+            "feed_id": "hacker-news",
+            "feed_name": "Hacker News",
+            "url": "https://github.com/adnanakil/nobuzz/blob/main/README.md",
+            "published_at": "2026-08-21T14:31:52",
+            "author": "aakil",
+            "date": "2026-08-22",
+            "summary": "Article URL: https://github.com/adnanakil/nobuzz/blob/main/README.md Comments URL: https://news.ycombinator.com/item?id=49388752 Points: 188 # Comments: 133"
+          },
+          {
+            "title": "Feature Request: Support AGENTS.md",
+            "feed_id": "hacker-news",
+            "feed_name": "Hacker News",
+            "url": "https://github.com/anthropics/claude-code/issues/6235",
+            "published_at": "2026-08-19T21:19:50",
+            "author": "fg137",
+            "date": "2026-08-20",
+            "summary": "Article URL: https://github.com/anthropics/claude-code/issues/6235 Comments URL: https://news.ycombinator.com/item?id=49367350 Points: 110 # Comments: 55"
+          },
+          {
+            "title": "Coders Say They Already Found Workarounds to Claude’s Invisible Watermarks",
+            "feed_id": "wired-top",
+            "feed_name": "[C] Wired 头条",
+            "url": "https://www.wired.com/story/coders-say-they-already-found-workarounds-to-claudes-invisible-watermarks/",
+            "published_at": "2026-08-19T16:44:07",
+            "author": "Isabella Ward",
+            "date": "2026-08-22",
+            "summary": "Anthropic announced last week it would include invisible watermarks in AI-generated content to comply with new EU rules. Within hours, overrides were being touted online."
+          },
+          {
+            "title": "Claude Code Teaching macOS to Natively Print to the HP Laser 1008a",
+            "feed_id": "hacker-news",
+            "feed_name": "Hacker News",
+            "url": "https://cdn.kuber.studio/chat/hp-laser-1008a-driver",
+            "published_at": "2026-08-18T21:14:21",
+            "author": "amrrs",
+            "date": "2026-08-19",
+            "summary": "Article URL: https://cdn.kuber.studio/chat/hp-laser-1008a-driver Comments URL: https://news.ycombinator.com/item?id=49352806 Points: 99 # Comments: 62"
+          },
+          {
+            "title": "Claude Code May–August 2026 weekly limits promotion",
+            "feed_id": "hacker-news",
+            "feed_name": "Hacker News",
+            "url": "https://support.claude.com/en/articles/15910845-claude-code-may-august-2026-weekly-limits-promotion",
+            "published_at": "2026-08-18T17:02:15",
+            "author": "tyre",
+            "date": "2026-08-19",
+            "summary": "Article URL: https://support.claude.com/en/articles/15910845-claude-code-may-august-2026-weekly-limits-promotion Comments URL: https://news.ycombinator.com/item?id=49348751 Points: 251 # Comments: 222"
+          },
+          {
+            "title": "We still don’t know how people are really using AI",
+            "feed_id": "mit-tech-review",
+            "feed_name": "[C] MIT Technology Review",
+            "url": "https://www.technologyreview.com/2026/08/18/1142226/how-people-use-ai/",
+            "published_at": "2026-08-18T10:06:43",
+            "author": "Eileen Guo",
+            "date": "2026-08-21",
+            "summary": "AI companies like Anthropic and OpenAI regularly publish reports on how people are using products like Claude and ChatGPT, but they only release the data they want us to see, AI researchers say. “There is no independent source to corroborate it,” says Anka Reuel, a computer science PhD candidate at the Stanford Trustworthy AI Research…"
+          },
+          {
+            "title": "‘Boring, Not Broken’ – Claude AI Just Bought Uber (UBER). Should You?",
+            "feed_id": "yahoo-finance",
+            "feed_name": "雅虎财经",
+            "url": "https://finance.yahoo.com/markets/stocks/articles/boring-not-broken-claude-ai-132804912.html",
+            "published_at": "2026-08-17T13:28:04",
+            "author": "",
+            "date": "2026-08-19",
+            "summary": ""
+          }
+        ]
+      }
+    },
+    {
+      "ok": true,
+      "name": "search_rss:通用人工智能AGI",
+      "elapsed_ms": 1093.9,
+      "data": {
+        "success": true,
+        "summary": {
+          "description": "RSS 搜索结果（关键词: 通用人工智能AGI）",
+          "total": 0,
+          "returned": 0,
+          "keyword": "通用人工智能AGI",
+          "feeds": "全部订阅源",
+          "days": 7
+        },
+        "data": []
+      }
+    },
+    {
+      "ok": true,
+      "name": "search_rss:科技公司动态",
+      "elapsed_ms": 1116.0,
+      "data": {
+        "success": true,
+        "summary": {
+          "description": "RSS 搜索结果（关键词: 科技公司动态）",
+          "total": 0,
+          "returned": 0,
+          "keyword": "科技公司动态",
+          "feeds": "全部订阅源",
+          "days": 7
+        },
+        "data": []
+      }
+    },
+    {
+      "ok": true,
+      "name": "get_trending_topics",
+      "elapsed_ms": 18.4,
+      "data": {
+        "success": false,
+        "error": {
+          "code": "DATA_NOT_FOUND",
+          "message": "未找到 2026-08-25 的 news 数据",
+          "suggestion": "请先运行爬虫或检查日期是否正确"
+        }
+      }
+    },
+    {
+      "ok": true,
+      "name": "get_latest_news",
+      "elapsed_ms": 99.5,
+      "data": {
+        "success": false,
+        "error": {
+          "code": "DATA_NOT_FOUND",
+          "message": "未找到 2026-08-25 的 news 数据",
+          "suggestion": "请先运行爬虫或检查日期是否正确"
+        }
+      }
+    }
+  ]
+}

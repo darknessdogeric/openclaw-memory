@@ -1,0 +1,52 @@
+{
+  "date": "2026-08-03",
+  "session": "21:30 Entity Extractor cron",
+  "cron_id": "0eced1e9-8729-47d8-b8d6-34eff13ed780",
+  "theme": "world monitor 实体抽取 (D+3 @ AnYi, R69 静默观察期第3天)",
+  "status": "executed",
+  "rules_applied": [
+    "R60-11:实体抽取沉淀动作",
+    "R66:文件接收质量门控(输出前自检)"
+  ],
+  "source_file": "memory/2026-08-03.md",
+  "source_size_bytes": 43506,
+  "metrics": {
+    "new_entities": 17,
+    "new_relations": 0,
+    "projects_mentioned_today": 4,
+    "graph_total_entities_after": "见 graph.jsonl",
+    "graph_total_relations_after": 15,
+    "duration_seconds": "~5"
+  },
+  "entities_by_type": {
+    "Person": 2,
+    "Company": 5,
+    "Project": 6,
+    "Event": 1,
+    "Place": 3,
+    "Tool": 1
+  },
+  "key_signals": [
+    "Eric + B166ER 核心实体入图 (Person 类)",
+    "安逸酒店集团 + AHL + 携程 + 特斯拉 + 智元机器人入图 (Company 类)",
+    "AHL + 1244战略 + 深度自迭代 + B166ER深度自迭代 + R66监控 + R60规则 全谱系入图 (Project 类)",
+    "D-day 入图 (Event 类,对应入职倒计时关键节点)",
+    "成都 + 重庆 + 四川 入图 (Place 类,覆盖安逸集团大本营+个人项目地点)",
+    "DeepSeek 入图 (Tool 类,B166ER主LLM)",
+    "0新关系 → 关系模式词典相对今日daily content覆盖率偏低,需扩充"
+  ],
+  "outputs": {
+    "graph_jsonl": "memory/ontology/graph.jsonl (appended 17 entities)",
+    "relations_trend": "memory/ontology/relations-trend.md (regenerated)",
+    "dashboard": "memory/eric-4-projects-dashboard.md (updated, 4 项目今日提及)",
+    "eval": "eval/2026-08-03-2130.json (this file)",
+    "obsidian_push": "已调度 cron_to_obsidian.py"
+  },
+  "4_projects_status": {
+    "AHL": "今日提及 (Skift 三连发验证战略时机)",
+    "1244战略": "今日提及 (待入职后融合)",
+    "深度自迭代": "今日提及 (B166ER持续运行)",
+    "B166ER深度自迭代": "今日提及 (子项目)"
+  },
+  "next_action": "等待下次cron触发,关系词典待扩充 (尤其是 AHL+Fora+Amazon+Skift 行业地图类的关系模式)"
+}

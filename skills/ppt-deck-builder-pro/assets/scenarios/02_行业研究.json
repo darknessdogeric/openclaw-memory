@@ -1,0 +1,209 @@
+{
+  "title": "行业研究 PPT",
+  "total_slides": 15,
+  "style_preset": "light_consulting",
+  "style_goal": "面向「集团战略部与投委会」的行业研究演示",
+  "image_provider": "runninghub_g31",
+  "resolution": "4k",
+  "aspect_ratio": "16:9",
+  "brief": {
+    "total_slides": 15,
+    "style_preset": "light_consulting",
+    "audience": {
+      "who": "集团战略部与投委会",
+      "knows": "本行业基本盘, 但不掌握最新竞争与政策变化",
+      "wants": "判断这个赛道值不值得加大投入、往哪个细分押注",
+      "action": "认可或否决加大投入的提案"
+    },
+    "required_sections": [
+      {
+        "name": "市场规模",
+        "conclusion": "赛道规模 X 亿, 增速 Y%, 但集中在 Z 细分",
+        "slides": 2
+      },
+      {
+        "name": "竞争格局",
+        "conclusion": "头部 3 家占 60% 份额, 且以价格战换份额",
+        "slides": 3
+      },
+      {
+        "name": "技术路线",
+        "conclusion": "两条路线未定胜负, 押注需分散",
+        "slides": 3
+      },
+      {
+        "name": "政策背景",
+        "conclusion": "补贴退坡但准入放松, 政策友好度中性偏正",
+        "slides": 3
+      },
+      {
+        "name": "趋势判断",
+        "conclusion": "未来 3 年集中度会提升, 窗口在收缩",
+        "slides": 4
+      }
+    ],
+    "data_sources": [
+      {
+        "type": "web",
+        "where": "行业协会年度报告 + 上市公司财报",
+        "confidence": "🟡🟡 多源"
+      },
+      {
+        "type": "web",
+        "where": "政策原文 (发改委/工信部)",
+        "confidence": "🟢🟢 一手"
+      },
+      {
+        "type": "internal",
+        "where": "我方在赛道的实际经营数据",
+        "confidence": "🟢🟢 一手"
+      }
+    ],
+    "explicit_constraints": [
+      "所有市场规模数字标注来源与年份",
+      "政策引用必须给出文号或发布日期",
+      "预测一律给区间不给单点",
+      "区分'事实'与'判断', 分别标注"
+    ],
+    "success_check": "听众能说出'赛道多大、谁赢了、我们该不该进'三个问题各自的答案",
+    "scenario": "行业研究",
+    "kimi_reference_prompt": "生成一份2025年中国新能源车市场分析PPT，包含竞争格局、技术路线、政策背景"
+  },
+  "slides": [
+    {
+      "slide_number": 1,
+      "page_type": "cover",
+      "page_goal": "赛道 + 时间 + 一句话结论",
+      "content": "标题页",
+      "style_preset": "light_consulting",
+      "text_density": "medium",
+      "note": "TODO: 补 approved_text_lines / prompt_override"
+    },
+    {
+      "slide_number": 2,
+      "page_type": "data",
+      "page_goal": "规模与增速",
+      "content": "市场规模",
+      "style_preset": "light_consulting",
+      "text_density": "medium",
+      "note": "TODO: 补 approved_text_lines / prompt_override"
+    },
+    {
+      "slide_number": 3,
+      "page_type": "chart",
+      "page_goal": "细分赛道结构",
+      "content": "规模细分",
+      "style_preset": "light_consulting",
+      "text_density": "medium",
+      "note": "TODO: 补 approved_text_lines / prompt_override"
+    },
+    {
+      "slide_number": 4,
+      "page_type": "matrix",
+      "page_goal": "头部玩家 × 维度",
+      "content": "竞争格局",
+      "style_preset": "light_consulting",
+      "text_density": "medium",
+      "note": "TODO: 补 approved_text_lines / prompt_override"
+    },
+    {
+      "slide_number": 5,
+      "page_type": "comparison",
+      "page_goal": "CR3 集中度",
+      "content": "份额对比",
+      "style_preset": "light_consulting",
+      "text_density": "medium",
+      "note": "TODO: 补 approved_text_lines / prompt_override"
+    },
+    {
+      "slide_number": 6,
+      "page_type": "cards",
+      "page_goal": "3 家公司的打法",
+      "content": "头部玩家画像",
+      "style_preset": "light_consulting",
+      "text_density": "medium",
+      "note": "TODO: 补 approved_text_lines / prompt_override"
+    },
+    {
+      "slide_number": 7,
+      "page_type": "cards",
+      "page_goal": "路线特征与代表",
+      "content": "技术路线 A",
+      "style_preset": "light_consulting",
+      "text_density": "medium",
+      "note": "TODO: 补 approved_text_lines / prompt_override"
+    },
+    {
+      "slide_number": 8,
+      "page_type": "cards",
+      "page_goal": "路线特征与代表",
+      "content": "技术路线 B",
+      "style_preset": "light_consulting",
+      "text_density": "medium",
+      "note": "TODO: 补 approved_text_lines / prompt_override"
+    },
+    {
+      "slide_number": 9,
+      "page_type": "comparison",
+      "page_goal": "成本/成熟度/时间窗",
+      "content": "路线对比",
+      "style_preset": "light_consulting",
+      "text_density": "medium",
+      "note": "TODO: 补 approved_text_lines / prompt_override"
+    },
+    {
+      "slide_number": 10,
+      "page_type": "data",
+      "page_goal": "时间轴",
+      "content": "政策梳理",
+      "style_preset": "light_consulting",
+      "text_density": "medium",
+      "note": "TODO: 补 approved_text_lines / prompt_override"
+    },
+    {
+      "slide_number": 11,
+      "page_type": "cards",
+      "page_goal": "利好/中性/利空",
+      "content": "政策影响",
+      "style_preset": "light_consulting",
+      "text_density": "medium",
+      "note": "TODO: 补 approved_text_lines / prompt_override"
+    },
+    {
+      "slide_number": 12,
+      "page_type": "path",
+      "page_goal": "3 年趋势推演",
+      "content": "演化路径",
+      "style_preset": "light_consulting",
+      "text_density": "medium",
+      "note": "TODO: 补 approved_text_lines / prompt_override"
+    },
+    {
+      "slide_number": 13,
+      "page_type": "diagnostic",
+      "page_goal": "决定胜负的 3 个变量",
+      "content": "关键变量",
+      "style_preset": "light_consulting",
+      "text_density": "medium",
+      "note": "TODO: 补 approved_text_lines / prompt_override"
+    },
+    {
+      "slide_number": 14,
+      "page_type": "data",
+      "page_goal": "可进入的细分空间",
+      "content": "机会测算",
+      "style_preset": "light_consulting",
+      "text_density": "medium",
+      "note": "TODO: 补 approved_text_lines / prompt_override"
+    },
+    {
+      "slide_number": 15,
+      "page_type": "conclusion",
+      "page_goal": "加投 / 不加投 / 换方向",
+      "content": "结论与建议",
+      "style_preset": "light_consulting",
+      "text_density": "medium",
+      "note": "TODO: 补 approved_text_lines / prompt_override"
+    }
+  ]
+}

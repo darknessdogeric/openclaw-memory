@@ -1,0 +1,542 @@
+"""
+生成按大类拆分的立项信息搜集 Word 文件
+- 模板字体：方正小标宋简体（标题 22pt）+ 仿宋_GB2312（正文 18pt）
+- 输出：桌面文件夹下的多个 Word 文件
+"""
+import shutil
+import os
+from docx import Document
+from docx.shared import Pt, Cm
+from docx.enum.text import WD_ALIGN_PARAGRAPH
+from docx.oxml import OxmlElement
+
+# ============= 基础配置 =============
+TEMPLATE = r'C:\Users\ericz\Desktop\邹士勇发言稿_2026高参圆桌国资酒店_2026-08-29_v5.5_基于十五五规划复盘版.docx'
+DESKTOP = r'C:\Users\ericz\Desktop'
+BASE_DIR = os.path.join(DESKTOP, '2026-08-29_立项信息搜集')
+DIR1 = os.path.join(BASE_DIR, '立项1_集团新媒体矩阵统筹')
+DIR2 = os.path.join(BASE_DIR, '立项2_AHL集团内试点立项')
+
+# ============= 字体工具 =============
+def set_run_font(run, font_name_eastasia, font_name_ascii='Times New Roman', size_pt=18, bold=False):
+    run.font.name = font_name_ascii
+    run.font.size = Pt(size_pt)
+    run.font.bold = bold
+    rpr = run._element.get_or_add_rPr()
+    rfonts = rpr.find('{http://schemas.openxmlformats.org/wordprocessingml/2006/main}rFonts')
+    if rfonts is None:
+        rfonts = OxmlElement('w:rFonts')
+        rpr.append(rfonts)
+    rfonts.set('{http://schemas.openxmlformats.org/wordprocessingml/2006/main}eastAsia', font_name_eastasia)
+    rfonts.set('{http://schemas.openxmlformats.org/wordprocessingml/2006/main}ascii', font_name_ascii)
+    rfonts.set('{http://schemas.openxmlformats.org/wordprocessingml/2006/main}hAnsi', font_name_ascii)
+
+def new_doc_from_template():
+    """从模板复制新文档（保留 styles.xml）"""
+    tmp_path = os.path.join(os.environ['TEMP'], f'_tmp_{os.getpid()}.docx')
+    if os.path.exists(tmp_path):
+        os.remove(tmp_path)
+    return tmp_path  # 占位用
+
+def create_blank_doc(output_path):
+    """从模板复制 + 清空所有段落（保留样式）"""
+    shutil.copyfile(TEMPLATE, output_path)
+    doc = Document(output_path)
+    body = doc.element.body
+    sectPr_elements = body.findall('.//{http://schemas.openxmlformats.org/wordprocessingml/2006/main}sectPr')
+    for child in list(body):
+        if child.tag.endswith('}sectPr'):
+            continue
+        body.remove(child)
+    for sectPr in sectPr_elements:
+        body.append(sectPr)
+    return doc
+
+def add_para(doc, text, font_eastasia='仿宋_GB2312', size_pt=18, bold=False, center=False, indent=False):
+    p = doc.add_paragraph()
+    if text:
+        run = p.add_run(text)
+        set_run_font(run, font_eastasia, size_pt=size_pt, bold=bold)
+    if center:
+        p.alignment = WD_ALIGN_PARAGRAPH.CENTER
+    if indent:
+        p.paragraph_format.first_line_indent = Cm(0.74)
+    return p
+
+def add_title_h1(doc, text):
+    """一级标题（方正小标宋 22pt 加粗）"""
+    p = doc.add_paragraph()
+    run = p.add_run(text)
+    set_run_font(run, '方正小标宋简体', size_pt=22, bold=True, font_name_ascii='Times New Roman')
+    p.alignment = WD_ALIGN_PARAGRAPH.CENTER
+
+def add_subtitle_h2(doc, text):
+    """二级标题（黑体 16pt 加粗）"""
+    p = doc.add_paragraph()
+    run = p.add_run(text)
+    set_run_font(run, '黑体', size_pt=16, bold=True)
+
+def add_h3(doc, text):
+    """三级标题（仿宋_GB2312 16pt 加粗）"""
+    p = doc.add_paragraph()
+    run = p.add_run(text)
+    set_run_font(run, '仿宋_GB2312', size_pt=16, bold=True)
+
+def add_table(doc, headers, rows):
+    table = doc.add_table(rows=1, cols=len(headers))
+    table.style = 'Light Grid Accent 1'
+    hdr = table.rows[0].cells
+    for i, h in enumerate(headers):
+        hdr[i].text = ''
+        para = hdr[i].paragraphs[0]
+        run = para.add_run(h)
+        set_run_font(run, '黑体', size_pt=14, bold=True)
+        para.alignment = WD_ALIGN_PARAGRAPH.CENTER
+    for row_data in rows:
+        row = table.add_row()
+        for i, cell_text in enumerate(row_data):
+            cell = row.cells[i]
+            cell.text = ''
+            para = cell.paragraphs[0]
+            run = para.add_run(str(cell_text))
+            set_run_font(run, '仿宋_GB2312', size_pt=12)
+    return table
+
+# ============= 文件生成函数 =============
+def save_doc(doc, path):
+    doc.save(path)
+    print(f'  [OK] {os.path.basename(path)} ({os.path.getsize(path)/1024:.1f} KB)')
+
+# ============= 立项1：集团新媒体矩阵统筹 =============
+
+# ----- 立项1 总览 -----
+print('\n=== 立项1：集团新媒体矩阵统筹 ===')
+doc = create_blank_doc(os.path.join(DIR1, '立项1_总览.docx'))
+add_title_h1(doc, '立项1：集团新媒体矩阵统筹')
+add_subtitle_h2(doc, '信息搜集总览 + 时间节奏 + 发函件模板')
+add_para(doc, '')
+add_para(doc, '维护者：B166ER（产业发展部）')
+add_para(doc, '创建日期：2026-08-29')
+add_para(doc, '立项负责人：蒋抒伶（运营管理岗）+ 待招聘全栈运营专家')
+add_para(doc, '')
+add_h3(doc, '一、立项背景')
+add_para(doc, '2026 年 8 月，集团产业发展部牵头启动"集团新媒体矩阵统筹"立项。目标是：')
+add_para(doc, '1. 集团层面招募 1 名专业全栈运营专家，归属于产业发展部；')
+add_para(doc, '2. 与现有人员（蒋抒伶等）组成 2 人新媒体团队；')
+add_para(doc, '3. 搭建集团新媒体经营矩阵——集团官宣号 + 集团客房号 + 集团餐饮号 + 安逸臻选号；')
+add_para(doc, '4. 向下贯穿至下属酒店：单店可设酒店官号 / 拆分客房/餐饮号/安逸臻选号；')
+add_para(doc, '5. 集团拟定计划任务 / 考核指标 / 维度指标，下发各店；')
+add_para(doc, '6. 产发部统筹全年度计划；集团或单店可请第三方运营，也可自培人员。')
+add_para(doc, '')
+add_h3(doc, '二、调研维度清单（共 8 个维度，已拆分到本目录下 6 个独立 Word 文件）')
+table_headers = ['维度', '文件', '主要内容', '本调研周期']
+table_rows = [
+    ['维度1+2', '01_集团与56家酒店账号现状.docx', '集团新媒体账号 / 自营17 + 受托管理39 / 第三方代运营', 'T+10'],
+    ['维度3+4', '02_同业对标与集团战略.docx', '锦江/华住/首旅/亚朵 + 1234战略/十五五', 'T+15'],
+    ['维度5', '03_团队与人才盘点.docx', '蒋抒伶简历 + 全栈运营专家 JD + HR 编制', 'T+7'],
+    ['维度6', '04_预算与成本调研.docx', '直播设备/软件/投流/第三方代运营/历史市场费用', 'T+15'],
+    ['维度7', '05_合规与边界.docx', '受托管理39家合同/品牌规范/国资委规范/数据安全', 'T+10'],
+    ['维度8', '06_技术与工具.docx', '直播方案/矩阵号管理/数据分析/AI审核', 'T+15'],
+]
+add_table(doc, table_headers, table_rows)
+add_para(doc, '')
+add_h3(doc, '三、时间节奏表（6 个节点）')
+time_headers = ['周期', '节点', '执行人', '输出物']
+time_rows = [
+    ['本周内（T+7）', '维度5：内部盘点', '蒋抒伶 + B166ER', '内部盘点表'],
+    ['10 天内（T+10）', '维度1+2+7：集团内部跨部门', '函件协调', '集团内部数据'],
+    ['15 天内（T+15）', '维度3+6+8：外部对标 + 行业研究', '蒋抒伶 + B166ER', '对标报告 + 行业报告'],
+    ['20 天内（T+20）', '维度4：集团战略 + 56 家酒店现状', '集团函件 + 各店提交', '56 家酒店新媒体矩阵现状表'],
+    ['25 天内（T+25）', '维度5+6：商业化 + 技术安全', 'B166ER + 集团 IT', '招聘 JD + 设备清单'],
+    ['30 天内（T+30）', '汇总', 'Eric + B166ER', '立项报告 v1.0 完整数据基础'],
+]
+add_table(doc, time_headers, time_rows)
+add_para(doc, '')
+add_h3(doc, '四、跨部门发函件模板（4 封，需集团行政部协助）')
+add_para(doc, '函件 1 → 品牌部 / 营销部 / IT 部：', bold=True)
+add_para(doc, '请求提供维度 1 / 5 / 7 / 8 的全部信息。抄送：法务部 / HR。', indent=True)
+add_para(doc, '')
+add_para(doc, '函件 2 → 17 家自营酒店 + 39 家受托管理酒店：', bold=True)
+add_para(doc, '请求提供维度 2 / 14 的酒店新媒体现状。抄送：酒店运营平台岗（肖润雨）。', indent=True)
+add_para(doc, '')
+add_para(doc, '函件 3 → 战略发展部 / 投资和资产部 / 财务部：', bold=True)
+add_para(doc, '请求提供维度 4 / 6 / 16 的战略与预算信息。抄送：分管领导。', indent=True)
+add_para(doc, '')
+add_para(doc, '函件 4 → 法务部 / 纪检 / HR：', bold=True)
+add_para(doc, '请求提供维度 7 / 12 的合规框架。抄送：分管领导。', indent=True)
+save_doc(doc, os.path.join(DIR1, '立项1_总览.docx'))
+
+# ----- 立项1 文件 01：集团与56家酒店账号现状 -----
+doc = create_blank_doc(os.path.join(DIR1, '01_集团与56家酒店账号现状.docx'))
+add_title_h1(doc, '维度1+2：集团新媒体账号现状')
+add_subtitle_h2(doc, '立项1：集团新媒体矩阵统筹')
+add_para(doc, '')
+add_para(doc, '本文件覆盖：维度 1（集团新媒体账号现状）+ 维度 2（旗下 56 家酒店新媒体现状）')
+add_para(doc, '责任执行：函件协调 + 蒋抒伶盘点', indent=True)
+add_para(doc, '目标完成时间：T+10（10 天内）')
+add_para(doc, '')
+
+add_h3(doc, '维度 1：集团新媒体账号现状')
+add_table(doc,
+    ['#', '找什么', '从哪里找', '找谁要'],
+    [
+        ['1.1', '集团层面所有新媒体账号清单（平台/账号名/认证主体/开通时间）', '集团 OA 后台、品牌部档案', '品牌部 / 营销部'],
+        ['1.2', '各账号粉丝总量、近 12 个月净增粉', '各平台后台数据', '品牌部 / 各账号运营方'],
+        ['1.3', '各账号月均内容产出数、平均阅读/播放量', '各平台后台', '同 1.2'],
+        ['1.4', '各账号平均互动率（点赞/评论/转发）', '各平台后台', '同 1.2'],
+        ['1.5', '集团官网/小程序/APP 现状（日活/月活/功能模块）', '集团 IT 部门', 'IT 部'],
+        ['1.6', '集团是否有"安逸臻选"电商业务？如有，独立账号还是挂官宣号？', '集团业务介绍、品牌部', '业务部 / 品牌部'],
+        ['1.7', '集团 VI 系统现状（Logo / 字体 / 配色 / 视觉规范）', '集团档案', '品牌部'],
+    ]
+)
+add_para(doc, '')
+
+add_h3(doc, '维度 2：旗下 56 家酒店新媒体现状')
+add_table(doc,
+    ['#', '找什么', '从哪里找', '找谁要'],
+    [
+        ['2.1', '自营 17 家新媒体账号配置清单（每家店独立列表）', '各店提交', '17 家店总经理 / 营销负责人'],
+        ['2.2', '受托管理 39 家新媒体账号配置清单', '各店提交', '39 家店总经理（通过集团函件协调）'],
+        ['2.3', '56 家中"有官号"vs"拆分客房/餐饮号"vs"第三方代运营"比例', '维度1+2.1+2.2 汇总', '汇总分析'],
+        ['2.4', '56 家账号粉丝量排序（Top10 / Bottom10）', '各店数据', '各店 + 平台数据'],
+        ['2.5', '56 家账号近 3 个月内容产出活跃度', '平台数据', '汇总分析'],
+        ['2.6', '56 家"有/无新媒体专职人员"比例', '各店提交', '各店人事'],
+        ['2.7', '各店现有新媒体合作"第三方代运营公司清单"', '各店合同档案', '各店'],
+    ]
+)
+save_doc(doc, os.path.join(DIR1, '01_集团与56家酒店账号现状.docx'))
+
+# ----- 立项1 文件 02：同业对标与集团战略 -----
+doc = create_blank_doc(os.path.join(DIR1, '02_同业对标与集团战略.docx'))
+add_title_h1(doc, '维度3+4：同业对标 + 集团战略需求')
+add_subtitle_h2(doc, '立项1：集团新媒体矩阵统筹')
+add_para(doc, '')
+add_para(doc, '本文件覆盖：维度 3（同业对标）+ 维度 4（集团战略需求）')
+add_para(doc, '责任执行：蒋抒伶 + B166ER', indent=True)
+add_para(doc, '维度3 目标完成时间：T+15（15 天内）')
+add_para(doc, '维度4 目标完成时间：T+20（20 天内）')
+add_para(doc, '')
+
+add_h3(doc, '维度 3：同业对标（必做）')
+add_table(doc,
+    ['#', '找什么', '从哪里找', '找谁要'],
+    [
+        ['3.1', '锦江酒店（中国区）新媒体矩阵架构（官号/子号/酒店号）', '公开资料、媒体报道', '你 + 蒋抒伶'],
+        ['3.2', '华住集团新媒体矩阵架构 + 是否有"统筹部门"', '公开资料、招聘网站', '同 3.1'],
+        ['3.3', '首旅如家新媒体矩阵 + 数字化营销案例', '公开资料', '同 3.1'],
+        ['3.4', '亚朵新媒体矩阵（酒店 + 电商联动）', '公开资料', '同 3.1'],
+        ['3.5', '地方国资酒店集团对标（山东文旅/锦江国际/金陵饭店等）', '公开资料', '同 3.1'],
+        ['3.6', '同业新媒体 GMV 转化案例（如华住"一宿"酒店直播带货）', '行业报告', '同 3.1'],
+    ]
+)
+add_para(doc, '')
+
+add_h3(doc, '维度 4：集团战略需求')
+add_table(doc,
+    ['#', '找什么', '从哪里找', '找谁要'],
+    [
+        ['4.1', '1234 战略全文（最新版本）', '集团 OA', '战略发展部'],
+        ['4.2', '十五五规划修订稿 v5.1（最新）', '集团 OA', '战略发展部'],
+        ['4.3', '6 大酒店改造方案中"品牌/传播"专项', '项目档案', '投资和资产部'],
+        ['4.4', '2026 集团营收 5.2 亿目标拆解（哪些业务线贡献）', '财务部', '财务部'],
+        ['4.5', '2026 集团目标 103 家酒店（新开店名单 + 开业时间）', '战略发展部', '战略发展部'],
+        ['4.6', '集团董事长/分管领导近期讲话中关于"品牌/新媒体/数字化"的提法', '集团 OA、办公会纪要', '党办/行政部'],
+    ]
+)
+save_doc(doc, os.path.join(DIR1, '02_同业对标与集团战略.docx'))
+
+# ----- 立项1 文件 03：团队与人才盘点 -----
+doc = create_blank_doc(os.path.join(DIR1, '03_团队与人才盘点.docx'))
+add_title_h1(doc, '维度5：团队与人才盘点')
+add_subtitle_h2(doc, '立项1：集团新媒体矩阵统筹')
+add_para(doc, '')
+add_para(doc, '责任执行：蒋抒伶本人 + HR', indent=True)
+add_para(doc, '目标完成时间：T+7（本周内）')
+add_para(doc, '')
+
+add_h3(doc, '维度 5：团队与人才')
+add_table(doc,
+    ['#', '找什么', '从哪里找', '找谁要'],
+    [
+        ['5.1', '蒋抒伶完整简历（149 国丝绸之路电视共同体项目细节、央视5 年具体职责）', 'HR 档案 + 本人', 'HR + 蒋抒伶本人'],
+        ['5.2', '全栈运营专家岗位 JD（你想要的画像）', '你起草', '你'],
+        ['5.3', '国企/酒店集团新媒体总监年薪区间（30-50 万）', '招聘网站、薪酬调研', 'HR + 猎头'],
+        ['5.4', '集团内部有无新媒体相关岗位编制', '集团人事', 'HR'],
+        ['5.5', '产业部现有 4 人（部长/运营/科技/平台）岗位说明书', '集团 OA', 'HR'],
+    ]
+)
+save_doc(doc, os.path.join(DIR1, '03_团队与人才盘点.docx'))
+
+# ----- 立项1 文件 04：预算与成本调研 -----
+doc = create_blank_doc(os.path.join(DIR1, '04_预算与成本调研.docx'))
+add_title_h1(doc, '维度6：预算与成本调研')
+add_subtitle_h2(doc, '立项1：集团新媒体矩阵统筹')
+add_para(doc, '')
+add_para(doc, '责任执行：你 / 蒋抒伶', indent=True)
+add_para(doc, '目标完成时间：T+15（15 天内）')
+add_para(doc, '')
+
+add_h3(doc, '维度 6：预算与成本')
+add_table(doc,
+    ['#', '找什么', '从哪里找', '找谁要'],
+    [
+        ['6.1', '直播设备市场价（多机位/灯光/收音/导播）', '设备厂商、淘宝', '你 / 蒋抒伶'],
+        ['6.2', '剪辑/设计/数据分析软件市场价（年费）', '软件官网', '同 6.1'],
+        ['6.3', '抖音/视频号/小红书投流行情（CPM/CPC 行业基准）', '巨量引擎、微信广告', '同 6.1'],
+        ['6.4', '第三方代运营公司收费标准（按酒店/账号/年的行情）', '行业询价', '同 6.1'],
+        ['6.5', '集团过往同类项目预算案例（市场费用历史）', '集团财务', '财务部'],
+    ]
+)
+save_doc(doc, os.path.join(DIR1, '04_预算与成本调研.docx'))
+
+# ----- 立项1 文件 05：合规与边界 -----
+doc = create_blank_doc(os.path.join(DIR1, '05_合规与边界.docx'))
+add_title_h1(doc, '维度7：合规与边界')
+add_subtitle_h2(doc, '立项1：集团新媒体矩阵统筹')
+add_para(doc, '')
+add_para(doc, '责任执行：法务部 + 党办', indent=True)
+add_para(doc, '目标完成时间：T+10（10 天内）')
+add_para(doc, '')
+
+add_h3(doc, '维度 7：合规与边界')
+add_table(doc,
+    ['#', '找什么', '从哪里找', '找谁要'],
+    [
+        ['7.1', '受托管理 39 家酒店合同中"品牌/新媒体/账号权属"条款', '集团档案', '法务部'],
+        ['7.2', '集团品牌统一使用规范（VI/口径/合规边界）', '集团档案', '品牌部'],
+        ['7.3', '国资委对国资品牌传播的规范（特别是涉政/涉外/红色文化）', '集团 OA', '党办'],
+        ['7.4', '集团数据安全/客户隐私合规要求（GDPR/个保法）', '集团 OA', '法务部'],
+        ['7.5', '集团旗下 17 家自营酒店劳动合同中"岗位+新媒体工作"条款', '集团人事', 'HR'],
+    ]
+)
+save_doc(doc, os.path.join(DIR1, '05_合规与边界.docx'))
+
+# ----- 立项1 文件 06：技术与工具 -----
+doc = create_blank_doc(os.path.join(DIR1, '06_技术与工具.docx'))
+add_title_h1(doc, '维度8：技术与工具')
+add_subtitle_h2(doc, '立项1：集团新媒体矩阵统筹')
+add_para(doc, '')
+add_para(doc, '责任执行：你 / 蒋抒伶 + 集团 IT', indent=True)
+add_para(doc, '目标完成时间：T+15（15 天内）')
+add_para(doc, '')
+
+add_h3(doc, '维度 8：技术与工具')
+add_table(doc,
+    ['#', '找什么', '从哪里找', '找谁要'],
+    [
+        ['8.1', '直播技术方案参考（多平台同步/机位/收音）', '行业方案、厂商', '你 / 蒋抒伶'],
+        ['8.2', '矩阵号管理工具（蚁群/WeMedia/西瓜数据等）', '工具官网', '同 8.1'],
+        ['8.3', '数据分析平台（蝉妈妈/新榜/灰豚等）', '工具官网', '同 8.1'],
+        ['8.4', '内容审核流程与工具（集团是否已有 AI 审核？）', '集团 IT', 'IT 部'],
+    ]
+)
+save_doc(doc, os.path.join(DIR1, '06_技术与工具.docx'))
+
+# ============= 立项2：AHL 集团内试点立项 =============
+
+print('\n=== 立项2：AHL 集团内试点立项 ===')
+
+# ----- 立项2 总览 -----
+doc = create_blank_doc(os.path.join(DIR2, '立项2_总览.docx'))
+add_title_h1(doc, '立项2：AHL 集团内试点立项')
+add_subtitle_h2(doc, '信息搜集总览 + 时间节奏')
+add_para(doc, '')
+add_para(doc, '维护者：B166ER（产业发展部）')
+add_para(doc, '创建日期：2026-08-29')
+add_para(doc, '立项负责人：Eric 部长（主）+ B166ER（AHL 资料盘点）+ 集团 IT/法务/数字化部门')
+add_para(doc, '立项截止：**9/30**（集团内试点立项批复）')
+add_para(doc, '')
+add_h3(doc, '一、立项背景')
+add_para(doc, 'AHL 是 Eric 部长的个人项目。2026 年 8 月，集团产业发展部牵头启动 AHL 集团内试点立项。目标是：')
+add_para(doc, '1. 在集团内 5-10 家酒店做 AHL AI Agent 平台 MVP 验证；')
+add_para(doc, '2. 走集团试点立项流程，9/30 前完成批复；')
+add_para(doc, '3. M1（Q4 2026）：3 家酒店上线；M2（2027 H1）：扩展至 5-10 家；M3（2027 H2）：商业化验证。')
+add_para(doc, '')
+add_h3(doc, '二、调研维度清单（共 8 个维度，已拆分到本目录下 8 个独立 Word 文件）')
+table_headers = ['维度', '文件', '主要内容', '本调研周期']
+table_rows = [
+    ['维度9', '01_AHL项目自身能力.docx', 'AHL 产品形态 / 技术架构 / POC 数据', 'T+0（B166ER 内部）'],
+    ['维度10', '02_集团可落地资源.docx', '17 家自营酒店 / 数字化基础 / IT 部门能力', 'T+10'],
+    ['维度11', '03_酒店业AI应用现状.docx', '华住 / 锦江 / 亚朵 / 国外案例 / 行业报告', 'T+15'],
+    ['维度12', '04_合规与利益分配.docx', '【核心敏感】Eric 个人项目入孵化的合规边界', 'T+10'],
+    ['维度13', '05_商业化路径.docx', '订阅 / 抽佣 / 增值 / 集团内 vs 行业外', 'T+25'],
+    ['维度14', '06_试点酒店选择.docx', '数字化基础 / 总经理意愿 / 试点组合', 'T+20'],
+    ['维度15', '07_技术与安全.docx', '数据本地化 / API 对接 / 等保2.0 / OpenAI 失控后安全建议', 'T+25'],
+    ['维度16', '08_时间与9-30对齐.docx', 'OA 立项流程 / 9月班子会 / MVP 周期 / 上线节奏', 'T+20'],
+]
+add_table(doc, table_headers, table_rows)
+add_para(doc, '')
+add_h3(doc, '三、时间节奏表（与 9/30 对齐）')
+time_headers = ['周期', '节点', '执行人', '输出物']
+time_rows = [
+    ['本周内（T+7）', '维度9：B166ER 内部盘点', 'B166ER', 'AHL 资料完整度盘点'],
+    ['10 天内（T+10）', '维度10+12：集团内部 + 合规边界', 'Eric + B166ER + 法务', '集团可落地资源表 + 合规方案'],
+    ['15 天内（T+15）', '维度11：行业研究', 'B166ER', '行业研报 + 标杆案例'],
+    ['20 天内（T+20）', '维度14+16：试点酒店 + 时间节奏', 'B166ER + 集团 IT', '试点酒店组合 + 9月班子会议时间'],
+    ['25 天内（T+25）', '维度13+15：商业化 + 技术安全', 'B166ER + 集团 IT', '商业化路径 + 安全方案'],
+    ['30 天内（T+30）', '汇总 + 9/30 立项批复', 'Eric + B166ER', '立项报告 v1.0 完整数据基础'],
+]
+add_table(doc, time_headers, time_rows)
+save_doc(doc, os.path.join(DIR2, '立项2_总览.docx'))
+
+# ----- 立项2 文件 01-08 -----
+def gen_l2_file(filename, title, subtitle, dimensions, time_hint):
+    """生成立项 2 的单个维度文件"""
+    output_path = os.path.join(DIR2, filename)
+    doc = create_blank_doc(output_path)
+    add_title_h1(doc, title)
+    add_subtitle_h2(doc, subtitle)
+    add_para(doc, '')
+    add_para(doc, f'本文件覆盖：{dimensions}')
+    add_para(doc, f'目标完成时间：{time_hint}')
+    add_para(doc, '')
+    return doc, output_path
+
+# 01 AHL项目自身能力
+doc, output = gen_l2_file('01_AHL项目自身能力.docx', '维度9：AHL 项目自身能力',
+    '立项2：AHL 集团内试点立项',
+    'AHL 产品形态 / 技术架构 / POC 数据',
+    'T+0（B166ER 内部盘点）')
+add_h3(doc, '维度 9：AHL 项目自身能力')
+add_table(doc,
+    ['#', '找什么', '从哪里找', '找谁要'],
+    [
+        ['9.1', 'AHL 产品形态完整定义（功能清单 / demo 视频 / 操作手册）', 'AHL 资料库', 'B166ER'],
+        ['9.2', 'AHL 技术架构（部署方式 / API / 数据流）', 'AHL 资料库', 'B166ER'],
+        ['9.3', 'AHL 已有 POC 数据（如有测试酒店的结果）', 'AHL 资料库', 'B166ER'],
+        ['9.4', 'AHL 在酒店场景的具体应用点（前台/客房/餐饮/营销/HR）', 'AHL 资料库 + 业务分析', 'B166ER'],
+        ['9.5', 'AHL 的"安全/可解释/可控"技术优势（核心叙事）', 'AHL 资料库', 'B166ER'],
+        ['9.6', 'AHL 与集团 PMS/CRM 对接的技术可行性', 'AHL 资料库', 'B166ER + 集团 IT'],
+    ]
+)
+save_doc(doc, output)
+
+# 02 集团可落地资源
+doc, output = gen_l2_file('02_集团可落地资源.docx', '维度10：集团可落地资源',
+    '立项2：AHL 集团内试点立项',
+    '17 家自营酒店 / 数字化基础 / IT 部门能力',
+    'T+10')
+add_h3(doc, '维度 10：集团可落地资源')
+add_table(doc,
+    ['#', '找什么', '从哪里找', '找谁要'],
+    [
+        ['10.1', '自营 17 家酒店类型清单（商务/度假/文化主题/公寓 各几家）', '集团档案', '酒店运营平台岗（肖润雨）'],
+        ['10.2', '集团现有数字化系统清单（PMS/CRM/数据中台/小程序/APP）', '集团 IT', 'IT 部'],
+        ['10.3', '集团 IT 部门人员能力盘点（自有开发 vs 外包依赖度）', '集团人事', 'HR + IT'],
+        ['10.4', '6 大酒店改造中"数字化预算"与 AI 相关预留', '项目档案', '投资和资产部'],
+        ['10.5', '集团数据中台是否已建成 / 进度 / 数据标准化程度', '集团 IT', 'IT 部'],
+        ['10.6', '集团内部 SaaS 工具清单（飞书/钉钉/企业微信等）', '集团 IT', 'IT 部'],
+    ]
+)
+save_doc(doc, output)
+
+# 03 酒店业AI应用现状
+doc, output = gen_l2_file('03_酒店业AI应用现状.docx', '维度11：酒店业 AI 应用现状',
+    '立项2：AHL 集团内试点立项',
+    '华住 / 锦江 / 亚朵 / 国外案例 / 行业报告',
+    'T+15')
+add_h3(doc, '维度 11：酒店业 AI 应用现状（必做）')
+add_table(doc,
+    ['#', '找什么', '从哪里找', '找谁要'],
+    [
+        ['11.1', '华住集团 AI Agent 应用案例（如"易掌柜"/"易客房"）', '公开资料、媒体报道', '你 + 蒋抒伶'],
+        ['11.2', '锦江/首旅/亚朵的 AI 应用现状', '公开资料', '同 11.1'],
+        ['11.3', '国外酒店 AI Agent 案例（Marriott/Hilton 等）', '公开资料', '同 11.1'],
+        ['11.4', '酒店业 AI 应用市场报告（市场规模/增长率/竞争格局）', '艾瑞/IDC/头豹', '同 11.1'],
+        ['11.5', 'OpenAI Agent 失控事件（1200 个 Agent 失控）后行业安全标准变化', '媒体报道', 'B166ER'],
+        ['11.6', 'A2A 协议 / MCP 等技术标准的行业共识', 'GitHub / 技术媒体', 'B166ER'],
+    ]
+)
+save_doc(doc, output)
+
+# 04 合规与利益分配（核心敏感）
+doc, output = gen_l2_file('04_合规与利益分配.docx', '维度12：合规与利益分配',
+    '立项2：AHL 集团内试点立项',
+    '【核心敏感】Eric 个人项目入孵化的合规边界',
+    'T+10')
+add_h3(doc, '维度 12：合规与利益分配（核心敏感）')
+add_table(doc,
+    ['#', '找什么', '从哪里找', '找谁要'],
+    [
+        ['12.1', 'Eric 个人项目入集团孵化的"合规框架"（集团有无先例）', '集团 OA', '法务部'],
+        ['12.2', '"知识产权归属"案例（集团内孵化/外部引入的先例）', '集团档案', '法务 + 战略'],
+        ['12.3', '"商业利益分成"机制（行业惯例：3-7 / 5-5 / 阶梯分成）', '行业咨询', '法务 + 外部咨询'],
+        ['12.4', '集团纪检/审计对"个人项目入孵化"的合规底线', '集团 OA', '纪检'],
+        ['12.5', '红绿灯条款落地路径（不成立公司/不以干部身份/不主动提安逸）', '集团法务', '法务'],
+        ['12.6', 'Eric 个人与集团之间是否签"孵化协议"', '集团法务', '法务'],
+    ]
+)
+save_doc(doc, output)
+
+# 05 商业化路径
+doc, output = gen_l2_file('05_商业化路径.docx', '维度13：商业化路径',
+    '立项2：AHL 集团内试点立项',
+    '订阅 / 抽佣 / 增值 / 集团内 vs 行业外',
+    'T+25')
+add_h3(doc, '维度 13：商业化路径')
+add_table(doc,
+    ['#', '找什么', '从哪里找', '找谁要'],
+    [
+        ['13.1', '酒店业 AI Agent 三种商业模式优劣对比（订阅/抽佣/增值）', '行业报告', 'B166ER'],
+        ['13.2', '集团内酒店 AI 工具价格区间（每店年订阅承受能力）', '同业案例', '你 + 蒋抒伶'],
+        ['13.3', '"集团内 vs 行业外"双轨发展的可行性', '集团战略', '战略发展部'],
+        ['13.4', '试点成功后如何向集团外推广（销售路径/合作伙伴/独立品牌）', '行业研究', 'B166ER'],
+    ]
+)
+save_doc(doc, output)
+
+# 06 试点酒店选择
+doc, output = gen_l2_file('06_试点酒店选择.docx', '维度14：试点酒店选择',
+    '立项2：AHL 集团内试点立项',
+    '数字化基础 / 总经理意愿 / 试点组合',
+    'T+20')
+add_h3(doc, '维度 14：试点酒店选择')
+add_table(doc,
+    ['#', '找什么', '从哪里找', '找谁要'],
+    [
+        ['14.1', '自营 17 家酒店的"数字化基础评分"（PMS/网络/数据）', '集团 IT', 'IT 部'],
+        ['14.2', '各店"总经理意愿"与配合度', '你走访/视频会', '各店总经理'],
+        ['14.3', '试点酒店"组合建议"（商务 2 + 度假 2 + 文化主题 1）', '综合评估', '你'],
+        ['14.4', '各店"客群结构"（商务客/度假客/亲子/老年）', '集团数据', '运营部'],
+        ['14.5', '各店"现有 AI 工具使用情况"（是否已用 AI 前台/AI 客服等）', '集团 IT', 'IT 部'],
+    ]
+)
+save_doc(doc, output)
+
+# 07 技术与安全
+doc, output = gen_l2_file('07_技术与安全.docx', '维度15：技术与安全',
+    '立项2：AHL 集团内试点立项',
+    '数据本地化 / API 对接 / 等保2.0 / OpenAI 失控后安全建议',
+    'T+25')
+add_h3(doc, '维度 15：技术与安全')
+add_table(doc,
+    ['#', '找什么', '从哪里找', '找谁要'],
+    [
+        ['15.1', '数据本地化部署方案（云端 vs 私有化 vs 混合云）', 'AHL 资料库 + 集团 IT', 'B166ER + IT 部'],
+        ['15.2', 'AHL 与集团 PMS/CRM 的 API 对接可行性', '集团 IT', 'IT 部 + B166ER'],
+        ['15.3', '集团数据安全审计要求（等保 2.0 三级 / 数据出境）', '集团 IT', 'IT 部 + 法务'],
+        ['15.4', '客户隐私合规要求（个保法/客人授权/数据脱敏）', '集团法务', '法务部'],
+        ['15.5', 'OpenAI Agent 失控事件后行业安全建议（沙盒/可解释/可中断）', 'AHL 资料库', 'B166ER'],
+    ]
+)
+save_doc(doc, output)
+
+# 08 时间与9-30对齐
+doc, output = gen_l2_file('08_时间与9-30对齐.docx', '维度16：时间与 9/30 对齐',
+    '立项2：AHL 集团内试点立项',
+    'OA 立项流程 / 9月班子会 / MVP 周期 / 上线节奏',
+    'T+20')
+add_h3(doc, '维度 16：时间与 9/30 对齐')
+add_table(doc,
+    ['#', '找什么', '从哪里找', '找谁要'],
+    [
+        ['16.1', '立项流程时间节点（集团 OA 历史立项案例耗时）', '集团 OA', '战略部 / OA 管理员'],
+        ['16.2', '班子会时间安排（9 月班子会议日期）', '集团 OA', '行政部'],
+        ['16.3', 'AHL MVP 开发周期（Eric 个人技术资源评估）', '你 + B166ER', '你'],
+        ['16.4', '与集团数字化部门对接的时间窗口', '集团 IT', 'IT 部'],
+        ['16.5', '试点酒店合同/授权流程（5-10 家酒店上线需要走哪些流程）', '集团 OA', '运营部 + 法务'],
+    ]
+)
+save_doc(doc, output)
+
+print('\n=== 全部文件生成完成 ===')

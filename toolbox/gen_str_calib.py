@@ -1,0 +1,259 @@
+# -*- coding: utf-8 -*-
+"""STR 成都研讨会数据吸收与工作校准 v1.0"""
+import os
+from docx import Document
+from docx.shared import Pt, Cm, RGBColor
+from docx.enum.text import WD_ALIGN_PARAGRAPH, WD_LINE_SPACING
+from docx.enum.table import WD_TABLE_ALIGNMENT
+from docx.oxml.ns import qn
+from docx.oxml import OxmlElement
+
+OUT = r"C:\Users\ericz\Desktop\STR成都研讨会数据吸收与工作校准_v1.0_2026-11-20.docx"
+NAVY = RGBColor(0x1F, 0x38, 0x64); RED = RGBColor(0xC0, 0x00, 0x00)
+
+doc = Document()
+st = doc.styles['Normal']
+st.font.name = '仿宋_GB2312'; st.font.size = Pt(11)
+st.element.rPr.rFonts.set(qn('w:eastAsia'), '仿宋_GB2312')
+st.paragraph_format.space_after = Pt(0)
+st.paragraph_format.line_spacing_rule = WD_LINE_SPACING.EXACTLY
+st.paragraph_format.line_spacing = Pt(21)
+for sec in doc.sections:
+    sec.top_margin = Cm(2.4); sec.bottom_margin = Cm(2.2)
+    sec.left_margin = Cm(2.2); sec.right_margin = Cm(2.0)
+
+
+def F(run, name='仿宋_GB2312', size=11, bold=False, color=None):
+    run.font.name = name; run.font.size = Pt(size); run.bold = bold
+    run._element.rPr.rFonts.set(qn('w:eastAsia'), name)
+    if color is not None:
+        run.font.color.rgb = color
+
+
+def p(t, font='仿宋_GB2312', size=11, bold=False, indent=2, align=None, color=None,
+      before=0, after=0, spacing=21):
+    par = doc.add_paragraph()
+    par.paragraph_format.line_spacing_rule = WD_LINE_SPACING.EXACTLY
+    par.paragraph_format.line_spacing = Pt(spacing)
+    par.paragraph_format.space_before = Pt(before); par.paragraph_format.space_after = Pt(after)
+    if align is not None:
+        par.alignment = align
+    if indent:
+        par.paragraph_format.first_line_indent = Pt(size * indent)
+    F(par.add_run(t), font, size, bold, color)
+    return par
+
+
+def h1(t):
+    p(t, font='黑体', size=12.5, before=10, after=2, color=NAVY)
+
+
+def h2(t):
+    p(t, font='楷体_GB2312', size=11, bold=True, before=6, after=2)
+
+
+def item(t):
+    par = doc.add_paragraph()
+    par.paragraph_format.line_spacing_rule = WD_LINE_SPACING.EXACTLY
+    par.paragraph_format.line_spacing = Pt(21)
+    par.paragraph_format.first_line_indent = Pt(22)
+    F(par.add_run(t), '仿宋_GB2312', 11, False)
+    return par
+
+
+def note(t):
+    par = doc.add_paragraph()
+    par.paragraph_format.line_spacing_rule = WD_LINE_SPACING.EXACTLY
+    par.paragraph_format.line_spacing = Pt(21)
+    par.paragraph_format.left_indent = Pt(22); par.paragraph_format.first_line_indent = Pt(0)
+    F(par.add_run(t), '楷体_GB2312', 10.5, False, RED)
+    return par
+
+
+def shade(cell, hexc):
+    tcPr = cell._tc.get_or_add_tcPr()
+    sh = OxmlElement('w:shd'); sh.set(qn('w:val'), 'clear'); sh.set(qn('w:fill'), hexc)
+    tcPr.append(sh)
+
+
+def tbl(headers, rows, widths=None, fs=9):
+    t = doc.add_table(rows=1, cols=len(headers)); t.style = 'Table Grid'
+    t.alignment = WD_TABLE_ALIGNMENT.CENTER
+    hc = t.rows[0].cells
+    for i, h in enumerate(headers):
+        hc[i].text = ''
+        pp = hc[i].paragraphs[0]; pp.alignment = WD_ALIGN_PARAGRAPH.CENTER
+        pp.paragraph_format.line_spacing_rule = WD_LINE_SPACING.EXACTLY
+        pp.paragraph_format.line_spacing = Pt(15)
+        F(pp.add_run(h), '黑体', fs, False); shade(hc[i], 'D9D9D9')
+    for ri, row in enumerate(rows):
+        cs = t.add_row().cells
+        for ci, v in enumerate(row):
+            cs[ci].text = ''
+            pp = cs[ci].paragraphs[0]
+            pp.paragraph_format.line_spacing_rule = WD_LINE_SPACING.EXACTLY
+            pp.paragraph_format.line_spacing = Pt(15)
+            F(pp.add_run(str(v)), '仿宋_GB2312', fs, False)
+            if ri % 2 == 1:
+                shade(cs[ci], 'F2F2F2')
+    if widths:
+        for r in t.rows:
+            for i, w in enumerate(widths):
+                r.cells[i].width = Cm(w)
+    doc.add_paragraph().paragraph_format.space_after = Pt(3)
+    return t
+
+
+# ==================== 文头 ====================
+p('安逸酒店集团产业发展部', font='仿宋_GB2312', size=12, align=WD_ALIGN_PARAGRAPH.CENTER, after=2)
+p('STR 成都研讨会数据吸收与工作校准', font='方正小标宋简体', size=17,
+  align=WD_ALIGN_PARAGRAPH.CENTER, spacing=30, after=2)
+p('《数据解码：成都酒店市场》2026 年 11 月 19 日 · 郭颂 STR 北亚区高级商务发展',
+  font='仿宋_GB2312', size=11, align=WD_ALIGN_PARAGRAPH.CENTER, after=12)
+
+# ==================== 版权提醒 ====================
+h1('〇、先说一条硬约束：版权')
+note('★ 讲义首页载明："未经 STR 事先书面批准，严禁转载、使用或重新发布本演示文稿的全部或部分。'
+     '任何此类复制品均应明确注明 STR 为来源。"'
+     '因此本讲义的全部数据、图表与结论**只能内部使用**，'
+     '不得进入任何对外材料（含集团公众号、汇报 PPT 的对外版、招商推介）。'
+     '如需对外引用 STR 口径，须先取得授权，或改用不指向 STR 的公开数据来源。'
+     '这一点与 11 月 18 日公众号稿的审核直接相关。')
+
+# ==================== 一 ====================
+h1('一、数据要点')
+h2('（一）STR 的能力框架（做对标的行业标尺）')
+item('样本：41 年数据积累，中国内地样本覆盖 260 多万间客房，划分 51 个市场、186 个次级市场；'
+     '档次样本分布为奢华 13%、超高端 6%、高端 9%、中高端 15%、中端 34%、经济型 23%。')
+item('指标体系（十二项，是安逸做改造对标与收益管理基线的现成语言）：'
+     'RevPAR / ADR / Occ / TRevPAR / GOP / GOPPAR / GOPPOR / MPI / ARI / Chain Scale / '
+     'Market Class / RGI 与 Compet Set（竞争群）。')
+note('★ 关键衔接：RGI 与 Compet Set 的定义，STR 讲义第 4 页讲得很清楚——'
+     'RGI ＝ RevPAR ÷ 同档竞品组 RevPAR 均值 × 100，且竞争群必须锁定。'
+     '这正是《一企一策》分析表里已在用的口径（国堰 RGI 56.2、花园 RGI 32）。'
+     '**但安逸目前能算出 RGI，说明已具备 STR 数据访问或等价数据源——这条要确认清楚，是一项可复用的能力。**')
+
+h2('（二）五个核心结论（讲义第 34 页，可直接引用）')
+tbl(['#', '结论', '数据'],
+    [
+        ['01', '全国基本盘', '全国业绩基本持平：OCC 99、ADR 101、RevPAR 100，仅奢华档每房收入增长'],
+        ['02', '成都对比', '成都 OCC 98、ADR 96、RevPAR 94：**与全国相比，入住率接近，价格让步更深**'],
+        ['03', '档次分化', '高端档入住率 +4.7%、ADR −5.9%，**需求在但转化弱**；中端档降幅最大'],
+        ['04', '时段与区域', '工作日撑起需求，周末房价跌幅最深；**春熙路率先反弹，南部未来预订领先**'],
+        ['05', '供给竞争', '新增供给持续，有限服务竞争加剧；**筹开房间数成都列全国第 8**'],
+    ],
+    widths=[0.9, 3.4, 13.1])
+
+h2('（三）三组对安逸最直接的数据')
+tbl(['维度', '数据', '含义'],
+    [
+        ['**西南市场坐标**',
+         'ADR 指数（2025=100，年累计截至 2026 年 10 月）：**九寨沟 115、OCC 110**；云南区域约 105；'
+         '重庆约 100；成都 ADR 95、OCC 98；另有乐山与峨眉山、绵阳、昆明、丽江、西双版纳',
+         '**川西北高星度假存在真实溢价**：九寨沟 ADR 高出基准 15%。'
+         '国堰在都江堰、古尔沟在理县，同属阿坝州——区域已证明"度假能卖出高价"，'
+         '这是"安逸·山屿"度假品牌最重要的天花板参照'],
+        ['**成都 11 月最新**',
+         '11 月 1—16 日成都先抑后扬，**中旬起每房收入转正**；春熙路率先反弹，成都中心随后跟上；'
+         '未来预订（截至 11 月 9 日）**成都南部显著领先**',
+         '**Q4 存在回暖窗口**，且花园所在的春熙路是反弹第一梯队——'
+         '花园改造（IRR 3.60%，六项最低）的时点与市场回暖窗口对上了；'
+         '但仅 16 天样本，不可外推全年'],
+        ['**新增供给结构**',
+         '2026—2027 年计划开业项目，按档次分布中两个最大份额合计约七成；'
+         '成都筹开房间数列全国第 8',
+         '**新增供给主要压在高星与有限服务两端**；'
+         '高星需求虽在但 ADR −5.9%，高星已是红海——'
+         '这直接支持把"城市高星全服务"给四川宾馆（总府，IRR 12.50%）、把国堰放到度假线的判断'],
+    ],
+    widths=[2.6, 7.0, 6.8])
+
+# ==================== 二 ====================
+h1('二、对 AI 收益管理立项方案的校准（三条）')
+item('一、**目标口径可以立住了，而且要改成"收复失地"的表述。**'
+     '立项方案里 RevPAR 提升 3%→5%→8% 此前缺少外部参照。'
+     'STR 数据显示成都 RevPAR 已比 2025 年跌 6%（指数 94），全国持平（100）。'
+     '**8% 的提升不是激进目标，是在收复 2026 年的失地**；'
+     '建议在立项方案中把基准写明为"以 STR 成都 2026 年 RevPAR 指数 94 为行业参照"。')
+item('二、**必须加一条风险：整个市场都在让价时，个体动态定价的效果会被稀释。**'
+     'STR 明确成都 ADR 指数 96、价格让步深于全国，而高端档是"入住率 +4.7%、ADR −5.9%"——'
+     '**需求在、转化弱，正是动态定价要解决的问题，这支持项目立项**；'
+     '但如果区域是集体性的价格战，个体提价空间同样被压。'
+     '建议立项方案的风险章新增一条："行业价格竞争对动态定价效果的稀释"。')
+item('三、**Q4 的窗口要用上。** STR 显示 11 月中旬起成都 RevPAR 转正、春熙路率先反弹。'
+     '**立项方案第一阶段（2027 年 7—12 月试点）与 Q4 窗口错位**，'
+     '建议把试点前置到 2027 年 4—6 月，或在 2026 年 12 月前用国堰等存量店做一轮短周期试算，'
+     '**用 12 月的市场回暖期验证模型，比等到明年旺季更有说服力**。')
+
+# ==================== 三 ====================
+h1('三、对度假品牌与四层品牌矩阵的校准（三条）')
+item('一、**九寨沟 ADR 115 给"安逸·山屿"提供了区域定价天花板。**'
+     '这条实证直接支撑 11 月 19 日判断中的关键一条：'
+     '**川西北度假有溢价能力，度假品牌是安逸最该占的位**，'
+     '而不是在竞争最激烈的城市高星段（新增供给压顶、成都列全国第 8 筹开）硬拼。')
+item('二、**"高星全服务给四川宾馆、国堰归度假"这个调整被 STR 强化。**'
+     'STR 显示高星段需求在但 ADR −5.9%，且新增供给主要压在两端。'
+     '**国堰作为高星旗舰面对的是供给冲击，而作为"山屿"系度假品牌面对的是溢价空间。**'
+     '建议把这条写进 11 月 19 日那份模式判断的修订说明。')
+item('三、**乐山与峨眉山在西南坐标中位置居中，印证锦著的中端有限服务定位。**'
+     '安逸在乐山有锦江嘉州宾馆（150 间）。'
+     '**不建议向中端商务段之外攀比**，锦著的城市商务扩张定位是成立的。')
+
+# ==================== 四 ====================
+h1('四、对一企一策改造与 RGI 口径的校准（两条）')
+item('一、**RGI 的方法论闭环了，但必须锁定竞争群。**'
+     '讲义同时给出 RGI 的定义与竞争群的定义，'
+     '与《一企一策》分析表中华园 RGI 32（对春熙路 6 家竞品均值 OCC 80%／ADR 400／RevPAR 320）'
+     '与国堰 RGI 56.2（对四川四星 2024：ADR 281／OCC 50.8%／RevPAR 143）的口径一致。'
+     '**下一步要把两个竞争群正式锁定并写入口径卡**：'
+     '花园对标"春熙路 6 家竞品均值"，国堰对标"四川四星 2024"，'
+     '一旦换了竞争群，结论会反转（讲义第 34 页警示：宽样本与 STR 样本会得出相反结论）。')
+item('二、**花园的改造窗口与市场回暖窗口重合，这是新增的正面论据。**'
+     'STR 显示春熙路在 11 月率先反弹，而花园是六项改造中 IRR 最低（3.60%）的。'
+     '**建议在花园改造方案中把"目标定价对标春熙路 6 家竞品均值 RevPAR 320"作为收益测算的上限锚点**，'
+     '与现有"增量 GOP 576.3 万、静态回收 5.2 年"的口径对齐后再锁投资。')
+
+# ==================== 五 ====================
+h1('五、由此产生的一个具体动作：STR 数据采购与复用')
+p('STR 的价值不在这一场会，而在于它同时提供了改造对标与收益管理两类基线数据：')
+tbl(['用途', '需要的 STR 数据', '对应工作'],
+    [
+        ['改造投资测算的外部锚点', '各市场各档次的 RevPAR / ADR / OCC / GOP / GOPPAR / 竞争群构成',
+         '六大改造的 IRR 复核；花园与国堰的目标定价上限'],
+        ['AI 收益管理的对标基线', '月度 KPI 指数、市场预测（Market Forecast）、在手预订（On-the-Book）',
+         'AI 收益管理立项方案的基线口径与试点验收标准'],
+        ['轻资产输出的市场定价', '筹备开项目（Supply / Pipeline）与竞争群数据',
+         '轻资产品牌对外报价与选址准入标准'],
+    ],
+    widths=[4.2, 6.6, 5.6])
+item('建议核实：安逸目前是否已订阅 STR 数据。'
+     '《一企一策》分析表中已使用 STR 口径的 RGI 与竞争群数据，'
+     '**若已有订阅，须明确数据使用范围与可对外引用边界**；'
+     '若尚未订阅，可评估以年度数据服务采购替代单次研讨会，'
+     '这比一次性取数更能支撑长期的改造测算与收益管理。')
+
+# ==================== 六 ====================
+h1('六、读这份材料时必须注意的三条')
+item('一、**版权限制见第〇节**，内部使用，不可对外引用。')
+item('二、**讲义为行业对标数据，不是安逸内部数据**，'
+     '不能替代 PMS 与审计口径，也不能用于对外宣称集团自身业绩。')
+item('三、**部分图表数值无法从文本精确还原**'
+     '（如新增供给的档次分档对应关系、页 23—26 的次级市场分档数值），'
+     '凡本件引用的数字均取自讲义第五个结论页与可直接读取的坐标数据，'
+     '其余如需引用，须回到原始 PDF 逐页核对。')
+
+gap = doc.add_paragraph()
+gap.paragraph_format.line_spacing = Pt(12)
+p('材料来源：《数据解码：成都酒店市场——最新业绩与关键洞察》，'
+  'STR 北亚区高级商务发展 郭颂，2026 年 11 月 19 日成都；'
+  '原件与全文抽取已归档知识库 04_情报。',
+  font='仿宋_GB2312', size=10, after=8)
+
+doc.add_paragraph()
+p('安逸酒店集团产业发展部', align=WD_ALIGN_PARAGRAPH.RIGHT, after=2)
+p('2026 年 11 月 20 日', align=WD_ALIGN_PARAGRAPH.RIGHT)
+
+os.makedirs(os.path.dirname(OUT), exist_ok=True)
+doc.save(OUT)
+print('SAVED:', OUT)
+print('SIZE:', os.path.getsize(OUT))

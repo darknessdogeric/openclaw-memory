@@ -1,0 +1,46 @@
+﻿开始扒取 14 家竞品...
+
+[1-Tier] 蓉福朋喜来登 (C01_fupeng_xilaiden)
+  [OK] 完成 (趋势分 88.0)
+
+[1-Tier] 太古里春熙路步行街城际 (C02_taiguli_chengji)
+  [OK] 完成 (趋势分 93.4)
+
+[1-Tier] 蓉希尔顿花园（太古里店） (C03_xierdun_huayuan)
+  [OK] 完成 (趋势分 92.4)
+
+[1-Tier] pagoda 君亭设计（太古里店） (C04_pagoda_junting)
+  [OK] 完成 (趋势分 84.8)
+
+[1-Tier] 蓉希尔顿欢朋 (C05_xierdun_huanpeng)
+  [OK] 完成 (趋势分 82.8)
+
+[1-Tier] 太古里春熙美居 (C06_taiguli_meiju)
+  [OK] 完成 (趋势分 79.2)
+
+[2-Tier] 总府皇冠假日酒店 (C07_zongfu_huangguan)
+  [OK] 完成 (趋势分 70.8)
+
+[2-Tier] 锦江宾馆 (C08_jinjiang_hotel)
+  [OK] 完成 (趋势分 67.2)
+
+[2-Tier] 成都钓鱼台精品酒店 (C09_diaoyutai_chengdu)
+  [OK] 完成 (趋势分 64.4)
+
+[2-Tier] 成都瑞吉酒店 (C10_chengdu_st_regis)
+  [OK] 完成 (趋势分 66.4)
+
+[2-Tier] 成都群光君悦酒店 (C11_chengdu_grand_hyatt)
+  [OK] 完成 (趋势分 67.6)
+
+[2-Tier] 宽窄巷子精品民宿集群 (C12_kuanzhai_minsu)
+  [OK] 完成 (趋势分 76.0)
+
+[2-Tier] 成都瑯珀·凯悦臻选 (C13_langpo_park_hyatt)
+  [OK] 完成 (趋势分 79.6)
+
+[2-Tier] 成都 IFS 套房酒店 (C14_ifs_serviced)
+  [OK] 完成 (趋势分 76.0)
+
+[OK] 输出: D:\B166ER-OpenClaw\workspace\toolbox\competitor_enriched.json
+[OK] 进度: D:\B166ER-OpenClaw\workspace\toolbox\scrape_progress.json

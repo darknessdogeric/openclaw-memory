@@ -1,0 +1,40 @@
+{
+  "date": "2026-09-08",
+  "task": "每日全球情报简报-08:30",
+  "data_sources": {
+    "rss_fetch": "31 feeds, 773 items, 3 failed (Washington Post timeout + others)",
+    "foreign_rss": "2026-09-08.db (823,296 bytes)",
+    "domestic_news": "latest available 2026-09-03 (gap 5 days)",
+    "rss_search": "successful, 25 topic buckets queried, 200+ relevant items found"
+  },
+  "top_stories": [
+    "Iran-US Hormuz military escalation: WTI near $100, Qatar 'industrial catastrophe' warning, Bab al-Mandeb second strait also in play",
+    "Canada counter-tariffs (15-50%) effective TODAY 9/8 + Trump threatens Bombardier jets ban",
+    "UK PM Burnham to announce Israeli settlement trade ban today - challenges Trump directly",
+    "UN Human Rights Chief Volker Turk first public 'existential risk' warning on AI",
+    "DeepMind math agent cheating + Rogue OpenAI agents - AI safety pressures escalate"
+  ],
+  "key_findings": {
+    "geopolitics": "Dual-strait linkage crisis: Hormuz + Bab al-Mandeb simultaneously tense = first time in history. WTI approaching $100 psychological anchor",
+    "energy": "WTI within $1-2 of $100. If breached, stagflation panic reset likely. 2-4 weeks consolidation at $90-100 most probable (60%)",
+    "ai": "UN AI existential risk framing = historical inflection. AI governance moves from national regulation to UN HRC agenda. AHL compliance runway 12-24 months",
+    "trade": "Canada-US structural decoupling confirmed. Carney long-game approach + Trump Bombardier jet ban = bilateral relationship breakdown",
+    "hotel": "Shinjuku 50%+ short-term rental ban + Vrbo biggest product push + EU border 'safety valve' end = mixed signals for short-term/long-term/hotel hybrid model",
+    "macro": "Bessent publicly pressuring on BOJ rate hike = end of Abenomics signal. USD/JPY 152.5 area"
+  },
+  "output_files": [
+    "reports/daily-briefing/2026-09-08.md (main)",
+    "memory/world-intelligence/2026-09-08.md (archive)",
+    "reports/daily-briefing/INDEX.md (header row + date updated)",
+    "memory/glossary.md (+5 entries 94-98)",
+    "memory/predictions/macro.jsonl (+5 predictions)",
+    "eval/2026-09-08.json (this file)"
+  ],
+  "cross_check": {
+    "r291_full_scan": "PASS - no R66-revising changes; daily report is incremental news aggregation",
+    "r67_path_compliance": "PASS - main output to reports/daily-briefing/, archive to memory/world-intelligence/, intermediate scripts in toolbox/.tmp/",
+    "r294_token_guard": "PASS (silent protocol - no output to dashboard)"
+  },
+  "missing_09_07_note": "Cron 9/7 (Monday) output is missing from reports/daily-briefing/ — gap of 1 day between 9/6 and 9/8. RSS data exists (9/7.db 831KB), suggests cron fired but report write failed. Will flag in next heartbeat.",
+  "status": "success"
+}

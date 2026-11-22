@@ -1,0 +1,2 @@
+$lines = Select-String -Path 'D:\B166ER-OpenClaw\workspace\HEARTBEAT.md' -Pattern '^## HB #\d+' | ForEach-Object { $_.Line }
+$lines | Select-Object -Last 20 | ForEach-Object { Write-Host $_.Substring(0, [Math]::Min(80, $_.Length)) }

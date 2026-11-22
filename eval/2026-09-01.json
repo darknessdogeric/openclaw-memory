@@ -1,0 +1,25 @@
+{
+  "date": "2026-09-01",
+  "self_check": {
+    "overall_score": 9.5,
+    "key_insights": [
+      "R162 AI发现层规则 - AI军备赛格局识别",
+      "高参峰会 v4.0 完整交付",
+      "中国PMI 8月数据分析（官方49.4 vs 财新50.8）"
+    ],
+    "rules_applied": {
+      "R60-11": 2,
+      "R66": 5,
+      "R68": 3,
+      "R162": 1,
+      "R271": 4
+    },
+    "r12_analysis": {
+      "total_scenarios": 8,
+      "applied": 6,
+      "fake": 0,
+      "rate": "75%"
+    }
+  },
+  "generated": "2026-09-01 21:00 GMT+8"
+}

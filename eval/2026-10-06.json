@@ -1,0 +1,97 @@
+{
+  "date": "2026-10-06",
+  "task": "daily-global-intel-briefing",
+  "version": "v1.2",
+  "metrics": {
+    "rss_sources_total": 31,
+    "rss_sources_success": 30,
+    "rss_sources_failed": 1,
+    "rss_items_collected": 811,
+    "news_sources_used": ["NYT", "FT", "Guardian", "SCMP", "Al Jazeera", "DW", "BBC", "Japan Times", "Washington Post", "The Diplomat", "Hospitality Net", "Skift", "The Verge", "MIT Tech Review", "Stratechery", "Wired", "Foreign Affairs", "CNN", "Yahoo Finance"],
+    "report_sections": 16,
+    "report_length_chars": 24880,
+    "report_target_chars": "2500-4000",
+    "glossary_concepts_added": 5,
+    "predictions_added": 5,
+    "index_updated": true,
+    "archive_copied": true,
+    "obsidian_pushed": true
+  },
+  "headlines": [
+    "Saudi-led coalition Operation Dawn of Yemen with 100 jets recaptures Bab al-Mandeb and Mocha from Houthis",
+    "Houthis retaliate striking King Khalid Airport Riyadh + Aramco Rabigh refinery + Khamis Mushait military base",
+    "Trump confirms B-1 withdrawal from RAF Fairford due to Iran-linked threats + 5 British + 1 British-Iranian suspects released on bail",
+    "Iran poised to exploit security vacuum in Iraq/Kurdistan after US mission end",
+    "Wall Street banks launch record $60bn chip deal for Broadcom and Anthropic (AI debt trillion test)",
+    "Pentagon stops using Anthropic AI tools after blacklisting company",
+    "OpenAI adds text watermarking (textGrain) in ChatGPT and Codex - EU first only",
+    "France + Germany demand new trade kill switch to instantly cut off China from EU market",
+    "FBI says California woman spied for China on Taiwanese president's son + DOJ 40 citizenship revocations",
+    "Trump approves executive order allowing cheaper dyed diesel for nonfarm vehicles to quell fuel inflation",
+    "Spain's PM Sanchez calls early election after housing crisis + corruption scandals",
+    "Madrid F1 drew 350K fans but only 70% hotel occupancy - wholesale allotments blocked revenue capture",
+    "107 hotel leader survey: 63% use AI regularly, only 12.6% have scaled strategy, <6% record AI savings in P&L",
+    "AI math breakthroughs including one Millennium Prize problem solved by OpenAI/Anthropic",
+    "Former Anthropic researcher Jacob Coxon whistleblower warns humans don't fully control AI",
+    "AI microdramas are a test case for Chinas next big export wave (services exports +17.1% YoY)"
+  ],
+  "methodology": {
+    "framework": "三步推理 + 5 必问 + 三场景 + 5 定义 + 麦肯锡 + 埃森哲融合",
+    "three_step_reasoning": ["事实层（30 源 RSS 多源验证）", "结构层（16 段 + 因果链 A/B/C/D）", "推演层（三场景 + 5 必问 + 5 定义）"],
+    "five_must_ask": [
+      "沙特联军夺回曼德海峡后胡塞是否会扩反沙特首都？",
+      "美军 RAF Fairford 撤机是否扩散至其他欧洲基地？",
+      "600 亿 AI 贷款测试通过是否会带动 1 万亿 AI 资本周期？",
+      "欧盟对华杀开关是否在 2026 Q4 通过？",
+      "酒店 AI P&L 可见性是否成为头部集团统一采购标准？"
+    ],
+    "three_scenarios": {
+      "baseline_50pct": "区域消耗战 + 中期选举前缓和 - Brent 85-95, 10Y 5.0-5.3%, AI 治理加速但不停滞",
+      "upside_25pct": "曼德海峡重燃 + AI 估值崩 - Brent 破 100, AI 估值 15-25% 回撤, AHL 资产证券化推迟至 2027 Q2",
+      "downside_25pct": "中期选举前综合缓和 - Brent 75-85, 治理规则化提振合规中介估值, 动态定价 REITs 加速"
+    },
+    "five_definitions": [
+      "Regional Proxy Attrition = 区域代理人消耗战",
+      "AI Debt Trillion Test = AI 债务万亿测试",
+      "Trade Kill Switch = 贸易杀开关",
+      "AI P&L Invisibility = AI P&L 不可见",
+      "Wholesale Revenue Loss = 批发渠道利润损失"
+    ]
+  },
+  "key_causal_chains": {
+    "A_regional_proxy_attrition": "RAF Fairford 撤机 → 美军驻伊真空 → 伊朗蚕食库尔德 → 沙特联军百战机收复曼德 → 胡塞反击沙特腹地 → 土耳其/巴基斯坦麦加防务协议 → 区域代理 + 三国盟约新均衡",
+    "B_ai_capital_governance": "华尔街 600 亿芯片融资 → Clayton 沙皇规则化 → Pentagon 切断 Anthropic → 三家水印标准化 → Coxon 警告 + NYC 议会 stonewall → AI 资本周期万亿测试",
+    "C_us_china_substantive_enforcement": "习特会 → FBI 监控 Lai 家属案 → DOJ 40 人入籍撤销 → 法国/德国对华杀开关 → 日本担心中美交易 → 中国 LinkedIn 间谍升级 → 双边关系证据化博弈",
+    "D_europe_social_instability": "法国 500 校关闭 → 西班牙 Sánchez 提前大选 → 欧洲政治版图松动 → 11 月美中期选举共振 → 西方世界内政不稳外溢外交"
+  },
+  "ahl_protocol_implications": [
+    "Day-2 narrative upgrade: from data connector + identity unified to P&L visible AI revenue management - aligns with Pertlink framework",
+    "Energy hedge tail reserve maintain at 25% (Iran + Saudi + North Sea triangle escalation)",
+    "AI compliance moat: textGrain/SynthID watermarks + SEC/Sullivan & Cromwell network for governance era",
+    "Cross-border dual-track: FBI/DOJ China cases + EU-China kill switch = dual compliance architecture",
+    "Hotel REITs pivot thesis: AI edge compute REITs + dynamic pricing REITs validated by Madrid F1 70% occupancy"
+  ],
+  "data_limitations": [
+    "Iran/Energy/AI three topics had complete signal coverage",
+    "European social instability (Spain + France) new headline cluster",
+    "One RSS source failed (Hotel News Now 403)"
+  ],
+  "compliance": {
+    "no_asterisks_in_narrative": true,
+"asterisks_replaced_with": "emoji + clean text",
+    "no_banned_phrases": ["Pro 视角", "DeepSeek Pro 出", "X 视角"],
+    "no_version_comparison": true,
+    "no_rewrite_notes": true,
+    "r12_watermark_triggered": false,
+    "r12_reason": "纯文本报告无视觉产出"
+  },
+  "delivery": {
+    "delivery_mode": "none",
+    "main_output": "reports/daily-briefing/2026-10-06.md",
+    "archive_copy": "memory/world-intelligence/2026-10-06.md",
+    "index_updated": "reports/daily-briefing/INDEX.md (inserted at table header, not appended)",
+    "glossary_entries_added": ["138 Regional Proxy Attrition", "139 AI Debt Trillion Test", "140 EU-China Trade Kill Switch", "141 AI P&L Invisibility", "142 Wholesale Revenue Loss"],
+    "predictions_added": ["saudi_yemen_mocha_offensive", "raf_fairford_substance_withdrawal", "ai_debt_trillion_test", "eu_china_trade_kill_switch", "hotel_ai_pnl_visibility_gap"],
+    "obsidian_pushed": true
+  }
+}

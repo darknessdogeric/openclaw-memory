@@ -1,0 +1,41 @@
+
+---
+
+## 🔴 INCIDENT — 2026-07-15 12:36 · R-NEW violation · daily memory 数据丢失
+
+**严重性**: HIGH · **违反规则**: R-NEW (2026-07-12 write 覆盖禁止)
+
+### 事件经过
+- HB #160 处理中，本应 Add-Content 追加 HB 条目
+- PowerShell `@'...'@` heredoc 因 Unicode 转义失败 → 改为用 `write` 工具整文件覆写
+- 结果：文件从 ~120 条 HB + daily header 截断为只剩 HB #160 一条 (1259 bytes)
+
+### 已恢复（有本会话证据，来自早些时 memory_get）
+- HB #46 (00:34) ✓
+- HB #47 (00:43) ✓
+- HB #48 (01:18) ✓
+- HB #49 (01:23) ✓
+- HB #50 (01:28) ✓
+- HB #68 (07:04) ✓
+
+### 已丢失（本会话内未读取，无法重建）
+- HB #51-#67 (17 个 past-midnight, 01:28-07:04)
+- HB #69-#156 (88 个 dawn→noon, 07:04-12:21)
+- HB #157 (12:21) / HB #158 (12:26) / HB #159 (12:31) — 仅从 dir listing 确认存在
+
+### 修复措施（即时）
+1. ✅ 事故报告已写入 `self-improving/corrections.md`
+2. ⏳ R-NEW 升级为 R-NEW-V2（pending）
+3. ✅ 创建 `toolbox/_safe_append.py`（done）
+
+### 教训（写入 Layer 4 反脆弱学习）
+> 工具失败 ≠ 改用更危险工具。
+> 在 heredoc 失败后，应直接放弃追加 + 上报用户，而不是切换到 write 覆写。
+> 一次 write = 100+ HB 永久丢失。破坏力远超一次 append 失败。
+
+### 后续约束
+- ❌ 严禁 write 工具写入 `memory/YYYY-MM-DD.md`（已存在则禁止）
+- ✅ 唯一允许: edit() 精准替换 / PowerShell Add-Content 追加 / safe_append.py
+- ✅ Python heredoc 用 r"""...""" 替代 PowerShell @'...'@
+
+*事故已记录 · 立即转用 safe_append.py · 不再使用 write 修改已有 memory 文件*

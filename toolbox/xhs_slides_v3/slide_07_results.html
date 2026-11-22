@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>本质升华与方法论总结</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  width: 1080px; height: 1440px; background: #fff;
+  font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+  color: #1a1a1a; display: flex; flex-direction: column; overflow: hidden;
+}
+.header {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 18px 48px 14px; border-bottom: 1.5px solid #1a1a1a;
+}
+.logo { width: 44px; height: 44px; background: #1a1a1a; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  color: #C9A961; font-size: 22px; font-weight: 700; }
+.logo-text { font-size: 13px; color: #444; font-weight: 500; }
+.tag { font-size: 13px; color: #444; border: 1.5px solid #1a1a1a;
+  padding: 4px 12px; border-radius: 20px; font-weight: 500; }
+
+/* 核心：内容容器垂直居中 */
+.content {
+  flex: 1;
+  padding: 36px 48px 36px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  /* 垂直居中 */
+  gap: 22px;
+}
+.page-title { font-size: 42px; font-weight: 800; color: #1a1a1a; margin-bottom: 0; line-height: 1.2; }
+
+/* 顶部数据行 - 加高 */
+.stats-row { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; }
+.stat-card { border: 1.5px solid #d0d0d0; border-radius: 12px;
+  padding: 36px 18px; text-align: center; background: #fafaf8;
+  display: flex; flex-direction: column; justify-content: center; }
+.stat-num { font-size: 76px; font-weight: 800; color: #C9A961;
+  margin-bottom: 10px; line-height: 1; }
+.stat-label { font-size: 17px; color: #555; font-weight: 500; }
+.stat-card.main { background: #1B3A6B; border-color: #1B3A6B; }
+.stat-card.main .stat-num { color: #C9A961; }
+.stat-card.main .stat-label { color: #ddd; }
+
+/* 中间分隔与标题 - 紧凑 */
+.divider { width: 100%; height: 2px; background: #1a1a1a; }
+.section-label { font-size: 15px; color: #555; letter-spacing: 3px;
+  font-weight: 700; margin-top: -2px; }
+
+/* 四要素卡片 - 加高 */
+.insight-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.insight-card { border: 1.5px solid #d0d0d0; border-radius: 12px;
+  padding: 22px 22px 20px; border-top: 5px solid #1B3A6B;
+  display: flex; flex-direction: column; }
+.insight-card .num { font-size: 26px; font-weight: 800; color: #1B3A6B; margin-bottom: 6px; }
+.insight-card .title { font-size: 20px; font-weight: 700; color: #1a1a1a; margin-bottom: 8px; }
+.insight-card .desc { font-size: 16px; color: #444; line-height: 1.5; }
+
+/* 底部金句 - 加高、加宽 */
+.quote-box { background: #1B3A6B; border-radius: 12px; padding: 30px 32px;
+  display: flex; gap: 24px; align-items: center; }
+.quote-box .num { font-size: 64px; font-weight: 800; color: #C9A961;
+  line-height: 0.9; white-space: nowrap; }
+.quote-box .text { font-size: 24px; color: #fff; line-height: 1.5; font-weight: 500; flex: 1; }
+.quote-box .text strong { color: #C9A961; font-size: 30px; display: block; margin-bottom: 8px; }
+.quote-box .attr { font-size: 14px; color: #ddd; margin-top: 8px; display: block; }
+
+.footer { display: flex; justify-content: space-between; align-items: center;
+  padding: 14px 48px; border-top: 1.5px solid #1a1a1a; font-size: 13px; color: #555; }
+</style>
+</head>
+<body>
+  <div class="header">
+    <div style="display:flex;align-items:center;gap:14px;">
+      <div class="logo">B</div><span class="logo-text">B166ER 出品</span>
+    </div>
+    <div class="tag">Hospitality / Product Design · 2026.07.20</div>
+  </div>
+
+  <div class="content">
+    <div class="page-title">本质升华 · From Case to Framework</div>
+
+    <div class="stats-row">
+      <div class="stat-card main">
+        <div class="stat-num">+25万</div>
+        <div class="stat-label">第一年纯增量收入</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">100%</div>
+        <div class="stat-label">零和博弈外的增量</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">5要素</div>
+        <div class="stat-label">可复用的方法论</div>
+      </div>
+    </div>
+
+    <div class="section-label">FIVE ELEMENTS · 五要素方法论总结</div>
+
+    <div class="insight-cards">
+      <div class="insight-card">
+        <div class="num">01</div>
+        <div class="title">区位产能识别</div>
+        <div class="desc">周边有什么可被激活的本地资源？位置 = 天然蓝海</div>
+      </div>
+      <div class="insight-card">
+        <div class="num">02</div>
+        <div class="title">客群数学区隔</div>
+        <div class="desc">产品参数组合 = 自动筛选器，无需身份验证</div>
+      </div>
+      <div class="insight-card">
+        <div class="num">03</div>
+        <div class="title">价值解耦</div>
+        <div class="desc">从配套成本到独立产品，原收入流不变</div>
+      </div>
+      <div class="insight-card">
+        <div class="num">04</div>
+        <div class="title">客户沉淀</div>
+        <div class="desc">入门产品→会员→社群→高客单转化漏斗</div>
+      </div>
+    </div>
+
+    <div class="quote-box">
+      <div class="num">"</div>
+      <div class="text">
+        <strong>产品设计的关键或者说底层逻辑应该是客源精准画像和沉淀。</strong>
+        <span class="attr">—— Eric · 酒店行业资深操盘手（基于重庆某高星级酒店实战验证）</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <span>酒店限制性功能产品 · 方法论系列 · v2.0</span>
+    <span>B166ER 出品</span>
+  </div>
+</body>
+</html>

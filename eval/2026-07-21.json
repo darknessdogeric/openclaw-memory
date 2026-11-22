@@ -1,0 +1,58 @@
+{
+  "date": "2026-07-21",
+  "report": "每日全球情报简报",
+  "model": "minimax/MiniMax-M2.7-highspeed",
+  "sections_covered": 16,
+  "key_events": [
+    "霍尔木兹双重封锁：伊朗关闭+美国恢复封锁同时生效",
+    "美军连续第10天空袭伊朗",
+    "以色列IDF总参谋长：已做好立即恢复对伊朗作战准备",
+    "WTI .23(+0.9%)/Brent .25(+2.46%)",
+    "国家队600亿增持A股（诚通+国新）",
+    "DeepSeek V4满血版实测曝光，本周发布",
+    "欧央行7/23利率决议",
+    "酒店餐饮板块-1.57%逆势下跌"
+  ],
+  "geopolitical_risk": "HIGH",
+  "energy_risk": "MEDIUM_HIGH",
+  "market_risk": "MEDIUM",
+  "source_count": 8,
+  "tool_use": [
+    "trendradar",
+    "web_search"
+  ],
+  "confidence": 0.8,
+  "sessions": [
+    {
+      "session_type": "evening_self_iteration",
+      "time": "21:00 GMT+8",
+      "protocols_verified": [
+        "R256",
+        "R257",
+        "R258",
+        "R012",
+        "R-NEW-V2"
+      ],
+      "zero_breach": true,
+      "hb_count_approx": 800,
+      "key_events_today": [
+        "霍尔木兹封锁7/21再升级（伊朗确认进出通道封锁）",
+        "DeepSeek V4认知修正（实际4/24已发布，非7/21）",
+        "Induction window最终截止日（7/21 24:00）",
+        "D+5沉默127.4h+创历史"
+      ],
+      "rules_applied": {
+        "R256_zero_dis": "~800次全程",
+        "R257_deep_work": "全天",
+        "R258_dormant": "全天",
+        "R012_silence": "全天",
+        "R60_11": "6/6完成",
+        "R12": "0次（无视觉产出）"
+      },
+      "fake_rule_detected": null,
+      "major_error": "DeepSeek V4发布日期预判错误4个月",
+      "dormant_hours_total": 127.4,
+      "eval_score_evening": 9.0
+    }
+  ]
+}

@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>中国酒店行业下行周期深度复盘 v3.0</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body {
+  width: 1080px; height: 1920px;  /* 9:16手机屏 */
+  background: #0d1b2a;
+  font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+  color: #f0e6d2;
+  overflow: hidden;
+  position: relative;
+}
+body::before {
+  content: ""; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+  background:
+    radial-gradient(circle at 15% 20%, rgba(201,169,97,0.06) 0%, transparent 30%),
+    radial-gradient(circle at 85% 80%, rgba(27,58,107,0.20) 0%, transparent 30%);
+  pointer-events: none;
+}
+
+/* 关键：整体内容垂直居中 */
+.layout {
+  position: relative; z-index: 1;
+  width: 1080px; height: 1920px;
+  display: flex; flex-direction: column;
+  padding: 28px 40px 22px;
+  justify-content: center;
+  gap: 14px;
+}
+
+/* 页眉 */
+.header { display: flex; justify-content: space-between; align-items: flex-start; }
+.eyebrow { font-size: 16px; color: #C9A961; letter-spacing: 4px; font-weight: 700; margin-bottom: 6px; }
+.title { font-size: 36px; font-weight: 800; line-height: 1.15; letter-spacing: -1px; }
+.title .accent { color: #C9A961; }
+.subtitle { font-size: 16px; color: #b8a78a; margin-top: 5px; font-weight: 500; }
+.tag { display: inline-block; font-size: 13px; color: #C9A961; border: 1px solid #C9A961; padding: 4px 12px; border-radius: 16px; font-weight: 600; letter-spacing: 1px; }
+.date { font-size: 13px; color: #888; margin-top: 5px; text-align: right; }
+
+/* 核心论断 */
+.headline {
+  background: linear-gradient(135deg, rgba(192,57,43,0.20) 0%, rgba(201,169,97,0.12) 100%);
+  border: 2px solid #c0392b; border-radius: 10px;
+  padding: 14px 20px;
+}
+.headline-title { font-size: 13px; color: #ff8a80; font-weight: 700; letter-spacing: 2px; margin-bottom: 6px; }
+.headline-text { font-size: 19px; color: #f0e6d2; line-height: 1.5; font-weight: 500; }
+.headline-text .em { color: #ff8a80; font-weight: 800; font-size: 22px; }
+.headline-text .gold { color: #C9A961; font-weight: 800; }
+
+/* 通用节 */
+.section { display: flex; flex-direction: column; gap: 8px; }
+.section-label {
+  font-size: 14px; color: #C9A961; font-weight: 700; letter-spacing: 2px;
+  display: flex; align-items: center; gap: 8px;
+}
+.section-label::before { content: ""; width: 4px; height: 14px; background: #C9A961; display: inline-block; }
+
+/* 信源矩阵 */
+.src-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 7px; }
+.src {
+  background: rgba(255,255,255,0.04); border: 1px solid rgba(201,169,97,0.25);
+  border-radius: 5px; padding: 8px 9px;
+}
+.src.tier1 { border-left: 3px solid #c0392b; }
+.src.tier2 { border-left: 3px solid #e67e22; }
+.src.tier3 { border-left: 3px solid #C9A961; }
+.src.tier4 { border-left: 3px solid #5a8db5; }
+.src .lbl { font-size: 10px; font-weight: 700; margin-bottom: 2px; letter-spacing: 0.5px; }
+.src.tier1 .lbl { color: #ff8a80; }
+.src.tier2 .lbl { color: #ffb74d; }
+.src.tier3 .lbl { color: #C9A961; }
+.src.tier4 .lbl { color: #7faecf; }
+.src .name { font-size: 12px; color: #f0e6d2; font-weight: 600; line-height: 1.3; }
+.src .meta { font-size: 9px; color: #888; margin-top: 2px; line-height: 1.25; }
+
+/* 内资+外资双矩阵 */
+.dual-matrix { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.dm-col {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(201,169,97,0.25);
+  border-radius: 8px; padding: 12px 13px;
+}
+.dm-col .head { font-size: 13px; font-weight: 700; letter-spacing: 1px; margin-bottom: 8px; padding-bottom: 6px; border-bottom: 1px solid rgba(201,169,97,0.25); }
+.dm-col.domestic .head { color: #C9A961; }
+.dm-col.foreign .head { color: #7faecf; }
+.dm-row { display: flex; justify-content: space-between; align-items: center; padding: 6px 0; border-bottom: 1px dashed rgba(255,255,255,0.06); font-size: 12px; }
+.dm-row:last-child { border-bottom: none; }
+.dm-name { color: #f0e6d2; font-weight: 600; flex: 1; }
+.dm-val { font-weight: 800; font-size: 14px; }
+.dm-val.pos { color: #6fcf97; }
+.dm-val.neg { color: #ff8a80; }
+.dm-val.flat { color: #b8a78a; }
+
+/* 多维预测矩阵 - 6条指标 */
+.matrix-forecast { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+.fc-card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(201,169,97,0.25);
+  border-left: 3px solid #C9A961;
+  border-radius: 5px; padding: 9px 11px;
+}
+.fc-card.red { border-left-color: #c0392b; }
+.fc-card.gold { border-left-color: #C9A961; }
+.fc-card.green { border-left-color: #27ae60; }
+.fc-card.blue { border-left-color: #5a8db5; }
+.fc-card.orange { border-left-color: #e67e22; }
+.fc-card.purple { border-left-color: #9b6cb0; }
+.fc-card .label { font-size: 11px; color: #888; margin-bottom: 3px; font-weight: 600; letter-spacing: 0.5px; }
+.fc-card .val { font-size: 18px; font-weight: 800; margin-bottom: 2px; line-height: 1; }
+.fc-card .trend { font-size: 10px; color: #b8a78a; line-height: 1.3; }
+.fc-card .num-2024 { font-size: 11px; color: #888; margin-bottom: 3px; }
+.fc-card .num-2024 strong { color: #888; }
+.fc-card.gold .val, .fc-card.gold .arrow { color: #C9A961; }
+.fc-card.red .val, .fc-card.red .arrow { color: #ff8a80; }
+.fc-card.green .val, .fc-card.green .arrow { color: #6fcf97; }
+.fc-card.blue .val, .fc-card.blue .arrow { color: #7faecf; }
+.fc-card.orange .val, .fc-card.orange .arrow { color: #ffb74d; }
+.fc-card.purple .val, .fc-card.purple .arrow { color: #c89bd9; }
+
+/* K型分化 */
+.k-section { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.k-card { background: rgba(255,255,255,0.04); border-radius: 8px; padding: 11px 13px; }
+.k-card.up { border-left: 4px solid #27ae60; }
+.k-card.down { border-left: 4px solid #c0392b; }
+.k-card .head { font-size: 13px; font-weight: 700; margin-bottom: 7px; letter-spacing: 1px; }
+.k-card.up .head { color: #6fcf97; }
+.k-card.down .head { color: #ff8a80; }
+.k-card ul { list-style: none; padding: 0; }
+.k-card li { font-size: 12px; color: #f0e6d2; line-height: 1.5; margin-bottom: 5px; padding-left: 12px; position: relative; }
+.k-card li::before { content: "•"; color: #C9A961; position: absolute; left: 0; }
+
+/* 时间轴 */
+.timeline {
+  background: rgba(255,255,255,0.04); border: 1px solid rgba(201,169,97,0.25);
+  border-radius: 8px; padding: 12px 16px;
+}
+.timeline-bar {
+  height: 6px; border-radius: 3px; margin: 7px 0 5px;
+  background: linear-gradient(90deg,
+    #c0392b 0%, #c0392b 30%,
+    #e67e22 30%, #e67e22 60%,
+    #C9A961 60%, #C9A961 80%,
+    rgba(39,174,96,0.4) 80%, rgba(39,174,96,0.4) 100%);
+}
+.timeline-marks {
+  display: flex; justify-content: space-between; font-size: 12px; color: #b8a78a;
+  font-weight: 600;
+}
+.timeline-phases {
+  display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 6px; margin-top: 10px;
+}
+.tp { font-size: 11px; padding: 7px 5px; border-radius: 4px; text-align: center; font-weight: 600; line-height: 1.3; }
+.tp.dc { background: rgba(192,57,43,0.25); color: #ff8a80; }
+.tp.mb { background: rgba(230,126,34,0.25); color: #ffb74d; }
+.tp.iv { background: rgba(201,169,97,0.25); color: #C9A961; }
+.tp.rs { background: rgba(39,174,96,0.20); color: #6fcf97; }
+
+/* 底部 */
+.bottom { display: grid; grid-template-columns: 1.2fr 1fr; gap: 10px; }
+.quote {
+  background: linear-gradient(135deg, #c0392b 0%, #8e2820 100%);
+  border-radius: 8px; padding: 14px 16px; color: #fff;
+}
+.quote .label { font-size: 12px; letter-spacing: 2px; font-weight: 700; margin-bottom: 5px; opacity: 0.9; }
+.quote .text { font-size: 16px; font-weight: 700; line-height: 1.45; }
+.note-card {
+  background: rgba(255,255,255,0.05);
+  border: 1px dashed rgba(201,169,97,0.4);
+  border-radius: 8px; padding: 12px 14px;
+  font-size: 11px; color: #b8a78a; line-height: 1.55;
+}
+.note-card strong { color: #C9A961; }
+.note-card .head { font-size: 11px; color: #C9A961; font-weight: 700; letter-spacing: 1px; margin-bottom: 6px; }
+</style>
+</head>
+<body>
+<div class="layout">
+
+  <!-- 1. 页眉 -->
+  <div class="header">
+    <div>
+      <div class="eyebrow">B166ER · CYCLE FORECAST v3.0</div>
+      <div class="title">中国酒店行业下行周期<br><span class="accent">深度复盘 · 全信源 · 多维度</span></div>
+      <div class="subtitle">内资前5 + 外资前5 + 14信源 + 6维预测</div>
+    </div>
+    <div style="text-align:right;">
+      <div class="tag">2026.07.21</div>
+      <div class="date">9:16 移动端版</div>
+    </div>
+  </div>
+
+  <!-- 2. 核心论断 -->
+  <div class="headline">
+    <div class="headline-title">▎ 核心论断（最终校准）CORE THESIS</div>
+    <div class="headline-text">
+      下行起点 <span class="em">2023Q4</span> · 当前
+      <span class="em">深度磨底（2025Q3-2026Q4）</span><br>
+      真复苏 <span class="gold">2027之后</span>才可能 · 形式：<span class="gold">L型磨底 + K型分化</span><br>
+      2026全年RevPAR大概率 <span class="em">-1~-3%</span>（不是已复苏）
+    </div>
+  </div>
+
+  <!-- 3. 全信源体系（14维度） -->
+  <div class="section">
+    <div class="section-label">一 · 全信源矩阵 · 14维度（不只看RevPAR）</div>
+    <div class="src-grid">
+      <div class="src tier1">
+        <div class="lbl">▎国际权威</div>
+        <div class="name">STR Global</div>
+        <div class="meta">全球+亚太+中国独立酒店样本</div>
+      </div>
+      <div class="src tier1">
+        <div class="lbl">▎国内全样本</div>
+        <div class="name">酒店之家</div>
+        <div class="meta">36-37万家·1850万间客房全样本</div>
+      </div>
+      <div class="src tier2">
+        <div class="lbl">▎OTA全平台</div>
+        <div class="name">携程+美团+去哪儿+飞猪</div>
+        <div class="meta">订单+价格+搜索热度</div>
+      </div>
+      <div class="src tier2">
+        <div class="lbl">▎券商研报</div>
+        <div class="name">中金/中信/光大/东方</div>
+        <div class="meta">周期判断+目标价跟踪</div>
+      </div>
+      <div class="src tier2">
+        <div class="lbl">▎交通部数据</div>
+        <div class="name">民航+铁路客流</div>
+        <div class="meta">需求侧前置指标</div>
+      </div>
+      <div class="src tier3">
+        <div class="lbl">▎头部财报</div>
+        <div class="name">华住/锦江/亚朵/首旅+万豪/希尔顿</div>
+        <div class="meta">ADR+OCC+RevPAR+GOP</div>
+      </div>
+      <div class="src tier3">
+        <div class="lbl">▎代理行</div>
+        <div class="name">仲量联行/戴德梁行/第一太平</div>
+        <div class="meta">投资交易量+信心指数+资本支出</div>
+      </div>
+      <div class="src tier3">
+        <div class="lbl">▎文旅部</div>
+        <div class="name">官方旅游统计</div>
+        <div class="meta">出游人次+收入+入境</div>
+      </div>
+      <div class="src tier4">
+        <div class="lbl">▎转让平台</div>
+        <div class="name">指点网</div>
+        <div class="meta">挂牌量+成交周期（出清信号）</div>
+      </div>
+      <div class="src tier4">
+        <div class="lbl">▎行业研究</div>
+        <div class="name">浩华/迈点/品橙/北二外</div>
+        <div class="meta">景气指数+MBI+人才</div>
+      </div>
+      <div class="src tier4">
+        <div class="lbl">▎代理行二</div>
+        <div class="name">CBRE/高力国际/世邦魏理</div>
+        <div class="meta">商业地产+酒店交叉验证</div>
+      </div>
+      <div class="src tier4">
+        <div class="lbl">▎用户调研</div>
+        <div class="name">腾讯智慧文旅</div>
+        <div class="meta">客群画像·需求侧补充</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4. 内资+外资双矩阵 -->
+  <div class="section">
+    <div class="section-label">二 · 头部企业真实业绩（内资前5 + 外资前5）</div>
+    <div class="dual-matrix">
+      <div class="dm-col domestic">
+        <div class="head">▎ 内资前5 业绩（2024年报）</div>
+        <div class="dm-row">
+          <div class="dm-name">华住集团</div>
+          <div class="dm-val flat">OCC 81.2%</div>
+        </div>
+        <div class="dm-row">
+          <div class="dm-name">锦江酒店<br><span style="font-size:10px;color:#888;">（境内全服务型）</span></div>
+          <div class="dm-val neg">RevPAR -10.8%</div>
+        </div>
+        <div class="dm-row">
+          <div class="dm-name">亚朵集团</div>
+          <div class="dm-val neg">RevPAR -6.8%</div>
+        </div>
+        <div class="dm-row">
+          <div class="dm-name">首旅酒店</div>
+          <div class="dm-val neg">归母-25.4%</div>
+        </div>
+        <div class="dm-row">
+          <div class="dm-name">君亭酒店<br><span style="font-size:10px;color:#888;">（直营店）</span></div>
+          <div class="dm-val neg">OCC -4.2pct</div>
+        </div>
+      </div>
+      <div class="dm-col foreign">
+        <div class="head">▎ 外资前5 大中华区（2024）</div>
+        <div class="dm-row">
+          <div class="dm-name">万豪国际<br><span style="font-size:10px;color:#888;">（Marriott）</span></div>
+          <div class="dm-val neg">RevPAR -2.3%</div>
+        </div>
+        <div class="dm-row">
+          <div class="dm-name">希尔顿<br><span style="font-size:10px;color:#888;">（Hilton）</span></div>
+          <div class="dm-val flat">亚太+1.6%</div>
+        </div>
+        <div class="dm-row">
+          <div class="dm-name">洲际酒店<br><span style="font-size:10px;color:#888;">（IHG）</span></div>
+          <div class="dm-val neg">RevPAR -4.8%</div>
+        </div>
+        <div class="dm-row">
+          <div class="dm-name">凯悦酒店<br><span style="font-size:10px;color:#888;">（Hyatt）</span></div>
+          <div class="dm-val neg">RevPAR -0.1%</div>
+        </div>
+        <div class="dm-row">
+          <div class="dm-name">温德姆/雅高<br><span style="font-size:10px;color:#888;">（Wyndham/Accor）</span></div>
+          <div class="dm-val neg">温德姆 -8.0%</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 5. 六维预测矩阵 -->
+  <div class="section">
+    <div class="section-label">三 · 多维度预测 · 不只是RevPAR单一曲线</div>
+    <div class="matrix-forecast">
+      <div class="fc-card red">
+        <div class="label">RevPAR 同比</div>
+        <div class="num-2024"><strong>2024:</strong> -9.7%</div>
+        <div class="val">-1~-3%</div>
+        <div class="trend">2026预测 ↓</div>
+      </div>
+      <div class="fc-card orange">
+        <div class="label">ADR 日均房价</div>
+        <div class="num-2024"><strong>2024:</strong> ¥200/ADR-5.8%</div>
+        <div class="val">-3~-5%</div>
+        <div class="trend">继续价格战 ↓</div>
+      </div>
+      <div class="fc-card purple">
+        <div class="label">OCC 入住率</div>
+        <div class="num-2024"><strong>2024:</strong> 58.8%/-2.5pct</div>
+        <div class="val">-1~-2pct</div>
+        <div class="trend">维稳不赚钱 →</div>
+      </div>
+      <div class="fc-card gold">
+        <div class="label">行业GOP 利润率</div>
+        <div class="num-2024"><strong>2024:</strong> 普遍负</div>
+        <div class="val">-1~-2%</div>
+        <div class="trend">仲量联行指引 ↓</div>
+      </div>
+      <div class="fc-card blue">
+        <div class="label">转让挂牌量</div>
+        <div class="num-2024"><strong>2024:</strong> +200%</div>
+        <div class="val">+50~80%</div>
+        <div class="trend">出清继续 ↑</div>
+      </div>
+      <div class="fc-card green">
+        <div class="label">连锁化率 / CR3</div>
+        <div class="num-2024"><strong>2024:</strong> 头部份额↑</div>
+        <div class="val">+2~3pct</div>
+        <div class="trend">集中度上升 ↑</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 6. K型分化 -->
+  <div class="section">
+    <div class="section-label">四 · K型分化 · 行业内部撕裂</div>
+    <div class="k-section">
+      <div class="k-card up">
+        <div class="head">▎ 上行 K-UP · 30%</div>
+        <ul>
+          <li>头部连锁（华住/亚朵/锦江/万豪）</li>
+          <li>中高端品牌（亚朵4.0/桔子水晶）</li>
+          <li>特色文化酒店（松赞/青普/六善）</li>
+          <li>AI智能化标杆（华住30秒入住）</li>
+          <li>亚朵零售 +55% 增长曲线</li>
+          <li>外资奢华品牌仍在签约（万豪+161项目）</li>
+        </ul>
+      </div>
+      <div class="k-card down">
+        <div class="head">▎ 下行 K-DOWN · 70%</div>
+        <ul>
+          <li>单体酒店（无品牌/无会员/无运营）</li>
+          <li>老旧无特色酒店</li>
+          <li>经济型（布丁退市/万枫跑路）</li>
+          <li>低端中端价格战失血</li>
+          <li>OTA依赖症患者</li>
+          <li>3万+关停95%单体</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- 7. 时间轴 -->
+  <div class="section">
+    <div class="section-label">五 · 周期时间轴 · 7阶段</div>
+    <div class="timeline">
+      <div class="timeline-bar"></div>
+      <div class="timeline-marks">
+        <span>2023Q4</span><span>2024Q2</span><span>2025Q1</span><span>2025Q3</span><span>2026Q1</span><span>2026Q3</span><span>2027Q2</span>
+      </div>
+      <div class="timeline-phases">
+        <div class="tp dc">2023Q4-2024Q4<br>探底开始</div>
+        <div class="tp mb">2025全年<br>硬出清+转让潮</div>
+        <div class="tp mb">2026全年<br>深度磨底<br>(体感最差)</div>
+        <div class="tp iv">2027+<br>真复苏待证</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 8. 底部判断 + 数据声明 -->
+  <div class="bottom">
+    <div class="quote">
+      <div class="label">▎ B166ER 投资判断（v3.0 终版）</div>
+      <div class="text">2026不是买点，是<strong>分水岭</strong>；<br>活下去等2027+ 头部K-UP的春天。<br>内资外资 数据都在跌。</div>
+    </div>
+    <div class="note-card">
+      <div class="head">▎ 数据声明</div>
+      <strong>信源14维度交叉验证。</strong><br>
+      · 内资前5：4家RevPAR负、1家仅OCC稳<br>
+      · 外资前5：5/5大中华区全部下滑<br>
+      · 2026仲量联行预测GOP -1~-2%<br>
+      · 2026暑期体感：仍差<br>
+      · STR 10月+2.2%是结构性反弹假信号<br>
+      <strong style="color:#ff8a80;">2026全年大概率继续负增长。</strong>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

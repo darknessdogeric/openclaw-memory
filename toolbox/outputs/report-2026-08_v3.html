@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { width: 1080px; height: 1440px; background: #1a1f3a;
+         font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+         color: #f2ede3; overflow: hidden; }
+  .header { padding: 60px 50px 30px;
+            background: linear-gradient(135deg, #2d3561 0%, #1a1f3a 100%);
+            border-bottom: 2px solid #c9a96e; }
+  .badge { display: inline-block; padding: 8px 20px;
+           background: #c9a96e; color: #1a1f3a;
+           font-size: 22px; font-weight: 700;
+           border-radius: 24px; letter-spacing: 4px; }
+  .title { font-size: 56px; font-weight: 800; color: #f2ede3;
+           margin-top: 24px; line-height: 1.1; }
+  .subtitle { font-size: 24px; color: #c9a96e;
+              margin-top: 12px; letter-spacing: 6px; }
+  .meta { font-size: 18px; color: #9aa3c4; margin-top: 16px; }
+  .section { padding: 36px 50px 0; }
+  .section-title { font-size: 30px; font-weight: 700;
+                   color: #c9a96e; margin-bottom: 18px;
+                   display: flex; align-items: center; }
+  .section-title::before { content: "▍"; color: #c9a96e;
+                            font-size: 36px; margin-right: 12px; }
+  table { width: 100%; border-collapse: collapse; margin-bottom: 20px; }
+  th { background: rgba(201, 169, 110, 0.2);
+       color: #c9a96e; padding: 12px 10px;
+       font-size: 18px; font-weight: 700; text-align: center;
+       letter-spacing: 1px; border-bottom: 1px solid #c9a96e; }
+  td { background: rgba(45, 53, 97, 0.4);
+       padding: 14px 10px; font-size: 18px;
+       color: #f2ede3; text-align: center;
+       border-bottom: 1px solid rgba(201, 169, 110, 0.2); }
+  td.label { text-align: left; color: #d8def0;
+              font-weight: 600; padding-left: 16px; }
+  .up { color: #6bcf7f; font-weight: 700; }
+  .down { color: #ff7a7a; font-weight: 700; }
+  .flat { color: #c9a96e; font-weight: 700; }
+  .city-grid { display: grid; grid-template-columns: repeat(3, 1fr);
+               gap: 10px; margin-top: 12px; }
+  .city-card { background: rgba(45, 53, 97, 0.6);
+               padding: 14px 8px; border-radius: 10px;
+               text-align: center;
+               border: 1px solid rgba(201, 169, 110, 0.3); }
+  .city-name { font-size: 17px; color: #d8def0;
+                margin-bottom: 6px; }
+  .city-val { font-size: 22px; font-weight: 800;
+               font-family: "Helvetica Neue", Arial, sans-serif; }
+  .footer { padding: 28px 50px;
+            background: rgba(26, 31, 58, 0.8);
+            border-top: 1px solid rgba(201, 169, 110, 0.3);
+            margin-top: 24px;
+            position: absolute; bottom: 0; width: 100%; }
+  .footer-line { font-size: 14px; color: #9aa3c4;
+                 text-align: center; letter-spacing: 2px; }
+  .footer-line strong { color: #c9a96e; }
+</style>
+</head>
+<body>
+  <div class="header">
+    <span class="badge">城市排名 · 区域分布</span>
+    <div class="title">暑期市场全景</div>
+    <div class="subtitle">24 城市 + 西部 12 城</div>
+    <div class="meta">2026 暑期(7/1-8/29)数据</div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">头部酒店集团 2025/2026 关键数据</div>
+    <table>
+      <tr>
+        <th>集团</th>
+        <th>开业酒店</th>
+        <th>客房数</th>
+        <th>关键指标</th>
+      </tr>
+      <tr>
+        <td class="label">锦江酒店</td>
+        <td>14,132 家</td>
+        <td>1,368,057 间</td>
+        <td class="down">全服 ADR ¥464.66</td>
+      </tr>
+      <tr>
+        <td class="label">华住集团</td>
+        <td>13,215+ 家</td>
+        <td>—</td>
+        <td class="up">2026 国内新开 537 家</td>
+      </tr>
+      <tr>
+        <td class="label">亚朵集团</td>
+        <td>2,175 家</td>
+        <td>242,526 间</td>
+        <td class="up">Q2 营收 34.9 亿 +41.4%</td>
+      </tr>
+      <tr>
+        <td class="label">亚朵零售</td>
+        <td>—</td>
+        <td>—</td>
+        <td class="up">2025 36.71 亿 +67%</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="section">
+    <div class="section-title">24 城暑期排名 · RevPAR</div>
+    <table>
+      <tr>
+        <th>排名</th>
+        <th>城市</th>
+        <th>Occ YoY</th>
+        <th>ADR YoY</th>
+        <th>RevPAR</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td class="label">三亚</td>
+        <td class="up">+5%</td>
+        <td class="up">+5%</td>
+        <td class="up">+10%</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td class="label">广州</td>
+        <td class="up">+5%</td>
+        <td class="up">+1.5%</td>
+        <td class="up">+6.5%</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td class="label">深圳</td>
+        <td class="up">+4%</td>
+        <td class="up">+2%</td>
+        <td class="up">+6%</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td class="label">上海</td>
+        <td class="up">+3%</td>
+        <td class="flat">0%</td>
+        <td class="up">+3%</td>
+      </tr>
+      <tr>
+        <td>22</td>
+        <td class="label">成都</td>
+        <td class="down">-7%</td>
+        <td class="down">-4%</td>
+        <td class="down">-11%</td>
+      </tr>
+      <tr>
+        <td>24</td>
+        <td class="label">重庆</td>
+        <td class="down">-7%</td>
+        <td class="down">-7%</td>
+        <td class="down">-14%</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="section">
+    <div class="section-title">西部 12 城 · Occ × ADR 散点(节选)</div>
+    <div class="city-grid">
+      <div class="city-card"><div class="city-name">九寨沟</div><div class="city-val up">113</div></div>
+      <div class="city-card"><div class="city-name">云南地区</div><div class="city-val up">105</div></div>
+      <div class="city-card"><div class="city-name">绵阳</div><div class="city-val up">103</div></div>
+      <div class="city-card"><div class="city-name">昆明</div><div class="city-val flat">99</div></div>
+      <div class="city-card"><div class="city-name">贵阳</div><div class="city-val flat">99</div></div>
+      <div class="city-card"><div class="city-name">重庆</div><div class="city-val down">97</div></div>
+      <div class="city-card"><div class="city-name">成都</div><div class="city-val down">95</div></div>
+      <div class="city-card"><div class="city-name">丽江</div><div class="city-val down">91</div></div>
+      <div class="city-card"><div class="city-name">西双版纳</div><div class="city-val down">89</div></div>
+    </div>
+    <div style="font-size: 14px; color: #9aa3c4; text-align: center; margin-top: 8px;">
+      数值为 ADR 指数(2025=100)· 仅九寨沟突破 100 关口
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="footer-line">数据来源:STR 西部酒店峰会 2026 · 集团财报 · 24 城暑期榜单</div>
+    <div class="footer-line"><strong>头部集团 4 家 · 24 城排名 · 西部 9 城速览</strong> · 完整月报 memory/2026-08-月报.md</div>
+  </div>
+</body>
+</html>

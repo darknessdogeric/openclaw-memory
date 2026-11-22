@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>V5 GS Hotel Style - p05_groups</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&family=Inter:wght@400;500;600;700;800;900&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"Noto Sans SC","Inter",sans-serif;background:#1a1d2e;display:flex;justify-content:center;align-items:center;min-height:100vh;padding:20px}
+.poster{width:1080px;height:1440px;position:relative;overflow:hidden;color:#e8e8e8;font-family:"Noto Sans SC",sans-serif;background:linear-gradient(180deg,#1a1d2e 0%,#1a1d2e 60%,#0d0f1a 100%)}
+
+/* 顶部品牌条 */
+.brand-bar{position:absolute;top:54px;left:60px;right:60px;display:flex;justify-content:space-between;align-items:center;font-family:"Noto Sans SC",sans-serif;font-size:18px;font-weight:700;letter-spacing:0;z-index:10}
+.brand-bar .left{color:#e8e8e8}
+.brand-bar .left .accent{color:#5bcfc9}
+.brand-bar .right{color:#5bcfc9;font-weight:500}
+
+/* 主区 */
+.main{position:absolute;top:130px;bottom:130px;left:60px;right:60px;display:flex;flex-direction:column;z-index:5}
+
+/* 标题（GS 范式：双行大标题，副标小字） */
+.title-main{font-family:"Noto Sans SC",sans-serif;font-size:62px;font-weight:900;line-height:1.15;color:#e8e8e8;letter-spacing:0;margin-bottom:0}
+.title-sub{font-family:"Noto Sans SC",sans-serif;font-size:24px;font-weight:500;line-height:1.4;color:#d4a85f;margin-top:14px;margin-bottom:0;letter-spacing:0}
+.title-sub .yellow{color:#d4a85f}
+
+/* 描述（灰色小字） */
+.lede{font-family:"Noto Sans SC",sans-serif;font-size:15px;font-weight:400;line-height:1.6;color:#9a9daa;margin-top:18px;letter-spacing:0}
+
+/* 段落标签（带 emoji 前缀） */
+.section-tag{font-family:"Noto Sans SC",sans-serif;font-size:24px;font-weight:700;color:#e8e8e8;margin-bottom:14px;margin-top:0;display:flex;align-items:center;gap:8px}
+
+/* 数字徽章 */
+.badge{display:inline-block;width:36px;height:36px;border-radius:8px;background:rgba(212,168,95,.15);border:1px solid rgba(212,168,95,.35);text-align:center;line-height:36px;font-family:"Noto Sans SC",sans-serif;font-size:20px;font-weight:900;color:#d4a85f;flex-shrink:0}
+
+/* 段落行（GS 范式：1 行标题 + 1 行描述） */
+.row{display:flex;gap:14px;padding:16px 20px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:8px;align-items:flex-start}
+.row .text-block{flex:1}
+.row .text-block .h{font-family:"Noto Sans SC",sans-serif;font-size:18px;font-weight:700;color:#e8e8e8;line-height:1.3}
+.row .text-block .d{font-family:"Noto Sans SC",sans-serif;font-size:14px;font-weight:400;color:#9a9daa;margin-top:6px;line-height:1.5}
+
+/* 段落之间的细线 */
+.divider{height:1px;background:rgba(255,255,255,.08);margin:12px 0;width:100%}
+
+/* 底部三列 box（GS 范式：3 大商业价值） */
+.tri-col{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.tri-col .col{padding:18px 20px;background:rgba(91,207,201,.05);border:1px solid rgba(91,207,201,.2);border-radius:8px;text-align:center}
+.tri-col .col .tag{font-family:"Noto Sans SC",sans-serif;font-size:13px;font-weight:700;color:#5bcfc9;letter-spacing:.04em;margin-bottom:10px}
+.tri-col .col .h{font-family:"Noto Sans SC",sans-serif;font-size:17px;font-weight:900;color:#e8e8e8;line-height:1.3;margin-bottom:6px}
+.tri-col .col .d{font-family:"Noto Sans SC",sans-serif;font-size:13px;font-weight:400;color:#9a9daa;line-height:1.4}
+
+/* 警告框（GS 范式：红色三角警示） */
+.warn-box{padding:14px 20px;background:rgba(232,89,89,.08);border:1px solid rgba(232,89,89,.25);border-radius:8px;display:flex;gap:12px;align-items:flex-start}
+.warn-box .icon{color:#e85959;font-family:"Noto Sans SC",sans-serif;font-size:18px;font-weight:900;flex-shrink:0;line-height:1.4}
+.warn-box .text{flex:1}
+.warn-box .text .h{font-family:"Noto Sans SC",sans-serif;font-size:17px;font-weight:700;color:#e85959;line-height:1.3}
+.warn-box .text .d{font-family:"Noto Sans SC",sans-serif;font-size:14px;font-weight:400;color:#9a9daa;margin-top:6px;line-height:1.5}
+
+/* 底栏 */
+.foot{position:absolute;bottom:54px;left:60px;right:60px;display:flex;justify-content:space-between;align-items:center;font-family:"Noto Sans SC",sans-serif;font-size:14px;font-weight:500;letter-spacing:0;z-index:10}
+.foot .b{color:#5bcfc9;font-weight:700;letter-spacing:.04em}
+.foot .mid{color:#9a9daa}
+.foot .right{color:#5bcfc9;text-align:right;font-weight:500}
+
+/* 结论行（GS 范式：底部青绿背景高亮） */
+.conclusion{margin-top:auto;padding:18px 24px;background:rgba(91,207,201,.12);border:1px solid rgba(91,207,201,.35);border-radius:8px;text-align:center}
+.conclusion .h{font-family:"Noto Sans SC",sans-serif;font-size:21px;font-weight:900;color:#5bcfc9;line-height:1.4}
+.conclusion .h .y{color:#d4a85f}
+
+/* 顶部黄色文字 */
+.hl-yellow{color:#d4a85f;font-weight:700}
+.hl-cyan{color:#5bcfc9;font-weight:700}
+.hl-red{color:#e85959;font-weight:700}
+</style>
+</head>
+<body>
+<div class="poster">
+  
+<div class="brand-bar">
+  <div class="left">4+5 集团<span class="accent">·</span>分化</div>
+  <div class="right">GROUPS</div>
+</div>
+
+<div class="main">
+  <div class="title-main">头部<em style="font-style:normal;color:#d4a85f">集团</em>分化</div>
+  <div class="title-sub">一超（华住 131 亿）· 多强（亚朵 <span class="yellow">+44%</span>）</div>
+  <div class="lede">国内 4 家 + 国际 5 家 · 2026 H1/Q2 营收</div>
+  
+  <div class="divider"></div>
+  
+  <div class="section-tag">🏨 国内 4 家 H1</div>
+  <div class="divider"></div>
+  
+  <div class="row">
+    <div class="badge">华</div>
+    <div class="text-block">
+      <div class="h">华住 · 131.17 亿 <span class="hl-yellow">+11%</span></div>
+      <div class="d">汉庭 · 全季 · 桔子 · 13,539 店 · 净利 23.94 亿</div>
+    </div>
+  </div>
+  <div class="divider"></div>
+  <div class="row">
+    <div class="badge">锦</div>
+    <div class="text-block">
+      <div class="h">锦江 · 68.01 亿 +4.21%</div>
+      <div class="d">卢浮 · 维也纳 · 14,404 店 · 净利 5.45 亿 <span class="hl-yellow">+47%</span></div>
+    </div>
+  </div>
+  <div class="divider"></div>
+  <div class="row">
+    <div class="badge">亚</div>
+    <div class="text-block">
+      <div class="h">亚朵 · 63.02 亿 <span class="hl-yellow">+44.1%</span></div>
+      <div class="d">中高端 · 零售业务 · 2,175 店 · 净利 10.11 亿 +51%</div>
+    </div>
+  </div>
+  <div class="divider"></div>
+  <div class="row">
+    <div class="badge">首</div>
+    <div class="text-block">
+      <div class="h">首旅 · 35.8 亿 -2.22%</div>
+      <div class="d">如家 · 逸扉 · 8,013 店 · 净利 4.41 亿 +10.98%</div>
+    </div>
+  </div>
+  
+  <div class="section-tag" style="margin-top:14px">🌍 国际 5 家 Q2</div>
+  <div class="divider"></div>
+  
+  <div class="tri-col" style="margin-top:8px">
+    <div class="col">
+      <div class="tag">万豪</div>
+      <div class="h">70.71 亿$</div>
+      <div class="d">Greater China<br>上调</div>
+    </div>
+    <div class="col">
+      <div class="tag">希尔顿</div>
+      <div class="h">33.41 亿$</div>
+      <div class="d">+6.5% 同比</div>
+    </div>
+    <div class="col">
+      <div class="tag">凯悦</div>
+      <div class="h">18.29 亿$</div>
+      <div class="d">Q1 中国 +12%</div>
+    </div>
+  </div>
+  <div class="tri-col" style="margin-top:10px">
+    <div class="col">
+      <div class="tag">洲际 H1</div>
+      <div class="h">26.59 亿$</div>
+      <div class="d">+5.6% 同比</div>
+    </div>
+    <div class="col">
+      <div class="tag">雅高 H1</div>
+      <div class="h">31.5 亿$</div>
+      <div class="d">持平</div>
+    </div>
+    <div class="col" style="background:rgba(212,168,95,.08);border-color:rgba(212,168,95,.3)">
+      <div class="tag" style="color:#d4a85f">国际共性</div>
+      <div class="h" style="color:#d4a85f">中国敞口</div>
+      <div class="d">持续扩大</div>
+    </div>
+  </div>
+</div>
+
+<div class="foot">
+  <div><span class="b">B166ER</span> <span class="mid">· 头部集团</span></div>
+  <div class="right">一超多强 · 增速分化</div>
+</div>
+
+</div>
+</body>
+</html>

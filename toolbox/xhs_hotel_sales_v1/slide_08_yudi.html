@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>ERIC.B166ER · 玉帝视角</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { width: 1080px; height: 1920px; background: #F2EDE3; font-family: "Inter", "Helvetica Neue", "PingFang SC", "Microsoft YaHei", sans-serif; color: #1A2B4D; font-style: normal; }
+
+/* ===== Top bar: subtle "heaven" feel ===== */
+.top-bar { height: 60px; background: #1A2B4D; color: #F2EDE3; display: flex; align-items: center; justify-content: space-between; padding: 0 50px; }
+.top-bar .l { font-size: 13px; letter-spacing: 3px; font-weight: 800; }
+.top-bar .c { font-size: 17px; font-weight: 800; color: #B8453D; letter-spacing: 1.5px; }
+.top-bar .r { font-size: 13px; letter-spacing: 2px; font-weight: 700; opacity: 0.7; }
+
+/* ===== Hero: cosmic / aerial view ===== */
+.hero { padding: 56px 60px 24px; position: relative; }
+.hero .over { font-size: 14px; letter-spacing: 5px; font-weight: 800; color: #B8453D; text-transform: uppercase; margin-bottom: 14px; }
+.hero .h1 { font-size: 62px; font-weight: 900; line-height: 1.1; letter-spacing: -1.5px; color: #1A2B4D; }
+.hero .h1 .red { color: #B8453D; }
+.hero .quote-text { font-size: 28px; color: #1A2B4D; font-weight: 700; display: block; margin-top: 16px; line-height: 1.4; border-left: 4px solid #B8453D; padding-left: 16px; }
+
+/* ===== Timeline: 30 years ===== */
+.timeline { padding: 16px 60px 30px; }
+.tl-head { font-size: 14px; letter-spacing: 4px; font-weight: 800; color: #B8453D; text-transform: uppercase; margin-bottom: 18px; }
+.tl-row { display: flex; align-items: center; gap: 12px; margin-bottom: 10px; padding: 10px 0; }
+.tl-row .year { font-size: 22px; font-weight: 900; color: #B8453D; flex-shrink: 0; min-width: 100px; }
+.tl-row .desc { font-size: 18px; font-weight: 700; color: #1A2B4D; }
+.tl-row .desc .em { color: #5A6B3F; }
+
+/* ===== Counter-intuitive reveal ===== */
+.reveal { padding: 0 60px 26px; border-top: 2px solid #1A2B4D; padding-top: 24px; }
+.reveal .label { font-size: 14px; letter-spacing: 4px; font-weight: 800; color: #B8453D; text-transform: uppercase; margin-bottom: 12px; }
+.reveal .q { font-size: 26px; font-weight: 700; line-height: 1.4; color: #1A2B4D; margin-bottom: 12px; }
+.reveal .q .red { color: #B8453D; font-weight: 900; }
+.reveal .q .green { color: #5A6B3F; font-weight: 900; }
+.reveal .q .strike { text-decoration: line-through; color: #888; font-weight: 600; }
+.reveal .answer { background: rgba(184,69,61,0.08); border-left: 5px solid #B8453D; padding: 18px 22px; border-radius: 4px; margin-top: 8px; }
+.reveal .answer .num { font-size: 56px; font-weight: 900; color: #B8453D; line-height: 1; letter-spacing: -2px; }
+.reveal .answer .lab { font-size: 20px; font-weight: 800; color: #1A2B4D; margin-top: 8px; }
+.reveal .answer .sub { font-size: 14px; color: #5A6B3F; margin-top: 4px; }
+
+/* ===== Jade Emperor perspective quote ===== */
+.jade { padding: 22px 60px 26px; border-top: 1px solid #D8D2C5; }
+.jade .label { font-size: 14px; letter-spacing: 4px; font-weight: 800; color: #5A6B3F; text-transform: uppercase; margin-bottom: 12px; }
+.jade .jade-quote { font-size: 32px; font-weight: 900; line-height: 1.25; color: #1A2B4D; }
+.jade .jade-quote .red { color: #B8453D; }
+.jade .jade-small { font-size: 20px; color: #1A2B4D; font-weight: 700; display: block; margin-top: 14px; line-height: 1.4; }
+.jade .jade-small .em { color: #5A6B3F; font-weight: 800; }
+
+/* ===== CTA ===== */
+.cta { padding: 0 60px; }
+.cta-box { padding: 28px 30px; background: #1A2B4D; border-radius: 6px; color: #F2EDE3; text-align: center; }
+.cta-box .action { font-size: 30px; font-weight: 900; line-height: 1.2; }
+.cta-box .action .red { color: #B8453D; }
+.cta-box .sub { font-size: 18px; font-weight: 700; color: #F2EDE3; opacity: 0.85; margin-top: 8px; }
+.cta-box .price { margin-top: 18px; font-size: 56px; font-weight: 900; color: #B8453D; line-height: 1; letter-spacing: -2px; }
+.cta-box .price .sub { font-size: 22px; color: #B8453D; opacity: 0.8; margin-left: 6px; }
+
+/* ===== Bottom signature ===== */
+.bottom { position: absolute; bottom: 0; left: 0; right: 0; padding: 14px 50px; border-top: 1px solid #D8D2C5; display: flex; justify-content: space-between; align-items: center; font-size: 11px; color: #5A6B3F; letter-spacing: 1px; font-weight: 600; }
+.bottom .right { color: #B8453D; font-weight: 800; }
+</style>
+</head>
+<body>
+
+<div class="top-bar">
+  <div class="l">DOUBYIN · 2026.07.26</div>
+  <div class="c">· ERIK CHEN · 玉帝视角 ·</div>
+  <div class="r">报告定制 · V1</div>
+</div>
+
+<div class="hero">
+  <div class="over">§ 做了 30 年酒店 · 今天才看清</div>
+  <div class="h1">一个老兵 · 看到<br>酒店业 30 年的 <span class="red">真相</span></div>
+  <div class="quote-text">"<span style="color:#B8453D;">5 万块</span> 的报告 · 从来不难<br>难的是 · <span class="red">50 个销售 · 3 层经理 · 2 个办公室</span>"</div>
+</div>
+
+<div class="timeline">
+  <div class="tl-head">§ 30 年路径</div>
+  <div class="tl-row"><div class="year">2002-16</div><div class="desc">岳氏集团 · 销售→经理→副总</div></div>
+  <div class="tl-row"><div class="year">2016-20</div><div class="desc">自己创业 · 成都·重庆·四川</div></div>
+  <div class="tl-row"><div class="year">2020-25</div><div class="desc">重庆 / 武汉 · <span class="em">剧本式演变</span></div></div>
+  <div class="tl-row"><div class="year">2026.07</div><div class="desc">一个下午 + AI · · · 全系统重塑</div></div>
+</div>
+
+<div class="reveal">
+  <div class="label">§ 反直觉抦露</div>
+  <div class="q">报告从来不难<br>难的是 <span class="strike">5 万块价格</span></div>
+  <div class="q">报告从来不难<br>难的是 <span class="red">上述那些不产出报告的人上</span></div>
+
+  <div class="answer">
+    <div class="num">¥ 39.9</div>
+    <div class="lab">一份·为你定制报告 · PDF + PPT · 1-3 天交付</div>
+    <div class="sub">这是 71 信源 + 20+ 子库 · 报告的·真实成本</div>
+  </div>
+</div>
+
+<div class="jade">
+  <div class="label">§ 玉帝视角 · 30 年后的一句话</div>
+  <div class="jade-quote">你不需要 50 个销售<br>你不需要 3 层经理<br>你只需要 <span class="red">你说一句话</span></div>
+  <div class="jade-small">30 年老兵 · 1 个浏览器 · 71 个公开信源 · 20+ 个知识子库<br><span class="em">酒店业业务学学师·转型为酒店业报告定制师</span></div>
+</div>
+
+<div class="cta">
+  <div class="cta-box">
+    <div class="action">DM <span class="red">ERIC.B166ER</span> · 说一句话</div>
+    <div class="sub">你说什么 · 我作什么</div>
+    <div class="price">¥ 39.9<span class="sub">/ 次</span></div>
+  </div>
+</div>
+
+<div class="bottom">
+  <div class="left">一个老兵 · 1 个浏览器 · 1 个下午</div>
+  <div class="right">ERIC.B166ER · 酒店业报告定制 · V1</div>
+</div>
+
+</body>
+</html>

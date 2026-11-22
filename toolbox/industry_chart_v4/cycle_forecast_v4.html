@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>中国酒店行业下行周期 v4.0 · 行业群专版</title>
+<style>
+:root {
+  --bg: #0d1b2a;
+  --gold: #C9A961;
+  --gold-bright: #f5d28b;
+  --gold-dim: rgba(201,169,97,0.25);
+  --red: #c0392b;
+  --red-light: #ffb3ad;
+  --green: #27ae60;
+  --green-light: #6fcf97;
+  --blue: #5a8db5;
+  --blue-light: #7faecf;
+  --orange: #ffb74d;
+  --text: #f0e6d2;
+  --muted: #b8a78a;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body {
+  width: 1080px; height: 1920px;
+  background: var(--bg);
+  font-family: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", sans-serif;
+  color: var(--text);
+  overflow: hidden;
+  position: relative;
+  -webkit-font-smoothing: antialiased;
+}
+body::before {
+  content: ""; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+  background:
+    radial-gradient(circle at 15% 20%, rgba(201,169,97,0.06) 0%, transparent 30%),
+    radial-gradient(circle at 85% 80%, rgba(27,58,107,0.20) 0%, transparent 30%);
+  pointer-events: none;
+}
+.layout {
+  position: relative; z-index: 1;
+  width: 1080px; height: 1920px;
+  display: flex; flex-direction: column;
+  padding: 28px 38px 22px;
+  justify-content: center;
+  gap: 11px;
+}
+
+/* 头部 */
+.header { display: flex; justify-content: space-between; align-items: flex-start; }
+.eyebrow { font-size: 14px; color: var(--gold); letter-spacing: 4px; font-weight: 700; margin-bottom: 5px; }
+.title { font-size: 32px; font-weight: 800; line-height: 1.18; letter-spacing: -1px; }
+.title .accent { color: var(--gold); }
+.subtitle { font-size: 14px; color: var(--muted); margin-top: 4px; font-weight: 500; letter-spacing: 0.5px; }
+.tag { display: inline-block; font-size: 12px; color: var(--gold); border: 1px solid var(--gold); padding: 3px 11px; border-radius: 14px; font-weight: 600; letter-spacing: 1px; }
+.date { font-size: 11px; color: #888; margin-top: 5px; text-align: right; line-height: 1.4; }
+.date .upgrade { color: var(--green-light); font-weight: 700; letter-spacing: 0.5px; }
+
+/* 核心论断 */
+.headline {
+  background: linear-gradient(135deg, rgba(192,57,43,0.22) 0%, rgba(201,169,97,0.14) 100%);
+  border: 1.5px solid var(--red); border-radius: 8px;
+  padding: 13px 18px;
+}
+.headline-title { font-size: 12px; color: var(--red-light); font-weight: 700; letter-spacing: 2px; margin-bottom: 8px; }
+.headline-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+.h-cell { display: flex; flex-direction: column; gap: 4px; padding-left: 8px; border-left: 1px solid rgba(255,255,255,0.08); }
+.h-cell:first-child { border-left: none; padding-left: 0; }
+.h-cell .label { font-size: 11px; color: var(--muted); letter-spacing: 1.5px; font-weight: 700; }
+.h-cell .val { font-size: 14px; color: var(--text); font-weight: 800; line-height: 1.25; }
+.h-cell .val .em { color: #ffcfc9; font-size: 15px; font-weight: 800; }
+.h-cell .val .gold { color: var(--gold-bright); font-size: 15px; font-weight: 800; }
+.h-cell .val .green { color: var(--green-light); font-size: 15px; font-weight: 800; }
+.h-cell .sub { font-size: 10px; color: var(--muted); font-weight: 500; line-height: 1.3; margin-top: 1px; }
+
+/* 通用节 */
+.section { display: flex; flex-direction: column; gap: 6px; }
+.section-label {
+  font-size: 13px; color: var(--gold); font-weight: 700; letter-spacing: 2px;
+  display: flex; align-items: center; gap: 8px;
+}
+.section-label::before { content: ""; width: 4px; height: 14px; background: var(--gold); display: inline-block; }
+.section-label .count { font-size: 11px; color: var(--muted); font-weight: 500; margin-left: auto; letter-spacing: 0.5px; }
+
+/* 10 论点双列 */
+.pts-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.pt {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid var(--gold-dim);
+  border-left: 3px solid var(--gold);
+  border-radius: 5px;
+  padding: 10px 12px;
+  display: flex; flex-direction: column; gap: 5px;
+}
+.pt.red { border-left-color: var(--red); }
+.pt.green { border-left-color: var(--green); }
+.pt.blue { border-left-color: var(--blue); }
+.pt .num { font-size: 10px; color: var(--gold); font-weight: 700; letter-spacing: 1.5px; }
+.pt.red .num { color: var(--red-light); }
+.pt.green .num { color: var(--green-light); }
+.pt.blue .num { color: var(--blue-light); }
+.pt .head { font-size: 14px; color: var(--text); font-weight: 800; line-height: 1.25; letter-spacing: -0.3px; }
+.pt .body { font-size: 11px; color: var(--muted); line-height: 1.45; font-weight: 500; }
+.pt .body strong { color: var(--gold); font-weight: 700; }
+.pt .body .red { color: var(--red-light); font-weight: 700; }
+.pt .body .green { color: var(--green-light); font-weight: 700; }
+
+/* 拐点三条件 */
+.trigger-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+.tr-card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid var(--gold-dim);
+  border-radius: 5px;
+  padding: 11px 12px;
+}
+.tr-card .num { font-size: 10px; color: var(--gold); font-weight: 800; letter-spacing: 1.5px; margin-bottom: 4px; }
+.tr-card .head { font-size: 13px; color: var(--text); font-weight: 700; margin-bottom: 5px; letter-spacing: -0.2px; }
+.tr-card .body { font-size: 10.5px; color: var(--muted); line-height: 1.4; }
+.tr-card .prob { font-size: 11px; color: var(--muted); font-weight: 800; margin-top: 6px; padding-top: 5px; border-top: 1px dashed rgba(201,169,97,0.3); }
+.tr-card .prob .green { color: var(--green-light); }
+.tr-card .prob .gold { color: var(--gold-bright); }
+.tr-card .prob .orange { color: var(--orange); }
+
+/* 投资判断 */
+.judgment {
+  background: linear-gradient(135deg, #1a2438 0%, #0d1b2a 100%);
+  border: 1.5px solid var(--gold);
+  border-radius: 8px;
+  padding: 13px 16px;
+  color: #fff;
+  position: relative;
+}
+.judgment::before {
+  content: ""; position: absolute; top: 0; left: 0; width: 4px; height: 100%;
+  background: linear-gradient(180deg, var(--red) 0%, var(--gold) 100%);
+  border-radius: 8px 0 0 8px;
+}
+.judgment-label { font-size: 11px; letter-spacing: 2px; font-weight: 700; margin-bottom: 8px; opacity: 0.9; color: var(--gold); }
+.judgment-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+.j-cell .when { font-size: 10px; opacity: 0.7; letter-spacing: 1.5px; margin-bottom: 3px; font-weight: 700; color: var(--gold); }
+.j-cell .what { font-size: 13.5px; font-weight: 800; line-height: 1.25; letter-spacing: -0.2px; color: var(--text); }
+
+/* 数据声明 */
+.data-note {
+  background: rgba(255,255,255,0.05);
+  border: 1px dashed var(--gold-dim);
+  border-radius: 6px;
+  padding: 10px 14px;
+  font-size: 10.5px; color: var(--muted); line-height: 1.55;
+}
+.data-note strong { color: var(--gold); font-weight: 700; }
+.data-note .head { font-size: 11px; color: var(--gold); font-weight: 700; letter-spacing: 1.5px; margin-bottom: 5px; display: block; }
+.data-note .warn { color: var(--red-light); font-weight: 800; }
+.data-note .upgrade { color: var(--green-light); font-weight: 800; }
+
+/* 底部 */
+.footer { display: flex; justify-content: space-between; align-items: center; font-size: 10px; color: #888; padding: 0 4px; }
+.footer .brand { letter-spacing: 0.5px; }
+.footer .wm { color: var(--gold); font-weight: 700; letter-spacing: 2px; font-size: 11px; }
+</style>
+</head>
+<body>
+<div class="layout">
+
+  <!-- 1. 标题 -->
+  <div class="header">
+    <div>
+      <div class="eyebrow">B166ER · CYCLE FORECAST v4.0 · 行业群专版</div>
+      <div class="title">中国酒店行业下行周期<br><span class="accent">精确校准 · 三段博弈 · 拐点拆解</span></div>
+      <div class="subtitle">14 信源 × 10 论点 × 3 段博弈 × 24 个月窗口</div>
+    </div>
+    <div style="text-align:right;">
+      <div class="tag">v4.0 · 升级版</div>
+      <div class="date"><span class="upgrade">+24月窗口 · +AI重塑<br>+三触发条件 · 5→14信源</span></div>
+      <div class="date">2026.07.21 · 9:16<br>行业群投放</div>
+    </div>
+  </div>
+
+  <!-- 2. 核心论断重塑 -->
+  <div class="headline">
+    <div class="headline-title">▎ 核心论断（v4.0 · 已升级 v3.0 的"2027+"模糊判断）</div>
+    <div class="headline-grid">
+      <div class="h-cell">
+        <div class="label">2026 H2</div>
+        <div class="val"><span class="em">体感至暗</span></div>
+        <div class="sub">不是 H1 · 是最后一波希望破灭</div>
+      </div>
+      <div class="h-cell">
+        <div class="label">2027 H1</div>
+        <div class="val"><span class="em">假复苏陷阱</span></div>
+        <div class="sub">基数效应 ≠ 行业回暖 · 必避开</div>
+      </div>
+      <div class="h-cell">
+        <div class="label">2027 Q3-Q4</div>
+        <div class="val"><span class="gold">真拐点</span></div>
+        <div class="sub">三条件齐发 · 概率 60% · +2~3%</div>
+      </div>
+      <div class="h-cell">
+        <div class="label">2028+ 形态</div>
+        <div class="val"><span class="green">斜向上 L 型</span></div>
+        <div class="sub">不是 V 不是 U · +3~5% × 3-5 年</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. 论点 1-4 三段博弈 -->
+  <div class="section">
+    <div class="section-label">一 · 三段博弈（时间维度）<span class="count">论点 01-04</span></div>
+    <div class="pts-grid">
+      <div class="pt red">
+        <div class="num">▎ 01 / 2026 H2</div>
+        <div class="head">体感至暗（不是 H1）</div>
+        <div class="body">暑期后最后一波希望破灭 · 转让挂牌 <strong>+50~80%</strong>（仲量指引）· ADR 价格战恶化 <strong class="red">-3~-5%</strong></div>
+      </div>
+      <div class="pt red">
+        <div class="num">▎ 02 / 2027 H1</div>
+        <div class="head">假复苏陷阱（必避开）</div>
+        <div class="body">基数效应 + 结构升级 ≠ 行业回暖 · 媒体会大量报道"复苏" → 诱导性叙事 · 入场做大动作<strong class="red">必被套</strong></div>
+      </div>
+      <div class="pt green">
+        <div class="num">▎ 03 / 2027 Q3-Q4</div>
+        <div class="head">真拐点（三条件齐发）</div>
+        <div class="body">供给出清 + 头部爬坡 + 政策催化 三者同时满足 · RevPAR 真回正 <strong class="green">+2~3%</strong> · 概率 <strong class="green">60%</strong></div>
+      </div>
+      <div class="pt blue">
+        <div class="num">▎ 04 / 2028+ 形态</div>
+        <div class="head">斜向上 L 型</div>
+        <div class="body">不是 V（不可能）· 不是 U（强度不够）· 年增 <strong>+3~5% × 3-5 年</strong> · 强者恒强，弱者消亡是常态</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4. 论点 5-8 K 型双矩阵 -->
+  <div class="section">
+    <div class="section-label">二 · K 型双矩阵（结构维度）<span class="count">论点 05-08</span></div>
+    <div class="pts-grid">
+      <div class="pt green">
+        <div class="num">▎ 05 / K-UP 赢家 5 类</div>
+        <div class="head">头部 / 特色 / AI / 跨境 / 中介</div>
+        <div class="body">头部连锁 <strong class="green">+2~3pct</strong> 份额 · 中高端特色（亚朵 4.0 / 松赞）· AI 智能化先行者 · 跨境 OTA · 转让撮合</div>
+      </div>
+      <div class="pt red">
+        <div class="num">▎ 06 / K-DOWN 输家 5 类</div>
+        <div class="head">单体 / OTA 依赖 / 经济型 / 重资产 / 无 IP</div>
+        <div class="body"><strong class="red">70% 单体</strong>（3 万+ 关停继续）· OTA 依赖（commission 25-30% 吃光利润）· 经济型（布丁/万枫已跑路）· 重资产无运营持有方 · 无 IP 低端中端</div>
+      </div>
+      <div class="pt">
+        <div class="num">▎ 07 / 真正战场</div>
+        <div class="head">K 型腰部 25-30%（核心定位）</div>
+        <div class="body">不是 K-UP 头部（直接博弈必输）· 不是 K-DOWN 单体（70% 必输）· <strong>"有觉醒意识但缺 AI 工具的腰部中端"</strong></div>
+      </div>
+      <div class="pt blue">
+        <div class="num">▎ 08 / 24 个月战略窗口</div>
+        <div class="head">2026 H2 - 2028 H2</div>
+        <div class="body">AI 化领先期 · AHL 等行业的窗口 · 中端 AI 化必须把握 · 错过等下一周期（5 年+）</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 5. 论点 9-10 AI 重塑 + 黑天鹅 -->
+  <div class="section">
+    <div class="section-label">三 · AI 重塑 + 黑天鹅（变量维度）<span class="count">论点 09-10</span></div>
+    <div class="pts-grid">
+      <div class="pt blue">
+        <div class="num">▎ 09 / AI 重塑腰部 3 个真实机会</div>
+        <div class="head">客群 / 收益 / 服务三件套</div>
+        <div class="body">① <strong>客群资产数字化</strong>（私域 + 会员）② <strong>收益管理实时化</strong>（动态定价）③ <strong>服务标准化</strong>（30 秒入住只是皮毛）</div>
+      </div>
+      <div class="pt red">
+        <div class="num">▎ 10 / 三个黑天鹅</div>
+        <div class="head">地缘 15% / 政策 35% / AI 超预期 25%</div>
+        <div class="body">① 地缘冲击 → <strong>入境游断崖</strong>模型全破 · ② 政策不及 → 拐点<strong>延后</strong> · ③ AI 超预期 → 窗口<strong>缩到 12 个月</strong></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 6. 拐点三触发条件 -->
+  <div class="section">
+    <div class="section-label">四 · 2027 Q3-Q4 拐点三触发条件（拆解版）</div>
+    <div class="trigger-grid">
+      <div class="tr-card">
+        <div class="num">▎ 触发 1</div>
+        <div class="head">供给侧出清完成</div>
+        <div class="body">3 万+ 关停消化 + 转让挂牌回稳 + 单体出清到位</div>
+        <div class="prob">概率 <span class="green">75%</span></div>
+      </div>
+      <div class="tr-card">
+        <div class="num">▎ 触发 2</div>
+        <div class="head">头部新店爬坡完成</div>
+        <div class="body">华住 2024-2025 新开店进入收益期 · ADR 修复</div>
+        <div class="prob">概率 <span class="gold">80%</span></div>
+      </div>
+      <div class="tr-card">
+        <div class="num">▎ 触发 3</div>
+        <div class="head">政策催化</div>
+        <div class="body">入境免签扩大（240h → 30 天）+ 文旅消费券落地</div>
+        <div class="prob">概率 <span class="orange">60%</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 7. 投资判断 -->
+  <div class="judgment">
+    <div class="judgment-label">▎ 投资判断（终极版 v4.0）</div>
+    <div class="judgment-grid">
+      <div class="j-cell">
+        <div class="when">2026 Q4</div>
+        <div class="what">不是买点<br>是布局点</div>
+      </div>
+      <div class="j-cell">
+        <div class="when">2027 H1</div>
+        <div class="what">避开<br>假复苏陷阱</div>
+      </div>
+      <div class="j-cell">
+        <div class="when">2027 Q3-Q4</div>
+        <div class="what">AHL 等行业<br>放量点</div>
+      </div>
+      <div class="j-cell">
+        <div class="when">2028 H2</div>
+        <div class="what">行业新周期<br>确立</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 8. 数据声明 -->
+  <div class="data-note">
+    <span class="head">▎ 数据声明（14 信源交叉验证）</span>
+    <span class="upgrade">▲ v4.0 升级</span>：把 v3 的"2027+"模糊判断精确化为三段博弈 + 拐点拆解 · 仲量联行 2026 预测 GOP <strong>-1~-2%</strong> · 内资前 5：<strong>4 家 RevPAR 负 / 1 家仅 OCC 稳</strong> · 外资前 5：<strong>5/5 大中华区全部下滑</strong> · 2026 H2 体感至暗（仲量指引）· <span class="warn">2026 全年 RevPAR 大概率 -1~-3%</span>
+  </div>
+
+  <!-- 9. 底部 -->
+  <div class="footer">
+    <div class="brand">ERIC 的 B166ER 出品 · 行业群投放版</div>
+    <div class="wm">© B166ER-20260721</div>
+  </div>
+
+</div>
+</body>
+</html>

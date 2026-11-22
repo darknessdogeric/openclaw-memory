@@ -1,0 +1,84 @@
+{
+  "date": "2026-10-03",
+  "day_of_week": "Saturday",
+  "cron_id": "0eced1e9-8729-47d8-b8d6-34eff13ed780",
+  "cron_name": "Entity Extractor (每日21:30)",
+  "r_rule": "R60-11",
+  "scheduled_time": "2026-10-03T21:30:00+08:00",
+  "actual_trigger": "2026-10-03T21:32:00+08:00",
+  "trigger_offset_minutes": 2,
+  "status": "success",
+  "extraction": {
+    "mode": "today",
+    "days_scanned": 1,
+    "files_scanned": ["2026-10-03.md"],
+    "unique_new_entities": 0,
+    "unique_new_relations": 0,
+    "new_entity_types": {
+      "Person": 0,
+      "Company": 0,
+      "Place": 0,
+      "Tool": 0,
+      "Project": 0,
+      "Event": 0
+    },
+    "new_entity_names": [],
+    "new_entity_ids": []
+  },
+  "outputs": {
+    "graph_jsonl": {
+      "path": "memory/ontology/graph.jsonl",
+      "updated": false,
+      "today_entries": 0,
+      "size_bytes_after": 110768,
+      "note": "今日无新增实体,graph.jsonl 保持 110768 字节"
+    },
+    "relations_trend": {
+      "path": "memory/ontology/relations-trend.md",
+      "updated": true,
+      "total_relations_today": 0,
+      "cumulative_relations": 16
+    },
+    "dashboard": {
+      "path": "memory/eric-4-projects-dashboard.md",
+      "updated": true,
+      "projects_mentioned_today": 0,
+      "note": "今日 memory 内容为产投融合研究 (8 家集团调研),未提及 4 项目 (AHL/1244战略/医养酒店/深度自迭代)"
+    },
+    "eval_json": {
+      "path": "eval/2026-10-03-entity-extractor.json",
+      "updated": true
+    },
+    "entities_markdown": {
+      "path": "memory/tmp/entities-2026-10-03.md",
+      "updated": true
+    },
+    "obsidian_push": {
+      "attempted": true,
+      "tool": "toolbox/cron_to_obsidian.py",
+      "content_file": "memory/tmp/entities-2026-10-03.md",
+      "output_file": "obsidian-vault/50-外部接入/cron-outputs/2026-10/21-33-Entity-Extractor-实体抽取-2.md",
+      "status": "success",
+      "pushed_at": "2026-10-03T21:33:01",
+      "appended_to_daily": false
+    }
+  },
+  "r60_11_compliance": {
+    "step_1_graph_jsonl": "done",
+    "step_2_relations_trend": "done",
+    "step_3_dashboard": "done",
+    "step_4_eval_json": "done",
+    "step_5_obsidian_push": "done"
+  },
+  "notes": [
+    "今日 memory (2026-10-03.md) 仅一条记录: 13:50 产投融合研究完成",
+    "研究输出: anyi-ops-kb/12_战略研究/产投融合组织架构研究_2026-10-03.md (27992 字节, 16982 中文字符)",
+    "调研覆盖: 复星/华润/万达/海航/锦江/万豪/雅高/凯悦 8 家集团",
+    "实体抽取结果: 0 实体 + 0 关系 (内容无预定义实体关键词)",
+    "Eric 4 项目 (AHL/1244战略/医养酒店/深度自迭代) 今日均未提及",
+    "graph.jsonl 累积保持 110768 字节,无新增写入",
+    "Obsidian 推送强制执行 (虽然无新增,按 cron 强制要求)"
+  ],
+  "next_run": "2026-10-04T21:30:00+08:00",
+  "generated_by": "B166ER entity_extractor.py + R60-11"
+}

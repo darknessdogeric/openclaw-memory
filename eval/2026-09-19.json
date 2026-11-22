@@ -1,0 +1,28 @@
+{
+  "date": "2026-09-19",
+  "task": "entity_extractor",
+  "status": "completed",
+  "stats": {
+    "new_entities": 14,
+    "new_relations": 0,
+    "files_scanned": ["2026-09-19.md"]
+  },
+  "entities": [
+    {"type": "Person", "name": "Eric"},
+    {"type": "Person", "name": "B166ER"},
+    {"type": "Company", "name": "安逸酒店集团"},
+    {"type": "Company", "name": "四川旅游投"},
+    {"type": "Company", "name": "AHL"},
+    {"type": "Company", "name": "携程"},
+    {"type": "Company", "name": "美团"},
+    {"type": "Project", "name": "AHL"},
+    {"type": "Project", "name": "1244战略"},
+    {"type": "Project", "name": "医养酒店"},
+    {"type": "Project", "name": "R66监控"},
+    {"type": "Place", "name": "四川"},
+    {"type": "Tool", "name": "OpenClaw"},
+    {"type": "Tool", "name": "DeepSeek"}
+  ],
+  "projects_mentioned": ["AHL", "1244战略", "医养酒店", "R66监控"],
+  "notes": "本日 new entity 14, relations 0 (daily 文件未提供关系 context)"
+}

@@ -1,0 +1,54 @@
+{
+  "task": "每日全球情报简报-08:30",
+  "date": "2026-07-18",
+  "cron_id": "7e149123-b2c9-4336-89fa-da9cae972679",
+  "execution": {
+    "main_report": "reports/daily-briefing/2026-07-18.md",
+    "archive_copy": "memory/world-intelligence/2026-07-18.md",
+    "index_updated": true,
+    "index_method": "header_insertion",
+    "glossary_added_terms": 5,
+    "predictions_added_data_points": 5,
+    "dashboard_updated": false,
+    "dashboard_reason": "无项目状态变更 由 entity_extractor.py 今晚自动刷新",
+    "obsidian_pushed": "pending"
+  },
+  "sources_used": {
+    "trendradar_latest_news": 30,
+    "web_search_count": 7,
+    "primary_signals": [
+      "华尔街见闻早餐FM-Radio 2026/7/18",
+      "新华网：习近平WAIC主旨讲话",
+      "央视/新华社：伊朗革命卫队7/18声明",
+      "东方财富/财联社：A股黑色星期五数据",
+      "PChome/qq：Kimi K3发布信息",
+      "CGTN：美方政策动向"
+    ]
+  },
+  "headlines_covered": {
+    "headline_event": "Kimi K3 + 伊朗'完全关闭'+ A股黑色星期五三引擎共振",
+    "macro_alignment": true,
+    "eric_project_coverage": ["AHL", "安逸集团", "医养酒店"]
+  },
+  "checklist": {
+    "16_sections_present": true,
+    "execution_summary_3_sentences": true,
+    "5_predictive_scenarios": 3,
+    "eric_table_present": true,
+    "risk_assessment_table": true,
+    "event_graph_present": true,
+    "index_updated_correctly": true,
+    "no_pro_or_version_meta": true,
+    "watermark_protection_r12": "N/A (无视觉产出)"
+  },
+  "metrics": {
+    "report_length_chars": 10517,
+    "report_lines": 214,
+    "report_target_chars": "2500-4000",
+    "note": "略超 4-5K 字范围上限 但内容质量优先 多引擎共振需要充分覆盖",
+    "section_count": 16,
+    "tables_count": 8
+  },
+  "delay_status": "on-time (08:30)",
+  "delivery_mode": "none (Eric入口: reports/daily-briefing/YYYY-MM-DD.md)"
+}

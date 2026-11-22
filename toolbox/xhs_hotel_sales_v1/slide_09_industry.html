@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>ERIC.B166ER · 酒店业反直觉</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { width: 1080px; height: 1920px; background: #F2EDE3; font-family: "Inter", "Helvetica Neue", "PingFang SC", "Microsoft YaHei", sans-serif; color: #1A2B4D; font-style: normal; }
+
+.top-bar { height: 60px; background: #1A2B4D; color: #F2EDE3; display: flex; align-items: center; justify-content: space-between; padding: 0 50px; }
+.top-bar .l { font-size: 13px; letter-spacing: 3px; font-weight: 800; }
+.top-bar .c { font-size: 17px; font-weight: 800; color: #B8453D; letter-spacing: 1.5px; }
+.top-bar .r { font-size: 13px; letter-spacing: 2px; font-weight: 700; opacity: 0.7; }
+
+/* ===== Hook ===== */
+.hook { padding: 60px 60px 28px; }
+.hook .over { font-size: 14px; letter-spacing: 5px; font-weight: 800; color: #B8453D; text-transform: uppercase; margin-bottom: 14px; }
+.hook .big { font-size: 90px; font-weight: 900; line-height: 1.0; letter-spacing: -3px; color: #1A2B4D; }
+.hook .big .red { color: #B8453D; }
+.hook .big .strike { position: relative; color: #888; display: inline-block; }
+.hook .big .strike::after { content: ""; position: absolute; left: -6px; right: -6px; top: 50%; height: 7px; background: #B8453D; transform: rotate(-8deg); }
+.hook .sub { font-size: 24px; font-weight: 700; color: #5A6B3F; margin-top: 18px; line-height: 1.35; }
+.hook .sub .em { color: #B8453D; font-weight: 900; }
+.hook .sub .strike { text-decoration: line-through; color: #888; }
+
+/* ===== Data block ===== */
+.data { padding: 0 60px 30px; }
+.data-head { font-size: 14px; letter-spacing: 4px; font-weight: 800; color: #B8453D; text-transform: uppercase; margin-bottom: 18px; padding-top: 18px; border-top: 2px solid #1A2B4D; }
+.data-list { display: flex; flex-direction: column; gap: 14px; }
+.data-row { display: flex; align-items: baseline; gap: 18px; padding: 12px 18px; background: rgba(255,255,255,0.6); border: 1px solid #D8D2C5; border-left: 5px solid #B8453D; border-radius: 4px; }
+.data-row.green { border-left-color: #5A6B3F; }
+.data-row.gold { border-left-color: #A67C2E; }
+.data-row .num { font-size: 40px; font-weight: 900; color: #B8453D; line-height: 1; flex-shrink: 0; min-width: 110px; }
+.data-row.green .num { color: #5A6B3F; }
+.data-row.gold .num { color: #A67C2E; }
+.data-row .text { font-size: 18px; font-weight: 700; color: #1A2B4D; line-height: 1.3; }
+.data-row .text .small { font-size: 13px; font-weight: 500; color: #5A6B3F; display: block; margin-top: 4px; }
+
+/* ===== REITs callout ===== */
+.reits { padding: 0 60px 30px; }
+.reits-box { padding: 22px 26px; background: rgba(184,69,61,0.08); border-left: 5px solid #B8453D; border-radius: 4px; }
+.reits-box .label { font-size: 13px; letter-spacing: 3px; font-weight: 800; color: #B8453D; text-transform: uppercase; margin-bottom: 8px; }
+.reits-box .text { font-size: 22px; font-weight: 700; color: #1A2B4D; line-height: 1.4; }
+.reits-box .text .red { color: #B8453D; font-weight: 900; font-size: 26px; }
+.reits-box .text .green { color: #5A6B3F; font-weight: 800; }
+
+/* ===== Jade Emperor perspective ===== */
+.jade { padding: 22px 60px 30px; border-top: 1px solid #D8D2C5; }
+.jade .label { font-size: 14px; letter-spacing: 4px; font-weight: 800; color: #5A6B3F; text-transform: uppercase; margin-bottom: 12px; }
+.jade .quote { font-size: 30px; font-weight: 900; line-height: 1.25; color: #1A2B4D; }
+.jade .quote .red { color: #B8453D; }
+.jade .jade-small { font-size: 18px; color: #1A2B4D; font-weight: 700; display: block; margin-top: 14px; line-height: 1.4; }
+.jade .jade-small .em { color: #5A6B3F; font-weight: 800; }
+
+/* ===== CTA ===== */
+.cta { padding: 0 60px; }
+.cta-box { padding: 26px 30px; background: #1A2B4D; border-radius: 6px; color: #F2EDE3; text-align: center; }
+.cta-box .head { font-size: 26px; font-weight: 900; line-height: 1.2; }
+.cta-box .head .red { color: #B8453D; }
+.cta-box .sub { font-size: 15px; font-weight: 700; color: #F2EDE3; opacity: 0.85; margin-top: 8px; letter-spacing: 0.5px; }
+.cta-box .sources { margin-top: 14px; font-size: 13px; font-weight: 700; color: #A67C2E; }
+.cta-box .sources .em { color: #B8453D; font-weight: 800; }
+
+/* ===== Bottom ===== */
+.bottom { position: absolute; bottom: 0; left: 0; right: 0; padding: 14px 50px; border-top: 1px solid #D8D2C5; display: flex; justify-content: space-between; align-items: center; font-size: 11px; color: #5A6B3F; letter-spacing: 1px; font-weight: 600; }
+.bottom .right { color: #B8453D; font-weight: 800; }
+</style>
+</head>
+<body>
+
+<div class="top-bar">
+  <div class="l">DOUBYIN · 2026.07.26</div>
+  <div class="c">· ERIK CHEN · 酒店业反直觉 ·</div>
+  <div class="r">6 月业务 · V1</div>
+</div>
+
+<div class="hook">
+  <div class="over">§ 30 年老兵 · 酒店业反直觉</div>
+  <div class="big">6 月不是<br><span class="strike">淡季</span> · 是<span class="red">含金量</span><br>最高的月</div>
+  <div class="sub">你以为 6 月学生放假 = 酒店空？<br><span class="em">错。</span>它是酒店业一年中 · <span class="em">含金量最高的 30 天</span>。</div>
+</div>
+
+<div class="data">
+  <div class="data-head">§ 6 月数据·不是淡季 · 是高点</div>
+  <div class="data-list">
+    <div class="data-row">
+      <div class="num">+15%</div>
+      <div class="text">婚宴 6 月 YoY<span class="small">毕业季 + 6 月吉日 · 6420 亿市场</span></div>
+    </div>
+    <div class="data-row green">
+      <div class="num">+54%</div>
+      <div class="text">端午民宿 YoY<span class="small">木鸟报告 · 一线 +17% / 四线 +25%</span></div>
+    </div>
+    <div class="data-row">
+      <div class="num">+30–70%</div>
+      <div class="text">入境游 YoY<span class="small">中俄免签 6/9 生效 · 438 万人次</span></div>
+    </div>
+    <div class="data-row green">
+      <div class="num">+20–30%</div>
+      <div class="text">旅游散客 YoY<span class="small">Z 世代 · 冬代理赛言</span></div>
+    </div>
+    <div class="data-row gold">
+      <div class="num">18条</div>
+      <div class="text">头部 10 集团 6 月动作<span class="small">5 平台·抖音/小红书/视频号/微博/B站</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="reits">
+  <div class="reits-box">
+    <div class="label">§ 超级节点</div>
+    <div class="text">6/23 <span class="red">华安锦江 REIT</span> 通过 = 酒店业资产证券化起点<br>资产·从 “持有” 转为 “管理” · 从 <span class="green">重资产</span> 转为 <span class="green">轻资产</span></div>
+  </div>
+</div>
+
+<div class="jade">
+  <div class="label">§ 30 年老兵 · 说一句话</div>
+  <div class="quote">你以为的 “淡季”<br>是酒店业的 <span class="red">婚宴周</span></div>
+  <div class="jade-small">婚宴 + 端午 + 暑期开局 + REITs<br><span class="em">= 一年 12 个月 · 含金量最高的 30 天</span></div>
+</div>
+
+<div class="cta">
+  <div class="cta-box">
+    <div class="head">数据不会说谎 · 但 <span class="red">你要会读</span></div>
+    <div class="sub">酒店业最不可胈视的是公开数据</div>
+    <div class="sources">71 信源 · 20+ 知识子库 · <span class="em">B166ER · 本公司</span></div>
+  </div>
+</div>
+
+<div class="bottom">
+  <div class="left">数据才不会说谎 · 但你会读完的</div>
+  <div class="right">ERIC.B166ER · 本公司 · 30 年老兵</div>
+</div>
+
+</body>
+</html>

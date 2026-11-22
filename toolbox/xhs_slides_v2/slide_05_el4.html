@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>要素 04 客户沉淀</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  width: 1080px; height: 1440px; background: #fff;
+  font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+  color: #1a1a1a; display: flex; flex-direction: column; overflow: hidden;
+}
+.header {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 24px 52px 16px; border-bottom: 1px solid #e8e8e8;
+}
+.logo { width: 38px; height: 38px; background: #1a1a1a; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  color: #C9A961; font-size: 18px; font-weight: 700; }
+.tag { font-size: 11px; color: #888; border: 1px solid #ddd;
+  padding: 3px 10px; border-radius: 20px; }
+.content { flex: 1; padding: 28px 60px; display: flex; flex-direction: column; }
+.el-badge { display: inline-block; background: #1B3A6B; color: #fff;
+  font-size: 12px; padding: 4px 14px; border-radius: 20px;
+  margin-bottom: 10px; letter-spacing: 1px; }
+.el-title { font-size: 42px; font-weight: 700; color: #1a1a1a; margin-bottom: 6px; }
+.el-subtitle { font-size: 18px; color: #888; margin-bottom: 26px; }
+.guide-box { border-left: 4px solid #C9A961; padding: 14px 20px;
+  background: #fafaf6; margin-bottom: 22px; }
+.guide-box p { font-size: 15px; color: #444; line-height: 1.7; }
+.funnel { margin-bottom: 22px; }
+.funnel-title { font-size: 13px; color: #888; margin-bottom: 12px; letter-spacing: 1px; }
+.funnel-steps { display: flex; flex-direction: column; gap: 10px; }
+.step { display: flex; align-items: center; gap: 16px; }
+.step-left { min-width: 130px; padding: 12px 16px; border-radius: 8px;
+  text-align: center; font-weight: 700; font-size: 15px; }
+.step-right { flex: 1; font-size: 15px; color: #333; line-height: 1.5; }
+.step1 .step-left { background: #1B3A6B; color: #fff; }
+.step2 .step-left { background: #2a4a8a; color: #fff; }
+.step3 .step-left { background: #3d6ab5; color: #fff; }
+.step4 .step-left { background: #C9A961; color: #1a1a1a; }
+.result-box { background: #f8f8f6; border: 1px solid #e0e0e0;
+  border-radius: 8px; padding: 20px 24px; margin-bottom: 14px; }
+.result-title { font-size: 13px; color: #888; margin-bottom: 10px; letter-spacing: 1px; }
+.result-items { display: flex; flex-direction: column; gap: 10px; }
+.result-item { display: flex; align-items: center; gap: 12px; }
+.result-dot { width: 8px; height: 8px; border-radius: 50%; background: #C9A961; flex-shrink: 0; }
+.result-text { font-size: 15px; color: #333; }
+.bottom-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.bcard { border-radius: 8px; padding: 20px; }
+.bcard.blue { background: #1B3A6B; color: #fff; }
+.bcard.gold { background: #C9A961; }
+.bcard .label { font-size: 11px; margin-bottom: 8px; letter-spacing: 1px; }
+.bcard.blue .label { color: #C9A961; }
+.bcard.gold .label { color: #1a1a1a; }
+.bcard .title { font-size: 18px; font-weight: 700; margin-bottom: 8px; }
+.bcard .desc { font-size: 13px; line-height: 1.6; opacity: 0.9; }
+.footer { display: flex; justify-content: space-between; align-items: center;
+  padding: 16px 52px; border-top: 1px solid #e8e8e8; font-size: 11px; color: #aaa; }
+</style>
+</head>
+<body>
+  <div class="header">
+    <div style="display:flex;align-items:center;gap:14px;">
+      <div class="logo">B</div><span style="font-size:13px;color:#888;">B166ER 出品</span>
+    </div>
+    <div class="tag">Hospitality / Product Design · 2026.07.20</div>
+  </div>
+
+  <div class="content">
+    <div class="el-badge">五要素 · 04 · 本质</div>
+    <div class="el-title">客户沉淀</div>
+    <div class="el-subtitle">Customer Accumulation — 一次性交易 vs 客户资产</div>
+
+    <div class="guide-box">
+      <p><strong style="color:#1B3A6B">核心问题：</strong>产品卖出去之后，如何让客户持续回来、建立信任、形成习惯，最终转化为高客单价产品？流量不是资产，沉淀才是。</p>
+    </div>
+
+    <div class="funnel">
+      <div class="funnel-title">客户沉淀转化路径</div>
+      <div class="funnel-steps">
+        <div class="step step1">
+          <div class="step-left">入门产品</div>
+          <div class="step-right">最低门槛产品 · 建立第一次到访关系</div>
+        </div>
+        <div class="step step2">
+          <div class="step-left">会员体系</div>
+          <div class="step-right">数据沉淀 · 消费记录 · 画像积累 · 可触达资产</div>
+        </div>
+        <div class="step step3">
+          <div class="step-left">社群运营</div>
+          <div class="step-right">关系积累 · 活动触达 · 信任建立 · 社交网络扩散</div>
+        </div>
+        <div class="step step4">
+          <div class="step-left">高客单转化</div>
+          <div class="step-right" style="color:#1a1a1a;font-weight:700;">
+            宴会 · 会议 · 长包房 · 自助餐 → 这才是真正的利润来源</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="result-box">
+      <div class="result-title">CUSTOMER ASSETS · 客户资产的三个维度</div>
+      <div class="result-items">
+        <div class="result-item">
+          <div class="result-dot"></div>
+          <div class="result-text"><strong>数据资产：</strong>精准客群画像，可重复触达，可裂变传播</div>
+        </div>
+        <div class="result-item">
+          <div class="result-dot"></div>
+          <div class="result-text"><strong>社交资产：</strong>口碑传播，本地真实社交网络，社区影响力</div>
+        </div>
+        <div class="result-item">
+          <div class="result-dot"></div>
+          <div class="result-text"><strong>复购资产：</strong>多次到访 → 习惯养成 → 忠诚度建立 → 高客单转化</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="bottom-cards">
+      <div class="bcard blue">
+        <div class="label">1.0 版本</div>
+        <div class="title">卖产品</div>
+        <div class="desc">一次性交易<br>产品只是销售</div>
+      </div>
+      <div class="bcard gold">
+        <div class="label">3.0 版本</div>
+        <div class="title">建资产</div>
+        <div class="desc">入门产品是入口<br>背后是整个高客单产品的转化漏斗</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <span>方法论系列 · 限制功能性产品本地社区化设计 · v2.0</span>
+    <span>B166ER 出品</span>
+  </div>
+</body>
+</html>

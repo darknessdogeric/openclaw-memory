@@ -12,13 +12,13 @@ s = s.replace('"title_em": "全套资料 ¥99",', '"title_em": "全套 SOP 即�
 # 这个其实已经是独立的, 不改
 
 # 3. 顶部 B 标增加 4-6px 间距 - 通过 draw_brand_b 内部 padding 调整
-# 找到 "ERIC × B166ER" 那行
+# 找到 "ERIC & B166ER" 那行
 old_brand = '''    # 副文字 (右侧)
     if with_text:
         text_x = x + size + 12
-        # ERIC × B166ER
+        # ERIC & B166ER
         ef = fnt(int(size * 0.28), bold=True)
-        draw.text((text_x, y + size // 4), "ERIC × B166ER", fill=COL_INK, font=ef)
+        draw.text((text_x, y + size // 4), "ERIC & B166ER", fill=COL_INK, font=ef)
         # 共研出品
         cf = fnt(int(size * 0.22), bold=False)
         draw.text((text_x, y + size // 2 + 4), "共研出品", fill=COL_GRAY, font=cf)'''
@@ -26,9 +26,9 @@ old_brand = '''    # 副文字 (右侧)
 new_brand = '''    # 副文字 (右侧)
     if with_text:
         text_x = x + size + 16
-        # ERIC × B166ER
+        # ERIC & B166ER
         ef = fnt(int(size * 0.28), bold=True)
-        draw.text((text_x, y + size // 5), "ERIC × B166ER", fill=COL_INK, font=ef)
+        draw.text((text_x, y + size // 5), "ERIC & B166ER", fill=COL_INK, font=ef)
         # 共研出品
         cf = fnt(int(size * 0.22), bold=False)
         draw.text((text_x, y + size // 2 + 6), "共研出品", fill=COL_GRAY, font=cf)'''

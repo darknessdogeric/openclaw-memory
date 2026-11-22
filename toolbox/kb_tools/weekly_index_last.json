@@ -1,0 +1,39 @@
+{
+  "ts": "2026-10-26 09:13:33",
+  "candidates_total": 44,
+  "candidates_in_scope": 35,
+  "candidates_out_scope": 9,
+  "indexed_ok": 35,
+  "missing": [
+    "skills\\brand-identity-design\\SKILL.md",
+    "skills\\cad-batch-processing\\SKILL.md",
+    "skills\\color-palette-advisor\\SKILL.md",
+    "skills\\evolver\\SKILL.md",
+    "skills\\fontpick\\SKILL.md",
+    "skills\\interior-fullplan\\SKILL.md",
+    "skills\\knowledge-base\\SKILL.md",
+    "skills\\ppt-visual-editor\\SKILL.md",
+    "skills\\wayfinding-signage\\SKILL.md"
+  ],
+  "out_of_scope": [
+    "skills\\brand-identity-design\\SKILL.md",
+    "skills\\cad-batch-processing\\SKILL.md",
+    "skills\\color-palette-advisor\\SKILL.md",
+    "skills\\evolver\\SKILL.md",
+    "skills\\fontpick\\SKILL.md",
+    "skills\\interior-fullplan\\SKILL.md",
+    "skills\\knowledge-base\\SKILL.md",
+    "skills\\ppt-visual-editor\\SKILL.md",
+    "skills\\wayfinding-signage\\SKILL.md"
+  ],
+  "index_meta": {
+    "total_chunks": 62893,
+    "total_size_mb": 105.04623126983643,
+    "updated_at": "2026-10-26 09:12:54",
+    "last_index_tags": [
+      "auto-updated"
+    ],
+    "last_indexed_at": "2026-10-26 09:12:54"
+  },
+  "elapsed_sec": 312.5
+}

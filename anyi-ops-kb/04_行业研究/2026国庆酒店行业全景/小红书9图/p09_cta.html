@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>V3 Brutalist - p09_cta</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700;900&family=Noto+Serif+SC:wght@400;600;700;900&family=Noto+Sans+SC:wght@300;400;500;700;900&family=Inter:wght@200;300;400;500;700;800;900&family=IBM+Plex+Mono:wght@400;500;700&display=swap">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"Inter","Noto Sans SC","IBM Plex Mono",sans-serif;background:#F5F1EA;display:flex;justify-content:center;align-items:center;min-height:100vh;padding:20px}
+.poster{width:1080px;height:1440px;position:relative;overflow:hidden;display:grid;grid-template-rows:130px 1fr 110px;color:#1A1410;font-family:"Inter","Noto Sans SC",sans-serif;background:#F5F1EA}
+/* 顶部条 */
+.top{padding:36px 60px 0;display:flex;justify-content:space-between;align-items:center;border-bottom:6px solid #1A1410;margin:0 60px;font-family:"IBM Plex Mono",monospace}
+.brand{font-size:22px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#1A1410}
+.meta{font-size:20px;font-weight:700;letter-spacing:.1em;color:#1A1410}
+/* B 标 左上 */
+.bmark-tl{position:absolute;top:50px;left:60px;display:flex;flex-direction:column;align-items:flex-start;z-index:10}
+.bmark-tl .b-circle{width:72px;height:72px;border-radius:50%;background:linear-gradient(135deg,#2A1F14,#3A2E22);border:4px solid #C9A87C;display:flex;align-items:center;justify-content:center;font-family:"Noto Serif SC",serif;font-size:42px;font-weight:900;color:#C9A87C;letter-spacing:-.05em}
+.bmark-tl .b-text{font-family:"Inter",sans-serif;font-size:14px;font-weight:700;letter-spacing:.18em;color:#1A1410;margin-top:6px;text-transform:uppercase}
+/* B 标 右下 */
+.bmark-br{position:absolute;bottom:50px;right:60px;display:flex;align-items:center;z-index:10}
+.bmark-br .b-text{font-family:"Inter",sans-serif;font-size:12px;font-weight:700;letter-spacing:.18em;color:#1A1410;margin-right:10px;text-transform:uppercase}
+.bmark-br .b-circle-sm{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#2A1F14,#3A2E22);border:3px solid #C9A87C;display:flex;align-items:center;justify-content:center;font-family:"Noto Serif SC",serif;font-size:22px;font-weight:900;color:#C9A87C}
+/* 主区 */
+.main{padding:36px 60px 24px;display:flex;flex-direction:column;position:relative}
+.kicker{font-family:"IBM Plex Mono",monospace;font-size:22px;font-weight:700;letter-spacing:.35em;text-transform:uppercase;margin-bottom:14px;display:inline-block;padding:6px 14px;background:#1A1410;color:#F5F1EA;align-self:flex-start}
+.kicker.red{background:#B6442A;color:#F5F1EA}
+.kicker.gold{background:#C9A87C;color:#1A1410}
+h1{font-family:"Noto Serif SC","Inter",serif;font-size:96px;font-weight:900;line-height:.95;letter-spacing:-.04em;margin-bottom:18px;color:#1A1410}
+h1 em{font-style:normal;color:#B6442A;font-family:"Cormorant Garamond",serif;font-weight:900}
+h1 u{text-decoration:none;background:#C9A87C;color:#1A1410;padding:0 12px;display:inline-block;transform:rotate(-2deg)}
+.lede{font-family:"Noto Serif SC",serif;font-size:26px;color:#1A1410;line-height:1.5;margin-bottom:20px;font-weight:500}
+/* 底部 */
+.bottom{padding:0 60px;border-top:6px solid #1A1410;margin:0 60px;display:flex;justify-content:space-between;align-items:center}
+.stamp{font-family:"IBM Plex Mono",monospace;font-size:18px;font-weight:700;letter-spacing:.15em;color:#1A1410;text-transform:uppercase}
+.by{font-family:"Inter","Noto Sans SC",sans-serif;font-size:24px;font-weight:900;letter-spacing:.04em;color:#1A1410;text-transform:uppercase;display:flex;align-items:center}
+.by .s{display:inline-block;width:22px;height:22px;background:#B6442A;margin-right:12px}
+/* 通用 */
+.divider{height:6px;background:#1A1410;margin:14px 0}
+.divider.red{background:#B6442A}
+.divider.gold{background:#C9A87C}
+.box{border:5px solid #1A1410;padding:16px 20px;background:#F5F1EA;color:#1A1410}
+.box.dark{background:#1A1410;color:#F5F1EA;border-color:#1A1410}
+.box.red{background:#B6442A;color:#F5F1EA;border-color:#1A1410}
+.box.gold{background:#C9A87C;color:#1A1410;border-color:#1A1410}
+.pgnum{position:absolute;top:36px;right:60px;font-family:"IBM Plex Mono",monospace;font-size:48px;font-weight:900;color:#B6442A;line-height:1;z-index:5}
+/* 数据 tile */
+.tile{display:flex;flex-direction:column;align-items:center;justify-content:center;border:5px solid #1A1410;padding:18px 12px;background:#F5F1EA}
+.tile.dark{background:#1A1410;color:#F5F1EA}
+.tile.red{background:#B6442A;color:#F5F1EA}
+.tile.gold{background:#C9A87C;color:#1A1410}
+.tile .num{font-family:"Inter",sans-serif;font-size:52px;font-weight:900;line-height:1;letter-spacing:-.04em}
+.tile .lbl{font-family:"Noto Sans SC",sans-serif;font-size:13px;font-weight:700;letter-spacing:.1em;margin-top:6px;text-transform:uppercase}
+</style>
+</head>
+<body>
+<div class="poster light">
+  <div class="bmark-tl">
+    <div class="b-circle">B</div>
+    <div class="b-text">ERIC & B166ER</div>
+  </div>
+  <div class="pgnum">P09</div>
+  <div class="top">
+    <div class="brand">ERIC的B166ER出品 · CTA</div>
+    <div class="meta">国庆酒店行业 · 2026</div>
+  </div>
+  <div class="main">
+    
+<div class="kicker red">3 大行动建议 · 集团向 / 行业向 / Eric 自留</div>
+<h1 style="font-size:80px"><span style="display:block">3 大</span><span style="display:block">行动<em>建议</em></span></h1>
+<div class="lede">数据不是终点，决策才是</div>
+<div class="divider red"></div>
+<div style="display:flex;flex-direction:column;gap:12px;margin-top:8px">
+  <div class="box dark" style="padding:18px 22px">
+    <div style="display:flex;align-items:center;gap:14px;margin-bottom:8px">
+      <div style="font-family:Inter,sans-serif;font-size:36px;font-weight:900;color:#C9A87C;line-height:1">A</div>
+      <div style="font-family:Noto Sans SC,sans-serif;font-size:22px;font-weight:900;color:#F5F1EA">集团向</div>
+    </div>
+    <div style="font-family:Noto Sans SC,sans-serif;font-size:15px;color:#F5F1EA;line-height:1.5">
+      • 华住/锦江：<b style="color:#C9A87C">中端品牌下沉至县级</b><br>
+      • 亚朵：<b style="color:#C9A87C">零售业务规模化</b>（枕头/床垫/香薰）<br>
+      • 首旅：<b style="color:#C9A87C">轻资产转型</b>（轻管理 +10pct）<br>
+      • 国际酒店：Greater China 持续加码
+    </div>
+  </div>
+  <div class="box" style="padding:18px 22px">
+    <div style="display:flex;align-items:center;gap:14px;margin-bottom:8px">
+      <div style="font-family:Inter,sans-serif;font-size:36px;font-weight:900;color:#B6442A;line-height:1">B</div>
+      <div style="font-family:Noto Sans SC,sans-serif;font-size:22px;font-weight:900;color:#1A1410">行业向</div>
+    </div>
+    <div style="font-family:Noto Sans SC,sans-serif;font-size:15px;color:#1A1410;line-height:1.5">
+      • OTA：<b style="color:#B6442A">城市+县域主题产品包</b>，强化租车+酒店联动<br>
+      • 连锁：中端品牌下沉至县级，<b style="color:#B6442A">强化轻资产模式</b><br>
+      • 监管：节前价格提醒，<b style="color:#B6442A">防"反向 IP"过度商业化</b>
+    </div>
+  </div>
+  <div class="box red" style="padding:18px 22px">
+    <div style="display:flex;align-items:center;gap:14px;margin-bottom:8px">
+      <div style="font-family:Inter,sans-serif;font-size:36px;font-weight:900;color:#F5F1EA;line-height:1">C</div>
+      <div style="font-family:Noto Sans SC,sans-serif;font-size:22px;font-weight:900;color:#F5F1EA">Eric 自留</div>
+    </div>
+    <div style="font-family:Noto Sans SC,sans-serif;font-size:15px;color:#F5F1EA;line-height:1.5">
+      • 成都提前订 +75% <b style="color:#C9A87C">= 西部标杆 / 入职锚点</b><br>
+      • 9 张小红书海报 <b style="color:#C9A87C">= 公开宣发 / 行业话语</b><br>
+      • 整合报告 <b style="color:#C9A87C">= 入职第一周交付</b>
+    </div>
+  </div>
+</div>
+
+  </div>
+  <div class="bmark-br">
+    <div class="b-text">ERIC & B166ER</div>
+    <div class="b-circle-sm">B</div>
+  </div>
+  <div class="bottom">
+    <div class="stamp">V3 BRUTALIST · P09_CTA</div>
+    <div class="by"><span class="s"></span>ERIC的B166ER出品</div>
+  </div>
+</div>
+</body>
+</html>

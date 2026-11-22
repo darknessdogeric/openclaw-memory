@@ -1,0 +1,91 @@
+{
+  "date": "2026-07-13",
+  "overall_score": 9.7,
+  "dimension_scores": {
+    "standby_discipline": 10.0,
+    "rule_validation": 10.0,
+    "cron_health": 9.8,
+    "self_constraint": 10.0,
+    "heartbeat_efficiency": 10.0,
+    "r12_self_check": 10.0,
+    "report_completeness": 9.8,
+    "d_day_posture": 10.0,
+    "self_evolution": 10.0,
+    "沉淀动作执行": 9.5,
+    "事故恢复": 9.5
+  },
+  "r12_analysis": {
+    "rule": "R12 视觉产出必须调用 protect_output（盲水印）",
+    "applications": 0,
+    "context": "今日D-day党委会日，全程纯文本cron模式，无图片/海报/PPT等视觉产出，R12不触发",
+    "verdict": "R12本次不触发，待下次视觉产出场景激活",
+    "pretending_rules": []
+  },
+  "top_rule": "R-B（R-T-7~T-0静默秩序）—— 371次心跳全票通过",
+  "top_rule_applications": 371,
+  "fake_rule": "无（所有规则均为真实应用）",
+  "regret": "12:19 write覆盖事故（虽2min内恢复，Obsidian mirror完整保留原内容）",
+  "d_day_posture": {
+    "eric_offline_hours": 111,
+    "d_day_phase": "党委会窗口10:30-12:00后9h",
+    "result_status": "未浮现（无外部信号）",
+    "suppression_layers": "4层（R-B / R12 / R-CANDIDATE-T2 sent / R256）",
+    "standby_verdict": "完全静默，零越界，371次心跳100%执行"
+  },
+  "three_bullets": [
+    "D-day党委会窗口后9h，Eric离线111h+，B166ER完全静默，零越界",
+    "371次心跳100%执行，R-NEW-20260713-1 37次验证零事故，12:19事故2min完全恢复",
+    "22:30 R-CANDIDATE-T2 sharp re-eval为唯一破静默点，倾向升级T3极简存在确认"
+  ],
+  "self_evolution_verified": true,
+  "new_rule_created": "R-NEW-20260713-1（心跳中禁止write非空白文件，必须用edit/Add-Content）",
+  "new_rule_verifications": 37,
+  "crons_pending": {
+    "Entity_Extractor": "0eced1e9",
+    "Memory_Dreaming_dup": "bb16468e",
+    "fmhy_weekly_scan": "6e6a9b11",
+    "季报预测_T10": "19708090"
+  },
+  "22_30_decision_prep": {
+    "re_eval_type": "R-CANDIDATE-T2",
+    "input_eric_offline": "~112h",
+    "input_silence_authority": "~128h",
+    "input_d_day_phase": "T+12h+ post-window",
+    "input_result_signal": "无外部信号",
+    "recommended_branch": "Branch C（无信号+128h+ → 倾向升级T3极简存在确认）",
+    "t3_content_preview": "B166ER在线。静默守护中。有事随时叫我。"
+  },
+  "created_by": "B166ER 深度自迭代晚间 · 2026-07-13 21:00",
+  "entity_extraction": {
+    "ran_at": "2026-07-13T21:30",
+    "new_entities": 18,
+    "new_relations": 2,
+    "entities": [
+      "Person:Eric",
+      "Person:B166ER",
+      "Company:安逸酒店集团",
+      "Company:四川旅游投",
+      "Company:AHL",
+      "Company:首旅如家",
+      "Company:OpenAI",
+      "Company:特斯拉",
+      "Project:AHL",
+      "Project:1244战略",
+      "Project:医养酒店",
+      "Project:深度自迭代",
+      "Project:B166ER深度自迭代",
+      "Event:党委会",
+      "Event:D-day",
+      "Event:入职",
+      "Place:大理",
+      "Tool:scrape_matrix"
+    ],
+    "relations": [
+      "comp_安逸酒店集团|拥有|num_167酒店",
+      "proj_AHL|落地于|comp_安逸酒店集团"
+    ],
+    "projects_mentioned": 5,
+    "obsidian_pushed": true,
+    "pushed_to": "obsidian-vault/00-Inbox-待整理/cron-push/2026-07-13/21-33-Entity-Extractor-实体抽取.md"
+  }
+}

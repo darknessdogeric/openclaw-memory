@@ -1,0 +1,67 @@
+{
+  "date": "2026-09-16",
+  "cron_id": "0eced1e9-8729-47d8-b8d6-34eff13ed780",
+  "cron_name": "Entity Extractor (每日21:30)",
+  "r_rule": "R60-11",
+  "scheduled_time": "2026-09-16T21:30:00+08:00",
+  "actual_trigger": "2026-09-16T21:34:00+08:00",
+  "status": "success",
+  "extraction": {
+    "mode": "today",
+    "days_scanned": 1,
+    "files_scanned": ["2026-09-16.md"],
+    "new_entities": 5,
+    "new_relations": 0,
+    "new_entity_types": {
+      "Person": 1,
+      "Company": 1,
+      "Place": 3
+    },
+    "new_entity_names": [
+      "Eric",
+      "亚朵",
+      "成都",
+      "重庆",
+      "北京"
+    ]
+  },
+  "outputs": {
+    "graph_jsonl": {
+      "path": "memory/ontology/graph.jsonl",
+      "updated": true
+    },
+    "relations_trend": {
+      "path": "memory/ontology/relations-trend.md",
+      "updated": true,
+      "total_relations": 16
+    },
+    "dashboard": {
+      "path": "memory/eric-4-projects-dashboard.md",
+      "updated": true,
+      "projects_mentioned_today": 0
+    },
+    "eval_json": {
+      "path": "eval/2026-09-16-entity-extractor.json",
+      "updated": true
+    },
+    "obsidian_push": {
+      "attempted": true,
+      "tool": "toolbox/cron_to_obsidian.py",
+      "status": "pending"
+    }
+  },
+  "r60_11_compliance": {
+    "step_1_graph_jsonl": "✅",
+    "step_2_relations_trend": "✅",
+    "step_3_dashboard": "✅",
+    "step_4_eval_json": "✅",
+    "step_5_obsidian_push": "pending"
+  },
+  "notes": [
+    "Wednesday daily extraction: 5 new entities (1 Person + 1 Company + 3 Places), 0 new relations",
+    "0 projects mentioned today (AHL/1244/医养酒店/深度自动化 no change)",
+    "No R66-revising changes detected"
+  ],
+  "next_run": "2026-09-17T21:30:00+08:00",
+  "generated_by": "B166ER entity_extractor.py"
+}

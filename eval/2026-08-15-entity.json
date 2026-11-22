@@ -1,0 +1,41 @@
+{
+  "date": "2026-08-15",
+  "task": "Entity Extractor 每日21:30",
+  "new_entities": 24,
+  "new_relations": 0,
+  "source_file": "memory/2026-08-15.md",
+  "entities_added": [
+    {"type": "Person", "name": "Eric"},
+    {"type": "Person", "name": "B166ER"},
+    {"type": "Company", "name": "安逸酒店集团"},
+    {"type": "Company", "name": "四川旅游投"},
+    {"type": "Company", "name": "AHL"},
+    {"type": "Company", "name": "携程"},
+    {"type": "Company", "name": "美团"},
+    {"type": "Company", "name": "Anthropic"},
+    {"type": "Project", "name": "AHL"},
+    {"type": "Project", "name": "医养酒店"},
+    {"type": "Project", "name": "深度自迭代"},
+    {"type": "Project", "name": "B166ER深度自迭代"},
+    {"type": "Project", "name": "R66监控"},
+    {"type": "Project", "name": "R60规则"},
+    {"type": "Event", "name": "党委会"},
+    {"type": "Event", "name": "入职"},
+    {"type": "Place", "name": "成都"},
+    {"type": "Place", "name": "四川"},
+    {"type": "Tool", "name": "OpenClaw"},
+    {"type": "Tool", "name": "DeepSeek"},
+    {"type": "Tool", "name": "TrendRadar"},
+    {"type": "Tool", "name": "Playwright"},
+    {"type": "Tool", "name": "Obscura"},
+    {"type": "Tool", "name": "scrape_matrix"}
+  ],
+  "relations_updated": [],
+  "ontology_updates": {
+    "graph_jsonl": "memory/ontology/graph.jsonl (92KB)",
+    "relations_trend": "memory/ontology/relations-trend.md",
+    "projects_dashboard": "memory/eric-4-projects-dashboard.md"
+  },
+  "status": "completed",
+  "obsidian_push": "pending"
+}

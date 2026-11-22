@@ -1,0 +1,47 @@
+酒店管理合同延期协议VI及转让协议
+Extension and Assignment Agreement VI of Hotel Management Contract
+Private and Confidential
+总府皇冠假日酒店
+Crowne Plaza Chengdu City Centre
+附件E信息技术
+SCHEDULEEINFORMATIONTECHNOLOGY
+1.
+酒店前台管理系统
+PROPERTY MANAGEMENT SYSTEM
+1.1
+"酒店前台管理系统"或"PMS"是指由IHGSH或其关联公司指定、作为经其批准的酒店前台管理
+系统，该系统最少要有一个双向接口与预订系统相连接，使其能够在酒店和预订系统之间进行
+预订、会员及常住旅客的信息自动交换。在本协议签署之日，大中华区品牌旗下经营的酒店所
+使用的PMS是来自美国MicroFidelio公司的Opera酒店前台管理系统。
+"Property Management System" or “PMs" means the hotel property management system
+designated by IHGSH or its Affiliates as the approved PMS which as a minimum must have a two
+way interface with the Reservation System enabling automated exchange of reservations,
+membership and frequent flyer information between the Hotel and the Reservation System. As at
+the date of this Agreement the PMS for hotels operating under the Brand in Greater China is Opera
+Property Management System from Micros Fidelio.
+1.2
+业主应与酒店前台管理系统的授权分销商签约，以安排酒店前台管理系统的许可，安装和开通。
+Owner shall contract withthe authorised distributor of the Property Management System to
+arrange for such licence, installation and activation of the Property Management System.
+1.3
+业主应当使用IHG指定的酒店前台管理系统，该酒店前台管理系统将与预订系统相连接。所有在
+酒店内使用的系统应当经过 IHG的批准并且必须具有经批准的接口与IHG系统连接。
+Owner shall use the IHG designated Property Management System to be connected to the
+Reservation System. All systems used at the Hotel shall be approved by IHG and must have the
+approved interfaces to IHG systems.
+1.4
+业主确认：IHGSH，业主以及他们各自的关联公司可以以法律允许的任何目的使用源自于酒店前
+台管理系统的客户数据。在本协议终止后，双方以及他们的关联公司均可以将上述客户数据作为
+他们各自的数据库的一部分而免费继续使用。
+Owner acknowledges that IHGSH, Owner and their respective Affiliates may use customer data
+sourced from the Hotel's Property Management System for any purposes permitted by law. Upon
+termination of this Agreement, both Parties and their Affiliates shall be able to continue using such
+data, free of charge, as part of their respective databases.
+2.
+销售及餐饮系统
+SALES AND CATERING SYSTEM
+2.1
+“销售及餐饮系统"指是指有一个双向接口与PMS系统连接的销售和餐饮信息技术系统，它使酒店
+之间销售信息实现完全的一体化，并使其生成和跟踪成为可能。该系统可以是单个物业的独立销
+售和餐饮系统，也可以是多个物业的销售和餐饮系统的一部分。该系统必须有图形用户接口并能
+34

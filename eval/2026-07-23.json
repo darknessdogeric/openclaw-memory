@@ -1,0 +1,25 @@
+{
+  "date": "2026-07-23",
+  "task": "Entity Extractor 每日21:30",
+  "entities_new": 15,
+  "relations_new": 0,
+  "entities": [
+    {"id": "pers_0001", "type": "Person", "name": "Eric", "confidence": 0.95},
+    {"id": "pers_0002", "type": "Person", "name": "B166ER", "confidence": 0.95},
+    {"id": "comp_0002", "type": "Company", "name": "安逸酒店集团", "confidence": 0.95},
+    {"id": "comp_0001", "type": "Company", "name": "AHL", "confidence": 0.95},
+    {"id": "comp_0014", "type": "Company", "name": "亚朵", "confidence": 0.8},
+    {"id": "proj_0001", "type": "Project", "name": "AHL", "confidence": 0.9},
+    {"id": "proj_0013", "type": "Project", "name": "1244战略", "confidence": 0.95},
+    {"id": "proj_0014", "type": "Project", "name": "深度自迭代", "confidence": 0.85},
+    {"id": "proj_0015", "type": "Project", "name": "B166ER深度自迭代", "confidence": 0.85},
+    {"id": "proj_0004", "type": "Project", "name": "R60规则", "confidence": 0.85},
+    {"id": "even_0012", "type": "Event", "name": "入职", "confidence": 0.9},
+    {"id": "even_0008", "type": "Event", "name": "霍尔木兹海峡事件", "confidence": 0.9},
+    {"id": "tool_0002", "type": "Tool", "name": "OpenClaw", "confidence": 0.95},
+    {"id": "tool_0008", "type": "Tool", "name": "Playwright", "confidence": 0.8},
+    {"id": "tool_0012", "type": "Tool", "name": "scrape_matrix", "confidence": 0.85}
+  ],
+  "projects_mentioned_today": ["AHL", "1244战略", "深度自迭代", "B166ER深度自迭代"],
+  "push_to_obsidian": true
+}

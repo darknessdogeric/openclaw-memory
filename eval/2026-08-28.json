@@ -1,0 +1,99 @@
+{
+  "date": "2026-08-28",
+  "report_type": "daily_business_intelligence",
+  "data_sources": ["TrendRadar (8/25-8/27)", "RSS实时源 (SCMP/Al Jazeera/BBC/NYT/FT/Guardian)"],
+  "signal_summary": {
+    "total_signals_collected": 22,
+    "geopolitical": 4,
+    "financial_market": 6,
+    "consumer_social": 4,
+    "china_asia": 3,
+    "other": 5
+  },
+  "anomaly_detection": {
+    "ai_topic_heat_drop": {
+      "direction": "negative",
+      "change_pct": -50,
+      "significance": "high",
+      "interpretation": "AI投资从梦想溢价进入现实验证阶段"
+    },
+    "safe_haven_collective_rise": {
+      "direction": "positive",
+      "significance": "high",
+      "interpretation": "罕见全面避险组合,暗示市场高度警觉"
+    },
+    "policy_topic_disappear": {
+      "direction": "neutral",
+      "significance": "medium",
+      "interpretation": "沪八条等政策进入静默消化期"
+    }
+  },
+  "sentiment_analysis": {
+    "negative_pct": 55,
+    "neutral_pct": 30,
+    "positive_pct": 15,
+    "key_negative": ["美伊对抗", "留学生遇害", "食品安全"],
+    "key_positive": ["法律正名", "文旅消费"]
+  },
+  "themes": [
+    {
+      "name": "中东火药桶",
+      "impact_level": "extremely_high",
+      "trajectory": "escalating"
+    },
+    {
+      "name": "AI资本寒潮",
+      "impact_level": "medium_high",
+      "trajectory": "declining"
+    },
+    {
+      "name": "内需韧性与分化",
+      "impact_level": "medium",
+      "trajectory": "mixed"
+    }
+  ],
+  "predictions": {
+    "short_term_1_2_weeks": [
+      {"event": "美伊局势继续发酵", "probability": 75},
+      {"event": "AI板块持续承压", "probability": 70},
+      {"event": "中秋假期文旅爆发", "probability": 85}
+    ],
+    "medium_term_2_4_weeks": [
+      {"event": "中国政策窗口观察", "probability": 60},
+      {"event": "避险情绪逐步消退", "probability": 55}
+    ]
+  },
+  "recommendations": [
+    {
+      "priority": 3,
+      "action": "中秋爆款房源提前锁量",
+      "rationale": "假期效应明确"
+    },
+    {
+      "priority": 2,
+      "action": "关注油价波动对商旅影响",
+      "rationale": "油价下跌初期商旅受益"
+    },
+    {
+      "priority": 2,
+      "action": "AHL数字化叙事调整",
+      "rationale": "强调降本增效硬逻辑"
+    },
+    {
+      "priority": 1,
+      "action": "观察香港房价信号",
+      "rationale": "高端消费可能出现分化"
+    }
+  ],
+  "top_3_takeaways": [
+    "地缘风险升级: 美伊对抗→霍尔木兹→油价/避险资产集体反应",
+    "AI资本寒潮: 英伟达七连跌+AI话题降温50%",
+    "文旅假期红利: 中秋请3天假休13天效应明确"
+  ],
+  "confidence": {
+    "overall": 0.75,
+    "geopolitical_assessment": 0.8,
+    "financial_market_assessment": 0.7,
+    "consumer_assessment": 0.8
+  }
+}

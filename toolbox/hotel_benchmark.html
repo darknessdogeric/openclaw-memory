@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>酒店运营效率标杆研究 · 西南区八店样本</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, "PingFang SC", "Microsoft YaHei", "Segoe UI", sans-serif; background: #f5f3ee; }
+  .page {
+    width: 1920px; height: 1080px;
+    background: linear-gradient(180deg, #faf8f3 0%, #f5f3ee 100%);
+    position: relative; overflow: hidden;
+    color: #1e3a5f;
+  }
+
+  /* ============ Header band ============ */
+  .header {
+    height: 88px; padding: 0 64px;
+    background: linear-gradient(135deg, #162947 0%, #1e3a5f 60%, #2c4f7a 100%);
+    display: flex; align-items: center; justify-content: space-between;
+    border-bottom: 2px solid #c9a96e;
+  }
+  .header-left { display: flex; align-items: center; gap: 20px; }
+  .header-mark {
+    width: 44px; height: 44px; border-radius: 6px;
+    background: #c9a96e; color: #162947;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 13px; font-weight: 700; letter-spacing: 1px;
+  }
+  .header h1 {
+    color: #faf8f3; font-size: 26px; font-weight: 600;
+    letter-spacing: 2px; margin: 0;
+  }
+  .header-right {
+    display: flex; align-items: center; gap: 24px;
+    color: #c9a96e; font-size: 14px; letter-spacing: 1px;
+  }
+  .header-right .dot { width: 6px; height: 6px; border-radius: 50%; background: #c9a96e; }
+
+  /* ============ Title section ============ */
+  .title-section { padding: 32px 64px 12px; }
+  .title-section h2 {
+    font-size: 42px; color: #162947;
+    font-weight: 600; letter-spacing: 1px; margin: 0;
+  }
+  .title-section h2 .accent { color: #c9a96e; }
+  .subtitle {
+    margin-top: 8px;
+    font-size: 16px; color: #5a6b7d; font-weight: 400;
+    letter-spacing: 1px;
+  }
+  .gold-line {
+    height: 1px;
+    background: linear-gradient(90deg, #c9a96e 0%, transparent 100%);
+    margin: 14px 64px 22px;
+  }
+
+  /* ============ Main table ============ */
+  .table-wrap { padding: 0 64px; }
+  table.main {
+    width: 100%; border-collapse: separate; border-spacing: 0;
+    background: white; border-radius: 8px; overflow: hidden;
+    box-shadow: 0 4px 24px rgba(30, 58, 95, 0.08);
+  }
+  table.main thead th {
+    background: #1e3a5f; color: #faf8f3;
+    padding: 14px 8px; font-size: 13px; font-weight: 500;
+    letter-spacing: 0.5px; text-align: center;
+    border-right: 1px solid rgba(255,255,255,0.06);
+  }
+  table.main thead th:first-child { text-align: left; padding-left: 18px; width: 18%; }
+  table.main thead th:last-child { border-right: none; }
+
+  table.main tbody td {
+    padding: 14px 8px; font-size: 13px;
+    text-align: center; color: #2c3e50;
+    border-bottom: 1px solid #ebe7df;
+    border-right: 1px solid rgba(0,0,0,0.03);
+    vertical-align: middle;
+  }
+  table.main tbody tr:last-child td { border-bottom: none; }
+  table.main tbody td:first-child {
+    text-align: left; padding-left: 18px;
+    font-weight: 500; color: #162947;
+  }
+  table.main tbody td:last-child { border-right: none; }
+
+  /* Color zone states */
+  tr.row-optimal td { background: #e8f3ed !important; }
+  tr.row-optimal td:first-child { color: #2d6a4f; font-weight: 600; }
+  tr.row-larger td { background: #fdf3eb !important; }
+  tr.row-smaller td { background: #fef7e3 !important; }
+
+  /* Best-in-cell highlight */
+  .chip-best {
+    display: inline-block; padding: 2px 8px; border-radius: 10px;
+    background: #2d6a4f; color: white;
+    font-size: 11px; font-weight: 600; letter-spacing: 0.3px;
+  }
+  .cell-good { color: #2d6a4f; font-weight: 600; }
+  .cell-warn { color: #b85c38; }
+
+  /* Recommended-zone bar in area column */
+  .area-bar {
+    position: relative; display: inline-block;
+    width: 80px; height: 8px; background: #ebe7df;
+    border-radius: 4px; overflow: hidden;
+    vertical-align: middle; margin-left: 6px;
+  }
+  .area-bar .zone {
+    position: absolute; top: 0; bottom: 0;
+    background: rgba(74, 157, 124, 0.35);
+  }
+  .area-bar .marker {
+    position: absolute; top: -2px; width: 2px; height: 12px;
+    background: #1e3a5f;
+  }
+
+  /* ============ Bottom conclusion ============ */
+  .conclusion {
+    position: absolute; bottom: 100px; left: 64px; right: 64px;
+    display: flex; gap: 22px;
+  }
+  .concl-card {
+    flex: 1; background: white;
+    border-radius: 10px; padding: 22px 26px 20px;
+    box-shadow: 0 4px 18px rgba(30, 58, 95, 0.08);
+    border-top: 3px solid #2d6a4f;
+    position: relative;
+  }
+  .concl-card.warn { border-top-color: #c9a96e; }
+  .concl-card.blue { border-top-color: #1e3a5f; }
+  .concl-card .head {
+    display: flex; align-items: baseline; gap: 12px; margin-bottom: 8px;
+  }
+  .concl-card .num {
+    font-size: 38px; font-weight: 700; color: #1e3a5f;
+    line-height: 1; letter-spacing: -0.5px;
+  }
+  .concl-card .unit {
+    font-size: 13px; color: #c9a96e; font-weight: 600;
+    letter-spacing: 1px;
+  }
+  .concl-card .label {
+    font-size: 13px; color: #5a6b7d;
+    letter-spacing: 1px; margin-bottom: 6px;
+  }
+  .concl-card .quote {
+    font-size: 13.5px; line-height: 1.6; color: #2c3e50;
+    border-top: 1px dashed #ebe7df; padding-top: 10px;
+    margin-top: 10px;
+  }
+  .concl-card .quote b { color: #2d6a4f; }
+
+  /* ============ Footer ============ */
+  .footer {
+    position: absolute; bottom: 0; left: 0; right: 0; height: 56px;
+    padding: 0 64px;
+    display: flex; align-items: center; justify-content: space-between;
+    font-size: 11px; color: #8a96a3;
+    border-top: 1px solid #ebe7df;
+    background: #faf8f3;
+    letter-spacing: 1px;
+  }
+  .footer .left { display: flex; align-items: center; gap: 16px; }
+  .footer .brand { color: #c9a96e; font-weight: 600; }
+
+  /* Eric's main conclusion banner */
+  .main-quote {
+    margin: 18px 64px 0;
+    padding: 14px 22px;
+    background: linear-gradient(90deg, #162947 0%, #1e3a5f 100%);
+    color: #faf8f3; border-radius: 8px;
+    display: flex; align-items: center; gap: 16px;
+    box-shadow: 0 4px 16px rgba(30, 58, 95, 0.15);
+  }
+  .main-quote .label {
+    background: #c9a96e; color: #162947;
+    padding: 4px 12px; border-radius: 4px;
+    font-size: 12px; font-weight: 700; letter-spacing: 1.5px;
+  }
+  .main-quote p {
+    font-size: 16px; line-height: 1.5; margin: 0;
+    letter-spacing: 0.5px;
+  }
+  .main-quote p b { color: #c9a96e; font-weight: 600; }
+
+  .legend {
+    display: inline-flex; gap: 14px; align-items: center;
+    font-size: 12px; color: #5a6b7d; margin-left: 12px;
+  }
+  .legend .swatch {
+    display: inline-block; width: 12px; height: 12px;
+    border-radius: 2px; vertical-align: middle; margin-right: 4px;
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- ============ HEADER ============ -->
+  <div class="header">
+    <div class="header-left">
+      <div class="header-mark">AHL</div>
+      <h1>酒店运营效率标杆研究 · 西南区八店样本</h1>
+    </div>
+    <div class="header-right">
+      <span class="dot"></span>
+      <span>DATA INSIGHT · NO.12</span>
+      <span class="dot"></span>
+      <span>2026.08</span>
+    </div>
+  </div>
+
+  <!-- ============ TITLE ============ -->
+  <div class="title-section">
+    <h2>当<span class="accent">坪效</span>遇上<span class="accent">人效</span>，什么才是中高端酒店的<span class="accent">最优物业模型</span>？</h2>
+    <div class="subtitle">8家高样本对比 · 面积 · 房量 · 坪效 · 人效 四维交叉分析
+      <span class="legend" style="margin-left:24px">
+        <span><span class="swatch" style="background:#e8f3ed;border:1px solid #2d6a4f"></span>最优区间</span>
+        <span><span class="swatch" style="background:#fef7e3;border:1px solid #d4a106"></span>偏小</span>
+        <span><span class="swatch" style="background:#fdf3eb;border:1px solid #b85c38"></span>偏大</span>
+      </span>
+    </div>
+  </div>
+  <div class="gold-line"></div>
+
+  <!-- ============ MAIN QUOTE ============ -->
+  <div class="main-quote">
+    <span class="label">ERIC 结论</span>
+    <p>此类酒店<span style="color:#c9a96e;font-weight:600">坪效和人效最优</span>的物业面积为 <b>12000㎡ 左右</b>，房间数量为 <b>150–200 间</b>，<b>一定会有餐饮服务和公共交互空间服务</b>，以此模型拓展。</p>
+  </div>
+
+  <!-- ============ TABLE ============ -->
+  <div class="table-wrap">
+    <table class="main">
+      <thead>
+        <tr>
+          <th>酒店名称</th>
+          <th>经营面积 ㎡</th>
+          <th>房间数</th>
+          <th>餐位数</th>
+          <th>其他特别功能</th>
+          <th>开房均价</th>
+          <th>开房率</th>
+          <th>客房收入(截止8月)</th>
+          <th>非房收入%</th>
+          <th>用工人数</th>
+          <th>人房比</th>
+          <th>月均人效</th>
+          <th>月均平效</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <!-- 最佳样本 (12000㎡ 区间) -->
+        <tr class="row-optimal">
+          <td>成都宽窄巷子希尔顿欢朋 <span class="chip-best">★ 标杆</span></td>
+          <td>12,000</td>
+          <td>206</td>
+          <td>280</td>
+          <td>中餐包间4</td>
+          <td>440</td>
+          <td>82%</td>
+          <td>27,000,000</td>
+          <td>6.30%</td>
+          <td>60</td>
+          <td>0.29</td>
+          <td class="cell-good">60,000</td>
+          <td class="cell-good">300</td>
+        </tr>
+
+        <tr class="row-optimal">
+          <td>重庆解放碑 VOCO 酒店</td>
+          <td>12,609</td>
+          <td>150</td>
+          <td>100</td>
+          <td>行政酒廊</td>
+          <td>786</td>
+          <td>88%</td>
+          <td>25,460,804</td>
+          <td class="cell-good">16%</td>
+          <td>82</td>
+          <td>0.55</td>
+          <td>45,076</td>
+          <td class="cell-good">293</td>
+        </tr>
+
+        <!-- 偏小区间 -->
+        <tr class="row-smaller">
+          <td>成都宽窄巷子亚朵 S 酒店</td>
+          <td>7,200</td>
+          <td>122</td>
+          <td>62</td>
+          <td>无</td>
+          <td>604</td>
+          <td class="cell-good">88%</td>
+          <td>15,562,906</td>
+          <td>7.70%</td>
+          <td>29</td>
+          <td class="cell-good">0.23</td>
+          <td class="cell-good">67,081</td>
+          <td>291</td>
+        </tr>
+
+        <tr class="row-smaller">
+          <td>香港湾仔睿景酒店 (外包)</td>
+          <td>7,000</td>
+          <td>172</td>
+          <td>0</td>
+          <td>外包</td>
+          <td>793</td>
+          <td>91%</td>
+          <td>30,241,582</td>
+          <td>0%</td>
+          <td>45</td>
+          <td class="cell-good">0.26</td>
+          <td class="cell-good">84,004</td>
+          <td class="cell-good">540</td>
+        </tr>
+
+        <tr class="row-smaller">
+          <td>香港湾仔睿景酒店 (自营)</td>
+          <td>7,402</td>
+          <td>172</td>
+          <td>100</td>
+          <td>假设餐厅未外包</td>
+          <td>793</td>
+          <td>91%</td>
+          <td>30,241,582</td>
+          <td class="cell-good">16%</td>
+          <td>56</td>
+          <td>0.33</td>
+          <td class="cell-good">80,361</td>
+          <td class="cell-good">510</td>
+        </tr>
+
+        <!-- 偏大区间 -->
+        <tr class="row-larger">
+          <td>成都 Pagoda 君亭设计酒店</td>
+          <td>16,700</td>
+          <td>206</td>
+          <td>150</td>
+          <td>无</td>
+          <td>850</td>
+          <td class="cell-good">93%</td>
+          <td>30,570,849</td>
+          <td>7%</td>
+          <td>66</td>
+          <td>0.32</td>
+          <td>62,257</td>
+          <td class="cell-warn">246</td>
+        </tr>
+
+        <tr class="row-larger">
+          <td>成都春熙路希尔顿欢朋</td>
+          <td>18,000</td>
+          <td class="cell-warn">253</td>
+          <td>213</td>
+          <td>175 同公寓房</td>
+          <td>860</td>
+          <td>95%</td>
+          <td class="cell-good">50,228,343</td>
+          <td>3%</td>
+          <td>76</td>
+          <td class="cell-good">0.30</td>
+          <td>85,162</td>
+          <td>359</td>
+        </tr>
+
+        <tr class="row-larger">
+          <td>成都领地希尔顿嘉悦里</td>
+          <td>18,500</td>
+          <td>150</td>
+          <td>128</td>
+          <td>坊酒廊</td>
+          <td class="cell-good">1,100</td>
+          <td class="cell-warn">75%</td>
+          <td>30,071,250</td>
+          <td>13%</td>
+          <td>85</td>
+          <td class="cell-warn">0.57</td>
+          <td class="cell-warn">50,104</td>
+          <td class="cell-warn">230</td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ============ CONCLUSION CARDS ============ -->
+  <div class="conclusion">
+    <div class="concl-card">
+      <div class="head">
+        <div class="num">12,000<span class="unit">㎡</span></div>
+      </div>
+      <div class="label">最优物业面积</div>
+      <div class="quote">
+        ± 2,000㎡ 为<b>坪效 + 人效双优</b>区间。<br>
+        过大（>16k）→ 平效稀释、人房比塌陷；<br>
+        过小（<8k）→ 规模不经济、餐位难铺。
+      </div>
+    </div>
+    <div class="concl-card">
+      <div class="head">
+        <div class="num">150-200<span class="unit">间</span></div>
+      </div>
+      <div class="label">最优客房数量</div>
+      <div class="quote">
+        单房运营成本最低、固定费用摊销最优。<br>
+        122 间亚朵S → 难撑中餐 + 酒廊配置；<br>
+        253 间欢朋 → 平效被面积摊薄。
+      </div>
+    </div>
+    <div class="concl-card blue">
+      <div class="head">
+        <div class="num">2<span class="unit">项必备</span></div>
+      </div>
+      <div class="label">不可缺省的配套</div>
+      <div class="quote">
+        ① <b>餐饮服务</b>（中餐 / 全日餐 / 包间 / 餐厅）<br>
+        ② <b>公共交互空间</b>（行政酒廊 / 坊酒廊 / 共享大堂）<br>
+        缺任一项 → 非房收入难撑、人房比走高、人效塌方。
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ FOOTER ============ -->
+  <div class="footer">
+    <div class="left">
+      <span class="brand">ERIC的B166ER出品</span>
+      <span>·</span>
+      <span>物业拓展决策参考 · AHL 项目组</span>
+    </div>
+    <div>2026-08-07 · 西南区八店市调样本</div>
+  </div>
+
+</div>
+</body>
+</html>

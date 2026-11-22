@@ -1,0 +1,39 @@
+{
+  "date": "2026-07-28",
+  "generated_at": "2026-07-28T08:30:00+08:00",
+  "model": "minimax/MiniMax-M2.7-highspeed",
+  "session": "cron:7e149123-b2c9-4336-89fa-da9cae972679",
+  "data_sources": {
+    "trendradar_crawl": "2026-07-28T08:33:51+08:00 (255条新闻)",
+    "platforms_crawled": ["toutiao","baidu","wallstreetcn-hot","thepaper","bilibili-hot-search","cls-hot","ifeng","tieba","weibo","douyin","zhihu"],
+    "previous_report": "2026-07-27"
+  },
+  "top_events": [
+    {"rank": 1, "event": "长鑫科技上市暴涨465%，成A股市值最高公司(3.3万亿)", "category": "金融/科技"},
+    {"rank": 2, "event": "美股芯片风暴：阿斯麦+英伟达领跌，苹果重返市值第一", "category": "金融/科技"},
+    {"rank": 3, "event": "美伊谈判信号混乱：德黑兰否认碰商，沙特阿美设施疑遭无人机袭击", "category": "地缘"},
+    {"rank": 4, "event": "美方宣布对中国AI企业开展调查并实施制裁", "category": "政策/AI"},
+    {"rank": 5, "event": "携程全员信曝光+网红景区10人遇难安全监管将加强", "category": "酒店/文旅"}
+  ],
+  "scenarios": {
+    "scenario1": {"name": "双航道协议达成", "probability": 0.55, "oil_WTI": "72-78", "Brent": "76-83"},
+    "scenario2": {"name": "谈判破裂重启对抗", "probability": 0.30, "oil_WTI": "88-95", "Brent": "91-100"},
+    "scenario3": {"name": "边谈边打震荡", "probability": 0.15, "oil_WTI": "78-88", "Brent": "83-93"}
+  },
+  "AHL_relevance": [
+    "美方AI制裁调查：若使用国产算力(昇腾)可规避风险，自主可控成差异化优势",
+    "长鑫上市：A股流动性宽松+科技资产重估，对酒店REITs配置需求上升",
+    "酒店安全监管加强：网红景区事故将提升景区合作合规门槛",
+    "AHL数据能力：入境游复苏+境外OTA数据可对接差异化场景"
+  ],
+  "Eric_priorities": [
+    {"item": "安逸集团入职准备", "priority": 5, "note": "Day 4/5"},
+    {"item": "AHL数据底座", "priority": 4, "note": "长鑫示范效应下需展示硬核数据能力"},
+    {"item": "酒店REITs跟踪", "priority": 3, "note": "华安锦江/远洲REIT发售进度"},
+    {"item": "医养酒店政策对接", "priority": 3, "note": "800元/床位补贴落实"}
+  ],
+  "word_count": 2890,
+  "sections_completed": 16,
+  "r12_check": "纯文本报告，无视觉产出，R12不触发",
+  "delivery_mode": "none(不主动推送)"
+}

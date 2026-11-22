@@ -1,0 +1,188 @@
+{
+  "date": "2026-08-25",
+  "source": "TrendRadar RSS (trendradar__search_rss + search_news include_rss=True)",
+  "keywords": ["伊朗", "以色列", "乌克兰", "俄罗斯", "中东", "台海", "南海", "中美关系"],
+  "note": "热榜数据源(2026-08-25)暂无，本地仅有2026-08-17等旧日期；RSS数据覆盖2026-08-25",
+  "items": [
+    {
+      "keyword": "伊朗",
+      "title": "Iran war live: Iranian parliament advances plans for Hormuz service fees",
+      "platform": "Al Jazeera 全新闻",
+      "summary": "Draft law says ships of countries permitted to pass through the Strait of Hormuz will pay for services provided by Iran."
+    },
+    {
+      "keyword": "伊朗",
+      "title": "Will Donald Trump's new sanctions against Iran work?",
+      "platform": "Al Jazeera 全新闻",
+      "summary": "The US president says he will impose 'crushing measures' on Tehran."
+    },
+    {
+      "keyword": "伊朗",
+      "title": "An economic D-Day is coming for Iran",
+      "platform": "FT 世界",
+      "summary": "Countries that calculate appeasement of the regime to be a safer choice should reconsider."
+    },
+    {
+      "keyword": "伊朗",
+      "title": "Trump has 'run out of options' in Iran war: Stephen Walt",
+      "platform": "Al Jazeera 全新闻",
+      "summary": "Political scientist Stephen Walt says Trump promised to make US stronger, but many of his policies are making it weaker."
+    },
+    {
+      "keyword": "伊朗",
+      "title": "Macron hosts Saudi's crown prince for visit ranging from esports to Middle East",
+      "platform": "南华早报 SCMP",
+      "summary": "French President Emmanuel Macron welcomed Saudi crown prince Mohammed bin Salman for a two-day visit, covering esports and Middle East affairs."
+    },
+    {
+      "keyword": "以色列",
+      "title": "Syria holds talks with Israel addressing de-escalation and Israel-Turkey tensions",
+      "platform": "南华早报 SCMP",
+      "summary": "Syria held talks with Israel in Jordan on Sunday on de-escalation after recent Israeli strikes, and on keeping the country out of tensions between Israel and Turkey."
+    },
+    {
+      "keyword": "以色列",
+      "title": "US envoy Tom Barrack retracts comment that Syria's Golan is occupied",
+      "platform": "Al Jazeera 全新闻",
+      "summary": "Ambassador to Turkiye says US policy of recognising Israel's claimed sovereignty over Syrian territory is 'unchanged'."
+    },
+    {
+      "keyword": "以色列",
+      "title": "Is Israel about to split the occupied West Bank in half?",
+      "platform": "Al Jazeera 全新闻",
+      "summary": "Israel is moving forward with its 'E1' plan. What is it and why could it threaten the future of a Palestinian state?"
+    },
+    {
+      "keyword": "以色列",
+      "title": "US envoy walks back his comments on Golan Heights that contradicted Trump's position",
+      "platform": "南华早报 SCMP",
+      "summary": "The US special envoy to Syria and ambassador to Turkey walked back comments that Israel 'still' occupies the Golan Heights in violation of UN resolutions."
+    },
+    {
+      "keyword": "以色列",
+      "title": "Palestinian teen killed in Israeli raid buried in Occupied West Bank",
+      "platform": "Al Jazeera 全新闻",
+      "summary": "Hundreds attended the funeral of 14-year-old Islam Ahmad Maher Ajouri, killed by Israeli gunfire during a raid."
+    },
+    {
+      "keyword": "乌克兰",
+      "title": "UK PM Andy Burnham to visit Kyiv on Monday as Ukraine marks independence anniversary",
+      "platform": "南华早报 SCMP",
+      "summary": "British Prime Minister Andy Burnham will visit Kyiv on Monday on his first international visit since taking office last month, as Ukraine marks its 35th independence anniversary."
+    },
+    {
+      "keyword": "乌克兰",
+      "title": "Burnham to visit Ukraine with promise of boost for Kyiv's long-range missiles",
+      "platform": "Guardian 世界",
+      "summary": "PM will use independence day trip to announce sharing of classified information about Storm Shadow components. Britain will boost Ukraine's capacity to make its own long-range missiles."
+    },
+    {
+      "keyword": "乌克兰",
+      "title": "Burnham to pledge support for long-range missile construction in Ukraine",
+      "platform": "FT 世界",
+      "summary": "UK prime minister will shrug off warnings from Russia in first overseas visit."
+    },
+    {
+      "keyword": "乌克兰",
+      "title": "Zelensky details rift with Ukraine's dismissed defence minister Fedorov",
+      "platform": "南华早报 SCMP",
+      "summary": "Ukrainian President Volodymyr Zelensky said he believes actions taken by dismissed Defence Minister Mykhailo Fedorov, including involvement in mass protests and calls for an election, were misguided."
+    },
+    {
+      "keyword": "乌克兰",
+      "title": "Photos: Ukraine celebrates National Flag Day",
+      "platform": "Al Jazeera 全新闻",
+      "summary": "People observe a minute of silence for those killed in war to mark the holiday established in 2004."
+    },
+    {
+      "keyword": "乌克兰",
+      "title": "Zelensky says Ukraine had no role in Nord Stream pipeline blast after suspect arrested",
+      "platform": "南华早报 SCMP",
+      "summary": "Ukrainian President Volodymyr Zelensky said his country played no role in the sabotage of the Nord Stream gas pipelines, following the arrest in Croatia of a second Ukrainian suspect."
+    },
+    {
+      "keyword": "俄罗斯",
+      "title": "Serbia requests international assistance to battle wildfires",
+      "platform": "Al Jazeera 全新闻",
+      "summary": "Serbia requested assistance from the European Union and Russia to help bring intense wildfires under control."
+    },
+    {
+      "keyword": "俄罗斯",
+      "title": "Zelensky says Ukraine had no role in Nord Stream pipeline blast after suspect arrested",
+      "platform": "南华早报 SCMP",
+      "summary": "Following the arrest in Croatia of a second Ukrainian suspect, Zelensky denied any Ukrainian involvement in the Nord Stream pipeline sabotage."
+    },
+    {
+      "keyword": "中东",
+      "title": "Iran president says time to end war while Tehran is in position of strength",
+      "platform": "南华早报 SCMP",
+      "summary": "Iranian President Masoud Pezeshkian said on Friday it was time to end the months-long Middle East war with the US because Tehran appeared to be in a stronger position than Washington."
+    },
+    {
+      "keyword": "中东",
+      "title": "Pentagon fires military newspaper staffers for insubordination",
+      "platform": "FT 世界",
+      "summary": "Defence department dismisses Stars and Stripes editor-in-chief and Middle East reporter."
+    },
+    {
+      "keyword": "中东",
+      "title": "The Iran War Shows How Reliant Indian Airlines Are on Gulf Hubs",
+      "platform": "Skift 酒店航空",
+      "summary": "India's global aviation ambitions still run through the Gulf. When geopolitics disrupts it, the shock quickly reaches India's airlines."
+    },
+    {
+      "keyword": "台海",
+      "title": "Taiwan president touts peace through strength on China battle anniversary",
+      "platform": "Japan Times",
+      "summary": "Taiwanese President Lai Ching-te marked the 68th anniversary of the 1958 clash with Chinese forces, known as the start of the Second Taiwan Strait Crisis."
+    },
+    {
+      "keyword": "台海",
+      "title": "Mainland Chinese research ship spotted near Taiwan's largest naval base",
+      "platform": "南华早报 SCMP",
+      "summary": "A mainland Chinese research ship has sailed close to a key Taiwanese naval base, marking its third appearance near the island since May. The 2,000-tonne scientific research vessel operates near strategic waters."
+    },
+    {
+      "keyword": "台海",
+      "title": "China's Own Version of Ambiguity in the Taiwan Strait",
+      "platform": "The Diplomat 亚洲",
+      "summary": "As the US mulls 'strategic clarity,' China may be shifting its pressure campaign away from highly visible military coercion toward less easily classified methods."
+    },
+    {
+      "keyword": "台海",
+      "title": "Will other Southeast Asian countries follow Indonesia's example with joint China drill?",
+      "platform": "南华早报 SCMP",
+      "summary": "China and Indonesia's recent joint naval exercise east of Taiwan has prompted speculation that other Southeast Asian countries may follow suit."
+    },
+    {
+      "keyword": "台海",
+      "title": "Taiwan, Japan and U.S. encouraged to cooperate more on tech",
+      "platform": "Japan Times",
+      "summary": "At a recent conference in Tokyo, officials from the U.S. and Taiwan noted the need to work together on technology cooperation."
+    },
+    {
+      "keyword": "南海",
+      "title": "Malaysia fears military 'miscalculation' near Sabah amid US-China rivalry",
+      "platform": "南华早报 SCMP",
+      "summary": "Malaysia faces a growing risk of miscalculation near its state of Sabah as US-China rivalry drives more military activities into the waters around Borneo, its defence minister has warned."
+    },
+    {
+      "keyword": "南海",
+      "title": "China to build environmental monitoring station near disputed Scarborough Shoal",
+      "platform": "南华早报 SCMP",
+      "summary": "China has approved the construction of a marine environmental observation station to monitor an area that includes the disputed Scarborough Shoal, a persistent flashpoint in tensions with the Philippines."
+    },
+    {
+      "keyword": "南海",
+      "title": "China finishes first phase of construction at South China Sea reef, images show",
+      "platform": "Japan Times",
+      "summary": "The project on Antelope Reef in the Paracels archipelago involves building a man-made island analysts say will form part of China's largest military base."
+    },
+    {
+      "keyword": "南海",
+      "title": "U.S. Navy destroyer lost power for 4 days in South China Sea",
+      "platform": "Washington Post 世界",
+      "summary": "The ship's crew lost access last month to drinkable water, running toilets and air conditioning, as the fleet sees heavy use by the Trump administration."
+    }
+  ]
+}

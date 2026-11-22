@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>小红书 3:4 信息图</title>
+<style>
+:root { --pink:#FF8FAB; --softpink:#FFE8F0; --ink:#3A3A3A; --accent:#FFB6C1; }
+* { box-sizing: border-box; margin:0; padding:0; }
+body { font-family: "Noto Sans SC","Microsoft YaHei",sans-serif; color: var(--ink); background: #FFF; width: 1080px; height: 1440px; overflow: hidden; }
+
+/* 顶部 - 圆角卡片风格 */
+.header { padding: 60px 50px 30px; }
+.header .tag { display: inline-block; background: var(--softpink); color: var(--pink); padding: 12px 28px; border-radius: 30px; font-size: 28px; font-weight: bold; }
+.header .title { font-size: 64px; font-weight: 900; color: var(--ink); margin-top: 30px; line-height: 1.1; }
+.header .subtitle { font-size: 32px; color: var(--pink); margin-top: 16px; }
+
+/* 主图区(留空,或插图) */
+.hero { padding: 30px 50px; min-height: 380px; background: linear-gradient(135deg, #FFF0F5, #FFE8F0); border-radius: 36px; margin: 0 50px; display: flex; align-items: center; justify-content: center; }
+
+/* 内容卡 */
+.row { padding: 40px 50px; }
+.row .title { font-size: 40px; font-weight: 900; color: var(--pink); margin-bottom: 24px; }
+.row .item { display: flex; gap: 24px; padding: 24px; background: var(--softpink); border-radius: 24px; margin-bottom: 16px; align-items: center; }
+.row .item .icon { font-size: 50px; }
+.row .item .text { flex: 1; }
+.row .item .label { font-size: 30px; font-weight: bold; color: var(--ink); }
+.row .item .desc { font-size: 22px; color: #888; }
+
+/* 数字高亮 */
+.num { padding: 30px 50px; background: linear-gradient(135deg, var(--pink), #FF6B9D); color: #FFF; border-radius: 36px; margin: 30px 50px; text-align: center; }
+.num .big { font-size: 90px; font-weight: 900; }
+.num .small { font-size: 28px; margin-top: 10px; }
+
+/* 底部 */
+.footer { padding: 40px 50px; text-align: center; color: #999; font-size: 20px; }
+</style>
+</head>
+<body>
+
+<!-- 顶部 -->
+<div class="header">
+  <div class="tag">✨ [分类标签]</div>
+  <div class="title">[大标题 8-12 字]</div>
+  <div class="subtitle">[副标题/钩子]</div>
+</div>
+
+<!-- 主图区 -->
+<div class="hero">[图 / 装饰区]</div>
+
+<!-- 内容 -->
+<div class="row">
+  <div class="title">[分类小标题]</div>
+  <div class="item">
+    <div class="icon">🔹</div>
+    <div class="text"><div class="label">[要点 1]</div><div class="desc">[支撑描述]</div></div>
+  </div>
+  <div class="item">
+    <div class="icon">🔹</div>
+    <div class="text"><div class="label">[要点 2]</div><div class="desc">[支撑描述]</div></div>
+  </div>
+  <div class="item">
+    <div class="icon">🔹</div>
+    <div class="text"><div class="label">[要点 3]</div><div class="desc">[支撑描述]</div></div>
+  </div>
+</div>
+
+<!-- 数字高亮 -->
+<div class="num">
+  <div class="big">[大数字 50%]</div>
+  <div class="small">[解释说明]</div>
+</div>
+
+<!-- 底部 -->
+<div class="footer">
+  [账号 / 署名]
+</div>
+
+</body>
+</html>

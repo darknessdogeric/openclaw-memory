@@ -1,0 +1,109 @@
+{
+  "date": "2026-07-15",
+  "time": "10:30 CST",
+  "type": "daily-business-intel",
+  "edition": "20集团版",
+  "overall_score": 8.5,
+  "dimensions": {
+    "signal_coverage": {
+      "score": 4.5,
+      "max": 5,
+      "notes": "酒店/AI/地缘/宏观/旅游5个维度全覆盖，WAIC情报时效性最强"
+    },
+    "anomaly_detection": {
+      "score": 4.5,
+      "max": 5,
+      "notes": "识别2个异常：习近平出席WAIC（黑天鹅级）+ 油价二次爆发（橙色预警）"
+    },
+    "integration_depth": {
+      "score": 4.0,
+      "max": 5,
+      "notes": "三层穿透（事实/趋势/博弈）完整，协议层分析到位，但安逸集团内部信息有限"
+    },
+    "comparative_analysis": {
+      "score": 3.5,
+      "max": 5,
+      "notes": "vs 昨日/vs D-day对比清晰，但缺少vs同类集团（锦江/华住）的直接对标"
+    },
+    "prediction_quality": {
+      "score": 4.0,
+      "max": 5,
+      "notes": "2-4周前瞻有具体时间节点，情景推演覆盖3种油价路径"
+    },
+    "action_recommendations": {
+      "score": 4.5,
+      "max": 5,
+      "notes": "R1/R2/R3结构清晰，R1(WAIC情报包)是今天最高ROI行动"
+    },
+    "execution_discipline": {
+      "score": 5.0,
+      "max": 5,
+      "notes": "6步循环严格执行，报告格式规范，推送自动化"
+    }
+  },
+  "top_findings": [
+    "🔴 WAIC 2026 习近平亲自出席——D-2天，AHL协议层建立的国家级政策背书窗口",
+    "🟠 布伦特原油$86(+9.6%)——油价二次爆发，地缘风险未见顶，高盛提示或已现高点",
+    "🟢 央行1.4万亿逆回购——超常规流动性注入，A股科技股领涨，宽松信号明确"
+  ],
+  "key_predictions": [
+    {
+      "date": "7/17",
+      "event": "WAIC开幕·习近平主旨演讲",
+      "confidence": "high",
+      "impact": "AI政策加码，AHL赛道直接受益"
+    },
+    {
+      "date": "7/18",
+      "event": "安逸内部公示窗口打开",
+      "confidence": "high",
+      "impact": "Eric入职进入倒计时，刺刀包必须ready"
+    },
+    {
+      "date": "7/26-8/1",
+      "event": "公示结束·Eric正式入职",
+      "confidence": "medium",
+      "impact": "AHL内部MVP启动的黄金期"
+    }
+  ],
+  "immediate_actions": [
+    {
+      "id": "R1",
+      "priority": "🔴 NOW",
+      "action": "准备WAIC 2026情报包（7/17习近平主旨演讲）",
+      "deadline": "7/16 EOD",
+      "owner": "B166ER"
+    },
+    {
+      "id": "R2",
+      "priority": "🟡 D+3",
+      "action": "刺刀包5方案迭代（公示窗口7/18启动）",
+      "deadline": "7/17 EOD",
+      "owner": "Eric"
+    },
+    {
+      "id": "R3",
+      "priority": "🟡 D+3",
+      "action": "地缘风险情景推演（3油价路径×酒店影响）",
+      "deadline": "7/16 EOD",
+      "owner": "B166ER"
+    }
+  ],
+  "rules_applied": [
+    "R13-重IO隔离：vault查询走索引（主会话安全）",
+    "R12-竞争维度核查：云迹 vs AHL 博弈分析完整"
+  ],
+  "cron_status": {
+    "scheduled": "M/W/F 10:00",
+    "actual_fire": "10:30",
+    "delay_minutes": 30,
+    "trigger": "cron:16c3811b-3fe5-49d0-be1a-0df19a86aef6"
+  },
+  "output_files": [
+    "/tmp/business-intel-2026-07-15.md",
+    "memory/2026-07-15.md",
+    "eval/2026-07-15.json"
+  ],
+  "obsidian_push": "success",
+  "obsidian_file": "D:\\B166ER-OpenClaw\\workspace\\obsidian-vault\\00-Inbox-待整理\\cron-push\\2026-07-15\\10-36-每日商业情报.md"
+}

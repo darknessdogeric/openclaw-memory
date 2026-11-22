@@ -1,0 +1,172 @@
+{
+  "date": "2026-07-31",
+  "edition": "M/W/F 10:00 Friday Edition",
+  "report_path": "reports/daily-briefing/2026-07-31-v2.md",
+  "methodology": "6-Step Cycle (Scan/Discover/Integrate/Compare/Predict/Recommend)",
+  "word_count_actual": "~1800",
+  "sections_count": 7,
+  "data_sources": {
+    "domestic_news": {
+      "platforms": 11,
+      "items": 80,
+      "tools_used": ["trendradar__get_latest_news"]
+    },
+    "foreign_rss": {
+      "feeds_count": 31,
+      "items": 40,
+      "categories": ["geopolitics", "ai_tech", "finance", "hotel"],
+      "tools_used": ["trendradar__get_latest_rss"]
+    }
+  },
+  "key_signals": [
+    {
+      "id": "S1",
+      "signal": "美国6月PCE环比-0.1%（6年来首次）",
+      "category": "宏观经济",
+      "confidence": 5,
+      "impact": "美联储政策拐点确认，全球流动性边际宽松"
+    },
+    {
+      "id": "S2",
+      "signal": "微软单日+15%，创18年最大涨幅，市值暴增3万亿",
+      "category": "AI变现验证",
+      "confidence": 5,
+      "impact": "AI从基础设施投入期进入变现验证期，Azure需求超越可用容量"
+    },
+    {
+      "id": "S3",
+      "signal": "哈马斯同意全面解除武装（Trump Board of Peace框架）",
+      "category": "地缘政治",
+      "confidence": 4,
+      "impact": "中东最大火药桶降温，油价回落至经济基本面"
+    },
+    {
+      "id": "S4",
+      "signal": "政治局会议：货币政策节奏提速，10月五中全会定调",
+      "category": "政策监管",
+      "confidence": 5,
+      "impact": "宏观政策'要发力提效'，财金协同促内需进入实际操作"
+    },
+    {
+      "id": "S5",
+      "signal": "Meta/亚马逊：AI资本开支承诺机制（$220B+总额）",
+      "category": "AI基础设施",
+      "confidence": 5,
+      "impact": "算力囤积是长期战略，不是短期赌博，AI Hypercaler竞争持续"
+    }
+  ],
+  "anomalies": [
+    {
+      "id": "A1",
+      "anomaly": "微软单日+3万亿——18年来首次",
+      "significance": "AI变现预期的自我实现，需求>供给确认，利润率扩张起点",
+      "ahl_relevance": "酒店AI助手付费意愿将随企业AI预算扩张而提升"
+    },
+    {
+      "id": "A2",
+      "anomaly": "日韩同时干预汇市——亚洲货币战新阶段",
+      "significance": "协调干预象征亚洲货币防御同盟成形，美元强势下出口国被迫行动",
+      "ahl_relevance": "日元升值→日本入境游增加；亚洲汇率稳定→跨境商务出行需求"
+    },
+    {
+      "id": "A3",
+      "anomaly": "中国AI模型威胁北京？——监管悖论",
+      "significance": "AI能力越强，监管难度越大；行业AI比消费AI有更高合规宽容度",
+      "ahl_relevance": "AHL使用国产大模型需提前评估合规风险"
+    }
+  ],
+  "themes": {
+    "A": {
+      "name": "美联储政策拐点确认",
+      "narrative": "PCE-0.1% → 通胀见顶 → Fed暂停加息 → 人民币压力缓解 → 中国货币政策空间打开 → A股流动性改善 → 酒店REITs估值修复"
+    },
+    "B": {
+      "name": "AI从基础设施投入期进入变现验证期",
+      "narrative": "微软+15% = AI的iPhone时刻正从硬件转向软件。资本开支边际增速下降+收入加速 = 利润率扩张确认"
+    },
+    "C": {
+      "name": "地缘政治降温窗口",
+      "narrative": "哈马斯 disarmament + 油价-14%周线 = 能源成本下行。AHL酒店客户运营成本边际改善8-12%"
+    }
+  },
+  "ahl_analysis": {
+    "three_improvements_resonance": [
+      "油价-14%周线 → 酒店运营成本-8~-12%",
+      "AI算力成本下降 → AHL智能功能边际成本趋零",
+      "暑期RevPAR兑现 → AHL故事有数据支撑"
+    ],
+    "immediate_action": "向AnYi管理层提交'油价下行+AI效率提升=AHL价值主张升级'一页纸",
+    "two_week_action": "收集AHL试点酒店7-8月实际RevPAR对比数据",
+    "one_month_action": "完成AHL在AnYi体系内的ROI模型，量化叠加收益"
+  },
+  "eric_projects": {
+    "安逸集团入职": {
+      "status": "D-DAY HISTORIC (7/31报到)",
+      "action": "确认报到状态；启动产业发展部KPI设定",
+      "urgency": "immediate"
+    },
+    "AHL孵化": {
+      "status": "三大边际改善共振窗口",
+      "action": "利用油价下行窗口与AnYi财务测算AHL轻资产方案边际成本优势",
+      "urgency": "2周内"
+    },
+    "医养酒店": {
+      "status": "跟踪政治局'扩内需'政策落地",
+      "action": "研究成都/海南医养结合先行区案例",
+      "urgency": "ongoing"
+    },
+    "个人业务": {
+      "status": "利用日元升值研究日本入境游回暖",
+      "action": "更新独立酒店指南内容",
+      "urgency": "1个月"
+    }
+  },
+  "predictions": [
+    {
+      "horizon": "2-3周",
+      "scenario": "基准（50%）",
+      "description": "政治局增量政策落地+美股震荡整固",
+      "oil_path": "WTI $78-84区间震荡"
+    },
+    {
+      "horizon": "2-4周",
+      "scenario": "乐观（25%）",
+      "description": "五中全会超预期+AI财报持续超预期+AHL试点落地",
+      "oil_path": "WTI $75-80温和区间"
+    },
+    {
+      "horizon": "1-2周",
+      "scenario": "悲观（25%）",
+      "description": "地缘黑天鹅（伊朗）+美股二次探底+AHL推广遇阻",
+      "oil_path": "WTI重返$90+"
+    }
+  ],
+  "calendar_2_4wks": [
+    {"date": "8/3-7", "event": "美联储7月FOMC会议", "ahl_impact": "利好"},
+    {"date": "8/7", "event": "中国7月进出口数据", "ahl_impact": "间接利好"},
+    {"date": "8/10", "event": "宇树科技打新", "ahl_impact": "A股AI板块"},
+    {"date": "8/15", "event": "美国7月CPI", "ahl_impact": "若继续下行→降息预期"},
+    {"date": "8/20", "event": "AHL内部评审会（假设）", "ahl_impact": "核心节点"},
+    {"date": "8月底", "event": "上市公司中报密集发布", "ahl_impact": "RevPAR数据"}
+  ],
+  "key_numbers": {
+    "WTI_oil": "$79.29（周-14%）",
+    "US_PCE": "环比-0.1%（6年首次）",
+    "MSFT_single_day": "+15%（18年最大）",
+    "Amazon_annual_capex": "$220B/年",
+    "KOSPI": "+13%（SK海力士+27%）",
+    "SciTech50": "跌超5%（失守半年线）",
+    "Samsung_Q2_profit": "+1299.9%",
+    "JPY": "升值3%+（干预）"
+  },
+  "ahl_checklist": {
+    "oil_cost_down": true,
+    "ai_monetization_confirmed": true,
+    "policy_easing": true,
+    "geopolitical_cooling": true,
+    "anyi_checkin_DDAY": true,
+    "ahl_pilot_data": "pending",
+    "internal_review_meeting": "pending"
+  },
+  "created_by": "B166ER 每日商业情报 cron · 2026-07-31 10:00 GMT+8"
+}

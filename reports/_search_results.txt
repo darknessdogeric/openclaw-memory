@@ -1,0 +1,1106 @@
+[obsidian-vault\RECOVERY-LOG.md]
+  >> ## 恢复清单
+[obsidian-vault\00-Workspace-核心\B166ER-STYLE.md]
+  >> ## 输出自检清单（每次输出前检查）
+[obsidian-vault\00-Workspace-核心\B166ER-STYLE.md]
+  >> ## 禁用词清单
+[obsidian-vault\00-Workspace-核心\HEARTBEAT.md]
+  >> ### 每日9:00检查清单（主动提醒）
+[obsidian-vault\00-Workspace-核心\SOUL.md]
+  >> ### 品位的决策清单（内化为选择标准）
+[obsidian-vault\00-Workspace-核心\SOUL.md]
+  >> ### 博弈思维决策清单（内化为思考习惯）
+[obsidian-vault\00-Workspace-核心\USER.md]
+  >> ## 🚦 红绿灯清单（国企干部 + 个人业务双轨）
+[obsidian-vault\01-日记\2026-03-24.md]
+  >> ### 政府扶持渠道清单 (20:38-21:42)
+[obsidian-vault\01-日记\2026-03-24.md]
+  >> ## 生成文件清单 (Evening)
+[obsidian-vault\01-日记\2026-03-26.md]
+  >> ### 初期数字员工需求清单内容
+[obsidian-vault\01-日记\2026-03-27.md]
+  >> ### 3. 技术文档体系（14份，全部完成）
+[obsidian-vault\01-日记\2026-03-27.md]
+  >> ### 4. 完整SKILL体系（Phase 1-3共27个SKILL）
+[obsidian-vault\01-日记\2026-03-31.md]
+  >> ### 酒店私域会员体系知识库
+[obsidian-vault\01-日记\2026-03-31.md]
+  >> ### 目标管理体系知识库
+[obsidian-vault\01-日记\2026-04-01.md]
+  >> ### 定价策略能力体系 (2026-04-01 20:00-21:00)
+[obsidian-vault\01-日记\2026-04-01.md]
+  >> ### 审美与品位终极技能体系 (2026-04-01 22:13-22:36)
+[obsidian-vault\01-日记\2026-04-02.md]
+  >> ### 跨境贸易知识体系
+[obsidian-vault\01-日记\2026-04-09.md]
+  >> ### 已建立的SKILL体系
+[obsidian-vault\01-日记\2026-04-09.md]
+  >> ## 今日新增核心文件清单（15:49）
+[obsidian-vault\01-日记\2026-04-09.md]
+  >> ## 成都春熙宾馆沟通清单升级（17:56）
+[obsidian-vault\01-日记\2026-04-09.md]
+  >> ## 成都春熙宾馆清单最终版（携程数据增强）
+[obsidian-vault\01-日记\2026-05-02.md]
+  >> ## 知识库体系重塑 V2.0 + 酒店KB V8.0 重构
+[obsidian-vault\01-日记\2026-05-02.md]
+  >> ### 酒店KB体系（V8.0后）
+[obsidian-vault\01-日记\2026-05-07.md]
+  >> ## 🔄 复盘体系全面重构 v4.2
+[obsidian-vault\01-日记\2026-06-14.md]
+  >> ### R30 - brand 规范与 Eric 实际偏好有偏差时以 Eric 为准 [信度: 高] [2026-06-14]
+[obsidian-vault\01-日记\2026-06-14.md]
+  >> ### 4 个宏观子维度（自迭代新增）
+[obsidian-vault\01-日记\2026-07-12-1229.md]
+  >> ## 📦 持久化清单（即使我现在死透了，这些都在）
+[obsidian-vault\10-我为你生成的\人格与认知\张实全方位人格侧写报告.md]
+  >> ## 第六章：审美与品位决策清单应用
+[obsidian-vault\10-我为你生成的\人格与认知\张实全方位人格侧写报告.md]
+  >> ### Eric的品位决策清单
+[obsidian-vault\10-我为你生成的\人格与认知\自我革命-vectorized.md]
+  >> ## 📁 FILE_INVENTORY（文件清单）
+[obsidian-vault\10-我为你生成的\人格与认知\自我革命索引-V1.0.md]
+  >> ### 4.3 数字化体系专项
+[obsidian-vault\10-我为你生成的\人格与认知\自我革命索引-V1.0.md]
+  >> ### 体系化文档（按需深入）
+[obsidian-vault\10-我为你生成的\人格与认知\音乐研究\music_batch_211_215.md]
+  >> ### 文件清单
+[obsidian-vault\10-我为你生成的\人格与认知\音乐研究\music_batch_216_220.md]
+  >> ### 备份文件清单
+[obsidian-vault\10-我为你生成的\人格与认知\音乐研究\music_batch_226_230.md]
+  >> ### 备份文件清单
+[obsidian-vault\10-我为你生成的\人格与认知\音乐研究\music_batch_236_240.md]
+  >> ### 备份文件清单
+[obsidian-vault\10-我为你生成的\人格与认知\音乐研究\music_batch_241_245.md]
+  >> ### 备份文件清单
+[obsidian-vault\10-我为你生成的\人格与认知\音乐研究\music_batch_246_250.md]
+  >> ### 备份文件清单（9个批次）
+[obsidian-vault\10-我为你生成的\人格与认知\音乐研究\music_batch_251_255.md]
+  >> ### 备份文件清单（10个批次）
+[obsidian-vault\10-我为你生成的\人格与认知\音乐研究\music_batch_256_260.md]
+  >> ### 备份文件清单（11个批次）
+[obsidian-vault\10-我为你生成的\人格与认知\音乐研究\music_batch_261_265.md]
+  >> ### 备份文件清单（12个批次）
+[obsidian-vault\10-我为你生成的\人格与认知\音乐研究\music_batch_266_270.md]
+  >> ### 备份文件清单（12个批次）
+[obsidian-vault\10-我为你生成的\人格与认知\音乐研究\music_batch_271_275.md]
+  >> ### 备份文件清单（13个批次）
+[obsidian-vault\10-我为你生成的\人格与认知\音乐研究\music_batch_276_280.md]
+  >> ### 备份文件清单（14个批次）
+[obsidian-vault\10-我为你生成的\人格与认知\音乐研究\music_batch_281_285.md]
+  >> ### 备份文件清单（15个批次）
+[obsidian-vault\10-我为你生成的\人格与认知\音乐研究\music_batch_286_290.md]
+  >> ### 备份文件清单（16个批次）
+[obsidian-vault\10-我为你生成的\人格与认知\音乐研究\music_batch_291_295.md]
+  >> ### 备份文件清单（17个批次）
+[obsidian-vault\10-我为你生成的\人格与认知\音乐研究\music_batch_296_300.md]
+  >> ### 备份文件清单（18个批次）
+[obsidian-vault\10-我为你生成的\知识库\2026酒店行业Q1全景报告.md]
+  >> ### 地域维度
+[obsidian-vault\10-我为你生成的\知识库\2026酒店行业Q1全景报告.md]
+  >> ### 城市维度
+[obsidian-vault\10-我为你生成的\知识库\aesthetic-knowledge-base.md]
+  >> ## 一、东方美学体系（核心深度）
+[obsidian-vault\10-我为你生成的\知识库\aesthetic-knowledge-base.md]
+  >> #### 1.1.2 中国艺术审美体系
+[obsidian-vault\10-我为你生成的\知识库\aesthetic-knowledge-base.md]
+  >> #### 1.3.1 Rasa审美体系
+[obsidian-vault\10-我为你生成的\知识库\aesthetic-knowledge-base.md]
+  >> ## 二、西方美学体系
+[obsidian-vault\10-我为你生成的\知识库\aesthetic-knowledge-base.md]
+  >> ## 四、品位养成体系
+[obsidian-vault\10-我为你生成的\知识库\aesthetic-knowledge-base.md]
+  >> ### 4.3 品位决策检查清单
+[obsidian-vault\10-我为你生成的\知识库\aesthetic-knowledge-base.md]
+  >> ### 8.2 诗歌审美维度
+[obsidian-vault\10-我为你生成的\知识库\aesthetic-knowledge-base.md]
+  >> ### 9.1 绘画美学体系
+[obsidian-vault\10-我为你生成的\知识库\aesthetic-knowledge-base.md]
+  >> ### 11.3 建筑美学维度
+[obsidian-vault\10-我为你生成的\知识库\aesthetic-knowledge-base.md]
+  >> ### 13.2 室内风格体系
+[obsidian-vault\10-我为你生成的\知识库\aesthetic-knowledge-base.md]
+  >> ### 14.2 世界园林美学体系
+[obsidian-vault\10-我为你生成的\知识库\aesthetic-knowledge-base.md]
+  >> ### 16.2 插画风格体系
+[obsidian-vault\10-我为你生成的\知识库\aesthetic-knowledge-base.md]
+  >> ### 17.2 服装美学维度
+[obsidian-vault\10-我为你生成的\知识库\aesthetic-knowledge-base.md]
+  >> ### 18.2 食物审美维度
+[obsidian-vault\10-我为你生成的\知识库\aesthetic-knowledge-base.md]
+  >> ### 18.3 世界美食美学体系
+[obsidian-vault\10-我为你生成的\知识库\aesthetic-knowledge-base.md]
+  >> ### 19.3 电影美学维度
+[obsidian-vault\10-我为你生成的\知识库\aesthetic-knowledge-base.md]
+  >> ### 21.2 声音美学维度
+[obsidian-vault\10-我为你生成的\知识库\aesthetic-knowledge-base.md]
+  >> ### 22.2 工艺美学体系
+[obsidian-vault\10-我为你生成的\知识库\ahl-automation-feasibility-v1.md]
+  >> ### 1.1 评估维度
+[obsidian-vault\10-我为你生成的\知识库\ahl-core-team.md]
+  >> # AHL 团队资料 · 双维度框架 (2026-06-22 Eric 两次明确)
+[obsidian-vault\10-我为你生成的\知识库\ahl-core-team.md]
+  >> ## 维度 A: 现实团队结构 (内部决策 / AHL 战略 / 团队建设 / 自反思)
+[obsidian-vault\10-我为你生成的\知识库\ahl-core-team.md]
+  >> ## 维度 B: 对外团队结构 (商业计划书叙述 · 合法形态)
+[obsidian-vault\10-我为你生成的\知识库\ahl-core-team.md]
+  >> ## 维度对比速查表
+[obsidian-vault\10-我为你生成的\知识库\ahl-knowledge-base-v1.md]
+  >> ## L1 分层记忆体系（已部署，2026-05-15）
+[obsidian-vault\10-我为你生成的\知识库\ahl-standard-sop-v1.md]
+  >> ### 9.1 AI辅助培训体系
+[obsidian-vault\10-我为你生成的\知识库\ahl-standard-sop-v1.md]
+  >> ## 十、AHL KPI指标体系
+[obsidian-vault\10-我为你生成的\知识库\ahl-vector-data-framework.md]
+  >> # AHL 事实双向向量数据维度框架 (AHL Bidirectional Factual Vector Data Framework)
+[obsidian-vault\10-我为你生成的\知识库\ahl-vector-data-framework.md]
+  >> ## 🏗️ 第一部分：B端数据维度基底 (供给侧)
+[obsidian-vault\10-我为你生成的\知识库\ahl-vector-data-framework.md]
+  >> ### 1. 通用维度基底 (行业标准化)
+[obsidian-vault\10-我为你生成的\知识库\ahl-vector-data-framework.md]
+  >> #### 1.1 物理属性维度
+[obsidian-vault\10-我为你生成的\知识库\ahl-vector-data-framework.md]
+  >> #### 1.2 服务设施维度
+[obsidian-vault\10-我为你生成的\知识库\ahl-vector-data-framework.md]
+  >> #### 1.3 价格维度
+[obsidian-vault\10-我为你生成的\知识库\ahl-vector-data-framework.md]
+  >> #### 1.4 口碑维度
+[obsidian-vault\10-我为你生成的\知识库\ahl-vector-data-framework.md]
+  >> ### 2. 特异化维度核心 (护城河)
+[obsidian-vault\10-我为你生成的\知识库\ahl-vector-data-framework.md]
+  >> #### 2.1 场景适配维度 (关键差异化)
+[obsidian-vault\10-我为你生成的\知识库\ahl-vector-data-framework.md]
+  >> #### 2.2 内容表达维度 (AI原生)
+[obsidian-vault\10-我为你生成的\知识库\ahl-vector-data-framework.md]
+  >> #### 2.3 动态运营维度 (实时事实)
+[obsidian-vault\10-我为你生成的\知识库\ahl-vector-data-framework.md]
+  >> #### 2.4 关系网络维度 (网络效应)
+[obsidian-vault\10-我为你生成的\知识库\ahl-vector-data-framework.md]
+  >> ### 3. 深度特异化维度 (数据飞轮)
+[obsidian-vault\10-我为你生成的\知识库\ahl-vector-data-framework.md]
+  >> #### 3.1 B端AGENT沉淀维度
+[obsidian-vault\10-我为你生成的\知识库\ahl-vector-data-framework.md]
+  >> #### 3.2 C-B匹配反馈维度
+[obsidian-vault\10-我为你生成的\知识库\ahl-vector-data-framework.md]
+  >> ## 🧑‍💼 第二部分：C端数据维度基底 (需求侧)
+[obsidian-vault\10-我为你生成的\知识库\ahl-vector-data-framework.md]
+  >> ### 1. 基础画像维度 (Who)
+[obsidian-vault\10-我为你生成的\知识库\ahl-vector-data-framework.md]
+  >> #### 1.1 人口统计维度
+[obsidian-vault\10-我为你生成的\知识库\ahl-vector-data-framework.md]
+  >> #### 1.2 设备与渠道维度
+[obsidian-vault\10-我为你生成的\知识库\ahl-vector-data-framework.md]
+  >> ### 2. 出行意图维度 (Why & What)
+[obsidian-vault\10-我为你生成的\知识库\ahl-vector-data-framework.md]
+  >> #### 2.1 出行场景维度 (核心匹配锚点)
+[obsidian-vault\10-我为你生成的\知识库\ahl-vector-data-framework.md]
+  >> #### 2.2 需求层次维度
+[obsidian-vault\10-我为你生成的\知识库\ahl-vector-data-framework.md]
+  >> ### 3. 偏好指纹维度 (Taste Profile)
+[obsidian-vault\10-我为你生成的\知识库\ahl-vector-data-framework.md]
+  >> #### 3.3 价格敏感度维度
+[obsidian-vault\10-我为你生成的\知识库\ahl-vector-data-framework.md]
+  >> ### 4. 行为轨迹维度 (History)
+[obsidian-vault\10-我为你生成的\知识库\ahl-vector-data-framework.md]
+  >> ### 5. 实时动态维度 (Now)
+[obsidian-vault\10-我为你生成的\知识库\ahl-vector-data-framework.md]
+  >> #### 5.2 情境紧急度维度
+[obsidian-vault\10-我为你生成的\知识库\ahl-vector-data-framework.md]
+  >> ### 6. AGENT交互维度 (对话挖掘)
+[obsidian-vault\10-我为你生成的\知识库\ahl-vector-data-framework.md]
+  >> ### 与现有项目的维度映射
+[obsidian-vault\10-我为你生成的\知识库\ahl-vector-data-framework.md]
+  >> ## 📋 附录：展开清单 (按需激活)
+[obsidian-vault\10-我为你生成的\知识库\ahl-vector-data-framework.md]
+  >> ### B端维度展开项
+[obsidian-vault\10-我为你生成的\知识库\ahl-vector-data-framework.md]
+  >> ### C端维度展开项
+[obsidian-vault\10-我为你生成的\知识库\AHL-商业模式对比分析-V1.0.md]
+  >> ## B. 模型假设清单
+[obsidian-vault\10-我为你生成的\知识库\AHL-商业模式深化方案-V2.0.md]
+  >> ## 基于酒店细分市场的完整计价体系
+[obsidian-vault\10-我为你生成的\知识库\AHL-商务合作收费标准-V3.0.md]
+  >> ## 完整版：TOKEN计费+三种模式对比+分级体系
+[obsidian-vault\10-我为你生成的\知识库\ai-llm-knowledge-base-v2.md]
+  >> #### 7.3.3 AHL Red Teaming检查清单
+[obsidian-vault\10-我为你生成的\知识库\audio-deep-analysis-plan.md]
+  >> ### 特征维度
+[obsidian-vault\10-我为你生成的\知识库\B166ER-skill-optimization.md]
+  >> ## 四、淘汰清单
+[obsidian-vault\10-我为你生成的\知识库\B166ER-skill-optimization.md]
+  >> ## 五、执行清单
+[obsidian-vault\10-我为你生成的\知识库\B166ER-技能资产清单.md]
+  >> # B166ER 技能资产清单
+[obsidian-vault\10-我为你生成的\知识库\B166ER-技能资产清单.md]
+  >> ## 📁 完整技能清单（98个按字母排序）
+[obsidian-vault\10-我为你生成的\知识库\china-us-cross-border-structure-v1.md]
+  >> ## 七、风险清单
+[obsidian-vault\10-我为你生成的\知识库\expertise-gap-analysis.md]
+  >> ## 评估维度（真实专家标准）
+[obsidian-vault\10-我为你生成的\知识库\E盘文件索引-V1.0.md]
+  >> ## 附录D：维景SOP详细清单（按部门）
+[obsidian-vault\10-我为你生成的\知识库\finance-securities-knowledge-base.md]
+  >> ### 1. 宏观金融体系
+[obsidian-vault\10-我为你生成的\知识库\finance-securities-knowledge-base.md]
+  >> #### 1.3 金融监管体系
+[obsidian-vault\10-我为你生成的\知识库\finance-securities-knowledge-base.md]
+  >> #### 8.3 监控清单
+[obsidian-vault\10-我为你生成的\知识库\finance-securities-knowledge-base.md]
+  >> ### 2026 法规清单
+[obsidian-vault\10-我为你生成的\知识库\game-theory-decision-knowledge-base-v3.md]
+  >> ### 9.3 机制设计实践检查清单
+[obsidian-vault\10-我为你生成的\知识库\goal-management-knowledge-base.md]
+  >> # 目标管理体系知识库 V1.0
+[obsidian-vault\10-我为你生成的\知识库\goal-management-knowledge-base.md]
+  >> ## 五、AHL项目目标管理体系
+[obsidian-vault\10-我为你生成的\知识库\hotel-asset-management-framework.md]
+  >> ## 五、酒店资产管理的核心指标体系
+[obsidian-vault\10-我为你生成的\知识库\hotel-group-top10-sop-v1.md]
+  >> #### 1.1.2 万豪核心SOP体系
+[obsidian-vault\10-我为你生成的\知识库\hotel-groups-brands-models.md]
+  >> ## 三、酒店品牌体系
+[obsidian-vault\10-我为你生成的\知识库\hotel-housekeeping-sop-v2.md]
+  >> ## 四、客房KPI体系的五维解析
+[obsidian-vault\10-我为你生成的\知识库\hotel-industry-knowledge-base.md]
+  >> ## 四、运营体系深度
+[obsidian-vault\10-我为你生成的\知识库\hotel-industry-knowledge-base.md]
+  >> ### 4.7 市场营销体系
+[obsidian-vault\10-我为你生成的\知识库\hotel-industry-knowledge-base.md]
+  >> ## 五、收益管理全体系
+[obsidian-vault\10-我为你生成的\知识库\hotel-industry-knowledge-base.md]
+  >> ## 六、营销与私域运营体系
+[obsidian-vault\10-我为你生成的\知识库\hotel-industry-knowledge-base.md]
+  >> ### 6.2 会员体系设计
+[obsidian-vault\10-我为你生成的\知识库\hotel-industry-knowledge-base.md]
+  >> ### 8.2 RFP (Request for Proposal) 企业招标体系
+[obsidian-vault\10-我为你生成的\知识库\hotel-industry-knowledge-base.md]
+  >> ### 9.1 法律法规层级体系
+[obsidian-vault\10-我为你生成的\知识库\hotel-investment-analysis-framework.md]
+  >> ## 二、酒店项目尽调清单（Eric能用的实战工具）
+[obsidian-vault\10-我为你生成的\知识库\hotel-investment-analysis-framework.md]
+  >> ## 五、酒店投资决策的自检清单
+[obsidian-vault\10-我为你生成的\知识库\hotel-knowledge-architecture-v2.md]
+  >> # 酒店全景知识库架构体系
+[obsidian-vault\10-我为你生成的\知识库\hotel-knowledge-architecture-v2.md]
+  >> ### Layer 9: 合规体系
+[obsidian-vault\10-我为你生成的\知识库\hotel-laws-regulations-v1.md]
+  >> # 酒店行业政策法规与合规体系
+[obsidian-vault\10-我为你生成的\知识库\hotel-laws-regulations-v1.md]
+  >> ## 一、酒店行业法律法规体系
+[obsidian-vault\10-我为你生成的\知识库\hotel-laws-regulations-v1.md]
+  >> ### 2.1 许可清单
+[obsidian-vault\10-我为你生成的\知识库\hotel-laws-regulations-v1.md]
+  >> ## 三、行业标准体系
+[obsidian-vault\10-我为你生成的\知识库\hotel-management-company-sop-v1.md]
+  >> # 酒店管理公司SOP体系
+[obsidian-vault\10-我为你生成的\知识库\hotel-management-company-sop-v1.md]
+  >> ## 七、酒管公司KPI体系
+[obsidian-vault\10-我为你生成的\知识库\hotel-marketing-sop-v2.md]
+  >> ## 五、会员体系SOP
+[obsidian-vault\10-我为你生成的\知识库\hotel-new-media-marketing-knowledge-base-v2.md]
+  >> ### 3.3 用户画像体系
+[obsidian-vault\10-我为你生成的\知识库\hotel-new-media-marketing-knowledge-base-v2.md]
+  >> ### 7.1 核心指标体系
+[obsidian-vault\10-我为你生成的\知识库\hotel-private-domain-membership-knowledge-base.md]
+  >> # 酒店私域会员体系与运营知识库 V1.0
+[obsidian-vault\10-我为你生成的\知识库\hotel-private-domain-membership-knowledge-base.md]
+  >> ## 一、私域会员体系全景
+[obsidian-vault\10-我为你生成的\知识库\hotel-private-domain-membership-knowledge-base.md]
+  >> ### 1.2 私域会员体系价值
+[obsidian-vault\10-我为你生成的\知识库\hotel-private-domain-membership-knowledge-base.md]
+  >> ## 二、会员体系设计
+[obsidian-vault\10-我为你生成的\知识库\hotel-private-domain-membership-knowledge-base.md]
+  >> ### 2.1 会员等级体系
+[obsidian-vault\10-我为你生成的\知识库\hotel-private-domain-membership-knowledge-base.md]
+  >> ### 2.2 积分体系
+[obsidian-vault\10-我为你生成的\知识库\hotel-private-domain-membership-knowledge-base.md]
+  >> ## 三、私域运营体系
+[obsidian-vault\10-我为你生成的\知识库\hotel-private-domain-membership-knowledge-base.md]
+  >> ## 七、数据指标体系
+[obsidian-vault\10-我为你生成的\知识库\hotel-private-domain-membership-knowledge-base.md]
+  >> ### 8.2 AHL私域SKILL清单
+[obsidian-vault\10-我为你生成的\知识库\hotel-procurement-sop-v1.md]
+  >> ### 5.1 华住采购体系
+[obsidian-vault\10-我为你生成的\知识库\hotel-procurement-sop-v1.md]
+  >> ### 5.2 锦江采购体系
+[obsidian-vault\10-我为你生成的\知识库\hotel-procurement-sop-v1.md]
+  >> ## 六、采购KPI体系
+[obsidian-vault\10-我为你生成的\知识库\hotel-quality-inspection-sop-v2.md]
+  >> ## 四、KPI体系的五维框架
+[obsidian-vault\10-我为你生成的\知识库\hotel-revenue-management-knowledge-base-v5.md]
+  >> #### 2.2.1 会员定价体系
+[obsidian-vault\10-我为你生成的\知识库\hotel-revenue-management-knowledge-base-v5.md]
+  >> #### 3.1.1 每日工作清单
+[obsidian-vault\10-我为你生成的\知识库\hotel-revenue-management-knowledge-base-v5.md]
+  >> #### 3.1.2 每周工作清单
+[obsidian-vault\10-我为你生成的\知识库\hotel-revenue-management-knowledge-base-v5.md]
+  >> #### 3.1.3 每月工作清单
+[obsidian-vault\10-我为你生成的\知识库\hotel-revenue-management-knowledge-base-v5.md]
+  >> #### 3.1.4 季度工作清单
+[obsidian-vault\10-我为你生成的\知识库\hotel-revenue-management-knowledge-base-v5.md]
+  >> #### 3.1.5 年度工作清单
+[obsidian-vault\10-我为你生成的\知识库\hotel-revenue-management-knowledge-base-v5.md]
+  >> ### 3.2 收益经理每日工作清单
+[obsidian-vault\10-我为你生成的\知识库\hotel-revenue-management-knowledge-base-v5.md]
+  >> #### 3.2.4 日结清单
+[obsidian-vault\10-我为你生成的\知识库\hotel-revenue-management-knowledge-base-v5.md]
+  >> #### 5.3.1 核心KPI体系
+[obsidian-vault\10-我为你生成的\知识库\hotel-revenue-management-knowledge-base-v5.md]
+  >> #### 6.1.1 AHL收益管理赋能体系
+[obsidian-vault\10-我为你生成的\知识库\hotel-revenue-management-knowledge-base-v5.md]
+  >> ### 7.1 STR核心指标体系
+[obsidian-vault\10-我为你生成的\知识库\hotel-sop-brand-comparison-v2.md]
+  >> ## 一、奢华酒店品牌SOP体系
+[obsidian-vault\10-我为你生成的\知识库\hotel-sop-brand-comparison-v2.md]
+  >> #### 核心SOP体系
+[obsidian-vault\10-我为你生成的\知识库\hotel-sop-brand-comparison-v2.md]
+  >> #### 核心SOP体系
+[obsidian-vault\10-我为你生成的\知识库\hotel-sop-brand-comparison-v2.md]
+  >> #### 核心SOP体系
+[obsidian-vault\10-我为你生成的\知识库\hotel-sop-brand-comparison-v2.md]
+  >> ## 二、高端酒店品牌SOP体系
+[obsidian-vault\10-我为你生成的\知识库\hotel-sop-brand-comparison-v2.md]
+  >> #### 核心SOP体系
+[obsidian-vault\10-我为你生成的\知识库\hotel-sop-brand-comparison-v2.md]
+  >> #### 核心SOP体系
+[obsidian-vault\10-我为你生成的\知识库\hotel-sop-brand-comparison-v2.md]
+  >> #### 核心SOP体系
+[obsidian-vault\10-我为你生成的\知识库\hotel-sop-brand-comparison-v2.md]
+  >> ## 三、中高端酒店品牌SOP体系
+[obsidian-vault\10-我为你生成的\知识库\hotel-sop-brand-comparison-v2.md]
+  >> #### 核心SOP体系
+[obsidian-vault\10-我为你生成的\知识库\hotel-sop-brand-comparison-v2.md]
+  >> #### 核心SOP体系
+[obsidian-vault\10-我为你生成的\知识库\hotel-sop-brand-comparison-v2.md]
+  >> #### 核心SOP体系
+[obsidian-vault\10-我为你生成的\知识库\hotel-sop-brand-comparison-v2.md]
+  >> ## 四、经济型酒店品牌SOP体系
+[obsidian-vault\10-我为你生成的\知识库\hotel-sop-brand-comparison-v2.md]
+  >> #### 核心SOP体系
+[obsidian-vault\10-我为你生成的\知识库\hotel-sop-brand-comparison-v2.md]
+  >> #### 核心SOP体系
+[obsidian-vault\10-我为你生成的\知识库\hotel-sop-brand-comparison-v2.md]
+  >> ## 五、度假酒店品牌SOP体系
+[obsidian-vault\10-我为你生成的\知识库\hotel-sop-brand-comparison-v2.md]
+  >> #### 核心SOP体系
+[obsidian-vault\10-我为你生成的\知识库\hotel-sop-brand-comparison-v2.md]
+  >> #### 核心SOP体系
+[obsidian-vault\10-我为你生成的\知识库\hotel-sop-brand-comparison-v2.md]
+  >> ## 六、服务式公寓品牌SOP体系
+[obsidian-vault\10-我为你生成的\知识库\hotel-sop-brand-comparison-v2.md]
+  >> #### 核心SOP体系
+[obsidian-vault\10-我为你生成的\知识库\hotel-sop-deepened-v1.md]
+  >> #### 5.3.1 监控操作规范
+[obsidian-vault\10-我为你生成的\知识库\hotel-sop-deepened-v1.md]
+  >> ## 5. 检查清单
+[obsidian-vault\10-我为你生成的\知识库\hotel-sop-deepened-v1.md]
+  >> ### 附录B: 常用表单清单
+[obsidian-vault\10-我为你生成的\知识库\hotel-sop-eight-department-v1.md]
+  >> # 酒店八部一室SOP完整体系
+[obsidian-vault\10-我为你生成的\知识库\hotel-sop-flat-organization-v1.md]
+  >> # 酒店扁平化管理SOP体系
+[obsidian-vault\10-我为你生成的\知识库\hotel-sop-kpi-v1.md]
+  >> # 酒店SOP-KPI指标体系
+[obsidian-vault\10-我为你生成的\知识库\hotel-sop-kpi-v1.md]
+  >> ## 一、KPI体系底层逻辑
+[obsidian-vault\10-我为你生成的\知识库\hotel-sop-kpi-v1.md]
+  >> ## 十、AHL智能化KPI体系
+[obsidian-vault\10-我为你生成的\知识库\hotel-sop-templates-v1.md]
+  >> ## ——表单/表格/检查清单/操作模板
+[obsidian-vault\10-我为你生成的\知识库\hotel-standards-certifications-v1.md]
+  >> # 酒店行业评定认证与奖项体系
+[obsidian-vault\10-我为你生成的\知识库\hotel-standards-certifications-v1.md]
+  >> ## 一、评定标准体系
+[obsidian-vault\10-我为你生成的\知识库\hotel-standards-certifications-v1.md]
+  >> ## 二、认证标准体系
+[obsidian-vault\10-我为你生成的\知识库\hotel-standards-certifications-v1.md]
+  >> ### 2.1 ISO质量管理体系
+[obsidian-vault\10-我为你生成的\知识库\hotel-standards-certifications-v1.md]
+  >> ### 2.2 ISO环境管理体系
+[obsidian-vault\10-我为你生成的\知识库\hotel-standards-certifications-v1.md]
+  >> ## 三、奖项体系
+[obsidian-vault\10-我为你生成的\知识库\knowledge-base-index.md]
+  >> ### 任务完成后自反思清单
+[obsidian-vault\10-我为你生成的\知识库\knowledge-base-index.md]
+  >> ### 命名规范
+[obsidian-vault\10-我为你生成的\知识库\mental-models-decision-frameworks-v1.md]
+  >> ## 三、认知偏见清单（决策陷阱）
+[obsidian-vault\10-我为你生成的\知识库\music-aesthetics-framework.md]
+  >> # 音乐审美专项体系（Music Aesthetics Framework）
+[obsidian-vault\10-我为你生成的\知识库\music-aesthetics-framework.md]
+  >> ## 1. 音乐的历史维度
+[obsidian-vault\10-我为你生成的\知识库\music-aesthetics-framework.md]
+  >> ## 2. 音乐的分类体系
+[obsidian-vault\10-我为你生成的\知识库\music-aesthetics-framework.md]
+  >> ## 3. 音乐审美的十维度分析框架
+[obsidian-vault\10-我为你生成的\知识库\music-aesthetics-framework.md]
+  >> ### 维度一：声音物理层
+[obsidian-vault\10-我为你生成的\知识库\music-aesthetics-framework.md]
+  >> ### 维度二：旋律结构层
+[obsidian-vault\10-我为你生成的\知识库\music-aesthetics-framework.md]
+  >> ### 维度三：情感解析层
+[obsidian-vault\10-我为你生成的\知识库\music-aesthetics-framework.md]
+  >> ### 维度四：时间叙事层
+[obsidian-vault\10-我为你生成的\知识库\music-aesthetics-framework.md]
+  >> ### 维度五：社会历史层
+[obsidian-vault\10-我为你生成的\知识库\music-aesthetics-framework.md]
+  >> ### 维度六：边缘与主流层
+[obsidian-vault\10-我为你生成的\知识库\music-aesthetics-framework.md]
+  >> ### 维度七：代际传递层
+[obsidian-vault\10-我为你生成的\知识库\music-aesthetics-framework.md]
+  >> ### 维度八：身体共鸣层
+[obsidian-vault\10-我为你生成的\知识库\music-aesthetics-framework.md]
+  >> ### 维度九：抽象维度
+[obsidian-vault\10-我为你生成的\知识库\music-aesthetics-framework.md]
+  >> ### 维度十：独特性层
+[obsidian-vault\10-我为你生成的\知识库\music-aesthetics-framework.md]
+  >> ## 5. 乐器全景图（完整体系）
+[obsidian-vault\10-我为你生成的\知识库\music-aesthetics-framework.md]
+  >> ### 18.1 人声的音色维度
+[obsidian-vault\10-我为你生成的\知识库\music-aesthetics-framework.md]
+  >> ### 19.1 古典音乐的情感维度
+[obsidian-vault\10-我为你生成的\知识库\music-aesthetics-framework.md]
+  >> ### 19.2 爵士乐的情感维度
+[obsidian-vault\10-我为你生成的\知识库\music-aesthetics-framework.md]
+  >> ### 19.3 摇滚乐的情感维度
+[obsidian-vault\10-我为你生成的\知识库\music-aesthetics-framework.md]
+  >> ### 19.4 电子音乐的情感维度
+[obsidian-vault\10-我为你生成的\知识库\music-aesthetics-framework.md]
+  >> ## 20. 音乐审美的跨文化维度
+[obsidian-vault\10-我为你生成的\知识库\music-aesthetics-framework.md]
+  >> ## 附录B：推荐聆听列表（按框架维度）
+[obsidian-vault\10-我为你生成的\知识库\pricing-strategy-knowledge-base.md]
+  >> ## 八、定价策略检查清单
+[obsidian-vault\10-我为你生成的\知识库\pricing-strategy-knowledge-base.md]
+  >> ### 10.1 可用信号体系
+[obsidian-vault\10-我为你生成的\知识库\quantitative-trading-knowledge-base-v1.md]
+  >> ## 二、量化交易基础体系
+[obsidian-vault\10-我为你生成的\知识库\quantitative-trading-knowledge-base-v1.md]
+  >> ### 3.1 核心指标体系
+[obsidian-vault\10-我为你生成的\知识库\research-report-standard-v1.md]
+  >> ## 一、研报类型体系
+[obsidian-vault\10-我为你生成的\知识库\research-report-standard-v1.md]
+  >> ### 3.2 时间标注规范
+[obsidian-vault\10-我为你生成的\知识库\research-report-standard-v1.md]
+  >> ## 八、写作规范
+[obsidian-vault\10-我为你生成的\知识库\research-report-standard-v1.md]
+  >> ### 8.1 数字使用规范
+[obsidian-vault\10-我为你生成的\知识库\research-report-standard-v1.md]
+  >> ### 8.2 图表使用规范
+[obsidian-vault\10-我为你生成的\知识库\research-report-standard-v1.md]
+  >> ### 9.1 文件命名规范
+[obsidian-vault\10-我为你生成的\知识库\self-revolution-index.md]
+  >> ## 一级文件清单
+[obsidian-vault\10-我为你生成的\知识库\sop-self-evolution-plan.md]
+  >> ## 二、深化的维度框架
+[obsidian-vault\10-我为你生成的\知识库\sop-self-evolution-plan.md]
+  >> ### 4.1 每日自检清单
+[obsidian-vault\10-我为你生成的\知识库\sop-self-evolution-plan.md]
+  >> ### 4.2 每周优化清单
+[obsidian-vault\10-我为你生成的\知识库\sop-self-evolution-plan.md]
+  >> ### 4.3 每月评估清单
+[obsidian-vault\10-我为你生成的\知识库\startup-fundraising-knowledge-base-v2.md]
+  >> ### 2.1 核心条款清单
+[obsidian-vault\10-我为你生成的\知识库\startup-fundraising-knowledge-base-v2.md]
+  >> ## 三、尽职调查清单
+[obsidian-vault\10-我为你生成的\知识库\startup-fundraising-knowledge-base-v2.md]
+  >> ### 3.1 DD四大维度
+[obsidian-vault\10-我为你生成的\知识库\startup-fundraising-knowledge-base-v2.md]
+  >> ### 4.1 主流投资人清单（按类型分类）
+[obsidian-vault\10-我为你生成的\知识库\startup-fundraising-knowledge-base-v2.md]
+  >> ## 六、路演材料体系
+[obsidian-vault\10-我为你生成的\知识库\startup-fundraising-knowledge-base-v2.md]
+  >> ### 6.3 Data Room清单
+[obsidian-vault\10-我为你生成的\知识库\startup-fundraising-knowledge-base-v2.md]
+  >> ### 9.2 AHL投资人推荐清单
+[obsidian-vault\10-我为你生成的\知识库\startup-fundraising-knowledge-base-v2.md]
+  >> ### 10.1 融资检查清单
+[obsidian-vault\10-我为你生成的\知识库\token-economy-research.md]
+  >> ## 研究产出清单
+[obsidian-vault\10-我为你生成的\知识库\user-knowledge-base.md]
+  >> ## 十、项目总控体系（全面扫描版?
+[obsidian-vault\10-我为你生成的\知识库\商旅TMC知识库V1.0.md]
+  >> ### 3.2 RFP关键评估维度
+[obsidian-vault\10-我为你生成的\知识库\商旅TMC知识库V1.0.md]
+  >> ### 8.1 更新检查清单
+[obsidian-vault\10-我为你生成的\知识库\工作日报-2026-03-17.md]
+  >> ### 技能体系
+[obsidian-vault\10-我为你生成的\知识库\张实全方位人格侧写报告.md]
+  >> ## 第六章：审美与品位决策清单应用
+[obsidian-vault\10-我为你生成的\知识库\张实全方位人格侧写报告.md]
+  >> ### Eric的品位决策清单
+[obsidian-vault\10-我为你生成的\知识库\收益管理SKILL知识库-V1.0.md]
+  >> ## 一、数学公式体系
+[obsidian-vault\10-我为你生成的\知识库\收益管理SKILL知识库-V1.0.md]
+  >> #### 1.1.2 STR对标指数体系
+[obsidian-vault\10-我为你生成的\知识库\收益管理SKILL知识库-V1.0.md]
+  >> ## 二、预测模型体系
+[obsidian-vault\10-我为你生成的\知识库\收益管理SKILL知识库-V1.0.md]
+  >> ## 三、分析方法体系
+[obsidian-vault\10-我为你生成的\知识库\收益管理SKILL知识库-V1.0.md]
+  >> #### 3.1.1 细分维度体系
+[obsidian-vault\10-我为你生成的\知识库\自我革命-vectorized.md]
+  >> ## 📁 FILE_INVENTORY（文件清单）
+[obsidian-vault\10-我为你生成的\知识库\自我革命索引-V1.0.md]
+  >> ### 4.3 数字化体系专项
+[obsidian-vault\10-我为你生成的\知识库\自我革命索引-V1.0.md]
+  >> ### 体系化文档（按需深入）
+[obsidian-vault\10-我为你生成的\知识库\跨境贸易-选品实战专项V1.0.md]
+  >> ### 2.2 电子产品选品维度
+[obsidian-vault\10-我为你生成的\知识库\跨境贸易-选品实战专项V1.0.md]
+  >> ### 2.3 选品否决清单
+[obsidian-vault\10-我为你生成的\知识库\跨境贸易-选品实战专项V1.0.md]
+  >> ### 9.1 工具清单
+[obsidian-vault\10-我为你生成的\知识库\跨境贸易知识库V1.0.md]
+  >> ### 2.2 主要认证体系
+[obsidian-vault\10-我为你生成的\知识库\跨境贸易知识库V1.0.md]
+  >> ## 三、物流体系
+[obsidian-vault\10-我为你生成的\知识库\跨境贸易知识库V1.0.md]
+  >> ## 七、运营体系
+[obsidian-vault\10-我为你生成的\知识库\跨境贸易知识库V1.0.md]
+  >> ### 8.2 质检体系
+[obsidian-vault\10-我为你生成的\知识库\跨境贸易知识库V1.0.md]
+  >> ### 10.2 风险清单
+[obsidian-vault\10-我为你生成的\知识库\酒店供应链全景知识库.md]
+  >> ## 八、服务商体系
+[obsidian-vault\10-我为你生成的\知识库\酒店供应链全景知识库.md]
+  >> ## 九、合作商体系
+[obsidian-vault\10-我为你生成的\知识库\酒店市场销售知识库-V1.0.md]
+  >> ### 1.1 协议客户开发体系
+[obsidian-vault\10-我为你生成的\知识库\酒店市场销售知识库-V1.0.md]
+  >> ## 二、会员体系与私域运营
+[obsidian-vault\10-我为你生成的\知识库\酒店市场销售知识库-V1.0.md]
+  >> ## 六、营销活动体系
+[obsidian-vault\10-我为你生成的\知识库\酒店市场销售知识库-V1.0.md]
+  >> ### 6.3 部门KPI体系
+[obsidian-vault\10-我为你生成的\知识库\酒店市场销售知识库-V1.0.md]
+  >> ### 7.1 RFP应答体系
+[obsidian-vault\10-我为你生成的\知识库\酒店政策法规知识库-V1.0.md]
+  >> ### 1.1 消防安全责任体系
+[obsidian-vault\10-我为你生成的\知识库\酒店政策法规知识库-V1.0.md]
+  >> ### 5.3 服务标准体系
+[obsidian-vault\10-我为你生成的\知识库\酒店规划设计知识库-V1.0.md]
+  >> ## 一、酒店项目定位体系
+[obsidian-vault\10-我为你生成的\知识库\酒店财务知识库-V1.0.md]
+  >> ## 一、核心指标体系
+[obsidian-vault\10-我为你生成的\知识库\酒店财务知识库-V1.0.md]
+  >> ### 1.2 利润指标体系
+[obsidian-vault\10-我为你生成的\知识库\酒店财务知识库-V1.0.md]
+  >> ### 1.3 STR指数体系
+[obsidian-vault\10-我为你生成的\知识库\酒店财务知识库-V1.0.md]
+  >> ### 16.1 考核指标体系
+[obsidian-vault\10-我为你生成的\知识库\酒店项目定位-V1.0.md]
+  >> ## 六、定位决策检查清单
+[obsidian-vault\10-我为你生成的\知识库\酒店项目案例知识库-V1.0.md]
+  >> ## 一、项目方法论：酒店项目全生命周期咨询服务体系
+[obsidian-vault\10-我为你生成的\知识库\酒店项目案例知识库-V1.0.md]
+  >> ## 五、品牌对比：中旅酒店品牌体系
+[obsidian-vault\10-我为你生成的\知识库\酒店项目案例知识库-V1.0.md]
+  >> ## 六、项目测算核心指标体系
+[obsidian-vault\10-我为你生成的\知识库\酒店\2026-07-14-酒店预订主权分析框架 V1.0.md]
+  >> ## 三、量化指标体系：预订主权健康度
+[obsidian-vault\10-我为你生成的\知识库\酒店\2026-07-14-酒店预订主权分析框架 V1.0.md]
+  >> ## 八、工具包：快速自检清单
+[obsidian-vault\10-我为你生成的\系统与工具\01-工具与技能清单.md]
+  >> # 工具与技能清单
+[obsidian-vault\10-我为你生成的\系统与工具\WORK.md]
+  >> ## 六、cron任务清单（已清理）
+[obsidian-vault\10-我为你生成的\系统与工具\WORKFLOW.md]
+  >> # B166ER 工作流程规范 (Workflow Standards)
+[obsidian-vault\10-我为你生成的\系统与工具\WORKFLOW.md]
+  >> ## 一、技能清单与快速选择
+[obsidian-vault\10-我为你生成的\系统与工具\WORKFLOW.md]
+  >> ### 3.1 执行前检查清单
+[obsidian-vault\10-我为你生成的\系统与工具\WORKFLOW.md]
+  >> ### 3.4 禁止清单 (Anti-Patterns)
+[obsidian-vault\10-我为你生成的\系统与工具\B166ER-能力体系\KB-深化方法论-V4.md]
+  >> ## 5 维 + 6 美评分体系
+[obsidian-vault\10-我为你生成的\系统与工具\B166ER-能力体系\README.md]
+  >> # 🌟 B166ER 能力体系（V4 重构版）
+[obsidian-vault\20-我们共同维护的\战略与节奏\02-1244战略详解.md]
+  >> ## 4 维度
+[obsidian-vault\20-我们共同维护的\技术文档\AHL\ahl-agent-architecture-design.md]
+  >> ### 2.1 整体架构：三层Agent体系
+[obsidian-vault\20-我们共同维护的\技术文档\AHL\AHL-乐山-AI客服技术方案-V1.0.md]
+  >> ## 模块3：AI客服SKILL体系
+[obsidian-vault\20-我们共同维护的\技术文档\AHL\AHL-乐山-AI客服技术方案-V1.0.md]
+  >> ### SKILL清单
+[obsidian-vault\20-我们共同维护的\技术文档\AHL\AHL-乐山-AI客服技术方案-V1.0.md]
+  >> ### 乐山落地行动清单
+[obsidian-vault\20-我们共同维护的\技术文档\AHL\AHL-乐山-AI预订匹配技术方案-V1.0.md]
+  >> ### SKILL清单
+[obsidian-vault\20-我们共同维护的\技术文档\AHL\AHL-乐山-AI预订匹配技术方案-V1.0.md]
+  >> ### 乐山落地行动清单
+[obsidian-vault\20-我们共同维护的\技术文档\AHL\AHL-乐山-OTA数据采集技术方案-V1.0.md]
+  >> ## 五、竞品监控配置清单
+[obsidian-vault\20-我们共同维护的\技术文档\AHL\AHL-乐山-OTA数据采集技术方案-V1.0.md]
+  >> ### 5.3 实地确认清单
+[obsidian-vault\20-我们共同维护的\技术文档\AHL\AHL-乐山-PMS技术对接方案-V1.0.md]
+  >> ### 1.3 实地调研必查清单
+[obsidian-vault\20-我们共同维护的\技术文档\AHL\AHL-乐山-到达酒店执行手册-V1.0.md]
+  >> ## 📋 出发前检查清单（随身携带）
+[obsidian-vault\20-我们共同维护的\技术文档\AHL\AHL-乐山-实地对接执行手册-V1.0.md]
+  >> ### 1.1 出发前检查清单
+[obsidian-vault\20-我们共同维护的\技术文档\AHL\AHL-乐山-实地对接执行手册-V1.0.md]
+  >> ### 1.2 关键问题清单
+[obsidian-vault\20-我们共同维护的\技术文档\AHL\AHL-乐山-实地对接执行手册-V1.0.md]
+  >> ## 四、测试验证48小时清单
+[obsidian-vault\20-我们共同维护的\技术文档\AHL\AHL-乐山-实地对接执行手册-V1.0.md]
+  >> ## 八、实地对接检查清单（打勾版）
+[obsidian-vault\20-我们共同维护的\技术文档\AHL\AHL-乐山-实地核实发现-V1.1.md]
+  >> ### 价格体系（携程实时）
+[obsidian-vault\20-我们共同维护的\技术文档\AHL\AHL-乐山-实地核实发现-V1.1.md]
+  >> ### 第一个小时执行清单
+[obsidian-vault\20-我们共同维护的\技术文档\AHL\AHL-乐山-技术架构方案-V1.0.md]
+  >> ## 五、第三方Key清单
+[obsidian-vault\20-我们共同维护的\技术文档\AHL\AHL-乐山-技术架构方案-V1.0.md]
+  >> ## 七、目录结构与文件清单
+[obsidian-vault\20-我们共同维护的\技术文档\AHL\AHL-乐山-技术架构方案-V1.0.md]
+  >> ## 九、运维清单
+[obsidian-vault\20-我们共同维护的\技术文档\AHL\AHL-乐山-新媒体私域自动化预订技术方案-V1.0.md]
+  >> # UTM参数规范
+[obsidian-vault\20-我们共同维护的\技术文档\AHL\AHL-乐山-新媒体私域自动化预订技术方案-V1.0.md]
+  >> ## 四、完整SKILL清单
+[obsidian-vault\20-我们共同维护的\技术文档\AHL\AHL-乐山-新媒体私域自动化预订技术方案-V1.0.md]
+  >> ## 六、关键问题清单（需实地确认）
+[obsidian-vault\20-我们共同维护的\技术文档\AHL\AHL-乐山-私域SaaS系统对接方案-V1.0.md]
+  >> ## 4. 乐山嘉州系统摸底清单（到达后必问）
+[obsidian-vault\20-我们共同维护的\技术文档\AHL\AHL-乐山-私域SaaS系统对接方案-V1.0.md]
+  >> ### 4.1 必问清单（技术摸底）
+[obsidian-vault\20-我们共同维护的\技术文档\AHL\AHL-乐山-私域运营技术方案-V1.0.md]
+  >> ## 模块1：私域运营SKILL体系
+[obsidian-vault\20-我们共同维护的\技术文档\AHL\AHL-乐山-私域运营技术方案-V1.0.md]
+  >> ### SKILL清单
+[obsidian-vault\20-我们共同维护的\技术文档\AHL\AHL-乐山-私域运营技术方案-V1.0.md]
+  >> ### 乐山落地行动清单
+[obsidian-vault\20-我们共同维护的\技术文档\AHL\AHL-乐山-竞品监控配置-V1.0.md]
+  >> # AHL乐山项目竞品监控配置清单 V1.0
+[obsidian-vault\20-我们共同维护的\技术文档\AHL\AHL-乐山锦江嘉州宾馆部署方案-V1.0.md]
+  >> #### 痛点4：会员体系沉睡，私域流量未激活（P1）
+[obsidian-vault\20-我们共同维护的\技术文档\AHL\AHL-乐山锦江嘉州宾馆部署方案-V1.0.md]
+  >> #### 数据源清单
+[obsidian-vault\20-我们共同维护的\技术文档\AHL\AHL-乐山锦江嘉州宾馆部署方案-V1.0.md]
+  >> ### A. 竞品监控配置清单
+[obsidian-vault\20-我们共同维护的\技术文档\AHL\AHL-初期数字员工SKILL体系-V1.0.md]
+  >> # AHL 初期数字员工 SKILL体系 完整版 V1.0
+[obsidian-vault\20-我们共同维护的\技术文档\AHL\AHL-初期数字员工SKILL体系-V1.0.md]
+  >> ## 一、SKILL体系总览
+[obsidian-vault\20-我们共同维护的\技术文档\AHL\AHL-初期数字员工SKILL体系-V1.0.md]
+  >> ### 3.4 积分体系AGENT
+[obsidian-vault\20-我们共同维护的\技术文档\AHL\AHL-初期数字员工SKILL体系-V1.0.md]
+  >> ## 六、现有SKILL复用清单
+[obsidian-vault\20-我们共同维护的\技术文档\AHL\AHL-初期数字员工产品化落地方案-V1.0.md]
+  >> ### 1.6 可立即产品化清单
+[obsidian-vault\20-我们共同维护的\技术文档\AHL\AHL-初期数字员工需求清单-V1.0.md]
+  >> # AHL 初期数字员工需求清单 V1.0
+[obsidian-vault\20-我们共同维护的\技术文档\AHL\AHL-初期数字员工需求清单-V1.0.md]
+  >> ### 2.2 功能需求清单
+[obsidian-vault\20-我们共同维护的\技术文档\AHL\AHL-初期数字员工需求清单-V1.0.md]
+  >> #### 2.2.4 积分体系AGENT
+[obsidian-vault\20-我们共同维护的\技术文档\AHL\AHL-初期数字员工需求清单-V1.0.md]
+  >> ### 2.4 SKILL清单
+[obsidian-vault\20-我们共同维护的\技术文档\AHL\AHL-初期数字员工需求清单-V1.0.md]
+  >> ### 3.2 功能需求清单
+[obsidian-vault\20-我们共同维护的\技术文档\AHL\AHL-初期数字员工需求清单-V1.0.md]
+  >> ### 3.4 SKILL清单
+[obsidian-vault\20-我们共同维护的\技术文档\AHL\AHL-初期数字员工需求清单-V1.0.md]
+  >> ### 4.2 功能需求清单
+[obsidian-vault\20-我们共同维护的\技术文档\AHL\AHL-初期数字员工需求清单-V1.0.md]
+  >> ### 4.4 SKILL清单
+[obsidian-vault\20-我们共同维护的\技术文档\AHL\AHL-商业计划书-V6.0.md]
+  >> ### 2.3 大模型技术体系
+[obsidian-vault\20-我们共同维护的\技术文档\AHL\AHL-商业计划书-V6.0.md]
+  >> #### 2.4.3 数据质量保障体系
+[obsidian-vault\20-我们共同维护的\技术文档\AHL\AHL-商业计划书-V6.0.md]
+  >> #### 2.6.3 合规体系建设
+[obsidian-vault\20-我们共同维护的\技术文档\AHL\AHL-商业计划书-V6.0.md]
+  >> ### 6.2 费率体系（STR参照）
+[obsidian-vault\20-我们共同维护的\技术文档\AHL\AHL-商业计划书-V6.0.md]
+  >> ### 7.1 单店ROI模型（新定价体系）
+[obsidian-vault\20-我们共同维护的\技术文档\AHL\AHL-商业计划书-V6.0.md]
+  >> ### 7.2 阶段收入预测（新定价体系）
+[obsidian-vault\20-我们共同维护的\技术文档\AHL\AHL-商业计划书-V6.0.md]
+  >> ### 附录A：核心SKILL完整清单（51个）
+[obsidian-vault\20-我们共同维护的\技术文档\AHL\AHL-商业计划书-V6.0.md]
+  >> ### 附录C：技术选型清单
+[obsidian-vault\20-我们共同维护的\技术文档\AHL\AHL-技术架构设计-V5.0.md]
+  >> ## 9. 技术选型清单
+[obsidian-vault\20-我们共同维护的\技术文档\AHL\AHL-项目信息采集清单-通用版.md]
+  >> # AHL项目信息采集清单（通用版）
+[obsidian-vault\20-我们共同维护的\技术文档\AHL\AHL-项目说明文档-全面版.md]
+  >> #### 底层基座：大模型体系
+[obsidian-vault\20-我们共同维护的\技术文档\B166ER\B166ER-ProjectManager-AGENT.md]
+  >> ## 输出规范
+[obsidian-vault\20-我们共同维护的\技术文档\B166ER\B166ER-ProjectManager-AGENT.md]
+  >> ## PPT交付检查清单
+[obsidian-vault\20-我们共同维护的\技术文档\B166ER\B166ER-ProjectManager-AGENT.md]
+  >> ## 文档交付检查清单
+[obsidian-vault\20-我们共同维护的\技术文档\其他\chengdu-chunxi-info-checklist.md]
+  >> # 成都春熙宾馆沟通要点清单（详细版·携程数据增强）
+[obsidian-vault\20-我们共同维护的\技术文档\其他\E-桌面20250702-文件内容摘要-V1.0.md]
+  >> ## 文件清单总览
+[obsidian-vault\20-我们共同维护的\技术文档\其他\E-桌面20250702-文件内容摘要-V1.0.md]
+  >> ### 文件9：酒店A、B、C类物资清单.pdf
+[obsidian-vault\20-我们共同维护的\技术文档\其他\HAL测试Query集_v1.0.md]
+  >> ### 1.1 覆盖维度
+[obsidian-vault\20-我们共同维护的\技术文档\其他\HAL测试Query集_v1.0.md]
+  >> ### 3.3 评判维度详解
+[obsidian-vault\20-我们共同维护的\技术文档\其他\hotel_operations_benchmarks.md]
+  >> ### 2.3 五色抹布使用规范
+[obsidian-vault\20-我们共同维护的\技术文档\其他\hotel_operations_benchmarks.md]
+  >> ### 6.1 携程评分维度
+[obsidian-vault\20-我们共同维护的\技术文档\其他\OpenClaw_Skills_定制化安装清单.md]
+  >> # OpenClaw Skills 定制化安装清单
+[obsidian-vault\20-我们共同维护的\技术文档\其他\OpenClaw_Skills_最终安装报告.md]
+  >> ## ✅ 已安装技能清单 (16个)
+[obsidian-vault\20-我们共同维护的\技术文档\其他\skill-installation-log-2026-02-12.md]
+  >> ## 六、明日复核查验清单
+[obsidian-vault\20-我们共同维护的\技术文档\其他\SKILL-PRD-004-线索评分引擎.md]
+  >> ### 3.1 评分维度体系
+[obsidian-vault\20-我们共同维护的\技术文档\其他\SKILL-PRD-004-线索评分引擎.md]
+  >> #### 维度1: 企业价值 (Firmographic Score) - 权重25%
+[obsidian-vault\20-我们共同维护的\技术文档\其他\SKILL-PRD-004-线索评分引擎.md]
+  >> #### 维度2: 需求强度 (Intent Score) - 权重30%
+[obsidian-vault\20-我们共同维护的\技术文档\其他\SKILL-PRD-004-线索评分引擎.md]
+  >> #### 维度3: 匹配度 (Fit Score) - 权重25%
+[obsidian-vault\20-我们共同维护的\技术文档\其他\SKILL-PRD-004-线索评分引擎.md]
+  >> #### 维度4: 触达难度 (Accessibility Score) - 权重20%
+[obsidian-vault\20-我们共同维护的\技术文档\其他\SKILL-PRD-010-动态定价引擎.md]
+  >> #### 模块1: 多维度需求预测
+[obsidian-vault\20-我们共同维护的\技术文档\其他\SKILL-PRD-011-智能排房引擎.md]
+  >> #### 模块1: 房间档案与标签体系
+[obsidian-vault\20-我们共同维护的\技术文档\其他\个人效能与心理健康改进计划.md]
+  >> ## 一、改进目标体系
+[obsidian-vault\20-我们共同维护的\技术文档\其他\个人效能与心理健康改进计划.md]
+  >> #### Day 8-14: G盘备份体系建立 🟢
+[obsidian-vault\20-我们共同维护的\技术文档\其他\个人效能与心理健康改进计划.md]
+  >> ## 七、监控与评估体系
+[obsidian-vault\20-我们共同维护的\技术文档\其他\个人效能与心理健康改进计划.md]
+  >> ### 7.1 每周检查清单 (周日执行)
+[obsidian-vault\20-我们共同维护的\技术文档\其他\个人效能与心理健康改进计划.md]
+  >> ## 九、工具与资源清单
+[obsidian-vault\20-我们共同维护的\技术文档\其他\全磁盘数字资产全景报告.md]
+  >> # 操作清单:
+[obsidian-vault\20-我们共同维护的\技术文档\其他\全磁盘数字资产全景报告.md]
+  >> ## 九、总结与行动清单
+[obsidian-vault\20-我们共同维护的\技术文档\其他\全磁盘数字资产全景报告.md]
+  >> ### 9.2 立即行动清单
+[obsidian-vault\20-我们共同维护的\技术文档\其他\安逸集团-产业发展部-到岗前战略分析-V1.0.md]
+  >> ### 5.5 到岗前（现在到5月下旬）的准备清单
+[obsidian-vault\20-我们共同维护的\技术文档\其他\技术决策_HAL技术路线选择_DeepSeek.md]
+  >> ### 1.2 评估维度
+[obsidian-vault\20-我们共同维护的\技术文档\其他\技术决策_HAL技术路线选择_DeepSeek.md]
+  >> ## 六、立即执行清单
+[obsidian-vault\20-我们共同维护的\技术文档\其他\数字足迹全景报告_2026-02-27.md]
+  >> ### A. 发现的敏感文件清单
+[obsidian-vault\20-我们共同维护的\技术文档\其他\数字足迹全景报告_2026-02-27.md]
+  >> ### C. 核心项目清单
+[obsidian-vault\20-我们共同维护的\技术文档\其他\文件命名规范指南.md]
+  >> # 文件命名规范指南
+[obsidian-vault\20-我们共同维护的\技术文档\其他\文件命名规范指南.md]
+  >> ## 五、内容描述规范
+[obsidian-vault\20-我们共同维护的\技术文档\其他\桌面文件整理方案.md]
+  >> ### 每周清理清单
+[obsidian-vault\20-我们共同维护的\技术文档\其他\桌面文件整理方案.md]
+  >> ### 每月整理清单
+[obsidian-vault\20-我们共同维护的\技术文档\其他\桌面文件整理方案.md]
+  >> ### 每季度归档清单
+[obsidian-vault\20-我们共同维护的\技术文档\思维方法\博弈论操作框架.md]
+  >> ### 策略行动清单
+[obsidian-vault\20-我们共同维护的\技术文档\思维方法\博弈论操作框架.md]
+  >> ## 九、自我检验清单
+[obsidian-vault\20-我们共同维护的\技术文档\思维方法\博弈论深化-商业案例与快速决策卡.md]
+  >> ### 4.2 信号发射清单
+[obsidian-vault\20-我们共同维护的\技术文档\思维方法\博弈论深化-商业案例与快速决策卡.md]
+  >> ## 七、博弈论核心错误清单
+[obsidian-vault\20-我们共同维护的\技术文档\思维方法\审美判断操作框架.md]
+  >> ## 一、审美判断七维度
+[obsidian-vault\20-我们共同维护的\技术文档\思维方法\审美判断操作框架.md]
+  >> ### 各维度详解
+[obsidian-vault\20-我们共同维护的\技术文档\思维方法\审美判断操作框架.md]
+  >> ## 四、应用场景清单
+[obsidian-vault\20-我们共同维护的\技术文档\思维方法\审美判断操作框架.md]
+  >> ## 七、自我检验清单
+[obsidian-vault\20-我们共同维护的\技术文档\思维方法\审美哲学实践框架-V1.0.md]
+  >> ## 三、品位决策清单（七维度）
+[obsidian-vault\20-我们共同维护的\技术文档\思维方法\审美哲学实践框架-V1.0.md]
+  >> ### 7.1 酒店空间审美维度
+[obsidian-vault\20-我们共同维护的\技术文档\思维方法\审美深化-评分标尺与练习方法.md]
+  >> ### 1.1 气韵维度 - 分数与案例
+[obsidian-vault\20-我们共同维护的\技术文档\思维方法\审美深化-评分标尺与练习方法.md]
+  >> ### 1.2 真诚维度 - 分数与案例
+[obsidian-vault\20-我们共同维护的\技术文档\思维方法\审美深化-评分标尺与练习方法.md]
+  >> ### 1.3 和谐维度 - 分数与案例
+[obsidian-vault\20-我们共同维护的\技术文档\思维方法\审美深化-评分标尺与练习方法.md]
+  >> ### 4.1 酒店文案审美清单
+[obsidian-vault\20-我们共同维护的\技术文档\思维方法\审美深化-评分标尺与练习方法.md]
+  >> ### 4.2 酒店设计审美清单
+[obsidian-vault\20-我们共同维护的\技术文档\思维方法\审美深化-评分标尺与练习方法.md]
+  >> ### 4.3 酒店提案审美清单
+[obsidian-vault\20-我们共同维护的\技术文档\思维方法\审美深化-评分标尺与练习方法.md]
+  >> ## 六、审美判断纠错清单
+[obsidian-vault\20-我们共同维护的\技术文档\思维方法\审美评分操作手册.md]
+  >> ### 维度得分
+[obsidian-vault\20-我们共同维护的\技术文档\思维方法\递归知识与元认知框架.md]
+  >> ### 4.2 内化检查清单
+[obsidian-vault\20-我们共同维护的\技术文档\思维方法\递归知识与元认知框架.md]
+  >> ## 九、实用元认知清单
+[obsidian-vault\20-我们共同维护的\技术文档\思维方法\递归知识深化-元认知工具箱与每日练习.md]
+  >> ### 4.2 知识体系健康度自检
+[obsidian-vault\20-我们共同维护的\技术文档\思维方法\递归知识深化-元认知工具箱与每日练习.md]
+  >> ## 五、实用清单模板
+[obsidian-vault\20-我们共同维护的\技术文档\思维方法\递归知识深化-元认知工具箱与每日练习.md]
+  >> ### 5.1 知识获取决策清单
+[obsidian-vault\20-我们共同维护的\技术文档\酒店行业\收益管理AGENT-SKILL体系-V1.0.md]
+  >> # 收益管理 AGENT SKILL体系 V1.0
+[obsidian-vault\20-我们共同维护的\报告\2026-spring-festival-hotel-industry-analysis.md]
+  >> ### 9.2 数据来源清单
+[obsidian-vault\20-我们共同维护的\报告\2026五一全国酒店市场复盘-STR补充.md]
+  >> ### 6.4 方法论升级清单
+[obsidian-vault\20-我们共同维护的\报告\2026五一全国酒店市场复盘-快报.md]
+  >> ### 3.3 航班维度（航班管家DAST，5/6）
+[obsidian-vault\20-我们共同维护的\报告\DATA-CALENDAR.md]
+  >> ## 三、分层报告体系
+[obsidian-vault\20-我们共同维护的\报告\DATA-CALENDAR.md]
+  >> ### 报告输出格式规范
+[obsidian-vault\20-我们共同维护的\报告\DATA-CALENDAR.md]
+  >> ### Cron任务设置规范
+[obsidian-vault\20-我们共同维护的\报告\DATA-CALENDAR.md]
+  >> ### 对比分析维度
+[obsidian-vault\20-我们共同维护的\报告\REPORTING-SYSTEM.md]
+  >> # REPORTING-SYSTEM.md — 酒店市场报告体系
+[obsidian-vault\20-我们共同维护的\报告\REPORTING-SYSTEM.md]
+  >> ## 九、报告文件命名规范
+[obsidian-vault\20-我们共同维护的\报告\缺失报告清单.md]
+  >> # ⚠️ 缺失报告清单（2026-07-12 盘点）
+[obsidian-vault\20-我们共同维护的\知识库索引\2026-07-15-6月经济数据全方位解读-官方原文验证版.md]
+  >> ### 1.1 官方原文链接清单
+[obsidian-vault\20-我们共同维护的\知识库索引\2026-07-16-新能源车外挂小蓝灯-全网扒数据.md]
+  >> ## 十一、信息来源清单
+[obsidian-vault\20-我们共同维护的\知识库索引\酒店市场销售知识库-V1.0.md]
+  >> ### 1.1 协议客户开发体系
+[obsidian-vault\20-我们共同维护的\知识库索引\酒店市场销售知识库-V1.0.md]
+  >> ## 二、会员体系与私域运营
+[obsidian-vault\20-我们共同维护的\知识库索引\酒店市场销售知识库-V1.0.md]
+  >> ## 六、营销活动体系
+[obsidian-vault\20-我们共同维护的\知识库索引\酒店市场销售知识库-V1.0.md]
+  >> ### 6.3 部门KPI体系
+[obsidian-vault\20-我们共同维护的\知识库索引\酒店市场销售知识库-V1.0.md]
+  >> ### 7.1 RFP应答体系
+[obsidian-vault\20-我们共同维护的\知识库索引\酒店政策法规知识库-V1.0.md]
+  >> ### 1.1 消防安全责任体系
+[obsidian-vault\20-我们共同维护的\知识库索引\酒店政策法规知识库-V1.0.md]
+  >> ### 5.3 服务标准体系
+[obsidian-vault\20-我们共同维护的\知识库索引\酒店项目定位-V1.0.md]
+  >> ## 六、定位决策检查清单
+[obsidian-vault\20-我们共同维护的\知识库索引\酒店项目案例知识库-V1.0.md]
+  >> ## 一、项目方法论：酒店项目全生命周期咨询服务体系
+[obsidian-vault\20-我们共同维护的\知识库索引\酒店项目案例知识库-V1.0.md]
+  >> ## 五、品牌对比：中旅酒店品牌体系
+[obsidian-vault\20-我们共同维护的\知识库索引\酒店项目案例知识库-V1.0.md]
+  >> ## 六、项目测算核心指标体系
+[obsidian-vault\20-我们共同维护的\项目档案\AHL\AHL-Agent-Skill完整说明书.md]
+  >> ### 3.2 C端AI管家 SKILL清单
+[obsidian-vault\20-我们共同维护的\项目档案\AHL\AHL-Agent-Skill完整说明书.md]
+  >> ### 3.3 B端AI运营官 SKILL清单
+[obsidian-vault\20-我们共同维护的\项目档案\AHL\AHL-Agent-Skill完整说明书.md]
+  >> ### 8.2 分工边界 (2026-06-22 双维度并存版)
+[obsidian-vault\20-我们共同维护的\项目档案\AHL\AHL-Agent-Skill完整说明书.md]
+  >> ## 十、87个SKILL完整清单
+[obsidian-vault\20-我们共同维护的\项目档案\AHL\AHL-Agent-Skill技术团队完整说明书.md]
+  >> ## 四、SKILL体系完整定义
+[obsidian-vault\20-我们共同维护的\项目档案\AHL\AHL-Agent-Skill技术团队完整说明书.md]
+  >> ### 4.2 C端AI管家 SKILL清单（41个）
+[obsidian-vault\20-我们共同维护的\项目档案\AHL\AHL-Agent-Skill技术团队完整说明书.md]
+  >> ### 4.3 B端AI运营官 SKILL清单（46个）
+[obsidian-vault\20-我们共同维护的\项目档案\AHL\AHL-Agent-Skill技术团队完整说明书.md]
+  >> ### 5.1 SKILL标准规范
+[obsidian-vault\20-我们共同维护的\项目档案\AHL\AHL-Agent-Skill技术团队完整说明书.md]
+  >> ## 十一、团队 (2026-06-22 双维度并存版)
+[obsidian-vault\20-我们共同维护的\项目档案\AHL\AHL-Archive-System.md]
+  >> # AHL项目档案管理体系 (Archive Management System)
+[obsidian-vault\20-我们共同维护的\项目档案\AHL\AHL-Archive-System.md]
+  >> ## 一、档案分类体系
+[obsidian-vault\20-我们共同维护的\项目档案\AHL\AHL-Archive-System.md]
+  >> ### 2.1 版本命名规范
+[obsidian-vault\20-我们共同维护的\项目档案\AHL\AHL-Archive-System.md]
+  >> ## 五、整理执行清单
+[obsidian-vault\20-我们共同维护的\项目档案\AHL\AHL-Archive-System.md]
+  >> ## 六、维护规范
+[obsidian-vault\20-我们共同维护的\项目档案\AHL\AHL-Archive-System.md]
+  >> ### 6.2 新增文件规范
+[obsidian-vault\20-我们共同维护的\项目档案\AHL\ahl-marketing-agent-architecture-v2.md]
+  >> # AHL营销体系AGENT+SKILL集群架构 V2.0（组织架构版）
+[obsidian-vault\20-我们共同维护的\项目档案\AHL\ahl-marketing-agent-architecture-v2.md]
+  >> ### 1.1 营销体系组织架构映射
+[obsidian-vault\20-我们共同维护的\项目档案\AHL\ahl-marketing-agent-architecture-v2.md]
+  >> #### SKILL-CRM-01 会员等级体系
+[obsidian-vault\20-我们共同维护的\项目档案\AHL\ahl-marketing-agent-architecture-v2.md]
+  >> ### 定位: 全营销体系定价与数据中枢
+[obsidian-vault\20-我们共同维护的\项目档案\AHL\ahl-marketing-agent-architecture-v3.md]
+  >> # AHL营销体系AGENT+SKILL集群架构 V3.0（国际一线标准版）
+[obsidian-vault\20-我们共同维护的\项目档案\AHL\ahl-marketing-agent-architecture-v3.md]
+  >> ## 一、国际一线酒店营销体系对标
+[obsidian-vault\20-我们共同维护的\项目档案\AHL\ahl-marketing-agent-architecture-v3.md]
+  >> ### 1.2 希尔顿营销体系
+[obsidian-vault\20-我们共同维护的\项目档案\AHL\ahl-marketing-agent-architecture-v3.md]
+  >> ## 二、AHL营销体系V3.0架构
+[obsidian-vault\20-我们共同维护的\项目档案\AHL\ahl-marketing-agent-architecture-v3.md]
+  >> ### 2.1 总体架构：10+1 AGENT体系
+[obsidian-vault\20-我们共同维护的\项目档案\AHL\ahl-marketing-agent-architecture-v3.md]
+  >> ### 定位: 万豪Bonvoy级别的会员体系
+[obsidian-vault\20-我们共同维护的\项目档案\AHL\ahl-marketing-agent-architecture-v3.md]
+  >> #### SKILL-LOY-01 会员等级体系
+[obsidian-vault\20-我们共同维护的\项目档案\AHL\ahl-marketing-agent-architecture-v3.md]
+  >> ## 十三、获客雷达与全体系协同
+[obsidian-vault\20-我们共同维护的\项目档案\AHL\ahl-marketing-member-agent-architecture-v1.md]
+  >> ### 3.1 会员体系层 (4 SKILLs)
+[obsidian-vault\20-我们共同维护的\项目档案\AHL\ahl-marketing-member-agent-architecture-v1.md]
+  >> #### SKILL-MEM-01 会员等级体系设计 (Tier System Design)
+[obsidian-vault\20-我们共同维护的\项目档案\AHL\ahl-marketing-member-agent-architecture-v1.md]
+  >> #### SKILL-MEM-02 积分体系引擎 (Points Engine)
+[obsidian-vault\20-我们共同维护的\项目档案\AHL\AHL-Product-Catalog.md]
+  >> # AHL 产品清单 (Product Catalog)
+[obsidian-vault\20-我们共同维护的\项目档案\AHL\AHL-Product-Catalog.md]
+  >> ## 📋 产品清单总览
+[obsidian-vault\20-我们共同维护的\项目档案\AHL\AHL-数据库关联配置.md]
+  >> ### 标准规范
+[obsidian-vault\20-我们共同维护的\项目档案\AHL\AHL-电梯演讲-一页纸.md]
+  >> ### 👥 团队 (2026-06-22 双维度并存版)
+[obsidian-vault\20-我们共同维护的\项目档案\AHL\AHL-电梯演讲-一页纸.md]
+  >> ## 📎 附件清单
+[obsidian-vault\20-我们共同维护的\项目档案\AHL\API申请指南.md]
+  >> ## 七、申请完成检查清单
+[obsidian-vault\20-我们共同维护的\项目档案\AHL\b-agent-revenue-management-SKILL-v2.md]
+  >> #### 2.1 竞品监控体系
+[obsidian-vault\20-我们共同维护的\项目档案\AHL\b-agent-revenue-management-SKILL-v2.md]
+  >> #### 16.1 核心KPI体系
+[obsidian-vault\20-我们共同维护的\项目档案\AHL\b-agent-revenue-management-SKILL.md]
+  >> #### 预测维度
+[obsidian-vault\20-我们共同维护的\项目档案\AHL\商业计划书1-两江云顶酒店.docx.md]
+  >> ### 策略三：会员体系——锁定客户，建立忠诚度
+[obsidian-vault\20-我们共同维护的\项目档案\AHL\商业计划书1-两江云顶酒店.docx.md]
+  >> # 第三部分：运营体系与执行路径
+[obsidian-vault\20-我们共同维护的\项目档案\AHL\商业计划书1-两江云顶酒店.docx.md]
+  >> # 附件：执行清单
+[obsidian-vault\20-我们共同维护的\项目档案\AHL\商业计划书_新华酒店管理公司_AHL赋能版.md]
+  >> ### 4.3 供应链赋能体系
+[obsidian-vault\20-我们共同维护的\项目档案\AHL\商业计划书_新华酒店管理公司_AHL赋能版.md]
+  >> ### 7.1 总部赋能体系
+[obsidian-vault\20-我们共同维护的\项目档案\AHL\商业计划书_新华酒店管理公司_AHL赋能版.md]
+  >> ### 7.2 运营标准体系
+[obsidian-vault\20-我们共同维护的\项目档案\AHL\商业计划书_新华酒店管理公司_AHL赋能版.md]
+  >> ### 7.3 培训体系
+[obsidian-vault\20-我们共同维护的\项目档案\AHL\商业计划书_新华酒店管理公司_AHL赋能版.md]
+  >> ### 7.4 质量监控体系
+[obsidian-vault\50-外部接入\2026-07-14-旅游强国十五五规划-360度详细解读.md]
+  >> ## 🏙️ Part 3: 88 城市体系 — Eric 战略坐标的核心参照系
+[obsidian-vault\50-外部接入\2026-07-14-旅游强国十五五规划-360度详细解读.md]
+  >> ## 🔑 Part 10: 战略级红利清单（按 Eric 业务匹配度排序）
+[obsidian-vault\50-外部接入\2026-07-14-旅游强国十五五规划-Eric视角吸收.md]
+  >> ## 二、88 城市体系 — 完整名单（四川占 5 席，重点关注）
+[obsidian-vault\50-外部接入\2026-07-14-旅游强国十五五规划-Eric视角吸收.md]
+  >> ### 🔴 1. 88 城市体系 — 安逸集团主战场被官方点名
+[obsidian-vault\50-外部接入\2026-07-14-旅游强国十五五规划-玉帝视角深度解读.md]
+  >> ## 1.2 88 城市体系 — 中国旅游承接网络
+[obsidian-vault\50-外部接入\2026-07-14-旅游强国十五五规划-玉帝视角深度解读.md]
+  >> # 第二部分:6 大变量深度解读(玉帝视角全维度)
+[obsidian-vault\50-外部接入\2026-07-14-旅游强国十五五规划-玉帝视角深度解读.md]
+  >> ## 2.1 变量 1 — 88 城市网格化政策体系
+[obsidian-vault\50-外部接入\2026-07-14-旅游强国十五五规划-玉帝视角深度解读.md]
+  >> ## 措施 02 — 加入 88 城市网格体系
+[obsidian-vault\50-外部接入\2026-07-14-旅游强国十五五规划-玉帝视角解读.md]
+  >> ### 维度 1: 历史沿革（30 年跨度）
+[obsidian-vault\50-外部接入\2026-07-14-旅游强国十五五规划-玉帝视角解读.md]
+  >> ### 维度 2: 当下情况（5 个结构性事实）
+[obsidian-vault\50-外部接入\2026-07-14-旅游强国十五五规划-玉帝视角解读.md]
+  >> ### 维度 3: 原因分析（5 条因果链）
+[obsidian-vault\50-外部接入\2026-07-14-旅游强国十五五规划-玉帝视角解读.md]
+  >> ### 维度 4: 未来预判（5 个趋势,5 年尺度）
+[obsidian-vault\50-外部接入\2026-07-14-旅游强国十五五规划-玉帝视角解读.md]
+  >> ### 维度 5: 底层逻辑（最深的 1 个问题: 不变量是什么?）
+[obsidian-vault\50-外部接入\2026-07-14-旅游强国十五五规划-玉帝视角酒店投资人分析.md]
+  >> ## B. 信源精确度对照(玉帝视角信噪比)
+[obsidian-vault\50-外部接入\2026-07-15-旅游强国十五五规划-玉帝视角终极版.md]
+  >> ## 玉帝视角全维度终极解读
+[obsidian-vault\50-外部接入\2026-07-15-旅游强国十五五规划-玉帝视角终极版.md]
+  >> ## 2.1 政策骨架：11+4+3+88+3+8+11+9 数字体系
+[obsidian-vault\50-外部接入\01-安逸入职物料-20260707\B_安逸酒店Agent协议立项草案_20260707.md]
+  >> ## 四、协议核心 API 规范（示例）
+[obsidian-vault\50-外部接入\01-安逸入职物料-20260707\C_AI人才梯队建设方案_20260707.md]
+  >> ## 五、薪酬体系（参考）
+[obsidian-vault\50-外部接入\01-安逸入职物料-20260707\C_AI人才梯队建设方案_20260707.md]
+  >> ## 六、培养体系（3 层）
+[obsidian-vault\50-外部接入\01-安逸入职物料-20260707\安逸集团_入职信息清单_20260707.md]
+  >> # 安逸酒店集团 · 产业发展部部长 · 入职信息获取清单
+[obsidian-vault\50-外部接入\01-安逸入职物料-20260707\安逸集团_入职信息清单_20260707.md]
+  >> ### C1 酒店资产清单
+[obsidian-vault\50-外部接入\01-安逸入职物料-20260707\安逸集团_入职信息清单_20260707.md]
+  >> ### G1 系统清单
+[obsidian-vault\50-外部接入\01-安逸入职物料-20260707\安逸集团_第一周行动计划_20260707.md]
+  >> ## 📊 第一周结束时的"产出清单"
+[obsidian-vault\50-外部接入\01-安逸入职物料-20260707\安逸集团_配套表格模板_20260707.md]
+  >> ## 表 1 · 酒店资产全清单（167 家）
+[obsidian-vault\50-外部接入\01-安逸入职物料-20260707\安逸集团_配套表格模板_20260707.md]
+  >> ### 3.2 月度会议清单
+[obsidian-vault\50-外部接入\01-安逸入职物料-20260707\安逸集团_配套表格模板_20260707.md]
+  >> ## 表 5 · 项目储备清单
+[obsidian-vault\50-外部接入\02-安逸集团知识库-20260720\AHL对接安逸-关键机会点.md]
+  >> ## 🎯 7 大关键机会点（"钩子"清单）
+[obsidian-vault\50-外部接入\02-安逸集团知识库-20260720\_MOC-安逸集团十五五.md]
+  >> ## 🔗 全域互联图（既独立成体系，又双向互联）
+[obsidian-vault\50-外部接入\02-安逸集团知识库-20260720\安逸-7.24会前阅读清单.md]
+  >> # 安逸 7.24 会前阅读清单
+[obsidian-vault\50-外部接入\02-安逸集团知识库-20260720\安逸-一店一品矩阵-IP解构.md]
+  >> ## 🎨 四文化维度解构 — "一店一品一主题"方法论
+[obsidian-vault\50-外部接入\02-安逸集团知识库-20260720\安逸-一店一品矩阵-IP解构.md]
+  >> ### 维度 1：经典国宾文脉（礼序）
+[obsidian-vault\50-外部接入\02-安逸集团知识库-20260720\安逸-一店一品矩阵-IP解构.md]
+  >> ### 维度 2：市井烟火民俗（闲适）
+[obsidian-vault\50-外部接入\02-安逸集团知识库-20260720\安逸-一店一品矩阵-IP解构.md]
+  >> ### 维度 3：先锋国潮新潮（新锐）
+[obsidian-vault\50-外部接入\02-安逸集团知识库-20260720\安逸-一店一品矩阵-IP解构.md]
+  >> ### 维度 4：自然山水康养（意境）
+[obsidian-vault\50-外部接入\02-安逸集团知识库-20260720\安逸-一店一品矩阵-IP解构.md]
+  >> ## 📊 4 维度 × 8 酒店 适配矩阵
+[obsidian-vault\50-外部接入\02-安逸集团知识库-20260720\安逸-一店一品矩阵-IP解构.md]
+  >> #### 步骤 5：标准体系输出
+[obsidian-vault\50-外部接入\02-安逸集团知识库-20260720\安逸-三项制度改革.md]
+  >> ### 结构改革：建立市场化薪酬体系
+[obsidian-vault\50-外部接入\02-安逸集团知识库-20260720\安逸-轻重分离1+5架构.md]
+  >> ## 🔗 轻重协同机制 — 4 个协调维度
+[obsidian-vault\50-外部接入\B166ER-info-graphics-20260713\01-审美哲学-解读.md]
+  >> # 🌸 P01' · 审美哲学体系（SOUL 100% 覆盖）
+[obsidian-vault\50-外部接入\B166ER-info-graphics-20260713\01-审美哲学-解读.md]
+  >> ### 5. 7 步决策清单
+[obsidian-vault\50-外部接入\B166ER-info-graphics-20260713\01-审美哲学-解读.md]
+  >> ## V4 §15 的对应：六美可操作清单
+[obsidian-vault\50-外部接入\B166ER-info-graphics-20260713\03-技能库-解读.md]
+  >> ### 2. 详细清单
+[obsidian-vault\50-外部接入\B166ER-info-graphics-20260713\README.md]
+  >> ## 📋 信息图清单
+[obsidian-vault\50-外部接入\B166ER-范式\README-MOC.md]
+  >> ## 📁 模板文件清单
+[obsidian-vault\50-外部接入\B166ER-范式\README-MOC.md]
+  >> ## 📋 自检清单（输出前）
+[obsidian-vault\50-外部接入\cron-outputs\2026-07\2026-07-12\21-31-Entity-Extractor-实体抽取.md]
+  >> ## 新增实体清单
+[obsidian-vault\50-外部接入\cron-outputs\2026-07\2026-07-13\09-40-Debate-Trigger-高价值任务.md]
+  >> ## 高价值任务清单（按决策权重）
+[obsidian-vault\50-外部接入\cron-outputs\2026-07\2026-07-14\10-06-深度自检上午.md]
+  >> ### 入职准备清单
+[obsidian-vault\50-外部接入\cron-outputs\2026-07\2026-07-16\21-06-深度自迭代晚间.md]
+  >> ## 当日全网深扫（12个任务，4大维度）
+[obsidian-vault\50-外部接入\cron-outputs\2026-07\2026-07-18\09-26-每日全球情报简报.md]
+  >> ### Eric个人项目维度
+[obsidian-vault\50-外部接入\cron-outputs\2026-07\2026-07-20\07-59-本地备份-02-00.md]
+  >> ### 备份清单
+[obsidian-vault\50-外部接入\cron-outputs\2026-07\2026-07-20\09-04-Debate-Trigger-高价值任务.md]
+  >> ## 高价值任务清单（按决策权重）
+[obsidian-vault\50-外部接入\cron-outputs\2026-07\2026-07-21\21-07-深度自检晚间.md]
+  >> ### AHL明日行动清单（如果Eric接触）
+[obsidian-vault\50-外部接入\酒管供应链工程-交付包-v1.0\README.md]
+  >> # 酒管公司供应链工程 · 全维度交付包 v1.0
+[obsidian-vault\emergence\hubs\B166ER 全景信息图 MOC.md]
+  >> ## 📋 信息图清单
+[obsidian-vault\emergence\hubs\Eric 人格-审美 MOC.md]
+  >> ### 🎨 文化主题与一店一品（审美维度）

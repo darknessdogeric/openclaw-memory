@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>要素 05 边界条件</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  width: 1080px; height: 1440px; background: #fff;
+  font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+  color: #1a1a1a; display: flex; flex-direction: column; overflow: hidden;
+}
+.header {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 18px 48px 14px; border-bottom: 1.5px solid #1a1a1a;
+}
+.logo { width: 44px; height: 44px; background: #1a1a1a; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  color: #C9A961; font-size: 22px; font-weight: 700; }
+.logo-text { font-size: 13px; color: #444; font-weight: 500; }
+.tag { font-size: 13px; color: #444; border: 1.5px solid #1a1a1a;
+  padding: 4px 12px; border-radius: 20px; font-weight: 500; }
+.content { flex: 1; padding: 22px 48px 22px; display: flex; flex-direction: column; }
+.el-badge { display: inline-block; background: #1B3A6B; color: #fff;
+  font-size: 16px; padding: 6px 18px; border-radius: 22px;
+  margin-bottom: 14px; letter-spacing: 2px; font-weight: 600; align-self: flex-start; }
+.el-title { font-size: 64px; font-weight: 800; color: #1a1a1a;
+  margin-bottom: 8px; line-height: 1.15; }
+.el-subtitle { font-size: 24px; color: #555; margin-bottom: 22px; font-weight: 500; }
+.guide-box { border-left: 6px solid #C9A961; padding: 14px 22px;
+  background: #fafaf6; margin-bottom: 20px; }
+.guide-box p { font-size: 20px; color: #1a1a1a; line-height: 1.6; font-weight: 500; }
+.conditions { display: flex; flex-direction: column; gap: 12px; margin-bottom: 20px; }
+.cond { display: flex; align-items: flex-start; gap: 14px; }
+.cond-left { min-width: 130px; padding: 14px 16px; border-radius: 10px;
+  font-size: 16px; font-weight: 700; text-align: center; flex-shrink: 0; }
+.cond.blue { background: #1B3A6B; color: #fff; }
+.cond.gold { background: #C9A961; color: #1a1a1a; }
+.cond.green { background: #27ae60; color: #fff; }
+.cond.red { background: #c0392b; color: #fff; }
+.cond-right { flex: 1; padding-top: 10px; }
+.cond-title { font-size: 18px; font-weight: 700; color: #1a1a1a; margin-bottom: 4px; }
+.cond-desc { font-size: 16px; color: #444; line-height: 1.5; }
+.formula-box { background: #f8f8f6; border: 2.5px solid #1B3A6B;
+  border-radius: 10px; padding: 18px 26px; margin-bottom: 18px; }
+.formula-title { font-size: 14px; color: #1B3A6B; font-weight: 700;
+  margin-bottom: 10px; letter-spacing: 2px; }
+.formula-text { font-size: 17px; color: #1a1a1a; line-height: 1.7; }
+.formula-text strong { color: #1B3A6B; }
+.conclusion { background: #1B3A6B; border-radius: 10px; padding: 22px 26px;
+  display: flex; gap: 24px; align-items: center; }
+.conclusion .big { font-size: 50px; font-weight: 800; color: #C9A961;
+  white-space: nowrap; line-height: 1; }
+.conclusion .text { font-size: 18px; color: #fff; line-height: 1.65; }
+.conclusion .text strong { color: #C9A961; }
+.footer { display: flex; justify-content: space-between; align-items: center;
+  padding: 14px 48px; border-top: 1.5px solid #1a1a1a; font-size: 13px; color: #555; }
+</style>
+</head>
+<body>
+  <div class="header">
+    <div style="display:flex;align-items:center;gap:14px;">
+      <div class="logo">B</div><span class="logo-text">B166ER 出品</span>
+    </div>
+    <div class="tag">Hospitality / Product Design · 2026.07.20</div>
+  </div>
+
+  <div class="content">
+    <div class="el-badge">五要素 · 05 · 本质</div>
+    <div class="el-title">边界条件</div>
+    <div class="el-subtitle">什么情况下有效？什么情况下失效？</div>
+
+    <div class="guide-box">
+      <p><strong style="color:#1B3A6B">核心问题：</strong>这套本地社区化设计，是否有适用边界？什么类型的酒店、什么类型的区位、什么类型的客群结构，才是最优匹配？</p>
+    </div>
+
+    <div class="conditions">
+      <div class="cond">
+        <div class="cond-left blue">必要条件</div>
+        <div class="cond-right">
+          <div class="cond-title">周边具备可识别的高密度本地客群</div>
+          <div class="cond-desc">文教区/交通枢纽/商业中心/老城区等，本地居民有持续餐饮需求，而非过路客为主</div>
+        </div>
+      </div>
+      <div class="cond">
+        <div class="cond-left gold">必要条件</div>
+        <div class="cond-right">
+          <div class="cond-title">酒店有独立或可分隔的运营能力</div>
+          <div class="cond-desc">餐厅/健身房/会议室可独立核算，能承接本地客的散客消费</div>
+        </div>
+      </div>
+      <div class="cond">
+        <div class="cond-left green">可选扩展</div>
+        <div class="cond-right">
+          <div class="cond-title">会员体系与社群运营基础</div>
+          <div class="cond-desc">已有PMS系统 + 基础会员体系，可低成本嫁接本地客沉淀路径</div>
+        </div>
+      </div>
+      <div class="cond">
+        <div class="cond-left red">失效场景</div>
+        <div class="cond-right">
+          <div class="cond-title">周边无稳定本地客群</div>
+          <div class="cond-desc">纯旅游度假酒店 / 机场过路型酒店 / 封闭式社区内酒店，此模型不适用</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="formula-box">
+      <div class="formula-title">APPLICABILITY MATRIX · 适用性矩阵</div>
+      <div class="formula-text">
+        <strong>高适用：</strong>城市商务酒店 + 周边具备本地客群基础（首选场景）<br>
+        <strong>中适用：</strong>度假型酒店 + 已建立独立运营单元（需先解耦）<br>
+        <strong>低适用：</strong>纯过路型酒店 / 封闭管理酒店 / 周边无本地生活（不适用）
+      </div>
+    </div>
+
+    <div class="conclusion">
+      <div class="big">慎始</div>
+      <div class="text">
+        <strong>边界条件不是限制，是保护。</strong><br>
+        在错误的地点用正确的模型 = 在正确的地点用错误的模型。<br>
+        <strong>选址选对了，这个模型放大10倍；选址选错了，这个模型会失败得很彻底。</strong>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <span>酒店限制性功能产品 · 方法论系列 · v2.0</span>
+    <span>B166ER 出品</span>
+  </div>
+</body>
+</html>

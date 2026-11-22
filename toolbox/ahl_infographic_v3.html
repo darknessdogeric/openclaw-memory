@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>AHL · 双 AGENT 矩阵 · 直接经济</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body {
+    width: 1080px;
+    height: 1920px;
+    font-family: "Source Han Sans SC", "Noto Sans CJK SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+    background: radial-gradient(ellipse at top, #0a1a3a 0%, #050a1f 50%, #02060f 100%);
+    color: #e8f4ff;
+    overflow: hidden;
+    position: relative;
+  }
+  body::before {
+    content: "";
+    position: absolute; inset: 0;
+    background-image:
+      radial-gradient(1px 1px at 12% 8%, #ffffff, transparent),
+      radial-gradient(1px 1px at 28% 22%, #b4d4ff, transparent),
+      radial-gradient(1px 1px at 45% 12%, #ffffff, transparent),
+      radial-gradient(1px 1px at 65% 35%, #88aaff, transparent),
+      radial-gradient(1px 1px at 78% 18%, #ffffff, transparent),
+      radial-gradient(1px 1px at 92% 28%, #d4d4ff, transparent),
+      radial-gradient(1px 1px at 18% 62%, #ffffff, transparent),
+      radial-gradient(1px 1px at 52% 78%, #b4d4ff, transparent),
+      radial-gradient(1px 1px at 85% 65%, #ffffff, transparent),
+      radial-gradient(1px 1px at 8% 92%, #88aaff, transparent),
+      radial-gradient(2px 2px at 38% 88%, rgba(0,212,255,0.4), transparent),
+      radial-gradient(2px 2px at 72% 92%, rgba(255,215,0,0.3), transparent);
+    opacity: 0.55;
+    pointer-events: none;
+  }
+  .topbar {
+    width: 100%; height: 8px;
+    background: linear-gradient(90deg, #00d4ff 0%, #0066ff 35%, #8b5cf6 65%, #ffd700 100%);
+    box-shadow: 0 0 20px rgba(0, 212, 255, 0.6);
+  }
+  .container { padding: 48px 60px 60px; position: relative; z-index: 2; }
+
+  /* HEADER */
+  .header { text-align: center; margin-bottom: 38px; }
+  .header .tag {
+    display: inline-block; font-size: 18px; letter-spacing: 6px;
+    color: #00d4ff; border: 1px solid rgba(0,212,255,0.5);
+    padding: 5px 20px; border-radius: 30px; margin-bottom: 18px;
+    background: rgba(0, 212, 255, 0.08);
+  }
+  .header h1 {
+    font-size: 62px; font-weight: 900; letter-spacing: 3px; line-height: 1.15;
+    background: linear-gradient(90deg, #00d4ff 0%, #8b5cf6 50%, #ffd700 100%);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    background-clip: text; margin-bottom: 10px;
+    text-shadow: 0 0 30px rgba(0, 212, 255, 0.4);
+  }
+  .header .sub-en { font-size: 22px; color: #8b9fcf; letter-spacing: 5px; margin-bottom: 16px; font-weight: 300; }
+  .header .sub-cn { font-size: 30px; color: #ffd700; font-weight: 600; letter-spacing: 2px; text-shadow: 0 0 20px rgba(255, 215, 0, 0.4); }
+
+  /* Section label */
+  .section-label {
+    display: flex; align-items: center; gap: 12px;
+    font-size: 21px; color: #00d4ff;
+    letter-spacing: 3px; margin: 24px 0 18px;
+    font-weight: 600;
+  }
+  .section-label .num {
+    background: linear-gradient(135deg, #00d4ff, #0066ff);
+    color: #fff; width: 34px; height: 34px;
+    border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 19px; font-weight: 800;
+    box-shadow: 0 0 15px rgba(0,212,255,0.5);
+  }
+  .divider {
+    height: 1px; margin: 22px 0;
+    background: linear-gradient(90deg, transparent 0%, rgba(0,212,255,0.6) 50%, transparent 100%);
+    position: relative;
+  }
+  .divider::before {
+    content: ""; position: absolute; left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: #00d4ff;
+    box-shadow: 0 0 15px #00d4ff;
+  }
+
+  /* ==== SECTION 1: PARADIGM 3-step ==== */
+  .paradigm-3step {
+    display: grid;
+    grid-template-columns: 1fr 40px 1fr 40px 1.3fr;
+    gap: 8px; align-items: stretch;
+  }
+  .step {
+    border-radius: 14px; padding: 22px 18px;
+    position: relative; overflow: hidden;
+  }
+  .step-1 { background: linear-gradient(160deg, rgba(80,95,120,0.18), rgba(40,55,80,0.18)); border: 1px solid rgba(120,140,170,0.3); }
+  .step-2 { background: linear-gradient(160deg, rgba(0,212,255,0.12), rgba(139,92,246,0.10)); border: 1px solid rgba(0,212,255,0.4); }
+  .step-3 {
+    background: linear-gradient(160deg, rgba(255,215,0,0.18), rgba(0,212,255,0.18));
+    border: 1.5px solid #ffd700;
+    box-shadow: 0 0 30px rgba(255,215,0,0.4), inset 0 0 20px rgba(0,212,255,0.1);
+  }
+  .step .step-num {
+    position: absolute; top: 8px; right: 12px;
+    font-size: 38px; font-weight: 900; line-height: 1;
+    opacity: 0.18; letter-spacing: -1px;
+  }
+  .step-1 .step-num { color: #8b9fcf; }
+  .step-2 .step-num { color: #00d4ff; }
+  .step-3 .step-num { color: #ffd700; opacity: 0.3; }
+  .step h3 { font-size: 26px; margin-bottom: 6px; letter-spacing: 2px; }
+  .step-1 h3 { color: #8b9fcf; }
+  .step-2 h3 { color: #00d4ff; }
+  .step-3 h3 {
+    background: linear-gradient(90deg, #00d4ff, #ffd700);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .step .en { font-size: 12px; letter-spacing: 3px; margin-bottom: 14px; font-weight: 400; }
+  .step-1 .en { color: #6b7a99; }
+  .step-2 .en { color: #b4d4ff; }
+  .step-3 .en { color: #ffe88a; }
+  .step .desc { font-size: 13px; line-height: 1.6; color: #c4d4ef; }
+  .step .desc strong { color: #ffd700; font-weight: 700; }
+  .step .mini-icon {
+    font-size: 38px; margin-bottom: 8px; display: block;
+  }
+  .step-arrow {
+    display: flex; align-items: center; justify-content: center;
+    color: #ffd700; font-size: 28px;
+    text-shadow: 0 0 12px rgba(255,215,0,0.8);
+  }
+
+  /* ==== SECTION 2: DUAL MATRIX ==== */
+  .matrix-wrap {
+    border-radius: 16px;
+    background: linear-gradient(180deg, rgba(0,212,255,0.06), rgba(255,215,0,0.06));
+    border: 1px solid rgba(0,212,255,0.3);
+    overflow: hidden;
+    position: relative;
+  }
+
+  /* C Matrix (top) */
+  .matrix-c {
+    padding: 22px 26px;
+    background: linear-gradient(90deg, rgba(0,212,255,0.15), rgba(0,212,255,0.04));
+    border-bottom: 1px solid rgba(0,212,255,0.25);
+    position: relative;
+  }
+  .matrix-b {
+    padding: 22px 26px;
+    background: linear-gradient(90deg, rgba(255,215,0,0.04), rgba(255,215,0,0.18));
+    border-top: 1px solid rgba(255,215,0,0.3);
+    position: relative;
+  }
+  .matrix-label {
+    display: flex; justify-content: space-between; align-items: center;
+    margin-bottom: 14px;
+  }
+  .matrix-label .name {
+    font-size: 22px; font-weight: 800; letter-spacing: 2px;
+  }
+  .matrix-c .name { color: #00d4ff; }
+  .matrix-b .name { color: #ffd700; }
+  .matrix-label .en { font-size: 11px; color: #6b7a99; letter-spacing: 3px; }
+  .matrix-c .en { color: #88aaff; }
+  .matrix-b .en { color: #ffe88a; }
+  .matrix-label .count {
+    font-size: 11px; padding: 2px 10px;
+    border-radius: 12px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.15);
+    color: #c4d4ef;
+    letter-spacing: 1px;
+  }
+
+  /* Agent node styles */
+  .agent-row {
+    display: flex; gap: 10px;
+    justify-content: space-between;
+  }
+  .agent {
+    flex: 1; text-align: center;
+    padding: 12px 6px;
+    border-radius: 10px;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    position: relative;
+  }
+  .agent .avatar {
+    font-size: 26px; line-height: 1;
+    margin-bottom: 4px; display: block;
+  }
+  .agent .name {
+    font-size: 12px; font-weight: 600;
+    letter-spacing: 1px;
+    color: #c4d4ef;
+  }
+  .matrix-c .agent .name { color: #b4d4ff; }
+  .matrix-b .agent .name { color: #ffe88a; }
+  .agent .role {
+    font-size: 9px; color: #6b7a99; letter-spacing: 1px;
+    margin-top: 2px;
+  }
+  .agent::after {
+    content: "⚡"; position: absolute;
+    top: 4px; right: 6px;
+    font-size: 11px; color: #ffd700;
+    text-shadow: 0 0 6px rgba(255,215,0,0.8);
+  }
+
+  /* Protocol band (the key new element) */
+  .protocol-band {
+    padding: 14px 26px;
+    background: linear-gradient(90deg, transparent, rgba(139,92,246,0.18), rgba(0,212,255,0.18), rgba(255,215,0,0.18), transparent);
+    text-align: center;
+    border-top: 1px dashed rgba(139,92,246,0.5);
+    border-bottom: 1px dashed rgba(139,92,246,0.5);
+    position: relative;
+  }
+  .protocol-band .proto-name {
+    font-size: 20px; font-weight: 800; color: #fff;
+    letter-spacing: 3px;
+    background: linear-gradient(90deg, #8b5cf6, #00d4ff, #ffd700);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 0 0 15px rgba(139,92,246,0.6);
+  }
+  .protocol-band .proto-sub {
+    font-size: 11px; color: #b4d4ff; letter-spacing: 4px; margin-top: 4px;
+  }
+  .protocol-band .no-toll {
+    display: inline-block; margin-top: 6px;
+    font-size: 12px; color: #4ade80;
+    border: 1px solid rgba(74,222,128,0.5);
+    padding: 2px 12px; border-radius: 12px;
+    background: rgba(74,222,128,0.08);
+    letter-spacing: 2px;
+    font-weight: 600;
+  }
+
+  /* The P2P mesh visualization */
+  .mesh-section {
+    margin-top: 14px;
+    padding: 14px 20px 18px;
+    background: rgba(0,0,0,0.3);
+    border-radius: 12px;
+    border: 1px solid rgba(139,92,246,0.3);
+  }
+  .mesh-section .mesh-title {
+    font-size: 13px; color: #8b5cf6; letter-spacing: 3px; font-weight: 700;
+    text-align: center; margin-bottom: 8px;
+  }
+  .mesh-svg {
+    width: 100%; height: 200px;
+  }
+  .mesh-legend {
+    display: flex; justify-content: space-around;
+    font-size: 11px; color: #c4d4ef; letter-spacing: 1px;
+    margin-top: 6px;
+  }
+  .mesh-legend span { display: flex; align-items: center; gap: 5px; }
+  .mesh-legend .dot { width: 9px; height: 9px; border-radius: 50%; display: inline-block; }
+  .mesh-legend .dot-c { background: #00d4ff; box-shadow: 0 0 6px #00d4ff; }
+  .mesh-legend .dot-b { background: #ffd700; box-shadow: 0 0 6px #ffd700; }
+  .mesh-legend .line { width: 18px; height: 1.5px; display: inline-block; background: linear-gradient(90deg, #00d4ff, #ffd700); }
+
+  .matrix-foot {
+    text-align: center; padding: 12px;
+    font-size: 16px; color: #ffd700; letter-spacing: 3px; font-weight: 700;
+    background: rgba(0,0,0,0.2);
+    border-top: 1px solid rgba(255,215,0,0.3);
+  }
+  .matrix-foot small {
+    display: block; font-size: 11px; color: #8b9fcf; letter-spacing: 2px;
+    margin-top: 3px; font-weight: 400;
+  }
+
+  /* ==== SECTION 3: UNIVERSAL ==== */
+  .universal-grid {
+    display: grid; grid-template-columns: repeat(5, 1fr);
+    gap: 12px; margin-top: 6px;
+  }
+  .u-tile {
+    border-radius: 10px; padding: 16px 8px;
+    text-align: center;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.1);
+  }
+  .u-tile .emoji { font-size: 32px; line-height: 1; margin-bottom: 6px; display: block; }
+  .u-tile .label { font-size: 14px; font-weight: 600; letter-spacing: 2px; }
+  .u-tile .en { font-size: 9px; color: #8b9fcf; margin-top: 3px; letter-spacing: 1px; }
+  .u1 { box-shadow: 0 0 20px rgba(0,212,255,0.25); border-color: rgba(0,212,255,0.5); }
+  .u1 .label { color: #00d4ff; }
+  .u2 { box-shadow: 0 0 20px rgba(34,197,94,0.25); border-color: rgba(34,197,94,0.5); }
+  .u2 .label { color: #4ade80; }
+  .u3 { box-shadow: 0 0 20px rgba(59,130,246,0.25); border-color: rgba(59,130,246,0.5); }
+  .u3 .label { color: #60a5fa; }
+  .u4 { box-shadow: 0 0 20px rgba(139,92,246,0.3); border-color: rgba(139,92,246,0.5); }
+  .u4 .label { color: #a78bfa; }
+  .u5 { box-shadow: 0 0 20px rgba(255,215,0,0.3); border-color: rgba(255,215,0,0.5); }
+  .u5 .label { color: #ffd700; }
+
+  .univ-caption {
+    text-align: center; font-size: 17px; color: #c4d4ef;
+    margin-top: 14px; letter-spacing: 2px; line-height: 1.55;
+  }
+  .univ-caption strong { color: #ffd700; border-bottom: 1px dashed rgba(255,215,0,0.4); padding-bottom: 1px; }
+
+  /* FOOTER */
+  .footer-callout {
+    margin-top: 22px; text-align: center; padding: 16px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, rgba(0,212,255,0.12), rgba(255,215,0,0.12));
+    border: 1px solid rgba(0,212,255,0.4);
+  }
+  .footer-callout .tagline {
+    font-size: 24px; font-weight: 800;
+    background: linear-gradient(90deg, #00d4ff, #ffd700);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: 2px; line-height: 1.45;
+  }
+  .signoff {
+    display: flex; justify-content: space-between; align-items: center;
+    margin-top: 14px; padding-top: 12px;
+    border-top: 1px solid rgba(0,212,255,0.2);
+  }
+  .signoff .contact { font-size: 14px; color: #8b9fcf; letter-spacing: 1px; }
+  .signoff .contact strong { color: #00d4ff; font-weight: 600; }
+  .signoff .watermark { font-size: 12px; color: #4a5575; letter-spacing: 4px; }
+
+</style>
+</head>
+<body>
+  <div class="topbar"></div>
+  <div class="container">
+
+    <!-- HEADER -->
+    <div class="header">
+      <span class="tag">AHL · DUAL-MATRIX ARCHITECTURE</span>
+      <h1>AHL · 双 AGENT 矩阵范式</h1>
+      <div class="sub-en">C - M A T R I X &nbsp; ⇄ &nbsp; B - M A T R I X</div>
+      <div class="sub-cn">客人到商家 · 直接点对点 · 协议层不抽水</div>
+    </div>
+
+    <!-- SECTION 1: 3-step paradigm -->
+    <div class="section-label">
+      <span class="num">01</span>
+      <span>范式三阶 / 3-STEP PARADIGM</span>
+    </div>
+
+    <div class="paradigm-3step">
+      <div class="step step-1">
+        <span class="step-num">1</span>
+        <span class="mini-icon">🏬</span>
+        <h3>货架经济</h3>
+        <div class="en">SHELF · 旧范式</div>
+        <div class="desc">
+          商家<strong>摆货</strong>，客人<strong>逛</strong>。
+          <br>价值锚：<strong>位置</strong>。
+          <br>抽水者：房东 / 物业
+        </div>
+      </div>
+
+      <div class="step-arrow">→</div>
+
+      <div class="step step-2">
+        <span class="step-num">2</span>
+        <span class="mini-icon">🎯</span>
+        <h3>匹配经济</h3>
+        <div class="en">MATCH · 过渡态</div>
+        <div class="desc">
+          中央<strong>算法撮合</strong>。
+          <br>价值锚：<strong>算法</strong>。
+          <br>抽水者：OTA / 大大
+        </div>
+      </div>
+
+      <div class="step-arrow">→</div>
+
+      <div class="step step-3">
+        <span class="step-num">3</span>
+        <span class="mini-icon">⚡</span>
+        <h3>直接经济</h3>
+        <div class="en">DIRECT · AHL 在此</div>
+        <div class="desc">
+          客人 Agent ↔ 商家 Agent<br>
+          <strong>点对点握手</strong>，无中介。
+          <br>价值锚：<strong>协议</strong>。
+          <br>抽水者：<strong>无</strong>
+        </div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- SECTION 2: DUAL MATRIX ARCHITECTURE -->
+    <div class="section-label">
+      <span class="num">02</span>
+      <span>双矩阵架构 / DUAL-AGENT MATRIX</span>
+    </div>
+
+    <div class="matrix-wrap">
+
+      <!-- TOP: C Matrix -->
+      <div class="matrix-c">
+        <div class="matrix-label">
+          <span class="name">C 矩阵 · CONSUMER MATRIX</span>
+          <span class="en">客人侧 AGENT 群</span>
+          <span class="count">× N 个客人 Agent</span>
+        </div>
+        <div class="agent-row">
+          <div class="agent">
+            <span class="avatar">📱</span>
+            <div class="name">商务客</div>
+            <div class="role">出差型</div>
+          </div>
+          <div class="agent">
+            <span class="avatar">🎒</span>
+            <div class="name">背包客</div>
+            <div class="role">性价比型</div>
+          </div>
+          <div class="agent">
+            <span class="avatar">👨‍👩‍👧</span>
+            <div class="name">亲子客</div>
+            <div class="role">需求多元</div>
+          </div>
+          <div class="agent">
+            <span class="avatar">🌏</span>
+            <div class="name">入境客</div>
+            <div class="role">语言 / 偏好</div>
+          </div>
+          <div class="agent">
+            <span class="avatar">🐶</span>
+            <div class="name">宠物客</div>
+            <div class="role">特殊需求</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- MIDDLE: Protocol band -->
+      <div class="protocol-band">
+        <div class="proto-name">AHL 协议层 · AHL PROTOCOL LAYER</div>
+        <div class="proto-sub">只做标准化 · 不做撮合 · 不抽佣金</div>
+        <div class="no-toll">⚡ NO MIDDLEMAN · 不当中介</div>
+      </div>
+
+      <!-- MESH visualization -->
+      <div class="mesh-section">
+        <div class="mesh-title">点对点握手 / PEER-TO-PEER HANDSHAKE</div>
+        <svg class="mesh-svg" viewBox="0 0 960 200" preserveAspectRatio="none">
+          <defs>
+            <linearGradient id="lineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#00d4ff" stop-opacity="0.7"/>
+              <stop offset="50%" stop-color="#8b5cf6" stop-opacity="0.5"/>
+              <stop offset="100%" stop-color="#ffd700" stop-opacity="0.7"/>
+            </linearGradient>
+          </defs>
+          <!-- C nodes (top row) -->
+          <g>
+            <circle cx="80" cy="40" r="10" fill="#00d4ff"/>
+            <circle cx="80" cy="40" r="16" fill="none" stroke="#00d4ff" stroke-opacity="0.4"/>
+            <text x="80" y="22" text-anchor="middle" fill="#b4d4ff" font-size="11">C1</text>
+
+            <circle cx="240" cy="40" r="10" fill="#00d4ff"/>
+            <circle cx="240" cy="40" r="16" fill="none" stroke="#00d4ff" stroke-opacity="0.4"/>
+            <text x="240" y="22" text-anchor="middle" fill="#b4d4ff" font-size="11">C2</text>
+
+            <circle cx="400" cy="40" r="10" fill="#00d4ff"/>
+            <circle cx="400" cy="40" r="16" fill="none" stroke="#00d4ff" stroke-opacity="0.4"/>
+            <text x="400" y="22" text-anchor="middle" fill="#b4d4ff" font-size="11">C3</text>
+
+            <circle cx="560" cy="40" r="10" fill="#00d4ff"/>
+            <circle cx="560" cy="40" r="16" fill="none" stroke="#00d4ff" stroke-opacity="0.4"/>
+            <text x="560" y="22" text-anchor="middle" fill="#b4d4ff" font-size="11">C4</text>
+
+            <circle cx="720" cy="40" r="10" fill="#00d4ff"/>
+            <circle cx="720" cy="40" r="16" fill="none" stroke="#00d4ff" stroke-opacity="0.4"/>
+            <text x="720" y="22" text-anchor="middle" fill="#b4d4ff" font-size="11">C5</text>
+
+            <circle cx="880" cy="40" r="10" fill="#00d4ff"/>
+            <circle cx="880" cy="40" r="16" fill="none" stroke="#00d4ff" stroke-opacity="0.4"/>
+            <text x="880" y="22" text-anchor="middle" fill="#b4d4ff" font-size="11">C6</text>
+          </g>
+
+          <!-- B nodes (bottom row) -->
+          <g>
+            <circle cx="120" cy="170" r="10" fill="#ffd700"/>
+            <circle cx="120" cy="170" r="16" fill="none" stroke="#ffd700" stroke-opacity="0.4"/>
+            <text x="120" y="190" text-anchor="middle" fill="#ffe88a" font-size="11">B1 酒店</text>
+
+            <circle cx="280" cy="170" r="10" fill="#ffd700"/>
+            <circle cx="280" cy="170" r="16" fill="none" stroke="#ffd700" stroke-opacity="0.4"/>
+            <text x="280" y="190" text-anchor="middle" fill="#ffe88a" font-size="11">B2 餐饮</text>
+
+            <circle cx="440" cy="170" r="10" fill="#ffd700"/>
+            <circle cx="440" cy="170" r="16" fill="none" stroke="#ffd700" stroke-opacity="0.4"/>
+            <text x="440" y="190" text-anchor="middle" fill="#ffe88a" font-size="11">B3 零售</text>
+
+            <circle cx="600" cy="170" r="10" fill="#ffd700"/>
+            <circle cx="600" cy="170" r="16" fill="none" stroke="#ffd700" stroke-opacity="0.4"/>
+            <text x="600" y="190" text-anchor="middle" fill="#ffe88a" font-size="11">B4 娱乐</text>
+
+            <circle cx="760" cy="170" r="10" fill="#ffd700"/>
+            <circle cx="760" cy="170" r="16" fill="none" stroke="#ffd700" stroke-opacity="0.4"/>
+            <text x="760" y="190" text-anchor="middle" fill="#ffe88a" font-size="11">B5 服务</text>
+
+            <circle cx="900" cy="170" r="10" fill="#ffd700"/>
+            <circle cx="900" cy="170" r="16" fill="none" stroke="#ffd700" stroke-opacity="0.4"/>
+            <text x="900" y="190" text-anchor="middle" fill="#ffe88a" font-size="11">B6 本地</text>
+          </g>
+
+          <!-- P2P mesh connections (CROSsing the band - direct connections) -->
+          <g stroke="url(#lineGrad)" stroke-width="1.2" fill="none" opacity="0.85">
+            <path d="M 80,40 Q 100,100 120,170" stroke-dasharray="3,2"/>
+            <path d="M 80,40 Q 180,100 280,170" stroke-dasharray="3,2"/>
+            <path d="M 240,40 Q 260,100 280,170" stroke-dasharray="3,2"/>
+            <path d="M 240,40 Q 340,100 440,170" stroke-dasharray="3,2"/>
+            <path d="M 400,40 Q 420,100 440,170" stroke-dasharray="3,2"/>
+            <path d="M 400,40 Q 500,100 600,170" stroke-dasharray="3,2"/>
+            <path d="M 560,40 Q 580,100 600,170" stroke-dasharray="3,2"/>
+            <path d="M 560,40 Q 660,100 760,170" stroke-dasharray="3,2"/>
+            <path d="M 720,40 Q 740,100 760,170" stroke-dasharray="3,2"/>
+            <path d="M 720,40 Q 800,100 900,170" stroke-dasharray="3,2"/>
+            <path d="M 880,40 Q 880,100 900,170" stroke-dasharray="3,2"/>
+            <path d="M 880,40 Q 820,100 760,170" stroke-dasharray="3,2"/>
+            <path d="M 80,40 Q 240,100 440,170" stroke-dasharray="2,3" opacity="0.5"/>
+            <path d="M 560,40 Q 720,100 900,170" stroke-dasharray="2,3" opacity="0.5"/>
+          </g>
+
+          <!-- NO CENTRAL HUB (intentionally empty center) -->
+          <text x="480" y="106" text-anchor="middle" fill="#4ade80" font-size="10" font-weight="700" letter-spacing="2">
+            ✕ NO HUB
+          </text>
+          <text x="480" y="120" text-anchor="middle" fill="#6b7a99" font-size="9" letter-spacing="1">
+            中间是空的
+          </text>
+        </svg>
+        <div class="mesh-legend">
+          <span><span class="dot dot-c"></span>C 矩阵节点</span>
+          <span><span class="line"></span>P2P 直连</span>
+          <span><span class="dot dot-b"></span>B 矩阵节点</span>
+        </div>
+      </div>
+
+      <!-- BOTTOM: B Matrix -->
+      <div class="matrix-b">
+        <div class="matrix-label">
+          <span class="name">B 矩阵 · BUSINESS MATRIX</span>
+          <span class="en">商家侧 AGENT 群</span>
+          <span class="count">× N 个商家 Agent</span>
+        </div>
+        <div class="agent-row">
+          <div class="agent">
+            <span class="avatar">🏨</span>
+            <div class="name">单体酒店</div>
+            <div class="role">独立运营</div>
+          </div>
+          <div class="agent">
+            <span class="avatar">🏢</span>
+            <div class="name">连锁集团</div>
+            <div class="role">百店规模</div>
+          </div>
+          <div class="agent">
+            <span class="avatar">🍽️</span>
+            <div class="name">餐饮门店</div>
+            <div class="role">坪效优先</div>
+          </div>
+          <div class="agent">
+            <span class="avatar">🛍️</span>
+            <div class="name">零售小店</div>
+            <div class="role">流量稀缺</div>
+          </div>
+          <div class="agent">
+            <span class="avatar">🛎️</span>
+            <div class="name">本地生活</div>
+            <div class="role">服务上门</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="matrix-foot">
+        AHL = 协议层 · 不是平台 · 不当中间商
+        <small>AHL is a protocol, not a platform · 0% commission</small>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- SECTION 3: UNIVERSAL -->
+    <div class="section-label">
+      <span class="num">03</span>
+      <span>泛用性 / UNIVERSAL</span>
+    </div>
+
+    <div class="universal-grid">
+      <div class="u-tile u1"><span class="emoji">🏬</span><div class="label">商业地产</div><div class="en">MALL</div></div>
+      <div class="u-tile u2"><span class="emoji">🏥</span><div class="label">医院</div><div class="en">HOSPITAL</div></div>
+      <div class="u-tile u3"><span class="emoji">🚚</span><div class="label">物流</div><div class="en">LOGISTICS</div></div>
+      <div class="u-tile u4"><span class="emoji">🎓</span><div class="label">教育</div><div class="en">EDUCATION</div></div>
+      <div class="u-tile u5"><span class="emoji">🏛️</span><div class="label">政务</div><div class="en">GOV</div></div>
+    </div>
+
+    <div class="univ-caption">
+      凡是 <strong>双边 Agent 都能用协议握手</strong> 的行业，<br>
+      双矩阵范式 <strong>都适用</strong>。
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer-callout">
+      <div class="tagline">
+        去中介化交易 · 重塑行业价值链<br>
+        协议层之上 · 价值归创造者
+      </div>
+    </div>
+
+    <div class="signoff">
+      <div class="contact">
+        联系：<strong>17760348653</strong> &nbsp;|&nbsp; 张实 · Eric
+      </div>
+      <div class="watermark">ERIC的B166ER出品</div>
+    </div>
+
+  </div>
+</body>
+</html>

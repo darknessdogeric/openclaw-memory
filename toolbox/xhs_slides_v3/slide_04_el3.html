@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>要素 03 价值解耦</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  width: 1080px; height: 1440px; background: #fff;
+  font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+  color: #1a1a1a; display: flex; flex-direction: column; overflow: hidden;
+}
+.header {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 18px 48px 14px; border-bottom: 1.5px solid #1a1a1a;
+}
+.logo { width: 44px; height: 44px; background: #1a1a1a; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  color: #C9A961; font-size: 22px; font-weight: 700; }
+.logo-text { font-size: 13px; color: #444; font-weight: 500; }
+.tag { font-size: 13px; color: #444; border: 1.5px solid #1a1a1a;
+  padding: 4px 12px; border-radius: 20px; font-weight: 500; }
+.content { flex: 1; padding: 24px 48px 22px; display: flex; flex-direction: column; }
+.el-badge { display: inline-block; background: #1B3A6B; color: #fff;
+  font-size: 16px; padding: 6px 18px; border-radius: 22px;
+  margin-bottom: 14px; letter-spacing: 2px; font-weight: 600; align-self: flex-start; }
+.el-title { font-size: 64px; font-weight: 800; color: #1a1a1a;
+  margin-bottom: 8px; line-height: 1.15; }
+.el-subtitle { font-size: 24px; color: #555; margin-bottom: 22px; font-weight: 500; }
+.guide-box { border-left: 6px solid #C9A961; padding: 14px 22px;
+  background: #fafaf6; margin-bottom: 20px; }
+.guide-box p { font-size: 20px; color: #1a1a1a; line-height: 1.6; font-weight: 500; }
+.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-bottom: 18px; }
+.panel { border: 1.5px solid #d0d0d0; border-radius: 10px; padding: 22px 24px; background: #fafaf8; }
+.panel-title { font-size: 16px; color: #888; font-weight: 700;
+  margin-bottom: 14px; letter-spacing: 2px; }
+.panel-title.red { color: #c0392b; }
+.panel-title.green { color: #27ae60; }
+.coupling-row { display: flex; align-items: baseline; gap: 10px; margin-bottom: 12px; }
+.coupling-main { font-size: 50px; font-weight: 800; color: #1B3A6B; line-height: 1; }
+.coupling-unit { font-size: 22px; color: #555; }
+.coupling-desc { font-size: 18px; color: #333; line-height: 1.55; margin-bottom: 14px; }
+.coupling-note { font-size: 15px; color: #555; border-top: 1.5px solid #d0d0d0; padding-top: 12px; line-height: 1.6; }
+.formula-panel { background: #f8f8f6; border: 2.5px solid #1B3A6B;
+  border-radius: 10px; padding: 22px 28px; margin-bottom: 18px; }
+.formula-title { font-size: 14px; color: #1B3A6B; font-weight: 700;
+  margin-bottom: 10px; letter-spacing: 2px; }
+.formula { font-size: 24px; font-weight: 700; color: #1a1a1a; margin-bottom: 10px; line-height: 1.4; }
+.formula-note { font-size: 17px; color: #333; line-height: 1.6; }
+.bottom-row { display: flex; gap: 14px; }
+.bottom-card { flex: 1; background: #1B3A6B; border-radius: 10px;
+  padding: 20px 24px; color: #fff; }
+.bottom-card .label { font-size: 13px; color: #C9A961;
+  margin-bottom: 8px; letter-spacing: 2px; font-weight: 700; }
+.bottom-card .text { font-size: 19px; line-height: 1.55; }
+.bottom-card.gold { background: #C9A961; }
+.bottom-card.gold .label { color: #1a1a1a; }
+.bottom-card.gold .text { color: #1a1a1a; }
+.footer { display: flex; justify-content: space-between; align-items: center;
+  padding: 14px 48px; border-top: 1.5px solid #1a1a1a; font-size: 13px; color: #555; }
+</style>
+</head>
+<body>
+  <div class="header">
+    <div style="display:flex;align-items:center;gap:14px;">
+      <div class="logo">B</div><span class="logo-text">B166ER 出品</span>
+    </div>
+    <div class="tag">Hospitality / Product Design · 2026.07.20</div>
+  </div>
+
+  <div class="content">
+    <div class="el-badge">五要素 · 03 · 本质</div>
+    <div class="el-title">价值解耦</div>
+    <div class="el-subtitle">配套 vs 产品，不是一回事</div>
+
+    <div class="guide-box">
+      <p><strong style="color:#1B3A6B">核心问题：</strong>为什么酒店的健身房、游泳池、早餐大多是"配套成本"？为什么它们无法产生独立利润？答案藏在"绑定"里。</p>
+    </div>
+
+    <div class="two-col">
+      <div class="panel">
+        <div class="panel-title red">传统模式 · 配套绑定</div>
+        <div class="coupling-row">
+          <div class="coupling-main">含早价</div>
+          <div class="coupling-unit">= 房价 + 配套成本</div>
+        </div>
+        <div class="coupling-desc">健身房、早餐、SPA的成本被计入房价，<br>成为"成本中心"，对营收没有直接贡献。</div>
+        <div class="coupling-note">配套 = 客房服务的附属品<br>无法独立衡量其商业价值</div>
+      </div>
+      <div class="panel">
+        <div class="panel-title green">新模式 · 价值解耦</div>
+        <div class="coupling-row">
+          <div class="coupling-main">独立价</div>
+          <div class="coupling-unit">= 产品独立定价</div>
+        </div>
+        <div class="coupling-desc">健身房/早餐/SPA独立核算，<br>成为直接营收部门，可被独立运营和优化。</div>
+        <div class="coupling-note">本地客单独购买<br>形成纯新增收入流</div>
+      </div>
+    </div>
+
+    <div class="formula-panel">
+      <div class="formula-title">DECOUPLING PRINCIPLE · 解耦原则</div>
+      <div class="formula">酒店客：原含早价格 → 不变 → 不影响现有收入</div>
+      <div class="formula-note">
+        本地客：独立产品卡 → 单独定价 → 形成纯增量<br>
+        <strong style="color:#1B3A6B">原收入流不变，新收入流独立存在，两个系统不交叉、不侵蚀</strong>
+      </div>
+    </div>
+
+    <div class="bottom-row">
+      <div class="bottom-card">
+        <div class="label">本质改变</div>
+        <div class="text">从"成本中心"到"利润中心"<br>产品的价值可以被独立衡量、独立运营</div>
+      </div>
+      <div class="bottom-card gold">
+        <div class="label">核心洞察</div>
+        <div class="text">配套不是客房的附属品<br>配套是可以独立定价、独立销售的产品</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <span>酒店限制性功能产品 · 方法论系列 · v2.0</span>
+    <span>B166ER 出品</span>
+  </div>
+</body>
+</html>

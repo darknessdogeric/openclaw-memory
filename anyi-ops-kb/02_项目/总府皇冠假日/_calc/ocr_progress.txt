@@ -1,0 +1,8 @@
+p43/49 ok=True 42s
+p44/49 ok=True 77s
+p45/49 ok=True 112s
+p46/49 ok=True 149s
+p47/49 ok=True 192s
+p48/49 ok=True 231s
+p49/49 ok=True 248s
+DONE 117127 chars -> D:\B166ER-openclaw\workspace\anyi-ops-kb\02_项目\总府皇冠假日\_calc\contract_ocr.txt

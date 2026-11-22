@@ -1,0 +1,36 @@
+段落数 原件=49 新件=54   表格数 原件=0 新件=0
+
+=== 新件 第31-38 段（插入区域） ===
+P31 style=Heading 1 first=443865
+    bold=True  sz=18.0  name=仿宋_GB2312    '八是轻资产拓展，有能力承接更多划转酒店资产；提升安逸的品牌影响力；加大投资。（运管、资产、产'
+P32 style=Heading 1 first=443865
+    bold=False sz=16.0  name=仿宋_GB2312    '2027年，产业发展部将围绕品牌赋能与产业增量孵化，推动前期已形成的框架协议、资源通道和策划'
+P33 style=Heading 1 first=443865
+    bold=True  sz=18.0  name=Times New Roman '1.'
+    bold=True  sz=16.0  name=仿宋_GB2312    '完善品牌标准与轻资产授权体系。'
+    bold=False sz=16.0  name=仿宋_GB2312    '统一品牌定位、视觉识别、产品服务配置与筹建改造要求，配套投资模型和软加盟、硬加盟、管理合同三'
+P34 style=Heading 1 first=443865
+    bold=True  sz=18.0  name=Times New Roman '2.'
+    bold=True  sz=16.0  name=仿宋_GB2312    '做强安逸新零售，形成第二增长曲线。'
+    bold=False sz=16.0  name=仿宋_GB2312    '由蒙顶山茶业公司承接二销业务，商投集团作为主要货源供应链，已完成总府皇冠、双流机场两处卖场点'
+P35 style=Heading 1 first=443865
+    bold=True  sz=18.0  name=Times New Roman '3.'
+    bold=True  sz=16.0  name=仿宋_GB2312    '以数字化提升产业运营效能。'
+    bold=False sz=16.0  name=仿宋_GB2312    '推进AI与数据中台建设，形成业务智能体、客户需求洞察、政策资金跟踪三类应用，与集团数字化中台'
+P36 style=Heading 1 first=443865
+    bold=True  sz=18.0  name=Times New Roman '4.'
+    bold=True  sz=16.0  name=仿宋_GB2312    '推进存量改造策划与增量项目转化。'
+    bold=False sz=16.0  name=仿宋_GB2312    '承担存量酒店改造的定位研判、改造标准制定与品牌落地跟踪，向投资资产条线提供品牌定位、溢价空间'
+P37 style=Heading 1 first=459105
+    bold=True  sz=18.0  name=黑体           '三、工作建议'
+P38 style=Normal first=459105
+    bold=True  sz=18.0  name=楷体_GB2312    '（一）二级公司领导班子建设'
+
+=== 原文完整性抽查（2026部分 9 条 + 2027部分 八是）===
+  1.深化市场改革               -> [9]
+  2.“铁旅融合”               -> [10]
+  9.健全管理制度体系             -> [17]
+  一是加强作为酒店集团             -> [20]
+  八是轻资产拓展                -> [31]
+  三、工作建议                 -> [37]
+  附件：1.                  -> [46]

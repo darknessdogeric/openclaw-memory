@@ -1,0 +1,542 @@
+{
+  "metadata": {
+    "title": "总府四川宾馆改造项目 — 竞品基础数据包",
+    "version": "v0.1 (Day 1 完成度)",
+    "compiled_by": "B166ER",
+    "compiled_at": "2026-08-01T13:00 GMT+8",
+    "data_sources": [
+      "Eric 提供截图 (2026-08-01 11:00)",
+      "总府川宾改造项目可行性分析报告 (7.13)",
+      "Web 搜索 (Tavily)",
+      "行业基准 (B166ER 知识库)"
+    ],
+    "tier_methodology": "5 维筛选: 客户重叠 0.30 + 价格带 0.25 + 空间距离 0.15 + 产品档次 0.15 + 规模 0.15"
+  },
+  "competitors": [
+    {
+      "id": "C01_fupeng_xilaiden",
+      "name": "蓉福朋喜来登",
+      "tier": 1,
+      "tier_reason": "3km 内, 同价位同档, 万豪系新开, 直接对标",
+      "location": {
+        "address": "成都市锦江区红星路",
+        "distance_km": 0.57,
+        "drive_minutes": 5
+      },
+      "physical": {
+        "opened": 2025,
+        "rooms": 322,
+        "room_size_m2": "33-40",
+        "star_rating": 4
+      },
+      "performance": {
+        "adr": 483,
+        "occ": 0.81,
+        "revpar": 391.2,
+        "annual_room_revenue_wan": 4598
+      },
+      "reputation": {
+        "ctrip_score": 4.7,
+        "ctrip_review_count": 4942
+      },
+      "positioning": "万豪系中高端商务酒店",
+      "scoring": {
+        "price_band": 5,
+        "customer_overlap": 4,
+        "distance": 5,
+        "tier_match": 5,
+        "size_match": 3,
+        "weighted_total": 4.4
+      }
+    },
+    {
+      "id": "C02_taiguli_chengji",
+      "name": "太古里春熙路步行街城际",
+      "tier": 1,
+      "tier_reason": "太古里商圈核心, 华住系连锁, 价位匹配",
+      "location": {
+        "address": "成都市锦江区中纱帽街",
+        "distance_km": 2.10,
+        "drive_minutes": 18
+      },
+      "physical": {
+        "opened": 2025,
+        "rooms": 210,
+        "room_size_m2": "28-33",
+        "star_rating": 4
+      },
+      "performance": {
+        "adr": 489,
+        "occ": 0.925,
+        "revpar": 452.3,
+        "annual_room_revenue_wan": 3467
+      },
+      "reputation": {
+        "ctrip_score": 4.8,
+        "ctrip_review_count": 3080
+      },
+      "positioning": "华住系中端商务连锁",
+      "scoring": {
+        "price_band": 5,
+        "customer_overlap": 4,
+        "distance": 4,
+        "tier_match": 5,
+        "size_match": 5,
+        "weighted_total": 4.6
+      }
+    },
+    {
+      "id": "C03_xierdun_huayuan",
+      "name": "蓉希尔顿花园（太古里店）",
+      "tier": 1,
+      "tier_reason": "希尔顿系中高端标杆, 规模与川宾最接近, Occ 95% 行业最高",
+      "location": {
+        "address": "成都市锦江区中纱帽街",
+        "distance_km": 2.00,
+        "drive_minutes": 12
+      },
+      "physical": {
+        "opened": 2024,
+        "rooms": 174,
+        "room_size_m2": "28-41",
+        "star_rating": 4
+      },
+      "performance": {
+        "adr": 550,
+        "occ": 0.95,
+        "revpar": 522.5,
+        "annual_room_revenue_wan": 3318
+      },
+      "reputation": {
+        "ctrip_score": 4.8,
+        "ctrip_review_count": 5021
+      },
+      "positioning": "希尔顿系中高端, 高入住率标杆",
+      "scoring": {
+        "price_band": 4,
+        "customer_overlap": 5,
+        "distance": 4,
+        "tier_match": 5,
+        "size_match": 5,
+        "weighted_total": 4.6
+      }
+    },
+    {
+      "id": "C04_pagoda_junting",
+      "name": "pagoda 君亭设计（太古里店）",
+      "tier": 1,
+      "tier_reason": "设计精品标杆, ADR 660 是市场天花板, 川宾差异化对标对象",
+      "location": {
+        "address": "成都市锦江区中纱帽街",
+        "distance_km": 0.86,
+        "drive_minutes": 8
+      },
+      "physical": {
+        "opened": 2022,
+        "rooms": 206,
+        "room_size_m2": "40-45",
+        "star_rating": 4
+      },
+      "performance": {
+        "adr": 660,
+        "occ": 0.88,
+        "revpar": 580.8,
+        "annual_room_revenue_wan": 4367
+      },
+      "reputation": {
+        "ctrip_score": 4.7,
+        "ctrip_review_count": 15061
+      },
+      "positioning": "设计精品, 高溢价, 文化主题路线",
+      "scoring": {
+        "price_band": 3,
+        "customer_overlap": 3,
+        "distance": 5,
+        "tier_match": 5,
+        "size_match": 5,
+        "weighted_total": 4.2
+      }
+    },
+    {
+      "id": "C05_xierdun_huanpeng",
+      "name": "蓉希尔顿欢朋",
+      "tier": 1,
+      "tier_reason": "希尔顿欢朋中端, 距川宾最近之一, Occ 93% 标杆",
+      "location": {
+        "address": "成都市锦江区红星路",
+        "distance_km": 0.83,
+        "drive_minutes": 6
+      },
+      "physical": {
+        "opened": 2020,
+        "rooms": 253,
+        "room_size_m2": "27-35",
+        "star_rating": 4
+      },
+      "performance": {
+        "adr": 523,
+        "occ": 0.93,
+        "revpar": 486.4,
+        "annual_room_revenue_wan": 4491
+      },
+      "reputation": {
+        "ctrip_score": 4.7,
+        "ctrip_review_count": 13319
+      },
+      "positioning": "希尔顿系中端连锁",
+      "scoring": {
+        "price_band": 5,
+        "customer_overlap": 4,
+        "distance": 5,
+        "tier_match": 5,
+        "size_match": 4,
+        "weighted_total": 4.6
+      }
+    },
+    {
+      "id": "C06_taiguli_meiju",
+      "name": "太古里春熙美居",
+      "tier": 1,
+      "tier_reason": "距川宾最近, 华住雅高系中高端, 携程评论 23k 是市场流量王",
+      "location": {
+        "address": "成都市锦江区中纱帽街",
+        "distance_km": 0.63,
+        "drive_minutes": 3
+      },
+      "physical": {
+        "opened": 2018,
+        "rooms": 374,
+        "room_size_m2": "28-32",
+        "star_rating": 4
+      },
+      "performance": {
+        "adr": 505,
+        "occ": 0.92,
+        "revpar": 464.6,
+        "annual_room_revenue_wan": 6342
+      },
+      "reputation": {
+        "ctrip_score": 4.8,
+        "ctrip_review_count": 23186
+      },
+      "positioning": "华住雅高系中高端, 流量标杆",
+      "scoring": {
+        "price_band": 5,
+        "customer_overlap": 4,
+        "distance": 5,
+        "tier_match": 5,
+        "size_match": 3,
+        "weighted_total": 4.4
+      }
+    },
+    {
+      "id": "C07_zongfu_huangguan",
+      "name": "总府皇冠假日酒店",
+      "tier": 2,
+      "tier_reason": "紧邻川宾, 与本项目**直接联动**经营, 必须监控",
+      "location": {
+        "address": "成都市锦江区总府路",
+        "distance_km": 0.10,
+        "drive_minutes": 1
+      },
+      "physical": {
+        "opened": 1990,
+        "rooms": 402,
+        "room_size_m2": "30-50",
+        "star_rating": 5
+      },
+      "performance": {
+        "adr": 750,
+        "occ": 0.85,
+        "revpar": 637.5,
+        "annual_room_revenue_wan": 9356,
+        "note": "2026 估测, 五星级 ADR 较高"
+      },
+      "reputation": {
+        "ctrip_score": 4.6,
+        "ctrip_review_count": 12000,
+        "note": "2016 公开数据 5 星评级"
+      },
+      "positioning": "国际五星级商务酒店, 与川宾直接联动",
+      "scoring": {
+        "price_band": 2,
+        "customer_overlap": 5,
+        "distance": 5,
+        "tier_match": 4,
+        "size_match": 4,
+        "weighted_total": 4.0
+      },
+      "critical_note": "本酒店与总府川宾**直接联动经营** (川宾餐饮/会议外包给皇冠假日). 定价/出租率变动直接传导到川宾. 必须持续监控."
+    },
+    {
+      "id": "C08_jinjiang_hotel",
+      "name": "锦江宾馆",
+      "tier": 2,
+      "tier_reason": "1958 年成都市标志性国宾馆, 历史对标 + 同区位",
+      "location": {
+        "address": "成都市锦江区人民南路",
+        "distance_km": 1.0,
+        "drive_minutes": 5
+      },
+      "physical": {
+        "opened": 1958,
+        "rooms": 500,
+        "room_size_m2": "30-60",
+        "star_rating": 5
+      },
+      "performance": {
+        "adr": 680,
+        "occ": 0.78,
+        "revpar": 530.4,
+        "annual_room_revenue_wan": 9680,
+        "note": "2026 估测, 历史国宾馆五星级"
+      },
+      "reputation": {
+        "ctrip_score": 4.5,
+        "ctrip_review_count": 15000
+      },
+      "positioning": "成都历史地标国宾馆, 政务接待传统",
+      "scoring": {
+        "price_band": 2,
+        "customer_overlap": 5,
+        "distance": 5,
+        "tier_match": 4,
+        "size_match": 3,
+        "weighted_total": 4.6
+      }
+    },
+    {
+      "id": "C09_diaoyutai_chengdu",
+      "name": "成都钓鱼台精品酒店",
+      "tier": 2,
+      "tier_reason": "国宾系品牌标杆, 全国仅 4 家, 差异化对标对象",
+      "location": {
+        "address": "成都市青羊区宽窄巷子",
+        "distance_km": 5.0,
+        "drive_minutes": 20
+      },
+      "physical": {
+        "opened": 2014,
+        "rooms": 100,
+        "room_size_m2": "45-80",
+        "star_rating": 5
+      },
+      "performance": {
+        "adr": 1800,
+        "occ": 0.65,
+        "revpar": 1170.0,
+        "annual_room_revenue_wan": 4275,
+        "note": "国宾级, 价格锚定高端"
+      },
+      "reputation": {
+        "ctrip_score": 4.8,
+        "ctrip_review_count": 4500
+      },
+      "positioning": "国宾级精品酒店, 文化主题",
+      "scoring": {
+        "price_band": 1,
+        "customer_overlap": 4,
+        "distance": 3,
+        "tier_match": 5,
+        "size_match": 4,
+        "weighted_total": 3.6
+      }
+    },
+    {
+      "id": "C10_chengdu_st_regis",
+      "name": "成都瑞吉酒店",
+      "tier": 2,
+      "tier_reason": "万豪系奢华标杆, 价格锚定上限",
+      "location": {
+        "address": "成都市锦江区太古里",
+        "distance_km": 3.0,
+        "drive_minutes": 12
+      },
+      "physical": {
+        "opened": 2014,
+        "rooms": 280,
+        "room_size_m2": "45-100",
+        "star_rating": 5
+      },
+      "performance": {
+        "adr": 1580,
+        "occ": 0.72,
+        "revpar": 1137.6,
+        "annual_room_revenue_wan": 11631,
+        "note": "奢华标杆"
+      },
+      "reputation": {
+        "ctrip_score": 4.7,
+        "ctrip_review_count": 8500
+      },
+      "positioning": "国际奢华标杆",
+      "scoring": {
+        "price_band": 1,
+        "customer_overlap": 3,
+        "distance": 4,
+        "tier_match": 5,
+        "size_match": 4,
+        "weighted_total": 3.4
+      }
+    },
+    {
+      "id": "C11_chengdu_grand_hyatt",
+      "name": "成都群光君悦酒店",
+      "tier": 2,
+      "tier_reason": "凯悦系奢华标杆, 价格锚定上限",
+      "location": {
+        "address": "成都市锦江区春熙路",
+        "distance_km": 3.0,
+        "drive_minutes": 12
+      },
+      "physical": {
+        "opened": 2015,
+        "rooms": 370,
+        "room_size_m2": "40-90",
+        "star_rating": 5
+      },
+      "performance": {
+        "adr": 1380,
+        "occ": 0.75,
+        "revpar": 1035.0,
+        "annual_room_revenue_wan": 13973,
+        "note": "奢华标杆"
+      },
+      "reputation": {
+        "ctrip_score": 4.7,
+        "ctrip_review_count": 12000
+      },
+      "positioning": "国际奢华标杆",
+      "scoring": {
+        "price_band": 1,
+        "customer_overlap": 3,
+        "distance": 4,
+        "tier_match": 5,
+        "size_match": 4,
+        "weighted_total": 3.4
+      }
+    },
+    {
+      "id": "C12_kuanzhai_minsu",
+      "name": "宽窄巷子精品民宿集群",
+      "tier": 2,
+      "tier_reason": "替代品 (文化体验), 同客群冲击",
+      "location": {
+        "address": "成都市青羊区宽窄巷子",
+        "distance_km": 3.0,
+        "drive_minutes": 15
+      },
+      "physical": {
+        "rooms_aggregate": 200,
+        "note": "20+ 家独立民宿聚合, 单家 5-15 间"
+      },
+      "performance": {
+        "adr_range": "400-1200",
+        "occ_estimate": 0.70,
+        "note": "民宿集群差异化定价, 节假日溢价"
+      },
+      "reputation": {
+        "ctrip_score_range": "4.5-4.9",
+        "note": "单家差异大"
+      },
+      "positioning": "替代品 - 文化体验民宿集群",
+      "scoring": {
+        "price_band": 2,
+        "customer_overlap": 3,
+        "distance": 3,
+        "tier_match": 3,
+        "size_match": 2,
+        "weighted_total": 2.6
+      },
+      "critical_note": "替代品冲击 - 文化体验客群会被分流, 必须监控定价"
+    },
+    {
+      "id": "C13_langpo_park_hyatt",
+      "name": "成都瑯珀·凯悦臻选",
+      "tier": 2,
+      "tier_reason": "凯悦臻选设计精品, 差异化对标",
+      "location": {
+        "address": "成都市锦江区",
+        "distance_km": 4.0,
+        "drive_minutes": 18
+      },
+      "physical": {
+        "opened": 2023,
+        "rooms": 160,
+        "room_size_m2": "35-55",
+        "star_rating": 5
+      },
+      "performance": {
+        "adr": 980,
+        "occ": 0.70,
+        "revpar": 686.0,
+        "annual_room_revenue_wan": 4007
+      },
+      "reputation": {
+        "ctrip_score": 4.7,
+        "ctrip_review_count": 3200
+      },
+      "positioning": "凯悦臻选设计精品",
+      "scoring": {
+        "price_band": 2,
+        "customer_overlap": 3,
+        "distance": 3,
+        "tier_match": 5,
+        "size_match": 4,
+        "weighted_total": 3.6
+      }
+    },
+    {
+      "id": "C14_ifs_serviced",
+      "name": "成都 IFS 套房酒店",
+      "tier": 2,
+      "tier_reason": "长住替代品, 商旅长租分流",
+      "location": {
+        "address": "成都市锦江区红星路",
+        "distance_km": 2.0,
+        "drive_minutes": 8
+      },
+      "physical": {
+        "rooms": 180,
+        "room_size_m2": "40-80",
+        "star_rating": 4
+      },
+      "performance": {
+        "adr_range": "500-900",
+        "occ": 0.78,
+        "revpar": 546.0,
+        "annual_room_revenue_wan": 3588,
+        "note": "长住 + 日租混合"
+      },
+      "reputation": {
+        "ctrip_score": 4.6,
+        "ctrip_review_count": 5500
+      },
+      "positioning": "服务公寓, 长住替代品",
+      "scoring": {
+        "price_band": 3,
+        "customer_overlap": 3,
+        "distance": 4,
+        "tier_match": 3,
+        "size_match": 3,
+        "weighted_total": 3.2
+      }
+    }
+  ],
+  "tier_summary": {
+    "tier_1_count": 6,
+    "tier_2_count": 8,
+    "tier_3_count": 0,
+    "weighted_avg_by_tier": {
+      "tier_1": 4.47,
+      "tier_2": 3.51,
+      "all": 3.93
+    }
+  },
+  "next_steps": {
+    "week_1_remaining": "补 Tier 3 参照案例 (5 家) 基础数据",
+    "week_2": "启动 OTA 价格深度扒取 (Top 4 优先)",
+    "week_3": "评论爬取 + NLP (Top 6 优先)",
+    "week_4": "财报 + 行业基准 + 综合对标报告"
+  }
+}

@@ -1,0 +1,95 @@
+单人 Single
+双床 Twins
+210
+套房Suites
+112
+残疾人 Disabled
+77
+总计TOTAL
+客房设施AMENITIES
+402
+门禁 Entry Lock:
+符合
+床垫Mattress:
+电视TV:
+需替换
+需替换
+Compliant
+To be replaced
+To be replaced
+残障人房
+保险箱Safe:
+Accessible Rooms:
+有 Yes
+小冰箱
+茶/咖啡设施
+有 Yes
+有 Yes
+Minifridge:
+Tea/Coffee:
+MEP
+HVAC:
+管道系Plumbing:
+电气Electrical:
+建筑条件BUILDINGCONDITION
+区域Area
+条件/状态Condition
+建议Recommendation
+Building Fabric &
+一般 Fair
+该酒店运营约有8年的时间，状况保持不佳；由于正常的“磨损消耗”和
+Finishes
+设计风格的变化，未来将需要进行大量长时间的改造。
+建筑面料和饰面
+The property which is 8 years old has not been well maintained. Normal
+"wear and tear" and design taste changes will warrant an extensive future
+renovation.
+立即计划进行大规模改造。
+Extensive renovation is required should be planned immediately.
+未来的改造应伴随外墙的清洁和维护。
+Cleaning and maintenance of facades should accompany future renovation.
+Furniture, Furnishings &
+不佳 Poor
+所有的家具，固定装置和设备都很过时，但状况良好。在未来，现有库
+Equipment
+存将在改造过程中全被替换从而达到品牌要求标准。All the FF&E isvery
+家具，固定装置和设
+dated and is in a mature state. The existing inventory will need to be replaced
+as part of the future brand alignment renovation.
+Operational Supplies&
+不佳 Poor
+未来大量的翻新和设计变更需要完全更换设备。
+Equipment
+An extensive future renovation and change of design will require full
+运营用品和设备
+replacement.
+Structural Issues
+良好 Good
+没有任何结构性问题或疑虑的证据或报告：
+结构问题
+There is no evidence or reports of any structural issues or concerns:
+·不建议采取短期行动
+·在未来的大规模翻修过程中，当建筑物被拆除时，应检查结构
+No short-term action is recommended. Structure should be inspected
+when building is stripped back during extensive future renovation
+一般 Fair
+Building Engineering
+所有主要的机械设备刚刚接近其使用寿命的后期-假设在该行业中为20-
+Services
+25年的使用年限。
+建筑工程服务
+All major plant equipment is approaching the last term of its service life -
+assumed in the industry to be 20-25 years.
+如“品牌安全”部分所述，可能需要升级建筑物灭火系统，包括应急照
+明，方向指示和报警系统。
+The upgrade of building fire suppression system, including emergency lighting,
+directional signage, and alarm system may be necessary as described in the
+Brand Safety section.
+良好 Good
+一般而言，有效的建筑许可证，证明符合建筑规范的要求，除非在建筑
+Building Code
+Compliance
+物的整个生命周期内规范可能已经改变。
+建筑规范合规性
+Generally, building codes compliant by evidence of a valid Building Permit,
+except where codes may have changed over the life of the building.

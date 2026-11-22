@@ -1,0 +1,94 @@
+{
+  "date": "2026-09-24",
+  "cron_id": "0eced1e9-8729-47d8-b8d6-34eff13ed780",
+  "cron_name": "Entity Extractor (每日21:30)",
+  "r_rule": "R60-11",
+  "scheduled_time": "2026-09-24T21:30:00+08:00",
+  "actual_trigger": "2026-09-24T21:36:00+08:00",
+  "status": "success",
+  "run_history_today": [
+    {"run": 1, "trigger": "21:32:22", "pushed_obsidian": "21:34:15"},
+    {"run": 2, "trigger": "21:35:30 (this run)", "pushed_obsidian": "21:36:30"}
+  ],
+  "extraction": {
+    "mode": "today",
+    "days_scanned": 1,
+    "files_scanned": ["2026-09-24.md"],
+    "unique_new_entities": 16,
+    "unique_new_relations": 0,
+    "new_entity_types": {
+      "Person": 2,
+      "Company": 3,
+      "Project": 7,
+      "Event": 1,
+      "Place": 3
+    },
+    "new_entity_names": [
+      "Eric",
+      "B166ER",
+      "安逸酒店集团",
+      "AHL",
+      "携程",
+      "AHL",
+      "1244战略",
+      "医养酒店",
+      "深度自迭代",
+      "B166ER深度自迭代",
+      "R66监控",
+      "R60规则",
+      "入职",
+      "成都",
+      "四川",
+      "北京"
+    ]
+  },
+  "outputs": {
+    "graph_jsonl": {
+      "path": "memory/ontology/graph.jsonl",
+      "updated": true,
+      "total_entries_in_graph": 898,
+      "today_entries": 16,
+      "dedup_action": "removed 16 duplicate (from second pass); backup at memory/ontology/graph.jsonl.bak-20260924-213607"
+    },
+    "relations_trend": {
+      "path": "memory/ontology/relations-trend.md",
+      "updated": true,
+      "total_relations_today": 0,
+      "cumulative_relations": 16
+    },
+    "dashboard": {
+      "path": "memory/eric-4-projects-dashboard.md",
+      "updated": true,
+      "projects_mentioned_today": 5
+    },
+    "eval_json": {
+      "path": "eval/2026-09-24-entity-extractor.json",
+      "updated": true
+    },
+    "obsidian_push": {
+      "attempted": true,
+      "tool": "toolbox/cron_to_obsidian.py",
+      "content_file": "C:/Users/ericz/AppData/Local/Temp/entities-2026-09-24.md",
+      "output_file": "obsidian-vault/50-外部接入/cron-outputs/2026-09/21-36-Entity-Extractor-实体抽取.md",
+      "status": "success",
+      "pushed_at": "2026-09-24T21:36:30"
+    }
+  },
+  "r60_11_compliance": {
+    "step_1_graph_jsonl": "done (deduped to 16 unique today)",
+    "step_2_relations_trend": "done",
+    "step_3_dashboard": "done",
+    "step_4_eval_json": "done",
+    "step_5_obsidian_push": "done"
+  },
+  "notes": [
+    "Cron was triggered twice today (21:32 and 21:35) — likely a duplicate fire from the scheduler",
+    "First run (21:32) already completed all 5 R60-11 steps; this run (21:35) re-extracted, deduped graph.jsonl (-16 duplicates), and re-pushed to Obsidian",
+    "16 entities cover Eric's 4 core projects (安逸/AHL/1244/医养) — no new projects detected",
+    "0 new relations this run (cumulative: 16 stable relations)",
+    "Thursday daily extraction: 16 entities (2 Person + 3 Company + 7 Project + 1 Event + 3 Place)",
+    "No R66-revising changes detected"
+  ],
+  "next_run": "2026-09-25T21:30:00+08:00",
+  "generated_by": "B166ER entity_extractor.py + R60-11"
+}

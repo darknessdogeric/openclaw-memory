@@ -136,7 +136,7 @@ def gen_cover():
     draw.text((ctx + (ctw - tw)//2, cty + (cth - th)//2 - 8), ctt, fill=TEXT_W, font=ctf)
 
     # Footer
-    ft = "B166ER · ERIC出品 · 红绿灯合规"
+    ft = "B166ER & ERIC出品 · 红绿灯合规"
     ff = fnt(40, False)
     bbox = draw.textbbox((0, 0), ft, font=ff)
     tw = bbox[2] - bbox[0]

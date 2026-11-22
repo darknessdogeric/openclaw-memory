@@ -1,0 +1,254 @@
+{
+  "title": "长文转化 PPT",
+  "total_slides": 20,
+  "style_preset": "data_viz_pro",
+  "style_goal": "面向「需要向上汇报或对外分享的汇报人 + 其听众」的长文转化演示",
+  "image_provider": "runninghub_g31",
+  "resolution": "4k",
+  "aspect_ratio": "16:9",
+  "brief": {
+    "total_slides": 20,
+    "style_preset": "data_viz_pro",
+    "audience": {
+      "who": "需要向上汇报或对外分享的汇报人 + 其听众",
+      "knows": "读过报告, 但不记得细节",
+      "wants": "用 20 页抓住报告的核心论据与关键数据",
+      "action": "认可这份提炼, 并采用其中的数据与结论"
+    },
+    "required_sections": [
+      {
+        "name": "摘要",
+        "conclusion": "报告的 3 个核心结论, 每个一句话",
+        "slides": 2
+      },
+      {
+        "name": "研究框架",
+        "conclusion": "全文的 4 部分结构与论证路径",
+        "slides": 2
+      },
+      {
+        "name": "关键论据 1",
+        "conclusion": "该部分最重要的一组数据与推论",
+        "slides": 5
+      },
+      {
+        "name": "关键论据 2",
+        "conclusion": "同上",
+        "slides": 5
+      },
+      {
+        "name": "关键论据 3",
+        "conclusion": "同上",
+        "slides": 4
+      },
+      {
+        "name": "结论与建议",
+        "conclusion": "建议做什么, 依据哪几条",
+        "slides": 2
+      }
+    ],
+    "data_sources": [
+      {
+        "type": "doc",
+        "where": "原始研究报告 (全文, 逐章读取)",
+        "confidence": "🟢🟢 一手"
+      },
+      {
+        "type": "doc",
+        "where": "报告内图表原图 (可裁切复用)",
+        "confidence": "🟢🟢 一手"
+      }
+    ],
+    "explicit_constraints": [
+      "所有数字必须能在原文中定位到出处",
+      "不得添加原文没有的推论",
+      "原文有相反结论时必须并列呈现",
+      "摘要是提炼, 不是缩写"
+    ],
+    "success_check": "听众能凭这 20 页复述报告的全部核心结论, 且每个数字可回溯到原文",
+    "scenario": "长文转化",
+    "kimi_reference_prompt": "我有一篇十万字的研究报告，帮我提炼成20页图文并茂的汇报PPT"
+  },
+  "slides": [
+    {
+      "slide_number": 1,
+      "page_type": "cover",
+      "page_goal": "报告题目 + 副题",
+      "content": "封面",
+      "style_preset": "data_viz_pro",
+      "text_density": "medium",
+      "note": "TODO: 补 approved_text_lines / prompt_override"
+    },
+    {
+      "slide_number": 2,
+      "page_type": "cards",
+      "page_goal": "3 条",
+      "content": "三个核心结论",
+      "style_preset": "data_viz_pro",
+      "text_density": "medium",
+      "note": "TODO: 补 approved_text_lines / prompt_override"
+    },
+    {
+      "slide_number": 3,
+      "page_type": "path",
+      "page_goal": "4 部分",
+      "content": "研究框架",
+      "style_preset": "data_viz_pro",
+      "text_density": "medium",
+      "note": "TODO: 补 approved_text_lines / prompt_override"
+    },
+    {
+      "slide_number": 4,
+      "page_type": "data",
+      "page_goal": "样本与口径",
+      "content": "研究方法",
+      "style_preset": "data_viz_pro",
+      "text_density": "medium",
+      "note": "TODO: 补 approved_text_lines / prompt_override"
+    },
+    {
+      "slide_number": 5,
+      "page_type": "cards",
+      "page_goal": "小节标题",
+      "content": "论据组 1 概览",
+      "style_preset": "data_viz_pro",
+      "text_density": "medium",
+      "note": "TODO: 补 approved_text_lines / prompt_override"
+    },
+    {
+      "slide_number": 6,
+      "page_type": "data",
+      "page_goal": "核心图",
+      "content": "论据组 1 数据 1",
+      "style_preset": "data_viz_pro",
+      "text_density": "medium",
+      "note": "TODO: 补 approved_text_lines / prompt_override"
+    },
+    {
+      "slide_number": 7,
+      "page_type": "data",
+      "page_goal": "支撑图",
+      "content": "论据组 1 数据 2",
+      "style_preset": "data_viz_pro",
+      "text_density": "medium",
+      "note": "TODO: 补 approved_text_lines / prompt_override"
+    },
+    {
+      "slide_number": 8,
+      "page_type": "comparison",
+      "page_goal": "A vs B",
+      "content": "论据组 1 对比",
+      "style_preset": "data_viz_pro",
+      "text_density": "medium",
+      "note": "TODO: 补 approved_text_lines / prompt_override"
+    },
+    {
+      "slide_number": 9,
+      "page_type": "cards",
+      "page_goal": "这一组说明什么",
+      "content": "论据组 1 推论",
+      "style_preset": "data_viz_pro",
+      "text_density": "medium",
+      "note": "TODO: 补 approved_text_lines / prompt_override"
+    },
+    {
+      "slide_number": 10,
+      "page_type": "cards",
+      "page_goal": "小节标题",
+      "content": "论据组 2 概览",
+      "style_preset": "data_viz_pro",
+      "text_density": "medium",
+      "note": "TODO: 补 approved_text_lines / prompt_override"
+    },
+    {
+      "slide_number": 11,
+      "page_type": "data",
+      "page_goal": "核心图",
+      "content": "论据组 2 数据 1",
+      "style_preset": "data_viz_pro",
+      "text_density": "medium",
+      "note": "TODO: 补 approved_text_lines / prompt_override"
+    },
+    {
+      "slide_number": 12,
+      "page_type": "data",
+      "page_goal": "支撑图",
+      "content": "论据组 2 数据 2",
+      "style_preset": "data_viz_pro",
+      "text_density": "medium",
+      "note": "TODO: 补 approved_text_lines / prompt_override"
+    },
+    {
+      "slide_number": 13,
+      "page_type": "comparison",
+      "page_goal": "A vs B",
+      "content": "论据组 2 对比",
+      "style_preset": "data_viz_pro",
+      "text_density": "medium",
+      "note": "TODO: 补 approved_text_lines / prompt_override"
+    },
+    {
+      "slide_number": 14,
+      "page_type": "cards",
+      "page_goal": "这一组说明什么",
+      "content": "论据组 2 推论",
+      "style_preset": "data_viz_pro",
+      "text_density": "medium",
+      "note": "TODO: 补 approved_text_lines / prompt_override"
+    },
+    {
+      "slide_number": 15,
+      "page_type": "cards",
+      "page_goal": "小节标题",
+      "content": "论据组 3 概览",
+      "style_preset": "data_viz_pro",
+      "text_density": "medium",
+      "note": "TODO: 补 approved_text_lines / prompt_override"
+    },
+    {
+      "slide_number": 16,
+      "page_type": "data",
+      "page_goal": "核心图",
+      "content": "论据组 3 数据 1",
+      "style_preset": "data_viz_pro",
+      "text_density": "medium",
+      "note": "TODO: 补 approved_text_lines / prompt_override"
+    },
+    {
+      "slide_number": 17,
+      "page_type": "data",
+      "page_goal": "支撑图",
+      "content": "论据组 3 数据 2",
+      "style_preset": "data_viz_pro",
+      "text_density": "medium",
+      "note": "TODO: 补 approved_text_lines / prompt_override"
+    },
+    {
+      "slide_number": 18,
+      "page_type": "cards",
+      "page_goal": "这一组说明什么",
+      "content": "论据组 3 推论",
+      "style_preset": "data_viz_pro",
+      "text_density": "medium",
+      "note": "TODO: 补 approved_text_lines / prompt_override"
+    },
+    {
+      "slide_number": 19,
+      "page_type": "cards",
+      "page_goal": "原文相反结论",
+      "content": "反方观点",
+      "style_preset": "data_viz_pro",
+      "text_density": "medium",
+      "note": "TODO: 补 approved_text_lines / prompt_override"
+    },
+    {
+      "slide_number": 20,
+      "page_type": "conclusion",
+      "page_goal": "做什么 + 依据",
+      "content": "结论与建议",
+      "style_preset": "data_viz_pro",
+      "text_density": "medium",
+      "note": "TODO: 补 approved_text_lines / prompt_override"
+    }
+  ]
+}

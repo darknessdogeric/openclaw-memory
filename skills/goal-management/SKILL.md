@@ -199,7 +199,7 @@ Plan → Do → Check → Act
 ## 参考文件
 
 - `references/okr-guide.md` - OKR制定详细指南
-- `references/project-management.md` - 项目管理方法论
+- `../ontology/docs/examples/project-management.md` - 项目管理方法论
 - `references/time-management.md` - 时间管理技巧
 - `references/retrospective.md` - 复盘模板与案例
 

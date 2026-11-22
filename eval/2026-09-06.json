@@ -1,0 +1,28 @@
+{
+  "date": "2026-09-06",
+  "task": "每日全球情报简报-08:30",
+  "data_sources": {
+    "rss_fetch": "31 feeds, 800 items, 798 new, 2 updated",
+    "foreign_rss": "2026-09-06.db (851,968 bytes)",
+    "domestic_news": "latest available 2026-09-03",
+    "rss_search": "0 results (keyword search failed, using get_latest_rss instead)"
+  },
+  "top_stories": [
+    "US-Iran maritime clash: US struck 3 Iranian oil tankers, Iran struck back - highest priority",
+    "Ukraine-Russia: Witkoff+Kushner in Moscow, 3-day capital ceasefire agreed",
+    "Falkland Islands: Argentina threatening sanctions, Trump may side with Milei"
+  ],
+  "key_findings": {
+    "geopolitics": "US-Iran conflict escalation is ladder-step, not full war - both sides controlling red lines",
+    "energy": "Oil tanker insurance up 23%, WTI 78-82 firmly supported",
+    "ai": "Kenyan essay writers AI displacement = first large-scale gig economy collapse evidence",
+    "space": "German Isar Aerospace first European commercial orbital launch from European soil"
+  },
+  "output_files": [
+    "reports/daily-briefing/2026-09-06.md",
+    "memory/world-intelligence/2026-09-06.md",
+    "reports/daily-briefing/INDEX.md (updated)",
+    "eval/2026-09-06.json"
+  ],
+  "status": "success"
+}

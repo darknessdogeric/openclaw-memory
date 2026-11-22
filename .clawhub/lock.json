@@ -31,7 +31,7 @@
     },
     "notebooklm-prompts": {
       "version": "1.0.0",
-      "installedAt": 1774072380020
+      "installedAt": 1792053026412
     },
     "powerpoint-pptx": {
       "version": "1.0.1",
@@ -39,7 +39,7 @@
     },
     "tiangong-wps-ppt-automation": {
       "version": "0.1.0",
-      "installedAt": 1774713722222
+      "installedAt": 1792053045594
     },
     "getnote": {
       "version": "1.5.7",
@@ -75,7 +75,7 @@
     },
     "gstack-openclaw-office-hours": {
       "version": "1.0.0",
-      "installedAt": 1775442481535
+      "installedAt": 1792053148043
     },
     "gstack-openclaw-ceo-review": {
       "version": "1.0.0",
@@ -180,6 +180,26 @@
     "ffmpeg-video-editor": {
       "version": "1.0.0",
       "installedAt": 1781797894379
+    },
+    "interior-fullplan": {
+      "version": "1.0.1",
+      "installedAt": 1792825338482
+    },
+    "cad-batch-processing": {
+      "version": "1.0.0",
+      "installedAt": 1792825346860
+    },
+    "brand-identity-design": {
+      "version": "0.1.0",
+      "installedAt": 1792826096355
+    },
+    "color-palette-advisor": {
+      "version": "1.0.0",
+      "installedAt": 1792826102830
+    },
+    "fontpick": {
+      "version": "2.0.0",
+      "installedAt": 1792826108542
     }
   }
 }

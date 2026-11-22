@@ -1,0 +1,350 @@
+{
+  "metadata": {
+    "audit_date": "2026-07-23",
+    "audit_window": "2026-06 + 2026 H1 (1-6 月)",
+    "total_sources": 34,
+    "categories": 7
+  },
+  "sources": [
+    {
+      "category": "A",
+      "item": "中国旅游饭店业协会",
+      "has_data_6m": false,
+      "has_data_h1": false,
+      "source_url": "",
+      "notes": "待审核",
+      "status_6m": "[MISSING]",
+      "status_h1": "[MISSING]"
+    },
+    {
+      "category": "A",
+      "item": "中国饭店协会",
+      "has_data_6m": false,
+      "has_data_h1": false,
+      "source_url": "",
+      "notes": "待审核",
+      "status_6m": "[MISSING]",
+      "status_h1": "[MISSING]"
+    },
+    {
+      "category": "A",
+      "item": "中国旅游协会",
+      "has_data_6m": false,
+      "has_data_h1": false,
+      "source_url": "",
+      "notes": "待审核",
+      "status_6m": "[MISSING]",
+      "status_h1": "[MISSING]"
+    },
+    {
+      "category": "A",
+      "item": "云南省饭店协会",
+      "has_data_6m": false,
+      "has_data_h1": false,
+      "source_url": "",
+      "notes": "待审核",
+      "status_6m": "[MISSING]",
+      "status_h1": "[MISSING]"
+    },
+    {
+      "category": "A",
+      "item": "州市级酒店/民宿协会",
+      "has_data_6m": false,
+      "has_data_h1": false,
+      "source_url": "",
+      "notes": "待审核",
+      "status_6m": "[MISSING]",
+      "status_h1": "[MISSING]"
+    },
+    {
+      "category": "B",
+      "item": "STR Global",
+      "has_data_6m": false,
+      "has_data_h1": false,
+      "source_url": "",
+      "notes": "待审核",
+      "status_6m": "[MISSING]",
+      "status_h1": "[MISSING]"
+    },
+    {
+      "category": "B",
+      "item": "浩华 Horwath HTL",
+      "has_data_6m": false,
+      "has_data_h1": false,
+      "source_url": "",
+      "notes": "待审核",
+      "status_6m": "[MISSING]",
+      "status_h1": "[MISSING]"
+    },
+    {
+      "category": "B",
+      "item": "HVS",
+      "has_data_6m": false,
+      "has_data_h1": false,
+      "source_url": "",
+      "notes": "待审核",
+      "status_6m": "[MISSING]",
+      "status_h1": "[MISSING]"
+    },
+    {
+      "category": "B",
+      "item": "CBRE 世邦魏理仕",
+      "has_data_6m": false,
+      "has_data_h1": false,
+      "source_url": "",
+      "notes": "待审核",
+      "status_6m": "[MISSING]",
+      "status_h1": "[MISSING]"
+    },
+    {
+      "category": "B",
+      "item": "JLL 仲量联行",
+      "has_data_6m": false,
+      "has_data_h1": false,
+      "source_url": "",
+      "notes": "待审核",
+      "status_6m": "[MISSING]",
+      "status_h1": "[MISSING]"
+    },
+    {
+      "category": "B",
+      "item": "戴德梁行",
+      "has_data_6m": false,
+      "has_data_h1": false,
+      "source_url": "",
+      "notes": "待审核",
+      "status_6m": "[MISSING]",
+      "status_h1": "[MISSING]"
+    },
+    {
+      "category": "C",
+      "item": "迈点研究院 Meadin",
+      "has_data_6m": false,
+      "has_data_h1": false,
+      "source_url": "",
+      "notes": "待审核",
+      "status_6m": "[MISSING]",
+      "status_h1": "[MISSING]"
+    },
+    {
+      "category": "C",
+      "item": "环球旅讯 TravelDaily",
+      "has_data_6m": false,
+      "has_data_h1": false,
+      "source_url": "",
+      "notes": "待审核",
+      "status_6m": "[MISSING]",
+      "status_h1": "[MISSING]"
+    },
+    {
+      "category": "C",
+      "item": "Fastdata 极数",
+      "has_data_6m": false,
+      "has_data_h1": false,
+      "source_url": "",
+      "notes": "待审核",
+      "status_6m": "[MISSING]",
+      "status_h1": "[MISSING]"
+    },
+    {
+      "category": "C",
+      "item": "浩联智库",
+      "has_data_6m": false,
+      "has_data_h1": false,
+      "source_url": "",
+      "notes": "待审核",
+      "status_6m": "[MISSING]",
+      "status_h1": "[MISSING]"
+    },
+    {
+      "category": "C",
+      "item": "中国旅游研究院",
+      "has_data_6m": false,
+      "has_data_h1": false,
+      "source_url": "",
+      "notes": "待审核",
+      "status_6m": "[MISSING]",
+      "status_h1": "[MISSING]"
+    },
+    {
+      "category": "D",
+      "item": "携程",
+      "has_data_6m": false,
+      "has_data_h1": false,
+      "source_url": "",
+      "notes": "待审核",
+      "status_6m": "[MISSING]",
+      "status_h1": "[MISSING]"
+    },
+    {
+      "category": "D",
+      "item": "美团",
+      "has_data_6m": false,
+      "has_data_h1": false,
+      "source_url": "",
+      "notes": "待审核",
+      "status_6m": "[MISSING]",
+      "status_h1": "[MISSING]"
+    },
+    {
+      "category": "D",
+      "item": "飞猪",
+      "has_data_6m": false,
+      "has_data_h1": false,
+      "source_url": "",
+      "notes": "待审核",
+      "status_6m": "[MISSING]",
+      "status_h1": "[MISSING]"
+    },
+    {
+      "category": "D",
+      "item": "去哪儿",
+      "has_data_6m": false,
+      "has_data_h1": false,
+      "source_url": "",
+      "notes": "待审核",
+      "status_6m": "[MISSING]",
+      "status_h1": "[MISSING]"
+    },
+    {
+      "category": "D",
+      "item": "Booking.com",
+      "has_data_6m": false,
+      "has_data_h1": false,
+      "source_url": "",
+      "notes": "待审核",
+      "status_6m": "[MISSING]",
+      "status_h1": "[MISSING]"
+    },
+    {
+      "category": "D",
+      "item": "Airbnb",
+      "has_data_6m": false,
+      "has_data_h1": false,
+      "source_url": "",
+      "notes": "待审核",
+      "status_6m": "[MISSING]",
+      "status_h1": "[MISSING]"
+    },
+    {
+      "category": "E",
+      "item": "国家文化和旅游部",
+      "has_data_6m": false,
+      "has_data_h1": false,
+      "source_url": "",
+      "notes": "待审核",
+      "status_6m": "[MISSING]",
+      "status_h1": "[MISSING]"
+    },
+    {
+      "category": "E",
+      "item": "国家统计局",
+      "has_data_6m": false,
+      "has_data_h1": false,
+      "source_url": "",
+      "notes": "待审核",
+      "status_6m": "[MISSING]",
+      "status_h1": "[MISSING]"
+    },
+    {
+      "category": "E",
+      "item": "省/直辖市文旅厅",
+      "has_data_6m": false,
+      "has_data_h1": false,
+      "source_url": "",
+      "notes": "待审核",
+      "status_6m": "[MISSING]",
+      "status_h1": "[MISSING]"
+    },
+    {
+      "category": "E",
+      "item": "州市统计局/政府",
+      "has_data_6m": false,
+      "has_data_h1": false,
+      "source_url": "",
+      "notes": "待审核",
+      "status_6m": "[MISSING]",
+      "status_h1": "[MISSING]"
+    },
+    {
+      "category": "E",
+      "item": "县区级统计局/政府",
+      "has_data_6m": false,
+      "has_data_h1": false,
+      "source_url": "",
+      "notes": "待审核",
+      "status_6m": "[MISSING]",
+      "status_h1": "[MISSING]"
+    },
+    {
+      "category": "F",
+      "item": "北二外旅游管理学院",
+      "has_data_6m": false,
+      "has_data_h1": false,
+      "source_url": "",
+      "notes": "待审核",
+      "status_6m": "[MISSING]",
+      "status_h1": "[MISSING]"
+    },
+    {
+      "category": "F",
+      "item": "中山大学旅游学院",
+      "has_data_6m": false,
+      "has_data_h1": false,
+      "source_url": "",
+      "notes": "待审核",
+      "status_6m": "[MISSING]",
+      "status_h1": "[MISSING]"
+    },
+    {
+      "category": "F",
+      "item": "本地高校/智库",
+      "has_data_6m": false,
+      "has_data_h1": false,
+      "source_url": "",
+      "notes": "待审核",
+      "status_6m": "[MISSING]",
+      "status_h1": "[MISSING]"
+    },
+    {
+      "category": "G",
+      "item": "第一财经 / DT 财经",
+      "has_data_6m": false,
+      "has_data_h1": false,
+      "source_url": "",
+      "notes": "待审核",
+      "status_6m": "[MISSING]",
+      "status_h1": "[MISSING]"
+    },
+    {
+      "category": "G",
+      "item": "36 氪 / 虎嗅",
+      "has_data_6m": false,
+      "has_data_h1": false,
+      "source_url": "",
+      "notes": "待审核",
+      "status_6m": "[MISSING]",
+      "status_h1": "[MISSING]"
+    },
+    {
+      "category": "G",
+      "item": "经济观察报 / 21 世纪",
+      "has_data_6m": false,
+      "has_data_h1": false,
+      "source_url": "",
+      "notes": "待审核",
+      "status_6m": "[MISSING]",
+      "status_h1": "[MISSING]"
+    },
+    {
+      "category": "G",
+      "item": "财新 / 界面新闻",
+      "has_data_6m": false,
+      "has_data_h1": false,
+      "source_url": "",
+      "notes": "待审核",
+      "status_6m": "[MISSING]",
+      "status_h1": "[MISSING]"
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+﻿{
+    "cron_job":  "Entity Extractor (每日21:30)",
+    "status":  "completed",
+    "project_mentions":  {
+                             "医养研究":  false,
+                             "AHL":  true,
+                             "安逸集团":  true,
+                             "个人业务":  true
+                         },
+    "date":  "2026-08-17",
+    "entity_breakdown":  {
+                             "Event":  1,
+                             "Tool":  2,
+                             "Company":  3,
+                             "Place":  1,
+                             "Person":  2,
+                             "Project":  4
+                         },
+    "stats":  {
+                  "entities_added":  13,
+                  "relations_added":  0,
+                  "files_scanned":  [
+                                        "memory/2026-08-17.md"
+                                    ]
+              },
+    "high_priority_entities":  [
+                                   "AHL",
+                                   "1244战略",
+                                   "Eric",
+                                   "B166ER",
+                                   "OpenClaw",
+                                   "DeepSeek"
+                               ],
+    "actual_run_time":  "2026-08-17T22:13:00+08:00",
+    "deliverables":  {
+                         "obsidian_push":  "✅ pushed to 50-外部接入/cron-outputs/2026-08/",
+                         "eval_json":  "writing now",
+                         "relations_trend":  "✅ updated",
+                         "eric_4_projects_dashboard":  "✅ updated (4 项目提及)",
+                         "graph_jsonl":  "✅ updated"
+                     }
+}

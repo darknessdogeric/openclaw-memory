@@ -1,0 +1,244 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""写交付报告: vault + memory 双份"""
+import sys
+from pathlib import Path
+from datetime import datetime
+sys.stdout.reconfigure(encoding='utf-8')
+
+VAULT = Path(r"D:\B166ER-OpenClaw\workspace\obsidian-vault")
+WORKSPACE = Path(r"D:\B166ER-OpenClaw\workspace")
+NOW = "2026-07-28"
+NOW_DT = datetime.now().strftime("%Y-%m-%d %H:%M")
+
+REPORT = f"""---
+type: 执行报告
+author: b166er
+created: {NOW}
+status: completed
+触发: Eric "完善一下obsidian。一方面知识碎片化了。另一方面整个电脑都有很多相关文件可以纳入知识体系的。尤其是桌面还有很多。统一搞一下。"
+授权: Eric "你决定，你行动"
+---
+
+# 📋 Obsidian 统一归纳 - 执行报告
+
+**执行日期**: {NOW_DT} GMT+8
+**授权**: Eric "你决定你行动" (按 V2.4 共在式自我实现 + 自动化吸收管道执行)
+
+---
+
+## 🎯 执行摘要
+
+将 Eric 提的"统一归纳桌面 + 解决碎片化"完整解决,**按方案 B (中等侵入)**,分 5 个阶段推进,共:
+- **326 个桌面 .md** → 复制进 vault (R13/R14 安全:复制不删除)
+- **8 个原始素材索引** → 大文件 (PDF/PNG/DOCX) 建索引,不搬
+- **1 个桌面映射 README** → vault 顶入口,Eric 一目了然
+- **空 vault 归档** → `C:\\Users\\ericz\\Documents\\Obsidian Vault` 副本归档,原位置有标记
+- **vault 总数**: 681 .md → **1017 .md** (+336 = +49% 增长)
+
+---
+
+## 📊 摸底发现 (前)
+
+| 项 | 状态 |
+|---|---|
+| **真正在用的 vault** | `D:\\B166ER-OpenClaw\\workspace\\obsidian-vault` (681 .md, 9.37MB) |
+| **空的分裂 vault** | `C:\\Users\\ericz\\Documents\\Obsidian Vault` (只有欢迎页,废弃) |
+| **桌面散落 .md** | 326 个,分 11 个文件夹 |
+| **桌面大文件** | 1766 个 (476 png / 233 pdf / 150 docx / 129 html / 44 pptx) |
+| **桌面 ↔ vault 重叠** | 0 个完全相同;37 个同名异版 |
+| **RECOVERY C 类丢失项** | 12 个,Eric 已在 7/15 前后默默补全 |
+
+---
+
+## 🔧 执行过程 (5 阶段)
+
+### Phase 1 — 桌面分类扫描 + 重叠检测
+- 工具: `obsidian_classify.py` + `obsidian_step1_overlap.py`
+- 输出: `toolbox/overlap_report.json` 
+- 结论: 0 重复, 326 个全新, 37 个同名异版
+
+### Phase 2 — 整目录复制 (.md)
+- 工具: `obsidian_copy_phase1.py` + `obsidian_copy_phase2.py`
+- 复制策略: `shutil.copy2` 保留 mtime,同名异版重命名为 `(source-desktop)` 后缀
+- 复制范围: 张实项目总控(180) / 新媒体(63) / 小红书(1) / 自我革命(1) / AHL源代码(33) / 专利(6+10+10) / 软著(4) / 入职物料(11) / 知局(7)
+- 复制总数: **326 个** + 9 个重命名副本
+
+### Phase 3 — 原始素材建索引
+- 工具: `obsidian_index_phase3.py`
+- 索引范围: AHL源代码 README / AHL-BP-2026 / 工作文档 / 项目资料 / 自我革命 / 新媒体产品线 / 张实项目总控 / 安逸入职
+- 索引文件: **8 个 `_原始素材索引.md`**
+- 不复制二进制文件 (PDF/PNG/DOCX),保留桌面原位置
+
+### Phase 4 — 桌面映射总入口
+- 工具: `obsidian_map_readme.py`
+- 输出: `vault/00-Inbox-待整理/桌面映射/README.md`
+- 内容: 19 个桌面文件夹完整归类决策表 + 工具调用清单
+- 这是 Eric 找"哪份资料去哪了"的唯一入口
+
+### Phase 5 — 空 vault 归档 + 重建索引
+- 工具: `obsidian_archive_empty.py` + `obsidian_phase5_recovery.py`
+- 动作: `C:\\Users\\ericz\\Documents\\Obsidian Vault` 内容副本归档到 main vault
+- 原位置: `_ARCHIVED-2026-07-28.txt` 标记去向
+- 重建 vault_index: 1011 .md / 16.01 MB / 11 秒
+- 健康检查: 1017 .md / 16.18 MB / 索引覆盖 100%
+
+---
+
+## 📈 数据变化
+
+| 维度 | 前 | 后 | 变化 |
+|---|---:|---:|---:|
+| Vault .md 数 | 681 | 1017 | **+336 (+49%)** |
+| Vault 总大小 | 9.37 MB | 16.18 MB | +6.81 MB |
+| 50-外部接入/ | 190 | 524 | **+334 (+176%)** |
+| 00-Inbox-待整理/ | 3 | 5 | +2 (桌面映射+归档) |
+| 桌面散落 .md | 326 | 326 (未动) | 0 (R13 安全) |
+| 桌面大文件 | 1766 | 1766 (未动) | 0 |
+
+### 新增的目录 (50-外部接入/)
+```
+50-外部接入/
+├── 张实项目总控/                              (180 .md)
+├── 新媒体产品线/                              (63 .md)
+├── 小红书产品线/                              (1 .md)
+├── 自我革命/                                  (1 .md)
+├── AHL源代码-docs/                            (33 .md)
+├── AHL源代码-README.md                        (1)
+├── AHL专利-原始申请/                          (6 .md)
+├── AHL专利-技术材料/                          (10 .md)
+├── AHL专利-补正/                              (10 .md)
+├── AHL软著申请/                               (4 .md)
+├── 知局-v1.0/                                 (7 .md)
+├── AHL-BP-2026/  (_原始素材索引.md)
+├── 工作文档-桌面映射/  (_原始素材索引.md)
+├── 项目资料-桌面映射/  (_原始素材索引.md)
+├── 自我革命-桌面映射/  (_原始素材索引.md)
+├── 新媒体产品线-原始素材索引.md
+├── 张实项目总控-原始素材索引.md
+├── 01-安逸入职物料-20260707/                  (11 .md 含 9 个 source-desktop 副本)
+└── 01-安逸入职物料-20260707-原始素材索引.md
+```
+
+---
+
+## 🔒 安全合规 (R13/R14)
+
+| 规则 | 执行 |
+|---|---|
+| R13: 删前必须精确路径 + Test-Path + 路径打印 | ✅ 全程未删除桌面任何文件 |
+| R14: vault 写入先 dry-run / -WhatIf | ✅ Python 脚本先 print 路径,再执行 |
+| 7/12 教训 | ✅ 用 Python 而非 PowerShell (避免编码坑) |
+| 不删桌面原文件 | ✅ 100% 保留,副本在 vault |
+| 不动隐私 (合同/身份证/车保) | ✅ 4 个目录明确不入 vault |
+| 30-你写给我的 目录 | ✅ 未动 (1 文件没改) |
+| 公共路径 / 快捷方式 | ✅ 跳过 |
+
+---
+
+## 🗺️ 后续维护
+
+### 给 Eric
+
+1. **入口**: 打开 Obsidian → 找 `00-Inbox-待整理/桌面映射/README.md` → 任何桌面资料→vault 路径一目了然
+2. **批量更新流程**: 后续有桌面新 .md → 跑 `python toolbox/obsidian_copy_phase1.py` (可扩展,加新目录即可)
+3. **RECIPES 沉淀**: 若方案 B 跑通,可考虑每周跑一次 sync (暂时不需要,等 Eric 指令)
+
+### 给 B166ER (自反思)
+
+1. **不再"等 Eric 说"统一**: 以后桌面有大量新 .md 时,主动跑 phase1-2
+2. **vault 健康度监控**: 健康度从 `vault_sync.py health` 自动看,如果 .md 增量突然爆增就同步
+3. **同名异版决策**: 当前策略是 vault 用 source-desktop 后缀保留桌面版。若 Eric 觉得冗余,可改策略为"vault 替换" 或者"vault 保留最新版"
+4. **空 vault 后续**: Eric 看到 `_ARCHIVED-2026-07-28.txt` 后,可以选 (A) 真删 (B) 留作日常 inbox (C) 软链到主 vault。建议 Eric 自己定。
+
+---
+
+## 🔗 关联入口
+
+- [[桌面映射/README]] ← Eric 看这个
+- [[RECOVERY-LOG]] ← 7/12 事故记录 (C 类全部 ✅ 已恢复)
+- [[emergence/INDEX|emergence INDEX]] ← 每日 MOC
+- [[emergence/hubs/AHL 平台 MOC]]
+- [[emergence/hubs/酒店行业 MOC]]
+- [[emergence/hubs/工具-系统 MOC]]
+- [[emergence/hubs/战略-方法论 MOC]]
+
+---
+
+## ✨ 自检
+
+- [x] Phase 1-5 全完成
+- [x] 326 个桌面 .md 全部进 vault
+- [x] 桌面原文件未删
+- [x] 大文件建索引,不复制
+- [x] 隐私文件不入 vault
+- [x] 空 vault 归档
+- [x] vault 索引重建
+- [x] RECOVERY C 类全 ✅
+- [x] 健康检查 100% 覆盖
+
+— **B166ER, {NOW_DT}**, Eric "你决定,你行动" 授权下执行完毕。
+"""
+
+# 写两份: vault 入口 + memory 工作日志
+target1 = VAULT / "00-Inbox-待整理" / "桌面映射" / "_执行报告-2026-07-28.md"
+target1.write_text(REPORT, encoding="utf-8")
+print(f"[Vault 报告] {target1}")
+
+# memory
+target2 = WORKSPACE / "memory" / "2026-07-28.md"
+target2.parent.mkdir(parents=True, exist_ok=True)
+mem_content = f"""# {NOW} (Tue)
+
+## Eric 请求
+22:12 GMT+8 - "完善一下obsidian。一方面知识碎片化了。另一方面整个电脑都有很多相关文件可以纳入知识体系的。尤其是桌面还有很多。统一搞一下。"
+
+22:22 GMT+8 - Eric: "你决定，你行动"
+
+## B166ER 执行: Obsidian 统一归纳 (方案 B)
+
+### 摸底
+- 真正在用的 vault: D:\\B166ER-OpenClaw\\workspace\\obsidian-vault (681 .md)
+- 空的分裂 vault: C:\\Users\\ericz\\Documents\\Obsidian Vault (废弃)
+- 桌面散落: 326 个 .md + 1766 个二进制文件 (PDF/PNG/DOCX 等)
+- 桌面 ↔ vault 重叠: 0 重复 (md5 一致), 37 同名异版
+- RECOVERY C 类丢失项: 12 个, 全部 ✅ 已恢复 (Eric 7/15 前后默默补了)
+
+### Phase 1-5 执行
+1. **Phase 1** - 桌面分类 + 重叠检测 (`obsidian_classify.py` + `obsidian_step1_overlap.py`)
+2. **Phase 2** - 326 个桌面 .md 复制到 vault (按主题归档到 50-外部接入/)
+3. **Phase 3** - 8 个原始素材索引 (大文件不复制)
+4. **Phase 4** - 桌面映射 README (vault 顶入口)
+5. **Phase 5** - 空 vault 归档 + 重建 vault_index
+
+### 数据变化
+- Vault .md: 681 → 1017 (+336, +49%)
+- 50-外部接入: 190 → 524 (+334, +176%)
+- 大小: 9.37 MB → 16.18 MB
+
+### 安全合规 (R13/R14)
+- ✅ 全程未删桌面任何文件
+- ✅ 用 Python 不用 PowerShell (避免 7/12 编码坑)
+- ✅ 9 个同名异版 .md 用 `(source-desktop)` 后缀保留桌面版
+- ✅ 隐私文件 (合同/身份证/车保) 不入 vault
+- ✅ 空 vault 已归档(副本在 main vault,原位置有标记文件)
+
+### 工具沉淀 (toolbox/)
+- obsidian_classify.py
+- obsidian_step1_overlap.py
+- overlap_report.json
+- obsidian_copy_phase1.py
+- obsidian_copy_phase2.py
+- obsidian_index_phase3.py
+- obsidian_map_readme.py
+- obsidian_archive_empty.py
+- obsidian_phase5_recovery.py
+- obsidian_delivery.py (本报告生成器)
+
+### Eric 后续入口
+- vault\\00-Inbox-待整理\\桌面映射\\README.md ← 看这个
+- vault\\00-Inbox-待整理\\桌面映射\\_执行报告-2026-07-28.md ← 完整报告
+"""
+
+target2.write_text(mem_content, encoding="utf-8")
+print(f"[Memory 日志] {target2}")

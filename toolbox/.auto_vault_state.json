@@ -1,0 +1,19 @@
+{
+  "pushes": [
+    {
+      "time": "2026-07-14T09:29:30.102390",
+      "source": "reports\\酒店预订主权分析框架.md",
+      "target": "10-我为你生成的\\知识库\\酒店\\2026-07-14-酒店预订主权分析框架 V1.0.md",
+      "mocs": [
+        "酒店行业 MOC",
+        "战略-方法论 MOC",
+        "Eric 人格-审美 MOC",
+        "B166ER 知识库 MOC",
+        "跨境-出海 MOC"
+      ],
+      "related_count": 10
+    }
+  ],
+  "pulls": [],
+  "last_watch": null
+}

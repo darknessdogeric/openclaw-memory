@@ -1,0 +1,101 @@
+{
+  "date": "2026-08-21",
+  "task": "每日商业情报",
+  "summary": "上海沪八条出台/贝森特救市失败/比特币突破7.2万",
+  "signals": [
+    {
+      "rank": 1,
+      "signal": "上海沪八条出台",
+      "source": "政策",
+      "weight": 5,
+      "description": "公积金首付扩大至现房+二套首付降至15%+卖旧买新最高补贴8万"
+    },
+    {
+      "rank": 2,
+      "signal": "贝森特干预失效/美股暴跌",
+      "source": "金融市场",
+      "weight": 5,
+      "description": "40亿美债回购仅撑一天，沃尔玛暴跌9%"
+    },
+    {
+      "rank": 3,
+      "signal": "比特币突破7.2万美元",
+      "source": "数字资产",
+      "weight": 4,
+      "description": "空头挤压2.74亿美元，地缘缓和+政策利好叠加"
+    },
+    {
+      "rank": 4,
+      "signal": "长鑫市值超越Intel",
+      "source": "半导体",
+      "weight": 3,
+      "description": "中国半导体突破信号"
+    },
+    {
+      "rank": 5,
+      "signal": "服务业持续扩能提质",
+      "source": "消费",
+      "weight": 3,
+      "description": "国内经济韧性"
+    }
+  ],
+  "predictions": [
+    {
+      "prediction": "上海金九银十成色提升",
+      "confidence": 75,
+      "logic": "政策叠加改善需求释放，9-10月成交有望"
+    },
+    {
+      "prediction": "美股Q3财报季承压",
+      "confidence": 70,
+      "logic": "沃尔玛开了一个坏头，消费股指引堪忧"
+    },
+    {
+      "prediction": "比特币短期回调风险",
+      "confidence": 65,
+      "logic": "7.5万是关键阻力，拥挤多头+获利了结"
+    },
+    {
+      "prediction": "A股酒店板块受政策提振",
+      "confidence": 60,
+      "logic": "地产链情绪修复，酒店估值修复"
+    }
+  ],
+  "actions": [
+    {
+      "action": "关注安逸集团旗下上海酒店是否有政策叠加受益",
+      "priority": "medium",
+      "reason": "上海楼政策传导链"
+    },
+    {
+      "action": "观察A股酒店板块情绪",
+      "priority": "medium",
+      "reason": "地产链修复预期"
+    },
+    {
+      "action": "美股Q3财报季避开消费股",
+      "priority": "low",
+      "reason": "沃尔玛引领消费股承压"
+    },
+    {
+      "action": "加密货币观望为主",
+      "priority": "low",
+      "reason": "短期涨幅过大"
+    }
+  ],
+  "macro_signals": {
+    "A股政策面": {"signal": "沪八条释放稳增长信号", "status": "green"},
+    "美股基本面": {"signal": "消费股指引堪忧", "status": "yellow"},
+    "汇率": {"signal": "美元指数高位震荡", "status": "yellow"},
+    "加密货币": {"signal": "突破阻力位", "status": "green"}
+  },
+  "week_over_week": {
+    "rising_topics": ["沪八条(+300%)", "贝森特(+100%)", "财报见闻(+100%)"],
+    "falling_topics": [],
+    "trends": {
+      "上海楼市政策": "上升",
+      "美股波动率": "上升",
+      "加密货币": "上升"
+    }
+  }
+}

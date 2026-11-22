@@ -1,0 +1,442 @@
+[
+  {
+    "file": "00_README.md",
+    "mode": "industry",
+    "total_pass": 5,
+    "total_checks": 7,
+    "results": [
+      {
+        "check": "34 维度信源覆盖率",
+        "pass": true,
+        "detail": "26.2% (17/65) (industry mode >=10)"
+      },
+      {
+        "check": "10 章宏观骨架",
+        "pass": false,
+        "detail": "5/10 章节, missing: ['Executive Summary', '宏观底盘', '需求', '供给', '风险']"
+      },
+      {
+        "check": "同比 baseline 标注",
+        "pass": true,
+        "detail": "21 个同比标注"
+      },
+      {
+        "check": "5 维 MECE 切片",
+        "pass": true,
+        "detail": "6/9 维度切片"
+      },
+      {
+        "check": "政策合规章节",
+        "pass": true,
+        "detail": "3/10 政策关键词"
+      },
+      {
+        "check": "信源>=10 类可追溯",
+        "pass": true,
+        "detail": "7/11 信源标识"
+      },
+      {
+        "check": "3 反直觉洞察",
+        "pass": false,
+        "detail": "1 个洞察标识"
+      }
+    ],
+    "all_pass": false
+  },
+  {
+    "file": "01_全国总览.md",
+    "mode": "industry",
+    "total_pass": 7,
+    "total_checks": 7,
+    "results": [
+      {
+        "check": "34 维度信源覆盖率",
+        "pass": true,
+        "detail": "35.4% (23/65) (industry mode >=10)"
+      },
+      {
+        "check": "10 章宏观骨架",
+        "pass": true,
+        "detail": "9/10 章节, missing: ['Executive Summary']"
+      },
+      {
+        "check": "同比 baseline 标注",
+        "pass": true,
+        "detail": "131 个同比标注"
+      },
+      {
+        "check": "5 维 MECE 切片",
+        "pass": true,
+        "detail": "7/9 维度切片"
+      },
+      {
+        "check": "政策合规章节",
+        "pass": true,
+        "detail": "7/10 政策关键词"
+      },
+      {
+        "check": "信源>=10 类可追溯",
+        "pass": true,
+        "detail": "9/11 信源标识"
+      },
+      {
+        "check": "3 反直觉洞察",
+        "pass": true,
+        "detail": "9 个洞察标识"
+      }
+    ],
+    "all_pass": true
+  },
+  {
+    "file": "02_一线城市.md",
+    "mode": "industry",
+    "total_pass": 6,
+    "total_checks": 7,
+    "results": [
+      {
+        "check": "34 维度信源覆盖率",
+        "pass": true,
+        "detail": "15.4% (10/65) (industry mode >=10)"
+      },
+      {
+        "check": "10 章宏观骨架",
+        "pass": false,
+        "detail": "5/10 章节, missing: ['Executive Summary', '宏观底盘', '需求', '供给', '结论']"
+      },
+      {
+        "check": "同比 baseline 标注",
+        "pass": true,
+        "detail": "45 个同比标注"
+      },
+      {
+        "check": "5 维 MECE 切片",
+        "pass": true,
+        "detail": "5/9 维度切片"
+      },
+      {
+        "check": "政策合规章节",
+        "pass": true,
+        "detail": "5/10 政策关键词"
+      },
+      {
+        "check": "信源>=10 类可追溯",
+        "pass": true,
+        "detail": "8/11 信源标识"
+      },
+      {
+        "check": "3 反直觉洞察",
+        "pass": true,
+        "detail": "7 个洞察标识"
+      }
+    ],
+    "all_pass": false
+  },
+  {
+    "file": "03_新一线城市.md",
+    "mode": "industry",
+    "total_pass": 4,
+    "total_checks": 7,
+    "results": [
+      {
+        "check": "34 维度信源覆盖率",
+        "pass": false,
+        "detail": "9.2% (6/65) (need >=10)"
+      },
+      {
+        "check": "10 章宏观骨架",
+        "pass": false,
+        "detail": "3/10 章节, missing: ['Executive Summary', '宏观底盘', '政策', '需求', '供给', '风险', '结论']"
+      },
+      {
+        "check": "同比 baseline 标注",
+        "pass": true,
+        "detail": "22 个同比标注"
+      },
+      {
+        "check": "5 维 MECE 切片",
+        "pass": false,
+        "detail": "2/9 维度切片"
+      },
+      {
+        "check": "政策合规章节",
+        "pass": true,
+        "detail": "3/10 政策关键词"
+      },
+      {
+        "check": "信源>=10 类可追溯",
+        "pass": true,
+        "detail": "5/11 信源标识"
+      },
+      {
+        "check": "3 反直觉洞察",
+        "pass": true,
+        "detail": "7 个洞察标识"
+      }
+    ],
+    "all_pass": false
+  },
+  {
+    "file": "04_下沉市场.md",
+    "mode": "industry",
+    "total_pass": 5,
+    "total_checks": 7,
+    "results": [
+      {
+        "check": "34 维度信源覆盖率",
+        "pass": true,
+        "detail": "20.0% (13/65) (industry mode >=10)"
+      },
+      {
+        "check": "10 章宏观骨架",
+        "pass": false,
+        "detail": "5/10 章节, missing: ['Executive Summary', '宏观底盘', '政策', '风险', '结论']"
+      },
+      {
+        "check": "同比 baseline 标注",
+        "pass": true,
+        "detail": "29 个同比标注"
+      },
+      {
+        "check": "5 维 MECE 切片",
+        "pass": true,
+        "detail": "5/9 维度切片"
+      },
+      {
+        "check": "政策合规章节",
+        "pass": false,
+        "detail": "2/10 政策关键词"
+      },
+      {
+        "check": "信源>=10 类可追溯",
+        "pass": true,
+        "detail": "8/11 信源标识"
+      },
+      {
+        "check": "3 反直觉洞察",
+        "pass": true,
+        "detail": "7 个洞察标识"
+      }
+    ],
+    "all_pass": false
+  },
+  {
+    "file": "05_西部东北.md",
+    "mode": "industry",
+    "total_pass": 3,
+    "total_checks": 7,
+    "results": [
+      {
+        "check": "34 维度信源覆盖率",
+        "pass": false,
+        "detail": "13.8% (9/65) (need >=10)"
+      },
+      {
+        "check": "10 章宏观骨架",
+        "pass": false,
+        "detail": "3/10 章节, missing: ['Executive Summary', '宏观底盘', '政策', '需求', '供给', '风险', '结论']"
+      },
+      {
+        "check": "同比 baseline 标注",
+        "pass": true,
+        "detail": "42 个同比标注"
+      },
+      {
+        "check": "5 维 MECE 切片",
+        "pass": false,
+        "detail": "2/9 维度切片"
+      },
+      {
+        "check": "政策合规章节",
+        "pass": false,
+        "detail": "2/10 政策关键词"
+      },
+      {
+        "check": "信源>=10 类可追溯",
+        "pass": true,
+        "detail": "6/11 信源标识"
+      },
+      {
+        "check": "3 反直觉洞察",
+        "pass": true,
+        "detail": "7 个洞察标识"
+      }
+    ],
+    "all_pass": false
+  },
+  {
+    "file": "06_成都单列.md",
+    "mode": "industry",
+    "total_pass": 4,
+    "total_checks": 7,
+    "results": [
+      {
+        "check": "34 维度信源覆盖率",
+        "pass": false,
+        "detail": "6.2% (4/65) (need >=10)"
+      },
+      {
+        "check": "10 章宏观骨架",
+        "pass": false,
+        "detail": "4/10 章节, missing: ['Executive Summary', '宏观底盘', '政策', '供给', '风险', '结论']"
+      },
+      {
+        "check": "同比 baseline 标注",
+        "pass": true,
+        "detail": "37 个同比标注"
+      },
+      {
+        "check": "5 维 MECE 切片",
+        "pass": false,
+        "detail": "4/9 维度切片"
+      },
+      {
+        "check": "政策合规章节",
+        "pass": true,
+        "detail": "3/10 政策关键词"
+      },
+      {
+        "check": "信源>=10 类可追溯",
+        "pass": true,
+        "detail": "5/11 信源标识"
+      },
+      {
+        "check": "3 反直觉洞察",
+        "pass": true,
+        "detail": "7 个洞察标识"
+      }
+    ],
+    "all_pass": false
+  },
+  {
+    "file": "07_四川省.md",
+    "mode": "industry",
+    "total_pass": 3,
+    "total_checks": 7,
+    "results": [
+      {
+        "check": "34 维度信源覆盖率",
+        "pass": false,
+        "detail": "7.7% (5/65) (need >=10)"
+      },
+      {
+        "check": "10 章宏观骨架",
+        "pass": false,
+        "detail": "3/10 章节, missing: ['Executive Summary', '宏观底盘', '政策', '需求', '供给', '风险', '结论']"
+      },
+      {
+        "check": "同比 baseline 标注",
+        "pass": true,
+        "detail": "12 个同比标注"
+      },
+      {
+        "check": "5 维 MECE 切片",
+        "pass": false,
+        "detail": "2/9 维度切片"
+      },
+      {
+        "check": "政策合规章节",
+        "pass": false,
+        "detail": "1/10 政策关键词"
+      },
+      {
+        "check": "信源>=10 类可追溯",
+        "pass": true,
+        "detail": "5/11 信源标识"
+      },
+      {
+        "check": "3 反直觉洞察",
+        "pass": true,
+        "detail": "7 个洞察标识"
+      }
+    ],
+    "all_pass": false
+  },
+  {
+    "file": "08_集团向.md",
+    "mode": "industry",
+    "total_pass": 5,
+    "total_checks": 7,
+    "results": [
+      {
+        "check": "34 维度信源覆盖率",
+        "pass": true,
+        "detail": "24.6% (16/65) (industry mode >=10)"
+      },
+      {
+        "check": "10 章宏观骨架",
+        "pass": false,
+        "detail": "5/10 章节, missing: ['Executive Summary', '宏观底盘', '政策', '风险', '结论']"
+      },
+      {
+        "check": "同比 baseline 标注",
+        "pass": true,
+        "detail": "65 个同比标注"
+      },
+      {
+        "check": "5 维 MECE 切片",
+        "pass": true,
+        "detail": "7/9 维度切片"
+      },
+      {
+        "check": "政策合规章节",
+        "pass": false,
+        "detail": "1/10 政策关键词"
+      },
+      {
+        "check": "信源>=10 类可追溯",
+        "pass": true,
+        "detail": "8/11 信源标识"
+      },
+      {
+        "check": "3 反直觉洞察",
+        "pass": true,
+        "detail": "8 个洞察标识"
+      }
+    ],
+    "all_pass": false
+  },
+  {
+    "file": "09_行业向.md",
+    "mode": "industry",
+    "total_pass": 7,
+    "total_checks": 7,
+    "results": [
+      {
+        "check": "34 维度信源覆盖率",
+        "pass": true,
+        "detail": "30.8% (20/65) (industry mode >=10)"
+      },
+      {
+        "check": "10 章宏观骨架",
+        "pass": true,
+        "detail": "7/10 章节, missing: ['Executive Summary', '宏观底盘', '结论']"
+      },
+      {
+        "check": "同比 baseline 标注",
+        "pass": true,
+        "detail": "85 个同比标注"
+      },
+      {
+        "check": "5 维 MECE 切片",
+        "pass": true,
+        "detail": "8/9 维度切片"
+      },
+      {
+        "check": "政策合规章节",
+        "pass": true,
+        "detail": "9/10 政策关键词"
+      },
+      {
+        "check": "信源>=10 类可追溯",
+        "pass": true,
+        "detail": "9/11 信源标识"
+      },
+      {
+        "check": "3 反直觉洞察",
+        "pass": true,
+        "detail": "8 个洞察标识"
+      }
+    ],
+    "all_pass": true
+  }
+]

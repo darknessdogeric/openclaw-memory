@@ -1,0 +1,13 @@
+﻿=== 37 个同名但内容不同样本 (前 20) ===
+  张实项目总控/README.md
+python : Traceback (most recent call last):
+所在位置 行:1 字符: 1
++ python D:\B166ER-OpenClaw\workspace\toolbox\analyze_overlap.py 2>&1 | ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Traceback (most recent call last)::String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  File "D:\B166ER-OpenClaw\workspace\toolbox\analyze_overlap.py", line 13, in <module>
+    print(f"    \u21b3 {vp}")
+    ~~~~~^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'gbk' codec can't encode character '\u21b3' in position 4: illegal multibyte sequence

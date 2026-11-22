@@ -1,0 +1,80 @@
+{
+  "date": "2026-09-28",
+  "day_of_week": "Monday",
+  "task": "daily_global_intelligence_briefing_0830",
+  "cron_id": "7e149123-b2c9-4336-89fa-da9cae972679",
+  "cron_name": "B166ER-每日全球情报简报 08:30",
+  "scheduled_time": "2026-09-28T08:30:00+08:00",
+  "actual_trigger": "2026-09-28T08:36:00+08:00",
+  "trigger_offset_minutes": 6,
+  "status": "success",
+  "rss_fetch": {
+    "script": "trendradar/fetch_foreign_rss.py",
+    "feeds_succeeded": 28,
+    "feeds_failed": 3,
+    "failed_feeds": ["Hotel News Now", "Hospitality Net", "Yahoo Finance"],
+    "total_items": 737,
+    "db_path": "trendradar/output/rss/2026-09-28.db",
+    "db_size_bytes": 786432,
+    "db_items": 737
+  },
+  "news_crawler_status": {
+    "domestic_crawler": "NOT_RUN (only foreign RSS fetched per job spec)",
+    "note": "Domestic source not invoked; report relies on foreign RSS + R297 prior context"
+  },
+  "deliverables": {
+    "main_report": "reports/daily-briefing/2026-09-28.md",
+    "main_report_bytes": 22439,
+    "archive_copy": "memory/world-intelligence/2026-09-28.md",
+    "index_updated": "reports/daily-briefing/INDEX.md",
+    "index_insertion": "TOP (per spec, not append)",
+    "glossary_added_entries": ["124", "125", "126", "127", "128"],
+    "predictions_added": 5,
+    "eval_path": "eval/2026-09-28.json",
+    "obsidian_push": "PENDING (cron_to_obsidian.py)"
+  },
+  "report_metrics": {
+    "word_count_estimate": 3400,
+    "target_range": "2500-4000",
+    "in_range": true,
+    "sections_count": 16,
+    "format_compliance": "OK 16 sections (geopolitics/energy/markets/policy/healthcare/edu/tech/AI/hotels/REITs/diplomacy/data/risk/causality/scenarios/actions)"
+  },
+  "key_themes_today": [
+    "Iran war enters 7-month 'dual-track' (Trump expects talks + Iran ready for doomsday war + UK terror plot at US airbase)",
+    "Waltz proposes uranium-for-civilian-program compromise opening new negotiating track",
+    "Trump offered to sell arms to China during Washington summit (NYT/FT reveal)",
+    "OpenAI Agent third breach in 72h: bruteforced UN website (Verge)",
+    "Anthropic CEO Amodei to meet Trump Monday (AI safety concern rising)",
+    "RBA hikes to 4.6% (highest since 2011) - trans-Pacific tightening bloc emerging",
+    "Stratechery 2026.39 declares Aggregator Wars begun (Meta Muse/OpenAI/Anthropic/Xai)",
+    "Scott Kennedy: 2 more Xi-Trump summits expected; US-China stabilized on Beijing terms",
+    "Saudi-Iran shadow war escalates (cleric declares religious duty + France deploys troops)",
+    "Russian drones kill 2 in Kyiv market; Russia FM vows to see war through"
+  ],
+  "r297_data_source_compliance": {
+    "tier_1_official": "Waltz statement + Federal Reserve press releases",
+    "tier_2_market": "FT/NYT/Bloomberg/Reuters/Guardian cross-validated via foreign RSS",
+    "tier_3_inference": "WTI forecast scenarios + AI Agent regulatory timing estimates",
+    "uncertainties_marked": true
+  },
+  "r66_cross_reference_compliance": {
+    "checked_sources": 6,
+    "memory_md_checked": true,
+    "user_md_checked": true,
+    "soul_md_checked": true,
+    "glossary_checked": true,
+    "yesterday_briefing_checked": true,
+    "rss_db_checked": true,
+    "conflicts_found": "none - top stories (Iran stalemate + Trump-China arms + OpenAI Agent breach) consistent across NYT/BBC/FT/Guardian/Al Jazeera/Washington Post/Verge"
+  },
+  "delivery": {
+    "mode": "none",
+    "reason": "Per spec: Eric opens reports/daily-briefing/YYYY-MM-DD.md or Obsidian Inbox manually",
+    "auto_announce_to_webchat": false
+  },
+  "r12_watermark_check": {
+    "visual_outputs": "none (plain text briefing)",
+    "watermark_required": false
+  }
+}

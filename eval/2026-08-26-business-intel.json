@@ -1,0 +1,70 @@
+{
+  "date": "2026-08-26",
+  "session": "每日商业情报（20集团版）",
+  "model": "deepseek/deepseek-v4-pro",
+  "duration_minutes": 12,
+  "intel_type": "hotel-top20-groups",
+  "six_step_cycle": {
+    "scan": "酒店20强核心信号（HOTELS榜单/饭店协会报告/华住财报/外资下沉/AI渠道/政策）",
+    "discover": "4异常：华住增收不增利/洲际Q2骤降/中旅瘦身上榜/民营REITs破冰",
+    "integrate": "三大转型主线：规模→存量博弈/开店→资产证券化/OTA→AI渠道",
+    "compare": "华住企稳回升/洲际预期下调/RevPAR反复磨底/REITs破冰/豆包正式化",
+    "predict": "P1中秋国庆催化/P2 REITs扩散/P3 AI渠道竞争/P4供给出清加速",
+    "recommend": "花园宾馆改造(P0)/REITs参照(P1)/AHL窗口期(P0)/警惕增收不增利(P2)"
+  },
+  "key_findings": [
+    {
+      "category": "行业规模",
+      "title": "存量博弈成唯一高增长赛道",
+      "insight": "前10强市占率59.38%，换牌改造+67%，上半年3万家注销，RevPAR-6%",
+      "sources": ["中国饭店协会", "趋势互联", "STR"],
+      "confidence": "⭐⭐⭐⭐⭐"
+    },
+    {
+      "category": "资本逻辑",
+      "title": "华住主导首单民营酒店REITs获批",
+      "insight": "8/20华泰紫金华住安住REITs获批，联手光大安石成立安住此间地产基金",
+      "sources": ["指点网第34周", "华住公告"],
+      "confidence": "⭐⭐⭐⭐⭐"
+    },
+    {
+      "category": "AI渠道",
+      "title": "豆包成酒店预订新渠道",
+      "insight": "8/20执行约12%综合服务费，深兰科技AI改造百万间客房",
+      "sources": ["指点网第33/34周"],
+      "confidence": "⭐⭐⭐⭐"
+    },
+    {
+      "category": "头部经营",
+      "title": "华住增收不增利",
+      "insight": "Q1营收+11.1%但净利-8.6%至8.17亿，1.3万门店规模撑不起利润",
+      "sources": ["趋势互联", "界面新闻"],
+      "confidence": "⭐⭐⭐⭐"
+    },
+    {
+      "category": "外资动向",
+      "title": "洲际下调中国区复苏预期",
+      "insight": "Q2 RevPAR增速从5.7%骤降至0.8%，二线商务需求走弱是结构性趋势",
+      "sources": ["长桥证券", "21世纪经济报道"],
+      "confidence": "⭐⭐⭐⭐"
+    }
+  ],
+  "top20_groups_tracked": [
+    {"group": "锦江酒店", "rank": 2, "note": "全球第2，客房136.8万间"},
+    {"group": "华住集团", "rank": 4, "note": "全球第4↑1，REITs获批+地产基金"},
+    {"group": "首旅酒店", "rank": 9, "note": "全球第9，客房55.5万间"},
+    {"group": "格林酒店", "rank": 12, "note": "全球第12↑1"},
+    {"group": "亚朵集团", "rank": 16, "note": "全球第16↑2，见野品牌独立"},
+    {"group": "恭胜酒店", "rank": 40, "note": "全球第40↑8，上升最快"},
+    {"group": "中旅酒店", "rank": 46, "note": "首次上榜，规模收缩但整合重塑"},
+    {"group": "金陵饭店", "rank": 50, "note": "首次上榜"}
+  ],
+  "recommendations": [
+    {"priority": "P0", "content": "花园宾馆改造踩中存量改造主线，会议引用换牌+67%数据"},
+    {"priority": "P0", "content": "AHL立项材料引用豆包12%费率+深兰百万间客房，佐证9/30紧迫性"},
+    {"priority": "P1", "content": "REITs破冰→安逸350亿授信的资产证券化路径研究"},
+    {"priority": "P2", "content": "6大酒店改造聚焦RevPAR提升而非客房数扩张，警惕增收不增利"}
+  ],
+  "next_cron": "每日商业情报（20集团版）2026-08-28（周五）10:00",
+  "timestamp": "2026-08-26T10:30:00+08:00"
+}

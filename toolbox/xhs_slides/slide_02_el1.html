@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>五要素 01 产能识别</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  width: 1080px; height: 1440px;
+  background: #fff; font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+  color: #1a1a1a; display: flex; flex-direction: column; overflow: hidden;
+}
+.header {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 24px 52px 16px;
+  border-bottom: 1px solid #e8e8e8;
+}
+.logo { width: 38px; height: 38px; background: #1a1a1a; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  color: #C9A961; font-size: 18px; font-weight: 700; }
+.tag { font-size: 11px; color: #888; border: 1px solid #ddd; padding: 3px 10px; border-radius: 20px; }
+.el-badge {
+  display: inline-block; background: #1B3A6B; color: #fff;
+  font-size: 12px; padding: 4px 14px; border-radius: 20px; margin-bottom: 10px; letter-spacing: 1px;
+}
+.content { flex: 1; padding: 32px 60px; display: flex; flex-direction: column; }
+.el-title {
+  font-size: 42px; font-weight: 700; color: #1a1a1a; margin-bottom: 6px; line-height: 1.2;
+}
+.el-subtitle { font-size: 18px; color: #888; margin-bottom: 36px; }
+.guide-box {
+  border-left: 4px solid #C9A961; padding: 14px 20px;
+  background: #fafaf6; margin-bottom: 32px;
+}
+.guide-box p { font-size: 16px; color: #444; line-height: 1.7; }
+.cards { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-bottom: 28px; }
+.card {
+  border: 1px solid #e8e8e8; border-radius: 8px; padding: 20px;
+  background: #fafaf8;
+}
+.card-num {
+  font-size: 28px; font-weight: 800; color: #1B3A6B; margin-bottom: 8px;
+}
+.card-title { font-size: 18px; font-weight: 600; color: #1a1a1a; margin-bottom: 6px; }
+.card-desc { font-size: 14px; color: #666; line-height: 1.6; }
+.full-card {
+  border: 1px solid #e8e8e8; border-radius: 8px; padding: 22px 24px;
+  background: #fafaf8; margin-bottom: 28px;
+}
+.full-card .label { font-size: 13px; color: #C9A961; font-weight: 600; margin-bottom: 10px; letter-spacing: 1px; }
+.full-card .title { font-size: 20px; font-weight: 700; color: #1a1a1a; margin-bottom: 8px; }
+.full-card .desc { font-size: 15px; color: #555; line-height: 1.7; }
+.insight-row {
+  display: flex; gap: 16px; align-items: flex-start;
+}
+.insight {
+  flex: 1; background: #1B3A6B; color: #fff;
+  border-radius: 8px; padding: 18px 20px;
+}
+.insight .label { font-size: 11px; color: #C9A961; margin-bottom: 6px; letter-spacing: 1px; }
+.insight .text { font-size: 15px; line-height: 1.6; }
+.footer {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 16px 52px; border-top: 1px solid #e8e8e8;
+  font-size: 11px; color: #aaa;
+}
+</style>
+</head>
+<body>
+  <div class="header">
+    <div style="display:flex;align-items:center;gap:14px;">
+      <div class="logo">B</div>
+      <span style="font-size:13px;color:#888;">B166ER 出品</span>
+    </div>
+    <div class="tag">Hospitality / Product Design · 2026.07.20</div>
+  </div>
+
+  <div class="content">
+    <div class="el-badge">五要素 · 01</div>
+    <div class="el-title">产能识别</div>
+    <div class="el-subtitle">Location Asset Identification — 周边有什么可被"激活"的资产？</div>
+
+    <div class="guide-box">
+      <p><strong style="color:#1B3A6B">核心问题：</strong>酒店周边1公里范围内，有什么可触达、可激活的本地资源，是酒店天然独享而外来者难以复制的？</p>
+    </div>
+
+    <div class="cards">
+      <div class="card">
+        <div class="card-num">01</div>
+        <div class="card-title">交通流通优势</div>
+        <div class="card-desc">沙坪坝高铁站 + 地铁枢纽站交汇处<br>天然的高频客流入口</div>
+      </div>
+      <div class="card">
+        <div class="card-num">02</div>
+        <div class="card-title">文教大区属性</div>
+        <div class="card-desc">重庆传统文教区，高校云集<br>稳定、高频、规律性的本地客群</div>
+      </div>
+      <div class="card">
+        <div class="card-num">03</div>
+        <div class="card-title">商业步行街加持</div>
+        <div class="card-desc">三峡广场步行街<br>自然形成的生活消费聚集地</div>
+      </div>
+      <div class="card">
+        <div class="card-num">04</div>
+        <div class="card-title">多元居民结构</div>
+        <div class="card-desc">原住民 + 高校教职工 + 厂矿家属<br>+ 陪读家长（为子女上学）</div>
+      </div>
+    </div>
+
+    <div class="full-card">
+      <div class="label">KEY INSIGHT · 关键洞察</div>
+      <div class="title">不是"位置好"，是"有没有被激活"</div>
+      <div class="desc">交通枢纽带来的是过路客，文教区带来的是稳定客群。两者叠加 = 一个天然的高密度本地客户池。问题不是"有没有资源"，而是"有没有能力激活它"。</div>
+    </div>
+
+    <div class="insight-row">
+      <div class="insight">
+        <div class="label">设计原则</div>
+        <div class="text">周边客群的"持续性需求"比"一次性流量"更有价值。食堂、早餐是高频、刚需、强复购的产品入口。</div>
+      </div>
+      <div class="insight" style="background:#C9A961;">
+        <div class="label">聚焦结论</div>
+        <div class="text">早餐 = 最高频的餐饮入口<br>本地客 = 不需要客房<br>但需要早餐的持续消费群体</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <span>实战案例系列 · 社区化早餐卡 · Eric · 重庆丽苑维景</span>
+    <span>B166ER 出品</span>
+  </div>
+</body>
+</html>

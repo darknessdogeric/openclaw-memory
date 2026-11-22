@@ -1,0 +1,32 @@
+{
+  "date": "2026-08-25",
+  "entity_extractor": {
+    "new_entities": 21,
+    "new_relations": 0,
+    "entities": [
+      {"type": "Person", "name": "Eric"},
+      {"type": "Person", "name": "张实"},
+      {"type": "Person", "name": "B166ER"},
+      {"type": "Company", "name": "安逸酒店集团"},
+      {"type": "Company", "name": "四川旅游投"},
+      {"type": "Company", "name": "AHL"},
+      {"type": "Company", "name": "携程"},
+      {"type": "Company", "name": "美团"},
+      {"type": "Company", "name": "OpenAI"},
+      {"type": "Company", "name": "Anthropic"},
+      {"type": "Project", "name": "AHL"},
+      {"type": "Project", "name": "医养酒店"},
+      {"type": "Project", "name": "深度自迭代"},
+      {"type": "Project", "name": "R66监控"},
+      {"type": "Project", "name": "R60规则"},
+      {"type": "Event", "name": "霍尔木兹海峡事件"},
+      {"type": "Place", "name": "成都"},
+      {"type": "Place", "name": "重庆"},
+      {"type": "Place", "name": "四川"},
+      {"type": "Place", "name": "北京"},
+      {"type": "Tool", "name": "TrendRadar"}
+    ]
+  },
+  "projects_mentioned": ["AHL", "医养酒店", "深度自迭代", "R66监控", "R60规则"],
+  "timestamp": "2026-08-25T21:32:00+08:00"
+}

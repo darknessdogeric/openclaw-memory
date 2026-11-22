@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { width: 1080px; height: 1440px; background: #1a1f3a;
+         font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+         color: #f2ede3; overflow: hidden; }
+  .header { padding: 60px 50px 30px;
+            background: linear-gradient(135deg, #2d3561 0%, #1a1f3a 100%);
+            border-bottom: 2px solid #c9a96e; }
+  .badge { display: inline-block; padding: 8px 20px;
+           background: #c9a96e; color: #1a1f3a;
+           font-size: 22px; font-weight: 700;
+           border-radius: 24px; letter-spacing: 4px; }
+  .title { font-size: 56px; font-weight: 800; color: #f2ede3;
+           margin-top: 24px; line-height: 1.1;
+           letter-spacing: 2px; }
+  .subtitle { font-size: 24px; color: #c9a96e;
+              margin-top: 12px; letter-spacing: 6px; }
+  .meta { font-size: 18px; color: #9aa3c4; margin-top: 16px; }
+  .section { padding: 36px 50px 0; }
+  .section-title { font-size: 30px; font-weight: 700;
+                   color: #c9a96e; margin-bottom: 18px;
+                   display: flex; align-items: center; }
+  .section-title::before { content: "▍"; color: #c9a96e;
+                            font-size: 36px; margin-right: 12px; }
+  .case-card { background: rgba(45, 53, 97, 0.6);
+               padding: 24px; margin-bottom: 16px;
+               border-radius: 12px;
+               border: 1px solid rgba(201, 169, 110, 0.3); }
+  .case-title { font-size: 22px; font-weight: 700;
+                 color: #c9a96e; margin-bottom: 10px;
+                 letter-spacing: 1px; }
+  .case-text { font-size: 17px; color: #d8def0;
+                line-height: 1.6; margin-bottom: 8px; }
+  .case-text strong { color: #f2ede3; }
+  .case-tag { display: inline-block; padding: 4px 12px;
+              background: rgba(201, 169, 110, 0.2);
+              color: #c9a96e; font-size: 14px;
+              border-radius: 8px; margin-right: 6px;
+              margin-top: 6px; }
+  .footer { padding: 28px 50px;
+            background: rgba(26, 31, 58, 0.8);
+            border-top: 1px solid rgba(201, 169, 110, 0.3);
+            margin-top: 24px;
+            position: absolute; bottom: 0; width: 100%; }
+  .footer-line { font-size: 14px; color: #9aa3c4;
+                 text-align: center; letter-spacing: 2px; }
+  .footer-line strong { color: #c9a96e; }
+</style>
+</head>
+<body>
+  <div class="header">
+    <span class="badge">典型案例 · 收益管理</span>
+    <div class="title">八月项目复盘</div>
+    <div class="subtitle">乐山调研 · 古尔沟会议 · 锦江合资</div>
+    <div class="meta">3 个典型案例 + 收益管理要点</div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">案例 1 · 乐山锦江嘉州宾馆调研</div>
+    <div class="case-card">
+      <div class="case-title">乐山嘉州宾馆 · 150 间客房 · 8/11 现场踏勘</div>
+      <div class="case-text"><strong>核心痛点</strong>:餐饮仅占 20% · 数字化严重滞后 · 新媒体预算仅 1.1 万/月</div>
+      <div class="case-text"><strong>渠道结构</strong>:协议单位占 70% · OTA 几乎放弃 · 议价能力弱</div>
+      <div class="case-text"><strong>收益管理</strong>:协议占比过高,价格弹性丧失,7 月降价 12% 反降 12% Occ</div>
+      <span class="case-tag">#品牌矩阵</span>
+      <span class="case-tag">#数字化</span>
+      <span class="case-tag">#渠道再平衡</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">案例 2 · 古尔沟会议 v8.0 + 高参峰会</div>
+    <div class="case-card">
+      <div class="case-title">古尔沟神峰温泉 · 资不抵债 181.74% · v8.0 完整交付</div>
+      <div class="case-text"><strong>v8.0 升级</strong>:字数 +40%(35K→49K)· 川渝温泉特定基准替代全国通用</div>
+      <div class="case-text"><strong>财务模型</strong>:静态 → 动态 4 场景 · 风险矩阵 8 项 → 11 项</div>
+      <div class="case-text"><strong>输出</strong>:9/1 高参议会发言稿 v3.0(10,299 字)· 邹士勇董事长 10 月培训班素材</div>
+      <span class="case-tag">#古尔沟</span>
+      <span class="case-tag">#资不抵债</span>
+      <span class="case-tag">#会议成果</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">案例 3 · 锦江合资轻资产公司</div>
+    <div class="case-card">
+      <div class="case-title">安逸 + 锦江国际 · 股权 51:49 · 8/27 过会</div>
+      <div class="case-text"><strong>合作模式</strong>:安逸出资源(省内酒店 + 客户)· 锦江出品牌 + 标准化</div>
+      <div class="case-text"><strong>决策机制</strong>:重大事项双方一致同意 · 收益按股权分配</div>
+      <div class="case-text"><strong>协同价值</strong>:整合安逸"重资产+区域资源"与锦江"轻资产+品牌标准"</div>
+      <span class="case-tag">#合资公司</span>
+      <span class="case-tag">#轻资产</span>
+      <span class="case-tag">#战略协同</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">下月计划 · 9 月关键节点</div>
+    <div class="case-card">
+      <div class="case-text"><strong>9/3</strong> 国堰宾馆文化主题标杆研究 · 古尔沟 v8.0 评审</div>
+      <div class="case-text"><strong>9/5</strong> 中旅酒店十五五规划对标分析</div>
+      <div class="case-text"><strong>9/30</strong> AHL 试点窗口收尾(集团内立项材料)</div>
+      <div class="case-text"><strong>9 月底</strong> AnYi 到岗 60 天评估</div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="footer-line">数据来源:8/11 调研会议纪要 · 古尔沟 v8.0 报告 · 锦江合资股东协议</div>
+    <div class="footer-line"><strong>3 个案例 · 4 个 9 月关键节点</strong> · 完整月报 memory/2026-08-月报.md</div>
+  </div>
+</body>
+</html>

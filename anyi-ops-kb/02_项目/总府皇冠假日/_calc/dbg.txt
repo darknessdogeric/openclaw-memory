@@ -1,0 +1,38 @@
+Y1 rev=0.0 rooms=0 fnb=0 banq=0 gop=0.0 rate=0 open=0 closed=12
+Y2 rev=5092.3 rooms=0 fnb=0 banq=0 gop=2336.6 rate=0.4588 open=6 closed=6
+Y3 rev=8942.4 rooms=0 fnb=0 banq=0 gop=4136.7 rate=0.4626 open=12 closed=0
+Y4 rev=7189.2 rooms=0 fnb=0 banq=0 gop=3326.0 rate=0.4626 open=12 closed=0
+Y5 rev=6443.7 rooms=0 fnb=0 banq=0 gop=2978.7 rate=0.4623 open=12 closed=0
+Y6 rev=6443.7 rooms=0 fnb=0 banq=0 gop=2978.7 rate=0.4623 open=12 closed=0
+--- 单月 ---
+m=1 停业 mon=12 adr=0.0 occ=0.0 sold=0 rev=0.0 gop=0.0 rate=0
+m=18 停业 mon=5 adr=0.0 occ=0.0 sold=0 rev=0.0 gop=0.0 rate=0
+m=19 运营 mon=7 adr=866.5 occ=0.721 sold=5873 rev=800.7 gop=371.7 rate=0.464
+m=24 运营 mon=12 adr=877.5 occ=0.59 sold=4807 rev=686.0 gop=312.9 rate=0.456
+m=25 运营 mon=1 adr=933.7 occ=0.557 sold=4539 rev=677.0 gop=315.3 rate=0.466
+m=30 运营 mon=6 adr=810.1 occ=0.641 sold=5224 rev=713.1 gop=319.0 rate=0.447
+m=31 运营 mon=7 adr=842.8 occ=0.74 sold=6030 rev=799.6 gop=371.1 rate=0.464
+--- 直接调 month_revenue ---
+  mon = 6
+  adr = 869.246
+  occ = 0.688
+  rooms_sold = 5605.069
+  rooms_rev = 487.218
+  fnb = 240.29
+  banq = 54.451
+  other = 23.386
+  misc = 15.591
+  total = 820.937
+  gop = 367.264
+  gop_rate = 0.447
+  fee_base = 0.0
+  fee_mkt = 9.744
+  fee_loy = 9.744
+  fee_res = 2.436
+  fee_room = 24.361
+  fee_ffe = 24.628
+  fee_fixed = 140.0
+  fee_inc = 0.0
+  fee_total = 210.914
+  owner_gop = 156.35
+mix={'rooms': 0.625, 'fnb': 0.25, 'banq': 0.075, 'other': 0.03, 'misc': 0.02} dept_gop={'rooms': 0.58, 'fnb': 0.19, 'banq': 0.28, 'other': 0.45, 'misc': 0.85}

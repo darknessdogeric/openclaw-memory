@@ -1,0 +1,96 @@
+{
+  "date": "2026-10-02",
+  "day_of_week": "Friday",
+  "cron_id": "0eced1e9-8729-47d8-b8d6-34eff13ed780",
+  "cron_name": "Entity Extractor (每日21:30)",
+  "r_rule": "R60-11",
+  "scheduled_time": "2026-10-02T21:30:00+08:00",
+  "actual_trigger": "2026-10-02T21:32:00+08:00",
+  "trigger_offset_minutes": 2,
+  "status": "success",
+  "extraction": {
+    "mode": "today",
+    "days_scanned": 1,
+    "files_scanned": ["2026-10-02.md"],
+    "unique_new_entities": 6,
+    "unique_new_relations": 0,
+    "new_entity_types": {
+      "Person": 2,
+      "Company": 1,
+      "Place": 2,
+      "Tool": 1,
+      "Project": 0,
+      "Event": 0
+    },
+    "new_entity_names": [
+      "Eric",
+      "B166ER",
+      "安逸酒店集团",
+      "四川",
+      "北京",
+      "Playwright"
+    ],
+    "new_entity_ids": [
+      "pers_0387",
+      "pers_0374",
+      "comp_0610",
+      "plac_0264",
+      "plac_0411",
+      "tool_0067"
+    ]
+  },
+  "outputs": {
+    "graph_jsonl": {
+      "path": "memory/ontology/graph.jsonl",
+      "updated": true,
+      "today_entries": 6,
+      "size_bytes_after": 110768
+    },
+    "relations_trend": {
+      "path": "memory/ontology/relations-trend.md",
+      "updated": true,
+      "total_relations_today": 0,
+      "cumulative_relations": 16
+    },
+    "dashboard": {
+      "path": "memory/eric-4-projects-dashboard.md",
+      "updated": true,
+      "projects_mentioned_today": 0,
+      "note": "今日 memory 为工具诊断/修复, 未提及 4 项目名称 (AHL/1244战略/医养酒店/深度自迭代)"
+    },
+    "eval_json": {
+      "path": "eval/2026-10-02-entity-extractor.json",
+      "updated": true
+    },
+    "entities_markdown": {
+      "path": "memory/tmp/entities-2026-10-02.md",
+      "updated": true
+    },
+    "obsidian_push": {
+      "attempted": true,
+      "tool": "toolbox/cron_to_obsidian.py",
+      "content_file": "memory/tmp/entities-2026-10-02.md",
+      "output_file": "obsidian-vault/50-外部接入/cron-outputs/2026-10/21-33-Entity-Extractor-实体抽取-1.md",
+      "status": "success",
+      "pushed_at": "2026-10-02T21:33:54",
+      "appended_to_daily": false
+    }
+  },
+  "r60_11_compliance": {
+    "step_1_graph_jsonl": "done",
+    "step_2_relations_trend": "done",
+    "step_3_dashboard": "done",
+    "step_4_eval_json": "done",
+    "step_5_obsidian_push": "done"
+  },
+  "notes": [
+    "今日 6 实体: 2 Person (Eric/B166ER) + 1 Company (安逸酒店集团) + 2 Place (四川/北京) + 1 Tool (Playwright)",
+    "0 新增关系: 今日 memory 内容以工具诊断/修复/知识库梳理为主, 未触发关系模式",
+    "memory/2026-10-02.md 关键主题: 07:40 工具诊断 → 07:51 .NET SDK 8 安装 → 12:04 OCR/视觉修复 → 12:35 安逸工作内容深度梳理 (KB 索引)",
+    "高频持续实体: Eric / B166ER / 安逸酒店集团 → 关系频次稳定",
+    "push_queue 工具不存在 → 降级到 cron_to_obsidian.py 通道 (success)",
+    "Type 分布: Person 2 + Company 1 + Place 2 + Tool 1"
+  ],
+  "next_run": "2026-10-03T21:30:00+08:00",
+  "generated_by": "B166ER entity_extractor.py + R60-11"
+}

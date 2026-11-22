@@ -2,6 +2,7 @@
 name: cost-governor
 user-invocable: true
 metadata: {"openclaw":{"emoji":"💰","requires":{"bins":["node"]},"os":["darwin","linux","win32"]}}
+description: LLM API 成本实时监控与预算熔断：跨 OpenAI/Anthropic/Google 追踪花费，设预算上限与 circuit breaker，防止夜间烧穿配额。触发：API 成本控制、token 预算、烧钱防护。
 ---
 
 # Cost Governor - OpenClaw Skill

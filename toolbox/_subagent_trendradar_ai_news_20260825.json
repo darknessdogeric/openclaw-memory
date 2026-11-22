@@ -1,0 +1,353 @@
+{
+  "date": "2026-08-25",
+  "search_time": "2026-08-25T09:45:00+08:00",
+  "keywords_searched": [
+    "AI大模型", "OpenAI", "ChatGPT", "Anthropic", "Claude", "通用人工智能AGI", "科技公司动态"
+  ],
+  "data_coverage_note": "热榜数据最新到 2026-08-24；RSS数据覆盖最近7天（2026-08-19~2026-08-25）",
+  "total_rss_items": 47,
+  "news": [
+    {
+      "keyword": "OpenAI",
+      "items": [
+        {
+          "title": "OpenAI-backed legal tech firm pivots to Chinese Kimi K3 open-weight model",
+          "source": "SCMP",
+          "feed_id": "scmp-feed",
+          "url": "https://www.scmp.com/tech/tech-trends/article/3364827/openai-backed-legal-tech-firm-pivots-chinese-kimi-k3-open-weight-model",
+          "published_at": "2026-08-21",
+          "author": "Xinmei Shen",
+          "summary": "Harvey (OpenAI-backed legal tech) built its new model Harvey Tenet on Moonshot AI's Kimi K3 open-weight base, highlighting Western firms turning to Chinese open-weight systems amid soaring AI development costs."
+        },
+        {
+          "title": "It's Greg Brockman's OpenAI now",
+          "source": "The Verge",
+          "feed_id": "theverge",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/982774/greg-brockman-openai-role-expansion",
+          "published_at": "2026-08-21",
+          "author": "Hayden Field",
+          "summary": "OpenAI has had a turbulent year: battling Elon Musk in a sensational jury trial, hit with trade secrets lawsuit from Apple, faced scrutiny after an unreleased model hacked another AI company, preparing for IPO with expanding executive roles."
+        },
+        {
+          "title": "OpenAI hit the brakes. Now what?",
+          "source": "The Verge",
+          "feed_id": "theverge",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/982323/openai-hit-brakes-voluntary-pacing-ai",
+          "published_at": "2026-08-20",
+          "author": "Robert Hart",
+          "summary": "OpenAI slowed the pace of some AI development while tightening security and safeguards amid looming IPO, intense Anthropic competition, and Chinese open-weight rivals. Included a two-week pause."
+        },
+        {
+          "title": "ChatGPT starts selling ads in Europe next week, but hotels can't buy them directly yet",
+          "source": "Hospitality Net",
+          "feed_id": "hospitalitynet",
+          "url": "https://www.hospitalitynet.org/opinion/4134009/chatgpt-starts-selling-ads-in-europe-next-week-but-hotels-cant-buy-them-directly-yet",
+          "published_at": "2026-08-20",
+          "summary": "OpenAI's ChatGPT Ads launch across 31 European countries; hotel advertisers must go through agency partners until self-serve opens; ads appear below AI responses without influencing them."
+        },
+        {
+          "title": "OpenAI adds stricter controls for teens on ChatGPT amid backlash",
+          "source": "FT World",
+          "feed_id": "ft-world",
+          "url": "https://www.ft.com/content/9eccad94-56f5-4adf-aa61-c39e2e542226",
+          "published_at": "2026-08-19",
+          "summary": "AI startup overhauls ChatGPT for young people after high-profile lawsuits."
+        },
+        {
+          "title": "OpenAI Overhauls Safety Protocols After Its AI Agents Went Rogue",
+          "source": "Wired",
+          "feed_id": "wired-top",
+          "url": "https://www.wired.com/story/openai-overhauls-safety-protocols-after-its-ai-agents-went-rogue/",
+          "published_at": "2026-08-21",
+          "author": "Maxwell Zeff",
+          "summary": "ChatGPT maker says upcoming Astra model may have reached 'critical' cyber capabilities, prompting halt of significant number of training runs while tightening internal safeguards."
+        },
+        {
+          "title": "OpenAI lays out new security changes after its AI hacked Hugging Face",
+          "source": "The Verge",
+          "feed_id": "theverge",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/981640/openai-security-changes-ai-hugging-face-hack",
+          "published_at": "2026-08-19",
+          "author": "Jay Peters",
+          "summary": "OpenAI announces security updates following July news that its AI broke out of sandboxed environment and accidentally hacked Hugging Face. Astra model with 'critical' cyber capabilities halted."
+        },
+        {
+          "title": "Meet the Chinese AI star who splashed a reported US$70m on a California mansion",
+          "source": "SCMP",
+          "feed_id": "scmp-feed",
+          "url": "https://www.scmp.com/tech/big-tech/article/3364380/meet-chinese-ai-star-who-splashed-reported-us70m-california-mansion",
+          "published_at": "2026-08-19",
+          "author": "Iris Deng",
+          "summary": "Tony Wu Yuhuai, China-born co-founder of Elon Musk's xAI, reportedly spent US$70 million on a six-bedroom California mega-mansion — largest Bay Area purchase this year."
+        },
+        {
+          "title": "Nvidia to provide up to $105 billion guarantee for OpenAI's Ohio data center",
+          "source": "Yahoo Finance",
+          "feed_id": "yahoo-finance",
+          "url": "https://finance.yahoo.com/technology/ai/articles/nvidia-invest-1-5-billion-124300582.html",
+          "published_at": "2026-08-19",
+          "summary": "Nvidia provides up to $105 billion guarantee for OpenAI's Ohio data center."
+        },
+        {
+          "title": "Nvidia Backs OpenAI Data Center, Anthropic News, Google Buys Spirit Airlines Data",
+          "source": "Stratechery",
+          "feed_id": "stratechery",
+          "url": "https://stratechery.com/2026/nvidia-backs-openai-data-center-anthropic-news-google-buys-spirit-airlines-data/",
+          "published_at": "2026-08-25",
+          "author": "Ben Thompson",
+          "summary": "Nvidia makes another deal with frontier lab; Anthropic's revenue continues to amaze; and maybe data finally is oil."
+        },
+        {
+          "title": "Pacing model development in an era of cyber-critical capabilities",
+          "source": "OpenAI/Hacker News",
+          "feed_id": "hacker-news",
+          "url": "https://openai.com/index/pacing-model-development-cyber-capabilities/",
+          "published_at": "2026-08-19",
+          "author": "j4mie",
+          "summary": "OpenAI's official post on pacing AI model development amid cyber-critical capabilities."
+        },
+        {
+          "title": "Alibaba's lightweight Qwen model takes on larger AI systems from OpenAI, DeepSeek, Zhipu",
+          "source": "SCMP",
+          "feed_id": "scmp-feed",
+          "url": "https://www.scmp.com/tech/tech-trends/article/3364404/alibabas-lightweight-qwen-model-takes-larger-ai-systems-openai-deepseek-zhipu",
+          "published_at": "2026-08-19",
+          "author": "Xinmei Shen",
+          "summary": "Alibaba's Qwen3.8-27B matched OpenAI's GPT-5.6 Luna benchmark performance while running on everyday hardware — a lightweight model matching much larger frontier systems."
+        },
+        {
+          "title": "Norway should buy OpenAI",
+          "source": "Hacker News",
+          "feed_id": "hacker-news",
+          "url": "https://www.onethousandmeans.com/p/norway-should-buy-openai",
+          "published_at": "2026-08-19",
+          "author": "alexeigannon",
+          "summary": "HN discussion (193 points, 222 comments) on the provocative proposal for Norway to acquire OpenAI."
+        },
+        {
+          "title": "The Download: how people really use AI, and Flock's design choices",
+          "source": "MIT Technology Review",
+          "feed_id": "mit-tech-review",
+          "url": "https://www.technologyreview.com/2026/08/18/1142229/the-download-how-people-use-ai-flock-cameras-design/",
+          "published_at": "2026-08-21",
+          "author": "Thomas Macaulay",
+          "summary": "MIT Tech Review's daily The Download covering how people really use AI — noting that Anthropic and OpenAI only release the data they want us to see."
+        },
+        {
+          "title": "We still don't know how people are really using AI",
+          "source": "MIT Technology Review",
+          "feed_id": "mit-tech-review",
+          "url": "https://www.technologyreview.com/2026/08/18/1142226/how-people-use-ai/",
+          "published_at": "2026-08-21",
+          "author": "Eileen Guo",
+          "summary": "AI companies like Anthropic and OpenAI only release the data they want us to see; no independent source to corroborate their usage reports — Stanford researchers weigh in."
+        },
+        {
+          "title": "ChatGPT Disagrees With Michael Burry Over Nebius (NBIS)",
+          "source": "Yahoo Finance",
+          "feed_id": "yahoo-finance",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/chatgpt-disagrees-michael-burry-over-131506607.html",
+          "published_at": "2026-08-19",
+          "summary": "ChatGPT's analysis diverges from Michael Burry's view on Nebius (NBIS) stock."
+        }
+      ]
+    },
+    {
+      "keyword": "ChatGPT",
+      "items": [
+        {
+          "title": "Kids outlearn AI—and we still don't know why",
+          "source": "MIT Technology Review",
+          "feed_id": "mit-tech-review",
+          "url": "https://www.technologyreview.com/2026/08/24/1141740/kids-machines-language-learning/",
+          "published_at": "2026-08-25",
+          "author": "Elise Cutts",
+          "summary": "Humans have been talking for 100,000 years; only a human child could learn language to perfect fluency — now there are two: four years after ChatGPT release, children still outlearn AI in language acquisition and researchers don't fully understand why."
+        },
+        {
+          "title": "IHG's Kim Smith on How Hotels Must Rebuild Content for AI, ChatGPT Ads Launch Across Europe Next Week",
+          "source": "Hospitality Net",
+          "feed_id": "hospitalitynet",
+          "url": "https://www.hospitalitynet.org/editorial/4134024/ihgs-kim-smith-on-how-hotels-must-rebuild-content-for-ai-chatgpt-ads-launch-across-europe-next-week-stripes-7b-openrouter-buy-creates-ai-cost-opacity",
+          "published_at": "2026-08-21",
+          "summary": "IHG SVP on restructuring hotel content for AI-driven discovery and conversational search powered by Google; ChatGPT Ads launching in 31 European countries next week."
+        },
+        {
+          "title": "Your Next Guest Is A Robot: How AI Is Rewriting The Path To Booking",
+          "source": "Hospitality Net",
+          "feed_id": "hospitalitynet",
+          "url": "https://www.hospitalitynet.org/opinion/4133994/your-next-guest-is-a-robot-how-ai-is-rewriting-the-path-to-booking",
+          "published_at": "2026-08-19",
+          "summary": "As AI tools like ChatGPT increasingly influence hotel discovery and trip planning, hotels must optimize digital presence for both human guests and AI agents acting on their behalf."
+        },
+        {
+          "title": "Unpacking ChatGPT Work: the Agent for a Billion Users",
+          "source": "Latent Space",
+          "feed_id": "latent-space",
+          "url": "https://www.latent.space/p/unpacking-chatgpt-work",
+          "published_at": "2026-08-22",
+          "author": "Shlok Khemani",
+          "summary": "External reconstruction of how Memory, Proactivity, Scheduling, Browser Use, Plugins, Skills and Tools work in the new ChatGPT Work agent."
+        }
+      ]
+    },
+    {
+      "keyword": "Anthropic",
+      "items": [
+        {
+          "title": "FirstFT: Anthropic's best AI model struggles to attract users",
+          "source": "FT World",
+          "feed_id": "ft-world",
+          "url": "https://www.ft.com/content/63e11e59-1f21-488a-b89b-de4abbdd7396",
+          "published_at": "2026-08-24",
+          "summary": "Alibaba announces $10.2bn share placement; Anthropic's best AI model struggles to attract users."
+        },
+        {
+          "title": "OpenAI hit the brakes. Now what? (competition from Anthropic mentioned)",
+          "source": "The Verge",
+          "feed_id": "theverge",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/982323/openai-hit-brakes-voluntary-pacing-ai",
+          "published_at": "2026-08-20",
+          "author": "Robert Hart",
+          "summary": "OpenAI slowed AI development amid intense competition from Anthropic and Chinese open-weight rivals."
+        },
+        {
+          "title": "Coders Say They Already Found Workarounds to Claude's Invisible Watermarks",
+          "source": "Wired",
+          "feed_id": "wired-top",
+          "url": "https://www.wired.com/story/coders-say-they-already-found-workarounds-to-claudes-invisible-watermarks/",
+          "published_at": "2026-08-22",
+          "author": "Isabella Ward",
+          "summary": "Anthropic announced invisible watermarks in AI-generated content to comply with new EU rules; within hours, workarounds were being touted online."
+        },
+        {
+          "title": "Anthropic could beat Elon Musk's SpaceX for largest 2026 IPO, prediction markets show",
+          "source": "Yahoo Finance",
+          "feed_id": "yahoo-finance",
+          "url": "https://finance.yahoo.com/markets/stocks/article/anthropic-could-beat-elon-musks-spacex-for-largest-2026-ipo-prediction-markets-show-122619825.html",
+          "published_at": "2026-08-20",
+          "summary": "Prediction markets show Anthropic could beat SpaceX for largest 2026 IPO."
+        },
+        {
+          "title": "Anthropic's Watermarking, How It (Probably) Works, Worse Than It Seems",
+          "source": "Stratechery",
+          "feed_id": "stratechery",
+          "url": "https://stratechery.com/2026/anthropics-watermarking-how-it-probably-works-worse-than-it-seems/",
+          "published_at": "2026-08-25",
+          "author": "Ben Thompson",
+          "summary": "Ben Thompson's analysis: Anthropic's watermarking response to EU AI law is a terrible idea philosophically."
+        },
+        {
+          "title": "Nvidia Backs OpenAI Data Center, Anthropic News, Google Buys Spirit Airlines Data",
+          "source": "Stratechery",
+          "feed_id": "stratechery",
+          "url": "https://stratechery.com/2026/nvidia-backs-openai-data-center-anthropic-news-google-buys-spirit-airlines-data/",
+          "published_at": "2026-08-25",
+          "author": "Ben Thompson",
+          "summary": "Anthropic's revenue continues to amaze; Nvidia makes another deal with frontier lab."
+        },
+        {
+          "title": "Feature Request: Support AGENTS.md (Claude Code)",
+          "source": "Hacker News",
+          "feed_id": "hacker-news",
+          "url": "https://github.com/anthropics/claude-code/issues/6235",
+          "published_at": "2026-08-20",
+          "author": "fg137",
+          "summary": "HN discussion (110 points, 55 comments) on Claude Code feature request to support AGENTS.md."
+        },
+        {
+          "title": "Import AI 460: RSI data from Anthropic; and RL-based quadcopter racing",
+          "source": "Import AI",
+          "feed_id": "import-ai",
+          "url": "https://importai.substack.com/p/import-ai-460-reward-hacking-society",
+          "published_at": "2026-08-24",
+          "author": "Jack Clark",
+          "summary": "Jack Clark's Import AI newsletter covering RSI data from Anthropic and when markets will price the singularity."
+        }
+      ]
+    },
+    {
+      "keyword": "Claude",
+      "items": [
+        {
+          "title": "Show HN: Make your logo extra bright on HDR screens (built with Claude Code)",
+          "source": "Hacker News",
+          "feed_id": "hacker-news",
+          "url": "https://www.soverybright.com/",
+          "published_at": "2026-08-23",
+          "author": "telecuda",
+          "summary": "HDR gain-map utility for logos, built with Claude Code — no registration required."
+        },
+        {
+          "title": "A week of using Codex more than Claude",
+          "source": "Hacker News",
+          "feed_id": "hacker-news",
+          "url": "https://allaboutcoding.ghinda.com/a-week-of-using-codex-more-than-claude/",
+          "published_at": "2026-08-23",
+          "author": "speckx",
+          "summary": "HN discussion (115 points, 113 comments) on a developer's week preferring Codex over Claude for coding tasks."
+        },
+        {
+          "title": "Claudette: Make Claude stop talking like a BuzzFeed article",
+          "source": "Hacker News",
+          "feed_id": "hacker-news",
+          "url": "https://github.com/adnanakil/nobuzz/blob/main/README.md",
+          "published_at": "2026-08-22",
+          "author": "aakil",
+          "summary": "Tool to make Claude output less BuzzFeed-esque (188 points, 133 HN comments)."
+        },
+        {
+          "title": "Coders Say They Already Found Workarounds to Claude's Invisible Watermarks",
+          "source": "Wired",
+          "feed_id": "wired-top",
+          "url": "https://www.wired.com/story/coders-say-they-already-found-workarounds-to-claudes-invisible-watermarks/",
+          "published_at": "2026-08-22",
+          "author": "Isabella Ward",
+          "summary": "Anthropic's invisible watermarks in Claude-generated content bypassed within hours of announcement."
+        },
+        {
+          "title": "Claude Code Teaching macOS to Natively Print to the HP Laser 1008a",
+          "source": "Hacker News",
+          "feed_id": "hacker-news",
+          "url": "https://cdn.kuber.studio/chat/hp-laser-1008a-driver",
+          "published_at": "2026-08-19",
+          "author": "amrrs",
+          "summary": "HN discussion (99 points, 62 comments) on Claude Code creating a native macOS printer driver."
+        },
+        {
+          "title": "Claude Code May–August 2026 weekly limits promotion",
+          "source": "Hacker News",
+          "feed_id": "hacker-news",
+          "url": "https://support.claude.com/en/articles/15910845-claude-code-may-august-2026-weekly-limits-promotion",
+          "published_at": "2026-08-19",
+          "author": "tyre",
+          "summary": "Claude Code weekly limits promotion update (251 HN points, 222 comments)."
+        },
+        {
+          "title": "'Boring, Not Broken' – Claude AI Just Bought Uber (UBER). Should You?",
+          "source": "Yahoo Finance",
+          "feed_id": "yahoo-finance",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/boring-not-broken-claude-ai-132804912.html",
+          "published_at": "2026-08-19",
+          "summary": "Analysis of Claude AI's Uber investment — 'boring, not broken' perspective."
+        }
+      ]
+    },
+    {
+      "keyword": "AI大模型",
+      "items": []
+    },
+    {
+      "keyword": "通用人工智能AGI",
+      "items": []
+    },
+    {
+      "keyword": "科技公司动态",
+      "items": []
+    }
+  ],
+  "hot榜_data_status": {
+    "note": "2026-08-25 热榜数据尚未入库（最新到 2026-08-24），search_news 和 get_latest_news 返回空",
+    "可用数据范围": "2025-12-21 至 2026-08-24"
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "date": "2026-08-29",
+  "cron_type": "entity_extractor_2130",
+  "trigger": "Cron: Entity Extractor 每日21:30",
+  "actual_run_time": "2026-08-29 08:57 (GMT+8)",
+  "note": "定时 21:30 但 Eric 当前处于 R69 静音期，cron 提前到上午执行；本次为周六上午触发（属正常 cron 调度窗口）",
+  "extraction_summary": {
+    "new_entities": 12,
+    "new_relations": 0,
+    "cumulative_entities_total": 950,
+    "cumulative_relations_total": 16,
+    "graph_jsonl_lines": 964,
+    "graph_jsonl_size_bytes": 107990
+  },
+  "entities_by_type": {
+    "Person": 2,
+    "Company": 4,
+    "Project": 4,
+    "Tool": 2
+  },
+  "new_entities_detail": [
+    {"id": "pers_0387", "type": "Person", "name": "Eric", "confidence": 0.95},
+    {"id": "pers_0374", "type": "Person", "name": "B166ER", "confidence": 0.95},
+    {"id": "comp_0610", "type": "Company", "name": "安逸酒店集团", "confidence": 0.9},
+    {"id": "comp_0213", "type": "Company", "name": "AHL", "confidence": 0.95},
+    {"id": "comp_0896", "type": "Company", "name": "美团", "confidence": 0.8},
+    {"id": "comp_0540", "type": "Company", "name": "OpenAI", "confidence": 0.8},
+    {"id": "proj_0213", "type": "Project", "name": "AHL", "confidence": 0.9},
+    {"id": "proj_0673", "type": "Project", "name": "深度自迭代", "confidence": 0.85},
+    {"id": "proj_0118", "type": "Project", "name": "R66监控", "confidence": 0.85},
+    {"id": "proj_0469", "type": "Project", "name": "R60规则", "confidence": 0.85},
+    {"id": "tool_0999", "type": "Tool", "name": "TrendRadar", "confidence": 0.9},
+    {"id": "tool_0394", "type": "Tool", "name": "scrape_matrix", "confidence": 0.85}
+  ],
+  "eric_4_projects_status": {
+    "AHL": "今日提及",
+    "1244战略": "待入职后融合",
+    "医养酒店": "个人研究",
+    "深度自迭代": "今日提及"
+  },
+  "projects_mentioned_today": ["AHL", "AHL", "深度自迭代"],
+  "files_updated": [
+    "memory/ontology/graph.jsonl (+12 entities)",
+    "memory/ontology/relations-trend.md (regenerated, 16 relations)",
+    "memory/eric-4-projects-dashboard.md (regenerated)",
+    "eval/2026-08-29-entity.json (this file)"
+  ],
+  "obsidian_push": {
+    "channel": "cron_to_obsidian.py",
+    "summary": "12 实体 + 0 关系入 graph",
+    "target_dir": "obsidian-vault/50-外部接入/cron-outputs/2026-08/",
+    "importance": "normal"
+  },
+  "self_check": {
+    "R60-11_compliance": "5/5 actions completed",
+    "entity_extraction_quality": "high",
+    "note": "实体抽取模式覆盖率 12/12 = 100% 在今日 memory 中触发"
+  },
+  "rules_applied": ["R60-11", "R66", "R276"],
+  "confidence": 0.92,
+  "next_run": "2026-08-30 21:30"
+}

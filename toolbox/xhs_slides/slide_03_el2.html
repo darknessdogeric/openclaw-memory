@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>五要素 02 客群数学区隔</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  width: 1080px; height: 1440px;
+  background: #fff; font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+  color: #1a1a1a; display: flex; flex-direction: column; overflow: hidden;
+}
+.header {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 24px 52px 16px;
+  border-bottom: 1px solid #e8e8e8;
+}
+.logo { width: 38px; height: 38px; background: #1a1a1a; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  color: #C9A961; font-size: 18px; font-weight: 700; }
+.tag { font-size: 11px; color: #888; border: 1px solid #ddd; padding: 3px 10px; border-radius: 20px; }
+.content { flex: 1; padding: 28px 60px; display: flex; flex-direction: column; }
+.el-badge { display: inline-block; background: #1B3A6B; color: #fff;
+  font-size: 12px; padding: 4px 14px; border-radius: 20px; margin-bottom: 10px; letter-spacing: 1px; }
+.el-title { font-size: 42px; font-weight: 700; color: #1a1a1a; margin-bottom: 6px; line-height: 1.2; }
+.el-subtitle { font-size: 18px; color: #888; margin-bottom: 28px; }
+.guide-box { border-left: 4px solid #C9A961; padding: 14px 20px;
+  background: #fafaf6; margin-bottom: 24px; }
+.guide-box p { font-size: 15px; color: #444; line-height: 1.7; }
+.three-col { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; margin-bottom: 20px; }
+.col { border: 1px solid #e8e8e8; border-radius: 8px; padding: 18px; background: #fafaf8; }
+.col-head { font-size: 13px; color: #888; margin-bottom: 10px; font-weight: 600; letter-spacing: 1px; }
+.col-item { margin-bottom: 10px; padding-bottom: 10px; border-bottom: 1px solid #f0f0f0; }
+.col-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+.item-name { font-size: 15px; font-weight: 600; color: #1a1a1a; margin-bottom: 4px; }
+.item-val { font-size: 13px; color: #666; }
+.highlight-item { background: #1B3A6B !important; color: #fff; }
+.highlight-item .col-head { color: #C9A961; }
+.highlight-item .item-name { color: #fff; }
+.highlight-item .item-val { color: #ddd; }
+.formula-box {
+  background: #f8f8f6; border: 2px solid #1B3A6B;
+  border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;
+}
+.formula-title { font-size: 13px; color: #1B3A6B; font-weight: 700; margin-bottom: 10px; letter-spacing: 1px; }
+.formula { font-size: 20px; font-weight: 700; color: #1a1a1a; margin-bottom: 10px; }
+.formula-note { font-size: 13px; color: #666; line-height: 1.6; }
+.conclusion-box {
+  background: #1B3A6B; border-radius: 8px; padding: 20px 24px;
+  display: flex; gap: 24px; align-items: center;
+}
+.conclusion-box .label { font-size: 11px; color: #C9A961; letter-spacing: 1px; margin-bottom: 6px; }
+.conclusion-box .text { font-size: 17px; color: #fff; line-height: 1.6; }
+.conclusion-box .big { font-size: 32px; font-weight: 800; color: #C9A961; white-space: nowrap; }
+.footer { display: flex; justify-content: space-between; align-items: center;
+  padding: 16px 52px; border-top: 1px solid #e8e8e8; font-size: 11px; color: #aaa; }
+</style>
+</head>
+<body>
+  <div class="header">
+    <div style="display:flex;align-items:center;gap:14px;">
+      <div class="logo">B</div><span style="font-size:13px;color:#888;">B166ER 出品</span>
+    </div>
+    <div class="tag">Hospitality / Product Design · 2026.07.20</div>
+  </div>
+
+  <div class="content">
+    <div class="el-badge">五要素 · 02</div>
+    <div class="el-title">客群数学区隔</div>
+    <div class="el-subtitle">Customer Segmentation — 谁应该买？谁不应该买？</div>
+
+    <div class="guide-box">
+      <p><strong style="color:#1B3A6B">核心问题：</strong>设计的这套产品，会不会抢走原本不属于我们的客群？会不会侵蚀现有的客房收入和含早客人的体验？</p>
+    </div>
+
+    <div class="three-col">
+      <div class="col">
+        <div class="col-head">酒店主力客源</div>
+        <div class="col-item">
+          <div class="item-name">散客（旅游/商务）</div>
+          <div class="item-val">平均停留 1.8 天</div>
+        </div>
+        <div class="col-item">
+          <div class="item-name">会议/团队客人</div>
+          <div class="item-val">客房均含早餐</div>
+        </div>
+      </div>
+      <div class="col highlight-item">
+        <div class="col-head" style="color:#C9A961;">本地目标客群</div>
+        <div class="col-item">
+          <div class="item-name">高校教职工</div>
+          <div class="item-val">长期稳定，高频需求</div>
+        </div>
+        <div class="col-item">
+          <div class="item-name">陪读家长/域外租客</div>
+          <div class="item-val">停留周期长，餐饮刚需</div>
+        </div>
+        <div class="col-item">
+          <div class="item-name">厂矿家属/退休居民</div>
+          <div class="item-val">规律消费，复购率高</div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="col-head">关键区分指标</div>
+        <div class="col-item">
+          <div class="item-name">停留时间</div>
+          <div class="item-val">本地客：无住宿需求<br>酒店客：1.8天平均</div>
+        </div>
+        <div class="col-item">
+          <div class="item-name">早餐解决方式</div>
+          <div class="item-val">本地客：自行解决<br>酒店客：含在房费里</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="formula-box">
+      <div class="formula-title">PRODUCT DESIGN FILTER · 产品设计筛选公式</div>
+      <div class="formula">筛选参数组合 = 价格门槛 × 使用频次 × 客群限制 × 使用周期</div>
+      <div class="formula-note">
+        <strong>¥199/10次，当月有效</strong><br>
+        · ¥19.9/次 ≈ 散客单独购买价 → 散客不划算<br>
+        · 10次/月 → 1.8天住客根本用不完 → 自然排除<br>
+        · 当月有效 → 跨月作废 → 防囤积，确保持续拉新
+      </div>
+    </div>
+
+    <div class="conclusion-box">
+      <div class="big">不稀释</div>
+      <div>
+        <div class="label">数学区隔的核心结论</div>
+        <div class="text">产品参数的组合，天然形成"自动筛选器"——<br>酒店客被价格/频次/周期自动排除，本地客被自然筛选进来。<br><strong style="color:#C9A961">这不是身份门槛，这是数学结构。</strong></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <span>实战案例系列 · 社区化早餐卡 · Eric · 重庆丽苑维景</span>
+    <span>B166ER 出品</span>
+  </div>
+</body>
+</html>

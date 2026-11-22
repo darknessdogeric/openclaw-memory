@@ -1,0 +1,73 @@
+{
+  "date": "2026-09-12",
+  "cron_id": "0eced1e9-8729-47d8-b8d6-34eff13ed780",
+  "cron_name": "Entity Extractor (每日21:30)",
+  "r_rule": "R60-11",
+  "scheduled_time": "2026-09-12T21:30:00+08:00",
+  "actual_trigger": "2026-09-12T21:30:00+08:00",
+  "status": "success",
+  "extraction": {
+    "mode": "today",
+    "days_scanned": 1,
+    "files_scanned": ["2026-09-12.md"],
+    "new_entities": 9,
+    "new_relations": 0,
+    "new_entity_types": {
+      "Person": 2,
+      "Company": 3,
+      "Project": 4
+    },
+    "new_entity_names": [
+      "Eric",
+      "B166ER",
+      "安逸酒店集团",
+      "AHL",
+      "OpenAI",
+      "Project:AHL",
+      "Project:深度自迭代",
+      "Project:R66监控",
+      "Project:R60规则"
+    ]
+  },
+  "outputs": {
+    "graph_jsonl": {
+      "path": "memory/ontology/graph.jsonl",
+      "total_lines": 1155,
+      "updated": true
+    },
+    "relations_trend": {
+      "path": "memory/ontology/relations-trend.md",
+      "updated": true,
+      "total_relations": 16,
+      "top_relation": "pers_0387 works_at comp_安逸酒店集团"
+    },
+    "dashboard": {
+      "path": "memory/eric-4-projects-dashboard.md",
+      "updated": true,
+      "projects_mentioned_today": 3
+    },
+    "eval_json": {
+      "path": "eval/2026-09-12.json",
+      "updated": true
+    },
+    "obsidian_push": {
+      "attempted": true,
+      "tool": "toolbox/cron_to_obsidian.py",
+      "status": "executed"
+    }
+  },
+  "r60_11_compliance": {
+    "step_1_graph_jsonl": "✅",
+    "step_2_relations_trend": "✅",
+    "step_3_dashboard": "✅",
+    "step_4_eval_json": "✅",
+    "step_5_obsidian_push": "✅"
+  },
+  "notes": [
+    "Saturday DORMANT day: cron triggered at 21:30 as scheduled",
+    "9 entities new, 0 relations new (entity-relation pair all existing)",
+    "B166ER hash collision with Person/Tool type — needs future entity normalization"
+  ],
+  "next_run": "2026-09-13T21:30:00+08:00",
+  "generated_by": "B166ER entity_extractor.py"
+}

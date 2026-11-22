@@ -1,4 +1,20 @@
 #!/usr/bin/env bash
+# Portable python resolver.
+# NOTE: `command -v python3` SUCCEEDS on Windows Git Bash even when it points at
+# the Microsoft Store stub (WindowsApps/python3), which exits silently with code 49.
+# So each candidate must be proven runnable (`--version` actually works) before use.
+PY=""
+for _pycand in python3 python; do
+  if command -v "$_pycand" >/dev/null 2>&1 && "$_pycand" --version >/dev/null 2>&1; then
+    PY="$(command -v "$_pycand")"
+    break
+  fi
+done
+if [[ -z "$PY" ]]; then
+  echo "ERROR: no working python found (tried python3, python)" >&2
+  exit 127
+fi
+
 set -euo pipefail
 
 if [[ "${1:-}" == "--help" ]] || [[ "${1:-}" == "-h" ]]; then
@@ -31,7 +47,7 @@ if [[ ! -f "$GENERATOR" ]]; then
   exit 1
 fi
 
-python3 "$GENERATOR" \
+"$PY" "$GENERATOR" \
   --plan "$PLAN" \
   --outdir "$OUTDIR" \
   --resolution "$RESOLUTION" \

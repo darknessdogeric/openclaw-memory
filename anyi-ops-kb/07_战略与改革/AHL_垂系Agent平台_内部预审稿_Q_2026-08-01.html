@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>AHL_垂系Agent平台_内部预审稿_Q_2026-08-01</title>
+    <style>
+@page {
+    size: A4;
+    margin: 2.5cm 2cm 2.5cm 2cm;
+}
+
+body {
+    font-family: "Microsoft YaHei", "PingFang SC", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
+    font-size: 11pt;
+    line-height: 1.7;
+    color: #1a1a1a;
+    max-width: 100%;
+}
+
+h1 {
+    font-size: 22pt;
+    font-weight: bold;
+    color: #003366;
+    border-bottom: 3px solid #003366;
+    padding-bottom: 8pt;
+    margin-top: 24pt;
+    margin-bottom: 16pt;
+    page-break-before: always;
+}
+
+h1:first-of-type {
+    page-break-before: avoid;
+}
+
+h2 {
+    font-size: 16pt;
+    font-weight: bold;
+    color: #003366;
+    margin-top: 20pt;
+    margin-bottom: 12pt;
+    border-left: 4px solid #003366;
+    padding-left: 10pt;
+}
+
+h3 {
+    font-size: 13pt;
+    font-weight: bold;
+    color: #2a4d6e;
+    margin-top: 16pt;
+    margin-bottom: 8pt;
+}
+
+h4 {
+    font-size: 12pt;
+    font-weight: bold;
+    color: #4a6d8e;
+    margin-top: 12pt;
+    margin-bottom: 6pt;
+}
+
+p {
+    margin: 8pt 0;
+    text-align: justify;
+}
+
+blockquote {
+    border-left: 4px solid #ccc;
+    margin: 12pt 0;
+    padding: 8pt 12pt;
+    color: #555;
+    background-color: #f9f9f9;
+    font-style: italic;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 12pt 0;
+    font-size: 10pt;
+}
+
+th {
+    background-color: #003366;
+    color: white;
+    padding: 8pt;
+    border: 1px solid #ddd;
+    text-align: left;
+    font-weight: bold;
+}
+
+td {
+    padding: 6pt 8pt;
+    border: 1px solid #ddd;
+    vertical-align: top;
+}
+
+tr:nth-child(even) {
+    background-color: #f5f5f5;
+}
+
+code {
+    background-color: #f4f4f4;
+    padding: 2pt 4pt;
+    border-radius: 2pt;
+    font-family: "Consolas", "Courier New", monospace;
+    font-size: 10pt;
+    color: #c7254e;
+}
+
+pre {
+    background-color: #f4f4f4;
+    padding: 12pt;
+    border-radius: 4pt;
+    overflow-x: auto;
+    font-family: "Consolas", "Courier New", monospace;
+    font-size: 10pt;
+    line-height: 1.4;
+}
+
+ul, ol {
+    margin: 8pt 0;
+    padding-left: 24pt;
+}
+
+li {
+    margin: 4pt 0;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 16pt 0;
+}
+
+strong {
+    color: #003366;
+    font-weight: bold;
+}
+
+em {
+    color: #555;
+}
+
+.cover {
+    page-break-after: always;
+    text-align: center;
+    padding-top: 30%;
+}
+
+.cover h1 {
+    border: none;
+    font-size: 28pt;
+    color: #003366;
+    margin-bottom: 24pt;
+}
+
+.cover .subtitle {
+    font-size: 16pt;
+    color: #555;
+    margin: 12pt 0;
+}
+
+.cover .meta {
+    margin-top: 48pt;
+    font-size: 11pt;
+    color: #888;
+}
+
+@media print {
+    h1 { page-break-before: always; }
+    h1:first-of-type { page-break-before: avoid; }
+    h2, h3 { page-break-after: avoid; }
+    table, figure { page-break-inside: avoid; }
+}
+</style>
+</head>
+<body>
+<div style="text-align: right; font-weight: bold; color: red; border: 2px solid red; padding: 4px; margin-bottom: 16px;">
+【内部讨论稿 · 请勿外传】
+</div>
+
+<h1 id="ahl-agent">关于推进 AHL 垂系 Agent 平台集团内试点应用的内部预审稿</h1>
+<blockquote>
+<p><strong>报送</strong>：安逸酒店集团 总经理办公会（经产业发展部分管副总审阅后呈报）
+<strong>报送单位</strong>：安逸酒店集团 产业发展部
+<strong>拟稿人</strong>：张实（产业发展部部长）
+<strong>拟稿时间</strong>：2026 年 8 月 1 日
+<strong>密级</strong>：内部（请审阅，征求意见）
+<strong>文件状态</strong>：<strong>内部预审稿</strong>——请总经理办公会成员于 <strong>2026 年 8 月 15 日前</strong>反馈修改意见</p>
+</blockquote>
+<hr />
+<h2 id="_1">一、起草背景与目的</h2>
+<p>为深入贯彻落实集团"十五五"高质量发展规划关于"加快推进数字化转型、构建集团级智能化运营能力"的有关部署，认真研究解决集团当前面临的"三个不匹配"（资产与战略需求、产品与资产价值、机制与市场竞争）等突出短板，按照集团"1234"发展战略关于"第四步全方位市场化必须以体系化数字化能力为底座"的总体要求，我部在前期充分调研、论证基础上，研究形成了本试点方案。</p>
+<p>本内部预审稿旨在<strong>就试点的总体思路、目标范围、实施路径及关键问题充分征求意见</strong>，为后续提交集团董事会正式决策做好前期准备。现就有关事项预审如下，请审阅。</p>
+<h2 id="_2">二、项目总体定位</h2>
+<h3 id="ahl">（一）AHL 平台是什么</h3>
+<p>AHL（AI Hospitality Layer）即<strong>酒店业 AI 智能底座 + 数字员工矩阵</strong>，是依托大模型与垂系 Agent 编排技术，专为酒店行业打造的智能化运营基础设施。其核心要义可概括为以下五个方面：</p>
+<p><strong>一是"AI 智能底座"。</strong> 通过统一数据中台打通酒店 PMS（酒店管理系统）、CRS（中央预订系统）、OTA（携程/美团/飞猪等在线分销平台）以及 IoT（物联网设备）等数据源，实现酒店运营数据的实时汇集与智能分析，破解"信息孤岛"难题。</p>
+<p><strong>二是"数字员工矩阵"。</strong> 在 AI 底座之上构建收益管理、OTA 维护、私域运营、C 端（消费者端）智能客服、B 端（企业端）运营助手等 5 大 AI 能力模块，覆盖酒店运营全场景，相当于为每一家酒店配备一支 7×24 小时不知疲倦的 AI 运营团队。</p>
+<p><strong>三是"垂系 Agent 编排"。</strong> 在通用大模型（如 DeepSeek 等）基础上，针对酒店行业 PP（行业惯例做法）与 SOP（标准操作流程）进行深度微调，构建涵盖 9 大 Agent 集群、51 个 SKILL（业务技能单元）的智能化能力矩阵，确保 AI 输出符合酒店行业实操标准。</p>
+<p><strong>四是"数据喂养的网络效应"。</strong> AHL 平台的核心护城河在于通过正向数据反馈循环持续优化 AI 能力，即"AI 触达客户—获取数据反馈—AI 模型迭代优化—触达精度提升—更多酒店接入—更多数据反哺"的良性循环。这一效应是传统 OTA 平台和单体酒店数字化项目均无法实现的差异化能力。</p>
+<p><strong>五是"轻量化 SaaS（软件即服务）订阅模式"。</strong> 通过 SaaS 化部署，单店无需自建技术团队，无需更换现有 PMS 系统，无需购买专用硬件设备，开箱即用、按需付费，有效降低单体酒店数字化转型门槛。</p>
+<h3 id="ahl_1">（二）AHL 与传统解决方案的本质区别</h3>
+<table>
+<thead>
+<tr>
+<th>比较维度</th>
+<th>传统 OTA 平台（携程/美团/飞猪）</th>
+<th>传统酒店管理公司（华住/亚朵）</th>
+<th>自建 APP / 小程序</th>
+<th>AHL 平台</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>客户关系归属</strong></td>
+<td>归属平台</td>
+<td>相对独立但深度有限</td>
+<td>归属酒店但活跃度低</td>
+<td><strong>归属酒店</strong></td>
+</tr>
+<tr>
+<td><strong>核心能力</strong></td>
+<td>流量分发</td>
+<td>标准化管理输出</td>
+<td>预订入口</td>
+<td><strong>AI 运营底座</strong></td>
+</tr>
+<tr>
+<td><strong>佣金/费用</strong></td>
+<td>佣金 10-15%</td>
+<td>加盟费 + 管理分成</td>
+<td>开发成本数千万</td>
+<td><strong>按效果付费</strong></td>
+</tr>
+<tr>
+<td><strong>数据回流</strong></td>
+<td>数据单向流向平台</td>
+<td>数据回流有限</td>
+<td>数据孤岛</td>
+<td><strong>双向数据喂养</strong></td>
+</tr>
+<tr>
+<td><strong>跨店协同</strong></td>
+<td>平台内强，跨平台弱</td>
+<td>同集团内协同</td>
+<td>无</td>
+<td><strong>跨店、跨业态</strong></td>
+</tr>
+</tbody>
+</table>
+<h2 id="_3">三、推进试点的必要性与可行性</h2>
+<h3 id="_4">（一）必要性分析</h3>
+<p><strong>一是落实集团"十五五"规划的战略需要。</strong> 集团"十五五"高质量发展规划明确指出集团面临"三个不匹配"的核心短板，其中第三项短板"机制与市场竞争不匹配"的破解，<strong>必须以数字化转型为根本路径</strong>。本试点项目的实施，是集团"十五五"规划落地的重要抓手。</p>
+<p><strong>二是响应国家政策导向的政治担当。</strong> 国务院国资委已专门印发《关于加快推进国有企业数字化转型工作的通知》，明确将国企数字化转型列为"十四五""十五五"重点任务；四川省《"十四五"国有资本布局优化和结构调整规划》亦明确支持数字经济相关业务布局。本试点项目积极响应上述政策导向，体现国企担当。</p>
+<p><strong>三是抢占"AI+服务业"窗口期的现实需要。</strong> 据 BCG 2026 年 3 月报告，"AI-First Hotels"将成为酒店行业新标准；据 McKinsey 2024 年报告，AI 驱动自动化可降低酒店业运营成本高达 25%。本试点项目如能在 2026 年内启动，将为集团在行业格局重塑中赢得先发优势。</p>
+<p><strong>四是解决集团核心痛点的客观需要。</strong> 经前期调研，集团当前面临"集团对下属单店赋能管控不足""安逸品牌力薄弱制约轻资产扩张""酒店客户关系流失 OTA 平台""会员体系薄弱、私域流量不足""轻重资产分离缺乏差异化能力"等突出痛点，亟需通过 AHL 平台予以系统性解决。</p>
+<h3 id="_5">（二）可行性分析</h3>
+<p><strong>一是技术可行。</strong> AHL 平台所依赖的大模型技术、行业数据集、Agent 编排算法、PMS 数据接口等核心技术已经过前期验证，<strong>已在乐山锦江嘉州宾馆等试点项目完成实际部署并取得初步成效</strong>，技术成熟度满足集团内试点应用要求。</p>
+<p><strong>二是市场可行。</strong> 据行业研究数据，2024 年中国酒店 AI 应用市场规模约 30-50 亿美元，预计 2030 年突破 100 亿美元；中国单体酒店约 50-60 万家，市场空间广阔。AHL 平台具备清晰的市场化前景与可持续盈利模式。</p>
+<p><strong>三是团队可行。</strong> 项目核心创始团队（创始人/CEO 张实、CTO 李源、CSO 陈思序）已落实到位，技术、运营、行业资源互补，团队整体实力可保障项目顺利推进。</p>
+<p><strong>四是经济可行。</strong> 据测算，AHL 平台服务小型酒店（50 间客房）年投入约 3.4-4 万元，可为酒店带来年度净收益约 16-18 万元，ROI（投入产出比）达 400% 以上；服务大型酒店（300 间客房）年投入约 24 万元以上，可为酒店带来年度净收益超 100 万元，ROI 同样达 400% 以上。项目商业模型清晰，盈利预期明确。</p>
+<h2 id="_6">四、试点范围与目标</h2>
+<h3 id="_7">（一）试点酒店选择原则</h3>
+<p>为确保试点效果真实可靠、规避改造项目变量干扰，本次试点酒店选择严格遵循以下原则：</p>
+<p><strong>一是必须为在营酒店</strong>（即 2024 年以来持续正常运营），<strong>不在集团 2026-2028 年存量改造计划范围内</strong>，避免改造期入住率波动、客户结构不稳定、IT 系统处于切换或重建状态等变量对试点效果评估造成干扰。</p>
+<p><strong>二是必须为集团直营或控股管理酒店</strong>，确保管理权可控、数据可对接、运营调整可落地。</p>
+<p><strong>三是必须具备较好的数字化基础设施条件</strong>（PMS、CRS、CRM 即客户关系管理系统等较为成熟），具备 OTA 在售房间（携程、美团、飞猪等平台正常运营），具备配合开展试点工作的基本条件。</p>
+<p><strong>四是必须涵盖不同业态代表性</strong>，便于验证 AHL 平台在不同酒店业态下的适用性与普适性，为后续规模化推广积累经验。</p>
+<h3 id="_8">（二）试点酒店候选画像</h3>
+<p>按照上述原则，经产业发展部初步摸排，建议选择以下<strong>两家具有不同业态代表性的在营酒店</strong>作为试点候选（具体酒店名单待本次预审意见反馈后另行专题报告，避免业主预期管理风险）：</p>
+<p><strong>候选酒店 A：城市核心商圈商务酒店</strong></p>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>业态定位</td>
+<td>城市核心商圈商务酒店</td>
+</tr>
+<tr>
+<td>客房规模</td>
+<td>150-200 间</td>
+</tr>
+<tr>
+<td>客户结构</td>
+<td>商务客源约 50%、散客约 30%、协议客户约 20%</td>
+</tr>
+<tr>
+<td>经营主体</td>
+<td>集团直营</td>
+</tr>
+<tr>
+<td>现有数字化基础</td>
+<td>OTA 运营 + 集团 PMS + 基础 CRM</td>
+</tr>
+<tr>
+<td><strong>试点验证目标</strong></td>
+<td>AHL 平台在<strong>城市商务酒店</strong>场景下的 OTA 智能维护、收益管理动态调价、私域会员沉淀等核心 AI 能力应用成效</td>
+</tr>
+</tbody>
+</table>
+<p><strong>候选酒店 B：景区周边度假或托管运营酒店</strong></p>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>业态定位</td>
+<td>景区周边度假酒店或托管运营酒店</td>
+</tr>
+<tr>
+<td>客房规模</td>
+<td>80-120 间</td>
+</tr>
+<tr>
+<td>客户结构</td>
+<td>度假客源约 60%、会议客源约 20%、散客约 20%</td>
+</tr>
+<tr>
+<td>经营主体</td>
+<td>集团托管运营</td>
+</tr>
+<tr>
+<td>现有数字化基础</td>
+<td>基础 OTA + 简单 CRM</td>
+</tr>
+<tr>
+<td><strong>试点验证目标</strong></td>
+<td>AHL 平台在<strong>度假酒店或托管运营模式</strong>下的跨业态客流激活、与集团总部数据联动等核心 AI 能力应用成效</td>
+</tr>
+</tbody>
+</table>
+<p><strong>两家酒店组合的协同验证价值</strong>：通过试点城市商务酒店与度假酒店两类不同业态的客户群体，可同步验证 AHL 平台<strong>跨酒店客户转化</strong>的协同效应，即商务客源入住城市酒店后由 AI 主动推荐度假套餐，度假客源回到城市后由 AI 推荐城市酒店复购，从而初步验证 AHL 平台"数据喂养网络效应"的实际效果。</p>
+<h3 id="_9">（三）试点期目标</h3>
+<p>试点期拟定为 <strong>12 个月</strong>（2026 年 9 月至 2027 年 8 月），分两个阶段推进：</p>
+<p><strong>阶段一：内部 MVP（最小可行产品）验证期（第 1-6 个月）。</strong> 完成两家试点酒店 AHL Agent 系统部署、数据接口对接与内部测试，形成 MVP 验证报告，初步评估平台核心功能的应用成效。</p>
+<p><strong>阶段二：扩大试点期（第 7-12 个月）。</strong> 在阶段一验证基础上扩大应用范围，推进试点酒店全面接入，完成跨酒店客户转化测试，形成可复制、可推广的方法论与试点报告。</p>
+<h3 id="_10">（四）试点期关键指标</h3>
+<table>
+<thead>
+<tr>
+<th>序号</th>
+<th>指标类别</th>
+<th>具体指标</th>
+<th>目标值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>运营效率</td>
+<td>试点酒店运营人员日常数据收集时间</td>
+<td>由 2 小时压缩至 10 分钟以内</td>
+</tr>
+<tr>
+<td>2</td>
+<td>运营效率</td>
+<td>试点酒店自动生成运营报表时间</td>
+<td>由人工编制压缩至自动生成（即时）</td>
+</tr>
+<tr>
+<td>3</td>
+<td>经营业绩</td>
+<td>试点酒店平均 OCC（入住率）提升幅度</td>
+<td>提升 5% 以上</td>
+</tr>
+<tr>
+<td>4</td>
+<td>经营业绩</td>
+<td>试点酒店平均 RevPAR（每间可售房收入）提升幅度</td>
+<td>提升 5% 以上</td>
+</tr>
+<tr>
+<td>5</td>
+<td>经营业绩</td>
+<td>试点酒店平均 ADR（平均房价）提升幅度</td>
+<td>提升 3% 以上</td>
+</tr>
+<tr>
+<td>6</td>
+<td>客户运营</td>
+<td>OTA 差评平均响应时间</td>
+<td>由 48 小时压缩至 30 分钟以内</td>
+</tr>
+<tr>
+<td>7</td>
+<td>客户运营</td>
+<td>OTA 渠道依赖度占比</td>
+<td>由当前水平下降 5-10 个百分点</td>
+</tr>
+<tr>
+<td>8</td>
+<td>客户运营</td>
+<td>试点期私域会员新增数量</td>
+<td>两家酒店合计新增 5 万以上</td>
+</tr>
+</tbody>
+</table>
+<h2 id="_11">五、投资预算与资金来源</h2>
+<h3 id="_12">（一）投资预算概算</h3>
+<table>
+<thead>
+<tr>
+<th>序号</th>
+<th>投资项目</th>
+<th>金额（万元）</th>
+<th>测算依据</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Agent 系统开发</td>
+<td>150-200</td>
+<td>与第三方 AI 技术服务商合作开发</td>
+</tr>
+<tr>
+<td>2</td>
+<td>数据接口对接</td>
+<td>50-80</td>
+<td>PMS / CRM / OTA 接口对接</td>
+</tr>
+<tr>
+<td>3</td>
+<td>试点酒店终端设备及网络升级</td>
+<td>30-50</td>
+<td>智能终端、网络升级等</td>
+</tr>
+<tr>
+<td>4</td>
+<td>项目团队人力成本</td>
+<td>80-120</td>
+<td>项目团队 5-6 人 × 12 个月</td>
+</tr>
+<tr>
+<td>5</td>
+<td>运营推广与人员培训</td>
+<td>40-60</td>
+<td>AI 工具推广、试点酒店员工培训等</td>
+</tr>
+<tr>
+<td>6</td>
+<td>不可预见费用</td>
+<td>30-50</td>
+<td>风险准备</td>
+</tr>
+<tr>
+<td><strong>合计</strong></td>
+<td>—</td>
+<td><strong>380-560</strong></td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_13">（二）资金来源建议</h3>
+<p>建议试点资金从以下两个渠道筹集：</p>
+<p><strong>一是集团信息化专项预算（200-300 万元）。</strong> 集团已有信息化专项预算科目，可从中列支约 200-300 万元用于本项目系统开发与基础设施投入。</p>
+<p><strong>二是集团经营预算分摊（180-260 万元）。</strong> 试点期 12 个月可分月从集团经营预算中列支约 180-260 万元，主要用于人力成本、运营推广与培训等。</p>
+<p>试点预算合计 <strong>380-560 万元</strong>，约占集团 2025 年度营业收入（15.65 亿元）的 0.24-0.36%，投入规模可控、风险可控。<strong>不建议引入银行贷款或外部投资</strong>，避免增加集团财务负担及对项目运营的外部干预。</p>
+<h2 id="_14">六、组织保障</h2>
+<h3 id="_15">（一）项目组织架构</h3>
+<p>建议试点项目按以下架构组织推进：</p>
+<p>一是成立 <strong>AHL 试点项目工作组</strong>，由集团产业发展部部长任组长，成员包括集团信息中心负责人、试点酒店总经理（或托管方代表）、第三方 AI 技术服务商项目负责人等。</p>
+<p>二是在项目工作组下设<strong>产品研发组、技术实施组、运营推广组、合规风控组</strong>四个专业小组，分别负责产品研发、系统部署、运营推广、合规审查等具体工作。</p>
+<p>三是建立<strong>周例会、月报告、季复盘</strong>工作机制，及时协调解决试点推进中的重大问题。</p>
+<h3 id="_16">（二）团队配置</h3>
+<p>项目团队拟配置 <strong>5-6 人</strong>，包括项目总负责人（产业发展部部长兼任，投入 30% 工作时间）、产品经理（1 人，全职）、AI 工程师（2 人，由第三方 AI 技术服务商派驻）、数据工程师（1 人，从集团信息中心借调，投入 50% 工作时间）、运营专员（1 人，从试点酒店抽调，全职）、合规专员（1 人，从集团法务部借调，投入 20% 工作时间）。</p>
+<h2 id="_17">七、合规性与风险防控</h2>
+<h3 id="_18">（一）合规性论证</h3>
+<p>本试点项目严格遵守国家法律法规、国资委监管要求及集团内部管理制度，主要涉及以下合规要点：</p>
+<p><strong>一是数据安全与个人信息保护合规。</strong> AHL 平台运营过程中涉及客户预订信息、消费记录、行为偏好等数据采集与处理，将严格按照《中华人民共和国数据安全法》《中华人民共和国个人信息保护法》要求，落实数据脱敏、客户授权、最小必要等原则，确保数据处理活动合法合规。</p>
+<p><strong>二是关联交易合规。</strong> 本试点项目涉及集团与第三方 AI 技术服务商的合作，将严格遵循《企业国有资产法》《公司法》及集团关联交易管理制度，履行内部审议程序，确保交易定价公允、程序合规。</p>
+<p><strong>三是国企数字化转型政策合规。</strong> 本试点项目积极响应国务院国资委《关于加快推进国有企业数字化转型工作的通知》要求，符合四川省《"十四五"国有资本布局优化和结构调整规划》关于支持数字经济业务发展的政策导向，具备充分的政策合规性。</p>
+<p><strong>四是三重一大决策程序合规。</strong> 本试点项目投资金额 380-560 万元，触发集团"重大投资决策"事项标准，将严格按照"三重一大"决策程序要求，履行党委前置研究、董事会决议等程序。</p>
+<h3 id="_19">（二）风险防控措施</h3>
+<p>针对试点项目可能面临的主要风险，逐项提出防控措施：</p>
+<table>
+<thead>
+<tr>
+<th>序号</th>
+<th>风险类别</th>
+<th>风险描述</th>
+<th>防控措施</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>技术风险</td>
+<td>AHL 系统实际应用效果不达预期</td>
+<td>阶段一充分验证，阶段二动态调整；预留阶段终止机制</td>
+</tr>
+<tr>
+<td>2</td>
+<td>经营风险</td>
+<td>试点酒店配合度不足</td>
+<td>集团分管副总牵头协调；试点前充分沟通；激励机制配套</td>
+</tr>
+<tr>
+<td>3</td>
+<td>合规风险</td>
+<td>数据安全、关联交易合规风险</td>
+<td>严格落实法律法规要求；法务全程介入；定期合规审查</td>
+</tr>
+<tr>
+<td>4</td>
+<td>市场风险</td>
+<td>第三方 AI 技术服务商交付能力不足</td>
+<td>选择有酒店行业成功案例的服务商；合同明确违约责任；保留备选方案</td>
+</tr>
+<tr>
+<td>5</td>
+<td>行业风险</td>
+<td>行业竞品（华住、亚朵等）快速跟进</td>
+<td>发挥集团 167 家酒店规模优势；加快数据喂养网络效应积累</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_20">（三）阶段终止机制</h3>
+<p>为有效控制试点风险，建立试点阶段动态调整与终止机制：</p>
+<p>一是阶段一（第 6 个月末）评估后，若实际效果未达预期目标 60% 以上的，将<strong>削减阶段二预算 50%</strong>，并视情况调整试点酒店范围；</p>
+<p>二是阶段二（第 12 个月末）评估后，若累计实际效果仍未达预期目标 70% 以上的，将<strong>暂缓扩大试点范围</strong>，待平台技术进一步成熟后再行评估；</p>
+<p>三是试点全过程设置"暂停按钮"，每个里程碑节点前均设置集团分管副总书面复评环节，必要时可暂停试点。</p>
+<h2 id="_21">八、需重点研究的几个问题</h2>
+<p>为确保本试点项目稳妥推进，建议集团总经理办公会重点研究以下几个问题：</p>
+<p><strong>一是关于试点酒店选择的统筹问题。</strong> 试点酒店选择在符合"在营、非改造期、数字化基础好"等原则的前提下，如何与集团各业态、各区域布局统筹协调，更好验证 AHL 平台在不同业态、不同区域酒店的应用成效，需提请总经理办公会研究。</p>
+<p><strong>二是关于集团数字化转型的整体统筹问题。</strong> AHL 试点项目应与集团现有信息化体系（如集团 PMS、CRS、安逸汇会员系统等）实现有机衔接，避免形成新的"信息孤岛"。需研究如何将 AHL 试点纳入集团数字化转型的整体框架统筹推进。</p>
+<p><strong>三是关于与第三方 AI 技术服务商的合作模式问题。</strong> 与第三方 AI 技术服务商的合作模式（自主开发、技术采购、SaaS 订阅、联合开发等）涉及核心技术自主可控、项目运营主导权等关键问题，需提请总经理办公会研究决策。</p>
+<p><strong>四是关于试点成果的转化推广机制问题。</strong> 试点期结束后，如何将试点成功经验在集团 167 家酒店乃至旅投集团旗下多业态进行规模化推广应用，亟需提前研究转化推广机制与配套支持政策。</p>
+<h2 id="_22">九、下一步工作建议</h2>
+<p><strong>一是本预审稿征求意见阶段</strong>（2026 年 8 月 1 日至 8 月 15 日）。请总经理办公会成员于 8 月 15 日前将修改意见反馈至产业发展部，我部将根据意见修改完善后形成正式报批稿。</p>
+<p><strong>二是项目立项准备阶段</strong>（2026 年 8 月中下旬）。修改完善后形成正式立项报告，按照"三重一大"决策程序要求，提交集团党委会前置研究、集团董事会决议。</p>
+<p><strong>三是试点启动实施阶段</strong>（2026 年 9 月起）。集团董事会决议通过后正式启动试点，按阶段一、阶段二安排有序推进。</p>
+<p>我部将以产业发展部职责定位为根本，<strong>亲自统筹本项目的实施推进</strong>，<strong>严格遵守法律法规和集团内部管理制度</strong>，<strong>确保项目合规、稳健、高效</strong>，并定期向集团分管副总、总经理办公会报告进展。</p>
+<p>如本预审稿总体方向可行，建议原则同意并提出修改完善意见；如本预审稿尚需重大调整，建议明确调整方向以便我部进一步研究论证后再次提交预审。</p>
+<hr />
+<h2 id="_23">附件</h2>
+<ol>
+<li>附件 1：试点酒店候选画像详细说明</li>
+<li>附件 2：AHL 平台 5 大 AI 能力模块功能清单</li>
+<li>附件 3：试点期 12 个月详细推进时间表</li>
+<li>附件 4：合规风险防控专项工作方案</li>
+</ol>
+<hr />
+<p><strong>拟稿单位</strong>：安逸酒店集团 产业发展部
+<strong>拟稿人</strong>：张实（产业发展部部长）
+<strong>拟稿时间</strong>：2026 年 8 月 1 日
+<strong>报送对象</strong>：安逸酒店集团 总经理办公会
+<strong>报送经由</strong>：集团产业发展部分管副总审阅</p>
+<p>妥否，请批示。</p>
+<p>张实
+2026 年 8 月 1 日</p>
+<hr />
+<p><em>本文档按 R264 AnYi 留痕协议自动归档：anyi-ops-kb/07_战略与改革/AHL_垂系Agent平台_内部预审稿_Q_2026-08-01.md</em></p>
+</body>
+</html>

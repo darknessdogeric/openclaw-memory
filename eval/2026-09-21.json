@@ -1,0 +1,80 @@
+{
+  "date": "2026-09-21",
+  "task": "daily_global_intel_briefing_0830",
+  "version": "v1.2_foreign_rss",
+  "execution": {
+    "rss_fetch": {
+      "sources_total": 31,
+      "sources_success": 28,
+      "sources_failed": 3,
+      "sources_failed_ids": ["yahoo-finance", "hotelnewsnow", "hospitalitynet"],
+      "items_collected": 736,
+      "duration_seconds": 35,
+      "db_path": "output/rss/2026-09-21.db",
+      "notes": "fetch_foreign_rss.py terminated with UnicodeEncodeError on summary print after DB was successfully saved; data integrity intact"
+    },
+    "report": {
+      "path": "reports/daily-briefing/2026-09-21.md",
+      "archive_path": "memory/world-intelligence/2026-09-21.md",
+      "sections": 16,
+      "word_count_estimate": 3200,
+      "target_range": "2500-4000",
+      "in_range": true
+    },
+    "index_update": {
+      "path": "reports/daily-briefing/INDEX.md",
+      "method": "insert_at_top_not_append",
+      "header_date_updated": true
+    },
+    "glossary": {
+      "path": "memory/glossary.md",
+      "entries_added": 5,
+      "entry_range": "109-113"
+    },
+    "predictions": {
+      "path": "memory/predictions/macro.jsonl",
+      "entries_added": 5,
+      "topics": ["Iran_war_no_timeline", "Trump_Xi_summit", "Hotel_AI_legibility_mainstream", "China_AI_chip_robotics_pivot", "Fed_rate_path_post_Iran"]
+    },
+    "dashboard_update": {
+      "path": "memory/eric-4-projects-dashboard.md",
+      "changed": false,
+      "reason": "no direct 4-project status change today; signals captured for next update"
+    }
+  },
+  "data_quality": {
+    "freshness": "excellent",
+    "source_diversity": "high (28 international sources)",
+    "hotel_industry_coverage": "moderate (Hotel News Now and Hospitality Net blocked; Skift provides primary coverage)",
+    "china_coverage": "limited (RSS feeds cover China indirectly via SCMP/FT/Al Jazeera; Trendradar hot news data not refreshed today)"
+  },
+  "headline_findings": [
+    "Iran war enters 'no timeline' phase per Trump UN ambassador; Tehran warns US; Houthi expansion in Yemen",
+    "US-China high-level talks open ahead of Trump-Xi summit; provincial window messaging",
+    "NYT: interest rate rise mainly attributed to Iran war (not Fed or data)",
+    "IHG to formally discuss 'Making Hotels Legible to AI' at Skift Global Forum - validates AHL thesis",
+    "H World (Huazhu) builds distinctly Chinese premium brand path (Orange Select/Jiyue)",
+    "Brand USA Covid-era funding windfall running thin",
+    "China AI: Hygon data-center-to-robotics pivot + ByteDance/Tsinghua DAPO open-source RL",
+    "Google open-sources Agentic Orchestrator",
+    "Japan raises interest rates to 31-year high",
+    "Warren introduces bill to ban PE from owning medical practices"
+  ],
+  "methodology_compliance": {
+    "three_step_reasoning": true,
+    "five_questions": true,
+    "three_scenarios": true,
+    "five_definitions": true,
+    "word_count_in_range": true,
+    "data_sources_labeled": true,
+    "no_pro_view_or_deepseek_pro_label": true
+  },
+  "next_action": "obsidian_push_pending",
+  "errors": [
+    {
+      "type": "non_fatal",
+      "where": "fetch_foreign_rss.py line 71 (UnicodeEncodeError on summary print)",
+      "impact": "none (DB saved before error)"
+    }
+  ]
+}

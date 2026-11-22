@@ -1,0 +1,69 @@
+{
+  "date": "2026-09-17",
+  "cron_id": "0eced1e9-8729-47d8-b8d6-34eff13ed780",
+  "cron_name": "B166ER-实体抽取-每日21:30",
+  "schedule": "cron 0 21 * * * Asia/Shanghai",
+  "scheduled_time": "2026-09-17T21:30:00+08:00",
+  "actual_trigger": "2026-09-17T21:32:00+08:00",
+  "trigger_offset_minutes": 2,
+  "status": "success",
+  "source_file": "memory/2026-09-17.md",
+  "extraction_results": {
+    "new_entities": 19,
+    "new_relations": 0,
+    "total_entities_in_graph": 1187,
+    "total_relations_in_graph": 16
+  },
+  "entities_by_type": {
+    "Person": ["Eric", "B166ER"],
+    "Company": [
+      "安逸酒店集团",
+      "四川旅游投",
+      "AHL",
+      "亚朵",
+      "携程",
+      "OpenAI",
+      "Anthropic"
+    ],
+    "Project": [
+      "AHL",
+      "医养酒店",
+      "深度自迭代",
+      "R66监控",
+      "R60规则"
+    ],
+    "Event": ["霍尔木兹海峡事件"],
+    "Place": ["成都", "重庆", "四川"],
+    "Tool": ["DeepSeek"]
+  },
+  "projects_touched_today": [
+    "AHL",
+    "1244战略",
+    "医养酒店",
+    "深度自迭代"
+  ],
+  "outputs": {
+    "graph_jsonl": "memory/ontology/graph.jsonl (已追加 19 实体)",
+    "relations_trend": "memory/ontology/relations-trend.md (已更新累计频次)",
+    "eric_4_projects_dashboard": "memory/eric-4-projects-dashboard.md (已更新 4 项目状态)",
+    "eval_this_file": "eval/2026-09-17-entity-extractor.json",
+    "obsidian_push": "obsidian-vault/50-外部接入/cron-outputs/2026-09/21-33-Entity-Extractor-实体抽取-2.md",
+    "content_file": "C:/Users/ericz/AppData/Local/Temp/entities-2026-09-17.md"
+  },
+  "r_rules_application": {
+    "r66_quality_gate": {
+      "status": "passed",
+      "note": "实体抽取结果与 memory/2026-09-17.md 当日内容交叉比对一致,无虚构实体"
+    },
+    "r67_path_compliance": {
+      "status": "passed",
+      "note": "graph.jsonl/relations-trend.md/dashboard.md 均位于 workspace 标准路径"
+    },
+    "r298_eclectic_inclusion": {
+      "status": "passed",
+      "note": "国内外实体并列收录: 安逸集团+霍尔木兹事件+OpenAI/Anthropic + 国内酒店"
+    }
+  },
+  "summary": "19 实体 + 0 关系入 graph,4 项目今日提及 (AHL/1244战略/医养酒店/深度自迭代)",
+  "generated_at": "2026-09-17T21:33:30+08:00"
+}

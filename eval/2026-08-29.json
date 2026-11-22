@@ -1,0 +1,23 @@
+{
+  "date": "2026-08-29",
+  "extractor_version": "today",
+  "entities_count": 12,
+  "relations_count": 0,
+  "entities": [
+    {"type": "Person", "name": "Eric", "source": "memory/2026-08-29.md"},
+    {"type": "Person", "name": "B166ER", "source": "memory/2026-08-29.md"},
+    {"type": "Company", "name": "安逸酒店集团", "source": "memory/2026-08-29.md"},
+    {"type": "Company", "name": "AHL", "source": "memory/2026-08-29.md"},
+    {"type": "Company", "name": "美团", "source": "memory/2026-08-29.md"},
+    {"type": "Company", "name": "OpenAI", "source": "memory/2026-08-29.md"},
+    {"type": "Project", "name": "AHL", "source": "memory/2026-08-29.md"},
+    {"type": "Project", "name": "深度自迭代", "source": "memory/2026-08-29.md"},
+    {"type": "Project", "name": "R66监控", "source": "memory/2026-08-29.md"},
+    {"type": "Project", "name": "R60规则", "source": "memory/2026-08-29.md"},
+    {"type": "Tool", "name": "TrendRadar", "source": "memory/2026-08-29.md"},
+    {"type": "Tool", "name": "scrape_matrix", "source": "memory/2026-08-29.md"}
+  ],
+  "relations": [],
+  "projects_mentioned": ["AHL"],
+  "timestamp": "2026-08-29T21:30:00+08:00"
+}

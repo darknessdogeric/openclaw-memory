@@ -1,0 +1,1360 @@
+# 22.  品牌标准与 PIP 文件 总经理办公室 2026. 11.2\近三年品牌标准审计报告及遗留整改项清单\2026\GC - Crowne Plaza - Integrated Quality Evaluation 2026 Non-Compliance Report - CTUCH.pdf
+# pdf
+
+
+===== PAGE 1 =====
+GC - Crowne Plaza - Integrated Quality Evaluation 2026
+Integrated Quality Evaluation
+CTUCH Crowne Plaza - Chengdu City Center
+No. 31 Zongfu Street
+Chengdu, 610016 CN
+Completed By:
+Michelle Zhang
+Start Date:
+End Date:
+May 21, 2026 9:00 AM
+(China Standard Time)
+May 22, 2026 12:00 PM
+(China Standard Time)
+Management Type:
+IHG Managed
+Overall Summary
+Rating: Fail
+The Integrated Quality Evaluation is limited in scope and time frame. It is conducted at a frequency determined by IHG and only covers approximately five gue-
+strooms, public and back of house areas, F&B areas, facilities areas and the exterior. This report can only address issues identified during the evaluation and it is
+not an indication of compliance with IHG standards, requirements or the license agreement and does not change obligations to comply with the license agreement
+and all IHG standards.
+Please ensure that all non-compliant items are corrected and updated in your hotel’s Corrective Action Plan (CAP) of the Integrated Hotel Quality Evaluation visit
+on time.
+Summary by Department
+Findings
+Score
+Standards Evaluation
+53
+69.6%
+Engineering
+10
+72.8%
+FSMS
+17
+86.3%
+Overall
+80
+71.7%
+Report Category Summary
+Standards Evaluation
+69.6% (Fail)
+Tag
+Score
+Brand Safety Standard
+73.7%
+Brand Standard
+60.3%
+Cleanliness
+87.7%
+Condition
+81.1%
+Engineering
+72.8% (Fail)
+Tag
+Score
+Engineering Management & Energy Conservation
+100.0%
+Equipment Operation & Contract Management
+75.0%
+Hotel Condition and Maintenance
+88.5%
+1/43
+
+
+===== PAGE 2 =====
+Report Category Summary
+Tag
+Score
+Safety Maintenance & Operation Training
+73.4%
+FSMS
+86.3% (Pass)
+Tag
+Score
+Food Safety Management
+100.0%
+Food Safety Personnel and Training
+100.0%
+Food Safety Process Management
+82.3%
+Regulation Compliance & Outsourcing Management
+100.0%
+Question Details
+Standards Evaluation
+Question
+Observation
+Descr.
+Building/Façade - 242060 - All signage must
+be installed in accordance with the require-
+ments provided in the Crowne Plaza® Exterior
+Signage Manual. (242060)
+Answer: Non-Compliant
+Issue Notes:
+The signage was not installed in accordance with the requirements provided in the
+Crowne Plaza® Exterior Signage Manual
+Recommended Corrective Actions:
+Follow the IHG standards
+Important BS
+Grounds & Landscaping - 127-1 - Gardens
+and landscaping must be free from litter (127-
+1)
+Answer: No
+Issue Notes:
+• water feature
+Recommended Corrective Actions:
+Important
+2/43
+
+
+===== PAGE 3 =====
+Question Details
+Standards Evaluation
+Question
+Observation
+Descr.
+Remove algae from the water feature.
+Sidewalks/Walkways - 716-20 - The Side-
+walks/Walkways must be well maintained.
+(716-20)
+Answer: No
+Issue Notes:
+• Repair: Flooring
+Recommended Corrective Actions:
+Repair the floor.
+Important
+Back Office - 1156462 - Openings in fire rated
+construction throughout the building must
+manage the risk of fire and smoke spread to
+protect Egress routes in case of fire. (1156462)
+Answer: Non-Compliant
+Issue Notes:
+• All Fire Rated Doors except for Shaft or connecting Guest Room doors must be
+equipped with Automatic Door Closers to ensure self-closing and latching.
+(1156473)
+Recommended Corrective Actions:
+Most of the door selectors checked during this audit were not working.
+Critical
+3/43
+
+
+===== PAGE 4 =====
+Question Details
+Standards Evaluation
+Question
+Observation
+Descr.
+Back Office - 1156892 - The property must
+ensure a Water Quality Assessment is con-
+ducted by a Qualified Person to identify and
+manage the risk of serious illness associated
+with the storage and use of water. (1156892)
+Answer: Non-Compliant
+Issue Notes:
+No Water Quality Assessment was able to provided during the audit. The Legionella
+test reports for December 2025 and March 2026 did not include testing for cooling
+tower water.
+Recommended Corrective Actions:
+Follow the IHG standards
+Auto Fail
+军团菌报告2025.12.pdf
+军团菌检测报告- 2026年1季度.pdf
+Back Office - 716-2 - The Back Office structure
+and fixtures must be well maintained. (716-2)
+Answer: No
+Issue Notes:
+• Repair: Flooring
+Recommended Corrective Actions:
+Banquet service corridor: repair the floor
+Important
+4/43
+
+
+===== PAGE 5 =====
+Question Details
+Standards Evaluation
+Question
+Observation
+Descr.
+Housekeeping/Laundry - 1013094 - The fol-
+lowing guest room cleaning tools must be
+used as directed by the IHG® Way of Clean
+Programme: (1013094)
+Answer: Non-Compliant
+Issue Notes:
+• Used microfiber cloths must be collected in accordance with approved color coded
+containers (1012080)
+• All microfiber cloths must be stored, transported and washed in approved color
+coded system (1012081)
+Recommended Corrective Actions:
+Multi colored microfiber cloths were mixed together during storage.
+Critical BS
+Housekeeping/Laundry - 716-3 - The House-
+keeping/Laundry furniture and accessories
+must be clean. (716-3)
+Answer: No
+Issue Notes:
+• Linen Press Machine
+Recommended Corrective Actions:
+Clean the dryer
+Important
+5/43
+
+
+===== PAGE 6 =====
+Question Details
+Standards Evaluation
+Question
+Observation
+Descr.
+Lockers/Restroom - 833-4 - The Lockers/
+Restroom structure and fixtures must be well
+maintained. (833-4)
+Answer: No
+Issue Notes:
+• Repair: Flooring
+Recommended Corrective Actions:
+Female locker: repair the flooring
+Important
+Maintenance Area - 716-14 - The Mainte-
+nance Area structure and fixtures must be well
+maintained. (716-14)
+Answer: No
+Issue Notes:
+• Repair: Walls
+Recommended Corrective Actions:
+Repair the wall in the air conditioning equipment room.
+Important
+6/43
+
+
+===== PAGE 7 =====
+Question Details
+Standards Evaluation
+Question
+Observation
+Descr.
+Lobby - 1130366 - The signature sound must
+be provided. (1130366)
+Answer: Non-Compliant
+Issue Notes:
+• Lobby(including lift lobby on public floors), public restrooms, 24 hours a day, 7
+days a week. (1152062)
+Recommended Corrective Actions:
+The branded background music is not playing in the public restrooms.
+Important BS
+Front Desk - 43239 - Keycards are required.
+(43239)
+Answer: Non-Compliant
+Issue Notes:
+• Guests must receive the brand approved environmental friendly keycard.
+(1128948)
+Recommended Corrective Actions:
+Environmental friendly keycard not in use
+Important BS
+7/43
+
+
+===== PAGE 8 =====
+Question Details
+Standards Evaluation
+Question
+Observation
+Descr.
+Front Desk - 45828 - The following brand
+approved signage must be displayed visibly at
+the front desk at all times: (45828)
+Answer: Non-Compliant
+Issue Notes:
+• IHG One Rewards (1151109)
+Recommended Corrective Actions:
+IHG clipboard was not available.
+Critical BS
+Kitchen/Pantry - 716-10 - The Kitchen/Pantry
+structure and fixtures must be well
+maintained. (716-10)
+Answer: No
+Issue Notes:
+• Replace: Flooring
+Recommended Corrective Actions:
+Kitchen: all the flooring in the walk-in chiller are severely rusted.
+Important
+8/43
+
+
+===== PAGE 9 =====
+Question Details
+Standards Evaluation
+Question
+Observation
+Descr.
+Break Room/Canteen - 833-8 - The Break
+Room/Canteen structure and fixtures must be
+well maintained. (833-8)
+Answer: No
+Issue Notes:
+• Repair: Flooring
+Recommended Corrective Actions:
+Staff canteen: repair the flooring
+Important
+Public Restroom - 730-2 - The Public
+Restroom structure and fixtures must be well
+maintained. (730-2)
+Answer: No
+Issue Notes:
+• Repair: Door
+Recommended Corrective Actions:
+1F female restroom: repair the door.
+Important
+9/43
+
+
+===== PAGE 10 =====
+Question Details
+Standards Evaluation
+Question
+Observation
+Descr.
+Guest Services - 860117 - The IHG® Connect
+program for Guest Internet Access must be
+installed and supported by an IHG® approved
+vendor. (860117)
+Answer: Non-Compliant
+Issue Notes:
+IHG Connect was limited version.
+Recommended Corrective Actions:
+The IHG Connect program for Guest Internet Access must be implemented in com-
+pliance with the standard version as required.
+Important BS
+Guest Services - 1082054 - Hotel must imple-
+ment Travel Light brand hallmark, including
+Travel Light amenities and item storage
+service. (1082054)
+Answer: Non-Compliant
+Issue Notes:
+• Hotel must follow Travel Light Amenity implementation guide to provide the
+service. (1082055)
+Recommended Corrective Actions:
+The following items are missing: children's bathtub, children's face masks.
+Critical BS
+10/43
+
+
+===== PAGE 11 =====
+Question Details
+Standards Evaluation
+Question
+Observation
+Descr.
+Guestroom 1 - Bed Zone - 716-108 - The Bed
+Zone furniture and accessories must be clean.
+(716-108)
+Answer: No
+Issue Notes:
+• Notepad holder
+Recommended Corrective Actions:
+2102: clean the notepad holder
+Important
+Guestroom 1 - Kitchenette/Refreshment
+Zone - 428-13 - The Kitchenette/Refreshment
+Zone structure and fixtures must be well
+maintained. (428-13)
+Answer: No
+Issue Notes:
+• Repair: Cabinets/Shelves
+Recommended Corrective Actions:
+2102:repair the drawer
+Important
+11/43
+
+
+===== PAGE 12 =====
+Question Details
+Standards Evaluation
+Question
+Observation
+Descr.
+Guestroom 1 - Living Zone - 428-6 - The Liv-
+ing Zone structure and fixtures must be well
+maintained. (428-6)
+Answer: No
+Issue Notes:
+• Repair: Door
+Recommended Corrective Actions:
+2102: repair the door
+Important
+Guestroom 1 - Wardrobe Zone - 428-8 - The
+Wardrobe Zone structure and fixtures must be
+well maintained. (428-8)
+Answer: No
+Issue Notes:
+• Repair: Frame
+Recommended Corrective Actions:
+2102:repair the wardrobe frame
+Important
+12/43
+
+
+===== PAGE 13 =====
+Question Details
+Standards Evaluation
+Question
+Observation
+Descr.
+Guestroom 2 - Bath Zone - 716-107 - The Bath
+Zone structure and fixtures must be clean.
+(716-107)
+Answer: No
+Issue Notes:
+• Tub/Shower Showerhead
+Recommended Corrective Actions:
+1923: clean the showerhead
+Important
+Guestroom 2 - Bed Zone - 716-108 - The Bed
+Zone furniture and accessories must be clean.
+(716-108)
+Answer: No
+Issue Notes:
+• Notepad holder
+Recommended Corrective Actions:
+1923: clean the notepad holder
+Important
+13/43
+
+
+===== PAGE 14 =====
+Question Details
+Standards Evaluation
+Question
+Observation
+Descr.
+Guestroom 2 - Kitchenette/Refreshment
+Zone - 428-13 - The Kitchenette/Refreshment
+Zone structure and fixtures must be well
+maintained. (428-13)
+Answer: No
+Issue Notes:
+• Repair: Cabinets/Shelves
+Recommended Corrective Actions:
+1923: repair the drawer
+Important
+Guestroom 2 - Living Zone - 716-109 - The Liv-
+ing Zone furniture and accessories must be
+clean. (716-109)
+Answer: No
+Issue Notes:
+• Miscellaneous Furniture
+Recommended Corrective Actions:
+2008: clean the air purifier
+Important
+14/43
+
+
+===== PAGE 15 =====
+Question Details
+Standards Evaluation
+Question
+Observation
+Descr.
+Guestroom 2 - Living Zone - 428-6 - The Liv-
+ing Zone structure and fixtures must be well
+maintained. (428-6)
+Answer: No
+Issue Notes:
+• Repair: Walls
+Recommended Corrective Actions:
+2008: repair the wall
+Important
+Guestroom 2 - Work & Entertainment Zone -
+716-113 - The Work & Entertainment Zone fur-
+niture and accessories must be clean. (716-
+113)
+Answer: No
+Issue Notes:
+• Desk Seating
+Recommended Corrective Actions:
+2008: clean the chair
+Important
+15/43
+
+
+===== PAGE 16 =====
+Question Details
+Standards Evaluation
+Question
+Observation
+Descr.
+Guestroom 2 - Work & Entertainment Zone -
+428-11 - The Work & Entertainment Zone furni-
+ture and accessories must be well maintained.
+(428-11)
+Answer: No
+Issue Notes:
+• Repair: Desk
+Recommended Corrective Actions:
+1923: repair the desk
+Important
+Guestroom 3 - Bath Zone - 716-106 - The Bath
+Zone furniture and accessories must be clean.
+(716-106)
+Answer: No
+Issue Notes:
+• Tissue Holder/Cover
+Recommended Corrective Actions:
+913: clean the back of the toilet paper rack
+Important
+16/43
+
+
+===== PAGE 17 =====
+Question Details
+Standards Evaluation
+Question
+Observation
+Descr.
+Guestroom 3 - Bath Zone - 428-1 - The Bath
+Zone structure and fixtures must be well
+maintained. (428-1)
+Answer: No
+Issue Notes:
+• Repair: Mirror
+Recommended Corrective Actions:
+913: repair the mirror
+Important
+Guestroom 3 - Kitchenette/Refreshment
+Zone - 716-104 - The Kitchenette/Refreshment
+Zone furniture and accessories must be clean.
+(716-104)
+Answer: No
+Issue Notes:
+• Kettle
+Recommended Corrective Actions:
+913: clean the water inside the kettle
+Important
+17/43
+
+
+===== PAGE 18 =====
+Question Details
+Standards Evaluation
+Question
+Observation
+Descr.
+Guestroom 3 - Kitchenette/Refreshment
+Zone - 428-13 - The Kitchenette/Refreshment
+Zone structure and fixtures must be well
+maintained. (428-13)
+Answer: No
+Issue Notes:
+• Repair: Door
+Recommended Corrective Actions:
+913: repair the door
+Important
+Guestroom 3 - Living Zone - 716-109 - The Liv-
+ing Zone furniture and accessories must be
+clean. (716-109)
+Answer: No
+Issue Notes:
+• Curtain
+Recommended Corrective Actions:
+913: clean the curtain
+Important
+18/43
+
+
+===== PAGE 19 =====
+Question Details
+Standards Evaluation
+Question
+Observation
+Descr.
+Guestroom 3 - Work & Entertainment Zone -
+428-11 - The Work & Entertainment Zone furni-
+ture and accessories must be well maintained.
+(428-11)
+Answer: No
+Issue Notes:
+• Repair: Desk Seating
+Recommended Corrective Actions:
+913: repair the chair
+Important
+Guestroom 4 - Bed Zone - 716-108 - The Bed
+Zone furniture and accessories must be clean.
+(716-108)
+Answer: No
+Issue Notes:
+• Nightstand
+Recommended Corrective Actions:
+1123: clean the inside of the drawer
+Important
+19/43
+
+
+===== PAGE 20 =====
+Question Details
+Standards Evaluation
+Question
+Observation
+Descr.
+Guestroom 4 - Living Zone - 428-6 - The Liv-
+ing Zone structure and fixtures must be well
+maintained. (428-6)
+Answer: No
+Issue Notes:
+• Repair: Ceiling
+Recommended Corrective Actions:
+1123: repair the wallpaper
+Important
+Guestroom 4 - Wardrobe Zone - 428-8 - The
+Wardrobe Zone structure and fixtures must be
+well maintained. (428-8)
+Answer: No
+Issue Notes:
+• Repair: Door/ Door Hardware
+• Repair: Flooring
+Recommended Corrective Actions:
+1123: repair the door and the flooring of the wardrobe
+Important
+20/43
+
+
+===== PAGE 21 =====
+Question Details
+Standards Evaluation
+Question
+Observation
+Descr.
+Guestroom 5 - Bath Zone - 716-107 - The Bath
+Zone structure and fixtures must be clean.
+(716-107)
+Answer: No
+Issue Notes:
+• Tub/Shower Showerhead
+Recommended Corrective Actions:
+2119: clean the shower head holder
+Important
+Guestroom 5 - Living Zone - 428-5 - The Liv-
+ing Zone furniture and accessories must be
+well maintained. (428-5)
+Answer: No
+Issue Notes:
+• Repair: Seating
+Recommended Corrective Actions:
+2119: repair the seating
+Important
+21/43
+
+
+===== PAGE 22 =====
+Question Details
+Standards Evaluation
+Question
+Observation
+Descr.
+Guestroom 5 - Wardrobe Zone - 428-8 - The
+Wardrobe Zone structure and fixtures must be
+well maintained. (428-8)
+Answer: No
+Issue Notes:
+• Repair: Closet Shelf/Rod
+• Repair: Flooring
+Recommended Corrective Actions:
+2119: repair the inside of the wardrobe
+Important
+Guestrooms - 381 - Brand approved environ-
+mentally friendly guestroom dry amenities
+must be provided: (381)
+Answer: Non-Compliant
+Issue Notes:
+• One mouthwash must be provided in executive rooms and above. (1152484)
+Recommended Corrective Actions:
+No mouthwash provided
+Important BS
+22/43
+
+
+===== PAGE 23 =====
+Question Details
+Standards Evaluation
+Question
+Observation
+Descr.
+Guestrooms - 982 - The bathroom must meet
+the following: (982)
+Answer: Non-Compliant
+Issue Notes:
+• Vanity with washbasin with a faucet flow rate below 6 litres per minute. (1125060)
+Recommended Corrective Actions:
+Faucet flow rate of washbasin in multiple rooms are over 6L/min
+Critical BS
+Guestrooms - 2592 - A shower head must be
+provided. (2592)
+Answer: Non-Compliant
+Issue Notes:
+• Shower head with a maximum flow rate of 9 litres per minute. (1123230)
+Recommended Corrective Actions:
+Shower head flow rate in multiple rooms are over 9L/min
+Critical BS
+23/43
+
+
+===== PAGE 24 =====
+Question Details
+Standards Evaluation
+Question
+Observation
+Descr.
+Guestrooms - 9090 - The kettle must meet the
+following: (9090)
+Answer: Non-Compliant
+Issue Notes:
+• Double insulated from heat body design (inner is stainless steel grade 304 and or
+above and outer is stainless steel or high impact plastic) (9114)
+Recommended Corrective Actions:
+All kettles are not double insulated from heat body design
+Important BS
+Guestrooms - 10073 - One duvet cover must
+be provided per duvet with the following:
+(10073)
+Answer: Non-Compliant
+Issue Notes:
+• No pattern is permitted (61547)
+Recommended Corrective Actions:
+The duvet cover has vertical stripes.
+Important BS
+24/43
+
+
+===== PAGE 25 =====
+Question Details
+Standards Evaluation
+Question
+Observation
+Descr.
+Guestrooms - 24468 - A pillow case is required
+for each pillow and meeting the following:
+(24468)
+Answer: Non-Compliant
+Issue Notes:
+• Pattern is not permitted (81398)
+Recommended Corrective Actions:
+The pillow case has vertical stripes.
+Important BS
+Guestrooms - 62495 - Two complimentary bot-
+tled of drinking water must be provided on
+daily basis. (62495)
+Answer: Non-Compliant
+Issue Notes:
+• Approved brand: Nongfu Spring; Chun Yue; Aquafina; Ganten. (1152096)
+Recommended Corrective Actions:
+bottled water are not approved brand
+Important BS
+25/43
+
+
+===== PAGE 26 =====
+Question Details
+Standards Evaluation
+Question
+Observation
+Descr.
+Guestrooms - 1047049 - All guest bathrooms
+must use IHG®-approved bulk amenities. The
+following must be provided: (1047049)
+Answer: Non-Compliant
+Issue Notes:
+• One 300 ml bottle of Antipodes shampoo (Fig & Feijoa Hotel Collection) (1055056)
+• One 300 ml bottle of Antipodes conditioner (Fig & Feijoa Hotel Collection)
+(1055057)
+• One 300 ml bottle of Antipodes hand wash (Fig & Feijoa Hotel Collection) (1055059)
+• One 300 ml bottle of Antipodes hand wash (Fig & Feijoa Hotel Collection) (1055060)
+Recommended Corrective Actions:
+There are still Borghese shampoo, conditioner, hand wash and body lotion in some
+guest rooms
+Critical BS
+Guest Club Lounge - 716-103 - The Guest Club
+Lounge structure and fixtures must be clean.
+(716-103)
+Answer: No
+Issue Notes:
+• Flooring
+Recommended Corrective Actions:
+Clean the carpet
+Important
+26/43
+
+
+===== PAGE 27 =====
+Question Details
+Standards Evaluation
+Question
+Observation
+Descr.
+Fitness/Gym - 1012048 - The fitness centre
+must be designed, constructed and equipped
+as follows: (1012048)
+Answer: Non-Compliant
+Issue Notes:
+• Hand sanitizing dispenser and wipes must be provided. (1013049)
+Recommended Corrective Actions:
+Hand sanitizing dispenser and wipes were not provided.
+Important BS
+Miscellaneous Findings - MISC-1 - Deficiency
+/ Action Item #1
+Answer: Action Required
+Issue Notes:
+The hotel has not purchased Commercial General Liability insurance.
+Only Public Liability, Employer's Liability, Property All Risks, and Machinery Break-
+down insurance policies have been provided. None of these name InterContinental
+Hotels Group and its affiliated companies as "Additional Insureds."
+The territorial jurisdiction for Public Liability and Property All Risks insurance is main-
+land China (excluding Hong Kong, Macau, and Taiwan). The Employer's Liability and
+Machinery Breakdown policies do not specify a territorial jurisdiction.
+Recommended Corrective Actions:
+Follow the IHG standards
+*Informational
+PQAO202651010000000055 营业中断险（机损险项下）.pdf
+27/43
+
+
+===== PAGE 28 =====
+Question Details
+Standards Evaluation
+Question
+Observation
+Descr.
+PQAO202651010000000056 营业中断险（财产一切险项下）.pdf
+PQSD202651010000000100 机器损坏险.pdf
+PQYC202651010000000656 财产一切险.pdf
+PZBV202651010000002986 雇主责任险.pdf
+PZCG202651010000001352 公众责任险.pdf
+Overall Photos - Required - Q1073705 - Over-
+all Photos - Exterior (Day)
+Answer: Yes
+Undefined
+Overall Photos - Required - Q137237 - Overall
+photos - Exterior (Night)
+Answer: Yes
+Undefined
+Overall Photos - Required - Q1073706 - Over-
+all Photos - Lobby
+Answer: Yes
+Undefined
+28/43
+
+
+===== PAGE 29 =====
+Question Details
+Standards Evaluation
+Question
+Observation
+Descr.
+Overall Photos - Required - Q1073707 - Over-
+all Photos - Front Desk
+Answer: Yes
+Undefined
+Overall Photos - Required - Q1073708 - Over-
+all Photos - Public Restrooms
+Answer: Yes
+Undefined
+Overall Photos - Required - Q1073709 - Over-
+all Photos - Corridor
+Answer: Yes
+Undefined
+29/43
+
+
+===== PAGE 30 =====
+Question Details
+Standards Evaluation
+Question
+Observation
+Descr.
+Overall Photos - Required - Q1073710 - Over-
+all Photos - Guestroom (Different Room Types)
+Answer: Yes
+Undefined
+Overall Photos - Required - Q1073711 - Over-
+all Photos - Guest Bathroom
+Answer: Yes
+Undefined
+Overall Photos - Required - Q1073711 - Over-
+all Photos - Employee Areas (Back Of House)
+Answer: Yes
+Undefined
+30/43
+
+
+===== PAGE 31 =====
+Question Details
+Standards Evaluation
+Question
+Observation
+Descr.
+PIP Findings - PIP-1 - PIP Action Item #1
+Answer: Action Required
+Issue Notes:
+Hotel is under a Property Improvement Plan (PIP) with required action items and
+the PIP Report was issued on 10/25/2022.
+Recommended Corrective Actions:
+Total 105 items, 104 items haven't updated yet and all items are overdue, hotel
+needs to rectify all items as soon as possible.
+*Informational
+PIP Detail Report for - CTUCH.pdf
+Engineering
+Question
+Observation
+Descr.
+Equipment Operation & Contract
+Management - ENG3.2 - 3.2 Main electric
+equipment: Biyearly 3rd party infrared scann-
+ing and qualified reports or yearly hotel self-
+conducted infrared scanning and qualified
+repoerts
+Answer: Non-Compliant
+Issue Notes:
+The date of the last inspection report is May 14, 2024, which is already beyond the
+two-year validity period.
+Recommended Corrective Actions:
+Follow the IHG standards
+Important
+31/43
+
+
+===== PAGE 32 =====
+Question Details
+Engineering
+Question
+Observation
+Descr.
+Equipment Operation & Contract
+Management - ENG3.4 - 3.4 Generator: Yearly
+3rd party maintenance contract
+Answer: Non-Compliant
+Issue Notes:
+No yearly 3rd party maintenance contract was available
+Recommended Corrective Actions:
+Follow the IHG standards
+Important
+Equipment Operation & Contract
+Management - ENG3.14 - 3.14 Centralize air-
+conduit cleaning records and a third-party test-
+ing agency issued indoor air quality testing
+qualified reports (conducted once every three
+years).
+Answer: Non-Compliant
+Issue Notes:
+Cleaning records from the past year cannot be provided.
+Recommended Corrective Actions:
+Follow the IHG standards
+Important
+Equipment Operation & Contract
+Management - ENG3.17 - 3.17 Legionella
+water test: 3rd party legionella examined and
+qualified reports (Including but not limited to:
+fresh water/hot water/condenser
+water)（Every six months（
+Answer: Non-Compliant
+Issue Notes:
+The Legionella test reports for December 2025 and March 2026 did not include test-
+ing for cooling tower water.
+Recommended Corrective Actions:
+Follow the IHG standards
+Important
+军团菌报告2025.12.pdf
+军团菌检测报告- 2026年1季度.pdf
+Safety Maintenance & Operation - ENG5.1 -
+5.1 Generator: Qualified 3rd party annual on-
+load test reports (Municipal high-voltage sin-
+gle-line power supply is load tested annually;
+dual-line power supply is load tested every two
+years.)
+Answer: Non-Compliant
+Issue Notes:
+The most recent generator load test was conducted in May 2024.
+Recommended Corrective Actions:
+Follow the IHG standards
+Critical
+发电机带载测试报告.pdf
+32/43
+
+
+===== PAGE 33 =====
+Question Details
+Engineering
+Question
+Observation
+Descr.
+Safety Maintenance & Operation - ENG5.3 -
+5.3 Emergency lightings: Test half yearly off-
+load for 60 min records
+Answer: Non-Compliant
+Issue Notes:
+Only the third-party EPS inspection records were provided. During the on-site
+inspection, the emergency lighting on the 10th floor failed to illuminate properly,
+and some emergency lights on the 20th floor went out within one minute of being
+turned on.
+Recommended Corrective Actions:
+Follow the IHG standards
+Critical
+成都总府皇冠假日酒店巡检报告.pdf
+Safety Maintenance & Operation - ENG5.10 -
+5.10 Ensure all doors of MEP riser must be
+locked & with inspection records (Quarterly)
+Answer: Non-Compliant
+Issue Notes:
+The shaft doors on all floors are not locked, and some shaft doors have become
+detached.
+Recommended Corrective Actions:
+Follow the IHG standards
+Critical
+Building Environment & Plants Conditionce
+- ENG8.8 - 8.8 Water plant room maintenance
+status
+Answer: Non-Compliant
+Issue Notes:
+There is standing water on the floor of the pump room, and the domestic standby
+pump is leaking.
+Recommended Corrective Actions:
+repair the pump immediately
+Important
+33/43
+
+
+===== PAGE 34 =====
+Question Details
+Engineering
+Question
+Observation
+Descr.
+Building Environment & Plants Conditionce
+- ENG8.9 - 8.9 AHU room maintenance status
+(Guest floor, FOH, BOH)
+Answer: Non-Compliant
+Issue Notes:
+The equipment is emitting a persistent abnormal noise.
+Recommended Corrective Actions:
+Identify the cause immediately and carry out the necessary repairs.
+Important
+Building Environment & Plants Conditionce
+- ENG8.11 - 8.11 Swimming pool machine room
+maintenance status
+Answer: Non-Compliant
+Issue Notes:
+There is standing water on the floor, and the cleaning tools are disorganized.
+Recommended Corrective Actions:
+clean the swimming pool machine room
+Important
+34/43
+
+
+===== PAGE 35 =====
+Question Details
+Engineering
+Question
+Observation
+Descr.
+FSMS
+Question
+Observation
+Descr.
+Layout, Equipment and Facility - CP2-1 - CP2-
+1 Hard surface (ceiling, floor, wall, sewer,
+tables, kneading board) of receiving, storage,
+preparation and service area should be in
+good condition without damage. All those sur-
+faces should be cleanable and antiseptic
+Answer: Non-Compliant
+Issue Notes:
+ADD:The floor was in poor condition.
+ADD:A section of the ceiling was cracked.
+Recommended Corrective Actions:
+Timely repairs should be carried out.
+Low Risk
+Layout, Equipment and Facility - CP2-7 - CP2-
+7 Good condition/maintained in equipment /
+facilities of food preparation, storage, display,
+preservation, transportation, cleaning and
+HVAC system. No potential foreign materials
+risk.
+Answer: Non-Compliant
+Issue Notes:
+ADD:The dishwasher curtain was aged and hardened.
+Recommended Corrective Actions:
+Replacement is recommended.
+Medium Risk
+35/43
+
+
+===== PAGE 36 =====
+Question Details
+FSMS
+Question
+Observation
+Descr.
+Layout, Equipment and Facility - CP2-8 - CP2-
+8 All lights in food preparation, storage and
+receiving areas must be in good condition,
+with explosion-proof and moisture-proof
+equipped. No exposed wires.
+Answer: Non-Compliant
+Issue Notes:
+Chinese Kitchen:The lighting in the walk-in cooler was too dim.
+Recommended Corrective Actions:
+Lighting intensity in non-food handling areas should reach at least 110 lux.
+Medium Risk
+Receiving - CP4-3 - CP4-3 Scales must be cali-
+brated by authorized agents once a year.
+Answer: Non-Compliant
+Issue Notes:
+Receiving Platform:The receiving scale had only been calibrated, not verified as
+required by metrology law.
+Recommended Corrective Actions:
+Annual verification must be carried out according to regulatory requirements.
+Medium Risk
+36/43
+
+
+===== PAGE 37 =====
+Question Details
+FSMS
+Question
+Observation
+Descr.
+Storage - CP5-1 - CP5-1 The vents in refrigera-
+tor must not be blocked. No condensate water
+or ice buildup in cold holding units. Conden-
+sate pipes must be grounded for draining
+without leaking. Shelves and grounds must be
+kept clean, dry and free from rust.
+Answer: Non-Compliant
+Issue Notes:
+ADD:Some refrigerators had heavy ice buildup.
+Recommended Corrective Actions:
+Increase the frequency of defrosting cycles.
+Low Risk
+Storage - CP5-2 - CP5-2 Food is stored at
+proper temperature. Manufacturer‘s food is
+stored according to the commercial label
+instruction. Check and record the temperature
+twice a day. Keep CP5-R01 record.
+Answer: Non-Compliant
+Issue Notes:
+ADD:The temperature of the walk-in cooler was 9.2°C.
+The temperature of the hotel's freezing equipment could not reach -18°C or below.
+Executive Lounge:The beverage refrigerator storing yogurt that requires refrigera-
+tion had no temperature display and no built-in thermometer.
+Recommended Corrective Actions:
+Equipment temperatures should meet the required standards. If not achievable,
+they must be accurately recorded and repaired promptly.
+Medium Risk
+37/43
+
+
+===== PAGE 38 =====
+Question Details
+FSMS
+Question
+Observation
+Descr.
+General Requirement for Preparing Food -
+CP6-1 - CP6-1 A color coding system shall be
+implemented in all kitchens, including cutting
+boards and knives and food storage (transfer
+containers). The staff shall be trained on the
+system, with training record signed.
+Answer: Non-Compliant
+Issue Notes:
+Pastry:Blue containers were used to store ready-to-eat fruit puree.
+Staff Canteen:White containers were used to store vegetables.
+Recommended Corrective Actions:
+Storage containers should be color-coded according to brand standards.
+High Risk
+Cooking & Reheating - CP8-1 - CP8-1 Well
+cooked food must be cooked to a minimum
+core temperature at least 30 seconds. For
+Answer: Non-Compliant
+Issue Notes:
+High Risk
+38/43
+
+
+===== PAGE 39 =====
+Question Details
+FSMS
+Question
+Observation
+Descr.
+microwave oven, the dish must stay for 2 min-
+utes after heating. The cooking temperature
+must be monitored and recorded （CP8-R01（.
+ADD:The noodle station staff member was unaware of food cooking temperature
+requirements.
+Recommended Corrective Actions:
+Staff training should be strengthened.
+Cooling Hot Food - CP9-2 - CP9-2 Cooked
+foods shall be cooled to < 21°C within 2 hours
+and to < 8°C within the following 2 hours.
+Foods shall be labeled with the date to reflect
+the time of commencement of cooling
+process. Record it in the CP9-R01 Form. Food
+should be blast chilled to maximum 8°C within
+90 minutes. If blast freezing, foods should be
+frozen from 8°C to -15（within 4 hours. Record
+it in the CP9-R01 Form.
+Answer: Non-Compliant
+Issue Notes:
+ADD:No cooling record was found for the large batch of beef soup prepared on May
+20.
+Recommended Corrective Actions:
+Cooling records must be completed promptly for all cooled foods.
+Medium Risk
+Cleaning and Disinfection - CP14-3 - CP14-3
+Cleaning-in-place(CIP) SOP for food related
+facilities or cleaning equipment shall be in
+place. Staff (especially stewarding staff)
+responsible for operating the equipment/facili-
+ties, dish/glass washer and chemicals must be
+familiar with the standard operating proce-
+Answer: Non-Compliant
+Issue Notes:
+ADD:Two staff members did not know the correct way to clean work surfaces.
+Recommended Corrective Actions:
+Staff training should be strengthened.
+Medium Risk
+39/43
+
+
+===== PAGE 40 =====
+Question Details
+FSMS
+Question
+Observation
+Descr.
+dure and instructions.
+Cleaning and Disinfection - CP14-6 - CP14-6
+Utensils, facilities and equipment, including
+HVAC and exhaust system, are in a relatively
+clean status. Free from old residue, limescale
+or heavy grease, etc.
+Answer: Non-Compliant
+Issue Notes:
+ADD:Dirt was present in the crevices of a storage bin.
+Chinese Kitchen:Old, uncleaned stains were present inside the dishwasher.
+Recommended Corrective Actions:
+Strengthen cleaning.
+Medium Risk
+Cleaning and Disinfection - CP14-7 - CP14-7
+Ready-to-use or washed tableware are stored
+properly. Tableware for banquet shall be
+rewashed before using.
+Answer: Non-Compliant
+Issue Notes:
+ADD:Cleaned utensils were all stored uncovered without any protection.
+Recommended Corrective Actions:
+Utensils should be properly protected to avoid contamination.
+Medium Risk
+40/43
+
+
+===== PAGE 41 =====
+Question Details
+FSMS
+Question
+Observation
+Descr.
+Cleaning and Disinfection - CP14-8 - CP14-8
+Ice machine must be kept clean both inside
+and outside. Ice machine/ice bin must be
+equipped with ice scoop which must be
+soaked in sanitizer solution and rinsed by
+water before use. The sanitizer solution must
+be changed every four hours. The ice scoop
+must be stainless steel free from rust or plastic
+without breakage.
+Answer: Non-Compliant
+Issue Notes:
+Chinese Kitchen:The ice scoop was not soaking in disinfectant solution.
+Chinese Kitchen:Two ice machines were poorly cleaned internally.
+Recommended Corrective Actions:
+Strengthen training to standardize daily operations.
+Medium Risk
+Cleaning and Disinfection - CP14-9 - CP14-9 A
+Answer: Non-Compliant
+Medium Risk
+41/43
+
+
+===== PAGE 42 =====
+Question Details
+FSMS
+Question
+Observation
+Descr.
+high risk equipment cleaning program shall be
+established and the high risk equipment shall
+be maintained in a clean state
+Issue Notes:
+ADD:The coffee machine outlet had coffee residue, and the inner side of the water
+tank cover was moldy.
+ADD:The toaster was poorly cleaned.
+Recommended Corrective Actions:
+It is recommended to strengthen cleaning of high-risk equipment.
+Cleaning and Disinfection - CP14-10 - CP14-
+10 The wash and rinse temperature must be
+checked and recorded at the start of dish/pot
+washing machine and the final rinse tempera-
+ture must be abvoe 82（, and the surface tem-
+perature of tableware from the dishwasher
+shall be higher than 71（. Keep CP14-R03 Dish/
+Glass Washing Machine Temp. Record.
+Answer: Non-Compliant
+Issue Notes:
+ADD:The dishwasher's final rinse temperature could not consistently reach 82°C or
+above. Test strips used to measure the dishwasher temperature did not change
+color.
+Recommended Corrective Actions:
+Faulty equipment should be repaired in a timely manner.
+Medium Risk
+Integrated Pest Management (IPM) - CP15-2
+- CP15-2 Insecticide facilities are appropriately
+setup and in proper working order.
+Answer: Non-Compliant
+Issue Notes:
+Receiving Platform:The air curtain was not functioning properly.
+Recommended Corrective Actions:
+Low Risk
+42/43
+
+
+===== PAGE 43 =====
+Question Details
+FSMS
+Question
+Observation
+Descr.
+Timely repairs are required.
+Integrated Pest Management (IPM) - CP15-3
+- CP15-3 Prevent pest entering into by using
+screen window (≥16 holes/inch2), sizable cur-
+tain, air curtain, rodent guard; keep door
+closed; Cracks of wall and ceiling, cracks of
+door≥6mm must be sealed, the rodent screen
+at entrance of ventilation should small than
+6mm, place rodent screen (aperture < 10 mm)
+at entrance of sewer.
+Answer: Non-Compliant
+Issue Notes:
+Chinese Kitchen:A window directly connected to the outside was open without any
+pest control measures.
+Recommended Corrective Actions:
+It is recommended to seal the window or install screens that cannot be easily
+opened.
+Low Risk
+Michelle Zhang 06/05/2026 1:40 PM
+43/43

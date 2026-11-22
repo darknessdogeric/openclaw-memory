@@ -1,0 +1,182 @@
+{
+  "title": "提案融资 PPT",
+  "total_slides": 12,
+  "style_preset": "startup_roadshow",
+  "style_goal": "面向「投资人 (机构合伙人 + 独立投资人)」的提案融资演示",
+  "image_provider": "runninghub_g31",
+  "resolution": "4k",
+  "aspect_ratio": "16:9",
+  "brief": {
+    "total_slides": 12,
+    "style_preset": "startup_roadshow",
+    "audience": {
+      "who": "投资人 (机构合伙人 + 独立投资人)",
+      "knows": "赛道常识, 不了解我们的具体能力",
+      "wants": "判断这个团队能不能拿下这个大市场, 值不值得投",
+      "action": "进入下一轮尽调 / 本轮打钩"
+    },
+    "required_sections": [
+      {
+        "name": "问题",
+        "conclusion": "一个每年重复 N 次、人力成本极高的结构性浪费",
+        "slides": 2
+      },
+      {
+        "name": "方案",
+        "conclusion": "用协议层直接撮合供需, 砍掉中间环节",
+        "slides": 2
+      },
+      {
+        "name": "市场规模",
+        "conclusion": "TAM X 亿, 我们先吃 SAM Y 亿",
+        "slides": 2
+      },
+      {
+        "name": "团队与壁垒",
+        "conclusion": "行业积累 + 唯一的数据/渠道资产, 别人复制不了",
+        "slides": 3
+      },
+      {
+        "name": "融资",
+        "conclusion": "本轮融 X 千万, 18 个月跑到 Y 里程碑",
+        "slides": 3
+      }
+    ],
+    "data_sources": [
+      {
+        "type": "doc",
+        "where": "商业计划书 PDF",
+        "confidence": "🟢🟢 一手"
+      },
+      {
+        "type": "web",
+        "where": "市场研究报告 (TAM/SAM)",
+        "confidence": "🟡🟡 多源"
+      },
+      {
+        "type": "internal",
+        "where": "已签客户/试点数据 (需脱敏)",
+        "confidence": "🟢🟢 一手"
+      }
+    ],
+    "explicit_constraints": [
+      "不披露未公开客户名单, 用行业描述替代",
+      "TAM/SAM/SOM 口径必须写明",
+      "财务预测标注假设",
+      "不承诺回购或保底条款"
+    ],
+    "success_check": "投资人能复述'什么问题、凭什么你们、融多少换什么'",
+    "scenario": "提案融资",
+    "kimi_reference_prompt": "我把这份商业计划书PDF转成融资路演PPT，突出市场规模和团队优势"
+  },
+  "slides": [
+    {
+      "slide_number": 1,
+      "page_type": "cover",
+      "page_goal": "公司/项目 + 一句话",
+      "content": "封面",
+      "style_preset": "startup_roadshow",
+      "text_density": "medium",
+      "note": "TODO: 补 approved_text_lines / prompt_override"
+    },
+    {
+      "slide_number": 2,
+      "page_type": "cards",
+      "page_goal": "痛点 + 量化",
+      "content": "问题",
+      "style_preset": "startup_roadshow",
+      "text_density": "medium",
+      "note": "TODO: 补 approved_text_lines / prompt_override"
+    },
+    {
+      "slide_number": 3,
+      "page_type": "data",
+      "page_goal": "浪费的总量",
+      "content": "问题规模",
+      "style_preset": "startup_roadshow",
+      "text_density": "medium",
+      "note": "TODO: 补 approved_text_lines / prompt_override"
+    },
+    {
+      "slide_number": 4,
+      "page_type": "path",
+      "page_goal": "链路对比",
+      "content": "解决方案",
+      "style_preset": "startup_roadshow",
+      "text_density": "medium",
+      "note": "TODO: 补 approved_text_lines / prompt_override"
+    },
+    {
+      "slide_number": 5,
+      "page_type": "cards",
+      "page_goal": "怎么用",
+      "content": "产品形态",
+      "style_preset": "startup_roadshow",
+      "text_density": "medium",
+      "note": "TODO: 补 approved_text_lines / prompt_override"
+    },
+    {
+      "slide_number": 6,
+      "page_type": "data",
+      "page_goal": "TAM/SAM/SOM",
+      "content": "市场规模",
+      "style_preset": "startup_roadshow",
+      "text_density": "medium",
+      "note": "TODO: 补 approved_text_lines / prompt_override"
+    },
+    {
+      "slide_number": 7,
+      "page_type": "comparison",
+      "page_goal": "我们 vs 现有方案",
+      "content": "竞争格局",
+      "style_preset": "startup_roadshow",
+      "text_density": "medium",
+      "note": "TODO: 补 approved_text_lines / prompt_override"
+    },
+    {
+      "slide_number": 8,
+      "page_type": "cards",
+      "page_goal": "3 条不可复制",
+      "content": "壁垒",
+      "style_preset": "startup_roadshow",
+      "text_density": "medium",
+      "note": "TODO: 补 approved_text_lines / prompt_override"
+    },
+    {
+      "slide_number": 9,
+      "page_type": "cards",
+      "page_goal": "履历 + 分工",
+      "content": "团队",
+      "style_preset": "startup_roadshow",
+      "text_density": "medium",
+      "note": "TODO: 补 approved_text_lines / prompt_override"
+    },
+    {
+      "slide_number": 10,
+      "page_type": "data",
+      "page_goal": "18 个月",
+      "content": "里程碑与指标",
+      "style_preset": "startup_roadshow",
+      "text_density": "medium",
+      "note": "TODO: 补 approved_text_lines / prompt_override"
+    },
+    {
+      "slide_number": 11,
+      "page_type": "cards",
+      "page_goal": "用途 + 里程碑",
+      "content": "融资计划",
+      "style_preset": "startup_roadshow",
+      "text_density": "medium",
+      "note": "TODO: 补 approved_text_lines / prompt_override"
+    },
+    {
+      "slide_number": 12,
+      "page_type": "conclusion",
+      "page_goal": "联系方式 + 一句话",
+      "content": "收尾",
+      "style_preset": "startup_roadshow",
+      "text_density": "medium",
+      "note": "TODO: 补 approved_text_lines / prompt_override"
+    }
+  ]
+}

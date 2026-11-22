@@ -1,0 +1,60 @@
+{
+  "date": "2026-07-27",
+  "time": "21:30",
+  "report": "Entity Extractor · 每日21:30实体抽取",
+  "session": "cron:0eced1e9-8729-47d8-b8d6-34eff13ed780:run:ba0d7369-a9c4-4141-87c0-473e627f34be",
+  "generated_at": "2026-07-27T21:32+08:00",
+  "memory_file_scanned": "memory/2026-07-27.md",
+  "extraction_summary": {
+    "new_entities": 16,
+    "new_relations": 0,
+    "existing_entities_loaded": 0,
+    "existing_relations_loaded": 12,
+    "projects_mentioned_today": ["AHL", "医养酒店", "深度自迭代"]
+  },
+  "new_entities_detail": [
+    {"id": "pers_0387", "type": "Person", "name": "Eric", "confidence": 0.95},
+    {"id": "pers_0374", "type": "Person", "name": "B166ER", "confidence": 0.95},
+    {"id": "comp_0610", "type": "Company", "name": "安逸酒店集团", "confidence": 0.9},
+    {"id": "comp_0213", "type": "Company", "name": "AHL", "confidence": 0.95},
+    {"id": "comp_0540", "type": "Company", "name": "亚朵", "confidence": 0.8},
+    {"id": "comp_0901", "type": "Company", "name": "携程", "confidence": 0.8},
+    {"id": "comp_0896", "type": "Company", "name": "美团", "confidence": 0.8},
+    {"id": "proj_0213", "type": "Project", "name": "AHL", "confidence": 0.9},
+    {"id": "proj_0673", "type": "Project", "name": "医养酒店", "confidence": 0.9},
+    {"id": "proj_0047", "type": "Project", "name": "深度自迭代", "confidence": 0.85},
+    {"id": "proj_0469", "type": "Project", "name": "R60规则", "confidence": 0.85},
+    {"id": "even_0072", "type": "Event", "name": "党委会", "confidence": 0.95},
+    {"id": "even_0431", "type": "Event", "name": "D-day", "confidence": 0.95},
+    {"id": "even_0277", "type": "Event", "name": "公示期", "confidence": 0.9},
+    {"id": "even_0681", "type": "Event", "name": "入职", "confidence": 0.9},
+    {"id": "even_0101", "type": "Event", "name": "霍尔木兹海峡事件", "confidence": 0.9}
+  ],
+  "entities_by_type": {
+    "Person": 2,
+    "Company": 5,
+    "Project": 4,
+    "Event": 5,
+    "Place": 0,
+    "Tool": 0
+  },
+  "graph_stats": {
+    "graph_total_entities": 46,
+    "graph_total_relations": 12,
+    "relation_trend_top5": [
+      "pers_0387 works_at comp_安逸酒店集团",
+      "pers_0387 即将入职 comp_安逸酒店集团",
+      "proj_1244战略 协同 proj_AHL",
+      "event_D-day 触发事件 event_党委会",
+      "proj_AHL 落地于 comp_安逸酒店集团"
+    ]
+  },
+  "4projects_dashboard": {
+    "AHL": "今日提及",
+    "1244战略": "待入职后融合",
+    "医养酒店": "今日提及",
+    "深度自迭代": "今日提及"
+  },
+  "obsidian_push": "pending",
+  "notes": "relation_extractor 今日0关系新增，关系模式需要丰富；16实体均为entity模式扫描，无relation模式匹配"
+}

@@ -1,0 +1,40 @@
+{
+  "date": "2026-08-09",
+  "generated": "2026-08-09T21:03:27.054726",
+  "source": "晚间自迭代cron",
+  "R12_self_check": {
+    "most_applied": {
+      "rule": "R258",
+      "description": "cron/webchat通道分离",
+      "evidence": "Eric今日11:15-11:39有webchat活动，但cron持续DORMANT，R258严格执行，零偏差"
+    },
+    "pretended_but_not_triggered": null,
+    "notes": "所有规则均为真执行，无假装应用"
+  },
+  "rules_health": {
+    "R66": {
+      "status": "active",
+      "applied": true
+    },
+    "R69": {
+      "status": "day_10_30",
+      "expires": "2026-08-30"
+    },
+    "R258": {
+      "status": "strict",
+      "applied": true
+    },
+    "R271": {
+      "status": "verified",
+      "method": "python_append"
+    },
+    "R276": {
+      "status": "draft_complete",
+      "pending": "Eric_feedback"
+    }
+  },
+  "null_count": 449,
+  "hbCount": 2770,
+  "Eric_silent_hours_cron": "589h+",
+  "Eric_webchat_activity_today": "11:15-11:39"
+}

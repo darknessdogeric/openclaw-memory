@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>中国上市酒店集团全景 · 封面 v3.3 商务风</title>
+<style>
+/* 商务风 · 极简 · 浅米底 + 海军蓝 + 暖金 */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root{
+  --bg:#F5F2EA;
+  --ink:#1A1A1A;
+  --navy:#1A2A4A;
+  --red:#C8102E;
+  --gold:#B8956A;
+  --gold-deep:#8B6F47;
+  --line:#D9D2C0;
+  --muted:#8B8578;
+}
+
+html, body {
+  width: 1080px; height: 1440px;
+  background: var(--bg); color: var(--ink);
+  font-family: "Inter", "Helvetica Neue", "PingFang SC", "Microsoft YaHei", sans-serif;
+  overflow: hidden; line-height: 1.45;
+}
+.relative { position: relative; }
+
+/* ============ 整体框架 ============ */
+.layout {
+  position: relative;
+  width: 1080px; height: 1440px;
+  padding: 36px 70px 28px;
+  display: flex; flex-direction: column;
+}
+
+/* ============ Top bar (极简) ============ */
+.topbar {
+  display: flex; justify-content: space-between; align-items: baseline;
+  font-size: 13px; letter-spacing: 3px;
+  color: var(--navy); font-weight: 600; text-transform: uppercase;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--ink);
+}
+.topbar .right { color: var(--muted); font-weight: 500; }
+
+/* ============ Hero · 标题 ============ */
+.hero {
+  margin-top: 60px;
+}
+.hero .pre {
+  display: inline-flex; align-items: center; gap: 12px;
+  font-size: 18px; color: var(--gold-deep);
+  letter-spacing: 6px; font-weight: 600;
+  margin-bottom: 22px;
+}
+.hero .pre .dash {
+  width: 40px; height: 1px; background: var(--gold-deep);
+}
+
+.hero .title {
+  font-size: 122px; font-weight: 900;
+  line-height: 1.02; letter-spacing: -3px;
+  color: var(--red);
+  margin-bottom: 14px;
+}
+.hero .title em {
+  font-style: normal; color: var(--red); position: relative;
+}
+.hero .title em::after {
+  content: ""; position: absolute;
+  left: 0; right: 0; bottom: 10px; height: 8px;
+  background: var(--gold); opacity: 0.55; z-index: -1;
+}
+
+.hero .lede {
+  font-size: 26px; font-weight: 500;
+  color: var(--ink); letter-spacing: 1px;
+  margin-top: 18px; line-height: 1.5;
+}
+.hero .lede .hl { color: var(--navy); font-weight: 700; }
+
+/* ============ Stat band · 商务报告风 ============ */
+.stats {
+  margin-top: 50px;
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid var(--ink);
+  border-bottom: 1px solid var(--ink);
+  padding: 24px 0;
+}
+.stat {
+  padding: 0 24px;
+  border-left: 1px solid var(--line);
+}
+.stat:first-child { border-left: none; padding-left: 0; }
+.stat .lbl {
+  font-size: 12px; color: var(--muted);
+  letter-spacing: 2px; font-weight: 600;
+  text-transform: uppercase; margin-bottom: 12px;
+}
+.stat .v {
+  font-size: 56px; font-weight: 900; color: var(--navy);
+  line-height: 1.0; letter-spacing: -2px;
+  font-family: "Inter", sans-serif;
+}
+.stat .v .u {
+  font-size: 28px; color: var(--gold); margin-left: 4px; font-weight: 700;
+}
+.stat .note {
+  font-size: 14px; color: var(--muted); margin-top: 6px;
+}
+
+/* ============ 12 辑 preview · 极简 ============ */
+.preview {
+  margin-top: 42px;
+}
+.preview-head {
+  display: flex; justify-content: space-between; align-items: baseline;
+  margin-bottom: 18px;
+}
+.preview-head .ttl {
+  font-size: 16px; color: var(--navy);
+  font-weight: 700; letter-spacing: 4px; text-transform: uppercase;
+}
+.preview-head .meta {
+  font-size: 13px; color: var(--muted); letter-spacing: 2px;
+}
+
+.grid12 {
+  display: grid; grid-template-columns: repeat(6, 1fr); gap: 0;
+  border-top: 1px solid var(--line);
+}
+.g {
+  padding: 16px 8px 14px;
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  display: flex; flex-direction: column; gap: 4px;
+}
+.g:nth-child(6n) { border-right: none; }
+.g .n {
+  font-size: 12px; color: var(--muted); font-family: "Inter", sans-serif;
+  font-weight: 600; letter-spacing: 1px;
+}
+.g .nm {
+  font-size: 17px; color: var(--ink); font-weight: 700; letter-spacing: 2px;
+}
+.g .dot {
+  display: inline-block; width: 6px; height: 6px; border-radius: 50%;
+  margin-top: 4px;
+}
+.g.d .dot { background: #C8102E; }
+.g.f .dot { background: var(--navy); }
+.g.t .dot { background: var(--gold); }
+.g.s .dot { background: #4A6B5E; }
+
+/* ============ Kicker (中部填充) ============ */
+.kicker {
+  margin-top: 24px;
+  display: flex; align-items: center; gap: 18px;
+  padding: 14px 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.kicker .k-num {
+  font-size: 56px; font-weight: 900; color: var(--navy);
+  font-family: "Inter", sans-serif; letter-spacing: -2px;
+  line-height: 1; min-width: 80px;
+}
+.kicker .k-body {
+  flex: 1;
+  display: flex; flex-direction: column; gap: 4px;
+}
+.kicker .k-body .k1 {
+  font-size: 16px; color: var(--navy); font-weight: 700;
+  letter-spacing: 2px; text-transform: uppercase;
+}
+.kicker .k-body .k2 {
+  font-size: 13px; color: var(--muted); letter-spacing: 1px; line-height: 1.55;
+}
+
+/* ============ Insights · 底部填充 ============ */
+.insights {
+  margin-top: 24px;
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.ins {
+  padding: 16px 16px;
+  border-left: 1px solid var(--line);
+  display: flex; align-items: baseline; gap: 12px;
+}
+.ins:first-child { border-left: none; padding-left: 0; }
+.ins .i-num {
+  font-size: 28px; font-weight: 900; color: var(--gold-deep);
+  font-family: "Inter", sans-serif; letter-spacing: -1px;
+  line-height: 1; flex-shrink: 0;
+}
+.ins .i-tx {
+  font-size: 14px; color: var(--ink); font-weight: 600;
+  letter-spacing: 0.5px; line-height: 1.4;
+}
+
+/* ============ Footer ============ */
+.footer {
+  margin-top: 22px;
+  padding-top: 18px;
+  border-top: 1px solid var(--ink);
+  display: flex; justify-content: space-between; align-items: baseline;
+}
+.footer .l {
+  font-size: 13px; color: var(--navy);
+  font-weight: 700; letter-spacing: 4px; text-transform: uppercase;
+}
+.footer .l .brand { color: var(--gold-deep); }
+.footer .r {
+  font-size: 13px; color: var(--muted); letter-spacing: 2px;
+}
+
+/* ============ 嵌入水印 ============ */
+.wm {
+  position: absolute; right: 16px; bottom: 12px;
+  font-size: 10px; color: rgba(26,26,26,0.32);
+  letter-spacing: 2px; font-family: "Inter", sans-serif;
+  pointer-events: none;
+}
+</style>
+</head>
+<body>
+<div class="relative">
+<div class="layout">
+
+  <!-- 顶部 -->
+  <div class="topbar">
+    <div class="left">A REPORT BY ERIC B166ER · HOTEL INDUSTRY</div>
+    <div class="right">NO. 00 / 12 · 2026.07.24</div>
+  </div>
+
+  <!-- Hero -->
+  <div class="hero">
+    <div class="pre"><span class="dash"></span><span>谁在定义</span></div>
+    <div class="title">中国<em>酒店</em></div>
+    <div class="lede">
+      <span class="hl">12 上市集团</span> · 内资 5 家 + 外资 5 家<br>
+      一图看懂 · 头部门局
+    </div>
+  </div>
+
+  <!-- Stat band -->
+  <div class="stats">
+    <div class="stat">
+      <div class="lbl">Concentration</div>
+      <div class="v">70<span class="u">%</span></div>
+      <div class="note">TOP10 集中度 · 2030E</div>
+    </div>
+    <div class="stat">
+      <div class="lbl">Members</div>
+      <div class="v">1.7<span class="u">亿</span></div>
+      <div class="note">万豪一家 = 中国总人口</div>
+    </div>
+    <div class="stat">
+      <div class="lbl">Inventory</div>
+      <div class="v">300<span class="u">万+</span></div>
+      <div class="note">10 集团客房合计</div>
+    </div>
+  </div>
+
+  <!-- 12 辑 preview -->
+  <div class="preview">
+    <div class="preview-head">
+      <div class="ttl">12 辑 一 图 一 集 团</div>
+      <div class="meta">DOMESTIC · FOREIGN · TREND · STRUCTURE</div>
+    </div>
+    <div class="grid12">
+      <div class="g d"><div class="n">01</div><div class="nm">锦江</div><span class="dot"></span></div>
+      <div class="g d"><div class="n">02</div><div class="nm">华住</div><span class="dot"></span></div>
+      <div class="g d"><div class="n">03</div><div class="nm">首旅</div><span class="dot"></span></div>
+      <div class="g d"><div class="n">04</div><div class="nm">亚朵</div><span class="dot"></span></div>
+      <div class="g d"><div class="n">05</div><div class="nm">格林</div><span class="dot"></span></div>
+      <div class="g f"><div class="n">06</div><div class="nm">万豪</div><span class="dot"></span></div>
+      <div class="g f"><div class="n">07</div><div class="nm">洲际</div><span class="dot"></span></div>
+      <div class="g f"><div class="n">08</div><div class="nm">希尔顿</div><span class="dot"></span></div>
+      <div class="g f"><div class="n">09</div><div class="nm">雅高</div><span class="dot"></span></div>
+      <div class="g f"><div class="n">10</div><div class="nm">凯悦</div><span class="dot"></span></div>
+      <div class="g t"><div class="n">11</div><div class="nm">趋势</div><span class="dot"></span></div>
+      <div class="g s"><div class="n">12</div><div class="nm">结构</div><span class="dot"></span></div>
+    </div>
+  </div>
+
+  <!-- Kicker 填充底部 -->
+  <div class="kicker">
+    <div class="k-num">12</div>
+    <div class="k-body">
+      <div class="k1">本辑 · 集团简介全景</div>
+      <div class="k2">从锦江到凯悦 — 10 集团对照 + 趋势 + 结构, 一图闭环.</div>
+    </div>
+  </div>
+
+  <!-- 洞察卡 · 填充底部 -->
+  <div class="insights">
+    <div class="ins">
+      <div class="i-num">01</div>
+      <div class="i-tx">内资 5 家 占中国 60%+ 客房</div>
+    </div>
+    <div class="ins">
+      <div class="i-num">02</div>
+      <div class="i-tx">外资 5 家 主导奢华与会员体系</div>
+    </div>
+    <div class="ins">
+      <div class="i-num">03</div>
+      <div class="i-tx">TOP10 集中度 2030 年破 70%</div>
+    </div>
+  </div>
+
+  <!-- 底部 -->
+  <div class="footer">
+    <div class="l"><span class="brand">ERIC的B166ER出品</span> · METHODOLOGY</div>
+    <div class="r">v3.3 · 2026.07.24</div>
+  </div>
+
+</div>
+
+<div class="wm">B166ER · 2026-07-24</div>
+</div>
+</body>
+</html>

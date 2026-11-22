@@ -1,0 +1,70 @@
+酒店专属系统SPECIFICSYSTEMS
+6.02
+购买并安装所需的物业管理系统（PMs）界面。Purchase and install
+required Property Management System (PMs) interface.
+必须购买和安装包含洲际设置的最新版的Opera PMS系统。
+Must operate the latest version of Opera PMS with IHG Shell.
+酒店客用系统GUESTSYSTEMS
+6.03
+必须提供标准级别的网络接入。 必须提供 IHGConnect 宽带程序
+的最低网络带宽。
+The standard level of Internet access must be provided. The IHG
+Connect broadband program minimum bandwidth for Internet must be
+provided.
+6.04
+整个客用无线网络必须覆盖酒店客人能到达的所有区域，包括客房
+区域和公共区域。无线方案必须按IHGConnect的要求实施，并符
+合酒店品牌的标准。
+The guest wireless network must cover all areas accessible to hotel
+guests, including guestroom areas and public areas. Wifi solution must
+follow the IHG Connect requirement and hotel brand standard.
+6.05
+必须实施用于访客互联网接入的IHGConnect程序。The IHG
+Connect programme for Guest Internet Access must be implemented.
+所有客房和公共区域的最小信号强度为-65dBm。·Aminimum
+signal strength of -65 dBm in all guest rooms & public areas.
+必须允许每位访客连接至少两台设备·Each guest must be allowed
+to connect a minimum of two devices.
+办公系统OFFICESYSTEMS
+6.06
+接待处：扫描仪的数量必须符合以下条件：扫描仪数量=（去年的
+平均入住率*总房间数）／100。Reception：The number of scanners
+must comply with the following: Number of scanners = (Average
+occupancy rate of last year * total number of rooms)/100.
+IT网络基础架构ITINFRASTRUCTURE
+计划表PROGRAMME
+7.01
+我理解上述《物业改造计划书》（PIP）为必须进行的工作纲要，并且所有的工作须符合洲际标准。附上的《物业改
+造计划书》内的工作大纲并未注明任何可能由地方或国家法律、法规和规定授权的要求。The Property Improvement
+Plan (PiP) is a summary of the work that will be required, and that all work must be completed in conformity with all
+applicable IHG Standards. The attached work outlined in this PIP does not address all requirements that may be mandated
+by local or national codes, laws or regulations.
+7.02
+Improvement items are grouped under the following criteria:
+a)
+Criteria1：由于长期使用带来损耗而需要改动。
+Items to be changed due to age related factors
+b)
+Criteria2:满足市场需求而做出改动(与其他竞争酒店的质量与设计比较)。
+Items to be changed due to market relevance or competitive set
+c)
+Criteria3:由于品牌要求需要做出改动
+Itemstobechanged specificallyduetoBrand Standard requirements
+7.03
+"Design Signatures / Brand Standards" means the Hotel Design manuals provided to the Owner pursuant to the Agreement.
+“设计/品牌标准”是指根据管理协议向业主提供的国际酒店设计指南。
+7.04
+物业主公司同意采用洲际酒店集团认可的顾问公司和供应商的服务。
+The Owning Company agrees to engage the services of IHG Qualified Consultants and Vendors.
+7.05
+为了成功实施下面列出的范围，业主应委任以下设计顾问：室内设计师，MEP服务，照明设计师，厨房设计师，
+标牌和图形顾问以及AV顾问。
+To successfully complete the listed scope the Owner should appoint the following design consultants: Interior designer,
+MEP services, lighting designer, kitchen designer, signage and graphics consultant and AV consultant.
+7.06
+如果业主要求推延完工日期，业主必须在完工日期之前提交一份书面申请给 IHG。如果IHG批准了推延日期，IHG
+将设定新的完工日期并且IHG会（自行选择）要求业主修改任何之前批准的改造计划和PIP，以符合酒店当前的设
+计，设备或其他方面。 If the Owner request an extension to the completion date,the Owner must submit a written request
+to IHG before the completion date. If IHG approves the extension, IHG will set new completion dates and IHG may (at its
+equipment or other aspects of the Hotel.
+12

@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>AHL · 同构双矩阵范式</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body {
+    width: 1080px;
+    height: 1920px;
+    font-family: "Source Han Sans SC", "Noto Sans CJK SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+    background: radial-gradient(ellipse at top, #0a1a3a 0%, #050a1f 50%, #02060f 100%);
+    color: #e8f4ff;
+    overflow: hidden;
+    position: relative;
+  }
+  body::before {
+    content: "";
+    position: absolute; inset: 0;
+    background-image:
+      radial-gradient(1px 1px at 12% 8%, #ffffff, transparent),
+      radial-gradient(1px 1px at 28% 22%, #b4d4ff, transparent),
+      radial-gradient(1px 1px at 45% 12%, #ffffff, transparent),
+      radial-gradient(1px 1px at 65% 35%, #88aaff, transparent),
+      radial-gradient(1px 1px at 78% 18%, #ffffff, transparent),
+      radial-gradient(1px 1px at 92% 28%, #d4d4ff, transparent),
+      radial-gradient(1px 1px at 18% 62%, #ffffff, transparent),
+      radial-gradient(1px 1px at 52% 78%, #b4d4ff, transparent),
+      radial-gradient(1px 1px at 85% 65%, #ffffff, transparent),
+      radial-gradient(1px 1px at 8% 92%, #88aaff, transparent),
+      radial-gradient(2px 2px at 38% 88%, rgba(0,212,255,0.4), transparent),
+      radial-gradient(2px 2px at 72% 92%, rgba(255,215,0,0.3), transparent);
+    opacity: 0.5;
+    pointer-events: none;
+  }
+  .topbar {
+    width: 100%; height: 8px;
+    background: linear-gradient(90deg, #00d4ff 0%, #8b5cf6 50%, #ffd700 100%);
+    box-shadow: 0 0 20px rgba(0, 212, 255, 0.6);
+  }
+  .container { padding: 50px 60px 50px; position: relative; z-index: 2; }
+
+  /* HEADER - 极简 */
+  .header { text-align: center; margin-bottom: 36px; }
+  .header .tag {
+    display: inline-block; font-size: 16px; letter-spacing: 6px;
+    color: #00d4ff; border: 1px solid rgba(0,212,255,0.5);
+    padding: 4px 18px; border-radius: 30px; margin-bottom: 16px;
+    background: rgba(0, 212, 255, 0.08);
+  }
+  .header h1 {
+    font-size: 60px; font-weight: 900; letter-spacing: 4px; line-height: 1.1;
+    background: linear-gradient(90deg, #00d4ff 0%, #8b5cf6 50%, #ffd700 100%);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 0 0 30px rgba(0, 212, 255, 0.4);
+    margin-bottom: 14px;
+  }
+  .header .sub-cn { font-size: 26px; color: #ffd700; font-weight: 600; letter-spacing: 3px; text-shadow: 0 0 18px rgba(255, 215, 0, 0.4); }
+  .header .sub-en { font-size: 16px; color: #8b9fcf; letter-spacing: 4px; margin-top: 8px; }
+
+  /* 核心概念条 */
+  .concept-bar {
+    margin: 0 auto 28px;
+    padding: 14px 22px;
+    text-align: center;
+    border-radius: 12px;
+    background: linear-gradient(90deg, rgba(0,212,255,0.10), rgba(139,92,246,0.10), rgba(255,215,0,0.10));
+    border: 1px solid rgba(255,215,0,0.3);
+    max-width: 880px;
+  }
+  .concept-bar .key {
+    font-size: 20px;
+    font-weight: 800;
+    color: #ffd700;
+    letter-spacing: 3px;
+  }
+  .concept-bar .key em {
+    font-style: normal;
+    background: linear-gradient(90deg, #00d4ff, #8b5cf6, #ffd700);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-size: 24px;
+    padding: 0 6px;
+  }
+  .concept-bar .sub {
+    font-size: 13px;
+    color: #8b9fcf;
+    letter-spacing: 4px;
+    margin-top: 6px;
+  }
+
+  /* ==== 三层并列 ==== */
+  .tiers {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 22px;
+    margin-bottom: 14px;
+  }
+  .tier {
+    border-radius: 18px;
+    padding: 18px 16px 22px;
+    position: relative;
+    overflow: hidden;
+  }
+  .tier-1 { background: linear-gradient(160deg, rgba(0,212,255,0.18), rgba(0,212,255,0.04)); border: 1px solid rgba(0,212,255,0.5); box-shadow: 0 0 30px rgba(0,212,255,0.15); }
+  .tier-2 { background: linear-gradient(160deg, rgba(139,92,246,0.18), rgba(139,92,246,0.04)); border: 1px solid rgba(139,92,246,0.5); box-shadow: 0 0 30px rgba(139,92,246,0.15); }
+  .tier-3 { background: linear-gradient(160deg, rgba(255,215,0,0.18), rgba(255,215,0,0.04)); border: 1.5px solid rgba(255,215,0,0.5); box-shadow: 0 0 30px rgba(255,215,0,0.2); }
+
+  .tier-head {
+    text-align: center;
+    margin-bottom: 14px;
+    padding-bottom: 12px;
+    border-bottom: 1px dashed rgba(255,255,255,0.15);
+  }
+  .tier-icon {
+    font-size: 64px; line-height: 1;
+    margin-bottom: 8px; display: block;
+  }
+  .tier-name {
+    font-size: 32px; font-weight: 900;
+    letter-spacing: 4px;
+    margin-bottom: 4px;
+  }
+  .tier-1 .tier-name { color: #00d4ff; text-shadow: 0 0 15px rgba(0,212,255,0.4); }
+  .tier-2 .tier-name { color: #a78bfa; text-shadow: 0 0 15px rgba(139,92,246,0.4); }
+  .tier-3 .tier-name { color: #ffd700; text-shadow: 0 0 15px rgba(255,215,0,0.4); }
+  .tier-en {
+    font-size: 11px; letter-spacing: 3px; font-weight: 400;
+  }
+  .tier-1 .tier-en { color: #88aaff; }
+  .tier-2 .tier-en { color: #c4b5fd; }
+  .tier-3 .tier-en { color: #ffe88a; }
+
+  /* 矩阵 mini - 每个层级都是完整双矩阵 */
+  .matrix-mini {
+    margin: 12px 0;
+  }
+  .matrix-side {
+    border-radius: 10px;
+    padding: 8px 8px;
+    margin-bottom: 6px;
+    text-align: center;
+    position: relative;
+  }
+  .matrix-side .label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+  }
+  .matrix-side .desc {
+    font-size: 9px;
+    letter-spacing: 1px;
+    color: #c4d4ef;
+    line-height: 1.3;
+  }
+  .tier-1 .matrix-c-side { background: rgba(0,212,255,0.15); border: 1px solid rgba(0,212,255,0.3); }
+  .tier-1 .matrix-c-side .label { color: #00d4ff; }
+  .tier-1 .matrix-b-side { background: rgba(0,212,255,0.10); border: 1px solid rgba(0,212,255,0.2); }
+  .tier-1 .matrix-b-side .label { color: #b4d4ff; }
+  .tier-1 .p2p-mini { color: #00d4ff; font-size: 14px; padding: 2px 0; }
+
+  .tier-2 .matrix-c-side { background: rgba(139,92,246,0.15); border: 1px solid rgba(139,92,246,0.3); }
+  .tier-2 .matrix-c-side .label { color: #a78bfa; }
+  .tier-2 .matrix-b-side { background: rgba(139,92,246,0.10); border: 1px solid rgba(139,92,246,0.2); }
+  .tier-2 .matrix-b-side .label { color: #c4b5fd; }
+  .tier-2 .p2p-mini { color: #a78bfa; font-size: 14px; padding: 2px 0; }
+
+  .tier-3 .matrix-c-side { background: rgba(255,215,0,0.15); border: 1px solid rgba(255,215,0,0.3); }
+  .tier-3 .matrix-c-side .label { color: #ffd700; }
+  .tier-3 .matrix-b-side { background: rgba(255,215,0,0.10); border: 1px solid rgba(255,215,0,0.2); }
+  .tier-3 .matrix-b-side .label { color: #ffe88a; }
+  .tier-3 .p2p-mini { color: #ffd700; font-size: 14px; padding: 2px 0; }
+
+  .p2p-mini .arrow { font-size: 14px; letter-spacing: 6px; }
+  .p2p-mini .proto { font-size: 8px; color: #8b9fcf; letter-spacing: 1px; margin-top: 2px; }
+
+  /* 关键洞察 */
+  .insight {
+    margin-top: 10px;
+    padding: 8px 6px;
+    border-radius: 8px;
+    background: rgba(0,0,0,0.25);
+    border: 1px dashed rgba(255,255,255,0.12);
+    text-align: center;
+  }
+  .insight .icon-line { font-size: 18px; margin-bottom: 4px; }
+  .insight .text { font-size: 11px; line-height: 1.4; color: #c4d4ef; }
+  .insight strong { font-weight: 700; }
+  .tier-1 .insight strong { color: #00d4ff; }
+  .tier-2 .insight strong { color: #a78bfa; }
+  .tier-3 .insight strong { color: #ffd700; }
+
+  /* 同构标识 */
+  .iso-bar {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 22px;
+    margin: 0 0 28px;
+  }
+  .iso-arrow {
+    text-align: center;
+    font-size: 22px;
+    color: #ffd700;
+    text-shadow: 0 0 12px rgba(255,215,0,0.7);
+    padding: 10px 0;
+    border-radius: 8px;
+    background: rgba(255,215,0,0.08);
+    border: 1px dashed rgba(255,215,0,0.3);
+    letter-spacing: 8px;
+    font-weight: 800;
+  }
+
+  /* 自相似核心提示 */
+  .selfsimilar {
+    margin-bottom: 24px;
+    padding: 18px 22px;
+    border-radius: 14px;
+    background: linear-gradient(135deg, rgba(74,222,128,0.08), rgba(0,212,255,0.08));
+    border: 1px solid rgba(74,222,128,0.3);
+  }
+  .selfsimilar .ss-title {
+    font-size: 16px; font-weight: 800;
+    color: #4ade80;
+    letter-spacing: 3px;
+    margin-bottom: 8px;
+    text-align: center;
+  }
+  .selfsimilar .ss-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+  .ss-item {
+    text-align: center;
+    padding: 8px;
+    border-radius: 8px;
+    background: rgba(0,0,0,0.3);
+    border: 1px solid rgba(255,255,255,0.08);
+  }
+  .ss-item .ss-icon { font-size: 22px; margin-bottom: 4px; }
+  .ss-item .ss-text {
+    font-size: 11px; line-height: 1.4; color: #c4d4ef; letter-spacing: 1px;
+  }
+  .ss-item .ss-text strong { color: #4ade80; font-weight: 700; }
+
+  /* 底部金句 */
+  .footer-callout {
+    margin-top: 28px;
+    text-align: center;
+    padding: 24px 20px;
+    border-radius: 14px;
+    background: linear-gradient(135deg, rgba(0,212,255,0.10), rgba(139,92,246,0.10), rgba(255,215,0,0.10));
+    border: 1px solid rgba(0,212,255,0.4);
+  }
+  .footer-callout .tagline {
+    font-size: 28px;
+    font-weight: 800;
+    background: linear-gradient(90deg, #00d4ff, #8b5cf6, #ffd700);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: 3px;
+    line-height: 1.5;
+  }
+  .footer-callout .small {
+    font-size: 13px;
+    color: #8b9fcf;
+    margin-top: 10px;
+    letter-spacing: 4px;
+  }
+
+  .signoff {
+    display: flex; justify-content: space-between; align-items: center;
+    margin-top: 18px;
+    padding-top: 12px;
+    border-top: 1px solid rgba(0,212,255,0.2);
+  }
+  .signoff .contact { font-size: 14px; color: #8b9fcf; letter-spacing: 1px; }
+  .signoff .contact strong { color: #00d4ff; font-weight: 600; }
+  .signoff .watermark { font-size: 12px; color: #4a5575; letter-spacing: 3px; }
+
+</style>
+</head>
+<body>
+  <div class="topbar"></div>
+  <div class="container">
+
+    <!-- HEADER -->
+    <div class="header">
+      <span class="tag">AHL · ISOMORPHIC DUAL-MATRIX</span>
+      <h1>AHL · 同构双矩阵范式</h1>
+      <div class="sub-cn">三层 · 同一架构 · 各 自 完 备</div>
+      <div class="sub-en">SINGLE · GROUP · INDUSTRY · SAME PATTERN</div>
+    </div>
+
+    <!-- 核心概念 -->
+    <div class="concept-bar">
+      <div class="key"><em>分形架构</em> · FRACTAL ARCHITECTURE</div>
+      <div class="sub">每层都是完整的双矩阵 · 大小尺度 · 自相似</div>
+    </div>
+
+    <!-- 三层并列 -->
+    <div class="tiers">
+
+      <!-- LEVEL 1: 单店 -->
+      <div class="tier tier-1">
+        <div class="tier-head">
+          <span class="tier-icon">🏨</span>
+          <div class="tier-name">单店</div>
+          <div class="tier-en">SINGLE HOTEL</div>
+        </div>
+        <div class="matrix-mini">
+          <div class="matrix-side matrix-c-side">
+            <div class="label">C 矩阵</div>
+            <div class="desc">本店客人 Agent 群</div>
+          </div>
+          <div class="p2p-mini">
+            <div class="arrow">⇄ ⇄ ⇄</div>
+            <div class="proto">AHL · 协议层</div>
+          </div>
+          <div class="matrix-side matrix-b-side">
+            <div class="label">B 矩阵</div>
+            <div class="desc">本店 + 周边商家</div>
+          </div>
+        </div>
+        <div class="insight">
+          <div class="icon-line">⚡ 1 家店也是完整闭环</div>
+          <div class="text"><strong>自完备</strong> · 可独立运营</div>
+        </div>
+      </div>
+
+      <!-- LEVEL 2: 集团 -->
+      <div class="tier tier-2">
+        <div class="tier-head">
+          <span class="tier-icon">🏢</span>
+          <div class="tier-name">集团</div>
+          <div class="tier-en">HOTEL GROUP</div>
+        </div>
+        <div class="matrix-mini">
+          <div class="matrix-side matrix-c-side">
+            <div class="label">C 矩阵</div>
+            <div class="desc">集团会员 Agent 群</div>
+          </div>
+          <div class="p2p-mini">
+            <div class="arrow">⇄ ⇄ ⇄</div>
+            <div class="proto">AHL · 协议层</div>
+          </div>
+          <div class="matrix-side matrix-b-side">
+            <div class="label">B 矩阵</div>
+            <div class="desc">集团 N 家酒店 Agent</div>
+          </div>
+        </div>
+        <div class="insight">
+          <div class="icon-line">⚡ N 家店也是完整闭环</div>
+          <div class="text"><strong>自完备</strong> · 可独立运营</div>
+        </div>
+      </div>
+
+      <!-- LEVEL 3: 文旅产业 -->
+      <div class="tier tier-3">
+        <div class="tier-head">
+          <span class="tier-icon">🌏</span>
+          <div class="tier-name">文旅</div>
+          <div class="tier-en">FULL INDUSTRY</div>
+        </div>
+        <div class="matrix-mini">
+          <div class="matrix-side matrix-c-side">
+            <div class="label">C 矩阵</div>
+            <div class="desc">全体消费者 Agent</div>
+          </div>
+          <div class="p2p-mini">
+            <div class="arrow">⇄ ⇄ ⇄</div>
+            <div class="proto">AHL · 协议层</div>
+          </div>
+          <div class="matrix-side matrix-b-side">
+            <div class="label">B 矩阵</div>
+            <div class="desc">酒店+餐饮+零售+娱乐+景区+交通</div>
+          </div>
+        </div>
+        <div class="insight">
+          <div class="icon-line">⚡ 全产业也是完整闭环</div>
+          <div class="text"><strong>自完备</strong> · 可独立运营</div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- 同构标识 -->
+    <div class="iso-bar">
+      <div class="iso-arrow">⇕ 同构 ⇕</div>
+      <div class="iso-arrow">⇕ 同构 ⇕</div>
+      <div class="iso-arrow">⇕ 自相似 ⇕</div>
+    </div>
+
+    <!-- 自相似核心 -->
+    <div class="selfsimilar">
+      <div class="ss-title">🔄 三个关键洞察 · KEY INSIGHTS</div>
+      <div class="ss-grid">
+        <div class="ss-item">
+          <div class="ss-icon">🪞</div>
+          <div class="ss-text"><strong>同构</strong><br>三层结构完全相同</div>
+        </div>
+        <div class="ss-item">
+          <div class="ss-icon">🧩</div>
+          <div class="ss-text"><strong>自完备</strong><br>每层独立可运营</div>
+        </div>
+        <div class="ss-item">
+          <div class="ss-icon">♾️</div>
+          <div class="ss-text"><strong>可嵌套</strong><br>大层包含小层</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer-callout">
+      <div class="tagline">
+        一个范式 · 三层同构 · 各自完备<br>
+        小到单店 · 大到文旅 · 同一种解法
+      </div>
+      <div class="small">ONE PARADIGM · THREE TIERS · FRACTAL BY DESIGN</div>
+    </div>
+
+    <div class="signoff">
+      <div class="contact">
+        联系：<strong>17760348653</strong> &nbsp;|&nbsp; 张实 · Eric
+      </div>
+      <div class="watermark">ERIC的B166ER出品</div>
+    </div>
+
+  </div>
+</body>
+</html>

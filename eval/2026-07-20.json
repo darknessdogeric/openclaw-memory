@@ -1,0 +1,278 @@
+{
+  "date": "2026-07-20",
+  "report_version": "v2.0-daily-business-intel",
+  "generated_at": "2026-07-20T10:35:00+08:00",
+  "source": "M/W/F 10:00 每日商业情报 cron",
+  "framework": "6步循环: Scan→Discover→Integrate→Compare→Predict→Recommend",
+  "executive_summary": "D+4静默期第10天。3条头条信号：(1)中东冲突升级为实质封锁，布伦特$91+/WTI$84.31，A股政策顶确认（国家队+证监会同日双发）；(2)DeepSeek V4满血版7/21发布，配合Kimi K3算力暂停=国产大模型+国产算力闭环确认=AHL Agent升级PoC窗口；(3)酒店6月数据呈现中低端RevPAR环比+6.2% vs 中高端-10.6%结构性反转，1244战略下沉路径获验证。Induction window今日最后完整日(7/21截止)，Eric随时可能收到入职确认。",
+  "scan_signals": {
+    "geopolitical": {
+      "headline_events": [
+        "7/18 美中央司令部宣布美军开始对伊朗新一轮空袭(7月内连续7晚)",
+        "7/19 伊朗击落美军MQ-9无人机",
+        "7/19 IRGC确认霍尔木兹海峡封锁已执行",
+        "7/19 美军约旦基地5天4袭，2名美军死亡",
+        "7/19 伊朗最高领袖: 已为美国准备'难以忘记的教训'",
+        "7/19 伊朗武装部队: 将'毁灭性回击'",
+        "伊朗前外长建议出动地面部队夺取美军中东基地",
+        "以军: 做好立即恢复对伊朗作战准备"
+      ],
+      "energy": {
+        "wti": 84.31,
+        "wti_change_pct": 3.0,
+        "brent": 91,
+        "brent_dark_pool_breakout": 88,
+        "nymex_breakout": 84,
+        "china_gasoline_july17": "92# +0.24元/升, 95# +0.25元/升 (2026第九涨)",
+        "outlook_window": "7/21-25 Araqchi卡塔尔斡旋"
+      }
+    },
+    "a_share": {
+      "policy_signals": [
+        "7/19 国家队中国诚通+中国国新宣布增持近百亿",
+        "7/20 证监会召开稳市场专题座谈会",
+        "3家券商回购上限7亿护盘",
+        "茅台涨价(提价护盘)"
+      ],
+      "indices": "上证 +0.67% (7/20早盘), 军工央企领涨",
+      "company_performance": "新易盛上半年净利同比预增78%-103% (AI算力链业绩验证)",
+      "background": "费城半导体指数技术性熊市 + Mag7资本开支风险"
+    },
+    "ai_industry": {
+      "waic_2026": "7/17-20 上海, 习近平面旨演讲, 主题'具身智能+共创未来'",
+      "deepseek_v4": "满血版最快7/21发布, API峰谷定价: 高峰时段价格翻倍",
+      "kimi_k3": "7/19 算力紧张暂停会员开放, SemiAnalysis: KDA机制需更多GPU/HBM/DRAM",
+      "code_benchmark": "中国大模型首次登顶全球代码榜 (抖音热搜#3)",
+      "global_governance": "成立世界人工智能合作组织",
+      "token_factory": "WAIC观察: Token工厂已是'红海' (澎湃新闻)",
+      "us_datacenter": "全美出现数据中心出售潮, '反数据中心运动'蔓延"
+    },
+    "hotel_industry": {
+      "june_2026_data": {
+        "mid_high_end": {
+          "occupancy_pct": 45.6,
+          "occupancy_yoy_pct": -18.7,
+          "adr_rmb": 360,
+          "adr_yoy_pct": -14.2,
+          "revpar_rmb": 164,
+          "revpar_yoy_pct": -39.1,
+          "revpar_mom_pct": -10.6
+        },
+        "mid_low_end": {
+          "occupancy_pct": 55.9,
+          "occupancy_yoy_pct": -16.6,
+          "adr_rmb": 189,
+          "adr_yoy_pct": -16.6,
+          "revpar_rmb": 106,
+          "revpar_yoy_pct": -35.7,
+          "revpar_mom_pct": 6.2
+        },
+        "beijing_mid_high": {
+          "revpar_rmb": 143,
+          "revpar_yoy_pct": -64
+        }
+      },
+      "summer_demand": "暑期民宿订单日环比+45% (北京/青岛/南京TOP3)",
+      "inbound_tourism": "上半年外国游客入住民宿+60% (新疆乌鲁木齐/山西临汾/贵州六盘水)"
+    }
+  },
+  "discover_anomalies": [
+    {
+      "anomaly_id": "D1",
+      "name": "中东冲突从威慑升级为实质封锁",
+      "evidence": "美军第七晚连续空袭 + 霍尔木兹封锁已执行 + 油价突破$84+",
+      "implication": "国内通胀压力 + 酒店运营成本上行通道已开",
+      "signal_strength": "high"
+    },
+    {
+      "anomaly_id": "D2",
+      "name": "DeepSeek V4即将发布 + Kimi算力紧张",
+      "evidence": "V4 7/21发布 + Kimi暂停会员 + SemiAnalysis KDA机制分析",
+      "implication": "国产大模型+国产算力闭环确认 = AHL Agent自主可控可行性升级",
+      "signal_strength": "very_high"
+    },
+    {
+      "anomaly_id": "D3",
+      "name": "A股国家队+监管同日双发",
+      "evidence": "7/19晚间中国诚通+中国国新增持 + 7/20证监会座谈会",
+      "implication": "政策护盘达2024年以来最强; Eric入职安逸(国资委体系)后产业话语权将提升",
+      "signal_strength": "high"
+    },
+    {
+      "anomaly_id": "D4",
+      "name": "酒店6月数据呈现结构性反转",
+      "evidence": "中低端RevPAR环比+6.2% vs 中高端-10.6%; 北京核心商圈-64%",
+      "implication": "1244战略下沉路径获验证; 一线城市核心商圈不再是安全资产",
+      "signal_strength": "medium_high"
+    }
+  ],
+  "integrate_logic": {
+    "geopolitical_to_hotel": "油价$84-92 → 国内成品油+0.4元/升 → 酒店单房能耗+5-8%",
+    "geopolitical_to_a_share": "避险资金回流美元 → A股军工/能源央企护盘合理性",
+    "ai_to_ahl": "DeepSeek V4 + Kimi K3 → 国产算力闭环 → AHL Agent工程窗口",
+    "hotel_data_to_anyi": "中低端RevPAR+6.2% → 1244战略下沉路径正确性",
+    "a_share_policy_to_anyi": "国家队+监管双发 → Eric入职国资委体系后的产业话语权提升"
+  },
+  "compare_with_2026-07-17": {
+    "geopolitical": "7/17判断'从桌面升级为实质' → 7/18-19验证✅",
+    "oil_price": "7/17判断'区间$85-92' → 7/19 Brent暗盘$88+验证下沿✅",
+    "ai_industry": "7/17判断'Kimi K3闭环确认' → 7/20加码(V4发布+Kimi暂停)🔄",
+    "a_share": "7/17判断'BK0485突破14000' → 7/20修正为政策强力护盘模式❌",
+    "anyi_group": "7/17判断'内部公示启动' → 7/20今日=induction window最后完整日✅",
+    "hotel_data": "7/17=数据缺口 → 7/20补全结构性反转✅"
+  },
+  "predict_2_4_weeks": {
+    "this_week": [
+      {
+        "date": "2026-07-20",
+        "event": "证监会座谈会 + 国家队增持",
+        "status": "已发生"
+      },
+      {
+        "date": "2026-07-21",
+        "event": "DeepSeek V4 满血版发布",
+        "confidence": "高"
+      },
+      {
+        "date": "2026-07-21",
+        "event": "Induction window 截止",
+        "confidence": "高"
+      }
+    ],
+    "next_week": [
+      {
+        "date": "2026-07-21-25",
+        "event": "Araqchi卡塔尔斡旋窗口",
+        "confidence": "中高",
+        "outcome": "油价Scenario C验证"
+      },
+      {
+        "date": "2026-07-25-31",
+        "event": "国内油价调整预估(92#+0.4元/升)",
+        "confidence": "高"
+      }
+    ],
+    "august": [
+      {
+        "date": "2026-08-上旬",
+        "event": "WAIC后续效应 + 暑期STR数据",
+        "confidence": "中"
+      },
+      {
+        "date": "2026-08-中旬",
+        "event": "A股半年报披露高峰",
+        "confidence": "中",
+        "outcome": "AI算力链业绩兑现度"
+      }
+    ],
+    "scenarios": {
+      "scenario_A_continue_lockdown": {
+        "probability_pct": 50,
+        "oil_price_range": "$85-92",
+        "hotel_cost_impact_pct": "+5-8%"
+      },
+      "scenario_B_full_escalation": {
+        "probability_pct": 20,
+        "oil_price_range": "$95-105",
+        "hotel_cost_impact_pct": "+12-15%"
+      },
+      "scenario_C_negotiation_success": {
+        "probability_pct": 30,
+        "oil_price_range": "$76-82",
+        "hotel_cost_impact_pct": "-2-3%"
+      }
+    }
+  },
+  "recommend_actions": [
+    {
+      "priority": "P0",
+      "action": "AHL油价情景规划 - 单房运营成本压力测试",
+      "details": "基于Brent $85/92/105三节点, 测算能耗/人工/客用品变量",
+      "deliverable": "1页决策简报(安逸内部用, 措辞'成本管控优化')"
+    },
+    {
+      "priority": "P0",
+      "action": "等待安逸集团公示最终确认",
+      "details": "7/21 induction window截止前最后一次可能信号",
+      "deliverable": "维持R256/R257静默协议"
+    },
+    {
+      "priority": "P1",
+      "action": "DeepSeek V4升级PoC准备",
+      "details": "7/21发布后立即启动; 峰谷定价→设计'低峰调度'逻辑",
+      "deliverable": "PoC计划书(内部, 不发外部)"
+    },
+    {
+      "priority": "P1",
+      "action": "WAIC 2026案例集补充",
+      "details": "抓取'酒店AI落地'案例(7/19闭幕日发布)",
+      "deliverable": "与1244战略'AI+酒店'对齐"
+    },
+    {
+      "priority": "P2",
+      "action": "跨境OTA数据底座继续推进",
+      "details": "Booking价格提取器已生产就绪(3/3酒店验证)",
+      "deliverable": "Agoda/TripAdvisor适配"
+    },
+    {
+      "priority": "P2",
+      "action": "A股政策护盘逻辑学习",
+      "details": "国家队增持名单梳理 + 安逸集团'省旅投旗下'逻辑对照",
+      "deliverable": "理解Eric入职后的'产业话语权'"
+    }
+  ],
+  "rules_application_summary": {
+    "R256_silence": "✅ 维持(93h+静默期)",
+    "R257_deep_work": "✅ 维持",
+    "R12_watermark": "✅ 视觉产出已protect_output",
+    "R13_vault_isolation": "✅ 增量更新<1s",
+    "R14_eric_30s_activation": "✅ 100% ready",
+    "R_NEV_V2_file_writes": "✅ Python utf-8 explicit read+append+write",
+    "zero_violations": true
+  },
+  "output_artifacts": {
+    "memory_file": "memory/2026-07-20.md (§ 商业情报 追加, +2173 chars)",
+    "eval_file": "eval/2026-07-20.json",
+    "obsidian_push": "obsidian-vault/00-Inbox-待整理/cron-push/2026-07-20/10-40-每日商业情报.md",
+    "temp_source": "D:/B166ER-OpenClaw/tmp/business-intel-2026-07-20.md (5911 bytes)",
+    "evening_file": "memory/2026-07-20.md"
+  },
+  "self_assessment": {
+    "value_density_vs_2026-07-17": "7/17=信号发现型 → 7/20=决策导向型",
+    "structural_new_findings": [
+      "油价冲击对安逸集团传导已可量化(+5-8%/+12-15%)",
+      "AHL Agent自有部署工程窗口已开(DeepSeek V4 + Kimi K3闭环)",
+      "A股政策护盘逻辑与安逸集团'国资委体系'的同构性(之前未识别)"
+    ],
+    "blind_spots": [
+      "国内消费数据(暑期消费/餐饮)尚未拉取",
+      "安逸集团旗下 (52家轻资产酒店 + 78,752间管理房间, 十五五规划口径)酒店的细分经营数据无外部信号源",
+      "Eric入职后1244战略的'AI落地'细节尚未明确",
+      "AnYi会话内容完全未知"
+    ],
+    "report_quality": "high",
+    "evening_quality": "high"
+  },
+  "evening_session": {
+    "time": "21:00 GMT+8",
+    "source": "R60-12 深度自迭代晚间",
+    "highlights": [
+      "中东实质封锁确认（霍尔木兹通航量归零）",
+      "酒店结构性反转：低端+6.2% vs 高端-10.6%",
+      "明日双汇合：DeepSeek V4发布+Induction window截止",
+      "Araqchi谈判7/21-25窗口开启",
+      "跨会话隔离结构性漏洞持续未解"
+    ],
+    "rules_applied": {
+      "R256_zero_push": "108h+全程零违规",
+      "R257_deep_work": "全天极简tick",
+      "R012_silence": "全天维持",
+      "R60_11_sedimentation": "6/6动作执行中",
+      "R12_watermark": "N/A（无视觉产出）",
+      "fake_rule": "无"
+    },
+    "top_rule": "R256+R257（沉默协议双层保护）",
+    "top_rule_count": "660+ HB全程",
+    "value_created": "明日双汇合预判+AHL就绪度评估"
+  }
+}
