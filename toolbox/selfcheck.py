@@ -1013,6 +1013,64 @@ def c39():
     return True, "交付件齐全（总索引 + 测算表 9 表 + 分阶段方案 v2.1）", []
 
 
+# ---------------- C40 正式交付件不得含"更正叙述"（Eric 2026-11-22 立规） ----------------
+def _formal_files():
+    """正式交付件清单：KB 项目目录下的报告/请示/方案/纪要类 md ＋ 桌面产业发展部交付件 md"""
+    out = []
+    kb = os.path.join(ROOT, "anyi-ops-kb", "02_项目")
+    for p in _md_files(kb):
+        n = os.path.basename(p)
+        if any(k in n for k in ("报告", "请示", "方案", "纪要")):
+            try:
+                r = os.path.relpath(p, ROOT).replace(os.sep, "/")
+            except ValueError:
+                r = p.replace(os.sep, "/")
+            out.append(r)
+    desk = os.path.join(HOME, "Desktop", "产业发展部")
+    for p in _md_files(desk):
+        n = os.path.basename(p)
+        if "索引" in n or "README" in n:
+            continue
+        try:
+            r = os.path.relpath(p, ROOT).replace(os.sep, "/")
+        except ValueError:
+            r = p.replace(os.sep, "/")
+        out.append(r)
+    return sorted(set(out))
+
+
+@check("C40", "正式交付件只讲内容本身，不得叙述改了什么",
+       "Eric 2026-11-22 21:47：出正式内容时不要出现「更正了什么」，直接就是内容本身；新增正式件一律严查")
+def c40():
+    pats = ["更正", "此前称", "此前写", "此前版", "上一版", "经复核", "这是错的", "我错",
+            "虚高", "已更正", "改错", "我方更", "有误", "口径修正"]
+    bl = os.path.join(SI, "eval", "formal_deliverables_baseline_2026-11-22.json")
+    base = set()
+    if os.path.exists(bl):
+        try:
+            base = set(json.load(open(bl, encoding="utf-8")).get("files", []))
+        except Exception:
+            base = set()
+    else:
+        files = _formal_files()
+        json.dump({"files": files}, open(bl, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+        return True, "已建立正式件基线 %d 件（既有件豁免，此后新增件严查）" % len(files), []
+    bad = []
+    for p in _formal_files():
+        if p in base:
+            continue
+        try:
+            t = open(p, encoding="utf-8").read()
+        except Exception:
+            continue
+        hit = [w for w in pats if w in t]
+        if hit:
+            bad.append("%s ← %s" % (os.path.basename(p), ",".join(hit)))
+    if bad:
+        return False, "正式件含更正叙述 %d 件" % len(bad), bad
+    return True, "正式件无更正叙述（新增 %d 件严查）" % (len(_formal_files()) - len(base)), []
+
+
 def run(as_json=False):
     res = []
     npass = 0
