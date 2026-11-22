@@ -981,6 +981,38 @@ def c38():
         return False, "C38 执行异常 %s" % str(e)[:60], []
 
 
+# ---------------- C39 关键交付件存在性（防"写完≠跑过"） ----------------
+@check("C39", "关键交付件必须真实存在且内容完整", "2026-11-19 写了 43KB 构建脚本却没跑 → 测算表根本没生成却已回复'已交付'；存在性检查必须会 FAIL")
+def c39():
+    import os as _os
+    desk = _os.path.join(_os.path.expanduser("~"), "Desktop", "产业发展部", "旗下酒店", "国堰宾馆")
+    if not _os.path.isdir(desk):
+        return True, "桌面交付目录不存在（未触发）", []
+    need = [
+        (_os.path.join(desk, "00_国堰宾馆文创改造_文件索引.md"), "桌面总索引"),
+        (_os.path.join(desk, "改造报告交付", "国堰_分阶段测算表_v1.0_2026-11-19.xlsx"), "分阶段测算表"),
+        (_os.path.join(desk, "改造报告交付", "2026-11-22_分阶段方案v2.1_口径修正版_含测算表_v2.1.md"), "分阶段方案 v2.1"),
+    ]
+    miss = []
+    for p, label in need:
+        if not _os.path.exists(p) or _os.path.getsize(p) < 1000:
+            miss.append(label)
+    if miss:
+        return False, "缺失或内容异常 %d 件: %s" % (len(miss), ",".join(miss)), miss
+    try:
+        from openpyxl import load_workbook
+        wb = load_workbook(need[1][0], read_only=True)
+        want = ["00_读我与口径", "01_参数", "02_分期投资表", "03_分年现金流",
+                "04_情景矩阵", "05_敏感性", "06_决策门阈值", "07_口径冲突与待校准", "08_来源与置信度"]
+        lack = [w for w in want if w not in wb.sheetnames]
+        wb.close()
+        if lack:
+            return False, "测算表缺工作表 %d 张: %s" % (len(lack), ",".join(lack[:4])), lack[:5]
+    except Exception as e:
+        return False, "测算表无法读取 %s" % str(e)[:50], []
+    return True, "交付件齐全（总索引 + 测算表 9 表 + 分阶段方案 v2.1）", []
+
+
 def run(as_json=False):
     res = []
     npass = 0
