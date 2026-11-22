@@ -62,3 +62,59 @@ Thumbs.db
 
 # 采集器默认输出落在工作区根（手动验证用）→ 不入库
 hotel_data.json
+
+# ── 2026-11-22 追加：同步 GitHub 前加固 ──
+# 判定依据：① 单文件 >100MB 会被 GitHub 硬拒；② 属可再生/第三方/含密文件，本就不该进版本库
+# 模型权重与向量库（可由脚本重建）
+toolbox/models/
+toolbox/kb_tools/index*/
+*.safetensors
+*.npz
+*.onnx
+*.bin
+*.gguf
+# 安装包与原始压缩包（源文件在别处）
+*.exe
+*.msi
+work/
+tmp/
+tmp_*/
+# 第三方克隆与备份目录（各自带 LICENSE，不并入本库）
+open-design-repo/
+openhuman-eval/
+text-to-cad-extract/
+skills.bak-*/
+.archive-*/
+.git_rebase_backup_*/
+# 迁移与备份残留
+*.pre-c-backup
+*.migrated.*
+openclaw-workspace-state.json*
+# 调试与一次性残留
+debug_*.png
+debug_*.html
+out*.txt
+*_log.txt
+doc_extract*.txt
+doc_text_*.txt
+tail_dump.txt
+orphans_report.txt
+audit_*.txt
+# 根目录散落的成图渲染产物（正本在 outputs/ 与各项目交付目录）
+/mckinsey_*.png
+/sovereign_*.png
+/xhs_*.png
+/note_*.png
+/mckinsey_*.html
+/sovereign_*.html
+/xhs_*.html
+/note_*.html
+
+# 含真实密钥的文件：任何情况下不入库（密钥须轮换，不随库走）
+obsidian-vault/50-外部接入/新媒体产品线/独立酒店境外市场拓展_交付包/v4.0_2026-06-27_Rebuild/拓展渠道和资源清单_完成日志.md
+
+# 含密钥文件（宽模式复查追加）
+obsidian-vault/.obsidian/plugins/templater/main.js
+toolbox/crawl4ai_llm_extraction.py
+toolbox/crawl4ai_wrapper.py
+toolbox/mediacrawler/MediaCrawler/media_platform/tieba/client.py
