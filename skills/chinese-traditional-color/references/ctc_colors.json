@@ -1,0 +1,1154 @@
+{
+  "meta": {
+    "book": {
+      "title": "中国传统色主题配色手册",
+      "authors": "矫永志 / 一课设计工作室 编著",
+      "publisher": "电子工业出版社",
+      "pub_date": "2024-01",
+      "isbn": "9787121465604",
+      "pages": "168（孔夫子标 172；繁体版 172 页 23cm）",
+      "size": "16开",
+      "price": 78.0
+    },
+    "counts": {
+      "main_colors": 47,
+      "solar_terms": 24,
+      "total": 71,
+      "related_colors_mainland": "280余种",
+      "palettes_mainland": "470余种",
+      "schemes_mainland": "560余种",
+      "applications_mainland": "160余种",
+      "related_colors_taiwan_ed": "758种",
+      "schemes_taiwan_ed": "732种"
+    },
+    "value_provenance": {
+      "book_values": "本书每色附 CMYK/RGB，本次未取得实体书/色卡，载值待校准",
+      "dataset": {
+        "name": "gufeng-china-color-palette",
+        "url": "https://github.com/hongyihui/gufeng-china-color-palette",
+        "license": "MIT",
+        "colors": 526,
+        "usage": "提供 HEX 近似值；RGB/CMYK 由 HEX 换算，CMYK 为近似（无色彩管理配置）"
+      },
+      "public_pool": "tie.pub 传统色谱 / b187.cn 中国传统色彩 / ysdaima 中国传统色色卡"
+    },
+    "matched": 39,
+    "total": 71,
+    "pending_book_value_count": 71,
+    "public_pool_size": 180
+  },
+  "colors": [
+    {
+      "name": "赤",
+      "family": "红",
+      "meaning": "最正统的红，五色之一，礼器之正色",
+      "hex": "#ff4c00",
+      "rgb": [
+        255,
+        76,
+        0
+      ],
+      "cmyk": [
+        0,
+        70,
+        100,
+        0
+      ],
+      "value_source": "公开传统色通行值（郭浩《传统色》系，非本书载值）",
+      "pending_book_value": true
+    },
+    {
+      "name": "大红",
+      "family": "红",
+      "meaning": "最喜庆，婚嫁节庆",
+      "hex": "#ff2121",
+      "rgb": [
+        255,
+        33,
+        33
+      ],
+      "cmyk": [
+        0,
+        87,
+        87,
+        0
+      ],
+      "value_source": "公开传统色通行值（郭浩《传统色》系，非本书载值）",
+      "pending_book_value": true
+    },
+    {
+      "name": "海棠红",
+      "family": "红",
+      "meaning": "海棠花色，娇艳妩媚",
+      "hex": "#db5a6b",
+      "rgb": [
+        219,
+        90,
+        107
+      ],
+      "cmyk": [
+        0,
+        59,
+        51,
+        14
+      ],
+      "value_source": "公开传统色通行值（郭浩《传统色》系，非本书载值）",
+      "pending_book_value": true
+    },
+    {
+      "name": "茜色",
+      "family": "红",
+      "meaning": "茜草染，暗红复古",
+      "hex": "#cb3a56",
+      "rgb": [
+        203,
+        58,
+        86
+      ],
+      "cmyk": [
+        0,
+        71,
+        58,
+        20
+      ],
+      "value_source": "公开传统色通行值（郭浩《传统色》系，非本书载值）",
+      "pending_book_value": true
+    },
+    {
+      "name": "酡红",
+      "family": "红",
+      "meaning": "饮酒微醺的脸颊红，温柔",
+      "hex": "#dc3023",
+      "rgb": [
+        220,
+        48,
+        35
+      ],
+      "cmyk": [
+        0,
+        78,
+        84,
+        14
+      ],
+      "value_source": "公开传统色通行值（郭浩《传统色》系，非本书载值）",
+      "pending_book_value": true
+    },
+    {
+      "name": "胭脂红",
+      "family": "红",
+      "meaning": "妆色，妩媚秾丽",
+      "hex": "#9d2933",
+      "rgb": [
+        157,
+        41,
+        51
+      ],
+      "cmyk": [
+        0,
+        74,
+        68,
+        38
+      ],
+      "value_source": "公开传统色通行值（郭浩《传统色》系，非本书载值）",
+      "pending_book_value": true
+    },
+    {
+      "name": "嫣红",
+      "family": "红",
+      "meaning": "鲜亮娇美",
+      "hex": "#ef7a82",
+      "rgb": [
+        239,
+        122,
+        130
+      ],
+      "cmyk": [
+        0,
+        49,
+        46,
+        6
+      ],
+      "value_source": "公开传统色通行值（郭浩《传统色》系，非本书载值）",
+      "pending_book_value": true
+    },
+    {
+      "name": "朱红",
+      "family": "红",
+      "meaning": "宫墙与印章，尊贵正统",
+      "hex": "#ff4c00",
+      "rgb": [
+        255,
+        76,
+        0
+      ],
+      "cmyk": [
+        0,
+        70,
+        100,
+        0
+      ],
+      "value_source": "公开传统色通行值（郭浩《传统色》系，非本书载值）",
+      "pending_book_value": true
+    },
+    {
+      "name": "鹅黄",
+      "family": "黄",
+      "meaning": "幼鹅绒毛，娇嫩",
+      "hex": "#fff143",
+      "rgb": [
+        255,
+        241,
+        67
+      ],
+      "cmyk": [
+        0,
+        5,
+        74,
+        0
+      ],
+      "value_source": "公开传统色通行值（郭浩《传统色》系，非本书载值）",
+      "pending_book_value": true
+    },
+    {
+      "name": "琉璃黄",
+      "family": "黄",
+      "meaning": "皇家琉璃瓦，尊贵",
+      "hex": null,
+      "rgb": null,
+      "cmyk": null,
+      "value_source": "未匹配",
+      "pending_book_value": true
+    },
+    {
+      "name": "藤黄",
+      "family": "黄",
+      "meaning": "藤汁染，偏暖",
+      "hex": "#ffb61e",
+      "rgb": [
+        255,
+        182,
+        30
+      ],
+      "cmyk": [
+        0,
+        29,
+        88,
+        0
+      ],
+      "value_source": "公开传统色通行值（郭浩《传统色》系，非本书载值）",
+      "pending_book_value": true
+    },
+    {
+      "name": "缃黄",
+      "family": "黄",
+      "meaning": "帛书古黄，雅致",
+      "hex": "#f0c239",
+      "rgb": [
+        240,
+        194,
+        57
+      ],
+      "cmyk": [
+        0,
+        19,
+        76,
+        6
+      ],
+      "value_source": "公开传统色通行值（郭浩《传统色》系，非本书载值）",
+      "pending_book_value": true
+    },
+    {
+      "name": "杏黄",
+      "family": "黄",
+      "meaning": "熟杏之色，道家服色",
+      "hex": "#ffa631",
+      "rgb": [
+        255,
+        166,
+        49
+      ],
+      "cmyk": [
+        0,
+        35,
+        81,
+        0
+      ],
+      "value_source": "公开传统色通行值（郭浩《传统色》系，非本书载值）",
+      "pending_book_value": true
+    },
+    {
+      "name": "黄栌",
+      "family": "黄",
+      "meaning": "秋叶黄栌，秋意",
+      "hex": "#e29c45",
+      "rgb": [
+        226,
+        156,
+        69
+      ],
+      "cmyk": [
+        0,
+        31,
+        69,
+        11
+      ],
+      "value_source": "公开传统色通行值（郭浩《传统色》系，非本书载值）",
+      "pending_book_value": true
+    },
+    {
+      "name": "牙色",
+      "family": "黄",
+      "meaning": "象牙，温润米黄",
+      "hex": "#eedeb0",
+      "rgb": [
+        238,
+        222,
+        176
+      ],
+      "cmyk": [
+        0,
+        7,
+        26,
+        7
+      ],
+      "value_source": "公开传统色通行值（郭浩《传统色》系，非本书载值）",
+      "pending_book_value": true
+    },
+    {
+      "name": "碧色",
+      "family": "绿",
+      "meaning": "碧玉清透",
+      "hex": "#1bd1a5",
+      "rgb": [
+        27,
+        209,
+        165
+      ],
+      "cmyk": [
+        87,
+        0,
+        21,
+        18
+      ],
+      "value_source": "公开传统色通行值（郭浩《传统色》系，非本书载值）",
+      "pending_book_value": true
+    },
+    {
+      "name": "缥色",
+      "family": "绿",
+      "meaning": "青白之青，淡雅",
+      "hex": null,
+      "rgb": null,
+      "cmyk": null,
+      "value_source": "未匹配",
+      "pending_book_value": true
+    },
+    {
+      "name": "孔雀绿",
+      "family": "绿",
+      "meaning": "孔雀羽，华贵",
+      "hex": "#229453",
+      "rgb": [
+        34,
+        148,
+        83
+      ],
+      "cmyk": [
+        77,
+        0,
+        44,
+        42
+      ],
+      "value_source": "公开传统色数据集（近似值，非本书载值）",
+      "pending_book_value": true
+    },
+    {
+      "name": "绿沈",
+      "family": "绿",
+      "meaning": "深沉暗绿，稳重",
+      "hex": "#0c8918",
+      "rgb": [
+        12,
+        137,
+        24
+      ],
+      "cmyk": [
+        91,
+        0,
+        82,
+        46
+      ],
+      "value_source": "公开传统色通行值（郭浩《传统色》系，非本书载值）",
+      "pending_book_value": true
+    },
+    {
+      "name": "青白",
+      "family": "绿",
+      "meaning": "青瓷之白，温润",
+      "hex": "#c0ebd7",
+      "rgb": [
+        192,
+        235,
+        215
+      ],
+      "cmyk": [
+        18,
+        0,
+        9,
+        8
+      ],
+      "value_source": "公开传统色通行值（郭浩《传统色》系，非本书载值）",
+      "pending_book_value": true
+    },
+    {
+      "name": "柳绿",
+      "family": "绿",
+      "meaning": "柳芽，春",
+      "hex": "#afdd22",
+      "rgb": [
+        175,
+        221,
+        34
+      ],
+      "cmyk": [
+        21,
+        0,
+        85,
+        13
+      ],
+      "value_source": "公开传统色通行值（郭浩《传统色》系，非本书载值）",
+      "pending_book_value": true
+    },
+    {
+      "name": "松花",
+      "family": "绿",
+      "meaning": "松花粉，嫩黄绿",
+      "hex": "#057748",
+      "rgb": [
+        5,
+        119,
+        72
+      ],
+      "cmyk": [
+        96,
+        0,
+        39,
+        53
+      ],
+      "value_source": "公开传统色通行值（郭浩《传统色》系，非本书载值）",
+      "pending_book_value": true
+    },
+    {
+      "name": "竹青",
+      "family": "绿",
+      "meaning": "竹色，文人清高",
+      "hex": "#789262",
+      "rgb": [
+        120,
+        146,
+        98
+      ],
+      "cmyk": [
+        18,
+        0,
+        33,
+        43
+      ],
+      "value_source": "公开传统色通行值（郭浩《传统色》系，非本书载值）",
+      "pending_book_value": true
+    },
+    {
+      "name": "宝蓝",
+      "family": "蓝",
+      "meaning": "宝石蓝，华贵",
+      "hex": "#4b5cc4",
+      "rgb": [
+        75,
+        92,
+        196
+      ],
+      "cmyk": [
+        62,
+        53,
+        0,
+        23
+      ],
+      "value_source": "公开传统色通行值（郭浩《传统色》系，非本书载值）",
+      "pending_book_value": true
+    },
+    {
+      "name": "群青",
+      "family": "蓝",
+      "meaning": "青金石，贵重",
+      "hex": "#4c8dae",
+      "rgb": [
+        76,
+        141,
+        174
+      ],
+      "cmyk": [
+        56,
+        19,
+        0,
+        32
+      ],
+      "value_source": "公开传统色通行值（郭浩《传统色》系，非本书载值）",
+      "pending_book_value": true
+    },
+    {
+      "name": "藏青",
+      "family": "蓝",
+      "meaning": "西藏蓝，沉稳",
+      "hex": "#2e4e7e",
+      "rgb": [
+        46,
+        78,
+        126
+      ],
+      "cmyk": [
+        63,
+        38,
+        0,
+        51
+      ],
+      "value_source": "公开传统色通行值（郭浩《传统色》系，非本书载值）",
+      "pending_book_value": true
+    },
+    {
+      "name": "黛蓝",
+      "family": "蓝",
+      "meaning": "远山黛，朦胧",
+      "hex": "#425066",
+      "rgb": [
+        66,
+        80,
+        102
+      ],
+      "cmyk": [
+        35,
+        22,
+        0,
+        60
+      ],
+      "value_source": "公开传统色通行值（郭浩《传统色》系，非本书载值）",
+      "pending_book_value": true
+    },
+    {
+      "name": "钴蓝",
+      "family": "蓝",
+      "meaning": "钴矿，现代蓝",
+      "hex": "#1A94BC",
+      "rgb": [
+        26,
+        148,
+        188
+      ],
+      "cmyk": [
+        86,
+        21,
+        0,
+        26
+      ],
+      "value_source": "公开传统色数据集（近似值，非本书载值）",
+      "pending_book_value": true
+    },
+    {
+      "name": "清水蓝",
+      "family": "蓝",
+      "meaning": "清水，清透",
+      "hex": "#93D5DC",
+      "rgb": [
+        147,
+        213,
+        220
+      ],
+      "cmyk": [
+        33,
+        3,
+        0,
+        14
+      ],
+      "value_source": "公开传统色数据集（近似值，非本书载值）",
+      "pending_book_value": true
+    },
+    {
+      "name": "蔚蓝",
+      "family": "蓝",
+      "meaning": "晴空，明净",
+      "hex": "#70f3ff",
+      "rgb": [
+        112,
+        243,
+        255
+      ],
+      "cmyk": [
+        56,
+        5,
+        0,
+        0
+      ],
+      "value_source": "公开传统色通行值（郭浩《传统色》系，非本书载值）",
+      "pending_book_value": true
+    },
+    {
+      "name": "天青",
+      "family": "蓝",
+      "meaning": "汝窑雨过天青",
+      "hex": null,
+      "rgb": null,
+      "cmyk": null,
+      "value_source": "未匹配",
+      "pending_book_value": true
+    },
+    {
+      "name": "黛紫",
+      "family": "紫",
+      "meaning": "深紫，贵气",
+      "hex": "#574266",
+      "rgb": [
+        87,
+        66,
+        102
+      ],
+      "cmyk": [
+        15,
+        35,
+        0,
+        60
+      ],
+      "value_source": "公开传统色通行值（郭浩《传统色》系，非本书载值）",
+      "pending_book_value": true
+    },
+    {
+      "name": "青莲",
+      "family": "紫",
+      "meaning": "佛座莲，禅意",
+      "hex": "#801dae",
+      "rgb": [
+        128,
+        29,
+        174
+      ],
+      "cmyk": [
+        26,
+        83,
+        0,
+        32
+      ],
+      "value_source": "公开传统色通行值（郭浩《传统色》系，非本书载值）",
+      "pending_book_value": true
+    },
+    {
+      "name": "丁香紫",
+      "family": "紫",
+      "meaning": "丁香花，柔美",
+      "hex": null,
+      "rgb": null,
+      "cmyk": null,
+      "value_source": "未匹配",
+      "pending_book_value": true
+    },
+    {
+      "name": "雪青",
+      "family": "紫",
+      "meaning": "雪中青，清冷",
+      "hex": "#b0a4e3",
+      "rgb": [
+        176,
+        164,
+        227
+      ],
+      "cmyk": [
+        22,
+        28,
+        0,
+        11
+      ],
+      "value_source": "公开传统色通行值（郭浩《传统色》系，非本书载值）",
+      "pending_book_value": true
+    },
+    {
+      "name": "藕荷",
+      "family": "紫",
+      "meaning": "藕花，柔淡雅",
+      "hex": "#e4c6d0",
+      "rgb": [
+        228,
+        198,
+        208
+      ],
+      "cmyk": [
+        0,
+        13,
+        9,
+        11
+      ],
+      "value_source": "公开传统色通行值（郭浩《传统色》系，非本书载值）",
+      "pending_book_value": true
+    },
+    {
+      "name": "绛紫",
+      "family": "紫",
+      "meaning": "深绛紫，庄重",
+      "hex": "#8c4356",
+      "rgb": [
+        140,
+        67,
+        86
+      ],
+      "cmyk": [
+        0,
+        52,
+        39,
+        45
+      ],
+      "value_source": "公开传统色通行值（郭浩《传统色》系，非本书载值）",
+      "pending_book_value": true
+    },
+    {
+      "name": "紫棠",
+      "family": "紫",
+      "meaning": "棠梨，暗紫",
+      "hex": "#56004f",
+      "rgb": [
+        86,
+        0,
+        79
+      ],
+      "cmyk": [
+        0,
+        100,
+        8,
+        66
+      ],
+      "value_source": "公开传统色通行值（郭浩《传统色》系，非本书载值）",
+      "pending_book_value": true
+    },
+    {
+      "name": "紫檀",
+      "family": "紫",
+      "meaning": "紫檀木，名贵深色",
+      "hex": "#4c221b",
+      "rgb": [
+        76,
+        34,
+        27
+      ],
+      "cmyk": [
+        0,
+        55,
+        64,
+        70
+      ],
+      "value_source": "公开传统色通行值（郭浩《传统色》系，非本书载值）",
+      "pending_book_value": true
+    },
+    {
+      "name": "漆黑",
+      "family": "黑白",
+      "meaning": "纯黑，最深",
+      "hex": "#161823",
+      "rgb": [
+        22,
+        24,
+        35
+      ],
+      "cmyk": [
+        37,
+        31,
+        0,
+        86
+      ],
+      "value_source": "公开传统色通行值（郭浩《传统色》系，非本书载值）",
+      "pending_book_value": true
+    },
+    {
+      "name": "玄色",
+      "family": "黑白",
+      "meaning": "天之色，玄远神秘",
+      "hex": "#622a1d",
+      "rgb": [
+        98,
+        42,
+        29
+      ],
+      "cmyk": [
+        0,
+        57,
+        70,
+        62
+      ],
+      "value_source": "公开传统色通行值（郭浩《传统色》系，非本书载值）",
+      "pending_book_value": true
+    },
+    {
+      "name": "鸦青",
+      "family": "黑白",
+      "meaning": "暮色，深灰青",
+      "hex": "#424c50",
+      "rgb": [
+        66,
+        76,
+        80
+      ],
+      "cmyk": [
+        18,
+        5,
+        0,
+        69
+      ],
+      "value_source": "公开传统色通行值（郭浩《传统色》系，非本书载值）",
+      "pending_book_value": true
+    },
+    {
+      "name": "烟色",
+      "family": "黑白",
+      "meaning": "炊烟，朦胧灰",
+      "hex": null,
+      "rgb": null,
+      "cmyk": null,
+      "value_source": "未匹配",
+      "pending_book_value": true
+    },
+    {
+      "name": "鸭卵青",
+      "family": "黑白",
+      "meaning": "青瓷灰绿，温润",
+      "hex": "#e0eee8",
+      "rgb": [
+        224,
+        238,
+        232
+      ],
+      "cmyk": [
+        6,
+        0,
+        3,
+        7
+      ],
+      "value_source": "公开传统色通行值（郭浩《传统色》系，非本书载值）",
+      "pending_book_value": true
+    },
+    {
+      "name": "荼白",
+      "family": "黑白",
+      "meaning": "荼花白，素净",
+      "hex": "#f3f9f1",
+      "rgb": [
+        243,
+        249,
+        241
+      ],
+      "cmyk": [
+        2,
+        0,
+        3,
+        2
+      ],
+      "value_source": "公开传统色通行值（郭浩《传统色》系，非本书载值）",
+      "pending_book_value": true
+    },
+    {
+      "name": "铅白",
+      "family": "黑白",
+      "meaning": "铅粉白，古妆冷白",
+      "hex": "#f0f0f4",
+      "rgb": [
+        240,
+        240,
+        244
+      ],
+      "cmyk": [
+        2,
+        2,
+        0,
+        4
+      ],
+      "value_source": "公开传统色通行值（郭浩《传统色》系，非本书载值）",
+      "pending_book_value": true
+    },
+    {
+      "name": "月白",
+      "family": "黑白",
+      "meaning": "月夜白，清冷微蓝",
+      "hex": "#d6ecf0",
+      "rgb": [
+        214,
+        236,
+        240
+      ],
+      "cmyk": [
+        11,
+        2,
+        0,
+        6
+      ],
+      "value_source": "公开传统色通行值（郭浩《传统色》系，非本书载值）",
+      "pending_book_value": true
+    },
+    {
+      "name": "立春",
+      "family": "节气",
+      "season": "春",
+      "meaning": "本书第八章立春页所载代表色（载值待实体书/色卡校准）",
+      "hex": null,
+      "rgb": null,
+      "cmyk": null,
+      "value_source": "本书载值待校准（公开数据集无节气色系）",
+      "pending_book_value": true
+    },
+    {
+      "name": "雨水",
+      "family": "节气",
+      "season": "春",
+      "meaning": "本书第八章雨水页所载代表色（载值待实体书/色卡校准）",
+      "hex": null,
+      "rgb": null,
+      "cmyk": null,
+      "value_source": "本书载值待校准（公开数据集无节气色系）",
+      "pending_book_value": true
+    },
+    {
+      "name": "惊蛰",
+      "family": "节气",
+      "season": "春",
+      "meaning": "本书第八章惊蛰页所载代表色（载值待实体书/色卡校准）",
+      "hex": null,
+      "rgb": null,
+      "cmyk": null,
+      "value_source": "本书载值待校准（公开数据集无节气色系）",
+      "pending_book_value": true
+    },
+    {
+      "name": "春分",
+      "family": "节气",
+      "season": "春",
+      "meaning": "本书第八章春分页所载代表色（载值待实体书/色卡校准）",
+      "hex": null,
+      "rgb": null,
+      "cmyk": null,
+      "value_source": "本书载值待校准（公开数据集无节气色系）",
+      "pending_book_value": true
+    },
+    {
+      "name": "清明",
+      "family": "节气",
+      "season": "春",
+      "meaning": "本书第八章清明页所载代表色（载值待实体书/色卡校准）",
+      "hex": null,
+      "rgb": null,
+      "cmyk": null,
+      "value_source": "本书载值待校准（公开数据集无节气色系）",
+      "pending_book_value": true
+    },
+    {
+      "name": "谷雨",
+      "family": "节气",
+      "season": "春",
+      "meaning": "本书第八章谷雨页所载代表色（载值待实体书/色卡校准）",
+      "hex": null,
+      "rgb": null,
+      "cmyk": null,
+      "value_source": "本书载值待校准（公开数据集无节气色系）",
+      "pending_book_value": true
+    },
+    {
+      "name": "立夏",
+      "family": "节气",
+      "season": "夏",
+      "meaning": "本书第八章立夏页所载代表色（载值待实体书/色卡校准）",
+      "hex": null,
+      "rgb": null,
+      "cmyk": null,
+      "value_source": "本书载值待校准（公开数据集无节气色系）",
+      "pending_book_value": true
+    },
+    {
+      "name": "小满",
+      "family": "节气",
+      "season": "夏",
+      "meaning": "本书第八章小满页所载代表色（载值待实体书/色卡校准）",
+      "hex": null,
+      "rgb": null,
+      "cmyk": null,
+      "value_source": "本书载值待校准（公开数据集无节气色系）",
+      "pending_book_value": true
+    },
+    {
+      "name": "芒种",
+      "family": "节气",
+      "season": "夏",
+      "meaning": "本书第八章芒种页所载代表色（载值待实体书/色卡校准）",
+      "hex": null,
+      "rgb": null,
+      "cmyk": null,
+      "value_source": "本书载值待校准（公开数据集无节气色系）",
+      "pending_book_value": true
+    },
+    {
+      "name": "夏至",
+      "family": "节气",
+      "season": "夏",
+      "meaning": "本书第八章夏至页所载代表色（载值待实体书/色卡校准）",
+      "hex": null,
+      "rgb": null,
+      "cmyk": null,
+      "value_source": "本书载值待校准（公开数据集无节气色系）",
+      "pending_book_value": true
+    },
+    {
+      "name": "小暑",
+      "family": "节气",
+      "season": "夏",
+      "meaning": "本书第八章小暑页所载代表色（载值待实体书/色卡校准）",
+      "hex": null,
+      "rgb": null,
+      "cmyk": null,
+      "value_source": "本书载值待校准（公开数据集无节气色系）",
+      "pending_book_value": true
+    },
+    {
+      "name": "大暑",
+      "family": "节气",
+      "season": "夏",
+      "meaning": "本书第八章大暑页所载代表色（载值待实体书/色卡校准）",
+      "hex": null,
+      "rgb": null,
+      "cmyk": null,
+      "value_source": "本书载值待校准（公开数据集无节气色系）",
+      "pending_book_value": true
+    },
+    {
+      "name": "立秋",
+      "family": "节气",
+      "season": "秋",
+      "meaning": "本书第八章立秋页所载代表色（载值待实体书/色卡校准）",
+      "hex": null,
+      "rgb": null,
+      "cmyk": null,
+      "value_source": "本书载值待校准（公开数据集无节气色系）",
+      "pending_book_value": true
+    },
+    {
+      "name": "处暑",
+      "family": "节气",
+      "season": "秋",
+      "meaning": "本书第八章处暑页所载代表色（载值待实体书/色卡校准）",
+      "hex": null,
+      "rgb": null,
+      "cmyk": null,
+      "value_source": "本书载值待校准（公开数据集无节气色系）",
+      "pending_book_value": true
+    },
+    {
+      "name": "白露",
+      "family": "节气",
+      "season": "秋",
+      "meaning": "本书第八章白露页所载代表色（载值待实体书/色卡校准）",
+      "hex": null,
+      "rgb": null,
+      "cmyk": null,
+      "value_source": "本书载值待校准（公开数据集无节气色系）",
+      "pending_book_value": true
+    },
+    {
+      "name": "秋分",
+      "family": "节气",
+      "season": "秋",
+      "meaning": "本书第八章秋分页所载代表色（载值待实体书/色卡校准）",
+      "hex": null,
+      "rgb": null,
+      "cmyk": null,
+      "value_source": "本书载值待校准（公开数据集无节气色系）",
+      "pending_book_value": true
+    },
+    {
+      "name": "寒露",
+      "family": "节气",
+      "season": "秋",
+      "meaning": "本书第八章寒露页所载代表色（载值待实体书/色卡校准）",
+      "hex": null,
+      "rgb": null,
+      "cmyk": null,
+      "value_source": "本书载值待校准（公开数据集无节气色系）",
+      "pending_book_value": true
+    },
+    {
+      "name": "霜降",
+      "family": "节气",
+      "season": "秋",
+      "meaning": "本书第八章霜降页所载代表色（载值待实体书/色卡校准）",
+      "hex": null,
+      "rgb": null,
+      "cmyk": null,
+      "value_source": "本书载值待校准（公开数据集无节气色系）",
+      "pending_book_value": true
+    },
+    {
+      "name": "立冬",
+      "family": "节气",
+      "season": "冬",
+      "meaning": "本书第八章立冬页所载代表色（载值待实体书/色卡校准）",
+      "hex": null,
+      "rgb": null,
+      "cmyk": null,
+      "value_source": "本书载值待校准（公开数据集无节气色系）",
+      "pending_book_value": true
+    },
+    {
+      "name": "小雪",
+      "family": "节气",
+      "season": "冬",
+      "meaning": "本书第八章小雪页所载代表色（载值待实体书/色卡校准）",
+      "hex": null,
+      "rgb": null,
+      "cmyk": null,
+      "value_source": "本书载值待校准（公开数据集无节气色系）",
+      "pending_book_value": true
+    },
+    {
+      "name": "大雪",
+      "family": "节气",
+      "season": "冬",
+      "meaning": "本书第八章大雪页所载代表色（载值待实体书/色卡校准）",
+      "hex": null,
+      "rgb": null,
+      "cmyk": null,
+      "value_source": "本书载值待校准（公开数据集无节气色系）",
+      "pending_book_value": true
+    },
+    {
+      "name": "冬至",
+      "family": "节气",
+      "season": "冬",
+      "meaning": "本书第八章冬至页所载代表色（载值待实体书/色卡校准）",
+      "hex": null,
+      "rgb": null,
+      "cmyk": null,
+      "value_source": "本书载值待校准（公开数据集无节气色系）",
+      "pending_book_value": true
+    },
+    {
+      "name": "小寒",
+      "family": "节气",
+      "season": "冬",
+      "meaning": "本书第八章小寒页所载代表色（载值待实体书/色卡校准）",
+      "hex": null,
+      "rgb": null,
+      "cmyk": null,
+      "value_source": "本书载值待校准（公开数据集无节气色系）",
+      "pending_book_value": true
+    },
+    {
+      "name": "大寒",
+      "family": "节气",
+      "season": "冬",
+      "meaning": "本书第八章大寒页所载代表色（载值待实体书/色卡校准）",
+      "hex": null,
+      "rgb": null,
+      "cmyk": null,
+      "value_source": "本书载值待校准（公开数据集无节气色系）",
+      "pending_book_value": true
+    }
+  ]
+}

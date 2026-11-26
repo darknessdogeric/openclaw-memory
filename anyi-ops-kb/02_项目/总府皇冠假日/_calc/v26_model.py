@@ -251,7 +251,7 @@ def inc_arm(p, adr, occ, **kw):
 
 # ═══════ 8. 校核 ═══════
 print()
-print('=== 引擎校核 1：改造前实测复现（ADR 373.1 / OCC 73.75% / 满负荷 / 未换机电）===')
+print('=== 引擎校核 1：改造前实测复现（ADR 373.1 / OCC 73.75% / 实测参数 / 未换机电）===')
 def _engine_check(adr, occ, new_equip):
     room = 402*365*occ*adr/1e4
     nonroom = M['nonroom_base']*(occ/M['occ_now'])*(1+M['nonroom_link']*(adr/M['adr_now']-1))

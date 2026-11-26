@@ -118,3 +118,13 @@ obsidian-vault/.obsidian/plugins/templater/main.js
 toolbox/crawl4ai_llm_extraction.py
 toolbox/crawl4ai_wrapper.py
 toolbox/mediacrawler/MediaCrawler/media_platform/tieba/client.py
+
+# 2026-11-26：品牌串替换的备份副本（与 git 历史重复，不入库）
+output/brand_rename_2026-11-21/backup/
+
+# 临时缩略图（L3 视觉核验用，成图才是正本）
+**/_th_*.jpg
+
+# 单文件 >15MB 的成图（GitHub 体积与加载代价）
+infographics/data-dimensions-v1_wm.png
+

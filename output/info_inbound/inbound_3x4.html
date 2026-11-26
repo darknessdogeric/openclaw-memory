@@ -1,0 +1,120 @@
+<!doctype html><html lang='zh-CN'><head><meta charset='utf-8'><style>
+:root{--bg:#F8F3E8;--card:#FFF;--line:#E3D9C4;--ink:#1A1714;--mut:#6E6555;
+--red:#A82A26;--red2:#B3272D;--gold:#B08A46;--green:#2E7D5B;--blue:#3A6B8A;--pad:52px}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:100%}
+body{background:var(--bg);color:var(--ink);font-family:"Microsoft YaHei","PingFang SC","Noto Sans CJK SC",sans-serif;-webkit-font-smoothing:antialiased}
+.fit{width:1080px;position:relative;overflow:hidden}
+.page{width:1080px;padding:var(--pad) var(--pad) 26px;position:absolute;left:0;top:0;transform-origin:top left}
+.kicker{display:flex;justify-content:space-between;align-items:baseline;font-size:14px;letter-spacing:.12em;color:var(--red);font-weight:700}
+.kicker .r{letter-spacing:.03em;font-weight:600;color:var(--mut);font-size:12.5px}
+.rule{height:3px;background:var(--red2);margin:11px 0 0;width:86px}
+h1{font-size:46px;line-height:1.32;letter-spacing:.02em;margin:15px 0 0;font-weight:900}
+h1 .dim{color:var(--mut);font-weight:800}
+.lede{font-size:16px;line-height:1.58;color:var(--mut);margin:11px 0 0}
+.lede b{color:var(--ink)}
+h2{font-size:20px;line-height:1.35;font-weight:900;margin:0;display:flex;align-items:center;gap:9px}
+h2::before{content:"";width:6px;height:20px;background:var(--red2);display:inline-block}
+h2 .note{margin-left:auto;font-size:11.5px;color:var(--mut);font-weight:500}
+.sec{margin-top:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:3px;padding:9px 11px 10px;position:relative;overflow:hidden}
+.card::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--red2)}
+.card.plain::before{display:none}
+.kpi{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:10px}
+.kpi div{background:var(--card);border:1px solid var(--line);border-radius:3px;padding:7px 9px}
+.kpi b{display:block;font-size:18px;font-weight:900;color:var(--red2);line-height:1.2}
+.kpi span{display:block;font-size:10.5px;color:var(--mut);margin-top:2px;line-height:1.35}
+/* 矩阵表 */
+.mx{display:grid;grid-template-columns:78px 1fr 1fr;gap:0;margin-top:9px;border:1px solid var(--line);background:var(--card);border-radius:3px;overflow:hidden}
+.mx .h{background:#F0E8D6;font-size:11.5px;font-weight:900;padding:6px 8px;letter-spacing:.02em;color:#4A4235}
+.mx .rh{background:#F0E8D6;font-size:13px;font-weight:900;padding:8px;display:flex;align-items:center;justify-content:center;color:#4A4235}
+.mx .c{padding:7px 9px;border-left:1px solid var(--line);border-top:1px solid var(--line);font-size:11.5px;line-height:1.45}
+.mx .c .s{display:inline-block;font-size:9.5px;font-weight:900;padding:1px 5px;border-radius:2px;margin-bottom:3px}
+.s.yes{background:#DCEBE2;color:#1E5E42}
+.s.no{background:#F2DFDD;color:#8E2622}
+.s.part{background:#F5E9D2;color:#7A5C1E}
+.mx .c b{font-size:13px;font-weight:900}
+.mx .c em{font-style:normal;color:var(--mut);font-size:10.5px;display:block;margin-top:1px}
+/* 图表 */
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:9px}
+.ct{font-size:12.5px;font-weight:800;margin-bottom:1px}
+.ct small{font-weight:500;color:var(--mut);font-size:10.5px;margin-left:5px}
+svg.chart{display:block;width:100%}
+.p9 svg.chart{height:196px}
+.p3 svg.chart{height:150px}
+svg.chart text{font-family:"Microsoft YaHei","PingFang SC",sans-serif}
+.gap li{list-style:none;font-size:12px;line-height:1.55;color:#3B352C;position:relative;padding-left:14px;margin-top:3px}
+.gap li::before{content:"";position:absolute;left:0;top:7px;width:5px;height:5px;background:var(--gold);border-radius:50%}
+.gap li b{font-weight:800;color:var(--ink)}
+.foot{margin-top:13px;padding-top:9px;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:baseline;font-size:10.5px;color:var(--mut)}
+.foot .it{font-style:italic;text-align:right;max-width:640px}
+.p9 h1{font-size:54px;line-height:1.3}
+.p9 .lede{font-size:17.5px;line-height:1.62;margin-top:14px}
+.p9 .sec{margin-top:24px}
+.p9 h2{font-size:23px}
+.p9 h2::before{height:23px;width:7px}
+.p9 h2 .note{font-size:12px}
+.p9 .kpi{margin-top:15px;gap:11px}
+.p9 .kpi b{font-size:22px}
+.p9 .kpi span{font-size:11.5px}
+.p9 .ct{font-size:14px}
+.p9 .ct small{font-size:11.5px}
+.p9 .mx{margin-top:12px}
+.p9 .mx .h{font-size:12.5px;padding:8px 10px}
+.p9 .mx .rh{font-size:14px;padding:11px}
+.p9 .mx .c{font-size:12.5px;padding:9px 11px}
+.p9 .mx .c b{font-size:15px}
+.p9 .mx .c em{font-size:11px}
+.p9 .g2{gap:11px;margin-top:12px}
+.p9 .gap li{font-size:13px;line-height:1.62;margin-top:6px}
+.p9 .foot{font-size:11px;margin-top:18px}
+.page.p3{padding:30px var(--pad) 20px}
+.page.p3 h1{font-size:44px;margin-top:11px}
+.page.p3 .lede{font-size:15px;line-height:1.5;margin-top:9px}
+.page.p3 .sec{margin-top:15px}
+.page.p3 h2{font-size:18.5px}
+.page.p3 h2::before{height:18px}
+.page.p3 .card{padding:8px 9px 9px}
+.page.p3 .ct{font-size:13px}
+.page.p3 .kpi{margin-top:9px;gap:8px}
+.page.p3 .kpi b{font-size:19px}
+.page.p3 .kpi span{font-size:10.5px}
+.page.p3 .mx{margin-top:7px}
+.page.p3 .mx .h{font-size:11px;padding:5px 7px}
+.page.p3 .mx .rh{font-size:12.5px;padding:7px}
+.page.p3 .mx .c{font-size:11.5px;padding:6px 8px}
+.page.p3 .mx .c b{font-size:13px}
+.page.p3 .g2{gap:8px;margin-top:7px}
+.page.p3 .gap li{font-size:11.5px;line-height:1.5;margin-top:4px}
+.page.p3 .foot{margin-top:11px;font-size:10px}
+.page.p3 h1{font-size:37px;margin-top:9px}
+.page.p3 .lede{font-size:13.5px;line-height:1.42;margin-top:7px}
+.page.p3 .kicker{font-size:12.5px}
+.page.p3 .sec{margin-top:10px}
+.page.p3 h2{font-size:16px}
+.page.p3 h2::before{height:16px;width:5px}
+.page.p3 h2 .note{font-size:10px}
+.page.p3 .card{padding:6px 8px 7px}
+.page.p3 .ct{font-size:11.5px}
+.page.p3 .kpi{margin-top:7px;gap:6px}
+.page.p3 .kpi b{font-size:15px}
+.page.p3 .kpi span{font-size:9.5px}
+.page.p3 .mx{margin-top:6px}
+.page.p3 .mx .h{font-size:10.5px;padding:4px 6px}
+.page.p3 .mx .rh{font-size:11.5px;padding:5px}
+.page.p3 .mx .c{font-size:10.5px;padding:5px 7px}
+.page.p3 .mx .c b{font-size:11.5px}
+.page.p3 .g2{gap:7px;margin-top:6px}
+.page.p3 .gap li{font-size:10.5px;line-height:1.4;margin-top:2px}
+.page.p3 .foot{margin-top:9px;font-size:9.5px}
+</style></head><body><div class='fit' data-h='1440'><div class='page p3'><div class='kicker'><span>B166ER · 入境客源矩阵</span><span class='r'>2026-11-20 · v3.0</span></div><div class='rule'></div><h1>入境客源：<br><span class='dim'>六个格子，只有两个有数</span></h1><p class='lede'>入境客源按「旅行社／酒店」拆分的官方统计，<b>全国不拆、四川不报、成都只报团队</b>。<b>六级矩阵里只有 2 格有真数</b>：全国入境过夜 3,431 万（2023）、成都团队游客 3,689 人次（2025 五一）。<b>缺口本身是结论</b> —— 谁有月度行业拆分，谁才做得了入境客源的渠道策略。</p><div class='kpi'><div><b>15450 万</b><span>2025 全国入境游客 · +17.1%</span></div><div><b>仅 2 / 6</b><span>六级矩阵里有官方数的格子</span></div><div><b>238 万</b><span>2025 成都入境游客 · +44.3%</span></div><div><b>0</b><span>四川全省入境客源官方数</span></div></div><div class='sec'><h2>一、2×3 矩阵：逐格判真<span class='note'>旅行社 / 酒店 × 成都 / 四川 / 全国</span></h2><div class='mx'><div class='h'></div><div class='h'>旅行社 · 入境客源量</div><div class='h'>酒店业 · 入境客源量</div><div class='rh'>成都</div><div class='c'><span class='s part'>仅部分</span><b>团队游客 3,689 人次</b><em>2025 五一假期，+23.3%；占当日入境 13.7%</em></div><div class='c'><span class='s no'>无官方数</span><b>未单列</b><em>只有总盘 238 万人次 +44.3%</em></div><div class='rh'>四川</div><div class='c'><span class='s no'>无官方数</span><b>未发布</b><em>单企口径：四川康辉 2024 接 2.1 万人次 +88.7%</em></div><div class='c'><span class='s no'>无官方数</span><b>未发布</b><em>全省入境总数亦未发布（2024/2025 公报无单列）</em></div><div class='rh'>全国</div><div class='c'><span class='s no'>无官方数</span><b>未发布</b><em>公报只有旅行社营业收入 4,442.7 亿（2023）</em></div><div class='c'><span class='s part'>仅部分</span><b>入境过夜 3,431 万</b><em>2023；2019 为 6,572.5 万；2024 起停更</em></div></div></div><div class='sec'><h2>二、有数的格子：把曲线拉出来<span class='note'>单位 万人次</span></h2><div class='g2'><div class='card plain'><div class='ct'>全国 入境游客<small>总盘 · 2023→2025</small></div><svg class='chart' viewBox='0 0 452 150' preserveAspectRatio='xMidYMid meet'><line x1='52' y1='128.0' x2='436' y2='128.0' stroke='#E8DFCB' stroke-width='1'/><text x='48' y='131.0' font-size='8.5' fill='#8A8171' text-anchor='end'>0</text><line x1='52' y1='74.0' x2='436' y2='74.0' stroke='#E8DFCB' stroke-width='1'/><text x='48' y='77.0' font-size='8.5' fill='#8A8171' text-anchor='end'>9,000</text><line x1='52' y1='20.0' x2='436' y2='20.0' stroke='#E8DFCB' stroke-width='1'/><text x='48' y='23.0' font-size='8.5' fill='#8A8171' text-anchor='end'>18,000</text><text x='52.0' y='144' font-size='9' fill='#6E6555' text-anchor='middle'>2023</text><text x='244.0' y='144' font-size='9' fill='#6E6555' text-anchor='middle'>2024</text><text x='436.0' y='144' font-size='9' fill='#6E6555' text-anchor='middle'>2025</text><polyline points='52.0,78.8 244.0,48.9 436.0,35.3' fill='none' stroke='#A82A26' stroke-width='2.3' stroke-linejoin='round' stroke-linecap='round'/><circle cx='52.0' cy='78.8' r='3.4' fill='#A82A26'/><text x='59.0' y='70.8' font-size='9.5' font-weight='700' fill='#A82A26' text-anchor='start'>8,203</text><circle cx='244.0' cy='48.9' r='3.4' fill='#A82A26'/><text x='244.0' y='40.9' font-size='9.5' font-weight='700' fill='#A82A26' text-anchor='middle'>13,190</text><circle cx='436.0' cy='35.3' r='3.4' fill='#A82A26'/><text x='429.0' y='27.3' font-size='9.5' font-weight='700' fill='#A82A26' text-anchor='end'>15,450</text></svg></div><div class='card plain'><div class='ct'>全国 入境过夜游客<small>酒店侧代理 · 2019/2023</small></div><svg class='chart' viewBox='0 0 452 150' preserveAspectRatio='xMidYMid meet'><line x1='52' y1='128.0' x2='436' y2='128.0' stroke='#E8DFCB' stroke-width='1'/><text x='48' y='131.0' font-size='8.5' fill='#8A8171' text-anchor='end'>0</text><line x1='52' y1='74.0' x2='436' y2='74.0' stroke='#E8DFCB' stroke-width='1'/><text x='48' y='77.0' font-size='8.5' fill='#8A8171' text-anchor='end'>3,750</text><line x1='52' y1='20.0' x2='436' y2='20.0' stroke='#E8DFCB' stroke-width='1'/><text x='48' y='23.0' font-size='8.5' fill='#8A8171' text-anchor='end'>7,500</text><text x='52.0' y='144' font-size='9' fill='#6E6555' text-anchor='middle'>2019</text><text x='436.0' y='144' font-size='9' fill='#6E6555' text-anchor='middle'>2023</text><polyline points='52.0,33.4 436.0,78.6' fill='none' stroke='#3A6B8A' stroke-width='2.3' stroke-linejoin='round' stroke-linecap='round'/><circle cx='52.0' cy='33.4' r='3.4' fill='#3A6B8A'/><text x='59.0' y='25.4' font-size='9.5' font-weight='700' fill='#3A6B8A' text-anchor='start'>6,572</text><circle cx='436.0' cy='78.6' r='3.4' fill='#3A6B8A'/><text x='429.0' y='70.6' font-size='9.5' font-weight='700' fill='#3A6B8A' text-anchor='end'>3,431</text></svg></div></div><div class='g2'><div class='card plain'><div class='ct'>成都 vs 上海 入境游客<small>2024→2025 · 城市级可比</small></div><svg class='chart' viewBox='0 0 452 150' preserveAspectRatio='xMidYMid meet'><line x1='52' y1='128.0' x2='436' y2='128.0' stroke='#E8DFCB' stroke-width='1'/><text x='48' y='131.0' font-size='8.5' fill='#8A8171' text-anchor='end'>0</text><line x1='52' y1='74.0' x2='436' y2='74.0' stroke='#E8DFCB' stroke-width='1'/><text x='48' y='77.0' font-size='8.5' fill='#8A8171' text-anchor='end'>525</text><line x1='52' y1='20.0' x2='436' y2='20.0' stroke='#E8DFCB' stroke-width='1'/><text x='48' y='23.0' font-size='8.5' fill='#8A8171' text-anchor='end'>1,050</text><text x='52.0' y='144' font-size='9' fill='#6E6555' text-anchor='middle'>2024</text><text x='436.0' y='144' font-size='9' fill='#6E6555' text-anchor='middle'>2025</text><polyline points='52.0,112.9 436.0,103.5' fill='none' stroke='#A82A26' stroke-width='2.3' stroke-linejoin='round' stroke-linecap='round'/><circle cx='52.0' cy='112.9' r='3.4' fill='#A82A26'/><text x='59.0' y='104.9' font-size='9.5' font-weight='700' fill='#A82A26' text-anchor='start'>147.2</text><circle cx='436.0' cy='103.5' r='3.4' fill='#A82A26'/><text x='429.0' y='95.5' font-size='9.5' font-weight='700' fill='#A82A26' text-anchor='end'>238</text><polyline points='52.0,59.0 436.0,31.7' fill='none' stroke='#B08A46' stroke-width='2.3' stroke-linejoin='round' stroke-linecap='round'/><circle cx='52.0' cy='59.0' r='3.4' fill='#B08A46'/><text x='59.0' y='74.0' font-size='9.5' font-weight='700' fill='#B08A46' text-anchor='start'>671</text><circle cx='436.0' cy='31.7' r='3.4' fill='#B08A46'/><text x='429.0' y='46.7' font-size='9.5' font-weight='700' fill='#B08A46' text-anchor='end'>936</text><rect x='54.0' y='9' width='9' height='2.5' fill='#A82A26'/><text x='67.0' y='12' font-size='9' fill='#6E6555'>成都</text><rect x='102.0' y='9' width='9' height='2.5' fill='#B08A46'/><text x='115.0' y='12' font-size='9' fill='#6E6555'>上海</text></svg></div><div class='card plain'><div class='ct'>全国 免签入境外国人<small>2024→2025</small></div><svg class='chart' viewBox='0 0 452 150' preserveAspectRatio='xMidYMid meet'><line x1='52' y1='128.0' x2='436' y2='128.0' stroke='#E8DFCB' stroke-width='1'/><text x='48' y='131.0' font-size='8.5' fill='#8A8171' text-anchor='end'>0</text><line x1='52' y1='74.0' x2='436' y2='74.0' stroke='#E8DFCB' stroke-width='1'/><text x='48' y='77.0' font-size='8.5' fill='#8A8171' text-anchor='end'>1,700</text><line x1='52' y1='20.0' x2='436' y2='20.0' stroke='#E8DFCB' stroke-width='1'/><text x='48' y='23.0' font-size='8.5' fill='#8A8171' text-anchor='end'>3,400</text><text x='52.0' y='144' font-size='9' fill='#6E6555' text-anchor='middle'>2024</text><text x='436.0' y='144' font-size='9' fill='#6E6555' text-anchor='middle'>2025</text><polyline points='52.0,64.1 436.0,32.5' fill='none' stroke='#2E7D5B' stroke-width='2.3' stroke-linejoin='round' stroke-linecap='round'/><circle cx='52.0' cy='64.1' r='3.4' fill='#2E7D5B'/><text x='59.0' y='56.1' font-size='9.5' font-weight='700' fill='#2E7D5B' text-anchor='start'>2,012</text><circle cx='436.0' cy='32.5' r='3.4' fill='#2E7D5B'/><text x='429.0' y='24.5' font-size='9.5' font-weight='700' fill='#2E7D5B' text-anchor='end'>3,008</text></svg></div></div></div><div class='sec'><h2>三、为什么缺，以及怎么补</h2><div class='card plain'><ul class='gap'><li><b>省级是断点，不是数据不存在</b>：云南 2025 报全省入境 864.26 万、过夜 494.72 万（+51.8%）；四川不报</li><li><b>行业拆分只有城市级做</b>：上海月报「旅行社外联 18.05 万 / 接待 27.49 万」；成都只报团队游客</li><li><b>酒店侧可用代理</b>：全国「入境过夜游客」＝住宿需求，但星级饭店不单列入境客源</li><li><b>补齐路径</b>：省文旅厅月度、口岸出入境（移民管理局）、OTA 境外订单、自有 PMS 外籍证件占比</li></ul></div></div><div class='sec'><h2>四、读数</h2><div class='card plain'><ul class='gap'><li><b>入境客源的分行业统计本身就残缺</b>：6 格只有 2 格有官方数 —— 引用前先确认口径</li><li><b>成都唯一硬数是团队占比 13.7%</b>：入境客源以自由行为主，旅行社议价权在下降</li><li><b>上海是唯一能拉全曲线的城市</b>：外联 +97.4%、接待 +55.5%、星级饭店出租率 +2.0pp</li><li><b>对酒店的实操含义</b>：拿不到行业客源数，就用自有 PMS 外籍占比自建月度序列</li></ul></div></div><div class='foot'><span>B166ER · 入境客源矩阵 v3.0</span><span class='it'>源：文旅部 2023/2024/2025 统计公报｜国家统计局｜国家移民管理局｜中国旅游研究院｜上海市文旅局 2026-01-22｜成都市文广旅局（文旅部转载）｜四川省政府 2026-09-20｜CEIC 引文旅部</span></div></div></div><script>
+(function(){
+  var fit=document.querySelector('.fit'), pg=document.querySelector('.page');
+  var target=parseInt(fit.getAttribute('data-h'),10)||1920;
+  var natural=pg.getBoundingClientRect().height;
+  var s=Math.min(1, target/natural);
+  pg.style.transform='scale('+s+')';
+  fit.style.height=target+'px';
+  window.__scale=s; window.__natural=Math.round(natural); window.__target=target;
+})();
+</script></body></html>

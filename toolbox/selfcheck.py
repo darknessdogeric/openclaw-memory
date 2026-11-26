@@ -1071,6 +1071,322 @@ def c40():
     return True, "正式件无更正叙述（新增 %d 件严查）" % (len(_formal_files()) - len(base)), []
 
 
+
+# ---------------- C41 主体名称须有源文件出处 ----------------
+@check("C41", "正式件中的运营/管理主体名称须有源文件出处",
+       "Eric 2026-11-23：正式件里出现的运营方、管理方、品牌方名称，必须能在项目源文件（管理合同、专题报告、专题会纪要、评估报告）里找到同名出处；"
+       "严禁把市场上其他公司或酒店集团的名称安到本项目头上。已知无出处者列入黑名单，全库有效区均不得再出现。")
+def c41():
+    import glob as _g
+    KB = os.path.join(ROOT, "anyi-ops-kb", "02_项目", "总府皇冠假日")
+    DESK = os.path.join(os.path.expanduser("~"), "Desktop", "产业发展部",
+                        "旗下酒店", "总府皇冠假日酒店", "招商推介")
+    BLACK = ["逸柏"]          # 已知无出处：出现在酒店集团清单里，非本项目运营方
+    NEED = ["六洲酒店管理（上海）有限公司", "洲际酒店集团", "四川总府实业有限公司"]
+    formal = []
+    for p in _g.glob(os.path.join(KB, "**", "*招商推介*.md"), recursive=True):
+        if os.path.isfile(p) and "_已废止_" not in p:
+            formal.append(p)
+    for p in _g.glob(os.path.join(DESK, "*.md")):
+        if os.path.isfile(p):
+            formal.append(p)
+    if not formal:
+        return True, "未发现总府招商推介正式件（跳过）", []
+    bad = []
+    for p in formal:
+        try:
+            s = open(p, encoding="utf-8").read()
+        except Exception:
+            continue
+        hit = [w for w in BLACK if w in s]
+        if hit:
+            bad.append("%s 无出处主体名 %s" % (os.path.basename(p), ",".join(hit)))
+        # 必备主体只对正式母本/模板生效；核对表、口径裁决表等过程件不要求载明
+        bn = os.path.basename(p)
+        if not bn.startswith("00_") and ("PPT模板" in bn or "投资方版" in bn):
+            miss = [w for w in NEED if w not in s]
+            if miss:
+                bad.append("%s 缺应载明的主体 %s" % (bn, ",".join(miss)))
+    # 项目 KB 有效区 + 桌面交付目录防复发（范围受限，保证 selfcheck 秒级）
+    scope = []
+    scope += [p for p in _g.glob(os.path.join(KB, "**", "*.md"), recursive=True)
+              if os.path.isfile(p) and "_已废止_" not in p]
+    scope += [p for p in _g.glob(os.path.join(DESK, "**", "*.md"), recursive=True) if os.path.isfile(p)]
+    for p in scope:
+        try:
+            s = open(p, encoding="utf-8").read()
+        except Exception:
+            continue
+        hit = [w for w in BLACK if w in s]
+        if hit:
+            bad.append("%s 无出处主体名 %s" % (os.path.basename(p), ",".join(hit)))
+    if bad:
+        return False, "发现无出处主体名或主体缺漏 %d 处" % len(bad), bad
+    return True, "正式件主体名称均有源文件出处（正式件 %d 份，扫描 %d 份，黑名单 %d 词 0 命中）" % (len(formal), len(scope), len(BLACK)), []
+
+
+# ---------------- C42 亏损治理与经营综合分析能力（2026-11-23 新增） ----------------
+@check("C42", "企业亏损治理与经营综合分析能力须真实存在且结构完整",
+       "2026-11-23 新增能力：技能三件（SKILL.md ＋ 分析模版 ＋ 红线校验）＋ KB 正本 ＋ 注册表登记；缺任一件即 FAIL")
+def c42():
+    import os as _os, json as _json
+    base = _os.path.join(ROOT, "skills", "loss-governance-analysis")
+    need = [
+        (_os.path.join(base, "SKILL.md"), "SKILL.md"),
+        (_os.path.join(base, "references", "分析模版.md"), "分析模版"),
+        (_os.path.join(base, "references", "红线与校验.md"), "红线与校验"),
+        (_os.path.join(ROOT, "anyi-ops-kb", "04_方法论", "企业亏损治理与经营综合分析办法_v1.0_2026-11-23.md"), "KB正本"),
+    ]
+    miss = []
+    for p, label in need:
+        if not _os.path.exists(p) or _os.path.getsize(p) < 800:
+            miss.append(label)
+    det = []
+    if miss:
+        return False, "缺失或过小: " + ", ".join(miss), miss
+    tpl = open(_os.path.join(base, "references", "分析模版.md"), encoding="utf-8").read()
+    must = ["一页纸结论", "经营结构分解", "亏损归因三层", "处置决策", "落地三要素", "数据清单",
+            "S01", "L0", "TRevPAR"]
+    bad = [m for m in must if m not in tpl]
+    if bad:
+        det.append("模版缺结构: " + ", ".join(bad))
+    sk = open(_os.path.join(base, "SKILL.md"), encoding="utf-8").read()
+    if "name:" not in sk.split("---")[1] or "description:" not in sk.split("---")[1]:
+        det.append("SKILL.md frontmatter 缺 name 或 description")
+    trig = ["亏损治理", "经营综合分析", "亏损归因"]
+    if not any(x in sk for x in trig):
+        det.append("SKILL.md description 缺触发词")
+    reg = _os.path.join(ROOT, "output", "audit_skills", "SKILL_REGISTRY.json")
+    if not _os.path.exists(reg):
+        det.append("注册表缺失")
+    else:
+        try:
+            rows = _json.load(open(reg, encoding="utf-8"))
+            if not any(r.get("name") == "loss-governance-analysis" for r in rows):
+                det.append("注册表未登记 loss-governance-analysis")
+        except Exception as e:
+            det.append("注册表读取异常 %s" % str(e)[:40])
+    if det:
+        return False, "能力不完整: " + det[0][:80], det
+    return True, "亏损治理与经营综合分析能力完整（技能三件 ＋ KB 正本 ＋ 注册表 ＋ 六段结构）", []
+
+
+
+# ---------------- C43 康体业态口径（禁止把姊妹酒店业态安到本项目）----------------
+@check("C43", "康体业态不得使用无源业态名；层数面积餐位口径须与工程部档案一致",
+       "Eric 2026-11-23：工程部《物业基础档案·工程概况》表A2 的正式名称是「娱乐部 3,780 ㎡」；"
+       "洲际 PIP 原件康体设施栏为「Pool, Fitness; SPA」——本项目无温泉汤泉业态。"
+       "同业主姊妹物业总府川宾即四川宾馆（2024 报告：1999 年与本酒店同时被评为五星级饭店和四星级饭店），同样不是温泉酒店。正式件禁止把温泉/汤泉用于本项目或川宾；"
+       "外部参照所在行放行：哈尔滨北龙汤泉酒店 8·25 火灾案（2024 报告原文）、中山温泉与温江皇冠假日（第三方造价与竞品案例）。"
+       "地上 29 层、主体建筑檐高 108 m、地上主体建筑面积 58,064.43 ㎡、地下 8,611.2 ㎡、"
+       "全日餐厅 1,574 ㎡／490 餐位、厨房 1,975.4 ㎡、池内四根承重柱。")
+def c43():
+    import glob as _g
+    DESK = os.path.join(os.path.expanduser("~"), "Desktop", "产业发展部",
+                        "旗下酒店", "总府皇冠假日酒店")
+    # 项目自用禁用；外部参照（北龙/中山/温江）按所在行放行，见下方 EXEMPT
+    BAD = [r"(?<!北龙)(?<!中山)(?<!温江)汤泉", r"(?<!北龙)(?<!中山)(?<!温江)温泉",
+           r"泡汤", r"汤泉[（(]?康体", r"汤泉体",
+           r"川宾温泉", r"四星级温泉", r"总府川宾温泉", r"温泉运营", r"温泉日场",
+           r"温泉会员", r"温泉汤浴", r"三根承重柱", r"负一层泳池",
+           r"11,611\.20", r"44490", r"(?<![0-9])90\s*餐位",
+           r"地上\s*28\s*层", r"\|\s*地上层数\s*\|\s*28\s*层", r"约\s*98\s*m"]
+    # 仅对物业/招商类正式件校验必备口径值
+    MUST = ["3,780", "58,064.43", "8,611.2", "29 层", "108 m", "490 餐位", "娱乐部", "厨房"]
+    # 外部参照所在行放行：
+    #   北龙＝2018·8·25 重大火灾案（2024 报告原文）；中山/温江＝第三方造价与竞品案例
+    EXEMPT = ("北龙", "中山", "温江")
+    targets = []
+    for d in (os.path.join(DESK, "招商推介"), os.path.join(DESK, "改造报告交付")):
+        targets += [p for p in _g.glob(os.path.join(d, "*.md")) + _g.glob(os.path.join(d, "*.docx"))
+                    if os.path.isfile(p)]
+    if not targets:
+        return True, "未发现正式交付件（跳过）", []
+    bad = []
+    for p in targets:
+        try:
+            if p.endswith(".md"):
+                s = open(p, encoding="utf-8").read()
+            else:
+                from docx import Document as _D
+                _d = _D(p)
+                s = "\n".join([q.text for q in _d.paragraphs] +
+                              [c.text for tb in _d.tables for rr in tb.rows for c in rr.cells])
+        except Exception:
+            continue
+        for ln in s.split("\n"):
+            if any(x in ln for x in EXEMPT):
+                continue
+            for pat in BAD:
+                if re.search(pat, ln):
+                    bad.append("%s 命中禁用口径 %s" % (os.path.basename(p), pat))
+                    break
+        bn = os.path.basename(p)
+        if "招商推介" in bn and not bn.startswith("00_"):
+            miss = [w for w in MUST if w not in s]
+            if miss:
+                bad.append("%s 缺必备口径值 %s" % (bn, ",".join(miss)))
+    if bad:
+        return False, "康体业态口径违规 %d 处" % len(bad), bad
+    return True, "康体业态口径正确（正式件 %d 份，无项目自用温泉汤泉，层数面积餐位一致）" % len(targets), []
+
+
+@check("C44", "招商推介 PPT 模板不得含估值金额与财务测算词，且必备口径值须齐全",
+       "Eric 2026-11-23：喂给 PPT 生成工具的招商模板，内容段不得出现任何金额、估值、投资额、造价、"
+       "营业收入、利润、收益率、回收期类数字（评估总值 69,923.42 万元、原始工程投资 67,430 万元均不得进入）；"
+       "同时不得出现 汤泉/泡汤/11,611.20/地上 28 层/约 98 m 等旧错值，"
+       "且必须载明 娱乐部/3,780/58,064.43/8,611.2/29 层/108 m/490 餐位/厨房 与三大主体名称。")
+def c44():
+    import glob as _g
+    DESK = os.path.join(os.path.expanduser("~"), "Desktop", "产业发展部",
+                        "旗下酒店", "总府皇冠假日酒店", "招商推介")
+    tpl = [p for p in _g.glob(os.path.join(DESK, "*PPT模板*.md")) + _g.glob(os.path.join(DESK, "*PPT模板*.docx"))
+           if os.path.isfile(p)]
+    if not tpl:
+        return True, "未发现招商 PPT 模板（跳过）", []
+    MONEY = ["万元", "亿元", "评估值", "评估总值", "资产价值", "投资额", "改造投资", "造价",
+             "营业收入", "经营利润", "净利润", "毛利", "现金流", "NPV", "IRR", "内部收益率",
+             "净现值", "回收期", "投资回报", "收益率", "估值", "市值", "溢价", "成本", "负债",
+             "可承受", "67,430", "69,923.42"]
+    BAD = [r"(?<!北龙)汤泉", r"泡汤", r"11,611\.20", r"44490", r"(?<![0-9])90\s*餐位",
+           r"地上\s*28\s*层", r"约\s*98\s*m", r"逸柏", r"其他中庭"]
+    MUST = ["69,026.08", "58,064.43", "8,611.2", "29 层", "108 m", "402 间", "3,780.00",
+            "490 餐位", "娱乐部", "厨房", "六洲酒店管理（上海）有限公司", "洲际酒店集团",
+            "四川总府实业有限公司"]
+    bad = []
+    for p in tpl:
+        try:
+            if p.endswith(".md"):
+                s = open(p, encoding="utf-8").read()
+            else:
+                from docx import Document as _D
+                _d = _D(p)
+                s = "\n".join([q.text for q in _d.paragraphs] +
+                              [c.text for tb in _d.tables for rr in tb.rows for c in rr.cells])
+        except Exception:
+            continue
+        # 只校验内容段（生成指令段的禁写条款允许出现禁词名）
+        # 注意：docx 顶部有目录，"页面清单"会先以目录项出现 → 取最后一个精确标题位置
+        seg = s
+        if p.endswith(".md"):
+            k = s.find("## 页面清单")
+            if k >= 0:
+                seg = s[k:]
+        else:
+            from docx import Document as _DD
+            _d2 = _DD(p)
+            paras = [q.text for q in _d2.paragraphs]
+            idxs = [i for i, q in enumerate(paras) if q.strip() == "页面清单"]
+            if idxs:
+                seg = "\n".join(paras[idxs[-1]:])
+                seg += "\n" + "\n".join(
+                    c.text for tb in _d2.tables for rr in tb.rows for c in rr.cells)
+            else:
+                k = s.find("页面清单")
+                if k >= 0:
+                    seg = s[k:]
+        hit = [w for w in MONEY if w in seg]
+        if hit:
+            bad.append("%s 含估值/财务词 %s" % (os.path.basename(p), ",".join(hit)))
+        for pat in BAD:
+            if re.search(pat, seg):
+                bad.append("%s 命中旧错值 %s" % (os.path.basename(p), pat))
+        miss = [w for w in MUST if w not in seg]
+        if miss:
+            bad.append("%s 缺必备口径值 %s" % (os.path.basename(p), ",".join(miss)))
+    if bad:
+        return False, "招商模板口径违规 %d 处" % len(bad), bad
+    return True, "招商模板口径正确（模板 %d 份，无估值金额，必备口径值齐全）" % len(tpl), []
+
+
+# ---------------- C45 中国传统色值库（2026-11-25 新增） ----------------
+@check("C45", "中国传统色值库须 71 条齐备且字段完整", "《中国传统色主题配色手册》v2.0 内化成果：色库缺条目/字段缺失/脚本丢失 = 国风配色无法复现，且会把待校准值误当书载值")
+def c45():
+    import json as _json
+    base = os.path.join(ROOT, 'skills', 'chinese-traditional-color')
+    lib = os.path.join(base, 'references', 'ctc_colors.json')
+    scr = os.path.join(base, 'scripts', 'ctc_palette.py')
+    skl = os.path.join(base, 'SKILL.md')
+    miss = []
+    if not os.path.exists(lib):
+        return False, '缺 references/ctc_colors.json', []
+    if not os.path.exists(scr):
+        return False, '缺 scripts/ctc_palette.py（配色方法不可复现）', []
+    if not os.path.exists(skl):
+        return False, '缺 SKILL.md（技能不可路由）', []
+    try:
+        with open(skl, encoding='utf-8') as f:
+            head = f.read(1500)
+        if 'description:' not in head:
+            return False, 'SKILL.md 缺 description（路由不到）', []
+    except Exception as e:
+        return False, 'SKILL.md 读取失败: ' + str(e)[:40], []
+    try:
+        with open(lib, encoding='utf-8') as f:
+            data = _json.load(f)
+    except Exception as e:
+        return False, '色库解析失败: ' + str(e)[:40], []
+    cols = data.get('colors') or []
+    if len(cols) != 71:
+        return False, '色库条目数 ' + str(len(cols)) + '，应为 71（47 传统色 + 24 节气）', []
+    need = ('name', 'family', 'meaning', 'value_source', 'pending_book_value')
+    bad = []
+    for c in cols:
+        for k in need:
+            if k not in c:
+                bad.append(str(c.get('name', '?')) + ' 缺 ' + k)
+        hx = c.get('hex')
+        if hx is not None and not (isinstance(hx, str) and hx.startswith('#') and len(hx) == 7):
+            bad.append(str(c.get('name', '?')) + ' HEX 格式异常')
+        if c.get('family') == '节气' and hx is not None:
+            bad.append(str(c.get('name', '?')) + ' 节气色不应有书载值')
+    if bad:
+        return False, '色库字段/口径异常: ' + '; '.join(bad[:3]), bad[:3]
+    pend = len([c for c in cols if c.get('pending_book_value')])
+    return True, '71 条齐备（47 + 24）｜字段完整｜待校准 ' + str(pend) + ' 条（书载值未取得，须诚实标注）', []
+
+# ---------------- C46 预测台账与纪律工具（2026-11-26 新增） ----------------
+@check("C46", "预测台账须有可结算条目且纪律工具齐备", "西尔弗信号与噪声内化成果：台账不产生分数就不算在跑；概率不给结算日 = 不可证伪的断言 = 不算预测")
+def c46():
+    import json as _json
+    base = os.path.join(ROOT, 'skills', 'prediction-discipline')
+    led = os.path.join(ROOT, 'data', 'prediction_ledger.jsonl')
+    need = ['ledger.py', 'base_rate.py', 'regression_to_mean.py', 'signal_audit.py', 'brier.py']
+    miss = [n for n in need if not os.path.exists(os.path.join(base, 'scripts', n))]
+    if miss:
+        return False, '纪律工具缺失: ' + ', '.join(miss), miss
+    if not os.path.exists(led):
+        return False, '缺 data/prediction_ledger.jsonl', []
+    rows = []
+    try:
+        with open(led, encoding='utf-8') as f:
+            for ln in f:
+                ln = ln.strip()
+                if ln and not ln.startswith('#'):
+                    rows.append(_json.loads(ln))
+    except Exception as e:
+        return False, '台账解析失败: ' + str(e)[:40], []
+    if not rows:
+        return False, '台账为空 —— 原则二要求每条预测留痕', []
+    bad = []
+    for r in rows:
+        for k in ('id', 'question', 'p', 'resolved_date', 'base_rate'):
+            if r.get(k) is None:
+                bad.append(str(r.get('id', '?')) + ' 缺 ' + k)
+        p = r.get('p')
+        if not isinstance(p, (int, float)) or not (0 < p < 1):
+            bad.append(str(r.get('id', '?')) + ' 概率必须在(0,1)开区间')
+    if bad:
+        return False, '台账字段/概率口径异常: ' + '; '.join(bad[:3]), bad[:3]
+    sk = os.path.join(base, 'SKILL.md')
+    if not os.path.exists(sk):
+        return False, '缺 SKILL.md（技能不可路由）', []
+    head = open(sk, encoding='utf-8').read(2000)
+    if 'description:' not in head:
+        return False, 'SKILL.md 缺 description（路由不到）', []
+    settled = len([r for r in rows if r.get('outcome') is not None])
+    return True, '台账 ' + str(len(rows)) + ' 条（已结算 ' + str(settled) + '）｜五工具齐备｜概率与结算日口径合规', []
+
 def run(as_json=False):
     res = []
     npass = 0
