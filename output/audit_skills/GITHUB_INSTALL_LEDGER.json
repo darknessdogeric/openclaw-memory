@@ -1,0 +1,78 @@
+{
+ "date": "2026-11-18",
+ "rule": "GitHub 安装只针对已证实的能力缺口；须留来源/版本/许可证/回滚记录（AGENTS.md 硬要求）",
+ "repos": {
+  "openclaw/clawhub": {
+   "stars": 9553,
+   "license": "MIT",
+   "commit": "bf198e629636",
+   "pushed_at": "2026-11-17T07:29:07Z",
+   "archived": false,
+   "desc": "Skill + Plugin Registry for OpenClaw"
+  },
+  "VoltAgent/awesome-openclaw-skills": {
+   "stars": 53839,
+   "license": "MIT",
+   "commit": "5492fcd98f7c",
+   "pushed_at": "2026-10-30T13:21:07Z",
+   "archived": false,
+   "desc": "The awesome collection of OpenClaw skills. 5,400+ skills filtered and categorize"
+  }
+ },
+ "installs": [
+  {
+   "name": "writing-evals",
+   "path": "skills/writing-evals",
+   "repo": "openclaw/clawhub",
+   "subpath": ".agents/skills/writing-evals/",
+   "files": 21,
+   "gap_filled": "自检/回归/评测写法 —— 我今天手搓 selfcheck.py 时缺少的方法论层",
+   "why": "★ 已证实的能力缺口（本地无对应技能），非堆叠",
+   "actual_files": 21,
+   "bytes": 81273,
+   "license": "MIT",
+   "repo_stars": 9553,
+   "commit": "bf198e629636",
+   "installed_at": "2026-11-18"
+  },
+  {
+   "name": "autoreview",
+   "path": "skills/autoreview",
+   "repo": "openclaw/clawhub",
+   "subpath": ".agents/skills/autoreview/",
+   "files": 1,
+   "gap_filled": "自动代码审阅 —— 验证断言的独立视角",
+   "why": "★ 已证实的能力缺口",
+   "actual_files": 1,
+   "bytes": 1637,
+   "license": "MIT",
+   "repo_stars": 9553,
+   "commit": "bf198e629636",
+   "installed_at": "2026-11-18"
+  },
+  {
+   "name": "technical-documentation",
+   "path": "skills/technical-documentation",
+   "repo": "openclaw/clawhub",
+   "subpath": ".agents/skills/technical-documentation/",
+   "files": 13,
+   "gap_filled": "技术文档写作规范 —— 范式库写作层缺口",
+   "why": "★ 已证实的能力缺口",
+   "actual_files": 13,
+   "bytes": 78937,
+   "license": "MIT",
+   "repo_stars": 9553,
+   "commit": "bf198e629636",
+   "installed_at": "2026-11-18"
+  }
+ ],
+ "rollback": "删除 skills/<name>/ 目录即回滚；未修改任何系统配置，无外部副作用",
+ "not_installed": [
+  {
+   "repo": "VoltAgent/awesome-openclaw-skills",
+   "stars": 53839,
+   "reason": "★ 只作缺口发现目录（5,300+ 技能清单），未安装任何条目 —— 无已证实缺口对应",
+   "license": "MIT"
+  }
+ ]
+}

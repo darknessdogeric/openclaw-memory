@@ -1,0 +1,3281 @@
+{
+ "rows": [
+  {
+   "file": "hb1127_append_memory.py",
+   "bytes": 1690,
+   "targets": [
+    [
+     "D:\\B166ER-OpenClaw\\workspace\\memory\\2026-07-24.md",
+     false
+    ]
+   ],
+   "hb_ids": [
+    "1123",
+    "1127"
+   ],
+   "payload_head": "## HB #1127 heartbeat (2026-07-24 00:59) - Friday pre-dawn zone (00:59), Eric sleep zone, this session DORMANT - D+8 = Execution phase day 4 -- observ"
+  },
+  {
+   "file": "hb1127_prepend.py",
+   "bytes": 4446,
+   "targets": [
+    [
+     "D:\\B166ER-OpenClaw\\workspace\\HEARTBEAT.md",
+     false
+    ]
+   ],
+   "hb_ids": [
+    "1062",
+    "1126",
+    "1127"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb2302_append.py",
+   "bytes": 4539,
+   "targets": [],
+   "hb_ids": [
+    "1849",
+    "2301",
+    "2302"
+   ],
+   "payload_head": "## HB #2302 (2026-08-05T23:45 GMT+8 cron-event, OpenClaw heartbeat poll) - gap from HB #2301 (23:35): +10min -- Wed weekday-NIGHT Token Guard nominal "
+  },
+  {
+   "file": "hb2337_append.py",
+   "bytes": 6812,
+   "targets": [],
+   "hb_ids": [
+    "1849",
+    "2156",
+    "2314",
+    "2334",
+    "2336",
+    "2337"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb2425_append.py",
+   "bytes": 6389,
+   "targets": [],
+   "hb_ids": [
+    "1849",
+    "2423",
+    "2425"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb288_log.py",
+   "bytes": 3251,
+   "targets": [],
+   "hb_ids": [
+    "228",
+    "287",
+    "288"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb3297_append.py",
+   "bytes": 8100,
+   "targets": [],
+   "hb_ids": [
+    "1849",
+    "3296",
+    "3297"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb336_update.py",
+   "bytes": 2516,
+   "targets": [],
+   "hb_ids": [
+    "335",
+    "336"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb340_update.py",
+   "bytes": 4606,
+   "targets": [],
+   "hb_ids": [
+    "228",
+    "340"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb350_update.py",
+   "bytes": 4354,
+   "targets": [],
+   "hb_ids": [
+    "228",
+    "349",
+    "350"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb3604_append.py",
+   "bytes": 2032,
+   "targets": [
+    [
+     "D:\\B166ER-OpenClaw\\workspace\\HEARTBEAT.md",
+     false
+    ]
+   ],
+   "hb_ids": [
+    "3603",
+    "3604"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb3604_state.py",
+   "bytes": 1340,
+   "targets": [],
+   "hb_ids": [
+    "3603",
+    "3604"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb3632_tick.py",
+   "bytes": 5058,
+   "targets": [],
+   "hb_ids": [
+    "3631",
+    "3632"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb380_fix.py",
+   "bytes": 875,
+   "targets": [],
+   "hb_ids": [],
+   "payload_head": ""
+  },
+  {
+   "file": "hb380_fix2.py",
+   "bytes": 1043,
+   "targets": [],
+   "hb_ids": [],
+   "payload_head": ""
+  },
+  {
+   "file": "hb380_update.py",
+   "bytes": 3837,
+   "targets": [],
+   "hb_ids": [
+    "228",
+    "379",
+    "380"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb420_update.py",
+   "bytes": 3852,
+   "targets": [],
+   "hb_ids": [
+    "228",
+    "419",
+    "420"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb429_append.py",
+   "bytes": 4979,
+   "targets": [],
+   "hb_ids": [
+    "428",
+    "429"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb489_append.py",
+   "bytes": 2742,
+   "targets": [],
+   "hb_ids": [
+    "478",
+    "488",
+    "489"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb496_append.py",
+   "bytes": 2794,
+   "targets": [],
+   "hb_ids": [
+    "495",
+    "496"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb544_append.py",
+   "bytes": 6587,
+   "targets": [],
+   "hb_ids": [
+    "543",
+    "544"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb544_fix.py",
+   "bytes": 3515,
+   "targets": [],
+   "hb_ids": [
+    "513",
+    "544"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb551_md.py",
+   "bytes": 2529,
+   "targets": [],
+   "hb_ids": [
+    "550",
+    "551"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb551_update.py",
+   "bytes": 3686,
+   "targets": [],
+   "hb_ids": [
+    "551"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb560_log.py",
+   "bytes": 2508,
+   "targets": [],
+   "hb_ids": [
+    "559",
+    "560"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb582_append.py",
+   "bytes": 2419,
+   "targets": [
+    [
+     "D:\\B166ER-OpenClaw\\workspace\\HEARTBEAT.md",
+     false
+    ]
+   ],
+   "hb_ids": [
+    "581",
+    "582"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb713_append.py",
+   "bytes": 4048,
+   "targets": [
+    [
+     "D:\\B166ER-OpenClaw\\workspace\\HEARTBEAT.md",
+     false
+    ]
+   ],
+   "hb_ids": [
+    "581",
+    "712",
+    "713"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb751_append.py",
+   "bytes": 3178,
+   "targets": [],
+   "hb_ids": [
+    "750",
+    "751"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb755_append.py",
+   "bytes": 6530,
+   "targets": [
+    [
+     "D:\\B166ER-OpenClaw\\workspace\\HEARTBEAT.md",
+     false
+    ]
+   ],
+   "hb_ids": [
+    "755"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb774_update.py",
+   "bytes": 4504,
+   "targets": [],
+   "hb_ids": [
+    "773",
+    "774"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb783_append.py",
+   "bytes": 4379,
+   "targets": [],
+   "hb_ids": [
+    "781",
+    "782",
+    "783"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb831_append.py",
+   "bytes": 5116,
+   "targets": [],
+   "hb_ids": [
+    "830",
+    "831"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb835_append.py",
+   "bytes": 3440,
+   "targets": [],
+   "hb_ids": [
+    "834",
+    "835"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb924_update.py",
+   "bytes": 4782,
+   "targets": [],
+   "hb_ids": [
+    "923",
+    "924"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb929_tick.py",
+   "bytes": 5305,
+   "targets": [],
+   "hb_ids": [
+    "929"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb930_append.py",
+   "bytes": 3995,
+   "targets": [],
+   "hb_ids": [
+    "929",
+    "930"
+   ],
+   "payload_head": "## HB #930 (2026-07-22T16:15 GMT+8 cron-event, OpenClaw heartbeat poll) - gap from HB #929 (16:11): +4min -- Wednesday afternoon Token Guard normal ca"
+  },
+  {
+   "file": "hb965_tick.py",
+   "bytes": 4390,
+   "targets": [],
+   "hb_ids": [
+    "964",
+    "965"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb976_append.py",
+   "bytes": 3714,
+   "targets": [],
+   "hb_ids": [
+    "970",
+    "975",
+    "976"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_1001_log.py",
+   "bytes": 5748,
+   "targets": [],
+   "hb_ids": [
+    "1000",
+    "1001"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_1035.py",
+   "bytes": 5072,
+   "targets": [],
+   "hb_ids": [
+    "1034",
+    "1035"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_1051_tick.py",
+   "bytes": 6110,
+   "targets": [],
+   "hb_ids": [
+    "1050",
+    "1051"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_1064_tick.py",
+   "bytes": 4133,
+   "targets": [],
+   "hb_ids": [
+    "1063",
+    "1064"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_1065_append.py",
+   "bytes": 2210,
+   "targets": [],
+   "hb_ids": [
+    "1064",
+    "1065"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_1102.py",
+   "bytes": 5787,
+   "targets": [],
+   "hb_ids": [
+    "1102"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_1103_append.py",
+   "bytes": 5250,
+   "targets": [],
+   "hb_ids": [
+    "1102",
+    "1103"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_1110_append.py",
+   "bytes": 5928,
+   "targets": [],
+   "hb_ids": [
+    "1110"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_1152.py",
+   "bytes": 4597,
+   "targets": [],
+   "hb_ids": [
+    "1152"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_1152_writer.py",
+   "bytes": 3399,
+   "targets": [],
+   "hb_ids": [
+    "1151",
+    "1152"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_1165_log.py",
+   "bytes": 5651,
+   "targets": [
+    [
+     "D:\\B166ER-OpenClaw\\workspace\\memory\\2026-07-24.md",
+     false
+    ]
+   ],
+   "hb_ids": [
+    "1165"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_1186.py",
+   "bytes": 3330,
+   "targets": [],
+   "hb_ids": [
+    "1185",
+    "1186"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_1517_append.py",
+   "bytes": 4658,
+   "targets": [
+    [
+     "D:\\B166ER-OpenClaw\\workspace\\HEARTBEAT.md",
+     false
+    ]
+   ],
+   "hb_ids": [
+    "1516",
+    "1517"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_1580.py",
+   "bytes": 4075,
+   "targets": [],
+   "hb_ids": [
+    "1580"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_1618_append.py",
+   "bytes": 4641,
+   "targets": [],
+   "hb_ids": [
+    "1617",
+    "1618"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_1624_tick.py",
+   "bytes": 6780,
+   "targets": [],
+   "hb_ids": [
+    "1624"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_1627.py",
+   "bytes": 4368,
+   "targets": [],
+   "hb_ids": [
+    "1623",
+    "1625",
+    "1626",
+    "1627"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_1874_v3.py",
+   "bytes": 3459,
+   "targets": [],
+   "hb_ids": [
+    "1849",
+    "1873",
+    "1874"
+   ],
+   "payload_head": "## HB #1874 (2026-07-29T14:05 GMT+8 cron-event, OpenClaw heartbeat poll) - gap from HB #1873 (14:03): +2min -- Wed afternoon Token Guard minimal caden"
+  },
+  {
+   "file": "hb_1907.py",
+   "bytes": 3441,
+   "targets": [],
+   "hb_ids": [
+    "1849",
+    "1906",
+    "1907"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_2290.py",
+   "bytes": 6681,
+   "targets": [],
+   "hb_ids": [
+    "1849",
+    "2290"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_2338_append.py",
+   "bytes": 7009,
+   "targets": [],
+   "hb_ids": [
+    "1849",
+    "2337",
+    "2338"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_2345_append.py",
+   "bytes": 6036,
+   "targets": [],
+   "hb_ids": [
+    "1849",
+    "2083",
+    "2344",
+    "2345"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_2432_log.py",
+   "bytes": 5533,
+   "targets": [],
+   "hb_ids": [
+    "2421",
+    "2431",
+    "2432"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_2597_append.py",
+   "bytes": 6560,
+   "targets": [],
+   "hb_ids": [
+    "1849",
+    "2483",
+    "2597"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_2745.py",
+   "bytes": 4489,
+   "targets": [],
+   "hb_ids": [
+    "2738",
+    "2745"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_2768_append.py",
+   "bytes": 5287,
+   "targets": [
+    [
+     "D:\\B166ER-OpenClaw\\workspace\\HEARTBEAT.md",
+     false
+    ]
+   ],
+   "hb_ids": [
+    "1849",
+    "2767",
+    "2768"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_2778_append.py",
+   "bytes": 5529,
+   "targets": [],
+   "hb_ids": [
+    "1849",
+    "2777",
+    "2778",
+    "2779"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_3038_append.py",
+   "bytes": 4134,
+   "targets": [],
+   "hb_ids": [
+    "1849",
+    "3037",
+    "3038"
+   ],
+   "payload_head": "### HB #3038 (2026-08-12T16:18:42+0800 GMT+8 cron-event, OpenClaw heartbeat poll) - gap from HB #3037 (16:15): +3min -- Wed workday-PM Token Guard nom"
+  },
+  {
+   "file": "hb_3046_append.py",
+   "bytes": 5578,
+   "targets": [],
+   "hb_ids": [
+    "1849"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_3053_tick.py",
+   "bytes": 4242,
+   "targets": [],
+   "hb_ids": [
+    "1849",
+    "3052",
+    "3053"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_3058_tick.py",
+   "bytes": 5523,
+   "targets": [],
+   "hb_ids": [
+    "1849",
+    "3058"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_3073_append.py",
+   "bytes": 3895,
+   "targets": [],
+   "hb_ids": [
+    "1849",
+    "3072",
+    "3073"
+   ],
+   "payload_head": "### HB #3073 (2026-08-13T09:32:01+0800 GMT+8 cron-event, OpenClaw heartbeat poll) - gap from HB #3072 (09:28:03): +4min -- Thu workday-AM Token Guard "
+  },
+  {
+   "file": "hb_3092_append.py",
+   "bytes": 3519,
+   "targets": [],
+   "hb_ids": [
+    "1849",
+    "3091",
+    "3092"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_3203_append.py",
+   "bytes": 5023,
+   "targets": [],
+   "hb_ids": [
+    "1849",
+    "3202",
+    "3203"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_3205_tick.py",
+   "bytes": 4649,
+   "targets": [],
+   "hb_ids": [
+    "1849",
+    "3205"
+   ],
+   "payload_head": "### HB {n} ({ts} GMT+8 cron-event, OpenClaw heartbeat poll) - gap from HB {prev_n} ({prev_ts}): +5min -- Fri workday-PM Token Guard nominal cadence (R"
+  },
+  {
+   "file": "hb_3221_append.py",
+   "bytes": 4790,
+   "targets": [],
+   "hb_ids": [
+    "1849",
+    "3220",
+    "3221"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_3234_tick.py",
+   "bytes": 5405,
+   "targets": [],
+   "hb_ids": [
+    "1849",
+    "3234"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_3239.py",
+   "bytes": 4882,
+   "targets": [],
+   "hb_ids": [
+    "1849",
+    "3238",
+    "3239"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_333_append.py",
+   "bytes": 4009,
+   "targets": [],
+   "hb_ids": [
+    "332",
+    "333"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_3355_tick.py",
+   "bytes": 4798,
+   "targets": [],
+   "hb_ids": [
+    "1849",
+    "3354",
+    "3355"
+   ],
+   "payload_head": "### HB #3355 (2026-08-15T21:54:00+08:00 GMT+8 cron-event, OpenClaw heartbeat poll) - gap from HB #3354 (21:44): ~10min -- Sat weekend-EVENING Token Gu"
+  },
+  {
+   "file": "hb_3443_append.py",
+   "bytes": 3493,
+   "targets": [],
+   "hb_ids": [
+    "1849",
+    "3442",
+    "3443"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_347_update.py",
+   "bytes": 4959,
+   "targets": [],
+   "hb_ids": [
+    "228",
+    "346",
+    "347"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_398_update.py",
+   "bytes": 3864,
+   "targets": [],
+   "hb_ids": [
+    "228",
+    "398"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_417_append.py",
+   "bytes": 3112,
+   "targets": [],
+   "hb_ids": [
+    "228",
+    "416",
+    "417"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_417_state.py",
+   "bytes": 1294,
+   "targets": [],
+   "hb_ids": [
+    "417"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_458_fix.py",
+   "bytes": 3039,
+   "targets": [],
+   "hb_ids": [
+    "456",
+    "457",
+    "458"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_458_update.py",
+   "bytes": 3618,
+   "targets": [],
+   "hb_ids": [
+    "456",
+    "457",
+    "458"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_490_append.py",
+   "bytes": 3956,
+   "targets": [],
+   "hb_ids": [
+    "490"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_493_record.py",
+   "bytes": 5808,
+   "targets": [],
+   "hb_ids": [
+    "492",
+    "493"
+   ],
+   "payload_head": "## HB #493 (2026-07-19 02:08 GMT+8 cron-event, OpenClaw heartbeat poll) - gap from HB #492 (01:34): +34min -- deep-night Sunday Token Guard minimal ca"
+  },
+  {
+   "file": "hb_496_update.py",
+   "bytes": 4491,
+   "targets": [],
+   "hb_ids": [
+    "495",
+    "496"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_499.py",
+   "bytes": 4767,
+   "targets": [],
+   "hb_ids": [
+    "499"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_501.py",
+   "bytes": 4367,
+   "targets": [],
+   "hb_ids": [
+    "500",
+    "501"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_507_append.py",
+   "bytes": 4663,
+   "targets": [],
+   "hb_ids": [
+    "506",
+    "507"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_530.py",
+   "bytes": 5601,
+   "targets": [],
+   "hb_ids": [],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_530_backfill.py",
+   "bytes": 3501,
+   "targets": [],
+   "hb_ids": [
+    "530"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_564_2026-07-18_2208.py",
+   "bytes": 4302,
+   "targets": [],
+   "hb_ids": [
+    "564"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_567_log.py",
+   "bytes": 3464,
+   "targets": [],
+   "hb_ids": [
+    "566",
+    "567"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_571_append.py",
+   "bytes": 4910,
+   "targets": [],
+   "hb_ids": [
+    "479",
+    "493",
+    "560",
+    "561",
+    "570",
+    "571"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_603_append.py",
+   "bytes": 5185,
+   "targets": [],
+   "hb_ids": [
+    "584",
+    "602",
+    "603"
+   ],
+   "payload_head": "## HB #603 (2026-07-19 23:38 GMT+8 cron-event, OpenClaw heartbeat poll) - gap from HB #602 (23:13): +25min -- late-night zone Token Guard normal caden"
+  },
+  {
+   "file": "hb_612_append.py",
+   "bytes": 3933,
+   "targets": [],
+   "hb_ids": [
+    "479",
+    "493",
+    "560",
+    "561",
+    "611",
+    "612"
+   ],
+   "payload_head": "## HB #612 (2026-07-20 08:35 GMT+8 cron-event, OpenClaw heartbeat poll) - gap from HB #611 (08:30): +5min -- Monday AM Token Guard normal cadence - **"
+  },
+  {
+   "file": "hb_668_tick.py",
+   "bytes": 6203,
+   "targets": [],
+   "hb_ids": [
+    "584",
+    "668"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_920_log.py",
+   "bytes": 4454,
+   "targets": [],
+   "hb_ids": [
+    "919",
+    "920"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_961_append.py",
+   "bytes": 4914,
+   "targets": [],
+   "hb_ids": [
+    "961"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_977_update.py",
+   "bytes": 1272,
+   "targets": [],
+   "hb_ids": [
+    "977"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_append.py",
+   "bytes": 2715,
+   "targets": [],
+   "hb_ids": [],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_append_1012.py",
+   "bytes": 5130,
+   "targets": [],
+   "hb_ids": [
+    "1011",
+    "1012"
+   ],
+   "payload_head": "## HB #1012 (2026-07-23 09:32 GMT+8 cron-event, OpenClaw heartbeat poll) - gap from HB #1011 (07:34): +1h58m -- Thursday late-morning Token Guard norm"
+  },
+  {
+   "file": "hb_append_1015.py",
+   "bytes": 3727,
+   "targets": [],
+   "hb_ids": [
+    "1014",
+    "1015"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_append_1064.py",
+   "bytes": 2866,
+   "targets": [],
+   "hb_ids": [
+    "1063",
+    "1064"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_append_1069.py",
+   "bytes": 5162,
+   "targets": [
+    [
+     "D:\\B166ER-OpenClaw\\workspace\\HEARTBEAT.md",
+     false
+    ]
+   ],
+   "hb_ids": [
+    "1068",
+    "1069"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_append_1086.py",
+   "bytes": 3819,
+   "targets": [
+    [
+     "D:\\B166ER-OpenClaw\\workspace\\HEARTBEAT.md",
+     false
+    ]
+   ],
+   "hb_ids": [
+    "1085",
+    "1086"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_append_1124.py",
+   "bytes": 4697,
+   "targets": [],
+   "hb_ids": [
+    "1126"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_append_1159.py",
+   "bytes": 3218,
+   "targets": [],
+   "hb_ids": [
+    "1158",
+    "1159"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_append_141.py",
+   "bytes": 3720,
+   "targets": [],
+   "hb_ids": [
+    "140",
+    "141"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_append_1463.py",
+   "bytes": 5807,
+   "targets": [],
+   "hb_ids": [
+    "1462",
+    "1463"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_append_1471.py",
+   "bytes": 9421,
+   "targets": [],
+   "hb_ids": [
+    "1467",
+    "1468",
+    "1469",
+    "1471"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_append_1495.py",
+   "bytes": 5672,
+   "targets": [],
+   "hb_ids": [
+    "1494",
+    "1495"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_append_1609.py",
+   "bytes": 5437,
+   "targets": [],
+   "hb_ids": [
+    "1608",
+    "1609"
+   ],
+   "payload_head": "## HB #1609 (2026-07-27T13:56 GMT+8 cron-event, OpenClaw heartbeat poll) - gap from HB #1608 (13:47): +9min -- Monday early-afternoon Token Guard cade"
+  },
+  {
+   "file": "hb_append_1621.py",
+   "bytes": 2371,
+   "targets": [],
+   "hb_ids": [
+    "1620",
+    "1621"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_append_1816.py",
+   "bytes": 3022,
+   "targets": [],
+   "hb_ids": [
+    "1815",
+    "1816"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_append_1817.py",
+   "bytes": 2857,
+   "targets": [],
+   "hb_ids": [
+    "1816",
+    "1817"
+   ],
+   "payload_head": "## HB #1817 (2026-07-28T23:46:00+08:00 GMT+8 cron-event, OpenClaw heartbeat poll) - gap from HB #1816 (23:16): +30min -- Tuesday late-night Token Guar"
+  },
+  {
+   "file": "hb_append_2261.py",
+   "bytes": 4971,
+   "targets": [],
+   "hb_ids": [
+    "1849",
+    "2083",
+    "2245",
+    "2260",
+    "2261"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_append_2289.py",
+   "bytes": 6960,
+   "targets": [],
+   "hb_ids": [
+    "1849",
+    "2288",
+    "2289"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_append_2292.py",
+   "bytes": 7057,
+   "targets": [],
+   "hb_ids": [
+    "1849",
+    "2083",
+    "2292"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_append_2398.py",
+   "bytes": 7579,
+   "targets": [],
+   "hb_ids": [
+    "1849",
+    "2398"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_append_2434.py",
+   "bytes": 6531,
+   "targets": [
+    [
+     "D:\\B166ER-OpenClaw\\workspace\\HEARTBEAT.md",
+     false
+    ]
+   ],
+   "hb_ids": [
+    "1849",
+    "2083",
+    "2433",
+    "2434"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_append_2435.py",
+   "bytes": 6071,
+   "targets": [],
+   "hb_ids": [
+    "1849",
+    "2083",
+    "2423",
+    "2434",
+    "2435"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_append_2651.py",
+   "bytes": 5105,
+   "targets": [
+    [
+     "D:\\B166ER-OpenClaw\\workspace\\HEARTBEAT.md",
+     false
+    ]
+   ],
+   "hb_ids": [
+    "1849",
+    "2083",
+    "2644",
+    "2646",
+    "2650",
+    "2651"
+   ],
+   "payload_head": "## HB #2651 (2026-08-09T05:35 GMT+8 cron-event, OpenClaw heartbeat poll) - gap from HB #2650 (05:30): +5min -- Sun weekend-early-morning quiet zone To"
+  },
+  {
+   "file": "hb_append_2679.py",
+   "bytes": 4216,
+   "targets": [],
+   "hb_ids": [
+    "1849",
+    "2678",
+    "2679"
+   ],
+   "payload_head": "## HB #2679 (2026-08-09T08:53:00+08:00 GMT+8 cron-event, OpenClaw heartbeat poll) - gap from HB #2678 (08:48): +5min -- Sun weekend-morning Token Guar"
+  },
+  {
+   "file": "hb_append_2730.py",
+   "bytes": 4884,
+   "targets": [],
+   "hb_ids": [
+    "2730"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_append_3041.py",
+   "bytes": 3281,
+   "targets": [],
+   "hb_ids": [
+    "1849",
+    "3040",
+    "3041"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_append_3042.py",
+   "bytes": 3279,
+   "targets": [],
+   "hb_ids": [
+    "1849",
+    "3041",
+    "3042"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_append_3125.py",
+   "bytes": 5387,
+   "targets": [],
+   "hb_ids": [
+    "1849",
+    "3124",
+    "3125"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_append_3161.py",
+   "bytes": 6736,
+   "targets": [],
+   "hb_ids": [
+    "1849",
+    "3161"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_append_3168.py",
+   "bytes": 3655,
+   "targets": [],
+   "hb_ids": [
+    "1849",
+    "3167",
+    "3168"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_append_3172.py",
+   "bytes": 2887,
+   "targets": [],
+   "hb_ids": [
+    "3171",
+    "3172"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_append_3207.py",
+   "bytes": 5385,
+   "targets": [
+    [
+     "D:\\B166ER-OpenClaw\\workspace\\HEARTBEAT.md",
+     false
+    ]
+   ],
+   "hb_ids": [
+    "1849",
+    "3203",
+    "3204",
+    "3205",
+    "3206",
+    "3207"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_append_3442.py",
+   "bytes": 702,
+   "targets": [],
+   "hb_ids": [
+    "3441",
+    "3442"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_append_3640.py",
+   "bytes": 3973,
+   "targets": [],
+   "hb_ids": [
+    "3639",
+    "3640"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_append_3691.py",
+   "bytes": 2659,
+   "targets": [],
+   "hb_ids": [
+    "3691"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_append_478.py",
+   "bytes": 2854,
+   "targets": [
+    [
+     "D:\\B166ER-OpenClaw\\workspace\\HEARTBEAT.md",
+     false
+    ]
+   ],
+   "hb_ids": [
+    "477",
+    "478"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_append_555.py",
+   "bytes": 3957,
+   "targets": [],
+   "hb_ids": [
+    "554",
+    "555"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_append_556.py",
+   "bytes": 3006,
+   "targets": [],
+   "hb_ids": [
+    "555",
+    "556"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_append_585.py",
+   "bytes": 3988,
+   "targets": [
+    [
+     "D:\\B166ER-OpenClaw\\workspace\\HEARTBEAT.md",
+     false
+    ]
+   ],
+   "hb_ids": [
+    "479",
+    "560",
+    "561",
+    "581",
+    "584",
+    "585"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_append_586.py",
+   "bytes": 2199,
+   "targets": [],
+   "hb_ids": [
+    "581",
+    "585",
+    "586"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_append_591.py",
+   "bytes": 3404,
+   "targets": [],
+   "hb_ids": [
+    "581",
+    "590",
+    "591"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_append_608.py",
+   "bytes": 2799,
+   "targets": [],
+   "hb_ids": [
+    "581",
+    "584",
+    "607",
+    "608"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_append_613.py",
+   "bytes": 2066,
+   "targets": [],
+   "hb_ids": [
+    "581",
+    "612",
+    "613"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_append_642.py",
+   "bytes": 2956,
+   "targets": [],
+   "hb_ids": [
+    "581",
+    "584",
+    "641",
+    "642"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_append_647.py",
+   "bytes": 3799,
+   "targets": [],
+   "hb_ids": [
+    "479",
+    "493",
+    "560",
+    "561",
+    "646",
+    "647"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_append_648.py",
+   "bytes": 3324,
+   "targets": [],
+   "hb_ids": [
+    "493",
+    "647",
+    "648"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_append_653.py",
+   "bytes": 4691,
+   "targets": [],
+   "hb_ids": [
+    "561",
+    "584",
+    "652",
+    "653"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_append_676.py",
+   "bytes": 3561,
+   "targets": [],
+   "hb_ids": [
+    "675",
+    "676"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_append_697.py",
+   "bytes": 3380,
+   "targets": [],
+   "hb_ids": [
+    "479",
+    "560",
+    "561",
+    "696",
+    "697"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_append_751.py",
+   "bytes": 4220,
+   "targets": [
+    [
+     "D:\\B166ER-OpenClaw\\workspace\\HEARTBEAT.md",
+     false
+    ]
+   ],
+   "hb_ids": [
+    "750",
+    "751"
+   ],
+   "payload_head": "## HB #751 (2026-07-21 21:57 GMT+8 cron-event, OpenClaw heartbeat poll) - gap from HB #750 (12:16): +9h41m -- Tuesday-evening Token Guard cadence (pos"
+  },
+  {
+   "file": "hb_append_760.py",
+   "bytes": 5018,
+   "targets": [
+    [
+     "D:\\B166ER-OpenClaw\\workspace\\HEARTBEAT.md",
+     false
+    ]
+   ],
+   "hb_ids": [
+    "759",
+    "760"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_append_766.py",
+   "bytes": 4522,
+   "targets": [
+    [
+     "D:\\B166ER-OpenClaw\\workspace\\HEARTBEAT.md",
+     false
+    ]
+   ],
+   "hb_ids": [
+    "765",
+    "766"
+   ],
+   "payload_head": "## HB #766 (2026-07-21 14:59 GMT+8 cron-event, OpenClaw heartbeat poll) - gap from HB #765 (14:55): +4min -- Tuesday early-afternoon Token Guard norma"
+  },
+  {
+   "file": "hb_append_793.py",
+   "bytes": 3150,
+   "targets": [],
+   "hb_ids": [
+    "792",
+    "793"
+   ],
+   "payload_head": "## HB #793 (2026-07-22T02:03 GMT+8 cron-event, OpenClaw heartbeat poll) - gap from HB #792 (7/21 18:36): +7h27m -- Wednesday-early-morning Token Guard"
+  },
+  {
+   "file": "hb_append_794.py",
+   "bytes": 5505,
+   "targets": [],
+   "hb_ids": [
+    "793"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_append_874.py",
+   "bytes": 5069,
+   "targets": [
+    [
+     "D:\\B166ER-OpenClaw\\workspace\\HEARTBEAT.md",
+     false
+    ]
+   ],
+   "hb_ids": [
+    "874"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_append_909.py",
+   "bytes": 4514,
+   "targets": [],
+   "hb_ids": [
+    "908",
+    "909"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_append_915.py",
+   "bytes": 4338,
+   "targets": [],
+   "hb_ids": [
+    "914",
+    "915"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_append_928.py",
+   "bytes": 2974,
+   "targets": [],
+   "hb_ids": [
+    "927",
+    "928"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_append_935.py",
+   "bytes": 4649,
+   "targets": [],
+   "hb_ids": [
+    "934",
+    "935"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_append_943.py",
+   "bytes": 3801,
+   "targets": [],
+   "hb_ids": [
+    "942",
+    "943"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_append_955.py",
+   "bytes": 4484,
+   "targets": [],
+   "hb_ids": [
+    "955"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_append_978.py",
+   "bytes": 5039,
+   "targets": [
+    [
+     "D:\\B166ER-OpenClaw\\workspace\\HEARTBEAT.md",
+     false
+    ]
+   ],
+   "hb_ids": [
+    "978"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_append_983.py",
+   "bytes": 3424,
+   "targets": [],
+   "hb_ids": [
+    "982",
+    "983"
+   ],
+   "payload_head": "## HB #983 (2026-07-23 03:24 GMT+8 cron-event, OpenClaw heartbeat poll) - gap from HB #982 (03:15): +9min -- Thursday deep-night Token Guard normal ca"
+  },
+  {
+   "file": "hb_append_md.py",
+   "bytes": 3340,
+   "targets": [],
+   "hb_ids": [
+    "519",
+    "520"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_append_sat_1539.py",
+   "bytes": 4348,
+   "targets": [],
+   "hb_ids": [
+    "1849",
+    "3296",
+    "3297"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_append_today.py",
+   "bytes": 3641,
+   "targets": [],
+   "hb_ids": [
+    "1849"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_append_v2.py",
+   "bytes": 5488,
+   "targets": [],
+   "hb_ids": [
+    "1500"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_atomic_append.py",
+   "bytes": 3585,
+   "targets": [],
+   "hb_ids": [
+    "1849"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_atomic_tick.py",
+   "bytes": 4990,
+   "targets": [],
+   "hb_ids": [],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_atomic_write.py",
+   "bytes": 6009,
+   "targets": [],
+   "hb_ids": [],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_byte_check.py",
+   "bytes": 1466,
+   "targets": [],
+   "hb_ids": [
+    "2191",
+    "2192"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_calc.py",
+   "bytes": 1063,
+   "targets": [],
+   "hb_ids": [
+    "675",
+    "676"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_calc_1069.py",
+   "bytes": 883,
+   "targets": [],
+   "hb_ids": [],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_calc_1086.py",
+   "bytes": 1810,
+   "targets": [],
+   "hb_ids": [],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_calc_642.py",
+   "bytes": 886,
+   "targets": [],
+   "hb_ids": [
+    "642"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_check.py",
+   "bytes": 518,
+   "targets": [],
+   "hb_ids": [],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_check_encoding.py",
+   "bytes": 2431,
+   "targets": [],
+   "hb_ids": [],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_cleanup.py",
+   "bytes": 4233,
+   "targets": [],
+   "hb_ids": [
+    "1932"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_find_recovery.py",
+   "bytes": 485,
+   "targets": [],
+   "hb_ids": [],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_fix.py",
+   "bytes": 4972,
+   "targets": [],
+   "hb_ids": [
+    "465",
+    "466"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_fix_1577.py",
+   "bytes": 848,
+   "targets": [],
+   "hb_ids": [
+    "1576",
+    "1577"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_fix_1616.py",
+   "bytes": 6171,
+   "targets": [],
+   "hb_ids": [
+    "1615",
+    "1616"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_fix_2192.py",
+   "bytes": 6514,
+   "targets": [],
+   "hb_ids": [
+    "2083",
+    "2190",
+    "2191",
+    "2192"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_fix_2192_v2.py",
+   "bytes": 7141,
+   "targets": [],
+   "hb_ids": [
+    "2083",
+    "2190",
+    "2191",
+    "2192"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_fix_dup.py",
+   "bytes": 4231,
+   "targets": [],
+   "hb_ids": [
+    "584",
+    "605",
+    "606"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_head_check.py",
+   "bytes": 297,
+   "targets": [],
+   "hb_ids": [],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_inspect.py",
+   "bytes": 370,
+   "targets": [],
+   "hb_ids": [],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_log.py",
+   "bytes": 3496,
+   "targets": [],
+   "hb_ids": [
+    "2758"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_log_1665.py",
+   "bytes": 2138,
+   "targets": [],
+   "hb_ids": [],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_log_464.py",
+   "bytes": 1747,
+   "targets": [],
+   "hb_ids": [
+    "462",
+    "463",
+    "464"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_log_523.py",
+   "bytes": 5463,
+   "targets": [],
+   "hb_ids": [
+    "523"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_logger.py",
+   "bytes": 6105,
+   "targets": [],
+   "hb_ids": [
+    "555",
+    "556"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_minimal.py",
+   "bytes": 4546,
+   "targets": [],
+   "hb_ids": [
+    "1508"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_prepend.py",
+   "bytes": 5036,
+   "targets": [],
+   "hb_ids": [
+    "1660",
+    "1661"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_prepend_1161.py",
+   "bytes": 3170,
+   "targets": [],
+   "hb_ids": [
+    "1160",
+    "1161"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_search_recent.py",
+   "bytes": 722,
+   "targets": [],
+   "hb_ids": [],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_state_1874.py",
+   "bytes": 1449,
+   "targets": [],
+   "hb_ids": [
+    "1873",
+    "1874"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_state_2434.py",
+   "bytes": 1285,
+   "targets": [],
+   "hb_ids": [
+    "2433",
+    "2434"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_state_647.py",
+   "bytes": 1433,
+   "targets": [],
+   "hb_ids": [
+    "584",
+    "647"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_state_bump.py",
+   "bytes": 780,
+   "targets": [],
+   "hb_ids": [],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_state_fix.py",
+   "bytes": 1742,
+   "targets": [],
+   "hb_ids": [
+    "489"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_state_revert.py",
+   "bytes": 1844,
+   "targets": [],
+   "hb_ids": [
+    "584",
+    "629"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_state_update.py",
+   "bytes": 748,
+   "targets": [],
+   "hb_ids": [],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_state_update_3207.py",
+   "bytes": 1547,
+   "targets": [],
+   "hb_ids": [],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_state_update_642.py",
+   "bytes": 1839,
+   "targets": [],
+   "hb_ids": [
+    "584",
+    "642"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_tail_check.py",
+   "bytes": 455,
+   "targets": [],
+   "hb_ids": [],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_tick.py",
+   "bytes": 1172,
+   "targets": [],
+   "hb_ids": [],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_tick_1067.py",
+   "bytes": 4524,
+   "targets": [
+    [
+     "D:\\B166ER-OpenClaw\\workspace\\HEARTBEAT.md",
+     false
+    ]
+   ],
+   "hb_ids": [
+    "1067"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_tick_1076.py",
+   "bytes": 5334,
+   "targets": [
+    [
+     "D:\\B166ER-OpenClaw\\workspace\\HEARTBEAT.md",
+     false
+    ]
+   ],
+   "hb_ids": [
+    "1076"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_tick_1111.py",
+   "bytes": 5134,
+   "targets": [
+    [
+     "D:\\B166ER-OpenClaw\\workspace\\HEARTBEAT.md",
+     false
+    ]
+   ],
+   "hb_ids": [
+    "1110",
+    "1111"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_tick_1116.py",
+   "bytes": 5541,
+   "targets": [],
+   "hb_ids": [
+    "1116"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_tick_1127.py",
+   "bytes": 1604,
+   "targets": [],
+   "hb_ids": [],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_tick_1136.py",
+   "bytes": 4972,
+   "targets": [],
+   "hb_ids": [
+    "1135",
+    "1136"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_tick_1157.py",
+   "bytes": 5108,
+   "targets": [
+    [
+     "D:\\B166ER-OpenClaw\\workspace\\HEARTBEAT.md",
+     false
+    ]
+   ],
+   "hb_ids": [
+    "1156",
+    "1157"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_tick_1171.py",
+   "bytes": 4324,
+   "targets": [
+    [
+     "D:\\B166ER-OpenClaw\\workspace\\HEARTBEAT.md",
+     false
+    ]
+   ],
+   "hb_ids": [
+    "1170",
+    "1171"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_tick_1433.py",
+   "bytes": 3895,
+   "targets": [],
+   "hb_ids": [
+    "3648"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_tick_1481.py",
+   "bytes": 5100,
+   "targets": [],
+   "hb_ids": [
+    "1481"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_tick_1621.py",
+   "bytes": 2639,
+   "targets": [],
+   "hb_ids": [
+    "1621"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_tick_1658.py",
+   "bytes": 5473,
+   "targets": [],
+   "hb_ids": [
+    "1658",
+    "1849"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_tick_1690.py",
+   "bytes": 4577,
+   "targets": [],
+   "hb_ids": [],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_tick_2026_08_14_1939.py",
+   "bytes": 5935,
+   "targets": [],
+   "hb_ids": [
+    "1849",
+    "3229",
+    "3235",
+    "3242"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_tick_3052.py",
+   "bytes": 5013,
+   "targets": [],
+   "hb_ids": [
+    "1849",
+    "3052"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_tick_3167.py",
+   "bytes": 6915,
+   "targets": [],
+   "hb_ids": [
+    "1849"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_tick_3181.py",
+   "bytes": 5065,
+   "targets": [],
+   "hb_ids": [
+    "1849"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_tick_3194.py",
+   "bytes": 3448,
+   "targets": [],
+   "hb_ids": [
+    "1849",
+    "3193",
+    "3194"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_tick_3210.py",
+   "bytes": 5104,
+   "targets": [
+    [
+     "D:\\B166ER-OpenClaw\\workspace\\HEARTBEAT.md",
+     false
+    ]
+   ],
+   "hb_ids": [
+    "1849",
+    "3208",
+    "3209",
+    "3210"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_tick_3227.py",
+   "bytes": 5338,
+   "targets": [],
+   "hb_ids": [
+    "1849",
+    "3227"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_tick_3233.py",
+   "bytes": 5458,
+   "targets": [],
+   "hb_ids": [
+    "1849",
+    "3229"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_tick_3307.py",
+   "bytes": 4876,
+   "targets": [],
+   "hb_ids": [
+    "1849",
+    "3307"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_tick_3365.py",
+   "bytes": 5914,
+   "targets": [],
+   "hb_ids": [
+    "1849",
+    "3365"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_tick_3396.py",
+   "bytes": 4218,
+   "targets": [],
+   "hb_ids": [
+    "1849",
+    "3396"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_tick_3486.py",
+   "bytes": 4834,
+   "targets": [],
+   "hb_ids": [],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_tick_3499.py",
+   "bytes": 4100,
+   "targets": [],
+   "hb_ids": [
+    "3498",
+    "3499"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_tick_3540.py",
+   "bytes": 5052,
+   "targets": [],
+   "hb_ids": [
+    "3540"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_tick_3553.py",
+   "bytes": 4864,
+   "targets": [],
+   "hb_ids": [
+    "3553"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_tick_3570.py",
+   "bytes": 4860,
+   "targets": [],
+   "hb_ids": [
+    "3570"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_tick_3691.py",
+   "bytes": 1042,
+   "targets": [],
+   "hb_ids": [
+    "3691"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_tick_504.py",
+   "bytes": 3781,
+   "targets": [],
+   "hb_ids": [
+    "503",
+    "504"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_tick_555.py",
+   "bytes": 2783,
+   "targets": [],
+   "hb_ids": [
+    "555"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_tick_575.py",
+   "bytes": 3890,
+   "targets": [],
+   "hb_ids": [
+    "493",
+    "574",
+    "575"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_tick_580.py",
+   "bytes": 3374,
+   "targets": [],
+   "hb_ids": [
+    "493",
+    "579",
+    "580"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_tick_590.py",
+   "bytes": 4649,
+   "targets": [],
+   "hb_ids": [
+    "493",
+    "589",
+    "590"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_tick_607.py",
+   "bytes": 3397,
+   "targets": [],
+   "hb_ids": [
+    "581",
+    "606",
+    "607"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_tick_617.py",
+   "bytes": 3453,
+   "targets": [],
+   "hb_ids": [
+    "581",
+    "616",
+    "617"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_tick_621.py",
+   "bytes": 4795,
+   "targets": [],
+   "hb_ids": [
+    "581",
+    "591",
+    "620"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_tick_628.py",
+   "bytes": 4200,
+   "targets": [
+    [
+     "D:\\B166ER-OpenClaw\\workspace\\memory\\2026-07-20.md",
+     false
+    ]
+   ],
+   "hb_ids": [
+    "581",
+    "584",
+    "627",
+    "628"
+   ],
+   "payload_head": "## HB #628 (2026-07-20T11:03 GMT+8 cron-event, OpenClaw heartbeat poll) - gap from HB #627 (10:58): +5min -- Monday-morning Token Guard normal cadence"
+  },
+  {
+   "file": "hb_tick_631.py",
+   "bytes": 3156,
+   "targets": [],
+   "hb_ids": [
+    "581"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_tick_660.py",
+   "bytes": 3207,
+   "targets": [],
+   "hb_ids": [
+    "659",
+    "660"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_tick_670.py",
+   "bytes": 4193,
+   "targets": [
+    [
+     "HEARTBEAT.md",
+     true
+    ]
+   ],
+   "hb_ids": [
+    "670"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_tick_673.py",
+   "bytes": 4732,
+   "targets": [],
+   "hb_ids": [
+    "581",
+    "672",
+    "673"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_tick_675.py",
+   "bytes": 6263,
+   "targets": [],
+   "hb_ids": [
+    "674",
+    "675"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_tick_683.py",
+   "bytes": 4460,
+   "targets": [],
+   "hb_ids": [
+    "682",
+    "683"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_tick_719.py",
+   "bytes": 4384,
+   "targets": [],
+   "hb_ids": [
+    "719"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_tick_720.py",
+   "bytes": 5609,
+   "targets": [],
+   "hb_ids": [
+    "479",
+    "493",
+    "560",
+    "561",
+    "719",
+    "720"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_tick_729.py",
+   "bytes": 1923,
+   "targets": [],
+   "hb_ids": [
+    "729"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_tick_736.py",
+   "bytes": 2652,
+   "targets": [],
+   "hb_ids": [
+    "736"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_tick_764.py",
+   "bytes": 5143,
+   "targets": [],
+   "hb_ids": [
+    "763"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_tick_781.py",
+   "bytes": 4115,
+   "targets": [],
+   "hb_ids": [
+    "780",
+    "781"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_tick_786.py",
+   "bytes": 4710,
+   "targets": [],
+   "hb_ids": [
+    "785",
+    "786"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_tick_817.py",
+   "bytes": 4703,
+   "targets": [],
+   "hb_ids": [
+    "581",
+    "816",
+    "817"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_tick_822.py",
+   "bytes": 4181,
+   "targets": [],
+   "hb_ids": [
+    "822"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_tick_872.py",
+   "bytes": 6066,
+   "targets": [],
+   "hb_ids": [
+    "872"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_tick_884.py",
+   "bytes": 6458,
+   "targets": [
+    [
+     "D:\\B166ER-OpenClaw\\workspace\\HEARTBEAT.md",
+     false
+    ]
+   ],
+   "hb_ids": [
+    "883",
+    "884"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_tick_915.py",
+   "bytes": 3587,
+   "targets": [],
+   "hb_ids": [
+    "915"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_tick_918.py",
+   "bytes": 4914,
+   "targets": [],
+   "hb_ids": [
+    "917",
+    "918"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_tick_934.py",
+   "bytes": 3450,
+   "targets": [],
+   "hb_ids": [
+    "933",
+    "934"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_tick_937.py",
+   "bytes": 5055,
+   "targets": [],
+   "hb_ids": [
+    "936",
+    "937"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_tick_append.py",
+   "bytes": 6423,
+   "targets": [],
+   "hb_ids": [
+    "1849"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_tick_fix.py",
+   "bytes": 2970,
+   "targets": [
+    [
+     "D:\\B166ER-OpenClaw\\workspace\\HEARTBEAT.md",
+     false
+    ]
+   ],
+   "hb_ids": [
+    "1148",
+    "1156",
+    "1157"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_tick_minimal.py",
+   "bytes": 3651,
+   "targets": [],
+   "hb_ids": [],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_tick_r890.py",
+   "bytes": 4780,
+   "targets": [],
+   "hb_ids": [
+    "493",
+    "890"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_tick_v2.py",
+   "bytes": 6183,
+   "targets": [],
+   "hb_ids": [],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_tick_v3.py",
+   "bytes": 4207,
+   "targets": [],
+   "hb_ids": [
+    "1468"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_tick_v3203.py",
+   "bytes": 8630,
+   "targets": [],
+   "hb_ids": [
+    "1849",
+    "3203"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_update.py",
+   "bytes": 4372,
+   "targets": [],
+   "hb_ids": [
+    "1819",
+    "1820"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_update_1577.py",
+   "bytes": 1833,
+   "targets": [],
+   "hb_ids": [
+    "1577"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_update_2152.py",
+   "bytes": 1225,
+   "targets": [],
+   "hb_ids": [
+    "2151",
+    "2152"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_update_498.py",
+   "bytes": 1057,
+   "targets": [],
+   "hb_ids": [
+    "497",
+    "498"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_update_529.py",
+   "bytes": 1837,
+   "targets": [],
+   "hb_ids": [
+    "529"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_update_943.py",
+   "bytes": 1315,
+   "targets": [],
+   "hb_ids": [
+    "942",
+    "943"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_verify.py",
+   "bytes": 1291,
+   "targets": [],
+   "hb_ids": [
+    "2192"
+   ],
+   "payload_head": ""
+  },
+  {
+   "file": "hb_write.py",
+   "bytes": 3724,
+   "targets": [
+    [
+     "D:\\B166ER-OpenClaw\\workspace\\HEARTBEAT.md",
+     false
+    ]
+   ],
+   "hb_ids": [
+    "1174",
+    "1177",
+    "1178"
+   ],
+   "payload_head": "## HB #1178 heartbeat (2026-07-24T11:32 GMT+8 cron-event, OpenClaw heartbeat poll) - gap from HB #1177 (10:55): +37min -- Friday late-morning Token Gu"
+  }
+ ],
+ "ready": [
+  "hb1127_append_memory.py",
+  "hb1127_prepend.py",
+  "hb2302_append.py",
+  "hb2337_append.py",
+  "hb2425_append.py",
+  "hb288_log.py",
+  "hb3297_append.py",
+  "hb336_update.py",
+  "hb340_update.py",
+  "hb350_update.py",
+  "hb3604_append.py",
+  "hb3604_state.py",
+  "hb3632_tick.py",
+  "hb380_fix.py",
+  "hb380_fix2.py",
+  "hb380_update.py",
+  "hb420_update.py",
+  "hb429_append.py",
+  "hb489_append.py",
+  "hb496_append.py",
+  "hb544_append.py",
+  "hb544_fix.py",
+  "hb551_md.py",
+  "hb551_update.py",
+  "hb560_log.py",
+  "hb582_append.py",
+  "hb713_append.py",
+  "hb751_append.py",
+  "hb755_append.py",
+  "hb774_update.py",
+  "hb783_append.py",
+  "hb831_append.py",
+  "hb835_append.py",
+  "hb924_update.py",
+  "hb929_tick.py",
+  "hb930_append.py",
+  "hb965_tick.py",
+  "hb976_append.py",
+  "hb_1001_log.py",
+  "hb_1035.py",
+  "hb_1051_tick.py",
+  "hb_1064_tick.py",
+  "hb_1065_append.py",
+  "hb_1102.py",
+  "hb_1103_append.py",
+  "hb_1110_append.py",
+  "hb_1152.py",
+  "hb_1152_writer.py",
+  "hb_1165_log.py",
+  "hb_1186.py",
+  "hb_1517_append.py",
+  "hb_1580.py",
+  "hb_1618_append.py",
+  "hb_1624_tick.py",
+  "hb_1627.py",
+  "hb_1874_v3.py",
+  "hb_1907.py",
+  "hb_2290.py",
+  "hb_2338_append.py",
+  "hb_2345_append.py",
+  "hb_2432_log.py",
+  "hb_2597_append.py",
+  "hb_2745.py",
+  "hb_2768_append.py",
+  "hb_2778_append.py",
+  "hb_3038_append.py",
+  "hb_3046_append.py",
+  "hb_3053_tick.py",
+  "hb_3058_tick.py",
+  "hb_3073_append.py",
+  "hb_3092_append.py",
+  "hb_3203_append.py",
+  "hb_3205_tick.py",
+  "hb_3221_append.py",
+  "hb_3234_tick.py",
+  "hb_3239.py",
+  "hb_333_append.py",
+  "hb_3355_tick.py",
+  "hb_3443_append.py",
+  "hb_347_update.py",
+  "hb_398_update.py",
+  "hb_417_append.py",
+  "hb_417_state.py",
+  "hb_458_fix.py",
+  "hb_458_update.py",
+  "hb_490_append.py",
+  "hb_493_record.py",
+  "hb_496_update.py",
+  "hb_499.py",
+  "hb_501.py",
+  "hb_507_append.py",
+  "hb_530.py",
+  "hb_530_backfill.py",
+  "hb_564_2026-07-18_2208.py",
+  "hb_567_log.py",
+  "hb_571_append.py",
+  "hb_603_append.py",
+  "hb_612_append.py",
+  "hb_668_tick.py",
+  "hb_920_log.py",
+  "hb_961_append.py",
+  "hb_977_update.py",
+  "hb_append.py",
+  "hb_append_1012.py",
+  "hb_append_1015.py",
+  "hb_append_1064.py",
+  "hb_append_1069.py",
+  "hb_append_1086.py",
+  "hb_append_1124.py",
+  "hb_append_1159.py",
+  "hb_append_141.py",
+  "hb_append_1463.py",
+  "hb_append_1471.py",
+  "hb_append_1495.py",
+  "hb_append_1609.py",
+  "hb_append_1621.py",
+  "hb_append_1816.py",
+  "hb_append_1817.py",
+  "hb_append_2261.py",
+  "hb_append_2289.py",
+  "hb_append_2292.py",
+  "hb_append_2398.py",
+  "hb_append_2434.py",
+  "hb_append_2435.py",
+  "hb_append_2651.py",
+  "hb_append_2679.py",
+  "hb_append_2730.py",
+  "hb_append_3041.py",
+  "hb_append_3042.py",
+  "hb_append_3125.py",
+  "hb_append_3161.py",
+  "hb_append_3168.py",
+  "hb_append_3172.py",
+  "hb_append_3207.py",
+  "hb_append_3442.py",
+  "hb_append_3640.py",
+  "hb_append_3691.py",
+  "hb_append_478.py",
+  "hb_append_555.py",
+  "hb_append_556.py",
+  "hb_append_585.py",
+  "hb_append_586.py",
+  "hb_append_591.py",
+  "hb_append_608.py",
+  "hb_append_613.py",
+  "hb_append_642.py",
+  "hb_append_647.py",
+  "hb_append_648.py",
+  "hb_append_653.py",
+  "hb_append_676.py",
+  "hb_append_697.py",
+  "hb_append_751.py",
+  "hb_append_760.py",
+  "hb_append_766.py",
+  "hb_append_793.py",
+  "hb_append_794.py",
+  "hb_append_874.py",
+  "hb_append_909.py",
+  "hb_append_915.py",
+  "hb_append_928.py",
+  "hb_append_935.py",
+  "hb_append_943.py",
+  "hb_append_955.py",
+  "hb_append_978.py",
+  "hb_append_983.py",
+  "hb_append_md.py",
+  "hb_append_sat_1539.py",
+  "hb_append_today.py",
+  "hb_append_v2.py",
+  "hb_atomic_append.py",
+  "hb_atomic_tick.py",
+  "hb_atomic_write.py",
+  "hb_byte_check.py",
+  "hb_calc.py",
+  "hb_calc_1069.py",
+  "hb_calc_1086.py",
+  "hb_calc_642.py",
+  "hb_check.py",
+  "hb_check_encoding.py",
+  "hb_cleanup.py",
+  "hb_find_recovery.py",
+  "hb_fix.py",
+  "hb_fix_1577.py",
+  "hb_fix_1616.py",
+  "hb_fix_2192.py",
+  "hb_fix_2192_v2.py",
+  "hb_fix_dup.py",
+  "hb_head_check.py",
+  "hb_inspect.py",
+  "hb_log.py",
+  "hb_log_1665.py",
+  "hb_log_464.py",
+  "hb_log_523.py",
+  "hb_logger.py",
+  "hb_minimal.py",
+  "hb_prepend.py",
+  "hb_prepend_1161.py",
+  "hb_search_recent.py",
+  "hb_state_1874.py",
+  "hb_state_2434.py",
+  "hb_state_647.py",
+  "hb_state_bump.py",
+  "hb_state_fix.py",
+  "hb_state_revert.py",
+  "hb_state_update.py",
+  "hb_state_update_3207.py",
+  "hb_state_update_642.py",
+  "hb_tail_check.py",
+  "hb_tick.py",
+  "hb_tick_1067.py",
+  "hb_tick_1076.py",
+  "hb_tick_1111.py",
+  "hb_tick_1116.py",
+  "hb_tick_1127.py",
+  "hb_tick_1136.py",
+  "hb_tick_1157.py",
+  "hb_tick_1171.py",
+  "hb_tick_1433.py",
+  "hb_tick_1481.py",
+  "hb_tick_1621.py",
+  "hb_tick_1658.py",
+  "hb_tick_1690.py",
+  "hb_tick_2026_08_14_1939.py",
+  "hb_tick_3052.py",
+  "hb_tick_3167.py",
+  "hb_tick_3181.py",
+  "hb_tick_3194.py",
+  "hb_tick_3210.py",
+  "hb_tick_3227.py",
+  "hb_tick_3233.py",
+  "hb_tick_3307.py",
+  "hb_tick_3365.py",
+  "hb_tick_3396.py",
+  "hb_tick_3486.py",
+  "hb_tick_3499.py",
+  "hb_tick_3540.py",
+  "hb_tick_3553.py",
+  "hb_tick_3570.py",
+  "hb_tick_3691.py",
+  "hb_tick_504.py",
+  "hb_tick_555.py",
+  "hb_tick_575.py",
+  "hb_tick_580.py",
+  "hb_tick_590.py",
+  "hb_tick_607.py",
+  "hb_tick_617.py",
+  "hb_tick_621.py",
+  "hb_tick_628.py",
+  "hb_tick_631.py",
+  "hb_tick_660.py",
+  "hb_tick_673.py",
+  "hb_tick_675.py",
+  "hb_tick_683.py",
+  "hb_tick_719.py",
+  "hb_tick_720.py",
+  "hb_tick_729.py",
+  "hb_tick_736.py",
+  "hb_tick_764.py",
+  "hb_tick_781.py",
+  "hb_tick_786.py",
+  "hb_tick_817.py",
+  "hb_tick_822.py",
+  "hb_tick_872.py",
+  "hb_tick_884.py",
+  "hb_tick_915.py",
+  "hb_tick_918.py",
+  "hb_tick_934.py",
+  "hb_tick_937.py",
+  "hb_tick_append.py",
+  "hb_tick_fix.py",
+  "hb_tick_minimal.py",
+  "hb_tick_r890.py",
+  "hb_tick_v2.py",
+  "hb_tick_v3.py",
+  "hb_tick_v3203.py",
+  "hb_update.py",
+  "hb_update_1577.py",
+  "hb_update_2152.py",
+  "hb_update_498.py",
+  "hb_update_529.py",
+  "hb_update_943.py",
+  "hb_verify.py",
+  "hb_write.py"
+ ],
+ "need_keep": [
+  "hb_tick_670.py"
+ ]
+}

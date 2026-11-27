@@ -1,0 +1,87 @@
+{
+ "entries": [
+  {
+   "ts": 1795741387817,
+   "jobId": "00f2ebc3-5d64-455e-9613-1ff90294240d",
+   "action": "finished",
+   "status": "ok",
+   "completionStatus": "succeeded",
+   "summary": "台账无到期预测，本次不结算",
+   "runId": "cron:00f2ebc3-5d64-455e-9613-1ff90294240d:1795741200033:cron-slot-v1.WyJEOlxcQjE2NkVSLW9wZW5jbGF3XFxjcm9uXFxqb2JzLmpzb24iLCIwMGYyZWJjMy01ZDY0LTQ1NWUtOTYxMy0xZmY5MDI5NDI0MGQiLDE3OTU3NDEyMDAwMDBd",
+   "runAtMs": 1795741200033,
+   "durationMs": 187784,
+   "nextRunAtMs": 1795827600000,
+   "model": "MiniMax-M3",
+   "provider": "minimax",
+   "delivered": true,
+   "deliveryStatus": "delivered",
+   "delivery": {
+    "intended": {
+     "channel": "last",
+     "to": null,
+     "source": "last"
+    },
+    "resolved": {
+     "ok": false,
+     "to": null,
+     "source": "last",
+     "error": "Channel is required when delivery.channel=last has no previous channel."
+    },
+    "fallbackUsed": true,
+    "delivered": true
+   },
+   "sessionId": "6e67023c-2d3b-4282-bce8-3e20b1f4f1dd",
+   "sessionKey": "agent:main:cron:00f2ebc3-5d64-455e-9613-1ff90294240d:run:6e67023c-2d3b-4282-bce8-3e20b1f4f1dd",
+   "jobName": "预测台账自动结算（到期即打分）"
+  },
+  {
+   "ts": 1795673111779,
+   "jobId": "00f2ebc3-5d64-455e-9613-1ff90294240d",
+   "action": "finished",
+   "status": "ok",
+   "completionStatus": "succeeded",
+   "summary": "台账无到期预测，本次不结算",
+   "result": {
+    "outcome": "done",
+    "summary": "台账无到期预测，本次不结算"
+   },
+   "runId": "cron-request.555151db-8ac8-4cfb-8dda-7316895e53de",
+   "runAtMs": 1795672977504,
+   "durationMs": 134275,
+   "nextRunAtMs": 1795741200000,
+   "model": "MiniMax-M3",
+   "provider": "minimax",
+   "usage": {
+    "input_tokens": 97768,
+    "output_tokens": 9748,
+    "total_tokens": 678145,
+    "cache_read_tokens": 570629
+   },
+   "delivered": true,
+   "deliveryStatus": "delivered",
+   "delivery": {
+    "intended": {
+     "channel": "last",
+     "to": null,
+     "source": "last"
+    },
+    "resolved": {
+     "ok": false,
+     "to": null,
+     "source": "last",
+     "error": "Channel is required when delivery.channel=last has no previous channel."
+    },
+    "fallbackUsed": true,
+    "delivered": true
+   },
+   "sessionId": "33dce22e-4310-4785-ba46-bfc74f252c0e",
+   "sessionKey": "agent:main:cron:00f2ebc3-5d64-455e-9613-1ff90294240d:run:33dce22e-4310-4785-ba46-bfc74f252c0e",
+   "jobName": "预测台账自动结算（到期即打分）"
+  }
+ ],
+ "total": 2,
+ "offset": 0,
+ "limit": 50,
+ "hasMore": false,
+ "nextOffset": null
+}

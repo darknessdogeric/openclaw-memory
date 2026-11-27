@@ -1387,6 +1387,78 @@ def c46():
     settled = len([r for r in rows if r.get('outcome') is not None])
     return True, '台账 ' + str(len(rows)) + ' 条（已结算 ' + str(settled) + '）｜五工具齐备｜概率与结算日口径合规', []
 
+# ---------------- C47 公文排版器须输出 A4 纸张（2026-11-27 新增） ----------------
+@check("C47", "公文排版器必须显式设置 A4 纸张（python-docx 默认模板是 Letter）",
+       "GB/T 9704 用 A4；默认模板 8.5x11in 比 A4 少 1.76cm 页高，会让图片被挤出页、页数虚增、打印错位")
+def c47():
+    p = os.path.join(ROOT, 'skills', 'gongwen-docx-cn', 'scripts', 'md2docx_gongwen.py')
+    if not os.path.exists(p):
+        return False, '缺 md2docx_gongwen.py（公文排版正本丢失）', []
+    s = open(p, encoding='utf-8', errors='replace').read()
+    miss = [k for k in ('sec.page_width', 'sec.page_height', 'Cm(21.0)', 'Cm(29.7)') if k not in s]
+    if miss:
+        return False, '未显式设 A4 纸张：缺 ' + '、'.join(miss), miss
+    return True, '已显式设 A4（21.0 × 29.7 cm），非 Letter 默认模板', []
+
+
+# ---------------- C48 AgentOS 工程闭环（2026-11-28 新增：企业级 AgentOS 内化成果） ----------------
+@check("C48", "AgentOS 工程闭环须齐备：体检/成本台账/Trace与审计分离/策略层/事故回灌",
+       "《企业级AgentOS架构设计与工程实践》内化成果：缺 Trace 与审计分离 = 出事查不到哪一步、谁授权；"
+       "缺策略层 = 硬规矩只停在文字层靠自觉；缺事故回灌 = 同类错误必然复发；缺成本台账 = 账单来了才知道浪费")
+def c48():
+    need = [
+        ("skills/agentos-architecture/SKILL.md", "AgentOS 技能主文件"),
+        ("skills/agentos-architecture/scripts/agentos_gap_audit.py", "12 层成熟度体检"),
+        ("skills/agentos-architecture/scripts/cost_ledger.py", "模型成本台账工具"),
+        ("skills/agentos-architecture/scripts/trace_log.py", "Trace 与审计事件分离工具"),
+        ("skills/agentos-architecture/scripts/policy_gate.py", "机器可执行策略层"),
+        ("data/model_cost_ledger.jsonl", "成本台账"),
+        ("data/task_trace.jsonl", "任务级 Trace"),
+        ("data/audit_events.jsonl", "审计事件独立成账"),
+        ("data/regression_cases.jsonl", "事故回灌回归集"),
+        ("data/policy_ledger.jsonl", "策略执行记录"),
+        ("anyi-ops-kb/04_方法论/方法论书籍内化/《企业级AgentOS架构设计与工程实践》核心内化笔记_v1.0_2026-11-28.md", "内化笔记"),
+    ]
+    miss = []
+    for rel, label in need:
+        p = os.path.join(ROOT, rel.replace("/", os.sep))
+        if not os.path.exists(p):
+            miss.append(label + "(" + os.path.basename(rel) + ")")
+        elif os.path.getsize(p) < 40:
+            miss.append(label + " 内容为空")
+    if miss:
+        return False, "缺 " + "、".join(miss), miss
+    # Trace 与审计必须分账：文件不同，且各自非空
+    tr = open(os.path.join(ROOT, "data", "task_trace.jsonl"), encoding="utf-8", errors="replace").read()
+    au = open(os.path.join(ROOT, "data", "audit_events.jsonl"), encoding="utf-8", errors="replace").read()
+    if "trace_id" not in tr and "step" not in tr:
+        return False, "task_trace.jsonl 缺 trace/step 字段", []
+    if "actor" not in au or "action" not in au:
+        return False, "audit_events.jsonl 缺 actor/action 字段（审计与 Trace 必须分账）", []
+    # 回归集必须非空：事故不回灌 = 同类错误复发
+    rg = [l for l in open(os.path.join(ROOT, "data", "regression_cases.jsonl"), encoding="utf-8", errors="replace") if l.strip()]
+    if len(rg) < 1:
+        return False, "事故回灌回归集为空", []
+    # 策略层必须含机器可执行策略，且不是只有文字
+    ps = open(os.path.join(ROOT, "skills", "agentos-architecture", "scripts", "policy_gate.py"), encoding="utf-8", errors="replace").read()
+    for k in ("def evaluate", "idempotency_key", "ESCALATE", "DENY", "ALLOW"):
+        if k not in ps:
+            return False, "策略层缺 " + k + "（策略必须可判定、有幂等键、有审批与拦截动作）", [k]
+    # 成本台账必须有记录且字段完整
+    cl = [l for l in open(os.path.join(ROOT, "data", "model_cost_ledger.jsonl"), encoding="utf-8", errors="replace") if l.strip()]
+    if not cl:
+        return False, "成本台账为空（不记账就等于不知道钱花在哪）", []
+    for l in cl:
+        try:
+            r = json.loads(l)
+        except Exception:
+            return False, "成本台账有坏行（非 JSON）", []
+        for k in ("actor", "task", "tokens", "value"):
+            if k not in r:
+                return False, "成本台账缺字段 " + k, [k]
+    return True, ("AgentOS 闭环齐备：四工具 + 四账本 + 策略层可判定 ｜ 事故回归集 %d 条 ｜ 成本台账 %d 条"
+                  % (len(rg), len(cl))), []
+
 def run(as_json=False):
     res = []
     npass = 0

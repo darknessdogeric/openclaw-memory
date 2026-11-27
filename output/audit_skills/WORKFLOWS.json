@@ -1,0 +1,241 @@
+[
+ {
+  "task": "md→docx 转换",
+  "skills": "docx-md-bridge",
+  "note": "scripts/md_to_docx.py（已实测 rc=0，产出含表 docx）",
+  "paradigms": [
+   "报告范式/00_报告范式_总入口",
+   "版式设计/《版式之道》核心内化笔记"
+  ]
+ },
+ {
+  "task": "公文/请示/报告 排版",
+  "skills": "gongwen-docx-cn + gongwen-report-cn",
+  "note": "GB/T 9704-2012 ＋ Eric 排版习惯；请示四段骨架",
+  "paradigms": [
+   "报告范式/00_报告范式_总入口",
+   "设计内化/B166ER设计方法手册"
+  ]
+ },
+ {
+  "task": "PPT 生成",
+  "skills": "ppt-deck-builder-pro",
+  "note": "run_image_batch.sh / package_image_deck.sh",
+  "paradigms": [
+   "报告范式/04_报告体系总图"
+  ]
+ },
+ {
+  "task": "信息图/海报",
+  "skills": "article-to-infographic + china-poster-studio + infographic",
+  "note": "文字→信息图，多风格",
+  "paradigms": [
+   "配色设计/《中国传统色主题配色手册》",
+   "设计内化/《版式之道》核心内化笔记"
+  ]
+ },
+ {
+  "task": "全网检索",
+  "skills": "agent-reach",
+  "note": "~/.agents/skills/agent-reach（17 平台路由，已核实存在）",
+  "paradigms": [
+   "anyi-ops-kb/04_方法论/市场分析与调研_总方法论_v1.0_2026-10-11.md"
+  ]
+ },
+ {
+  "task": "网页抓取",
+  "skills": "scrap_tools.py / ultimate-search / crawl4ai / playwright-mcp",
+  "note": "scrap_matrix 自动路由 Booking→InvisiblePlaywright、携程→Obscura",
+  "paradigms": [
+   "rules/R87.md"
+  ]
+ },
+ {
+  "task": "知识库语义检索",
+  "skills": "openviking + local_semantic_search.py",
+  "note": "本地免费无限制；ov status / ov find",
+  "paradigms": [
+   "anyi-ops-kb/04_方法论/方法论书籍内化/《Kano模型》核心内化笔记_v1.0_2026-10-11.md"
+  ]
+ },
+ {
+  "task": "酒店收益管理",
+  "skills": "hotel-revenue-management",
+  "note": "RevPAR/ADR/OCC/GOPPAR ＋ 竞对对标 ＋ 决策清单",
+  "paradigms": [
+   "经营分析范式/02_P&L月报模板",
+   "经营分析范式/01_经营分析框架"
+  ]
+ },
+ {
+  "task": "酒店自媒体",
+  "skills": "hotel-new-media",
+  "note": "抖音/小红书运营",
+  "paradigms": [
+   "rules/R125.md"
+  ]
+ },
+ {
+  "task": "成本与用量治理",
+  "skills": "cost-governor + clawhub/controlling-costs",
+  "note": "x402 预算与熔断（cost-governor 已补 description）",
+  "paradigms": [
+   "anyi-ops-kb/04_方法论/项目调研_范式_v1.0_2026-10-11.md"
+  ]
+ },
+ {
+  "task": "自检/断言/回归",
+  "skills": "writing-evals + autoreview + toolbox/selfcheck.py",
+  "note": "★ 今日新建：12 条可失败断言",
+  "paradigms": [
+   "SI_domains/自检与断言.md"
+  ]
+ },
+ {
+  "task": "编码/文件完整性",
+  "skills": "toolbox/fix_mixed_encoding.py + toolbox/selfcheck.py C01",
+  "note": "★ 今日新建：混合编码修复 + 基线感知",
+  "paradigms": [
+   "SI_domains/代码与工具链.md"
+  ]
+ },
+ {
+  "task": "OCR/文档解析",
+  "skills": "toolbox/ocr（rapidocr 封装）",
+  "note": "★ 今日新建：Windows 本地 OCR",
+  "paradigms": [
+   "anyi-ops-kb/04_方法论/2026-10-27_安逸集团新媒体业务整体诊断报告_v1.0.md"
+  ]
+ },
+ {
+  "task": "代码审阅",
+  "skills": "autoreview + review + codex",
+  "note": "本次新装",
+  "paradigms": [
+   "domains/代码与工具链.md"
+  ]
+ },
+ {
+  "task": "技术文档写作",
+  "skills": "technical-documentation",
+  "note": "本次新装",
+  "paradigms": [
+   "technical-documentation（技能自带规范）",
+   "SI_domains/代码与工具链.md"
+  ]
+ },
+ {
+  "task": "知识库结构化",
+  "skills": "ontology + growth-mindset",
+  "note": "图谱化知识 + 复盘",
+  "paradigms": [
+   "方法论书籍内化/Kano模型",
+   "服务设计/《服务不设限》"
+  ]
+ },
+ {
+  "task": "CAD/室内设计",
+  "skills": "cad-batch-processing + interior-fullplan",
+  "note": "DWG/DXF 批量 ＋ 全案生成",
+  "paradigms": [
+   "设计DNA/设计DNA"
+  ]
+ },
+ {
+  "task": "Office 文档免安装",
+  "skills": "officecli",
+  "note": "单文件二进制，免装 Office",
+  "paradigms": [
+   "anyi-ops-kb/04_方法论/报告范式/00_报告范式_总入口_v1.0_2026-09-07.md"
+  ]
+ },
+ {
+  "task": "技能评估（装前必过）",
+  "skills": "skill-vetter",
+  "note": "★ 装任何 GitHub/ClawdHub 技能前先过这一关",
+  "paradigms": [
+   "domains/自检与断言.md"
+  ]
+ },
+ {
+  "task": "CAD 图纸编辑与出图",
+  "skills": "cad-editor",
+  "note": "CAD 编辑/出图，配合 cad-batch-processing 批量处理",
+  "paradigms": [
+   "anyi-ops-kb/04_方法论/版式设计/《版式之道》核心内化笔记_v1.0_2026-10-04.md"
+  ],
+  "source": "2026-11-18 闲置激活"
+ },
+ {
+  "task": "图示与架构图设计",
+  "skills": "diagram-design",
+  "note": "把结构讲成图，配合 diagram-maker 与拓扑图生成器",
+  "paradigms": [
+   "anyi-ops-kb/04_方法论/设计内化/B166ER设计方法手册_v1.0_2026-10-11.md"
+  ],
+  "source": "2026-11-18 闲置激活"
+ },
+ {
+  "task": "字体选型",
+  "skills": "FontPick",
+  "note": "排版前定字体，避免字体缺失返工",
+  "paradigms": [
+   "anyi-ops-kb/04_方法论/设计内化/《中文文字设计研究选集》核心内化笔记_v1.0_2026-10-11.md"
+  ],
+  "source": "2026-11-18 闲置激活"
+ },
+ {
+  "task": "品牌识别与视觉系统",
+  "skills": "brand-identity-design",
+  "note": "品牌重塑/VI 落地，配合 design-md 与配色范式",
+  "paradigms": [
+   "anyi-ops-kb/04_方法论/配色设计/《中国传统色主题配色手册》内化_v1.0_2026-10-04.md"
+  ],
+  "source": "2026-11-18 闲置激活"
+ },
+ {
+  "task": "自进化周期扫描",
+  "skills": "evolution-scan",
+  "note": "★ 周期自动跑断言，防止进化退化",
+  "paradigms": [
+   "domains/自检与断言.md"
+  ],
+  "source": "2026-11-18 闲置激活"
+ },
+ {
+  "task": "浏览器自动化（CLI）",
+  "skills": "playwright-cli",
+  "note": "抓取/截图/表单，配合 agent-reach 与 scrape_matrix",
+  "paradigms": [
+   "rules_OpenClaw配置与自动化踩坑_v1.0_2026-10-24.md"
+  ],
+  "source": "2026-11-18 闲置激活"
+ },
+ {
+  "task": "技能注册表重建",
+  "skills": "skill-registry-builder",
+  "note": "★ 新建/删除技能后必须重跑，否则 C14 漂移失败",
+  "paradigms": [
+   "SI_domains/代码与工具链.md"
+  ],
+  "source": "2026-11-18 工具层治理"
+ },
+ {
+  "task": "工具索引与归属",
+  "skills": "tool-index-builder",
+  "note": "★ 工具层审计：分类 capability/oneoff/orphan 并标 owner_skill",
+  "paradigms": [
+   "SI_domains/代码与工具链.md"
+  ],
+  "source": "2026-11-18 工具层治理"
+ },
+ {
+  "task": "纹样选型与视觉系统",
+  "skills": "pattern-design-cn",
+  "note": "★ 纹样选型／检索／组合校验；朝代一致＋寓意适配＋溯源可授权三约束",
+  "paradigms": [
+   "anyi-ops-kb/04_方法论/方法论书籍内化/《纹样设计速查手册》核心内化笔记_v1.0_2026-11-19.md"
+  ],
+  "source": "2026-11-19 纹样内化"
+ }
+]

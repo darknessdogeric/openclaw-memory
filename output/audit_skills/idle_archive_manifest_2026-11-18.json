@@ -1,0 +1,36 @@
+{
+ "date": "2026-11-18",
+ "rule": "纯单文件说明+零调用+零可执行件 → 归档（可回滚）；受保护与同族活跃技能不动",
+ "archived": [
+  {
+   "name": "wayfinding-signage",
+   "loc": "WS",
+   "from": "skills/wayfinding-signage",
+   "to": "skills/_archive/idle_2026-11-18/WS__wayfinding-signage",
+   "bytes": 5083,
+   "rollback": "移回 from 路径即恢复"
+  }
+ ],
+ "skipped": [
+  [
+   "ponytail-audit",
+   "同族活跃技能 ponytail 存在，不拆散"
+  ],
+  [
+   "ponytail-debt",
+   "同族活跃技能 ponytail 存在，不拆散"
+  ],
+  [
+   "ponytail-gain",
+   "同族活跃技能 ponytail 存在，不拆散"
+  ],
+  [
+   "ponytail-help",
+   "同族活跃技能 ponytail 存在，不拆散"
+  ],
+  [
+   "ponytail-review",
+   "同族活跃技能 ponytail 存在，不拆散"
+  ]
+ ]
+}

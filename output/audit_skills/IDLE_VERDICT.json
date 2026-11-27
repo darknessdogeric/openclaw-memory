@@ -1,0 +1,762 @@
+[
+ {
+  "name": "cad-editor",
+  "deps": [
+   "pip"
+  ],
+  "blocking": [],
+  "action": "activate",
+  "verdict": "有可执行件但未被调用 —— 纳入固定工作流",
+  "locs": [
+   "WS"
+  ],
+  "bytes": 6299,
+  "exec": [
+   "examples/build_sichuan_hotel_1f.py",
+   "examples/debug.py",
+   "examples/fix10.py",
+   "examples/fix11.py",
+   "examples/fix12.py",
+   "examples/fix13.py",
+   "examples/fix14.py",
+   "examples/fix2.py",
+   "examples/fix3.py",
+   "examples/fix4.py",
+   "examples/fix5.py",
+   "examples/fix6.py",
+   "examples/fix7.py",
+   "examples/fix8.py",
+   "examples/fix9.py",
+   "examples/fix_syntax.py",
+   "scripts/block/attributes.py",
+   "scripts/block/block_lib.py",
+   "scripts/block/__init__.py",
+   "scripts/core/document.py",
+   "scripts/core/renderer.py",
+   "scripts/core/units.py",
+   "scripts/core/__init__.py",
+   "scripts/dimension/leader.py",
+   "scripts/dimension/linear.py",
+   "scripts/dimension/radial.py",
+   "scripts/dimension/__init__.py",
+   "scripts/entities/basic.py",
+   "scripts/entities/curves.py",
+   "scripts/entities/polyline.py",
+   "scripts/entities/text.py",
+   "scripts/entities/__init__.py",
+   "scripts/export/batch_export.py",
+   "scripts/export/to_pdf.py",
+   "scripts/export/to_svg.py",
+   "scripts/export/__init__.py",
+   "scripts/hatch/patterns.py",
+   "scripts/hatch/__init__.py",
+   "scripts/layer/linetypes.py",
+   "scripts/layer/manager.py",
+   "scripts/layer/__init__.py",
+   "scripts/layout/paperspace.py",
+   "scripts/layout/viewport.py",
+   "scripts/layout/__init__.py",
+   "scripts/nl_parser/intent_classifier.py",
+   "scripts/nl_parser/param_extractor.py",
+   "scripts/nl_parser/script_generator.py",
+   "scripts/nl_parser/__init__.py",
+   "scripts/templates/architectural.py",
+   "scripts/templates/electrical.py",
+   "scripts/templates/mechanical.py",
+   "scripts/templates/piping.py",
+   "scripts/templates/structural.py",
+   "scripts/templates/__init__.py",
+   "scripts/tools/array.py",
+   "scripts/tools/fillet_chamfer.py",
+   "scripts/tools/measure.py",
+   "scripts/tools/mirror.py",
+   "scripts/tools/offset.py",
+   "scripts/tools/trim_extend.py",
+   "scripts/tools/__init__.py"
+  ],
+  "docs": 4
+ },
+ {
+  "name": "brand-identity-design",
+  "deps": [],
+  "blocking": [],
+  "action": "hold",
+  "verdict": "知识包（1 份文档）未被调用 —— 保留待用",
+  "locs": [
+   "WS"
+  ],
+  "bytes": 10698,
+  "exec": [],
+  "docs": 1
+ },
+ {
+  "name": "diagram-design",
+  "deps": [
+   "docker",
+   "npm",
+   "npx"
+  ],
+  "blocking": [],
+  "action": "activate",
+  "verdict": "有可执行件但未被调用 —— 纳入固定工作流",
+  "locs": [
+   "WS"
+  ],
+  "bytes": 30696,
+  "exec": [
+   "scripts/drawio_extract.py",
+   "scripts/excalidraw_extract.py",
+   "scripts/export_png.py",
+   "scripts/export_svg.py",
+   "scripts/mermaid_extract.py",
+   "scripts/self_check.py"
+  ],
+  "docs": 63
+ },
+ {
+  "name": "doc-encoding-repair",
+  "deps": [],
+  "blocking": [],
+  "action": "protected",
+  "verdict": "受保护（今日新建/被工作流或自检引用）",
+  "locs": [
+   "WS"
+  ],
+  "bytes": 597,
+  "exec": [
+   "fix_mixed_encoding.py"
+  ],
+  "docs": 0
+ },
+ {
+  "name": "evolution-scan",
+  "deps": [],
+  "blocking": [],
+  "action": "protected",
+  "verdict": "受保护（今日新建/被工作流或自检引用）",
+  "locs": [
+   "WS"
+  ],
+  "bytes": 668,
+  "exec": [
+   "evolution_scan.py",
+   "evolution_scan_payload.js",
+   "evolution_watch.py",
+   "evolution_watch_trigger2.js"
+  ],
+  "docs": 0
+ },
+ {
+  "name": "FontPick",
+  "deps": [],
+  "blocking": [],
+  "action": "activate",
+  "verdict": "有可执行件但未被调用 —— 纳入固定工作流",
+  "locs": [
+   "WS"
+  ],
+  "bytes": 1578,
+  "exec": [
+   "scripts/script.sh"
+  ],
+  "docs": 1
+ },
+ {
+  "name": "ponytail-audit",
+  "deps": [],
+  "blocking": [],
+  "action": "archive",
+  "verdict": "纯单文件说明、无可执行件、从未被调用",
+  "locs": [
+   "WS"
+  ],
+  "bytes": 5417,
+  "exec": [],
+  "docs": 0
+ },
+ {
+  "name": "ponytail-debt",
+  "deps": [],
+  "blocking": [],
+  "action": "archive",
+  "verdict": "纯单文件说明、无可执行件、从未被调用",
+  "locs": [
+   "WS"
+  ],
+  "bytes": 1769,
+  "exec": [],
+  "docs": 0
+ },
+ {
+  "name": "ponytail-gain",
+  "deps": [],
+  "blocking": [],
+  "action": "archive",
+  "verdict": "纯单文件说明、无可执行件、从未被调用",
+  "locs": [
+   "WS"
+  ],
+  "bytes": 1986,
+  "exec": [],
+  "docs": 0
+ },
+ {
+  "name": "ponytail-help",
+  "deps": [
+   "brew",
+   "npm"
+  ],
+  "blocking": [],
+  "action": "archive",
+  "verdict": "纯单文件说明、无可执行件、从未被调用",
+  "locs": [
+   "WS"
+  ],
+  "bytes": 3188,
+  "exec": [],
+  "docs": 0
+ },
+ {
+  "name": "ponytail-review",
+  "deps": [],
+  "blocking": [],
+  "action": "archive",
+  "verdict": "纯单文件说明、无可执行件、从未被调用",
+  "locs": [
+   "WS"
+  ],
+  "bytes": 5143,
+  "exec": [],
+  "docs": 0
+ },
+ {
+  "name": "self-check-assertions",
+  "deps": [],
+  "blocking": [],
+  "action": "protected",
+  "verdict": "受保护（今日新建/被工作流或自检引用）",
+  "locs": [
+   "WS"
+  ],
+  "bytes": 683,
+  "exec": [
+   "selfcheck.py"
+  ],
+  "docs": 0
+ },
+ {
+  "name": "skill-registry-router",
+  "deps": [],
+  "blocking": [],
+  "action": "protected",
+  "verdict": "受保护（今日新建/被工作流或自检引用）",
+  "locs": [
+   "WS"
+  ],
+  "bytes": 555,
+  "exec": [
+   "skill_router.py"
+  ],
+  "docs": 0
+ },
+ {
+  "name": "topology-infographic",
+  "deps": [],
+  "blocking": [],
+  "action": "protected",
+  "verdict": "受保护（今日新建/被工作流或自检引用）",
+  "locs": [
+   "WS"
+  ],
+  "bytes": 593,
+  "exec": [
+   "make_topology.py"
+  ],
+  "docs": 0
+ },
+ {
+  "name": "wayfinding-signage",
+  "deps": [
+   "uv"
+  ],
+  "blocking": [],
+  "action": "archive",
+  "verdict": "纯单文件说明、无可执行件、从未被调用",
+  "locs": [
+   "WS"
+  ],
+  "bytes": 5083,
+  "exec": [],
+  "docs": 0
+ },
+ {
+  "name": "arkcli-agent",
+  "deps": [
+   "arkcli",
+   "npx",
+   "pip"
+  ],
+  "blocking": [
+   "arkcli"
+  ],
+  "action": "hold",
+  "verdict": "缺 arkcli —— 保留待装",
+  "locs": [
+   "CLAUDE"
+  ],
+  "bytes": 14826,
+  "exec": [],
+  "docs": 11
+ },
+ {
+  "name": "arkcli-api-explorer",
+  "deps": [
+   "arkcli"
+  ],
+  "blocking": [
+   "arkcli"
+  ],
+  "action": "hold",
+  "verdict": "缺 arkcli —— 保留待装",
+  "locs": [
+   "CLAUDE"
+  ],
+  "bytes": 5157,
+  "exec": [],
+  "docs": 2
+ },
+ {
+  "name": "arkcli-auth",
+  "deps": [
+   "arkcli"
+  ],
+  "blocking": [
+   "arkcli"
+  ],
+  "action": "hold",
+  "verdict": "缺 arkcli —— 保留待装",
+  "locs": [
+   "CLAUDE"
+  ],
+  "bytes": 9811,
+  "exec": [],
+  "docs": 8
+ },
+ {
+  "name": "arkcli-billing",
+  "deps": [
+   "arkcli"
+  ],
+  "blocking": [
+   "arkcli"
+  ],
+  "action": "hold",
+  "verdict": "缺 arkcli —— 保留待装",
+  "locs": [
+   "CLAUDE"
+  ],
+  "bytes": 4605,
+  "exec": [],
+  "docs": 1
+ },
+ {
+  "name": "arkcli-chat",
+  "deps": [
+   "arkcli"
+  ],
+  "blocking": [
+   "arkcli"
+  ],
+  "action": "hold",
+  "verdict": "缺 arkcli —— 保留待装",
+  "locs": [
+   "CLAUDE"
+  ],
+  "bytes": 9712,
+  "exec": [],
+  "docs": 7
+ },
+ {
+  "name": "arkcli-code-example",
+  "deps": [
+   "arkcli",
+   "pip"
+  ],
+  "blocking": [
+   "arkcli"
+  ],
+  "action": "hold",
+  "verdict": "缺 arkcli —— 保留待装",
+  "locs": [
+   "CLAUDE"
+  ],
+  "bytes": 2972,
+  "exec": [
+   "assets/demo-code/python.py"
+  ],
+  "docs": 1
+ },
+ {
+  "name": "arkcli-config",
+  "deps": [
+   "arkcli",
+   "npm"
+  ],
+  "blocking": [
+   "arkcli"
+  ],
+  "action": "hold",
+  "verdict": "缺 arkcli —— 保留待装",
+  "locs": [
+   "CLAUDE"
+  ],
+  "bytes": 6909,
+  "exec": [],
+  "docs": 3
+ },
+ {
+  "name": "arkcli-connect",
+  "deps": [
+   "arkcli",
+   "npm"
+  ],
+  "blocking": [
+   "arkcli"
+  ],
+  "action": "hold",
+  "verdict": "缺 arkcli —— 保留待装",
+  "locs": [
+   "CLAUDE"
+  ],
+  "bytes": 4197,
+  "exec": [],
+  "docs": 2
+ },
+ {
+  "name": "arkcli-custommodel",
+  "deps": [
+   "arkcli"
+  ],
+  "blocking": [
+   "arkcli"
+  ],
+  "action": "hold",
+  "verdict": "缺 arkcli —— 保留待装",
+  "locs": [
+   "CLAUDE"
+  ],
+  "bytes": 10262,
+  "exec": [],
+  "docs": 8
+ },
+ {
+  "name": "arkcli-datasets",
+  "deps": [
+   "arkcli"
+  ],
+  "blocking": [
+   "arkcli"
+  ],
+  "action": "hold",
+  "verdict": "缺 arkcli —— 保留待装",
+  "locs": [
+   "CLAUDE"
+  ],
+  "bytes": 2139,
+  "exec": [],
+  "docs": 2
+ },
+ {
+  "name": "arkcli-deploy",
+  "deps": [
+   "arkcli"
+  ],
+  "blocking": [
+   "arkcli"
+  ],
+  "action": "hold",
+  "verdict": "缺 arkcli —— 保留待装",
+  "locs": [
+   "CLAUDE"
+  ],
+  "bytes": 10470,
+  "exec": [],
+  "docs": 2
+ },
+ {
+  "name": "arkcli-docs",
+  "deps": [
+   "arkcli"
+  ],
+  "blocking": [
+   "arkcli"
+  ],
+  "action": "hold",
+  "verdict": "缺 arkcli —— 保留待装",
+  "locs": [
+   "CLAUDE"
+  ],
+  "bytes": 13085,
+  "exec": [],
+  "docs": 3
+ },
+ {
+  "name": "arkcli-doctor",
+  "deps": [
+   "arkcli",
+   "npm"
+  ],
+  "blocking": [
+   "arkcli"
+  ],
+  "action": "hold",
+  "verdict": "缺 arkcli —— 保留待装",
+  "locs": [
+   "CLAUDE"
+  ],
+  "bytes": 19447,
+  "exec": [],
+  "docs": 10
+ },
+ {
+  "name": "arkcli-gen",
+  "deps": [
+   "arkcli"
+  ],
+  "blocking": [
+   "arkcli"
+  ],
+  "action": "hold",
+  "verdict": "缺 arkcli —— 保留待装",
+  "locs": [
+   "CLAUDE"
+  ],
+  "bytes": 15626,
+  "exec": [],
+  "docs": 5
+ },
+ {
+  "name": "arkcli-helper",
+  "deps": [
+   "arkcli",
+   "npm",
+   "npx"
+  ],
+  "blocking": [
+   "arkcli"
+  ],
+  "action": "hold",
+  "verdict": "缺 arkcli —— 保留待装",
+  "locs": [
+   "CLAUDE"
+  ],
+  "bytes": 21227,
+  "exec": [],
+  "docs": 2
+ },
+ {
+  "name": "arkcli-infer-endpoint",
+  "deps": [
+   "arkcli"
+  ],
+  "blocking": [
+   "arkcli"
+  ],
+  "action": "hold",
+  "verdict": "缺 arkcli —— 保留待装",
+  "locs": [
+   "CLAUDE"
+  ],
+  "bytes": 7388,
+  "exec": [],
+  "docs": 7
+ },
+ {
+  "name": "arkcli-models",
+  "deps": [
+   "arkcli"
+  ],
+  "blocking": [
+   "arkcli"
+  ],
+  "action": "hold",
+  "verdict": "缺 arkcli —— 保留待装",
+  "locs": [
+   "CLAUDE"
+  ],
+  "bytes": 17826,
+  "exec": [],
+  "docs": 7
+ },
+ {
+  "name": "arkcli-onboard",
+  "deps": [
+   "arkcli"
+  ],
+  "blocking": [
+   "arkcli"
+  ],
+  "action": "hold",
+  "verdict": "缺 arkcli —— 保留待装",
+  "locs": [
+   "CLAUDE"
+  ],
+  "bytes": 4060,
+  "exec": [],
+  "docs": 1
+ },
+ {
+  "name": "arkcli-plans",
+  "deps": [
+   "arkcli"
+  ],
+  "blocking": [
+   "arkcli"
+  ],
+  "action": "hold",
+  "verdict": "缺 arkcli —— 保留待装",
+  "locs": [
+   "CLAUDE"
+  ],
+  "bytes": 14474,
+  "exec": [],
+  "docs": 12
+ },
+ {
+  "name": "arkcli-pricing",
+  "deps": [
+   "arkcli"
+  ],
+  "blocking": [
+   "arkcli"
+  ],
+  "action": "hold",
+  "verdict": "缺 arkcli —— 保留待装",
+  "locs": [
+   "CLAUDE"
+  ],
+  "bytes": 6646,
+  "exec": [],
+  "docs": 2
+ },
+ {
+  "name": "arkcli-profile",
+  "deps": [
+   "arkcli"
+  ],
+  "blocking": [
+   "arkcli"
+  ],
+  "action": "hold",
+  "verdict": "缺 arkcli —— 保留待装",
+  "locs": [
+   "CLAUDE"
+  ],
+  "bytes": 12303,
+  "exec": [],
+  "docs": 4
+ },
+ {
+  "name": "arkcli-resources",
+  "deps": [
+   "arkcli"
+  ],
+  "blocking": [
+   "arkcli"
+  ],
+  "action": "hold",
+  "verdict": "缺 arkcli —— 保留待装",
+  "locs": [
+   "CLAUDE"
+  ],
+  "bytes": 7091,
+  "exec": [],
+  "docs": 1
+ },
+ {
+  "name": "arkcli-shared",
+  "deps": [
+   "arkcli",
+   "npm"
+  ],
+  "blocking": [
+   "arkcli"
+  ],
+  "action": "hold",
+  "verdict": "缺 arkcli —— 保留待装",
+  "locs": [
+   "CLAUDE"
+  ],
+  "bytes": 11158,
+  "exec": [],
+  "docs": 5
+ },
+ {
+  "name": "arkcli-train-finetune",
+  "deps": [
+   "arkcli",
+   "pip",
+   "uv"
+  ],
+  "blocking": [
+   "arkcli"
+  ],
+  "action": "hold",
+  "verdict": "缺 arkcli —— 保留待装",
+  "locs": [
+   "CLAUDE"
+  ],
+  "bytes": 5788,
+  "exec": [],
+  "docs": 8
+ },
+ {
+  "name": "arkcli-understand",
+  "deps": [
+   "arkcli"
+  ],
+  "blocking": [
+   "arkcli"
+  ],
+  "action": "hold",
+  "verdict": "缺 arkcli —— 保留待装",
+  "locs": [
+   "CLAUDE"
+  ],
+  "bytes": 6780,
+  "exec": [],
+  "docs": 3
+ },
+ {
+  "name": "arkcli-usage",
+  "deps": [
+   "arkcli"
+  ],
+  "blocking": [
+   "arkcli"
+  ],
+  "action": "hold",
+  "verdict": "缺 arkcli —— 保留待装",
+  "locs": [
+   "CLAUDE"
+  ],
+  "bytes": 10132,
+  "exec": [],
+  "docs": 5
+ },
+ {
+  "name": "playwright-cli",
+  "deps": [
+   "npx"
+  ],
+  "blocking": [],
+  "action": "hold",
+  "verdict": "知识包（7 份文档）未被调用 —— 保留待用",
+  "locs": [
+   "CLAUDE"
+  ],
+  "bytes": 7450,
+  "exec": [],
+  "docs": 7
+ }
+]

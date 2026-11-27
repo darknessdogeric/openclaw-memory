@@ -1,0 +1,92 @@
+{
+ "md_to_docx.py": [
+  "toolbox/_finalize_v13.py",
+  "toolbox/_fix_v14_count.py",
+  "toolbox/_fix_v14_count2.py",
+  "toolbox/_mk_manual.py",
+  "toolbox/_patch_v14.py",
+  "toolbox/_patch_v14b.py",
+  "toolbox/.tmp/src/_convert.py",
+  "toolbox/patent-disclosure-skill/INSTALL.md",
+  "toolbox/patent-disclosure-skill/requirements.txt",
+  "toolbox/patent-disclosure-skill/SKILL.md",
+  "toolbox/patent-disclosure-skill/docs/PRD.md",
+  "toolbox/patent-disclosure-skill/docs/skill-structure.md",
+  "toolbox/patent-disclosure-skill/examples/README.md",
+  "toolbox/patent-disclosure-skill/prompts/disclosure_builder.md",
+  "toolbox/patent-disclosure-skill/prompts/disclosure_self_check.md",
+  "toolbox/patent-disclosure-skill/prompts/template_reference.md",
+  "toolbox/patent-disclosure-skill/tools/mermaid_render.py",
+  "toolbox/patent-disclosure-skill/tools/README.md",
+  "skills/docx-md-bridge/SKILL.md",
+  "memory/2026-10-04.md",
+  "memory/file_inventory.json",
+  "memory/_buildreg.py",
+  "memory/_cls1.py",
+  "memory/_cls2.py",
+  "memory/_cls3.py",
+  "memory/_cmp1.py",
+  "memory/_cmp2.py",
+  "memory/_reg2.py",
+  "memory/.dreams/session-corpus/2026-09-19.txt",
+  "memory/dreaming/light/2026-10-05.md",
+  "memory/dreaming/light/2026-10-11.md",
+  "memory/dreaming/light/2026-10-16.md"
+ ],
+ "md_to_docx_clean.py": [
+  "memory/file_inventory.json",
+  "memory/_cls1.py",
+  "memory/_cls2.py",
+  "memory/_cls3.py",
+  "memory/_reg2.py"
+ ],
+ "md_to_docx_v1.0.py": [
+  "memory/file_inventory.json",
+  "memory/_cls1.py",
+  "memory/_cls2.py",
+  "memory/_cls3.py",
+  "memory/_reg2.py"
+ ],
+ "md_to_docx_v2.py": [
+  "memory/file_inventory.json",
+  "memory/_cls1.py",
+  "memory/_cls2.py",
+  "memory/_cls3.py",
+  "memory/_reg2.py"
+ ],
+ "md_to_docx_v3.py": [
+  "memory/2026-09-07.md",
+  "memory/file_inventory.json",
+  "memory/_cls1.py",
+  "memory/_cls2.py",
+  "memory/_cls3.py",
+  "memory/_reg2.py"
+ ],
+ "md2docx.py": [
+  "memory/2026-11-12.md",
+  "memory/2026-11-17.md",
+  "memory/file_inventory.json",
+  "memory/_cls1.py",
+  "memory/_cls2.py",
+  "memory/_cls3.py",
+  "memory/_cmp1.py",
+  "memory/_cmp2.py",
+  "memory/_reg2.py",
+  "memory/.dreams/session-corpus/2026-09-19.txt"
+ ],
+ "md2gongwen_docx.py": [
+  "memory/2026-10-30.md",
+  "memory/2026-11-01.md",
+  "memory/_cls1.py",
+  "memory/_cls2.py",
+  "memory/_cls3.py",
+  "memory/_reg2.py"
+ ],
+ "v4_to_docx.py": [
+  "memory/file_inventory.json",
+  "memory/_cls1.py",
+  "memory/_cls2.py",
+  "memory/_cls3.py",
+  "memory/_reg2.py"
+ ]
+}

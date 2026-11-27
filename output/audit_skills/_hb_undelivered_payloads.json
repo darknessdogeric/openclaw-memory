@@ -1,0 +1,1196 @@
+[
+ {
+  "file": "hb3604_append.py",
+  "bytes": 2032,
+  "hb_ids": [
+   "3603",
+   "3604"
+  ],
+  "payload": "",
+  "delivered": false,
+  "matched": []
+ },
+ {
+  "file": "hb3604_state.py",
+  "bytes": 1340,
+  "hb_ids": [
+   "3603",
+   "3604"
+  ],
+  "payload": "",
+  "delivered": false,
+  "matched": []
+ },
+ {
+  "file": "hb380_fix.py",
+  "bytes": 875,
+  "hb_ids": [],
+  "payload": "",
+  "delivered": false,
+  "matched": []
+ },
+ {
+  "file": "hb380_fix2.py",
+  "bytes": 1043,
+  "hb_ids": [],
+  "payload": "",
+  "delivered": false,
+  "matched": []
+ },
+ {
+  "file": "hb551_update.py",
+  "bytes": 3686,
+  "hb_ids": [
+   "551"
+  ],
+  "payload": "",
+  "delivered": false,
+  "matched": []
+ },
+ {
+  "file": "hb751_append.py",
+  "bytes": 3178,
+  "hb_ids": [
+   "750",
+   "751"
+  ],
+  "payload": "",
+  "delivered": false,
+  "matched": []
+ },
+ {
+  "file": "hb755_append.py",
+  "bytes": 6530,
+  "hb_ids": [
+   "755"
+  ],
+  "payload": "",
+  "delivered": false,
+  "matched": []
+ },
+ {
+  "file": "hb774_update.py",
+  "bytes": 4504,
+  "hb_ids": [
+   "773",
+   "774"
+  ],
+  "payload": "",
+  "delivered": false,
+  "matched": []
+ },
+ {
+  "file": "hb783_append.py",
+  "bytes": 4379,
+  "hb_ids": [
+   "781",
+   "782",
+   "783"
+  ],
+  "payload": "",
+  "delivered": false,
+  "matched": []
+ },
+ {
+  "file": "hb835_append.py",
+  "bytes": 3440,
+  "hb_ids": [
+   "834",
+   "835"
+  ],
+  "payload": "",
+  "delivered": false,
+  "matched": []
+ },
+ {
+  "file": "hb930_append.py",
+  "bytes": 3995,
+  "hb_ids": [
+   "929",
+   "930"
+  ],
+  "payload": "## HB #930 (2026-07-22T16:15 GMT+8 cron-event, OpenClaw heartbeat poll) - gap from HB #929 (16:11): +4min -- Wednesday afternoon Token Guard normal cadence (R012 minimal mode) - D+6 afternoon pass #930 -- Eric silent in THIS session ~147h+ since 7/16 13:16 first-contact - Eric active elsewhere: AnYi webchat ~75.75h+ (since 7/19 12:33) - 6-layer suppression (R-B / R12 / R-CANDIDATE-T2 / R256 / R257 / R258) -- zero breach - R-NEW-V2 verification #930: Python utf-8 explicit read+append+write (compliant) - R012 verification: HB tick = minimal (NOT full report), per R012 rule #2 - Triple Confluence",
+  "delivered": false,
+  "matched": []
+ },
+ {
+  "file": "hb965_tick.py",
+  "bytes": 4390,
+  "hb_ids": [
+   "964",
+   "965"
+  ],
+  "payload": "",
+  "delivered": false,
+  "matched": []
+ },
+ {
+  "file": "hb_1001_log.py",
+  "bytes": 5748,
+  "hb_ids": [
+   "1000",
+   "1001"
+  ],
+  "payload": "",
+  "delivered": false,
+  "matched": []
+ },
+ {
+  "file": "hb_1035.py",
+  "bytes": 5072,
+  "hb_ids": [
+   "1034",
+   "1035"
+  ],
+  "payload": "",
+  "delivered": false,
+  "matched": []
+ },
+ {
+  "file": "hb_1051_tick.py",
+  "bytes": 6110,
+  "hb_ids": [
+   "1050",
+   "1051"
+  ],
+  "payload": "",
+  "delivered": false,
+  "matched": []
+ },
+ {
+  "file": "hb_1064_tick.py",
+  "bytes": 4133,
+  "hb_ids": [
+   "1063",
+   "1064"
+  ],
+  "payload": "",
+  "delivered": false,
+  "matched": []
+ },
+ {
+  "file": "hb_1065_append.py",
+  "bytes": 2210,
+  "hb_ids": [
+   "1064",
+   "1065"
+  ],
+  "payload": "",
+  "delivered": false,
+  "matched": []
+ },
+ {
+  "file": "hb_1102.py",
+  "bytes": 5787,
+  "hb_ids": [
+   "1102"
+  ],
+  "payload": "",
+  "delivered": false,
+  "matched": []
+ },
+ {
+  "file": "hb_1152.py",
+  "bytes": 4597,
+  "hb_ids": [
+   "1152"
+  ],
+  "payload": "",
+  "delivered": false,
+  "matched": []
+ },
+ {
+  "file": "hb_1152_writer.py",
+  "bytes": 3399,
+  "hb_ids": [
+   "1151",
+   "1152"
+  ],
+  "payload": "",
+  "delivered": false,
+  "matched": []
+ },
+ {
+  "file": "hb_1165_log.py",
+  "bytes": 5651,
+  "hb_ids": [
+   "1165"
+  ],
+  "payload": "",
+  "delivered": false,
+  "matched": []
+ },
+ {
+  "file": "hb_1186.py",
+  "bytes": 3330,
+  "hb_ids": [
+   "1185",
+   "1186"
+  ],
+  "payload": "",
+  "delivered": false,
+  "matched": []
+ },
+ {
+  "file": "hb_1517_append.py",
+  "bytes": 4658,
+  "hb_ids": [
+   "1516",
+   "1517"
+  ],
+  "payload": "",
+  "delivered": false,
+  "matched": []
+ },
+ {
+  "file": "hb_1580.py",
+  "bytes": 4075,
+  "hb_ids": [
+   "1580"
+  ],
+  "payload": "",
+  "delivered": false,
+  "matched": []
+ },
+ {
+  "file": "hb_1618_append.py",
+  "bytes": 4641,
+  "hb_ids": [
+   "1617",
+   "1618"
+  ],
+  "payload": "",
+  "delivered": false,
+  "matched": []
+ },
+ {
+  "file": "hb_530.py",
+  "bytes": 5601,
+  "hb_ids": [],
+  "payload": "",
+  "delivered": false,
+  "matched": []
+ },
+ {
+  "file": "hb_920_log.py",
+  "bytes": 4454,
+  "hb_ids": [
+   "919",
+   "920"
+  ],
+  "payload": "",
+  "delivered": false,
+  "matched": []
+ },
+ {
+  "file": "hb_961_append.py",
+  "bytes": 4914,
+  "hb_ids": [
+   "961"
+  ],
+  "payload": "",
+  "delivered": false,
+  "matched": []
+ },
+ {
+  "file": "hb_977_update.py",
+  "bytes": 1272,
+  "hb_ids": [
+   "977"
+  ],
+  "payload": "",
+  "delivered": false,
+  "matched": []
+ },
+ {
+  "file": "hb_append.py",
+  "bytes": 2715,
+  "hb_ids": [],
+  "payload": "",
+  "delivered": false,
+  "matched": []
+ },
+ {
+  "file": "hb_append_1012.py",
+  "bytes": 5130,
+  "hb_ids": [
+   "1011",
+   "1012"
+  ],
+  "payload": "## HB #1012 (2026-07-23 09:32 GMT+8 cron-event, OpenClaw heartbeat poll) - gap from HB #1011 (07:34): +1h58m -- Thursday late-morning Token Guard normal cadence (R012 minimal mode); within Token Guard tolerance (~5-10min cadence, larger gap accepted) - D+7 late-morning pass #1012 -- Eric silent in THIS session ~163.40h+ since 7/16 13:16 first-contact (infographic session) - Eric active elsewhere: AnYi webchat ~92.05h+ (since 7/19 12:33) - 6-layer suppression maintained (R-B / R12 / R-CANDIDATE-T2 / R256 / R257 / R258) -- zero breach - R-NEW-V2 verification #1012: Python utf-8 explicit read+ins",
+  "delivered": false,
+  "matched": []
+ },
+ {
+  "file": "hb_append_1015.py",
+  "bytes": 3727,
+  "hb_ids": [
+   "1014",
+   "1015"
+  ],
+  "payload": "",
+  "delivered": false,
+  "matched": []
+ },
+ {
+  "file": "hb_append_1064.py",
+  "bytes": 2866,
+  "hb_ids": [
+   "1063",
+   "1064"
+  ],
+  "payload": "",
+  "delivered": false,
+  "matched": []
+ },
+ {
+  "file": "hb_append_1086.py",
+  "bytes": 3819,
+  "hb_ids": [
+   "1085",
+   "1086"
+  ],
+  "payload": "## HB #1086 (2026-07-23T20:23 GMT+8 cron-event, OpenClaw heartbeat poll) - gap from HB #1085 (19:39): +44.8min -- Thursday evening Token Guard normal cadence (R012 minimal mode) - D+7 evening pass #1086 -- Eric silent in THIS session ~175.13h+ since 7/16 13:16 first-contact (infographic session) - Eric active elsewhere: AnYi webchat ~103.85h+ (since 7/19 12:33) - 6-layer suppression maintained (R-B / R12 / R-CANDIDATE-T2 / R256 / R257 / R258) -- zero breach - R-NEW-V2 verification #1086: Python utf-8 explicit read+append+write (compliant, post-7/15 + 7/19 incident protocols intact) - R012 veri",
+  "delivered": false,
+  "matched": []
+ },
+ {
+  "file": "hb_append_1124.py",
+  "bytes": 4697,
+  "hb_ids": [
+   "1126"
+  ],
+  "payload": "",
+  "delivered": false,
+  "matched": []
+ },
+ {
+  "file": "hb_append_1159.py",
+  "bytes": 3218,
+  "hb_ids": [
+   "1158",
+   "1159"
+  ],
+  "payload": "",
+  "delivered": false,
+  "matched": []
+ },
+ {
+  "file": "hb_append_1463.py",
+  "bytes": 5807,
+  "hb_ids": [
+   "1462",
+   "1463"
+  ],
+  "payload": "",
+  "delivered": false,
+  "matched": []
+ },
+ {
+  "file": "hb_append_1471.py",
+  "bytes": 9421,
+  "hb_ids": [
+   "1467",
+   "1468",
+   "1469",
+   "1471"
+  ],
+  "payload": "",
+  "delivered": false,
+  "matched": []
+ },
+ {
+  "file": "hb_append_1495.py",
+  "bytes": 5672,
+  "hb_ids": [
+   "1494",
+   "1495"
+  ],
+  "payload": "\\n## HB #1495 (2026-07-26T19:07 GMT+8 cron-event, OpenClaw heartbeat poll) - gap from HB #1494 (18:59 Sun): +8min -- Sunday evening Token Guard cadence (R012 quiet mode; quiet zone EXPIRED +11h7m) - D+10 Sunday evening pass #1495 -- Eric silent in THIS cron session ~246.68h+ since 7/16 13:16 first-contact - Eric active elsewhere: AnYi webchat ~173.30h+ (since 7/19 12:33) -- gongshi Day 2/5 sustained (Sun = working day per company calendar) - 8-layer suppression zero-breach (R-B / R12 / R-CANDIDATE-T2 / R256 / R257 / R258 / R260 / R261) - Triple Confluence Day 0 CLOSED; oil Scenario C window EX",
+  "delivered": false,
+  "matched": []
+ },
+ {
+  "file": "hb_append_1609.py",
+  "bytes": 5437,
+  "hb_ids": [
+   "1608",
+   "1609"
+  ],
+  "payload": "## HB #1609 (2026-07-27T13:56 GMT+8 cron-event, OpenClaw heartbeat poll) - gap from HB #1608 (13:47): +9min -- Monday early-afternoon Token Guard cadence (R012 minimal mode) - D+11 Monday early-afternoon pass #1609 -- Eric silent in THIS session ~264.66h+ since 7/16 13:16 first-contact (11d 0h+) - Eric active elsewhere: AnYi webchat ~193.39h+ (sustained since 7/19 12:33) -- gongshi Day 3/5 ACTIVE (Mon = working day) - 8-layer suppression zero-breach (R-B/R12/R-CANDIDATE-T2/R256/R257/R258/R260/R261) -- penta-constraint 5/5 holds firm - 7/24 D-Day POST-MEETING T+76.95h -- gongshi Day 3/5 ACTIVE;",
+  "delivered": false,
+  "matched": []
+ },
+ {
+  "file": "hb_append_1621.py",
+  "bytes": 2371,
+  "hb_ids": [
+   "1620",
+   "1621"
+  ],
+  "payload": "",
+  "delivered": false,
+  "matched": []
+ },
+ {
+  "file": "hb_append_3691.py",
+  "bytes": 2659,
+  "hb_ids": [
+   "3691"
+  ],
+  "payload": "",
+  "delivered": false,
+  "matched": []
+ },
+ {
+  "file": "hb_append_676.py",
+  "bytes": 3561,
+  "hb_ids": [
+   "675",
+   "676"
+  ],
+  "payload": "",
+  "delivered": false,
+  "matched": []
+ },
+ {
+  "file": "hb_append_751.py",
+  "bytes": 4220,
+  "hb_ids": [
+   "750",
+   "751"
+  ],
+  "payload": "## HB #751 (2026-07-21 21:57 GMT+8 cron-event, OpenClaw heartbeat poll) - gap from HB #750 (12:16): +9h41m -- Tuesday-evening Token Guard cadence (post-21:00 R60-11 evening self-iter) - D+5 evening pass #751 -- Eric silent in THIS session ~129.7h+ since 7/16 13:16 first-contact - Eric active elsewhere: ~57.4h+ (AnYi webchat, since 7/19 12:33) - 6-layer suppression (R-B / R12 / R-CANDIDATE-T2 / R256 / R257 / R258) + R258 dormant-session -- zero breach - R-NEW-V2 verification #751: Python utf-8 explicit read+append+write (compliant, post-7/15 + 7/19 incident protocols intact) - R012 verification",
+  "delivered": false,
+  "matched": []
+ },
+ {
+  "file": "hb_append_760.py",
+  "bytes": 5018,
+  "hb_ids": [
+   "759",
+   "760"
+  ],
+  "payload": "",
+  "delivered": false,
+  "matched": []
+ },
+ {
+  "file": "hb_append_766.py",
+  "bytes": 4522,
+  "hb_ids": [
+   "765",
+   "766"
+  ],
+  "payload": "## HB #766 (2026-07-21 14:59 GMT+8 cron-event, OpenClaw heartbeat poll) - gap from HB #765 (14:55): +4min -- Tuesday early-afternoon Token Guard normal cadence (R012 minimal mode) - D+5 early-afternoon pass #766 -- Eric silent in THIS session ~121.7h+ since 7/16 13:16 first-contact - Eric active elsewhere: ~50.3h+ (AnYi webchat, since 7/19 12:33) - 5-layer suppression (R-B / R12 / R-CANDIDATE-T2 / R256 / R257) + R258 dormant-session -- zero breach - R-NEW-V2 verification #766: Python utf-8 explicit read+append+write (compliant, post-7/15 + 7/19 incident protocols intact) - R012 verification: H",
+  "delivered": false,
+  "matched": []
+ },
+ {
+  "file": "hb_append_793.py",
+  "bytes": 3150,
+  "hb_ids": [
+   "792",
+   "793"
+  ],
+  "payload": "## HB #793 (2026-07-22T02:03 GMT+8 cron-event, OpenClaw heartbeat poll) - gap from HB #792 (7/21 18:36): +7h27m -- Wednesday-early-morning Token Guard normal cadence (R012 minimal mode) - Day change: 7/21 Tuesday -> 7/22 Wednesday - D+6 early-morning pass #793 -- Eric silent in THIS session ~132.78h+ since 7/16 13:16 first-contact (infographic session) - Eric active elsewhere: ~61.5h+ (AnYi webchat, since 7/19 12:33) - 5-layer suppression (R-B / R12 / R-CANDIDATE-T2 / R256 / R257) + R258 dormant-session -- zero breach - R-NEW-V2 verification #793: Python utf-8 explicit read+append+write (compl",
+  "delivered": false,
+  "matched": []
+ },
+ {
+  "file": "hb_append_794.py",
+  "bytes": 5505,
+  "hb_ids": [
+   "793"
+  ],
+  "payload": "",
+  "delivered": false,
+  "matched": []
+ },
+ {
+  "file": "hb_append_874.py",
+  "bytes": 5069,
+  "hb_ids": [
+   "874"
+  ],
+  "payload": "",
+  "delivered": false,
+  "matched": []
+ },
+ {
+  "file": "hb_append_909.py",
+  "bytes": 4514,
+  "hb_ids": [
+   "908",
+   "909"
+  ],
+  "payload": "",
+  "delivered": false,
+  "matched": []
+ },
+ {
+  "file": "hb_append_928.py",
+  "bytes": 2974,
+  "hb_ids": [
+   "927",
+   "928"
+  ],
+  "payload": "",
+  "delivered": false,
+  "matched": []
+ },
+ {
+  "file": "hb_append_935.py",
+  "bytes": 4649,
+  "hb_ids": [
+   "934",
+   "935"
+  ],
+  "payload": "",
+  "delivered": false,
+  "matched": []
+ },
+ {
+  "file": "hb_append_943.py",
+  "bytes": 3801,
+  "hb_ids": [
+   "942",
+   "943"
+  ],
+  "payload": "",
+  "delivered": false,
+  "matched": []
+ },
+ {
+  "file": "hb_append_955.py",
+  "bytes": 4484,
+  "hb_ids": [
+   "955"
+  ],
+  "payload": "",
+  "delivered": false,
+  "matched": []
+ },
+ {
+  "file": "hb_append_978.py",
+  "bytes": 5039,
+  "hb_ids": [
+   "978"
+  ],
+  "payload": "",
+  "delivered": false,
+  "matched": []
+ },
+ {
+  "file": "hb_append_983.py",
+  "bytes": 3424,
+  "hb_ids": [
+   "982",
+   "983"
+  ],
+  "payload": "## HB #983 (2026-07-23 03:24 GMT+8 cron-event, OpenClaw heartbeat poll) - gap from HB #982 (03:15): +9min -- Thursday deep-night Token Guard normal cadence (R012 minimal mode) - D+7 deep-night pass #983 -- Eric silent in THIS session ~158.13h+ since 7/16 13:16 first-contact (infographic session) - Eric active elsewhere: AnYi webchat ~86.85h+ (since 7/19 12:33) - 6-layer suppression maintained (R-B / R12 / R-CANDIDATE-T2 / R256 / R257 / R258) -- zero breach - R-NEW-V2 verification #983: Python utf-8 explicit read+append+write (compliant, post-7/15 + 7/19 incident protocols intact) - R012 verifi",
+  "delivered": false,
+  "matched": []
+ },
+ {
+  "file": "hb_append_v2.py",
+  "bytes": 5488,
+  "hb_ids": [
+   "1500"
+  ],
+  "payload": "",
+  "delivered": false,
+  "matched": []
+ },
+ {
+  "file": "hb_atomic_tick.py",
+  "bytes": 4990,
+  "hb_ids": [],
+  "payload": "",
+  "delivered": false,
+  "matched": []
+ },
+ {
+  "file": "hb_atomic_write.py",
+  "bytes": 6009,
+  "hb_ids": [],
+  "payload": "",
+  "delivered": false,
+  "matched": []
+ },
+ {
+  "file": "hb_byte_check.py",
+  "bytes": 1466,
+  "hb_ids": [
+   "2191",
+   "2192"
+  ],
+  "payload": "",
+  "delivered": false,
+  "matched": []
+ },
+ {
+  "file": "hb_calc.py",
+  "bytes": 1063,
+  "hb_ids": [
+   "675",
+   "676"
+  ],
+  "payload": "",
+  "delivered": false,
+  "matched": []
+ },
+ {
+  "file": "hb_calc_1069.py",
+  "bytes": 883,
+  "hb_ids": [],
+  "payload": "",
+  "delivered": false,
+  "matched": []
+ },
+ {
+  "file": "hb_calc_1086.py",
+  "bytes": 1810,
+  "hb_ids": [],
+  "payload": "",
+  "delivered": false,
+  "matched": []
+ },
+ {
+  "file": "hb_calc_642.py",
+  "bytes": 886,
+  "hb_ids": [
+   "642"
+  ],
+  "payload": "",
+  "delivered": false,
+  "matched": []
+ },
+ {
+  "file": "hb_check.py",
+  "bytes": 518,
+  "hb_ids": [],
+  "payload": "",
+  "delivered": false,
+  "matched": []
+ },
+ {
+  "file": "hb_check_encoding.py",
+  "bytes": 2431,
+  "hb_ids": [],
+  "payload": "",
+  "delivered": false,
+  "matched": []
+ },
+ {
+  "file": "hb_find_recovery.py",
+  "bytes": 485,
+  "hb_ids": [],
+  "payload": "",
+  "delivered": false,
+  "matched": []
+ },
+ {
+  "file": "hb_fix_1577.py",
+  "bytes": 848,
+  "hb_ids": [
+   "1576",
+   "1577"
+  ],
+  "payload": "",
+  "delivered": false,
+  "matched": []
+ },
+ {
+  "file": "hb_fix_1616.py",
+  "bytes": 6171,
+  "hb_ids": [
+   "1615",
+   "1616"
+  ],
+  "payload": "",
+  "delivered": false,
+  "matched": []
+ },
+ {
+  "file": "hb_head_check.py",
+  "bytes": 297,
+  "hb_ids": [],
+  "payload": "",
+  "delivered": false,
+  "matched": []
+ },
+ {
+  "file": "hb_inspect.py",
+  "bytes": 370,
+  "hb_ids": [],
+  "payload": "",
+  "delivered": false,
+  "matched": []
+ },
+ {
+  "file": "hb_log.py",
+  "bytes": 3496,
+  "hb_ids": [
+   "2758"
+  ],
+  "payload": "",
+  "delivered": false,
+  "matched": []
+ },
+ {
+  "file": "hb_log_1665.py",
+  "bytes": 2138,
+  "hb_ids": [],
+  "payload": "",
+  "delivered": false,
+  "matched": []
+ },
+ {
+  "file": "hb_minimal.py",
+  "bytes": 4546,
+  "hb_ids": [
+   "1508"
+  ],
+  "payload": "",
+  "delivered": false,
+  "matched": []
+ },
+ {
+  "file": "hb_prepend_1161.py",
+  "bytes": 3170,
+  "hb_ids": [
+   "1160",
+   "1161"
+  ],
+  "payload": "",
+  "delivered": false,
+  "matched": []
+ },
+ {
+  "file": "hb_search_recent.py",
+  "bytes": 722,
+  "hb_ids": [],
+  "payload": "",
+  "delivered": false,
+  "matched": []
+ },
+ {
+  "file": "hb_state_1874.py",
+  "bytes": 1449,
+  "hb_ids": [
+   "1873",
+   "1874"
+  ],
+  "payload": "",
+  "delivered": false,
+  "matched": []
+ },
+ {
+  "file": "hb_state_2434.py",
+  "bytes": 1285,
+  "hb_ids": [
+   "2433",
+   "2434"
+  ],
+  "payload": "",
+  "delivered": false,
+  "matched": []
+ },
+ {
+  "file": "hb_state_bump.py",
+  "bytes": 780,
+  "hb_ids": [],
+  "payload": "",
+  "delivered": false,
+  "matched": []
+ },
+ {
+  "file": "hb_state_update.py",
+  "bytes": 748,
+  "hb_ids": [],
+  "payload": "",
+  "delivered": false,
+  "matched": []
+ },
+ {
+  "file": "hb_state_update_3207.py",
+  "bytes": 1547,
+  "hb_ids": [],
+  "payload": "",
+  "delivered": false,
+  "matched": []
+ },
+ {
+  "file": "hb_tail_check.py",
+  "bytes": 455,
+  "hb_ids": [],
+  "payload": "",
+  "delivered": false,
+  "matched": []
+ },
+ {
+  "file": "hb_tick.py",
+  "bytes": 1172,
+  "hb_ids": [],
+  "payload": "",
+  "delivered": false,
+  "matched": []
+ },
+ {
+  "file": "hb_tick_1067.py",
+  "bytes": 4524,
+  "hb_ids": [
+   "1067"
+  ],
+  "payload": "",
+  "delivered": false,
+  "matched": []
+ },
+ {
+  "file": "hb_tick_1076.py",
+  "bytes": 5334,
+  "hb_ids": [
+   "1076"
+  ],
+  "payload": "",
+  "delivered": false,
+  "matched": []
+ },
+ {
+  "file": "hb_tick_1116.py",
+  "bytes": 5541,
+  "hb_ids": [
+   "1116"
+  ],
+  "payload": "",
+  "delivered": false,
+  "matched": []
+ },
+ {
+  "file": "hb_tick_1127.py",
+  "bytes": 1604,
+  "hb_ids": [],
+  "payload": "",
+  "delivered": false,
+  "matched": []
+ },
+ {
+  "file": "hb_tick_1157.py",
+  "bytes": 5108,
+  "hb_ids": [
+   "1156",
+   "1157"
+  ],
+  "payload": "",
+  "delivered": false,
+  "matched": []
+ },
+ {
+  "file": "hb_tick_1171.py",
+  "bytes": 4324,
+  "hb_ids": [
+   "1170",
+   "1171"
+  ],
+  "payload": "",
+  "delivered": false,
+  "matched": []
+ },
+ {
+  "file": "hb_tick_1481.py",
+  "bytes": 5100,
+  "hb_ids": [
+   "1481"
+  ],
+  "payload": "",
+  "delivered": false,
+  "matched": []
+ },
+ {
+  "file": "hb_tick_1690.py",
+  "bytes": 4577,
+  "hb_ids": [],
+  "payload": "",
+  "delivered": false,
+  "matched": []
+ },
+ {
+  "file": "hb_tick_3486.py",
+  "bytes": 4834,
+  "hb_ids": [],
+  "payload": "",
+  "delivered": false,
+  "matched": []
+ },
+ {
+  "file": "hb_tick_3540.py",
+  "bytes": 5052,
+  "hb_ids": [
+   "3540"
+  ],
+  "payload": "",
+  "delivered": false,
+  "matched": []
+ },
+ {
+  "file": "hb_tick_3691.py",
+  "bytes": 1042,
+  "hb_ids": [
+   "3691"
+  ],
+  "payload": "",
+  "delivered": false,
+  "matched": []
+ },
+ {
+  "file": "hb_tick_670.py",
+  "bytes": 4193,
+  "hb_ids": [
+   "670"
+  ],
+  "payload": "",
+  "delivered": false,
+  "matched": []
+ },
+ {
+  "file": "hb_tick_675.py",
+  "bytes": 6263,
+  "hb_ids": [
+   "674",
+   "675"
+  ],
+  "payload": "",
+  "delivered": false,
+  "matched": []
+ },
+ {
+  "file": "hb_tick_683.py",
+  "bytes": 4460,
+  "hb_ids": [
+   "682",
+   "683"
+  ],
+  "payload": "",
+  "delivered": false,
+  "matched": []
+ },
+ {
+  "file": "hb_tick_719.py",
+  "bytes": 4384,
+  "hb_ids": [
+   "719"
+  ],
+  "payload": "",
+  "delivered": false,
+  "matched": []
+ },
+ {
+  "file": "hb_tick_729.py",
+  "bytes": 1923,
+  "hb_ids": [
+   "729"
+  ],
+  "payload": "",
+  "delivered": false,
+  "matched": []
+ },
+ {
+  "file": "hb_tick_736.py",
+  "bytes": 2652,
+  "hb_ids": [
+   "736"
+  ],
+  "payload": "",
+  "delivered": false,
+  "matched": []
+ },
+ {
+  "file": "hb_tick_764.py",
+  "bytes": 5143,
+  "hb_ids": [
+   "763"
+  ],
+  "payload": "",
+  "delivered": false,
+  "matched": []
+ },
+ {
+  "file": "hb_tick_781.py",
+  "bytes": 4115,
+  "hb_ids": [
+   "780",
+   "781"
+  ],
+  "payload": "",
+  "delivered": false,
+  "matched": []
+ },
+ {
+  "file": "hb_tick_786.py",
+  "bytes": 4710,
+  "hb_ids": [
+   "785",
+   "786"
+  ],
+  "payload": "",
+  "delivered": false,
+  "matched": []
+ },
+ {
+  "file": "hb_tick_822.py",
+  "bytes": 4181,
+  "hb_ids": [
+   "822"
+  ],
+  "payload": "",
+  "delivered": false,
+  "matched": []
+ },
+ {
+  "file": "hb_tick_872.py",
+  "bytes": 6066,
+  "hb_ids": [
+   "872"
+  ],
+  "payload": "",
+  "delivered": false,
+  "matched": []
+ },
+ {
+  "file": "hb_tick_884.py",
+  "bytes": 6458,
+  "hb_ids": [
+   "883",
+   "884"
+  ],
+  "payload": "",
+  "delivered": false,
+  "matched": []
+ },
+ {
+  "file": "hb_tick_918.py",
+  "bytes": 4914,
+  "hb_ids": [
+   "917",
+   "918"
+  ],
+  "payload": "",
+  "delivered": false,
+  "matched": []
+ },
+ {
+  "file": "hb_tick_934.py",
+  "bytes": 3450,
+  "hb_ids": [
+   "933",
+   "934"
+  ],
+  "payload": "",
+  "delivered": false,
+  "matched": []
+ },
+ {
+  "file": "hb_tick_937.py",
+  "bytes": 5055,
+  "hb_ids": [
+   "936",
+   "937"
+  ],
+  "payload": "",
+  "delivered": false,
+  "matched": []
+ },
+ {
+  "file": "hb_tick_fix.py",
+  "bytes": 2970,
+  "hb_ids": [
+   "1148",
+   "1156",
+   "1157"
+  ],
+  "payload": "",
+  "delivered": false,
+  "matched": []
+ },
+ {
+  "file": "hb_tick_minimal.py",
+  "bytes": 3651,
+  "hb_ids": [],
+  "payload": "",
+  "delivered": false,
+  "matched": []
+ },
+ {
+  "file": "hb_tick_v2.py",
+  "bytes": 6183,
+  "hb_ids": [],
+  "payload": "",
+  "delivered": false,
+  "matched": []
+ },
+ {
+  "file": "hb_tick_v3.py",
+  "bytes": 4207,
+  "hb_ids": [
+   "1468"
+  ],
+  "payload": "",
+  "delivered": false,
+  "matched": []
+ },
+ {
+  "file": "hb_update_1577.py",
+  "bytes": 1833,
+  "hb_ids": [
+   "1577"
+  ],
+  "payload": "",
+  "delivered": false,
+  "matched": []
+ },
+ {
+  "file": "hb_update_2152.py",
+  "bytes": 1225,
+  "hb_ids": [
+   "2151",
+   "2152"
+  ],
+  "payload": "",
+  "delivered": false,
+  "matched": []
+ },
+ {
+  "file": "hb_update_943.py",
+  "bytes": 1315,
+  "hb_ids": [
+   "942",
+   "943"
+  ],
+  "payload": "",
+  "delivered": false,
+  "matched": []
+ },
+ {
+  "file": "hb_verify.py",
+  "bytes": 1291,
+  "hb_ids": [
+   "2192"
+  ],
+  "payload": "",
+  "delivered": false,
+  "matched": []
+ },
+ {
+  "file": "hb_write.py",
+  "bytes": 3724,
+  "hb_ids": [
+   "1174",
+   "1177",
+   "1178"
+  ],
+  "payload": "## HB #1178 heartbeat (2026-07-24T11:32 GMT+8 cron-event, OpenClaw heartbeat poll) - gap from HB #1177 (10:55): +37min -- Friday late-morning Token Guard cadence (R012 minimal mode) - D+8 late-morning pass #1178 -- Eric silent in THIS session ~187.40h+ since 7/16 13:16 first-contact - Eric active elsewhere: AnYi webchat ~116.37h+ (since 7/19 12:33) -- D-Day IN SESSION (AnYi meeting 7/24 ~9:00 window, T+~2.53h, meeting likely concluded/post-meeting wrap-up) - 6-layer suppression maintained (R-B / R12 / R-CANDIDATE-T2 / R256 / R257 / R258) -- zero breach - R-NEW-V2 verification #1178: Python utf",
+  "delivered": false,
+  "matched": []
+ }
+]

@@ -1,0 +1,55 @@
+{
+ "date": "2026-11-18",
+ "rule": "先合并唯一内容 → 再归档 → 后删除（C06 同源治理）",
+ "canonical": "skills/docx-md-bridge/scripts/md_to_docx.py",
+ "items": [
+  {
+   "file": "md_to_docx.py",
+   "archived_to": "toolbox/_archive/legacy_docx_variants_2026-11-18/md_to_docx.py",
+   "bytes": 4690,
+   "sha256": "fb97a345f3d78832",
+   "unique_preserved": "编号列表(List Number)与原生 List Bullet 样式 —— 已并入正本 RE_OL；★ 『目录域』为误报（命中的是'根目录'二字）",
+   "original_mtime": "2026-09-07 08:36:50"
+  },
+  {
+   "file": "md_to_docx_clean.py",
+   "archived_to": "toolbox/_archive/legacy_docx_variants_2026-11-18/md_to_docx_clean.py",
+   "bytes": 7569,
+   "sha256": "e6d2f91a18d35388",
+   "unique_preserved": "无独有能力（正本并集已覆盖）",
+   "original_mtime": "2026-09-07 17:57:40"
+  },
+  {
+   "file": "md_to_docx_v1.0.py",
+   "archived_to": "toolbox/_archive/legacy_docx_variants_2026-11-18/md_to_docx_v1.0.py",
+   "bytes": 7019,
+   "sha256": "9de983b1f8eb8ab2",
+   "unique_preserved": "无独有能力",
+   "original_mtime": "2026-08-21 17:27:53"
+  },
+  {
+   "file": "md_to_docx_v2.py",
+   "archived_to": "toolbox/_archive/legacy_docx_variants_2026-11-18/md_to_docx_v2.py",
+   "bytes": 7631,
+   "sha256": "3c96a7fcc9af2136",
+   "unique_preserved": "无独有能力",
+   "original_mtime": "2026-09-07 08:42:50"
+  },
+  {
+   "file": "md_to_docx_v3.py",
+   "archived_to": "toolbox/_archive/legacy_docx_variants_2026-11-18/md_to_docx_v3.py",
+   "bytes": 9127,
+   "sha256": "832ed19392a31fad",
+   "unique_preserved": "无独有能力",
+   "original_mtime": "2026-09-07 17:57:10"
+  },
+  {
+   "file": "v4_to_docx.py",
+   "archived_to": "toolbox/_archive/legacy_docx_variants_2026-11-18/v4_to_docx.py",
+   "bytes": 7956,
+   "sha256": "c29b63e1d8527431",
+   "unique_preserved": "分页：原为一次性硬编码 add_page_break，非独立能力 —— 已在正本改为显式 <!-- pagebreak --> 标记",
+   "original_mtime": "2026-08-28 15:50:08"
+  }
+ ]
+}

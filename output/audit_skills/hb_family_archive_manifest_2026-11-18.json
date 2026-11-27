@@ -1,0 +1,2557 @@
+{
+ "date": "2026-11-18",
+ "rule": "一次性心跳写入器：内容已交付 或 目标文件已消失 → 移动归档（不删除，payload 全保留）",
+ "evidence": {
+  "delivered_check": "脚本内嵌 HB 编号是否出现在 memory/*.md 与 HEARTBEAT.md",
+  "target_check": "脚本声明的目标文件是否仍存在",
+  "safety_gate": "是否被其它脚本调用 / 配置文件引用 / 近 30 天日记称正在运行"
+ },
+ "moved": [
+  {
+   "file": "hb1127_append_memory.py",
+   "action": "archive_delivered",
+   "bytes": 1690,
+   "sha256": "7efb630f4476c04d",
+   "from": "toolbox/hb1127_append_memory.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb1127_append_memory.py",
+   "rollback": "移回 toolbox/hb1127_append_memory.py"
+  },
+  {
+   "file": "hb1127_prepend.py",
+   "action": "archive_delivered",
+   "bytes": 4446,
+   "sha256": "8f394a0ddc566606",
+   "from": "toolbox/hb1127_prepend.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb1127_prepend.py",
+   "rollback": "移回 toolbox/hb1127_prepend.py"
+  },
+  {
+   "file": "hb2302_append.py",
+   "action": "archive_delivered",
+   "bytes": 4539,
+   "sha256": "bdfba2f7c816da6c",
+   "from": "toolbox/hb2302_append.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb2302_append.py",
+   "rollback": "移回 toolbox/hb2302_append.py"
+  },
+  {
+   "file": "hb2337_append.py",
+   "action": "archive_delivered",
+   "bytes": 6812,
+   "sha256": "9cc781eb237de64b",
+   "from": "toolbox/hb2337_append.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb2337_append.py",
+   "rollback": "移回 toolbox/hb2337_append.py"
+  },
+  {
+   "file": "hb2425_append.py",
+   "action": "archive_delivered",
+   "bytes": 6389,
+   "sha256": "d812ab96f418c9e9",
+   "from": "toolbox/hb2425_append.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb2425_append.py",
+   "rollback": "移回 toolbox/hb2425_append.py"
+  },
+  {
+   "file": "hb288_log.py",
+   "action": "archive_delivered",
+   "bytes": 3251,
+   "sha256": "17d63a1f86832c6a",
+   "from": "toolbox/hb288_log.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb288_log.py",
+   "rollback": "移回 toolbox/hb288_log.py"
+  },
+  {
+   "file": "hb3297_append.py",
+   "action": "archive_delivered",
+   "bytes": 8100,
+   "sha256": "a6c2dabcba3ade92",
+   "from": "toolbox/hb3297_append.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb3297_append.py",
+   "rollback": "移回 toolbox/hb3297_append.py"
+  },
+  {
+   "file": "hb336_update.py",
+   "action": "archive_delivered",
+   "bytes": 2516,
+   "sha256": "bca23adbc04a3c77",
+   "from": "toolbox/hb336_update.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb336_update.py",
+   "rollback": "移回 toolbox/hb336_update.py"
+  },
+  {
+   "file": "hb340_update.py",
+   "action": "archive_delivered",
+   "bytes": 4606,
+   "sha256": "a87a87371594cb45",
+   "from": "toolbox/hb340_update.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb340_update.py",
+   "rollback": "移回 toolbox/hb340_update.py"
+  },
+  {
+   "file": "hb350_update.py",
+   "action": "archive_delivered",
+   "bytes": 4354,
+   "sha256": "8c033fd495e4122b",
+   "from": "toolbox/hb350_update.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb350_update.py",
+   "rollback": "移回 toolbox/hb350_update.py"
+  },
+  {
+   "file": "hb3604_append.py",
+   "action": "archive_target_gone",
+   "bytes": 2032,
+   "sha256": "06fe0724dde99d83",
+   "from": "toolbox/hb3604_append.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb3604_append.py",
+   "rollback": "移回 toolbox/hb3604_append.py"
+  },
+  {
+   "file": "hb3604_state.py",
+   "action": "archive_target_gone",
+   "bytes": 1340,
+   "sha256": "1b75d9509ae742e9",
+   "from": "toolbox/hb3604_state.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb3604_state.py",
+   "rollback": "移回 toolbox/hb3604_state.py"
+  },
+  {
+   "file": "hb3632_tick.py",
+   "action": "archive_delivered",
+   "bytes": 5058,
+   "sha256": "9ae92dc511488996",
+   "from": "toolbox/hb3632_tick.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb3632_tick.py",
+   "rollback": "移回 toolbox/hb3632_tick.py"
+  },
+  {
+   "file": "hb380_fix.py",
+   "action": "archive_target_gone",
+   "bytes": 875,
+   "sha256": "ee90fa9c8bf735e8",
+   "from": "toolbox/hb380_fix.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb380_fix.py",
+   "rollback": "移回 toolbox/hb380_fix.py"
+  },
+  {
+   "file": "hb380_fix2.py",
+   "action": "archive_target_gone",
+   "bytes": 1043,
+   "sha256": "d7891db8bc5f32de",
+   "from": "toolbox/hb380_fix2.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb380_fix2.py",
+   "rollback": "移回 toolbox/hb380_fix2.py"
+  },
+  {
+   "file": "hb380_update.py",
+   "action": "archive_delivered",
+   "bytes": 3837,
+   "sha256": "5473df5719434c1a",
+   "from": "toolbox/hb380_update.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb380_update.py",
+   "rollback": "移回 toolbox/hb380_update.py"
+  },
+  {
+   "file": "hb420_update.py",
+   "action": "archive_delivered",
+   "bytes": 3852,
+   "sha256": "2880c12789d680dd",
+   "from": "toolbox/hb420_update.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb420_update.py",
+   "rollback": "移回 toolbox/hb420_update.py"
+  },
+  {
+   "file": "hb429_append.py",
+   "action": "archive_delivered",
+   "bytes": 4979,
+   "sha256": "aebeca5f1991e485",
+   "from": "toolbox/hb429_append.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb429_append.py",
+   "rollback": "移回 toolbox/hb429_append.py"
+  },
+  {
+   "file": "hb489_append.py",
+   "action": "archive_delivered",
+   "bytes": 2742,
+   "sha256": "aebac84b320bc2e6",
+   "from": "toolbox/hb489_append.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb489_append.py",
+   "rollback": "移回 toolbox/hb489_append.py"
+  },
+  {
+   "file": "hb496_append.py",
+   "action": "archive_delivered",
+   "bytes": 2794,
+   "sha256": "99109b564cf20c19",
+   "from": "toolbox/hb496_append.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb496_append.py",
+   "rollback": "移回 toolbox/hb496_append.py"
+  },
+  {
+   "file": "hb544_append.py",
+   "action": "archive_delivered",
+   "bytes": 6587,
+   "sha256": "5ac276c2f7ec991f",
+   "from": "toolbox/hb544_append.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb544_append.py",
+   "rollback": "移回 toolbox/hb544_append.py"
+  },
+  {
+   "file": "hb544_fix.py",
+   "action": "archive_delivered",
+   "bytes": 3515,
+   "sha256": "e7e55c35afcb717d",
+   "from": "toolbox/hb544_fix.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb544_fix.py",
+   "rollback": "移回 toolbox/hb544_fix.py"
+  },
+  {
+   "file": "hb551_md.py",
+   "action": "archive_delivered",
+   "bytes": 2529,
+   "sha256": "4bcc784c9e660fec",
+   "from": "toolbox/hb551_md.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb551_md.py",
+   "rollback": "移回 toolbox/hb551_md.py"
+  },
+  {
+   "file": "hb551_update.py",
+   "action": "archive_target_gone",
+   "bytes": 3686,
+   "sha256": "8793bb9ad499a810",
+   "from": "toolbox/hb551_update.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb551_update.py",
+   "rollback": "移回 toolbox/hb551_update.py"
+  },
+  {
+   "file": "hb560_log.py",
+   "action": "archive_delivered",
+   "bytes": 2508,
+   "sha256": "c79e0868b240a7cc",
+   "from": "toolbox/hb560_log.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb560_log.py",
+   "rollback": "移回 toolbox/hb560_log.py"
+  },
+  {
+   "file": "hb582_append.py",
+   "action": "archive_delivered",
+   "bytes": 2419,
+   "sha256": "55a5f09df52fd126",
+   "from": "toolbox/hb582_append.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb582_append.py",
+   "rollback": "移回 toolbox/hb582_append.py"
+  },
+  {
+   "file": "hb713_append.py",
+   "action": "archive_delivered",
+   "bytes": 4048,
+   "sha256": "2472213387f578d5",
+   "from": "toolbox/hb713_append.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb713_append.py",
+   "rollback": "移回 toolbox/hb713_append.py"
+  },
+  {
+   "file": "hb751_append.py",
+   "action": "archive_target_gone",
+   "bytes": 3178,
+   "sha256": "92cf0ca986a589c9",
+   "from": "toolbox/hb751_append.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb751_append.py",
+   "rollback": "移回 toolbox/hb751_append.py"
+  },
+  {
+   "file": "hb755_append.py",
+   "action": "archive_target_gone",
+   "bytes": 6530,
+   "sha256": "06a8511b9829699c",
+   "from": "toolbox/hb755_append.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb755_append.py",
+   "rollback": "移回 toolbox/hb755_append.py"
+  },
+  {
+   "file": "hb774_update.py",
+   "action": "archive_target_gone",
+   "bytes": 4504,
+   "sha256": "90aba5f237e20775",
+   "from": "toolbox/hb774_update.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb774_update.py",
+   "rollback": "移回 toolbox/hb774_update.py"
+  },
+  {
+   "file": "hb783_append.py",
+   "action": "archive_target_gone",
+   "bytes": 4379,
+   "sha256": "aae9482d4cda1e4d",
+   "from": "toolbox/hb783_append.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb783_append.py",
+   "rollback": "移回 toolbox/hb783_append.py"
+  },
+  {
+   "file": "hb831_append.py",
+   "action": "archive_delivered",
+   "bytes": 5116,
+   "sha256": "bb83a9031b0ced44",
+   "from": "toolbox/hb831_append.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb831_append.py",
+   "rollback": "移回 toolbox/hb831_append.py"
+  },
+  {
+   "file": "hb835_append.py",
+   "action": "archive_target_gone",
+   "bytes": 3440,
+   "sha256": "aa8ba606c5292236",
+   "from": "toolbox/hb835_append.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb835_append.py",
+   "rollback": "移回 toolbox/hb835_append.py"
+  },
+  {
+   "file": "hb924_update.py",
+   "action": "archive_delivered",
+   "bytes": 4782,
+   "sha256": "879fd8cdad90fe52",
+   "from": "toolbox/hb924_update.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb924_update.py",
+   "rollback": "移回 toolbox/hb924_update.py"
+  },
+  {
+   "file": "hb929_tick.py",
+   "action": "archive_delivered",
+   "bytes": 5305,
+   "sha256": "e852e35aaed98d3a",
+   "from": "toolbox/hb929_tick.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb929_tick.py",
+   "rollback": "移回 toolbox/hb929_tick.py"
+  },
+  {
+   "file": "hb930_append.py",
+   "action": "archive_target_gone",
+   "bytes": 3995,
+   "sha256": "7f77142cad53d8a9",
+   "from": "toolbox/hb930_append.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb930_append.py",
+   "rollback": "移回 toolbox/hb930_append.py"
+  },
+  {
+   "file": "hb965_tick.py",
+   "action": "archive_target_gone",
+   "bytes": 4390,
+   "sha256": "5f3921daf711408c",
+   "from": "toolbox/hb965_tick.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb965_tick.py",
+   "rollback": "移回 toolbox/hb965_tick.py"
+  },
+  {
+   "file": "hb976_append.py",
+   "action": "archive_delivered",
+   "bytes": 3714,
+   "sha256": "72e78421d2dc9112",
+   "from": "toolbox/hb976_append.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb976_append.py",
+   "rollback": "移回 toolbox/hb976_append.py"
+  },
+  {
+   "file": "hb_1001_log.py",
+   "action": "archive_target_gone",
+   "bytes": 5748,
+   "sha256": "7028b78e35f6989b",
+   "from": "toolbox/hb_1001_log.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_1001_log.py",
+   "rollback": "移回 toolbox/hb_1001_log.py"
+  },
+  {
+   "file": "hb_1035.py",
+   "action": "archive_target_gone",
+   "bytes": 5072,
+   "sha256": "4fe92595152f7689",
+   "from": "toolbox/hb_1035.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_1035.py",
+   "rollback": "移回 toolbox/hb_1035.py"
+  },
+  {
+   "file": "hb_1051_tick.py",
+   "action": "archive_target_gone",
+   "bytes": 6110,
+   "sha256": "25137aa8e9b662fc",
+   "from": "toolbox/hb_1051_tick.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_1051_tick.py",
+   "rollback": "移回 toolbox/hb_1051_tick.py"
+  },
+  {
+   "file": "hb_1064_tick.py",
+   "action": "archive_target_gone",
+   "bytes": 4133,
+   "sha256": "d646e4c6766a8741",
+   "from": "toolbox/hb_1064_tick.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_1064_tick.py",
+   "rollback": "移回 toolbox/hb_1064_tick.py"
+  },
+  {
+   "file": "hb_1065_append.py",
+   "action": "archive_target_gone",
+   "bytes": 2210,
+   "sha256": "58dadf24a3e632e2",
+   "from": "toolbox/hb_1065_append.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_1065_append.py",
+   "rollback": "移回 toolbox/hb_1065_append.py"
+  },
+  {
+   "file": "hb_1102.py",
+   "action": "archive_target_gone",
+   "bytes": 5787,
+   "sha256": "f47732d88bc6e188",
+   "from": "toolbox/hb_1102.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_1102.py",
+   "rollback": "移回 toolbox/hb_1102.py"
+  },
+  {
+   "file": "hb_1103_append.py",
+   "action": "archive_delivered",
+   "bytes": 5250,
+   "sha256": "58900aca7567999a",
+   "from": "toolbox/hb_1103_append.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_1103_append.py",
+   "rollback": "移回 toolbox/hb_1103_append.py"
+  },
+  {
+   "file": "hb_1110_append.py",
+   "action": "archive_delivered",
+   "bytes": 5928,
+   "sha256": "6589ac18f6d9aaa7",
+   "from": "toolbox/hb_1110_append.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_1110_append.py",
+   "rollback": "移回 toolbox/hb_1110_append.py"
+  },
+  {
+   "file": "hb_1152.py",
+   "action": "archive_target_gone",
+   "bytes": 4597,
+   "sha256": "19a63b521a57c945",
+   "from": "toolbox/hb_1152.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_1152.py",
+   "rollback": "移回 toolbox/hb_1152.py"
+  },
+  {
+   "file": "hb_1152_writer.py",
+   "action": "archive_target_gone",
+   "bytes": 3399,
+   "sha256": "52ce043a64cfecf8",
+   "from": "toolbox/hb_1152_writer.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_1152_writer.py",
+   "rollback": "移回 toolbox/hb_1152_writer.py"
+  },
+  {
+   "file": "hb_1165_log.py",
+   "action": "archive_target_gone",
+   "bytes": 5651,
+   "sha256": "9d5ed45397928e68",
+   "from": "toolbox/hb_1165_log.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_1165_log.py",
+   "rollback": "移回 toolbox/hb_1165_log.py"
+  },
+  {
+   "file": "hb_1186.py",
+   "action": "archive_target_gone",
+   "bytes": 3330,
+   "sha256": "02991cef0b427656",
+   "from": "toolbox/hb_1186.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_1186.py",
+   "rollback": "移回 toolbox/hb_1186.py"
+  },
+  {
+   "file": "hb_1517_append.py",
+   "action": "archive_target_gone",
+   "bytes": 4658,
+   "sha256": "fb95a00e9a8166ff",
+   "from": "toolbox/hb_1517_append.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_1517_append.py",
+   "rollback": "移回 toolbox/hb_1517_append.py"
+  },
+  {
+   "file": "hb_1580.py",
+   "action": "archive_target_gone",
+   "bytes": 4075,
+   "sha256": "28cbab52f48e807e",
+   "from": "toolbox/hb_1580.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_1580.py",
+   "rollback": "移回 toolbox/hb_1580.py"
+  },
+  {
+   "file": "hb_1618_append.py",
+   "action": "archive_target_gone",
+   "bytes": 4641,
+   "sha256": "d6cb88f24b21ebef",
+   "from": "toolbox/hb_1618_append.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_1618_append.py",
+   "rollback": "移回 toolbox/hb_1618_append.py"
+  },
+  {
+   "file": "hb_1624_tick.py",
+   "action": "archive_delivered",
+   "bytes": 6780,
+   "sha256": "20ec620db47e923c",
+   "from": "toolbox/hb_1624_tick.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_1624_tick.py",
+   "rollback": "移回 toolbox/hb_1624_tick.py"
+  },
+  {
+   "file": "hb_1627.py",
+   "action": "archive_delivered",
+   "bytes": 4368,
+   "sha256": "4c1d410485dcffde",
+   "from": "toolbox/hb_1627.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_1627.py",
+   "rollback": "移回 toolbox/hb_1627.py"
+  },
+  {
+   "file": "hb_1874_v3.py",
+   "action": "archive_delivered",
+   "bytes": 3459,
+   "sha256": "a28a998b4f23ecc8",
+   "from": "toolbox/hb_1874_v3.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_1874_v3.py",
+   "rollback": "移回 toolbox/hb_1874_v3.py"
+  },
+  {
+   "file": "hb_1907.py",
+   "action": "archive_delivered",
+   "bytes": 3441,
+   "sha256": "7984f04d8068d1e4",
+   "from": "toolbox/hb_1907.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_1907.py",
+   "rollback": "移回 toolbox/hb_1907.py"
+  },
+  {
+   "file": "hb_2290.py",
+   "action": "archive_delivered",
+   "bytes": 6681,
+   "sha256": "731256b7a3c0eb5e",
+   "from": "toolbox/hb_2290.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_2290.py",
+   "rollback": "移回 toolbox/hb_2290.py"
+  },
+  {
+   "file": "hb_2338_append.py",
+   "action": "archive_delivered",
+   "bytes": 7009,
+   "sha256": "3df9acdfca00f677",
+   "from": "toolbox/hb_2338_append.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_2338_append.py",
+   "rollback": "移回 toolbox/hb_2338_append.py"
+  },
+  {
+   "file": "hb_2345_append.py",
+   "action": "archive_delivered",
+   "bytes": 6036,
+   "sha256": "185ee940b101250a",
+   "from": "toolbox/hb_2345_append.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_2345_append.py",
+   "rollback": "移回 toolbox/hb_2345_append.py"
+  },
+  {
+   "file": "hb_2432_log.py",
+   "action": "archive_delivered",
+   "bytes": 5533,
+   "sha256": "a032741e47706488",
+   "from": "toolbox/hb_2432_log.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_2432_log.py",
+   "rollback": "移回 toolbox/hb_2432_log.py"
+  },
+  {
+   "file": "hb_2597_append.py",
+   "action": "archive_delivered",
+   "bytes": 6560,
+   "sha256": "9fb5753d179cde5c",
+   "from": "toolbox/hb_2597_append.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_2597_append.py",
+   "rollback": "移回 toolbox/hb_2597_append.py"
+  },
+  {
+   "file": "hb_2745.py",
+   "action": "archive_delivered",
+   "bytes": 4489,
+   "sha256": "e29d05b183554e33",
+   "from": "toolbox/hb_2745.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_2745.py",
+   "rollback": "移回 toolbox/hb_2745.py"
+  },
+  {
+   "file": "hb_2768_append.py",
+   "action": "archive_delivered",
+   "bytes": 5287,
+   "sha256": "f89fbf7c0266ecb7",
+   "from": "toolbox/hb_2768_append.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_2768_append.py",
+   "rollback": "移回 toolbox/hb_2768_append.py"
+  },
+  {
+   "file": "hb_2778_append.py",
+   "action": "archive_delivered",
+   "bytes": 5529,
+   "sha256": "2ace284eed1cffcb",
+   "from": "toolbox/hb_2778_append.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_2778_append.py",
+   "rollback": "移回 toolbox/hb_2778_append.py"
+  },
+  {
+   "file": "hb_3038_append.py",
+   "action": "archive_delivered",
+   "bytes": 4134,
+   "sha256": "3b0b539777afeba2",
+   "from": "toolbox/hb_3038_append.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_3038_append.py",
+   "rollback": "移回 toolbox/hb_3038_append.py"
+  },
+  {
+   "file": "hb_3046_append.py",
+   "action": "archive_delivered",
+   "bytes": 5578,
+   "sha256": "53ea3929f9da10fd",
+   "from": "toolbox/hb_3046_append.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_3046_append.py",
+   "rollback": "移回 toolbox/hb_3046_append.py"
+  },
+  {
+   "file": "hb_3053_tick.py",
+   "action": "archive_delivered",
+   "bytes": 4242,
+   "sha256": "c1644a748709d398",
+   "from": "toolbox/hb_3053_tick.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_3053_tick.py",
+   "rollback": "移回 toolbox/hb_3053_tick.py"
+  },
+  {
+   "file": "hb_3058_tick.py",
+   "action": "archive_delivered",
+   "bytes": 5523,
+   "sha256": "d7ba1c0702379085",
+   "from": "toolbox/hb_3058_tick.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_3058_tick.py",
+   "rollback": "移回 toolbox/hb_3058_tick.py"
+  },
+  {
+   "file": "hb_3073_append.py",
+   "action": "archive_delivered",
+   "bytes": 3895,
+   "sha256": "212adee9ab06da81",
+   "from": "toolbox/hb_3073_append.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_3073_append.py",
+   "rollback": "移回 toolbox/hb_3073_append.py"
+  },
+  {
+   "file": "hb_3092_append.py",
+   "action": "archive_delivered",
+   "bytes": 3519,
+   "sha256": "689c6b4d4ab0a8e3",
+   "from": "toolbox/hb_3092_append.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_3092_append.py",
+   "rollback": "移回 toolbox/hb_3092_append.py"
+  },
+  {
+   "file": "hb_3203_append.py",
+   "action": "archive_delivered",
+   "bytes": 5023,
+   "sha256": "c3a4332eaf1a6e23",
+   "from": "toolbox/hb_3203_append.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_3203_append.py",
+   "rollback": "移回 toolbox/hb_3203_append.py"
+  },
+  {
+   "file": "hb_3205_tick.py",
+   "action": "archive_delivered",
+   "bytes": 4649,
+   "sha256": "28daf14b335cb735",
+   "from": "toolbox/hb_3205_tick.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_3205_tick.py",
+   "rollback": "移回 toolbox/hb_3205_tick.py"
+  },
+  {
+   "file": "hb_3221_append.py",
+   "action": "archive_delivered",
+   "bytes": 4790,
+   "sha256": "f36bb4bfc413741f",
+   "from": "toolbox/hb_3221_append.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_3221_append.py",
+   "rollback": "移回 toolbox/hb_3221_append.py"
+  },
+  {
+   "file": "hb_3234_tick.py",
+   "action": "archive_delivered",
+   "bytes": 5405,
+   "sha256": "cb488ff3832aeed1",
+   "from": "toolbox/hb_3234_tick.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_3234_tick.py",
+   "rollback": "移回 toolbox/hb_3234_tick.py"
+  },
+  {
+   "file": "hb_3239.py",
+   "action": "archive_delivered",
+   "bytes": 4882,
+   "sha256": "8158fd478534bac6",
+   "from": "toolbox/hb_3239.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_3239.py",
+   "rollback": "移回 toolbox/hb_3239.py"
+  },
+  {
+   "file": "hb_333_append.py",
+   "action": "archive_delivered",
+   "bytes": 4009,
+   "sha256": "4ebccbf4e78b78bc",
+   "from": "toolbox/hb_333_append.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_333_append.py",
+   "rollback": "移回 toolbox/hb_333_append.py"
+  },
+  {
+   "file": "hb_3355_tick.py",
+   "action": "archive_delivered",
+   "bytes": 4798,
+   "sha256": "6219e2c3b2937067",
+   "from": "toolbox/hb_3355_tick.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_3355_tick.py",
+   "rollback": "移回 toolbox/hb_3355_tick.py"
+  },
+  {
+   "file": "hb_3443_append.py",
+   "action": "archive_delivered",
+   "bytes": 3493,
+   "sha256": "e3912f9f6326efac",
+   "from": "toolbox/hb_3443_append.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_3443_append.py",
+   "rollback": "移回 toolbox/hb_3443_append.py"
+  },
+  {
+   "file": "hb_347_update.py",
+   "action": "archive_delivered",
+   "bytes": 4959,
+   "sha256": "5bf44760a3481b92",
+   "from": "toolbox/hb_347_update.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_347_update.py",
+   "rollback": "移回 toolbox/hb_347_update.py"
+  },
+  {
+   "file": "hb_398_update.py",
+   "action": "archive_delivered",
+   "bytes": 3864,
+   "sha256": "21fc8168f3227126",
+   "from": "toolbox/hb_398_update.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_398_update.py",
+   "rollback": "移回 toolbox/hb_398_update.py"
+  },
+  {
+   "file": "hb_417_append.py",
+   "action": "archive_delivered",
+   "bytes": 3112,
+   "sha256": "8aa92ce04c4bac84",
+   "from": "toolbox/hb_417_append.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_417_append.py",
+   "rollback": "移回 toolbox/hb_417_append.py"
+  },
+  {
+   "file": "hb_417_state.py",
+   "action": "archive_delivered",
+   "bytes": 1294,
+   "sha256": "dda00d799e77ab11",
+   "from": "toolbox/hb_417_state.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_417_state.py",
+   "rollback": "移回 toolbox/hb_417_state.py"
+  },
+  {
+   "file": "hb_458_fix.py",
+   "action": "archive_delivered",
+   "bytes": 3039,
+   "sha256": "1c6f826745f3d096",
+   "from": "toolbox/hb_458_fix.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_458_fix.py",
+   "rollback": "移回 toolbox/hb_458_fix.py"
+  },
+  {
+   "file": "hb_458_update.py",
+   "action": "archive_delivered",
+   "bytes": 3618,
+   "sha256": "a0eaa60cd01edb3e",
+   "from": "toolbox/hb_458_update.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_458_update.py",
+   "rollback": "移回 toolbox/hb_458_update.py"
+  },
+  {
+   "file": "hb_490_append.py",
+   "action": "archive_delivered",
+   "bytes": 3956,
+   "sha256": "ce6276d05ab3c398",
+   "from": "toolbox/hb_490_append.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_490_append.py",
+   "rollback": "移回 toolbox/hb_490_append.py"
+  },
+  {
+   "file": "hb_493_record.py",
+   "action": "archive_delivered",
+   "bytes": 5808,
+   "sha256": "21223f94d4a692dc",
+   "from": "toolbox/hb_493_record.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_493_record.py",
+   "rollback": "移回 toolbox/hb_493_record.py"
+  },
+  {
+   "file": "hb_496_update.py",
+   "action": "archive_delivered",
+   "bytes": 4491,
+   "sha256": "bce87a0c1378b42d",
+   "from": "toolbox/hb_496_update.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_496_update.py",
+   "rollback": "移回 toolbox/hb_496_update.py"
+  },
+  {
+   "file": "hb_499.py",
+   "action": "archive_delivered",
+   "bytes": 4767,
+   "sha256": "673e7099a172686f",
+   "from": "toolbox/hb_499.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_499.py",
+   "rollback": "移回 toolbox/hb_499.py"
+  },
+  {
+   "file": "hb_501.py",
+   "action": "archive_delivered",
+   "bytes": 4367,
+   "sha256": "d60ea60fa96c54bb",
+   "from": "toolbox/hb_501.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_501.py",
+   "rollback": "移回 toolbox/hb_501.py"
+  },
+  {
+   "file": "hb_507_append.py",
+   "action": "archive_delivered",
+   "bytes": 4663,
+   "sha256": "2b36a8a43df050aa",
+   "from": "toolbox/hb_507_append.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_507_append.py",
+   "rollback": "移回 toolbox/hb_507_append.py"
+  },
+  {
+   "file": "hb_530.py",
+   "action": "archive_target_gone",
+   "bytes": 5601,
+   "sha256": "1b70b9b33c3e20ee",
+   "from": "toolbox/hb_530.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_530.py",
+   "rollback": "移回 toolbox/hb_530.py"
+  },
+  {
+   "file": "hb_530_backfill.py",
+   "action": "archive_delivered",
+   "bytes": 3501,
+   "sha256": "5826d8f1ca17f694",
+   "from": "toolbox/hb_530_backfill.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_530_backfill.py",
+   "rollback": "移回 toolbox/hb_530_backfill.py"
+  },
+  {
+   "file": "hb_564_2026-07-18_2208.py",
+   "action": "archive_delivered",
+   "bytes": 4302,
+   "sha256": "9fe46de2c26411a2",
+   "from": "toolbox/hb_564_2026-07-18_2208.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_564_2026-07-18_2208.py",
+   "rollback": "移回 toolbox/hb_564_2026-07-18_2208.py"
+  },
+  {
+   "file": "hb_567_log.py",
+   "action": "archive_delivered",
+   "bytes": 3464,
+   "sha256": "befbf1964c9709f7",
+   "from": "toolbox/hb_567_log.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_567_log.py",
+   "rollback": "移回 toolbox/hb_567_log.py"
+  },
+  {
+   "file": "hb_571_append.py",
+   "action": "archive_delivered",
+   "bytes": 4910,
+   "sha256": "e6e2ad9d88df0116",
+   "from": "toolbox/hb_571_append.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_571_append.py",
+   "rollback": "移回 toolbox/hb_571_append.py"
+  },
+  {
+   "file": "hb_603_append.py",
+   "action": "archive_delivered",
+   "bytes": 5185,
+   "sha256": "183ad8f371e8f3b6",
+   "from": "toolbox/hb_603_append.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_603_append.py",
+   "rollback": "移回 toolbox/hb_603_append.py"
+  },
+  {
+   "file": "hb_612_append.py",
+   "action": "archive_delivered",
+   "bytes": 3933,
+   "sha256": "deaead3201c3e27e",
+   "from": "toolbox/hb_612_append.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_612_append.py",
+   "rollback": "移回 toolbox/hb_612_append.py"
+  },
+  {
+   "file": "hb_668_tick.py",
+   "action": "archive_delivered",
+   "bytes": 6203,
+   "sha256": "d0374e68a92dbdc8",
+   "from": "toolbox/hb_668_tick.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_668_tick.py",
+   "rollback": "移回 toolbox/hb_668_tick.py"
+  },
+  {
+   "file": "hb_920_log.py",
+   "action": "archive_target_gone",
+   "bytes": 4454,
+   "sha256": "115ff6f54dd68f64",
+   "from": "toolbox/hb_920_log.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_920_log.py",
+   "rollback": "移回 toolbox/hb_920_log.py"
+  },
+  {
+   "file": "hb_961_append.py",
+   "action": "archive_target_gone",
+   "bytes": 4914,
+   "sha256": "af26a27c0cc8e3cd",
+   "from": "toolbox/hb_961_append.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_961_append.py",
+   "rollback": "移回 toolbox/hb_961_append.py"
+  },
+  {
+   "file": "hb_977_update.py",
+   "action": "archive_target_gone",
+   "bytes": 1272,
+   "sha256": "159aa026dbdcd523",
+   "from": "toolbox/hb_977_update.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_977_update.py",
+   "rollback": "移回 toolbox/hb_977_update.py"
+  },
+  {
+   "file": "hb_append.py",
+   "action": "archive_target_gone",
+   "bytes": 2715,
+   "sha256": "a8dcab5aa57bdcb4",
+   "from": "toolbox/hb_append.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_append.py",
+   "rollback": "移回 toolbox/hb_append.py"
+  },
+  {
+   "file": "hb_append_1012.py",
+   "action": "archive_target_gone",
+   "bytes": 5130,
+   "sha256": "6df05af9fd8ebcff",
+   "from": "toolbox/hb_append_1012.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_append_1012.py",
+   "rollback": "移回 toolbox/hb_append_1012.py"
+  },
+  {
+   "file": "hb_append_1015.py",
+   "action": "archive_target_gone",
+   "bytes": 3727,
+   "sha256": "dcf7baee6f4d3975",
+   "from": "toolbox/hb_append_1015.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_append_1015.py",
+   "rollback": "移回 toolbox/hb_append_1015.py"
+  },
+  {
+   "file": "hb_append_1064.py",
+   "action": "archive_target_gone",
+   "bytes": 2866,
+   "sha256": "c483d41cc42ffb73",
+   "from": "toolbox/hb_append_1064.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_append_1064.py",
+   "rollback": "移回 toolbox/hb_append_1064.py"
+  },
+  {
+   "file": "hb_append_1069.py",
+   "action": "archive_delivered",
+   "bytes": 5162,
+   "sha256": "2b8f3d099423a4c3",
+   "from": "toolbox/hb_append_1069.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_append_1069.py",
+   "rollback": "移回 toolbox/hb_append_1069.py"
+  },
+  {
+   "file": "hb_append_1086.py",
+   "action": "archive_target_gone",
+   "bytes": 3819,
+   "sha256": "40e53580e2ab5b0d",
+   "from": "toolbox/hb_append_1086.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_append_1086.py",
+   "rollback": "移回 toolbox/hb_append_1086.py"
+  },
+  {
+   "file": "hb_append_1124.py",
+   "action": "archive_target_gone",
+   "bytes": 4697,
+   "sha256": "214d7fb6fd154577",
+   "from": "toolbox/hb_append_1124.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_append_1124.py",
+   "rollback": "移回 toolbox/hb_append_1124.py"
+  },
+  {
+   "file": "hb_append_1159.py",
+   "action": "archive_target_gone",
+   "bytes": 3218,
+   "sha256": "b42567cecde50009",
+   "from": "toolbox/hb_append_1159.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_append_1159.py",
+   "rollback": "移回 toolbox/hb_append_1159.py"
+  },
+  {
+   "file": "hb_append_141.py",
+   "action": "archive_delivered",
+   "bytes": 3720,
+   "sha256": "56e4f3043228979d",
+   "from": "toolbox/hb_append_141.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_append_141.py",
+   "rollback": "移回 toolbox/hb_append_141.py"
+  },
+  {
+   "file": "hb_append_1463.py",
+   "action": "archive_target_gone",
+   "bytes": 5807,
+   "sha256": "1f03543165c0a158",
+   "from": "toolbox/hb_append_1463.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_append_1463.py",
+   "rollback": "移回 toolbox/hb_append_1463.py"
+  },
+  {
+   "file": "hb_append_1471.py",
+   "action": "archive_target_gone",
+   "bytes": 9421,
+   "sha256": "4ebee239170c0964",
+   "from": "toolbox/hb_append_1471.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_append_1471.py",
+   "rollback": "移回 toolbox/hb_append_1471.py"
+  },
+  {
+   "file": "hb_append_1495.py",
+   "action": "archive_target_gone",
+   "bytes": 5672,
+   "sha256": "8e7e5dc8ff3366de",
+   "from": "toolbox/hb_append_1495.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_append_1495.py",
+   "rollback": "移回 toolbox/hb_append_1495.py"
+  },
+  {
+   "file": "hb_append_1609.py",
+   "action": "archive_target_gone",
+   "bytes": 5437,
+   "sha256": "ef25607918437043",
+   "from": "toolbox/hb_append_1609.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_append_1609.py",
+   "rollback": "移回 toolbox/hb_append_1609.py"
+  },
+  {
+   "file": "hb_append_1621.py",
+   "action": "archive_target_gone",
+   "bytes": 2371,
+   "sha256": "fe08352a2593018b",
+   "from": "toolbox/hb_append_1621.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_append_1621.py",
+   "rollback": "移回 toolbox/hb_append_1621.py"
+  },
+  {
+   "file": "hb_append_1816.py",
+   "action": "archive_delivered",
+   "bytes": 3022,
+   "sha256": "2d3b7f0297e01f2d",
+   "from": "toolbox/hb_append_1816.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_append_1816.py",
+   "rollback": "移回 toolbox/hb_append_1816.py"
+  },
+  {
+   "file": "hb_append_1817.py",
+   "action": "archive_delivered",
+   "bytes": 2857,
+   "sha256": "634d8f7bdadf2202",
+   "from": "toolbox/hb_append_1817.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_append_1817.py",
+   "rollback": "移回 toolbox/hb_append_1817.py"
+  },
+  {
+   "file": "hb_append_2261.py",
+   "action": "archive_delivered",
+   "bytes": 4971,
+   "sha256": "c32f6faaa56256bb",
+   "from": "toolbox/hb_append_2261.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_append_2261.py",
+   "rollback": "移回 toolbox/hb_append_2261.py"
+  },
+  {
+   "file": "hb_append_2289.py",
+   "action": "archive_delivered",
+   "bytes": 6960,
+   "sha256": "72b72ccfc85018a4",
+   "from": "toolbox/hb_append_2289.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_append_2289.py",
+   "rollback": "移回 toolbox/hb_append_2289.py"
+  },
+  {
+   "file": "hb_append_2292.py",
+   "action": "archive_delivered",
+   "bytes": 7057,
+   "sha256": "21af7f3f32182ed3",
+   "from": "toolbox/hb_append_2292.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_append_2292.py",
+   "rollback": "移回 toolbox/hb_append_2292.py"
+  },
+  {
+   "file": "hb_append_2398.py",
+   "action": "archive_delivered",
+   "bytes": 7579,
+   "sha256": "ca3d4b6217bbca47",
+   "from": "toolbox/hb_append_2398.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_append_2398.py",
+   "rollback": "移回 toolbox/hb_append_2398.py"
+  },
+  {
+   "file": "hb_append_2434.py",
+   "action": "archive_delivered",
+   "bytes": 6531,
+   "sha256": "83f89062de636975",
+   "from": "toolbox/hb_append_2434.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_append_2434.py",
+   "rollback": "移回 toolbox/hb_append_2434.py"
+  },
+  {
+   "file": "hb_append_2435.py",
+   "action": "archive_delivered",
+   "bytes": 6071,
+   "sha256": "b0d3122999247d16",
+   "from": "toolbox/hb_append_2435.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_append_2435.py",
+   "rollback": "移回 toolbox/hb_append_2435.py"
+  },
+  {
+   "file": "hb_append_2651.py",
+   "action": "archive_delivered",
+   "bytes": 5105,
+   "sha256": "1237835604001d22",
+   "from": "toolbox/hb_append_2651.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_append_2651.py",
+   "rollback": "移回 toolbox/hb_append_2651.py"
+  },
+  {
+   "file": "hb_append_2679.py",
+   "action": "archive_delivered",
+   "bytes": 4216,
+   "sha256": "cc28ed067c44237f",
+   "from": "toolbox/hb_append_2679.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_append_2679.py",
+   "rollback": "移回 toolbox/hb_append_2679.py"
+  },
+  {
+   "file": "hb_append_2730.py",
+   "action": "archive_delivered",
+   "bytes": 4884,
+   "sha256": "82c6d88fbcf91d6b",
+   "from": "toolbox/hb_append_2730.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_append_2730.py",
+   "rollback": "移回 toolbox/hb_append_2730.py"
+  },
+  {
+   "file": "hb_append_3041.py",
+   "action": "archive_delivered",
+   "bytes": 3281,
+   "sha256": "3454338ecc81720c",
+   "from": "toolbox/hb_append_3041.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_append_3041.py",
+   "rollback": "移回 toolbox/hb_append_3041.py"
+  },
+  {
+   "file": "hb_append_3042.py",
+   "action": "archive_delivered",
+   "bytes": 3279,
+   "sha256": "dcbc6d3056bed584",
+   "from": "toolbox/hb_append_3042.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_append_3042.py",
+   "rollback": "移回 toolbox/hb_append_3042.py"
+  },
+  {
+   "file": "hb_append_3125.py",
+   "action": "archive_delivered",
+   "bytes": 5387,
+   "sha256": "1443aa10a76cbc1a",
+   "from": "toolbox/hb_append_3125.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_append_3125.py",
+   "rollback": "移回 toolbox/hb_append_3125.py"
+  },
+  {
+   "file": "hb_append_3161.py",
+   "action": "archive_delivered",
+   "bytes": 6736,
+   "sha256": "cd79e30db08cbaa1",
+   "from": "toolbox/hb_append_3161.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_append_3161.py",
+   "rollback": "移回 toolbox/hb_append_3161.py"
+  },
+  {
+   "file": "hb_append_3168.py",
+   "action": "archive_delivered",
+   "bytes": 3655,
+   "sha256": "b969398ea0e76403",
+   "from": "toolbox/hb_append_3168.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_append_3168.py",
+   "rollback": "移回 toolbox/hb_append_3168.py"
+  },
+  {
+   "file": "hb_append_3172.py",
+   "action": "archive_delivered",
+   "bytes": 2887,
+   "sha256": "8d4f1f27fce9c021",
+   "from": "toolbox/hb_append_3172.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_append_3172.py",
+   "rollback": "移回 toolbox/hb_append_3172.py"
+  },
+  {
+   "file": "hb_append_3207.py",
+   "action": "archive_delivered",
+   "bytes": 5385,
+   "sha256": "91b26a4cb25ddf9c",
+   "from": "toolbox/hb_append_3207.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_append_3207.py",
+   "rollback": "移回 toolbox/hb_append_3207.py"
+  },
+  {
+   "file": "hb_append_3442.py",
+   "action": "archive_delivered",
+   "bytes": 702,
+   "sha256": "e5421c54d64b767f",
+   "from": "toolbox/hb_append_3442.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_append_3442.py",
+   "rollback": "移回 toolbox/hb_append_3442.py"
+  },
+  {
+   "file": "hb_append_3640.py",
+   "action": "archive_delivered",
+   "bytes": 3973,
+   "sha256": "508b8b09c37e1c7a",
+   "from": "toolbox/hb_append_3640.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_append_3640.py",
+   "rollback": "移回 toolbox/hb_append_3640.py"
+  },
+  {
+   "file": "hb_append_3691.py",
+   "action": "archive_target_gone",
+   "bytes": 2659,
+   "sha256": "7270313a6a7bf537",
+   "from": "toolbox/hb_append_3691.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_append_3691.py",
+   "rollback": "移回 toolbox/hb_append_3691.py"
+  },
+  {
+   "file": "hb_append_478.py",
+   "action": "archive_delivered",
+   "bytes": 2854,
+   "sha256": "84ab1c70ec7eb000",
+   "from": "toolbox/hb_append_478.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_append_478.py",
+   "rollback": "移回 toolbox/hb_append_478.py"
+  },
+  {
+   "file": "hb_append_555.py",
+   "action": "archive_delivered",
+   "bytes": 3957,
+   "sha256": "ea146f304f28917a",
+   "from": "toolbox/hb_append_555.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_append_555.py",
+   "rollback": "移回 toolbox/hb_append_555.py"
+  },
+  {
+   "file": "hb_append_556.py",
+   "action": "archive_delivered",
+   "bytes": 3006,
+   "sha256": "359d5703ed960f83",
+   "from": "toolbox/hb_append_556.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_append_556.py",
+   "rollback": "移回 toolbox/hb_append_556.py"
+  },
+  {
+   "file": "hb_append_585.py",
+   "action": "archive_delivered",
+   "bytes": 3988,
+   "sha256": "3df348f12a410156",
+   "from": "toolbox/hb_append_585.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_append_585.py",
+   "rollback": "移回 toolbox/hb_append_585.py"
+  },
+  {
+   "file": "hb_append_586.py",
+   "action": "archive_delivered",
+   "bytes": 2199,
+   "sha256": "b62e3e5bc2e82a11",
+   "from": "toolbox/hb_append_586.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_append_586.py",
+   "rollback": "移回 toolbox/hb_append_586.py"
+  },
+  {
+   "file": "hb_append_591.py",
+   "action": "archive_delivered",
+   "bytes": 3404,
+   "sha256": "940cd8db8574eaf9",
+   "from": "toolbox/hb_append_591.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_append_591.py",
+   "rollback": "移回 toolbox/hb_append_591.py"
+  },
+  {
+   "file": "hb_append_608.py",
+   "action": "archive_delivered",
+   "bytes": 2799,
+   "sha256": "a71cff9cc8db57eb",
+   "from": "toolbox/hb_append_608.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_append_608.py",
+   "rollback": "移回 toolbox/hb_append_608.py"
+  },
+  {
+   "file": "hb_append_613.py",
+   "action": "archive_delivered",
+   "bytes": 2066,
+   "sha256": "ef9d4ca21c131987",
+   "from": "toolbox/hb_append_613.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_append_613.py",
+   "rollback": "移回 toolbox/hb_append_613.py"
+  },
+  {
+   "file": "hb_append_642.py",
+   "action": "archive_delivered",
+   "bytes": 2956,
+   "sha256": "83df4147b74c953f",
+   "from": "toolbox/hb_append_642.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_append_642.py",
+   "rollback": "移回 toolbox/hb_append_642.py"
+  },
+  {
+   "file": "hb_append_647.py",
+   "action": "archive_delivered",
+   "bytes": 3799,
+   "sha256": "eb692ad355de0fb4",
+   "from": "toolbox/hb_append_647.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_append_647.py",
+   "rollback": "移回 toolbox/hb_append_647.py"
+  },
+  {
+   "file": "hb_append_648.py",
+   "action": "archive_delivered",
+   "bytes": 3324,
+   "sha256": "0c7ed44867ebf1e0",
+   "from": "toolbox/hb_append_648.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_append_648.py",
+   "rollback": "移回 toolbox/hb_append_648.py"
+  },
+  {
+   "file": "hb_append_653.py",
+   "action": "archive_delivered",
+   "bytes": 4691,
+   "sha256": "71c6890f8f6a0adf",
+   "from": "toolbox/hb_append_653.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_append_653.py",
+   "rollback": "移回 toolbox/hb_append_653.py"
+  },
+  {
+   "file": "hb_append_676.py",
+   "action": "archive_target_gone",
+   "bytes": 3561,
+   "sha256": "93fda1ec90e03f8c",
+   "from": "toolbox/hb_append_676.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_append_676.py",
+   "rollback": "移回 toolbox/hb_append_676.py"
+  },
+  {
+   "file": "hb_append_697.py",
+   "action": "archive_delivered",
+   "bytes": 3380,
+   "sha256": "d1be41c41e6dbe49",
+   "from": "toolbox/hb_append_697.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_append_697.py",
+   "rollback": "移回 toolbox/hb_append_697.py"
+  },
+  {
+   "file": "hb_append_751.py",
+   "action": "archive_target_gone",
+   "bytes": 4220,
+   "sha256": "de32810fce2bbcaa",
+   "from": "toolbox/hb_append_751.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_append_751.py",
+   "rollback": "移回 toolbox/hb_append_751.py"
+  },
+  {
+   "file": "hb_append_760.py",
+   "action": "archive_target_gone",
+   "bytes": 5018,
+   "sha256": "0a04f55a0e8a582c",
+   "from": "toolbox/hb_append_760.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_append_760.py",
+   "rollback": "移回 toolbox/hb_append_760.py"
+  },
+  {
+   "file": "hb_append_766.py",
+   "action": "archive_target_gone",
+   "bytes": 4522,
+   "sha256": "f660f72e7a13e4b2",
+   "from": "toolbox/hb_append_766.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_append_766.py",
+   "rollback": "移回 toolbox/hb_append_766.py"
+  },
+  {
+   "file": "hb_append_793.py",
+   "action": "archive_target_gone",
+   "bytes": 3150,
+   "sha256": "71ad93cf137dc9c2",
+   "from": "toolbox/hb_append_793.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_append_793.py",
+   "rollback": "移回 toolbox/hb_append_793.py"
+  },
+  {
+   "file": "hb_append_794.py",
+   "action": "archive_target_gone",
+   "bytes": 5505,
+   "sha256": "719cae4eb424801c",
+   "from": "toolbox/hb_append_794.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_append_794.py",
+   "rollback": "移回 toolbox/hb_append_794.py"
+  },
+  {
+   "file": "hb_append_874.py",
+   "action": "archive_target_gone",
+   "bytes": 5069,
+   "sha256": "e81757e1c775758c",
+   "from": "toolbox/hb_append_874.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_append_874.py",
+   "rollback": "移回 toolbox/hb_append_874.py"
+  },
+  {
+   "file": "hb_append_909.py",
+   "action": "archive_target_gone",
+   "bytes": 4514,
+   "sha256": "cb5edb2c51f3377c",
+   "from": "toolbox/hb_append_909.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_append_909.py",
+   "rollback": "移回 toolbox/hb_append_909.py"
+  },
+  {
+   "file": "hb_append_915.py",
+   "action": "archive_delivered",
+   "bytes": 4338,
+   "sha256": "0135d97586cd81b5",
+   "from": "toolbox/hb_append_915.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_append_915.py",
+   "rollback": "移回 toolbox/hb_append_915.py"
+  },
+  {
+   "file": "hb_append_928.py",
+   "action": "archive_target_gone",
+   "bytes": 2974,
+   "sha256": "d81f618edbe27c2b",
+   "from": "toolbox/hb_append_928.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_append_928.py",
+   "rollback": "移回 toolbox/hb_append_928.py"
+  },
+  {
+   "file": "hb_append_935.py",
+   "action": "archive_target_gone",
+   "bytes": 4649,
+   "sha256": "06628c020f14b322",
+   "from": "toolbox/hb_append_935.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_append_935.py",
+   "rollback": "移回 toolbox/hb_append_935.py"
+  },
+  {
+   "file": "hb_append_943.py",
+   "action": "archive_target_gone",
+   "bytes": 3801,
+   "sha256": "ca95ffa5bc9d5a9e",
+   "from": "toolbox/hb_append_943.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_append_943.py",
+   "rollback": "移回 toolbox/hb_append_943.py"
+  },
+  {
+   "file": "hb_append_955.py",
+   "action": "archive_target_gone",
+   "bytes": 4484,
+   "sha256": "e5ca8a5840b3c0ff",
+   "from": "toolbox/hb_append_955.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_append_955.py",
+   "rollback": "移回 toolbox/hb_append_955.py"
+  },
+  {
+   "file": "hb_append_978.py",
+   "action": "archive_target_gone",
+   "bytes": 5039,
+   "sha256": "95c1abc2f78c2daf",
+   "from": "toolbox/hb_append_978.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_append_978.py",
+   "rollback": "移回 toolbox/hb_append_978.py"
+  },
+  {
+   "file": "hb_append_983.py",
+   "action": "archive_target_gone",
+   "bytes": 3424,
+   "sha256": "ca6bf4b63094465b",
+   "from": "toolbox/hb_append_983.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_append_983.py",
+   "rollback": "移回 toolbox/hb_append_983.py"
+  },
+  {
+   "file": "hb_append_md.py",
+   "action": "archive_delivered",
+   "bytes": 3340,
+   "sha256": "44a99392c5c539c4",
+   "from": "toolbox/hb_append_md.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_append_md.py",
+   "rollback": "移回 toolbox/hb_append_md.py"
+  },
+  {
+   "file": "hb_append_sat_1539.py",
+   "action": "archive_delivered",
+   "bytes": 4348,
+   "sha256": "048f043d84931f39",
+   "from": "toolbox/hb_append_sat_1539.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_append_sat_1539.py",
+   "rollback": "移回 toolbox/hb_append_sat_1539.py"
+  },
+  {
+   "file": "hb_append_today.py",
+   "action": "archive_delivered",
+   "bytes": 3641,
+   "sha256": "3d114c5c372728cb",
+   "from": "toolbox/hb_append_today.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_append_today.py",
+   "rollback": "移回 toolbox/hb_append_today.py"
+  },
+  {
+   "file": "hb_append_v2.py",
+   "action": "archive_target_gone",
+   "bytes": 5488,
+   "sha256": "b42ceb4cf246eeb4",
+   "from": "toolbox/hb_append_v2.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_append_v2.py",
+   "rollback": "移回 toolbox/hb_append_v2.py"
+  },
+  {
+   "file": "hb_atomic_append.py",
+   "action": "archive_delivered",
+   "bytes": 3585,
+   "sha256": "0d539446580ad310",
+   "from": "toolbox/hb_atomic_append.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_atomic_append.py",
+   "rollback": "移回 toolbox/hb_atomic_append.py"
+  },
+  {
+   "file": "hb_atomic_tick.py",
+   "action": "archive_target_gone",
+   "bytes": 4990,
+   "sha256": "5655cbbcbbbc148d",
+   "from": "toolbox/hb_atomic_tick.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_atomic_tick.py",
+   "rollback": "移回 toolbox/hb_atomic_tick.py"
+  },
+  {
+   "file": "hb_atomic_write.py",
+   "action": "archive_target_gone",
+   "bytes": 6009,
+   "sha256": "02e8f5c244481144",
+   "from": "toolbox/hb_atomic_write.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_atomic_write.py",
+   "rollback": "移回 toolbox/hb_atomic_write.py"
+  },
+  {
+   "file": "hb_byte_check.py",
+   "action": "archive_target_gone",
+   "bytes": 1466,
+   "sha256": "904e1024f4509238",
+   "from": "toolbox/hb_byte_check.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_byte_check.py",
+   "rollback": "移回 toolbox/hb_byte_check.py"
+  },
+  {
+   "file": "hb_calc.py",
+   "action": "archive_target_gone",
+   "bytes": 1063,
+   "sha256": "3430fa549d46d708",
+   "from": "toolbox/hb_calc.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_calc.py",
+   "rollback": "移回 toolbox/hb_calc.py"
+  },
+  {
+   "file": "hb_calc_1069.py",
+   "action": "archive_target_gone",
+   "bytes": 883,
+   "sha256": "dcf0364710335248",
+   "from": "toolbox/hb_calc_1069.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_calc_1069.py",
+   "rollback": "移回 toolbox/hb_calc_1069.py"
+  },
+  {
+   "file": "hb_calc_1086.py",
+   "action": "archive_target_gone",
+   "bytes": 1810,
+   "sha256": "9fbc53498d9bdda2",
+   "from": "toolbox/hb_calc_1086.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_calc_1086.py",
+   "rollback": "移回 toolbox/hb_calc_1086.py"
+  },
+  {
+   "file": "hb_calc_642.py",
+   "action": "archive_target_gone",
+   "bytes": 886,
+   "sha256": "b6dd18088fb5ce3d",
+   "from": "toolbox/hb_calc_642.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_calc_642.py",
+   "rollback": "移回 toolbox/hb_calc_642.py"
+  },
+  {
+   "file": "hb_check.py",
+   "action": "archive_target_gone",
+   "bytes": 518,
+   "sha256": "483c0921b9a07307",
+   "from": "toolbox/hb_check.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_check.py",
+   "rollback": "移回 toolbox/hb_check.py"
+  },
+  {
+   "file": "hb_check_encoding.py",
+   "action": "archive_target_gone",
+   "bytes": 2431,
+   "sha256": "ec349ac543363c07",
+   "from": "toolbox/hb_check_encoding.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_check_encoding.py",
+   "rollback": "移回 toolbox/hb_check_encoding.py"
+  },
+  {
+   "file": "hb_cleanup.py",
+   "action": "archive_delivered",
+   "bytes": 4233,
+   "sha256": "880535d1157623f8",
+   "from": "toolbox/hb_cleanup.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_cleanup.py",
+   "rollback": "移回 toolbox/hb_cleanup.py"
+  },
+  {
+   "file": "hb_find_recovery.py",
+   "action": "archive_target_gone",
+   "bytes": 485,
+   "sha256": "ebf8cad51a8b1841",
+   "from": "toolbox/hb_find_recovery.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_find_recovery.py",
+   "rollback": "移回 toolbox/hb_find_recovery.py"
+  },
+  {
+   "file": "hb_fix.py",
+   "action": "archive_delivered",
+   "bytes": 4972,
+   "sha256": "d58d16d9802bb972",
+   "from": "toolbox/hb_fix.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_fix.py",
+   "rollback": "移回 toolbox/hb_fix.py"
+  },
+  {
+   "file": "hb_fix_1577.py",
+   "action": "archive_target_gone",
+   "bytes": 848,
+   "sha256": "2f523aff34c2cbd5",
+   "from": "toolbox/hb_fix_1577.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_fix_1577.py",
+   "rollback": "移回 toolbox/hb_fix_1577.py"
+  },
+  {
+   "file": "hb_fix_1616.py",
+   "action": "archive_target_gone",
+   "bytes": 6171,
+   "sha256": "f22a4e528fe37c4d",
+   "from": "toolbox/hb_fix_1616.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_fix_1616.py",
+   "rollback": "移回 toolbox/hb_fix_1616.py"
+  },
+  {
+   "file": "hb_fix_2192.py",
+   "action": "archive_delivered",
+   "bytes": 6514,
+   "sha256": "f80698c68e021dec",
+   "from": "toolbox/hb_fix_2192.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_fix_2192.py",
+   "rollback": "移回 toolbox/hb_fix_2192.py"
+  },
+  {
+   "file": "hb_fix_2192_v2.py",
+   "action": "archive_delivered",
+   "bytes": 7141,
+   "sha256": "a028bd988fa792ca",
+   "from": "toolbox/hb_fix_2192_v2.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_fix_2192_v2.py",
+   "rollback": "移回 toolbox/hb_fix_2192_v2.py"
+  },
+  {
+   "file": "hb_fix_dup.py",
+   "action": "archive_delivered",
+   "bytes": 4231,
+   "sha256": "cf68855c0453e0b7",
+   "from": "toolbox/hb_fix_dup.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_fix_dup.py",
+   "rollback": "移回 toolbox/hb_fix_dup.py"
+  },
+  {
+   "file": "hb_head_check.py",
+   "action": "archive_target_gone",
+   "bytes": 297,
+   "sha256": "5fd3f9573a322f66",
+   "from": "toolbox/hb_head_check.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_head_check.py",
+   "rollback": "移回 toolbox/hb_head_check.py"
+  },
+  {
+   "file": "hb_inspect.py",
+   "action": "archive_target_gone",
+   "bytes": 370,
+   "sha256": "eeaad0a75261f360",
+   "from": "toolbox/hb_inspect.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_inspect.py",
+   "rollback": "移回 toolbox/hb_inspect.py"
+  },
+  {
+   "file": "hb_log.py",
+   "action": "archive_target_gone",
+   "bytes": 3496,
+   "sha256": "c672e74bd6d1b032",
+   "from": "toolbox/hb_log.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_log.py",
+   "rollback": "移回 toolbox/hb_log.py"
+  },
+  {
+   "file": "hb_log_1665.py",
+   "action": "archive_target_gone",
+   "bytes": 2138,
+   "sha256": "678ca5051e2b1df5",
+   "from": "toolbox/hb_log_1665.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_log_1665.py",
+   "rollback": "移回 toolbox/hb_log_1665.py"
+  },
+  {
+   "file": "hb_log_464.py",
+   "action": "archive_delivered",
+   "bytes": 1747,
+   "sha256": "5b244707b55465cb",
+   "from": "toolbox/hb_log_464.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_log_464.py",
+   "rollback": "移回 toolbox/hb_log_464.py"
+  },
+  {
+   "file": "hb_log_523.py",
+   "action": "archive_delivered",
+   "bytes": 5463,
+   "sha256": "c0310859c547a886",
+   "from": "toolbox/hb_log_523.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_log_523.py",
+   "rollback": "移回 toolbox/hb_log_523.py"
+  },
+  {
+   "file": "hb_logger.py",
+   "action": "archive_delivered",
+   "bytes": 6105,
+   "sha256": "4991d916a9e6d28b",
+   "from": "toolbox/hb_logger.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_logger.py",
+   "rollback": "移回 toolbox/hb_logger.py"
+  },
+  {
+   "file": "hb_minimal.py",
+   "action": "archive_target_gone",
+   "bytes": 4546,
+   "sha256": "5f4b5f7d2350530c",
+   "from": "toolbox/hb_minimal.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_minimal.py",
+   "rollback": "移回 toolbox/hb_minimal.py"
+  },
+  {
+   "file": "hb_prepend.py",
+   "action": "archive_delivered",
+   "bytes": 5036,
+   "sha256": "86c04c0823c47a7f",
+   "from": "toolbox/hb_prepend.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_prepend.py",
+   "rollback": "移回 toolbox/hb_prepend.py"
+  },
+  {
+   "file": "hb_prepend_1161.py",
+   "action": "archive_target_gone",
+   "bytes": 3170,
+   "sha256": "0d33554dae9786cd",
+   "from": "toolbox/hb_prepend_1161.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_prepend_1161.py",
+   "rollback": "移回 toolbox/hb_prepend_1161.py"
+  },
+  {
+   "file": "hb_search_recent.py",
+   "action": "archive_target_gone",
+   "bytes": 722,
+   "sha256": "c958876de2c34a45",
+   "from": "toolbox/hb_search_recent.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_search_recent.py",
+   "rollback": "移回 toolbox/hb_search_recent.py"
+  },
+  {
+   "file": "hb_state_1874.py",
+   "action": "archive_target_gone",
+   "bytes": 1449,
+   "sha256": "0b62c04d8225bb44",
+   "from": "toolbox/hb_state_1874.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_state_1874.py",
+   "rollback": "移回 toolbox/hb_state_1874.py"
+  },
+  {
+   "file": "hb_state_2434.py",
+   "action": "archive_target_gone",
+   "bytes": 1285,
+   "sha256": "1076301fdccdb465",
+   "from": "toolbox/hb_state_2434.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_state_2434.py",
+   "rollback": "移回 toolbox/hb_state_2434.py"
+  },
+  {
+   "file": "hb_state_647.py",
+   "action": "archive_delivered",
+   "bytes": 1433,
+   "sha256": "3db629e55aa5b33f",
+   "from": "toolbox/hb_state_647.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_state_647.py",
+   "rollback": "移回 toolbox/hb_state_647.py"
+  },
+  {
+   "file": "hb_state_bump.py",
+   "action": "archive_target_gone",
+   "bytes": 780,
+   "sha256": "12fc7688f0f71025",
+   "from": "toolbox/hb_state_bump.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_state_bump.py",
+   "rollback": "移回 toolbox/hb_state_bump.py"
+  },
+  {
+   "file": "hb_state_fix.py",
+   "action": "archive_delivered",
+   "bytes": 1742,
+   "sha256": "835623d0b1f35d6b",
+   "from": "toolbox/hb_state_fix.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_state_fix.py",
+   "rollback": "移回 toolbox/hb_state_fix.py"
+  },
+  {
+   "file": "hb_state_revert.py",
+   "action": "archive_delivered",
+   "bytes": 1844,
+   "sha256": "ed15f737c1926cd9",
+   "from": "toolbox/hb_state_revert.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_state_revert.py",
+   "rollback": "移回 toolbox/hb_state_revert.py"
+  },
+  {
+   "file": "hb_state_update_3207.py",
+   "action": "archive_target_gone",
+   "bytes": 1547,
+   "sha256": "a8d274150562496b",
+   "from": "toolbox/hb_state_update_3207.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_state_update_3207.py",
+   "rollback": "移回 toolbox/hb_state_update_3207.py"
+  },
+  {
+   "file": "hb_state_update_642.py",
+   "action": "archive_delivered",
+   "bytes": 1839,
+   "sha256": "cddd920948838757",
+   "from": "toolbox/hb_state_update_642.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_state_update_642.py",
+   "rollback": "移回 toolbox/hb_state_update_642.py"
+  },
+  {
+   "file": "hb_tail_check.py",
+   "action": "archive_target_gone",
+   "bytes": 455,
+   "sha256": "5d1b5d1836e910ee",
+   "from": "toolbox/hb_tail_check.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_tail_check.py",
+   "rollback": "移回 toolbox/hb_tail_check.py"
+  },
+  {
+   "file": "hb_tick_1067.py",
+   "action": "archive_target_gone",
+   "bytes": 4524,
+   "sha256": "50d1d19e93fba028",
+   "from": "toolbox/hb_tick_1067.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_tick_1067.py",
+   "rollback": "移回 toolbox/hb_tick_1067.py"
+  },
+  {
+   "file": "hb_tick_1076.py",
+   "action": "archive_target_gone",
+   "bytes": 5334,
+   "sha256": "d01f5ced83fbc55f",
+   "from": "toolbox/hb_tick_1076.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_tick_1076.py",
+   "rollback": "移回 toolbox/hb_tick_1076.py"
+  },
+  {
+   "file": "hb_tick_1111.py",
+   "action": "archive_delivered",
+   "bytes": 5134,
+   "sha256": "dc1f4816f4e8beda",
+   "from": "toolbox/hb_tick_1111.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_tick_1111.py",
+   "rollback": "移回 toolbox/hb_tick_1111.py"
+  },
+  {
+   "file": "hb_tick_1116.py",
+   "action": "archive_target_gone",
+   "bytes": 5541,
+   "sha256": "17e0e5a8dfaf26db",
+   "from": "toolbox/hb_tick_1116.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_tick_1116.py",
+   "rollback": "移回 toolbox/hb_tick_1116.py"
+  },
+  {
+   "file": "hb_tick_1127.py",
+   "action": "archive_target_gone",
+   "bytes": 1604,
+   "sha256": "ac41e89b998b7b42",
+   "from": "toolbox/hb_tick_1127.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_tick_1127.py",
+   "rollback": "移回 toolbox/hb_tick_1127.py"
+  },
+  {
+   "file": "hb_tick_1136.py",
+   "action": "archive_delivered",
+   "bytes": 4972,
+   "sha256": "4d3cbe76871393b1",
+   "from": "toolbox/hb_tick_1136.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_tick_1136.py",
+   "rollback": "移回 toolbox/hb_tick_1136.py"
+  },
+  {
+   "file": "hb_tick_1157.py",
+   "action": "archive_target_gone",
+   "bytes": 5108,
+   "sha256": "ab3fc52034376e6e",
+   "from": "toolbox/hb_tick_1157.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_tick_1157.py",
+   "rollback": "移回 toolbox/hb_tick_1157.py"
+  },
+  {
+   "file": "hb_tick_1171.py",
+   "action": "archive_target_gone",
+   "bytes": 4324,
+   "sha256": "b40560d9c7186bd9",
+   "from": "toolbox/hb_tick_1171.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_tick_1171.py",
+   "rollback": "移回 toolbox/hb_tick_1171.py"
+  },
+  {
+   "file": "hb_tick_1433.py",
+   "action": "archive_delivered",
+   "bytes": 3895,
+   "sha256": "e444efb3132e9721",
+   "from": "toolbox/hb_tick_1433.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_tick_1433.py",
+   "rollback": "移回 toolbox/hb_tick_1433.py"
+  },
+  {
+   "file": "hb_tick_1481.py",
+   "action": "archive_target_gone",
+   "bytes": 5100,
+   "sha256": "bf0ccb0d8a32b6b3",
+   "from": "toolbox/hb_tick_1481.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_tick_1481.py",
+   "rollback": "移回 toolbox/hb_tick_1481.py"
+  },
+  {
+   "file": "hb_tick_1621.py",
+   "action": "archive_delivered",
+   "bytes": 2639,
+   "sha256": "4d00c0032da364e7",
+   "from": "toolbox/hb_tick_1621.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_tick_1621.py",
+   "rollback": "移回 toolbox/hb_tick_1621.py"
+  },
+  {
+   "file": "hb_tick_1658.py",
+   "action": "archive_delivered",
+   "bytes": 5473,
+   "sha256": "525e0c2cde46f56e",
+   "from": "toolbox/hb_tick_1658.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_tick_1658.py",
+   "rollback": "移回 toolbox/hb_tick_1658.py"
+  },
+  {
+   "file": "hb_tick_1690.py",
+   "action": "archive_target_gone",
+   "bytes": 4577,
+   "sha256": "0b0605e68cebcac9",
+   "from": "toolbox/hb_tick_1690.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_tick_1690.py",
+   "rollback": "移回 toolbox/hb_tick_1690.py"
+  },
+  {
+   "file": "hb_tick_2026_08_14_1939.py",
+   "action": "archive_delivered",
+   "bytes": 5935,
+   "sha256": "7599aae81a66e049",
+   "from": "toolbox/hb_tick_2026_08_14_1939.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_tick_2026_08_14_1939.py",
+   "rollback": "移回 toolbox/hb_tick_2026_08_14_1939.py"
+  },
+  {
+   "file": "hb_tick_3052.py",
+   "action": "archive_delivered",
+   "bytes": 5013,
+   "sha256": "815bf8e31db846e3",
+   "from": "toolbox/hb_tick_3052.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_tick_3052.py",
+   "rollback": "移回 toolbox/hb_tick_3052.py"
+  },
+  {
+   "file": "hb_tick_3167.py",
+   "action": "archive_delivered",
+   "bytes": 6915,
+   "sha256": "0d179dc5f2d69f6b",
+   "from": "toolbox/hb_tick_3167.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_tick_3167.py",
+   "rollback": "移回 toolbox/hb_tick_3167.py"
+  },
+  {
+   "file": "hb_tick_3181.py",
+   "action": "archive_delivered",
+   "bytes": 5065,
+   "sha256": "90c954636ad4cfa3",
+   "from": "toolbox/hb_tick_3181.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_tick_3181.py",
+   "rollback": "移回 toolbox/hb_tick_3181.py"
+  },
+  {
+   "file": "hb_tick_3194.py",
+   "action": "archive_delivered",
+   "bytes": 3448,
+   "sha256": "0c8333d583403b10",
+   "from": "toolbox/hb_tick_3194.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_tick_3194.py",
+   "rollback": "移回 toolbox/hb_tick_3194.py"
+  },
+  {
+   "file": "hb_tick_3210.py",
+   "action": "archive_delivered",
+   "bytes": 5104,
+   "sha256": "2cde85c2b8a4757b",
+   "from": "toolbox/hb_tick_3210.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_tick_3210.py",
+   "rollback": "移回 toolbox/hb_tick_3210.py"
+  },
+  {
+   "file": "hb_tick_3227.py",
+   "action": "archive_delivered",
+   "bytes": 5338,
+   "sha256": "a142e2905913eee8",
+   "from": "toolbox/hb_tick_3227.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_tick_3227.py",
+   "rollback": "移回 toolbox/hb_tick_3227.py"
+  },
+  {
+   "file": "hb_tick_3233.py",
+   "action": "archive_delivered",
+   "bytes": 5458,
+   "sha256": "9f9c353925f65e2f",
+   "from": "toolbox/hb_tick_3233.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_tick_3233.py",
+   "rollback": "移回 toolbox/hb_tick_3233.py"
+  },
+  {
+   "file": "hb_tick_3307.py",
+   "action": "archive_delivered",
+   "bytes": 4876,
+   "sha256": "7f521ed38f8150a2",
+   "from": "toolbox/hb_tick_3307.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_tick_3307.py",
+   "rollback": "移回 toolbox/hb_tick_3307.py"
+  },
+  {
+   "file": "hb_tick_3365.py",
+   "action": "archive_delivered",
+   "bytes": 5914,
+   "sha256": "5487472bfe7d9e92",
+   "from": "toolbox/hb_tick_3365.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_tick_3365.py",
+   "rollback": "移回 toolbox/hb_tick_3365.py"
+  },
+  {
+   "file": "hb_tick_3396.py",
+   "action": "archive_delivered",
+   "bytes": 4218,
+   "sha256": "3a9fa699a96d202b",
+   "from": "toolbox/hb_tick_3396.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_tick_3396.py",
+   "rollback": "移回 toolbox/hb_tick_3396.py"
+  },
+  {
+   "file": "hb_tick_3486.py",
+   "action": "archive_target_gone",
+   "bytes": 4834,
+   "sha256": "d95734d817881088",
+   "from": "toolbox/hb_tick_3486.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_tick_3486.py",
+   "rollback": "移回 toolbox/hb_tick_3486.py"
+  },
+  {
+   "file": "hb_tick_3499.py",
+   "action": "archive_delivered",
+   "bytes": 4100,
+   "sha256": "ffdfc35c70a7454a",
+   "from": "toolbox/hb_tick_3499.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_tick_3499.py",
+   "rollback": "移回 toolbox/hb_tick_3499.py"
+  },
+  {
+   "file": "hb_tick_3540.py",
+   "action": "archive_target_gone",
+   "bytes": 5052,
+   "sha256": "8503fd66e0fa392f",
+   "from": "toolbox/hb_tick_3540.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_tick_3540.py",
+   "rollback": "移回 toolbox/hb_tick_3540.py"
+  },
+  {
+   "file": "hb_tick_3553.py",
+   "action": "archive_delivered",
+   "bytes": 4864,
+   "sha256": "858e36fcac2511e5",
+   "from": "toolbox/hb_tick_3553.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_tick_3553.py",
+   "rollback": "移回 toolbox/hb_tick_3553.py"
+  },
+  {
+   "file": "hb_tick_3570.py",
+   "action": "archive_delivered",
+   "bytes": 4860,
+   "sha256": "94da0dea29562235",
+   "from": "toolbox/hb_tick_3570.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_tick_3570.py",
+   "rollback": "移回 toolbox/hb_tick_3570.py"
+  },
+  {
+   "file": "hb_tick_3691.py",
+   "action": "archive_target_gone",
+   "bytes": 1042,
+   "sha256": "36f1160a5a760810",
+   "from": "toolbox/hb_tick_3691.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_tick_3691.py",
+   "rollback": "移回 toolbox/hb_tick_3691.py"
+  },
+  {
+   "file": "hb_tick_504.py",
+   "action": "archive_delivered",
+   "bytes": 3781,
+   "sha256": "f25ae6a845ef94d4",
+   "from": "toolbox/hb_tick_504.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_tick_504.py",
+   "rollback": "移回 toolbox/hb_tick_504.py"
+  },
+  {
+   "file": "hb_tick_555.py",
+   "action": "archive_delivered",
+   "bytes": 2783,
+   "sha256": "5f0c926e2bb0e2ee",
+   "from": "toolbox/hb_tick_555.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_tick_555.py",
+   "rollback": "移回 toolbox/hb_tick_555.py"
+  },
+  {
+   "file": "hb_tick_575.py",
+   "action": "archive_delivered",
+   "bytes": 3890,
+   "sha256": "18cdbb8acb83db66",
+   "from": "toolbox/hb_tick_575.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_tick_575.py",
+   "rollback": "移回 toolbox/hb_tick_575.py"
+  },
+  {
+   "file": "hb_tick_580.py",
+   "action": "archive_delivered",
+   "bytes": 3374,
+   "sha256": "afa4ad8c4a531235",
+   "from": "toolbox/hb_tick_580.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_tick_580.py",
+   "rollback": "移回 toolbox/hb_tick_580.py"
+  },
+  {
+   "file": "hb_tick_590.py",
+   "action": "archive_delivered",
+   "bytes": 4649,
+   "sha256": "666f99723ed391d3",
+   "from": "toolbox/hb_tick_590.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_tick_590.py",
+   "rollback": "移回 toolbox/hb_tick_590.py"
+  },
+  {
+   "file": "hb_tick_607.py",
+   "action": "archive_delivered",
+   "bytes": 3397,
+   "sha256": "c2cb11c0f0ff7c2b",
+   "from": "toolbox/hb_tick_607.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_tick_607.py",
+   "rollback": "移回 toolbox/hb_tick_607.py"
+  },
+  {
+   "file": "hb_tick_617.py",
+   "action": "archive_delivered",
+   "bytes": 3453,
+   "sha256": "421bfa235921902b",
+   "from": "toolbox/hb_tick_617.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_tick_617.py",
+   "rollback": "移回 toolbox/hb_tick_617.py"
+  },
+  {
+   "file": "hb_tick_621.py",
+   "action": "archive_delivered",
+   "bytes": 4795,
+   "sha256": "a12afc1eae3e2f5e",
+   "from": "toolbox/hb_tick_621.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_tick_621.py",
+   "rollback": "移回 toolbox/hb_tick_621.py"
+  },
+  {
+   "file": "hb_tick_628.py",
+   "action": "archive_delivered",
+   "bytes": 4200,
+   "sha256": "f4c32316829abc12",
+   "from": "toolbox/hb_tick_628.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_tick_628.py",
+   "rollback": "移回 toolbox/hb_tick_628.py"
+  },
+  {
+   "file": "hb_tick_631.py",
+   "action": "archive_delivered",
+   "bytes": 3156,
+   "sha256": "9341f382782b8612",
+   "from": "toolbox/hb_tick_631.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_tick_631.py",
+   "rollback": "移回 toolbox/hb_tick_631.py"
+  },
+  {
+   "file": "hb_tick_660.py",
+   "action": "archive_delivered",
+   "bytes": 3207,
+   "sha256": "90b610a62cfc3cb6",
+   "from": "toolbox/hb_tick_660.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_tick_660.py",
+   "rollback": "移回 toolbox/hb_tick_660.py"
+  },
+  {
+   "file": "hb_tick_673.py",
+   "action": "archive_delivered",
+   "bytes": 4732,
+   "sha256": "7257542f0c97635d",
+   "from": "toolbox/hb_tick_673.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_tick_673.py",
+   "rollback": "移回 toolbox/hb_tick_673.py"
+  },
+  {
+   "file": "hb_tick_675.py",
+   "action": "archive_target_gone",
+   "bytes": 6263,
+   "sha256": "59566fa55186870e",
+   "from": "toolbox/hb_tick_675.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_tick_675.py",
+   "rollback": "移回 toolbox/hb_tick_675.py"
+  },
+  {
+   "file": "hb_tick_683.py",
+   "action": "archive_target_gone",
+   "bytes": 4460,
+   "sha256": "917a309d63d15ebf",
+   "from": "toolbox/hb_tick_683.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_tick_683.py",
+   "rollback": "移回 toolbox/hb_tick_683.py"
+  },
+  {
+   "file": "hb_tick_719.py",
+   "action": "archive_target_gone",
+   "bytes": 4384,
+   "sha256": "96183ea2bc3f99c7",
+   "from": "toolbox/hb_tick_719.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_tick_719.py",
+   "rollback": "移回 toolbox/hb_tick_719.py"
+  },
+  {
+   "file": "hb_tick_720.py",
+   "action": "archive_delivered",
+   "bytes": 5609,
+   "sha256": "5022b0e077017fbe",
+   "from": "toolbox/hb_tick_720.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_tick_720.py",
+   "rollback": "移回 toolbox/hb_tick_720.py"
+  },
+  {
+   "file": "hb_tick_729.py",
+   "action": "archive_target_gone",
+   "bytes": 1923,
+   "sha256": "ab4888848c771f70",
+   "from": "toolbox/hb_tick_729.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_tick_729.py",
+   "rollback": "移回 toolbox/hb_tick_729.py"
+  },
+  {
+   "file": "hb_tick_736.py",
+   "action": "archive_target_gone",
+   "bytes": 2652,
+   "sha256": "f49d9bd6fc37ee57",
+   "from": "toolbox/hb_tick_736.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_tick_736.py",
+   "rollback": "移回 toolbox/hb_tick_736.py"
+  },
+  {
+   "file": "hb_tick_764.py",
+   "action": "archive_target_gone",
+   "bytes": 5143,
+   "sha256": "063d109fc67f3249",
+   "from": "toolbox/hb_tick_764.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_tick_764.py",
+   "rollback": "移回 toolbox/hb_tick_764.py"
+  },
+  {
+   "file": "hb_tick_781.py",
+   "action": "archive_target_gone",
+   "bytes": 4115,
+   "sha256": "dcebfa4819f6cc10",
+   "from": "toolbox/hb_tick_781.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_tick_781.py",
+   "rollback": "移回 toolbox/hb_tick_781.py"
+  },
+  {
+   "file": "hb_tick_786.py",
+   "action": "archive_target_gone",
+   "bytes": 4710,
+   "sha256": "a2ce65fce3efa672",
+   "from": "toolbox/hb_tick_786.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_tick_786.py",
+   "rollback": "移回 toolbox/hb_tick_786.py"
+  },
+  {
+   "file": "hb_tick_817.py",
+   "action": "archive_delivered",
+   "bytes": 4703,
+   "sha256": "3433ccc62a6b7e02",
+   "from": "toolbox/hb_tick_817.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_tick_817.py",
+   "rollback": "移回 toolbox/hb_tick_817.py"
+  },
+  {
+   "file": "hb_tick_822.py",
+   "action": "archive_target_gone",
+   "bytes": 4181,
+   "sha256": "6d79f69daefad2f8",
+   "from": "toolbox/hb_tick_822.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_tick_822.py",
+   "rollback": "移回 toolbox/hb_tick_822.py"
+  },
+  {
+   "file": "hb_tick_872.py",
+   "action": "archive_target_gone",
+   "bytes": 6066,
+   "sha256": "6aa3f1af0406cac2",
+   "from": "toolbox/hb_tick_872.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_tick_872.py",
+   "rollback": "移回 toolbox/hb_tick_872.py"
+  },
+  {
+   "file": "hb_tick_884.py",
+   "action": "archive_target_gone",
+   "bytes": 6458,
+   "sha256": "c8ceba83aa7a03c0",
+   "from": "toolbox/hb_tick_884.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_tick_884.py",
+   "rollback": "移回 toolbox/hb_tick_884.py"
+  },
+  {
+   "file": "hb_tick_915.py",
+   "action": "archive_delivered",
+   "bytes": 3587,
+   "sha256": "63969853185fa5e8",
+   "from": "toolbox/hb_tick_915.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_tick_915.py",
+   "rollback": "移回 toolbox/hb_tick_915.py"
+  },
+  {
+   "file": "hb_tick_918.py",
+   "action": "archive_target_gone",
+   "bytes": 4914,
+   "sha256": "25a75aa4932c1abe",
+   "from": "toolbox/hb_tick_918.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_tick_918.py",
+   "rollback": "移回 toolbox/hb_tick_918.py"
+  },
+  {
+   "file": "hb_tick_934.py",
+   "action": "archive_target_gone",
+   "bytes": 3450,
+   "sha256": "0c940964801429cb",
+   "from": "toolbox/hb_tick_934.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_tick_934.py",
+   "rollback": "移回 toolbox/hb_tick_934.py"
+  },
+  {
+   "file": "hb_tick_937.py",
+   "action": "archive_target_gone",
+   "bytes": 5055,
+   "sha256": "f785a512d21d0a1a",
+   "from": "toolbox/hb_tick_937.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_tick_937.py",
+   "rollback": "移回 toolbox/hb_tick_937.py"
+  },
+  {
+   "file": "hb_tick_append.py",
+   "action": "archive_delivered",
+   "bytes": 6423,
+   "sha256": "2ebd12b2c04a560c",
+   "from": "toolbox/hb_tick_append.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_tick_append.py",
+   "rollback": "移回 toolbox/hb_tick_append.py"
+  },
+  {
+   "file": "hb_tick_fix.py",
+   "action": "archive_target_gone",
+   "bytes": 2970,
+   "sha256": "d878a6f0e6a066ec",
+   "from": "toolbox/hb_tick_fix.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_tick_fix.py",
+   "rollback": "移回 toolbox/hb_tick_fix.py"
+  },
+  {
+   "file": "hb_tick_minimal.py",
+   "action": "archive_target_gone",
+   "bytes": 3651,
+   "sha256": "5f82d1cff8842b38",
+   "from": "toolbox/hb_tick_minimal.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_tick_minimal.py",
+   "rollback": "移回 toolbox/hb_tick_minimal.py"
+  },
+  {
+   "file": "hb_tick_r890.py",
+   "action": "archive_delivered",
+   "bytes": 4780,
+   "sha256": "d8e2cc6091f0389d",
+   "from": "toolbox/hb_tick_r890.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_tick_r890.py",
+   "rollback": "移回 toolbox/hb_tick_r890.py"
+  },
+  {
+   "file": "hb_tick_v2.py",
+   "action": "archive_target_gone",
+   "bytes": 6183,
+   "sha256": "f50f365ad19646da",
+   "from": "toolbox/hb_tick_v2.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_tick_v2.py",
+   "rollback": "移回 toolbox/hb_tick_v2.py"
+  },
+  {
+   "file": "hb_tick_v3.py",
+   "action": "archive_target_gone",
+   "bytes": 4207,
+   "sha256": "89820ef696f8fefb",
+   "from": "toolbox/hb_tick_v3.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_tick_v3.py",
+   "rollback": "移回 toolbox/hb_tick_v3.py"
+  },
+  {
+   "file": "hb_tick_v3203.py",
+   "action": "archive_delivered",
+   "bytes": 8630,
+   "sha256": "20213433296d75c4",
+   "from": "toolbox/hb_tick_v3203.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_tick_v3203.py",
+   "rollback": "移回 toolbox/hb_tick_v3203.py"
+  },
+  {
+   "file": "hb_update.py",
+   "action": "archive_delivered",
+   "bytes": 4372,
+   "sha256": "7a92fc72ed82b131",
+   "from": "toolbox/hb_update.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_update.py",
+   "rollback": "移回 toolbox/hb_update.py"
+  },
+  {
+   "file": "hb_update_1577.py",
+   "action": "archive_target_gone",
+   "bytes": 1833,
+   "sha256": "ff27a3f9f7ef1e6e",
+   "from": "toolbox/hb_update_1577.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_update_1577.py",
+   "rollback": "移回 toolbox/hb_update_1577.py"
+  },
+  {
+   "file": "hb_update_2152.py",
+   "action": "archive_target_gone",
+   "bytes": 1225,
+   "sha256": "a2145e460a4e4c02",
+   "from": "toolbox/hb_update_2152.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_update_2152.py",
+   "rollback": "移回 toolbox/hb_update_2152.py"
+  },
+  {
+   "file": "hb_update_498.py",
+   "action": "archive_delivered",
+   "bytes": 1057,
+   "sha256": "ba2d10084bec2960",
+   "from": "toolbox/hb_update_498.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_update_498.py",
+   "rollback": "移回 toolbox/hb_update_498.py"
+  },
+  {
+   "file": "hb_update_529.py",
+   "action": "archive_delivered",
+   "bytes": 1837,
+   "sha256": "82f7693e057420f4",
+   "from": "toolbox/hb_update_529.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_update_529.py",
+   "rollback": "移回 toolbox/hb_update_529.py"
+  },
+  {
+   "file": "hb_update_943.py",
+   "action": "archive_target_gone",
+   "bytes": 1315,
+   "sha256": "489fe76b10bfaae6",
+   "from": "toolbox/hb_update_943.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_update_943.py",
+   "rollback": "移回 toolbox/hb_update_943.py"
+  },
+  {
+   "file": "hb_verify.py",
+   "action": "archive_target_gone",
+   "bytes": 1291,
+   "sha256": "0f310754684a0a1c",
+   "from": "toolbox/hb_verify.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_verify.py",
+   "rollback": "移回 toolbox/hb_verify.py"
+  },
+  {
+   "file": "hb_write.py",
+   "action": "archive_target_gone",
+   "bytes": 3724,
+   "sha256": "a8e788ec575657ce",
+   "from": "toolbox/hb_write.py",
+   "to": "toolbox/_archive/hb_family_2026-11-18/hb_write.py",
+   "rollback": "移回 toolbox/hb_write.py"
+  }
+ ],
+ "kept": [
+  {
+   "file": "hb_state_update.py",
+   "action": "keep_referenced",
+   "note": "有引用或目标仍在，留在原位"
+  },
+  {
+   "file": "hb_tick.py",
+   "action": "keep_referenced",
+   "note": "有引用或目标仍在，留在原位"
+  },
+  {
+   "file": "hb_tick_670.py",
+   "action": "keep_payload_only",
+   "note": "有引用或目标仍在，留在原位"
+  }
+ ]
+}

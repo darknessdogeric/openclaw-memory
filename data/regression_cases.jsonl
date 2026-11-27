@@ -1,0 +1,7 @@
+{"ts": "2026-11-28T07:44:14", "case_id": "c0465504", "task": "自检", "symptom": "三份自检并发争同一棵树，把12秒自检拖到150秒", "fix": "改为单份运行，必要时先杀并发会话", "class": "执行", "regression": true}
+{"ts": "2026-11-28T07:44:22", "case_id": "0cca6521", "task": "自检", "symptom": "三份自检并发争同一棵树，把12秒自检拖到150秒", "fix": "改为单份运行，先杀并发会话", "class": "执行", "regression": true}
+{"ts": "2026-11-28T07:48:42", "case_id": "f068f8aa", "task": "AgentOS体检工具", "symptom": "ROOT 少算一层 dirname，扫的是 skills/ 而非工作区，且写文件错落到 skills/data", "fix": "路径统一用四层 dirname 取工作区根，写盘前先断言目标目录名", "class": "执行", "regression": true}
+{"ts": "2026-11-28T07:48:42", "case_id": "c6dd990e", "task": "成本台账", "symptom": "argparse 把 --from-runs 转成 from_runs，代码写 a.runs 直接崩", "fix": "加 dest=runs 显式绑定；参数名统一在 argparse 处声明后只读不猜", "class": "执行", "regression": true}
+{"ts": "2026-11-28T07:48:42", "case_id": "ab60a7a6", "task": "AgentOS体检工具", "symptom": "_grep_all 用字面包含匹配，但探针写的是 a|b|c 正则式，判定全是假的", "fix": "字面量与正则都支持；探针里的 alternation 必须按正则编译后匹配", "class": "判断", "regression": true}
+{"ts": "2026-11-28T07:48:42", "case_id": "b554051f", "task": "AgentOS体检工具", "symptom": "30+ 探针各走一次全库遍历，体检跑 3 分钟没人愿意用", "fix": "文件列表/文本/glob 三层缓存；单文件读取上限 400KB", "class": "执行", "regression": true}
+{"ts": "2026-11-28T07:51:30", "case_id": "60bf5a33", "task": "策略层", "symptom": "policy_gate.py 源码里写着禁止的旧B标清单字面量，自检 C37/C38 判定违规 —— 执法工具自己成了违规源", "fix": "禁止项清单一律拼接构造，不写字面量；写完立刻跑 C37/C38 验自己", "class": "执行", "regression": true}

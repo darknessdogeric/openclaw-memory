@@ -1,0 +1,7038 @@
+{
+ "toolbox/add_anYi_column.py": {
+  "bytes": 2678,
+  "category": "oneoff_family",
+  "purpose": "给 3 个调研模板加 '安逸集团有无' 列 + '现有程度' 列",
+  "owner_skill": "",
+  "family": "add",
+  "has_docstring": true,
+  "embedded_id": false,
+  "keywords": [
+   "encoding"
+  ],
+  "path": "toolbox/add_anYi_column.py",
+  "family_size": 4,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/add_b166er_marks.py": {
+  "bytes": 3975,
+  "category": "oneoff_family",
+  "purpose": "Add B166ER mark to every slide of 4 PPT files",
+  "owner_skill": "",
+  "family": "add",
+  "has_docstring": true,
+  "embedded_id": false,
+  "keywords": [
+   "encoding",
+   "pptx"
+  ],
+  "path": "toolbox/add_b166er_marks.py",
+  "family_size": 4,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/add_fazhan_2027.py": {
+  "bytes": 4210,
+  "category": "oneoff_family",
+  "purpose": "import os, shutil",
+  "owner_skill": "",
+  "family": "add",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "docx",
+   "index"
+  ],
+  "path": "toolbox/add_fazhan_2027.py",
+  "family_size": 4,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/add_fazhan_2027_p5.py": {
+  "bytes": 3107,
+  "category": "oneoff_family",
+  "purpose": "import os, shutil",
+  "owner_skill": "",
+  "family": "add",
+  "has_docstring": false,
+  "embedded_id": true,
+  "keywords": [
+   "docx"
+  ],
+  "path": "toolbox/add_fazhan_2027_p5.py",
+  "family_size": 4,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/ahl_canonical_sync.py": {
+  "bytes": 3680,
+  "category": "orphan",
+  "purpose": "ahl_canonical_sync.py — AHL canonical sync (vault → workspace) with .bak safety net",
+  "owner_skill": "",
+  "family": "ahl",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "agent"
+  ],
+  "path": "toolbox/ahl_canonical_sync.py",
+  "family_size": 3,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/ahl_milvus_poc.py": {
+  "bytes": 8213,
+  "category": "orphan",
+  "purpose": "AHL · Milvus Lite 向量匹配 POC",
+  "owner_skill": "",
+  "family": "ahl",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding",
+   "index",
+   "search",
+   "semantic"
+  ],
+  "path": "toolbox/ahl_milvus_poc.py",
+  "family_size": 3,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/ahl_xhs_mckinsey_master.py": {
+  "bytes": 14430,
+  "category": "capability",
+  "purpose": "AHL · 小红书 12 图 · R34 麦肯锡 + 美联储 + 摩根 风格重制版",
+  "owner_skill": "",
+  "family": "ahl",
+  "has_docstring": true,
+  "embedded_id": false,
+  "keywords": [],
+  "path": "toolbox/ahl_xhs_mckinsey_master.py",
+  "family_size": 3,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/align_to_eric_official.py": {
+  "bytes": 7064,
+  "category": "orphan",
+  "purpose": "Eric 2026-09-07 00:58 指令: 对标他的「酒店行业数据维度完整清单 v1.0」(2026-07-24)",
+  "owner_skill": "",
+  "family": "align",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding"
+  ],
+  "path": "toolbox/align_to_eric_official.py",
+  "family_size": 1,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/analyze_overlap.py": {
+  "bytes": 1765,
+  "category": "orphan",
+  "purpose": "import json",
+  "owner_skill": "",
+  "family": "analyze",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding"
+  ],
+  "path": "toolbox/analyze_overlap.py",
+  "family_size": 1,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/append_business_intel.py": {
+  "bytes": 1183,
+  "category": "oneoff_family",
+  "purpose": "import sys",
+  "owner_skill": "",
+  "family": "append",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding",
+   "eval"
+  ],
+  "path": "toolbox/append_business_intel.py",
+  "family_size": 26,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/append_daily.py": {
+  "bytes": 4932,
+  "category": "oneoff_family",
+  "purpose": "append 2026-08-18 absorption report to daily note (without disturbing cron blocks)",
+  "owner_skill": "",
+  "family": "append",
+  "has_docstring": true,
+  "embedded_id": false,
+  "keywords": [
+   "encoding"
+  ],
+  "path": "toolbox/append_daily.py",
+  "family_size": 26,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/append_directive_note.py": {
+  "bytes": 1571,
+  "category": "oneoff_family",
+  "purpose": "Append concept update note to hotel-sources-directive.md",
+  "owner_skill": "",
+  "family": "append",
+  "has_docstring": true,
+  "embedded_id": false,
+  "keywords": [
+   "encoding"
+  ],
+  "path": "toolbox/append_directive_note.py",
+  "family_size": 26,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/append_hb.py": {
+  "bytes": 3676,
+  "category": "oneoff_family",
+  "purpose": "import sys",
+  "owner_skill": "",
+  "family": "append",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding",
+   "index"
+  ],
+  "path": "toolbox/append_hb.py",
+  "family_size": 26,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/append_hb1028.py": {
+  "bytes": 4553,
+  "category": "oneoff_family",
+  "purpose": "from datetime import datetime, timezone, timedelta",
+  "owner_skill": "",
+  "family": "append",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding",
+   "index",
+   "infographic"
+  ],
+  "path": "toolbox/append_hb1028.py",
+  "family_size": 26,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/append_hb1083.py": {
+  "bytes": 2711,
+  "category": "oneoff_family",
+  "purpose": "from pathlib import Path",
+  "owner_skill": "",
+  "family": "append",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding",
+   "index",
+   "infographic",
+   "search"
+  ],
+  "path": "toolbox/append_hb1083.py",
+  "family_size": 26,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/append_hb534.py": {
+  "bytes": 2557,
+  "category": "oneoff_family",
+  "purpose": "hb_entry = '''",
+  "owner_skill": "",
+  "family": "append",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding",
+   "infographic"
+  ],
+  "path": "toolbox/append_hb534.py",
+  "family_size": 26,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/append_hb698.py": {
+  "bytes": 2906,
+  "category": "oneoff_family",
+  "purpose": "hb = \"\"\"",
+  "owner_skill": "",
+  "family": "append",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding",
+   "eval",
+   "infographic"
+  ],
+  "path": "toolbox/append_hb698.py",
+  "family_size": 26,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/append_hb798.py": {
+  "bytes": 4858,
+  "category": "oneoff_family",
+  "purpose": "import sys",
+  "owner_skill": "",
+  "family": "append",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding",
+   "index"
+  ],
+  "path": "toolbox/append_hb798.py",
+  "family_size": 26,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/append_hb861.py": {
+  "bytes": 2865,
+  "category": "oneoff_family",
+  "purpose": "Append HB #861 to HEARTBEAT.md per R-NEW-V2 (utf-8 explicit read+append+write).",
+  "owner_skill": "",
+  "family": "append",
+  "has_docstring": true,
+  "embedded_id": false,
+  "keywords": [
+   "encoding",
+   "index"
+  ],
+  "path": "toolbox/append_hb861.py",
+  "family_size": 26,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/append_hb984.py": {
+  "bytes": 4605,
+  "category": "oneoff_family",
+  "purpose": "R-NEW-V2 compliant HEARTBEAT.md append for HB #984",
+  "owner_skill": "",
+  "family": "append",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding",
+   "index",
+   "infographic"
+  ],
+  "path": "toolbox/append_hb984.py",
+  "family_size": 26,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/append_hb_2193.py": {
+  "bytes": 5598,
+  "category": "oneoff_family",
+  "purpose": "R-NEW-V3 compliant HB append for #2193.",
+  "owner_skill": "",
+  "family": "append",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding"
+  ],
+  "path": "toolbox/append_hb_2193.py",
+  "family_size": 26,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/append_hb_2221.py": {
+  "bytes": 5722,
+  "category": "oneoff_family",
+  "purpose": "import json",
+  "owner_skill": "",
+  "family": "append",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding"
+  ],
+  "path": "toolbox/append_hb_2221.py",
+  "family_size": 26,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/append_hb_2402.py": {
+  "bytes": 5075,
+  "category": "oneoff_family",
+  "purpose": "import json",
+  "owner_skill": "",
+  "family": "append",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding"
+  ],
+  "path": "toolbox/append_hb_2402.py",
+  "family_size": 26,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/append_hb_2533.py": {
+  "bytes": 4024,
+  "category": "oneoff_family",
+  "purpose": "import os",
+  "owner_skill": "",
+  "family": "append",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "agent",
+   "encoding"
+  ],
+  "path": "toolbox/append_hb_2533.py",
+  "family_size": 26,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/append_hb_2536.py": {
+  "bytes": 2142,
+  "category": "oneoff_family",
+  "purpose": "import json",
+  "owner_skill": "",
+  "family": "append",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding"
+  ],
+  "path": "toolbox/append_hb_2536.py",
+  "family_size": 26,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/append_hb_2537.py": {
+  "bytes": 4063,
+  "category": "oneoff_family",
+  "purpose": "HB #2537 append script -- R-NEW-V3 + R271 enforcement.",
+  "owner_skill": "",
+  "family": "append",
+  "has_docstring": true,
+  "embedded_id": false,
+  "keywords": [
+   "agent",
+   "encoding"
+  ],
+  "path": "toolbox/append_hb_2537.py",
+  "family_size": 26,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/append_hb_3174.py": {
+  "bytes": 4780,
+  "category": "oneoff_family",
+  "purpose": "- Append to memory/2026-08-14.md via open(mode='a') ONLY.",
+  "owner_skill": "",
+  "family": "append",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding",
+   "render"
+  ],
+  "path": "toolbox/append_hb_3174.py",
+  "family_size": 26,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/append_hb_3675.py": {
+  "bytes": 3311,
+  "category": "oneoff_family",
+  "purpose": "import os",
+  "owner_skill": "",
+  "family": "append",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding",
+   "review",
+   "search"
+  ],
+  "path": "toolbox/append_hb_3675.py",
+  "family_size": 26,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/append_hb_3695.py": {
+  "bytes": 2795,
+  "category": "oneoff_family",
+  "purpose": "import os",
+  "owner_skill": "",
+  "family": "append",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding"
+  ],
+  "path": "toolbox/append_hb_3695.py",
+  "family_size": 26,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/append_hb_595.py": {
+  "bytes": 4053,
+  "category": "oneoff_family",
+  "purpose": "import os",
+  "owner_skill": "",
+  "family": "append",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding",
+   "eval",
+   "infographic"
+  ],
+  "path": "toolbox/append_hb_595.py",
+  "family_size": 26,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/append_hb_732.py": {
+  "bytes": 4235,
+  "category": "oneoff_family",
+  "purpose": "R-NEW-V2 compliant append for HEARTBEAT.md",
+  "owner_skill": "",
+  "family": "append",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding",
+   "eval",
+   "infographic"
+  ],
+  "path": "toolbox/append_hb_732.py",
+  "family_size": 26,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/append_hb_932.py": {
+  "bytes": 4372,
+  "category": "oneoff_family",
+  "purpose": "import os",
+  "owner_skill": "",
+  "family": "append",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding",
+   "index",
+   "infographic"
+  ],
+  "path": "toolbox/append_hb_932.py",
+  "family_size": 26,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/append_memory_2026-07-29.py": {
+  "bytes": 1706,
+  "category": "oneoff_family",
+  "purpose": "from pathlib import Path",
+  "owner_skill": "",
+  "family": "append",
+  "has_docstring": false,
+  "embedded_id": true,
+  "keywords": [
+   "encoding",
+   "index",
+   "search"
+  ],
+  "path": "toolbox/append_memory_2026-07-29.py",
+  "family_size": 26,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/append_predictions_20260726.py": {
+  "bytes": 3150,
+  "category": "oneoff_family",
+  "purpose": "import json",
+  "owner_skill": "",
+  "family": "append",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "agent",
+   "encoding"
+  ],
+  "path": "toolbox/append_predictions_20260726.py",
+  "family_size": 26,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/append_r_new_v5.py": {
+  "bytes": 2389,
+  "category": "oneoff_family",
+  "purpose": "import os",
+  "owner_skill": "",
+  "family": "append",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding"
+  ],
+  "path": "toolbox/append_r_new_v5.py",
+  "family_size": 26,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/apply_model_updates.py": {
+  "bytes": 2235,
+  "category": "orphan",
+  "purpose": "import json, shutil, datetime, os",
+  "owner_skill": "",
+  "family": "apply",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding"
+  ],
+  "path": "toolbox/apply_model_updates.py",
+  "family_size": 3,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/apply_template.py": {
+  "bytes": 16113,
+  "category": "capability",
+  "purpose": "应用模板字体样式到 v5.5 文件上：",
+  "owner_skill": "",
+  "family": "apply",
+  "has_docstring": true,
+  "embedded_id": false,
+  "keywords": [
+   "docx"
+  ],
+  "path": "toolbox/apply_template.py",
+  "family_size": 3,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/apply_wm_hotel.py": {
+  "bytes": 300,
+  "category": "orphan",
+  "purpose": "import sys, os",
+  "owner_skill": "",
+  "family": "apply",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [],
+  "path": "toolbox/apply_wm_hotel.py",
+  "family_size": 3,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/atomic_hb_tick.py": {
+  "bytes": 8320,
+  "category": "oneoff_family",
+  "purpose": "Atomic HB Tick V2 — R-NEW-V3 + R271 + R-NEW-V4 + R-NEW-V5 compliant",
+  "owner_skill": "",
+  "family": "atomic",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding",
+   "render"
+  ],
+  "path": "toolbox/atomic_hb_tick.py",
+  "family_size": 3,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/atomic_rebuild.py": {
+  "bytes": 2815,
+  "category": "oneoff_family",
+  "purpose": "不 sleep，不轮询，一把搞定",
+  "owner_skill": "",
+  "family": "atomic",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "agent",
+   "encoding",
+   "fetch"
+  ],
+  "path": "toolbox/atomic_rebuild.py",
+  "family_size": 3,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/atomic_tick_state.py": {
+  "bytes": 3072,
+  "category": "oneoff_family",
+  "purpose": "R-NEW-V4 compliant atomic tick for state.json.",
+  "owner_skill": "",
+  "family": "atomic",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding"
+  ],
+  "path": "toolbox/atomic_tick_state.py",
+  "family_size": 3,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/audit_reports.py": {
+  "bytes": 3068,
+  "category": "orphan",
+  "purpose": "import sys, io",
+  "owner_skill": "",
+  "family": "audit",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding"
+  ],
+  "path": "toolbox/audit_reports.py",
+  "family_size": 2,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/audit_vault_vs_workspace.py": {
+  "bytes": 2860,
+  "category": "orphan",
+  "purpose": "import sys, io",
+  "owner_skill": "playwright-cli",
+  "family": "audit",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "agent",
+   "encoding"
+  ],
+  "path": "toolbox/audit_vault_vs_workspace.py",
+  "family_size": 2,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/auto_checkpoint.py": {
+  "bytes": 1711,
+  "category": "orphan",
+  "purpose": "目的：防止 WAL 累积导致 disk image malformed",
+  "owner_skill": "",
+  "family": "auto",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "agent",
+   "fetch",
+   "image"
+  ],
+  "path": "toolbox/auto_checkpoint.py",
+  "family_size": 2,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/auto_vault.py": {
+  "bytes": 11853,
+  "category": "orphan",
+  "purpose": "auto_vault.py — B166ER ↔ Obsidian Vault 自动双向同步",
+  "owner_skill": "",
+  "family": "auto",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "agent",
+   "encoding",
+   "scrap"
+  ],
+  "path": "toolbox/auto_vault.py",
+  "family_size": 2,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/backup_session_config.py": {
+  "bytes": 3589,
+  "category": "oneoff_family",
+  "purpose": "backup_session_config.py - OpenClaw 侧边栏配置快照",
+  "owner_skill": "",
+  "family": "backup",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding"
+  ],
+  "path": "toolbox/backup_session_config.py",
+  "family_size": 1,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/batch_pdf.py": {
+  "bytes": 982,
+  "category": "capability",
+  "purpose": "批量把 02-分章节PDFs/ 下的 13 个 MD 文件转为 PDF",
+  "owner_skill": "",
+  "family": "batch",
+  "has_docstring": true,
+  "embedded_id": false,
+  "keywords": [
+   "pdf"
+  ],
+  "path": "toolbox/batch_pdf.py",
+  "family_size": 1,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/booking_price_extractor.py": {
+  "bytes": 10710,
+  "category": "orphan",
+  "purpose": "AHL 跨境 OTA 数据抓取 - Booking.com 价格提取器",
+  "owner_skill": "",
+  "family": "booking",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "eval",
+   "fetch"
+  ],
+  "path": "toolbox/booking_price_extractor.py",
+  "family_size": 1,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/build_dday_intel_deck.py": {
+  "bytes": 8056,
+  "category": "oneoff_family",
+  "purpose": "build_dday_intel_deck.py — Real B166ER artifact using OfficeCLI",
+  "owner_skill": "officecli",
+  "family": "build",
+  "has_docstring": true,
+  "embedded_id": false,
+  "keywords": [
+   "eval",
+   "pptx"
+  ],
+  "path": "toolbox/build_dday_intel_deck.py",
+  "family_size": 2,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/build_link_graph.py": {
+  "bytes": 11344,
+  "category": "oneoff_family",
+  "purpose": "build_link_graph.py — vault 关联性建立器",
+  "owner_skill": "",
+  "family": "build",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "agent",
+   "encoding",
+   "scrap"
+  ],
+  "path": "toolbox/build_link_graph.py",
+  "family_size": 2,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/calc_yqyz.py": {
+  "bytes": 2483,
+  "category": "orphan",
+  "purpose": "﻿# -*- coding: utf-8 -*-",
+  "owner_skill": "",
+  "family": "calc",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding"
+  ],
+  "path": "toolbox/calc_yqyz.py",
+  "family_size": 1,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/career_ops_wrapper.py": {
+  "bytes": 7026,
+  "category": "orphan",
+  "purpose": "B166ER-Aware Career-Ops Wrapper",
+  "owner_skill": "github",
+  "family": "career",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "agent",
+   "eval",
+   "pdf",
+   "scrap"
+  ],
+  "path": "toolbox/career_ops_wrapper.py",
+  "family_size": 1,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/check_ai_budget.py": {
+  "bytes": 524,
+  "category": "oneoff_family",
+  "purpose": "﻿b27 = [8,10,20,10,12,5,6,4,8,0,3]",
+  "owner_skill": "",
+  "family": "check",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [],
+  "path": "toolbox/check_ai_budget.py",
+  "family_size": 14,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/check_backup.py": {
+  "bytes": 1034,
+  "category": "oneoff_family",
+  "purpose": "import os",
+  "owner_skill": "",
+  "family": "check",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [],
+  "path": "toolbox/check_backup.py",
+  "family_size": 14,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/check_backup2.py": {
+  "bytes": 2275,
+  "category": "oneoff_family",
+  "purpose": "import os",
+  "owner_skill": "",
+  "family": "check",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [],
+  "path": "toolbox/check_backup2.py",
+  "family_size": 14,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/check_backup_status.py": {
+  "bytes": 629,
+  "category": "oneoff_family",
+  "purpose": "import sqlite3, json, sys, io",
+  "owner_skill": "",
+  "family": "check",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding",
+   "fetch"
+  ],
+  "path": "toolbox/check_backup_status.py",
+  "family_size": 14,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/check_e9.py": {
+  "bytes": 1110,
+  "category": "oneoff_family",
+  "purpose": "检查 E9 单元格(原始 vs 修改后)",
+  "owner_skill": "",
+  "family": "check",
+  "has_docstring": true,
+  "embedded_id": false,
+  "keywords": [],
+  "path": "toolbox/check_e9.py",
+  "family_size": 14,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/check_edge.py": {
+  "bytes": 802,
+  "category": "oneoff_family",
+  "purpose": "Check Edge process state and CDP port.",
+  "owner_skill": "",
+  "family": "check",
+  "has_docstring": true,
+  "embedded_id": false,
+  "keywords": [],
+  "path": "toolbox/check_edge.py",
+  "family_size": 14,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/check_existing_bmarks.py": {
+  "bytes": 920,
+  "category": "oneoff_family",
+  "purpose": "Check existing B166ER marks in PPT files",
+  "owner_skill": "",
+  "family": "check",
+  "has_docstring": true,
+  "embedded_id": false,
+  "keywords": [
+   "pptx"
+  ],
+  "path": "toolbox/check_existing_bmarks.py",
+  "family_size": 14,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/check_hb.py": {
+  "bytes": 217,
+  "category": "oneoff_family",
+  "purpose": "import json",
+  "owner_skill": "",
+  "family": "check",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding"
+  ],
+  "path": "toolbox/check_hb.py",
+  "family_size": 14,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/check_key.py": {
+  "bytes": 361,
+  "category": "oneoff_family",
+  "purpose": "import re",
+  "owner_skill": "",
+  "family": "check",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding"
+  ],
+  "path": "toolbox/check_key.py",
+  "family_size": 14,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/check_mindmap_depth.py": {
+  "bytes": 1214,
+  "category": "oneoff_family",
+  "purpose": "import sys, json, re",
+  "owner_skill": "",
+  "family": "check",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding",
+   "search"
+  ],
+  "path": "toolbox/check_mindmap_depth.py",
+  "family_size": 14,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/check_model_updates.py": {
+  "bytes": 1982,
+  "category": "oneoff_family",
+  "purpose": "import json, os, urllib.request, urllib.error",
+  "owner_skill": "",
+  "family": "check",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding"
+  ],
+  "path": "toolbox/check_model_updates.py",
+  "family_size": 14,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/check_pdf.py": {
+  "bytes": 667,
+  "category": "oneoff_family",
+  "purpose": "import sys",
+  "owner_skill": "",
+  "family": "check",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "pdf"
+  ],
+  "path": "toolbox/check_pdf.py",
+  "family_size": 14,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/check_slide_layouts.py": {
+  "bytes": 1282,
+  "category": "oneoff_family",
+  "purpose": "Check slide layouts to find best B标 placement",
+  "owner_skill": "",
+  "family": "check",
+  "has_docstring": true,
+  "embedded_id": false,
+  "keywords": [
+   "pptx"
+  ],
+  "path": "toolbox/check_slide_layouts.py",
+  "family_size": 14,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/check_yqyz.py": {
+  "bytes": 2846,
+  "category": "oneoff_family",
+  "purpose": "﻿# -*- coding: utf-8 -*-",
+  "owner_skill": "",
+  "family": "check",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding"
+  ],
+  "path": "toolbox/check_yqyz.py",
+  "family_size": 14,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/chengdu_lyric_poster.py": {
+  "bytes": 9806,
+  "category": "capability",
+  "purpose": "Take Me to Chengdu — Lyric Poster",
+  "owner_skill": "image-gen",
+  "family": "chengdu",
+  "has_docstring": true,
+  "embedded_id": false,
+  "keywords": [
+   "image"
+  ],
+  "path": "toolbox/chengdu_lyric_poster.py",
+  "family_size": 1,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/chk_cf.py": {
+  "bytes": 1263,
+  "category": "orphan",
+  "purpose": "﻿# -*- coding: utf-8 -*-",
+  "owner_skill": "",
+  "family": "chk",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [],
+  "path": "toolbox/chk_cf.py",
+  "family_size": 1,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/cleanup_v51.py": {
+  "bytes": 6280,
+  "category": "oneoff_family",
+  "purpose": "import io, os, re, sys",
+  "owner_skill": "",
+  "family": "cleanup",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding",
+   "index"
+  ],
+  "path": "toolbox/cleanup_v51.py",
+  "family_size": 1,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/cmp_v12.py": {
+  "bytes": 1705,
+  "category": "oneoff_family",
+  "purpose": "﻿# -*- coding: utf-8 -*-",
+  "owner_skill": "",
+  "family": "cmp",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding"
+  ],
+  "path": "toolbox/cmp_v12.py",
+  "family_size": 1,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/comprehensive_health_check.py": {
+  "bytes": 13980,
+  "category": "orphan",
+  "purpose": "comprehensive_health_check.py v2.0 - 无缝适配版",
+  "owner_skill": "",
+  "family": "comprehensive",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "agent",
+   "encoding",
+   "search"
+  ],
+  "path": "toolbox/comprehensive_health_check.py",
+  "family_size": 1,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/count_sources.py": {
+  "bytes": 1135,
+  "category": "orphan",
+  "purpose": "import yaml",
+  "owner_skill": "",
+  "family": "count",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding",
+   "index"
+  ],
+  "path": "toolbox/count_sources.py",
+  "family_size": 1,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/crawl4ai_final_poc.py": {
+  "bytes": 2649,
+  "category": "capability",
+  "purpose": "crawl4ai + DeepSeek LLM extraction 最终验证",
+  "owner_skill": "github",
+  "family": "crawl4ai",
+  "has_docstring": true,
+  "embedded_id": false,
+  "keywords": [
+   "crawl",
+   "encoding"
+  ],
+  "path": "toolbox/crawl4ai_final_poc.py",
+  "family_size": 6,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/crawl4ai_llm_extraction.py": {
+  "bytes": 4219,
+  "category": "capability",
+  "purpose": "crawl4ai + DeepSeek LLM extraction PoC",
+  "owner_skill": "",
+  "family": "crawl4ai",
+  "has_docstring": true,
+  "embedded_id": false,
+  "keywords": [
+   "agent",
+   "crawl",
+   "crawler"
+  ],
+  "path": "toolbox/crawl4ai_llm_extraction.py",
+  "family_size": 6,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/crawl4ai_poc.py": {
+  "bytes": 2949,
+  "category": "capability",
+  "purpose": "crawl4ai AHL PoC: Booking 价格抓取 + LLM extraction",
+  "owner_skill": "",
+  "family": "crawl4ai",
+  "has_docstring": true,
+  "embedded_id": false,
+  "keywords": [
+   "crawl",
+   "encoding",
+   "review"
+  ],
+  "path": "toolbox/crawl4ai_poc.py",
+  "family_size": 6,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/crawl4ai_real_scenario.py": {
+  "bytes": 2205,
+  "category": "capability",
+  "purpose": "crawl4ai 实战场景：通过 scrape_matrix 抓行业新闻 + LLM 提取结构化",
+  "owner_skill": "github",
+  "family": "crawl4ai",
+  "has_docstring": true,
+  "embedded_id": false,
+  "keywords": [
+   "crawl",
+   "review",
+   "scrap"
+  ],
+  "path": "toolbox/crawl4ai_real_scenario.py",
+  "family_size": 6,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/crawl4ai_smoke_test.py": {
+  "bytes": 778,
+  "category": "capability",
+  "purpose": "crawl4ai 最小可行性测试",
+  "owner_skill": "",
+  "family": "crawl4ai",
+  "has_docstring": true,
+  "embedded_id": false,
+  "keywords": [
+   "crawl",
+   "crawler"
+  ],
+  "path": "toolbox/crawl4ai_smoke_test.py",
+  "family_size": 6,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/crawl4ai_wrapper.py": {
+  "bytes": 12423,
+  "category": "capability",
+  "purpose": "crawl4ai B166ER 适配 wrapper",
+  "owner_skill": "github",
+  "family": "crawl4ai",
+  "has_docstring": true,
+  "embedded_id": false,
+  "keywords": [
+   "agent",
+   "crawl",
+   "crawler",
+   "scrap"
+  ],
+  "path": "toolbox/crawl4ai_wrapper.py",
+  "family_size": 6,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/create_moc_hubs.py": {
+  "bytes": 22717,
+  "category": "orphan",
+  "purpose": "import sys, io",
+  "owner_skill": "hotel-revenue-management",
+  "family": "create",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "agent",
+   "encoding",
+   "search"
+  ],
+  "path": "toolbox/create_moc_hubs.py",
+  "family_size": 1,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/cron_local_backup.py": {
+  "bytes": 3918,
+  "category": "orphan",
+  "purpose": "Eric 2026-09-08 15:14 决策：替换 agentTurn 备份任务",
+  "owner_skill": "",
+  "family": "cron",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "agent",
+   "encoding"
+  ],
+  "path": "toolbox/cron_local_backup.py",
+  "family_size": 3,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/cron_safe_run.py": {
+  "bytes": 1657,
+  "category": "orphan",
+  "purpose": "R296 实现：每个 cron 启动前自动 checkpoint + busy_timeout + WAL 防御",
+  "owner_skill": "",
+  "family": "cron",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "agent"
+  ],
+  "path": "toolbox/cron_safe_run.py",
+  "family_size": 3,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/cron_to_obsidian.py": {
+  "bytes": 9684,
+  "category": "orphan",
+  "purpose": "cron_to_obsidian.py — Cron 任务输出 → Obsidian vault 推送器",
+  "owner_skill": "",
+  "family": "cron",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "agent",
+   "encoding",
+   "scrap"
+  ],
+  "path": "toolbox/cron_to_obsidian.py",
+  "family_size": 3,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/daily_backup.py": {
+  "bytes": 6315,
+  "category": "orphan",
+  "purpose": "B166ER 每日本地备份脚本",
+  "owner_skill": "",
+  "family": "daily",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "agent",
+   "encoding"
+  ],
+  "path": "toolbox/daily_backup.py",
+  "family_size": 4,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/daily_backup_2026-08-20.py": {
+  "bytes": 2886,
+  "category": "oneoff_family",
+  "purpose": "B166ER 每日本地备份 - 2026-08-20 (cron 02:00)",
+  "owner_skill": "",
+  "family": "daily",
+  "has_docstring": false,
+  "embedded_id": true,
+  "keywords": [
+   "agent",
+   "encoding"
+  ],
+  "path": "toolbox/daily_backup_2026-08-20.py",
+  "family_size": 4,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/daily_backup_2026-08-22.py": {
+  "bytes": 4396,
+  "category": "oneoff_family",
+  "purpose": "B166ER 每日本地备份 - 2026-08-22 (cron 02:00)",
+  "owner_skill": "",
+  "family": "daily",
+  "has_docstring": false,
+  "embedded_id": true,
+  "keywords": [
+   "agent",
+   "encoding"
+  ],
+  "path": "toolbox/daily_backup_2026-08-22.py",
+  "family_size": 4,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/daily_dashboard.py": {
+  "bytes": 8827,
+  "category": "orphan",
+  "purpose": "daily_dashboard.py - 每日 dashboard 生成器",
+  "owner_skill": "",
+  "family": "daily",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding"
+  ],
+  "path": "toolbox/daily_dashboard.py",
+  "family_size": 4,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/data_collector.py": {
+  "bytes": 8909,
+  "category": "orphan",
+  "purpose": "B166ER 数据获取系统 v2.0 (2026-10-14 修复)",
+  "owner_skill": "data-acquisition",
+  "family": "data",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "agent",
+   "encoding",
+   "fetch",
+   "review",
+   "scrap",
+   "search"
+  ],
+  "path": "toolbox/data_collector.py",
+  "family_size": 1,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/dataview_views.py": {
+  "bytes": 8812,
+  "category": "orphan",
+  "purpose": "ROI 3: 准备 Dataview 视图 + 安装指南",
+  "owner_skill": "github",
+  "family": "dataview",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "agent",
+   "encoding"
+  ],
+  "path": "toolbox/dataview_views.py",
+  "family_size": 1,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/debug_backlink.py": {
+  "bytes": 1984,
+  "category": "orphan",
+  "purpose": "import sys, re",
+  "owner_skill": "",
+  "family": "debug",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding"
+  ],
+  "path": "toolbox/debug_backlink.py",
+  "family_size": 3,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/debug_backlink2.py": {
+  "bytes": 1915,
+  "category": "orphan",
+  "purpose": "import sys, re",
+  "owner_skill": "",
+  "family": "debug",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding"
+  ],
+  "path": "toolbox/debug_backlink2.py",
+  "family_size": 3,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/debug_mindmap.py": {
+  "bytes": 1316,
+  "category": "capability",
+  "purpose": "调试 mindmap 渲染问题",
+  "owner_skill": "",
+  "family": "debug",
+  "has_docstring": true,
+  "embedded_id": false,
+  "keywords": [
+   "eval",
+   "review"
+  ],
+  "path": "toolbox/debug_mindmap.py",
+  "family_size": 3,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/dedupe_weekly.py": {
+  "bytes": 932,
+  "category": "orphan",
+  "purpose": "import re",
+  "owner_skill": "",
+  "family": "dedupe",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding"
+  ],
+  "path": "toolbox/dedupe_weekly.py",
+  "family_size": 1,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/deepseek_evaluate.py": {
+  "bytes": 16392,
+  "category": "orphan",
+  "purpose": "总府川宾可研报告 - DeepSeek 评估报告生成器",
+  "owner_skill": "",
+  "family": "deepseek",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "eval",
+   "pdf"
+  ],
+  "path": "toolbox/deepseek_evaluate.py",
+  "family_size": 1,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/diag_apiclaude.py": {
+  "bytes": 2126,
+  "category": "orphan",
+  "purpose": "import re",
+  "owner_skill": "",
+  "family": "diag",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding",
+   "search"
+  ],
+  "path": "toolbox/diag_apiclaude.py",
+  "family_size": 7,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/diag_auth.py": {
+  "bytes": 2687,
+  "category": "capability",
+  "purpose": "Diagnose apiclaude auth mismatch between openclaw.json and auth store",
+  "owner_skill": "",
+  "family": "diag",
+  "has_docstring": true,
+  "embedded_id": false,
+  "keywords": [
+   "agent",
+   "encoding",
+   "fetch",
+   "search"
+  ],
+  "path": "toolbox/diag_auth.py",
+  "family_size": 7,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/diag_file.py": {
+  "bytes": 905,
+  "category": "orphan",
+  "purpose": "import os",
+  "owner_skill": "",
+  "family": "diag",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "eval"
+  ],
+  "path": "toolbox/diag_file.py",
+  "family_size": 7,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/diag_file2.py": {
+  "bytes": 859,
+  "category": "orphan",
+  "purpose": "import os",
+  "owner_skill": "",
+  "family": "diag",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "eval"
+  ],
+  "path": "toolbox/diag_file2.py",
+  "family_size": 7,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/diag_file3.py": {
+  "bytes": 815,
+  "category": "orphan",
+  "purpose": "import sys",
+  "owner_skill": "",
+  "family": "diag",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding",
+   "eval"
+  ],
+  "path": "toolbox/diag_file3.py",
+  "family_size": 7,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/diag_file4.py": {
+  "bytes": 802,
+  "category": "orphan",
+  "purpose": "import sys, io",
+  "owner_skill": "",
+  "family": "diag",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding",
+   "eval"
+  ],
+  "path": "toolbox/diag_file4.py",
+  "family_size": 7,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/diag_openclaw_style.py": {
+  "bytes": 1293,
+  "category": "orphan",
+  "purpose": "import urllib.request",
+  "owner_skill": "",
+  "family": "diag",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "agent",
+   "encoding",
+   "search"
+  ],
+  "path": "toolbox/diag_openclaw_style.py",
+  "family_size": 7,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/diagnose_non_channel_crons.py": {
+  "bytes": 4612,
+  "category": "orphan",
+  "purpose": "Eric 2026-09-08 15:09 指令：非 channel 任务失败，具体解决",
+  "owner_skill": "",
+  "family": "diagnose",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "agent",
+   "encoding",
+   "fetch",
+   "search"
+  ],
+  "path": "toolbox/diagnose_non_channel_crons.py",
+  "family_size": 1,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/disable_no_channel_crons.py": {
+  "bytes": 1875,
+  "category": "orphan",
+  "purpose": "Eric 2026-09-08 15:07 决策",
+  "owner_skill": "",
+  "family": "disable",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding",
+   "fetch"
+  ],
+  "path": "toolbox/disable_no_channel_crons.py",
+  "family_size": 1,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/document_missing_reports.py": {
+  "bytes": 4651,
+  "category": "orphan",
+  "purpose": "import sys, io",
+  "owner_skill": "",
+  "family": "document",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding",
+   "index"
+  ],
+  "path": "toolbox/document_missing_reports.py",
+  "family_size": 1,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/docx2txt.py": {
+  "bytes": 1689,
+  "category": "orphan",
+  "purpose": "import sys, zipfile, os, io, glob",
+  "owner_skill": "",
+  "family": "docx2txt",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "docx",
+   "encoding"
+  ],
+  "path": "toolbox/docx2txt.py",
+  "family_size": 1,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/dump2.py": {
+  "bytes": 704,
+  "category": "orphan",
+  "purpose": "import sys, io",
+  "owner_skill": "",
+  "family": "dump2",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding"
+  ],
+  "path": "toolbox/dump2.py",
+  "family_size": 1,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/dump_15n.py": {
+  "bytes": 694,
+  "category": "oneoff_family",
+  "purpose": "import sys, io, os",
+  "owner_skill": "",
+  "family": "dump",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding"
+  ],
+  "path": "toolbox/dump_15n.py",
+  "family_size": 12,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/dump_chashan.py": {
+  "bytes": 2079,
+  "category": "oneoff_family",
+  "purpose": "import fitz, docx, openpyxl, sys, io",
+  "owner_skill": "",
+  "family": "dump",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "docx",
+   "encoding",
+   "pdf"
+  ],
+  "path": "toolbox/dump_chashan.py",
+  "family_size": 12,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/dump_cron_jobs.py": {
+  "bytes": 703,
+  "category": "oneoff_family",
+  "purpose": "import sqlite3, json, sys, io",
+  "owner_skill": "",
+  "family": "dump",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding",
+   "fetch"
+  ],
+  "path": "toolbox/dump_cron_jobs.py",
+  "family_size": 12,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/dump_fills.py": {
+  "bytes": 1303,
+  "category": "oneoff_family",
+  "purpose": "import openpyxl, io",
+  "owner_skill": "",
+  "family": "dump",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding",
+   "index"
+  ],
+  "path": "toolbox/dump_fills.py",
+  "family_size": 12,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/dump_mod.py": {
+  "bytes": 545,
+  "category": "oneoff_family",
+  "purpose": "﻿import io",
+  "owner_skill": "",
+  "family": "dump",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "docx",
+   "encoding"
+  ],
+  "path": "toolbox/dump_mod.py",
+  "family_size": 12,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/dump_mod2.py": {
+  "bytes": 516,
+  "category": "oneoff_family",
+  "purpose": "﻿import io",
+  "owner_skill": "",
+  "family": "dump",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "docx",
+   "encoding"
+  ],
+  "path": "toolbox/dump_mod2.py",
+  "family_size": 12,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/dump_para.py": {
+  "bytes": 1463,
+  "category": "oneoff_family",
+  "purpose": "﻿import openpyxl, io",
+  "owner_skill": "",
+  "family": "dump",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "docx",
+   "encoding",
+   "index"
+  ],
+  "path": "toolbox/dump_para.py",
+  "family_size": 12,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/dump_rb.py": {
+  "bytes": 991,
+  "category": "oneoff_family",
+  "purpose": "﻿import io, openpyxl",
+  "owner_skill": "",
+  "family": "dump",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding"
+  ],
+  "path": "toolbox/dump_rb.py",
+  "family_size": 12,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/dump_runs.py": {
+  "bytes": 764,
+  "category": "oneoff_family",
+  "purpose": "﻿import io",
+  "owner_skill": "",
+  "family": "dump",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "docx",
+   "encoding"
+  ],
+  "path": "toolbox/dump_runs.py",
+  "family_size": 12,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/dump_xlsx.py": {
+  "bytes": 936,
+  "category": "oneoff_family",
+  "purpose": "import openpyxl, io",
+  "owner_skill": "",
+  "family": "dump",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding"
+  ],
+  "path": "toolbox/dump_xlsx.py",
+  "family_size": 12,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/dump_xlsx2.py": {
+  "bytes": 1071,
+  "category": "oneoff_family",
+  "purpose": "import openpyxl, io, os",
+  "owner_skill": "",
+  "family": "dump",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding"
+  ],
+  "path": "toolbox/dump_xlsx2.py",
+  "family_size": 12,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/dump_yqyz.py": {
+  "bytes": 995,
+  "category": "oneoff_family",
+  "purpose": "﻿import io, openpyxl",
+  "owner_skill": "",
+  "family": "dump",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding"
+  ],
+  "path": "toolbox/dump_yqyz.py",
+  "family_size": 12,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/emergence_curator.py": {
+  "bytes": 9427,
+  "category": "orphan",
+  "purpose": "emergence_curator.py — Obsidian 涌现整理器",
+  "owner_skill": "ontology",
+  "family": "emergence",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding",
+   "index",
+   "search"
+  ],
+  "path": "toolbox/emergence_curator.py",
+  "family_size": 1,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/entity_extractor.py": {
+  "bytes": 15700,
+  "category": "orphan",
+  "purpose": "entity_extractor.py — B166ER 每日实体抽取器",
+  "owner_skill": "ontology",
+  "family": "entity",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "agent",
+   "scrap",
+   "search"
+  ],
+  "path": "toolbox/entity_extractor.py",
+  "family_size": 1,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/eric12.py": {
+  "bytes": 2361,
+  "category": "orphan",
+  "purpose": "﻿# -*- coding: utf-8 -*-",
+  "owner_skill": "",
+  "family": "eric",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding"
+  ],
+  "path": "toolbox/eric12.py",
+  "family_size": 1,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/evolution_scan.py": {
+  "bytes": 6123,
+  "category": "orphan",
+  "purpose": "依据 R-AUTO-07：机械任务用脚本，不用模型自由发挥。",
+  "owner_skill": "",
+  "family": "evolution",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "agent",
+   "encoding",
+   "eval",
+   "selfcheck"
+  ],
+  "path": "toolbox/evolution_scan.py",
+  "family_size": 2,
+  "skill_equivalent": "evolution-scan",
+  "scope_note": "扫描器（本技能正主）"
+ },
+ "toolbox/evolution_watch.py": {
+  "bytes": 3086,
+  "category": "orphan",
+  "purpose": "依据 R-AUTO-09：产出链之外，必须有一条独立路径校验\"是否按时来了\"。",
+  "owner_skill": "",
+  "family": "evolution",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding",
+   "eval",
+   "selfcheck"
+  ],
+  "path": "toolbox/evolution_watch.py",
+  "family_size": 2,
+  "skill_equivalent": "evolution-scan",
+  "scope_note": "缺席探测器（本技能正主）"
+ },
+ "toolbox/export_h1_report.py": {
+  "bytes": 983,
+  "category": "oneoff_family",
+  "purpose": "import os",
+  "owner_skill": "",
+  "family": "export",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "docx"
+  ],
+  "path": "toolbox/export_h1_report.py",
+  "family_size": 4,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/export_ppt.py": {
+  "bytes": 935,
+  "category": "oneoff_family",
+  "purpose": "Convert PPTX slide 1 to PNG using LibreOffice if available, else PowerPoint COM",
+  "owner_skill": "",
+  "family": "export",
+  "has_docstring": true,
+  "embedded_id": false,
+  "keywords": [
+   "pdf",
+   "pptx",
+   "render",
+   "review"
+  ],
+  "path": "toolbox/export_ppt.py",
+  "family_size": 4,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/export_v51_report.py": {
+  "bytes": 3166,
+  "category": "oneoff_family",
+  "purpose": "import os",
+  "owner_skill": "",
+  "family": "export",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "docx",
+   "encoding"
+  ],
+  "path": "toolbox/export_v51_report.py",
+  "family_size": 4,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/export_v5_report.py": {
+  "bytes": 3505,
+  "category": "oneoff_family",
+  "purpose": "import os",
+  "owner_skill": "",
+  "family": "export",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "docx",
+   "encoding"
+  ],
+  "path": "toolbox/export_v5_report.py",
+  "family_size": 4,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/extract_anyi.py": {
+  "bytes": 560,
+  "category": "oneoff_family",
+  "purpose": "import sys, io, re",
+  "owner_skill": "",
+  "family": "extract",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding",
+   "search"
+  ],
+  "path": "toolbox/extract_anyi.py",
+  "family_size": 7,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/extract_eric_report.py": {
+  "bytes": 467,
+  "category": "oneoff_family",
+  "purpose": "import fitz",
+  "owner_skill": "",
+  "family": "extract",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding",
+   "pdf"
+  ],
+  "path": "toolbox/extract_eric_report.py",
+  "family_size": 7,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/extract_garden_ppt.py": {
+  "bytes": 337,
+  "category": "oneoff_family",
+  "purpose": "读取 PPT 内容到文件",
+  "owner_skill": "",
+  "family": "extract",
+  "has_docstring": true,
+  "embedded_id": false,
+  "keywords": [
+   "encoding"
+  ],
+  "path": "toolbox/extract_garden_ppt.py",
+  "family_size": 7,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/extract_guozi.py": {
+  "bytes": 1012,
+  "category": "oneoff_family",
+  "purpose": "import fitz",
+  "owner_skill": "",
+  "family": "extract",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding",
+   "pdf"
+  ],
+  "path": "toolbox/extract_guozi.py",
+  "family_size": 7,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/extract_metrics.py": {
+  "bytes": 1907,
+  "category": "oneoff_family",
+  "purpose": "import re",
+  "owner_skill": "",
+  "family": "extract",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "docx"
+  ],
+  "path": "toolbox/extract_metrics.py",
+  "family_size": 7,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/extract_pptx_images.py": {
+  "bytes": 4531,
+  "category": "oneoff_family",
+  "purpose": "Extract all images from the Anyi Chashan PPTX.",
+  "owner_skill": "",
+  "family": "extract",
+  "has_docstring": true,
+  "embedded_id": false,
+  "keywords": [
+   "encoding",
+   "image",
+   "pptx"
+  ],
+  "path": "toolbox/extract_pptx_images.py",
+  "family_size": 7,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/extract_tea.py": {
+  "bytes": 5107,
+  "category": "oneoff_family",
+  "purpose": "提取安逸茶山三个核心文件的内容，写入一个文本文件供后续 read",
+  "owner_skill": "",
+  "family": "extract",
+  "has_docstring": true,
+  "embedded_id": false,
+  "keywords": [
+   "docx",
+   "encoding",
+   "pdf"
+  ],
+  "path": "toolbox/extract_tea.py",
+  "family_size": 7,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/fetch_report_text.py": {
+  "bytes": 1784,
+  "category": "capability",
+  "purpose": "Fetch a meadin/traveldaily report page and dump readable text.",
+  "owner_skill": "",
+  "family": "fetch",
+  "has_docstring": true,
+  "embedded_id": false,
+  "keywords": [
+   "agent",
+   "fetch"
+  ],
+  "path": "toolbox/fetch_report_text.py",
+  "family_size": 2,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/fetch_stealth_text.py": {
+  "bytes": 2818,
+  "category": "orphan",
+  "purpose": "Usage: python fetch_stealth_text.py <url> [limit_chars]",
+  "owner_skill": "",
+  "family": "fetch",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding",
+   "fetch",
+   "scrap"
+  ],
+  "path": "toolbox/fetch_stealth_text.py",
+  "family_size": 2,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/final_check.py": {
+  "bytes": 1257,
+  "category": "oneoff_family",
+  "purpose": "from pptx import Presentation",
+  "owner_skill": "",
+  "family": "final",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "pptx"
+  ],
+  "path": "toolbox/final_check.py",
+  "family_size": 2,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/final_delivery.py": {
+  "bytes": 9427,
+  "category": "oneoff_family",
+  "purpose": "import sys",
+  "owner_skill": "",
+  "family": "final",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding",
+   "index",
+   "review",
+   "search"
+  ],
+  "path": "toolbox/final_delivery.py",
+  "family_size": 2,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/find_cron_no_channel.py": {
+  "bytes": 2046,
+  "category": "orphan",
+  "purpose": "Eric 2026-09-08 15:07 决策",
+  "owner_skill": "",
+  "family": "find",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "fetch"
+  ],
+  "path": "toolbox/find_cron_no_channel.py",
+  "family_size": 1,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/fix_all_sqlite.py": {
+  "bytes": 2646,
+  "category": "oneoff_family",
+  "purpose": "import sqlite3",
+  "owner_skill": "",
+  "family": "fix",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "agent",
+   "fetch",
+   "index"
+  ],
+  "path": "toolbox/fix_all_sqlite.py",
+  "family_size": 9,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/fix_anYi_column.py": {
+  "bytes": 3368,
+  "category": "oneoff_family",
+  "purpose": "精确修正 3 个调研模板的\"安逸集团有无\"列",
+  "owner_skill": "",
+  "family": "fix",
+  "has_docstring": true,
+  "embedded_id": false,
+  "keywords": [
+   "encoding"
+  ],
+  "path": "toolbox/fix_anYi_column.py",
+  "family_size": 9,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/fix_daily_r66.py": {
+  "bytes": 1210,
+  "category": "oneoff_family",
+  "purpose": "Fix daily note R66 line 444 - precise replacement",
+  "owner_skill": "",
+  "family": "fix",
+  "has_docstring": true,
+  "embedded_id": false,
+  "keywords": [
+   "encoding"
+  ],
+  "path": "toolbox/fix_daily_r66.py",
+  "family_size": 9,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/fix_failed_cron_jobs.py": {
+  "bytes": 2479,
+  "category": "oneoff_family",
+  "purpose": "Eric 2026-09-08 15:14 决策",
+  "owner_skill": "",
+  "family": "fix",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "fetch"
+  ],
+  "path": "toolbox/fix_failed_cron_jobs.py",
+  "family_size": 9,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/fix_hb_1627_metrics.py": {
+  "bytes": 3161,
+  "category": "oneoff_family",
+  "purpose": "Fix HB #1627 state metrics with correct epoch values (verified).",
+  "owner_skill": "",
+  "family": "fix",
+  "has_docstring": true,
+  "embedded_id": true,
+  "keywords": [
+   "encoding"
+  ],
+  "path": "toolbox/fix_hb_1627_metrics.py",
+  "family_size": 9,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/fix_mixed_encoding.py": {
+  "bytes": 3268,
+  "category": "oneoff_family",
+  "purpose": "用法:",
+  "owner_skill": "",
+  "family": "fix",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding",
+   "repair"
+  ],
+  "path": "toolbox/fix_mixed_encoding.py",
+  "family_size": 9,
+  "skill_equivalent": "doc-encoding-repair",
+  "scope_note": "编码修复器（本技能正主）"
+ },
+ "toolbox/fix_p5_numbers.py": {
+  "bytes": 3625,
+  "category": "oneoff_family",
+  "purpose": "import os",
+  "owner_skill": "",
+  "family": "fix",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "docx"
+  ],
+  "path": "toolbox/fix_p5_numbers.py",
+  "family_size": 9,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/fix_sqlite_wal.py": {
+  "bytes": 2420,
+  "category": "oneoff_family",
+  "purpose": "策略：",
+  "owner_skill": "",
+  "family": "fix",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding",
+   "fetch"
+  ],
+  "path": "toolbox/fix_sqlite_wal.py",
+  "family_size": 9,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/fix_v3.py": {
+  "bytes": 1619,
+  "category": "oneoff_family",
+  "purpose": "修复 v3 脚本中 4 处 B() 字符串缺少结尾单引号",
+  "owner_skill": "",
+  "family": "fix",
+  "has_docstring": true,
+  "embedded_id": false,
+  "keywords": [
+   "encoding"
+  ],
+  "path": "toolbox/fix_v3.py",
+  "family_size": 9,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/force_rebuild.py": {
+  "bytes": 4747,
+  "category": "orphan",
+  "purpose": "执行步骤：",
+  "owner_skill": "",
+  "family": "force",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "agent",
+   "encoding",
+   "fetch"
+  ],
+  "path": "toolbox/force_rebuild.py",
+  "family_size": 1,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/full_machine_scan.py": {
+  "bytes": 5287,
+  "category": "orphan",
+  "purpose": "import sys, io",
+  "owner_skill": "playwright-cli",
+  "family": "full",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "agent",
+   "docx",
+   "encoding",
+   "eval",
+   "image",
+   "pdf"
+  ],
+  "path": "toolbox/full_machine_scan.py",
+  "family_size": 3,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/full_machine_v2.py": {
+  "bytes": 6087,
+  "category": "oneoff_family",
+  "purpose": "import sys, io, os",
+  "owner_skill": "playwright-cli",
+  "family": "full",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "agent",
+   "docx",
+   "encoding",
+   "image",
+   "pdf",
+   "pptx"
+  ],
+  "path": "toolbox/full_machine_v2.py",
+  "family_size": 3,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/full_repair.py": {
+  "bytes": 9604,
+  "category": "orphan",
+  "purpose": "Eric 2026-09-06 23:42 选 A：Step 1-3 全做",
+  "owner_skill": "hotel-feasibility-report",
+  "family": "full",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "agent",
+   "encoding",
+   "fetch",
+   "repair"
+  ],
+  "path": "toolbox/full_repair.py",
+  "family_size": 3,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/garden_ppt_safe.py": {
+  "bytes": 221,
+  "category": "orphan",
+  "purpose": "content = open(r'D:\\B166ER-OpenClaw\\workspace\\toolbox\\garden_ppt.txt', 'r', encoding='utf-8').read()",
+  "owner_skill": "",
+  "family": "garden",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding"
+  ],
+  "path": "toolbox/garden_ppt_safe.py",
+  "family_size": 1,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/gen_2026_summer_xhs_9.py": {
+  "bytes": 32281,
+  "category": "oneoff_family",
+  "purpose": "gen_2026_summer_xhs_9.py — 2026 暑期+入境议题 9 图图文 V2 (玉帝视角 · 来龙去脉版)",
+  "owner_skill": "",
+  "family": "gen",
+  "has_docstring": false,
+  "embedded_id": true,
+  "keywords": [
+   "encoding",
+   "image"
+  ],
+  "path": "toolbox/gen_2026_summer_xhs_9.py",
+  "family_size": 67,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/gen_2026_summer_xhs_v3.py": {
+  "bytes": 43357,
+  "category": "oneoff_family",
+  "purpose": "gen_2026_summer_xhs_v3.py - V3 Swiss Modern 海报 V3.1",
+  "owner_skill": "",
+  "family": "gen",
+  "has_docstring": false,
+  "embedded_id": true,
+  "keywords": [
+   "encoding",
+   "image",
+   "index"
+  ],
+  "path": "toolbox/gen_2026_summer_xhs_v3.py",
+  "family_size": 67,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/gen_ahl_xhs_v1.py": {
+  "bytes": 26155,
+  "category": "oneoff_family",
+  "purpose": "AHL · 小红书范式多图 (12 张)",
+  "owner_skill": "",
+  "family": "gen",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "image"
+  ],
+  "path": "toolbox/gen_ahl_xhs_v1.py",
+  "family_size": 67,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/gen_ai_procurement_xlsx.py": {
+  "bytes": 14055,
+  "category": "oneoff_family",
+  "purpose": "import os",
+  "owner_skill": "",
+  "family": "gen",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "agent"
+  ],
+  "path": "toolbox/gen_ai_procurement_xlsx.py",
+  "family_size": 67,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/gen_ai_procurement_xlsx_v2.py": {
+  "bytes": 12945,
+  "category": "oneoff_family",
+  "purpose": "import os",
+  "owner_skill": "",
+  "family": "gen",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [],
+  "path": "toolbox/gen_ai_procurement_xlsx_v2.py",
+  "family_size": 67,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/gen_ai_rms.py": {
+  "bytes": 31956,
+  "category": "oneoff_family",
+  "purpose": "import os",
+  "owner_skill": "",
+  "family": "gen",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "agent",
+   "docx"
+  ],
+  "path": "toolbox/gen_ai_rms.py",
+  "family_size": 67,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/gen_ai_rms_gw.py": {
+  "bytes": 28068,
+  "category": "oneoff_family",
+  "purpose": "import os",
+  "owner_skill": "",
+  "family": "gen",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "docx"
+  ],
+  "path": "toolbox/gen_ai_rms_gw.py",
+  "family_size": 67,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/gen_all_collection_forms.py": {
+  "bytes": 59653,
+  "category": "oneoff_family",
+  "purpose": "把全部 14 个立项信息搜集文件改成采集表模板",
+  "owner_skill": "",
+  "family": "gen",
+  "has_docstring": true,
+  "embedded_id": false,
+  "keywords": [
+   "docx"
+  ],
+  "path": "toolbox/gen_all_collection_forms.py",
+  "family_size": 67,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/gen_collection_form.py": {
+  "bytes": 11297,
+  "category": "oneoff_family",
+  "purpose": "把 01_集团与56家酒店账号现状.docx 改成下发采集表单",
+  "owner_skill": "",
+  "family": "gen",
+  "has_docstring": true,
+  "embedded_id": false,
+  "keywords": [
+   "docx"
+  ],
+  "path": "toolbox/gen_collection_form.py",
+  "family_size": 67,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/gen_dagan100_addlist.py": {
+  "bytes": 14939,
+  "category": "oneoff_family",
+  "purpose": "import os",
+  "owner_skill": "",
+  "family": "gen",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "docx"
+  ],
+  "path": "toolbox/gen_dagan100_addlist.py",
+  "family_size": 67,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/gen_dagan100_review.py": {
+  "bytes": 12431,
+  "category": "oneoff_family",
+  "purpose": "import os",
+  "owner_skill": "",
+  "family": "gen",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "docx"
+  ],
+  "path": "toolbox/gen_dagan100_review.py",
+  "family_size": 67,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/gen_dimensions_doc.py": {
+  "bytes": 18689,
+  "category": "oneoff_family",
+  "purpose": "生成：立项信息搜集维度文件（Word 版本）",
+  "owner_skill": "",
+  "family": "gen",
+  "has_docstring": true,
+  "embedded_id": false,
+  "keywords": [
+   "docx"
+  ],
+  "path": "toolbox/gen_dimensions_doc.py",
+  "family_size": 67,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/gen_fazhan_taizhang.py": {
+  "bytes": 15866,
+  "category": "oneoff_family",
+  "purpose": "import os",
+  "owner_skill": "",
+  "family": "gen",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [],
+  "path": "toolbox/gen_fazhan_taizhang.py",
+  "family_size": 67,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/gen_fazhan_taizhang_final.py": {
+  "bytes": 1948,
+  "category": "oneoff_family",
+  "purpose": "import os",
+  "owner_skill": "",
+  "family": "gen",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [],
+  "path": "toolbox/gen_fazhan_taizhang_final.py",
+  "family_size": 67,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/gen_fazhan_taizhang_v2.py": {
+  "bytes": 2335,
+  "category": "oneoff_family",
+  "purpose": "import os",
+  "owner_skill": "",
+  "family": "gen",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [],
+  "path": "toolbox/gen_fazhan_taizhang_v2.py",
+  "family_size": 67,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/gen_fazhan_taizhang_v3.py": {
+  "bytes": 2191,
+  "category": "oneoff_family",
+  "purpose": "import os",
+  "owner_skill": "",
+  "family": "gen",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [],
+  "path": "toolbox/gen_fazhan_taizhang_v3.py",
+  "family_size": 67,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/gen_firstyear_target.py": {
+  "bytes": 17109,
+  "category": "oneoff_family",
+  "purpose": "import io, sys, os",
+  "owner_skill": "",
+  "family": "gen",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding"
+  ],
+  "path": "toolbox/gen_firstyear_target.py",
+  "family_size": 67,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/gen_guoqing_panorama_pptx.py": {
+  "bytes": 31992,
+  "category": "oneoff_family",
+  "purpose": "2026 国庆酒店市场全景 · 安逸集团视角 —— 数据图示型 PPT 生成器",
+  "owner_skill": "",
+  "family": "gen",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "pptx"
+  ],
+  "path": "toolbox/gen_guoqing_panorama_pptx.py",
+  "family_size": 67,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/gen_hongyuan_brief.py": {
+  "bytes": 16088,
+  "category": "oneoff_family",
+  "purpose": "﻿# -*- coding: utf-8 -*-",
+  "owner_skill": "",
+  "family": "gen",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "docx"
+  ],
+  "path": "toolbox/gen_hongyuan_brief.py",
+  "family_size": 67,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/gen_hotel_brand_report.py": {
+  "bytes": 59105,
+  "category": "oneoff_family",
+  "purpose": "酒店品牌市场指数综合排名 · 2026 H2",
+  "owner_skill": "",
+  "family": "gen",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "docx",
+   "eval"
+  ],
+  "path": "toolbox/gen_hotel_brand_report.py",
+  "family_size": 67,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/gen_hotel_brand_report_v2.py": {
+  "bytes": 95708,
+  "category": "oneoff_family",
+  "purpose": "酒店品牌市场指数综合排名 · 2026 H2",
+  "owner_skill": "",
+  "family": "gen",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "docx",
+   "eval"
+  ],
+  "path": "toolbox/gen_hotel_brand_report_v2.py",
+  "family_size": 67,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/gen_hotel_brand_report_v3.py": {
+  "bytes": 100114,
+  "category": "oneoff_family",
+  "purpose": "酒店品牌市场指数综合排名 · 2026 H2",
+  "owner_skill": "",
+  "family": "gen",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "docx",
+   "eval"
+  ],
+  "path": "toolbox/gen_hotel_brand_report_v3.py",
+  "family_size": 67,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/gen_hotel_monthly_report_pptx.py": {
+  "bytes": 37804,
+  "category": "oneoff_family",
+  "purpose": "安逸酒店集团 · 酒店经营月报 标准范式 v3.0 —— 可编辑 PPT 生成器",
+  "owner_skill": "",
+  "family": "gen",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding",
+   "pptx"
+  ],
+  "path": "toolbox/gen_hotel_monthly_report_pptx.py",
+  "family_size": 67,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/gen_kb02_word.py": {
+  "bytes": 17504,
+  "category": "oneoff_family",
+  "purpose": "生成：头部酒店集团新媒体矩阵调研报告（Word 版本）",
+  "owner_skill": "",
+  "family": "gen",
+  "has_docstring": true,
+  "embedded_id": false,
+  "keywords": [
+   "agent",
+   "docx",
+   "scrap"
+  ],
+  "path": "toolbox/gen_kb02_word.py",
+  "family_size": 67,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/gen_kb02_word_v2.py": {
+  "bytes": 21269,
+  "category": "oneoff_family",
+  "purpose": "生成 v1.1：头部酒店集团新媒体矩阵调研报告（基于 715 + 修订稿）",
+  "owner_skill": "",
+  "family": "gen",
+  "has_docstring": true,
+  "embedded_id": false,
+  "keywords": [
+   "docx",
+   "scrap"
+  ],
+  "path": "toolbox/gen_kb02_word_v2.py",
+  "family_size": 67,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/gen_kb02_word_v3.py": {
+  "bytes": 18199,
+  "category": "oneoff_family",
+  "purpose": "v1.2：基于真正的修订稿（45 页）— 1244 战略（非 1244+1）",
+  "owner_skill": "",
+  "family": "gen",
+  "has_docstring": true,
+  "embedded_id": false,
+  "keywords": [
+   "docx"
+  ],
+  "path": "toolbox/gen_kb02_word_v3.py",
+  "family_size": 67,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/gen_lingbo_fee.py": {
+  "bytes": 17425,
+  "category": "oneoff_family",
+  "purpose": "import os",
+  "owner_skill": "",
+  "family": "gen",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "docx"
+  ],
+  "path": "toolbox/gen_lingbo_fee.py",
+  "family_size": 67,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/gen_lingbo_report.py": {
+  "bytes": 32218,
+  "category": "oneoff_family",
+  "purpose": "import os",
+  "owner_skill": "",
+  "family": "gen",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "docx"
+  ],
+  "path": "toolbox/gen_lingbo_report.py",
+  "family_size": 67,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/gen_mindmap_html.py": {
+  "bytes": 2385,
+  "category": "oneoff_family",
+  "purpose": "生成自定义样式的 markmap HTML(大字体 + 暖色背景)",
+  "owner_skill": "",
+  "family": "gen",
+  "has_docstring": true,
+  "embedded_id": false,
+  "keywords": [
+   "encoding",
+   "index"
+  ],
+  "path": "toolbox/gen_mindmap_html.py",
+  "family_size": 67,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/gen_region_market_pptx.py": {
+  "bytes": 47438,
+  "category": "oneoff_family",
+  "purpose": "安逸酒店所在区域 · 2026 国庆区域市场数据 PPT 生成器",
+  "owner_skill": "",
+  "family": "gen",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "pptx"
+  ],
+  "path": "toolbox/gen_region_market_pptx.py",
+  "family_size": 67,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/gen_renbao_hotel.py": {
+  "bytes": 6614,
+  "category": "oneoff_family",
+  "purpose": "import os",
+  "owner_skill": "",
+  "family": "gen",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [],
+  "path": "toolbox/gen_renbao_hotel.py",
+  "family_size": 67,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/gen_renbao_hotel2.py": {
+  "bytes": 9666,
+  "category": "oneoff_family",
+  "purpose": "import os",
+  "owner_skill": "",
+  "family": "gen",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [],
+  "path": "toolbox/gen_renbao_hotel2.py",
+  "family_size": 67,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/gen_renbao_hotel3.py": {
+  "bytes": 11229,
+  "category": "oneoff_family",
+  "purpose": "import os",
+  "owner_skill": "",
+  "family": "gen",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [],
+  "path": "toolbox/gen_renbao_hotel3.py",
+  "family_size": 67,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/gen_report.py": {
+  "bytes": 20786,
+  "category": "oneoff_family",
+  "purpose": "import os",
+  "owner_skill": "",
+  "family": "gen",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "docx"
+  ],
+  "path": "toolbox/gen_report.py",
+  "family_size": 67,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/gen_report_v2.py": {
+  "bytes": 36801,
+  "category": "oneoff_family",
+  "purpose": "import os",
+  "owner_skill": "",
+  "family": "gen",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "docx"
+  ],
+  "path": "toolbox/gen_report_v2.py",
+  "family_size": 67,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/gen_resort_brand.py": {
+  "bytes": 22496,
+  "category": "oneoff_family",
+  "purpose": "﻿# -*- coding: utf-8 -*-",
+  "owner_skill": "",
+  "family": "gen",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "docx"
+  ],
+  "path": "toolbox/gen_resort_brand.py",
+  "family_size": 67,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/gen_split_docs.py": {
+  "bytes": 30124,
+  "category": "oneoff_family",
+  "purpose": "生成按大类拆分的立项信息搜集 Word 文件",
+  "owner_skill": "",
+  "family": "gen",
+  "has_docstring": true,
+  "embedded_id": false,
+  "keywords": [
+   "docx"
+  ],
+  "path": "toolbox/gen_split_docs.py",
+  "family_size": 67,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/gen_split_v2.py": {
+  "bytes": 26546,
+  "category": "oneoff_family",
+  "purpose": "简化版：每个文件独立 try/except，错误不影响其他",
+  "owner_skill": "",
+  "family": "gen",
+  "has_docstring": true,
+  "embedded_id": false,
+  "keywords": [
+   "docx"
+  ],
+  "path": "toolbox/gen_split_v2.py",
+  "family_size": 67,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/gen_str_calib.py": {
+  "bytes": 15035,
+  "category": "oneoff_family",
+  "purpose": "import os",
+  "owner_skill": "",
+  "family": "gen",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "docx"
+  ],
+  "path": "toolbox/gen_str_calib.py",
+  "family_size": 67,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/gen_tea_plan.py": {
+  "bytes": 33955,
+  "category": "oneoff_family",
+  "purpose": "生成「书山茶海」——安逸茶山×帆书巴蜀文化走廊核心场景方案 Word 文档",
+  "owner_skill": "",
+  "family": "gen",
+  "has_docstring": true,
+  "embedded_id": false,
+  "keywords": [
+   "docx"
+  ],
+  "path": "toolbox/gen_tea_plan.py",
+  "family_size": 67,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/gen_tea_plan_v2.py": {
+  "bytes": 18835,
+  "category": "oneoff_family",
+  "purpose": "生成 v2：「书山茶海」——茶山（蒙顶山茶业）对帆书方案的回应（试点级）",
+  "owner_skill": "",
+  "family": "gen",
+  "has_docstring": true,
+  "embedded_id": false,
+  "keywords": [
+   "docx"
+  ],
+  "path": "toolbox/gen_tea_plan_v2.py",
+  "family_size": 67,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/gen_tea_plan_v3.py": {
+  "bytes": 26254,
+  "category": "oneoff_family",
+  "purpose": "生成 v3：「书山茶海」——茶山对帆书方案的回应（线上线下双轮，线上为主）",
+  "owner_skill": "",
+  "family": "gen",
+  "has_docstring": true,
+  "embedded_id": false,
+  "keywords": [
+   "docx"
+  ],
+  "path": "toolbox/gen_tea_plan_v3.py",
+  "family_size": 67,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/gen_v5_plan.py": {
+  "bytes": 33079,
+  "category": "oneoff_family",
+  "purpose": "import os",
+  "owner_skill": "",
+  "family": "gen",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "agent",
+   "docx"
+  ],
+  "path": "toolbox/gen_v5_plan.py",
+  "family_size": 67,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/gen_xhs_6grid_hotel.py": {
+  "bytes": 33700,
+  "category": "oneoff_family",
+  "purpose": "gen_xhs_6grid_hotel.py — 玉帝视角酒店业深度解读 6 图图文(小红书通用受众版)",
+  "owner_skill": "",
+  "family": "gen",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding",
+   "image",
+   "index"
+  ],
+  "path": "toolbox/gen_xhs_6grid_hotel.py",
+  "family_size": 67,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/gen_xhs_carousel.py": {
+  "bytes": 32527,
+  "category": "oneoff_family",
+  "purpose": "小红书范式 · 酒店品牌市场指数综合排名",
+  "owner_skill": "",
+  "family": "gen",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "image"
+  ],
+  "path": "toolbox/gen_xhs_carousel.py",
+  "family_size": 67,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/gen_xhs_carousel_v2.py": {
+  "bytes": 23491,
+  "category": "oneoff_family",
+  "purpose": "小红书范式 · 酒店品牌市场指数综合排名",
+  "owner_skill": "",
+  "family": "gen",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "image"
+  ],
+  "path": "toolbox/gen_xhs_carousel_v2.py",
+  "family_size": 67,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/gen_xhs_carousel_v3.py": {
+  "bytes": 22548,
+  "category": "oneoff_family",
+  "purpose": "小红书范式 · 酒店品牌市场指数综合排名",
+  "owner_skill": "",
+  "family": "gen",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "image"
+  ],
+  "path": "toolbox/gen_xhs_carousel_v3.py",
+  "family_size": 67,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/gen_xhs_supply_chain_v10.py": {
+  "bytes": 7923,
+  "category": "oneoff_family",
+  "purpose": "import sys, io",
+  "owner_skill": "",
+  "family": "gen",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding",
+   "image",
+   "pdf"
+  ],
+  "path": "toolbox/gen_xhs_supply_chain_v10.py",
+  "family_size": 67,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/gen_xhs_v6_dongfang.py": {
+  "bytes": 11938,
+  "category": "oneoff_family",
+  "purpose": "小红书多图笔记 - 「酒店退款，钱到底在谁那里？」",
+  "owner_skill": "",
+  "family": "gen",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding",
+   "render"
+  ],
+  "path": "toolbox/gen_xhs_v6_dongfang.py",
+  "family_size": 67,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/gen_xiaohongshu_supply_chain.py": {
+  "bytes": 5334,
+  "category": "oneoff_family",
+  "purpose": "from pathlib import Path",
+  "owner_skill": "",
+  "family": "gen",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding",
+   "pdf"
+  ],
+  "path": "toolbox/gen_xiaohongshu_supply_chain.py",
+  "family_size": 67,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/gen_xiongmao_docx.py": {
+  "bytes": 13295,
+  "category": "oneoff_family",
+  "purpose": "import os",
+  "owner_skill": "",
+  "family": "gen",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "docx"
+  ],
+  "path": "toolbox/gen_xiongmao_docx.py",
+  "family_size": 67,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/gen_xiongmao_v2.py": {
+  "bytes": 15677,
+  "category": "oneoff_family",
+  "purpose": "﻿# -*- coding: utf-8 -*-",
+  "owner_skill": "",
+  "family": "gen",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "docx"
+  ],
+  "path": "toolbox/gen_xiongmao_v2.py",
+  "family_size": 67,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/gen_xiongmao_v3.py": {
+  "bytes": 14924,
+  "category": "oneoff_family",
+  "purpose": "import os",
+  "owner_skill": "",
+  "family": "gen",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "docx"
+  ],
+  "path": "toolbox/gen_xiongmao_v3.py",
+  "family_size": 67,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/gen_xizhang.py": {
+  "bytes": 21810,
+  "category": "oneoff_family",
+  "purpose": "import os",
+  "owner_skill": "",
+  "family": "gen",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "docx"
+  ],
+  "path": "toolbox/gen_xizhang.py",
+  "family_size": 67,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/gen_xizhang_gw.py": {
+  "bytes": 12290,
+  "category": "oneoff_family",
+  "purpose": "import os",
+  "owner_skill": "",
+  "family": "gen",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "docx"
+  ],
+  "path": "toolbox/gen_xizhang_gw.py",
+  "family_size": 67,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/gen_xizhang_gw2.py": {
+  "bytes": 5171,
+  "category": "oneoff_family",
+  "purpose": "import os",
+  "owner_skill": "",
+  "family": "gen",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "docx"
+  ],
+  "path": "toolbox/gen_xizhang_gw2.py",
+  "family_size": 67,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/gen_yqyz_fashi.py": {
+  "bytes": 16784,
+  "category": "oneoff_family",
+  "purpose": "﻿# -*- coding: utf-8 -*-",
+  "owner_skill": "",
+  "family": "gen",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "docx"
+  ],
+  "path": "toolbox/gen_yqyz_fashi.py",
+  "family_size": 67,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/gen_yqyz_template.py": {
+  "bytes": 21346,
+  "category": "oneoff_family",
+  "purpose": "﻿# -*- coding: utf-8 -*-",
+  "owner_skill": "",
+  "family": "gen",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [],
+  "path": "toolbox/gen_yqyz_template.py",
+  "family_size": 67,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/gen_yqyz_v11.py": {
+  "bytes": 18732,
+  "category": "oneoff_family",
+  "purpose": "﻿# -*- coding: utf-8 -*-",
+  "owner_skill": "",
+  "family": "gen",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [],
+  "path": "toolbox/gen_yqyz_v11.py",
+  "family_size": 67,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/gen_yqyz_v13.py": {
+  "bytes": 11249,
+  "category": "oneoff_family",
+  "purpose": "import os",
+  "owner_skill": "",
+  "family": "gen",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [],
+  "path": "toolbox/gen_yqyz_v13.py",
+  "family_size": 67,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/gen_zou_final.py": {
+  "bytes": 12693,
+  "category": "oneoff_family",
+  "purpose": "生成：邹士勇总发言稿（2026酒店品牌展暨酒店投资峰会）— Eric 调整 v5.5 后的简练模板版",
+  "owner_skill": "",
+  "family": "gen",
+  "has_docstring": true,
+  "embedded_id": false,
+  "keywords": [
+   "docx"
+  ],
+  "path": "toolbox/gen_zou_final.py",
+  "family_size": 67,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/gen_zou_v5.py": {
+  "bytes": 12816,
+  "category": "oneoff_family",
+  "purpose": "生成：邹士勇发言稿 v5.0 案例版（基于董事长语音批复）",
+  "owner_skill": "",
+  "family": "gen",
+  "has_docstring": true,
+  "embedded_id": false,
+  "keywords": [
+   "docx"
+  ],
+  "path": "toolbox/gen_zou_v5.py",
+  "family_size": 67,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/gen_zou_v51.py": {
+  "bytes": 13475,
+  "category": "oneoff_family",
+  "purpose": "生成：邹士勇发言稿 v5.1（任职时间修订版）",
+  "owner_skill": "",
+  "family": "gen",
+  "has_docstring": true,
+  "embedded_id": false,
+  "keywords": [
+   "docx"
+  ],
+  "path": "toolbox/gen_zou_v51.py",
+  "family_size": 67,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/gen_zou_v52.py": {
+  "bytes": 15564,
+  "category": "oneoff_family",
+  "purpose": "生成：邹士勇发言稿 v5.2 集团案例版（去掉 16 年包装，回归集团视角）",
+  "owner_skill": "",
+  "family": "gen",
+  "has_docstring": true,
+  "embedded_id": false,
+  "keywords": [
+   "docx"
+  ],
+  "path": "toolbox/gen_zou_v52.py",
+  "family_size": 67,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/gen_zou_v53.py": {
+  "bytes": 15036,
+  "category": "oneoff_family",
+  "purpose": "生成：邹士勇发言稿 v5.3（战略名称修订：1234 → 1244）",
+  "owner_skill": "",
+  "family": "gen",
+  "has_docstring": true,
+  "embedded_id": false,
+  "keywords": [
+   "docx"
+  ],
+  "path": "toolbox/gen_zou_v53.py",
+  "family_size": 67,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/gen_zou_v54.py": {
+  "bytes": 17548,
+  "category": "oneoff_family",
+  "purpose": "生成：邹士勇发言稿 v5.4（1244 战略内容填实版）",
+  "owner_skill": "",
+  "family": "gen",
+  "has_docstring": true,
+  "embedded_id": false,
+  "keywords": [
+   "docx"
+  ],
+  "path": "toolbox/gen_zou_v54.py",
+  "family_size": 67,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/gen_zou_v55.py": {
+  "bytes": 16242,
+  "category": "oneoff_family",
+  "purpose": "生成：邹士勇发言稿 v5.5（基于十五五规划 + 全面现状复盘版）",
+  "owner_skill": "",
+  "family": "gen",
+  "has_docstring": true,
+  "embedded_id": false,
+  "keywords": [
+   "docx"
+  ],
+  "path": "toolbox/gen_zou_v55.py",
+  "family_size": 67,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/geo_rewm.py": {
+  "bytes": 513,
+  "category": "capability",
+  "purpose": "Re-apply watermark only (no re-render).",
+  "owner_skill": "",
+  "family": "geo",
+  "has_docstring": true,
+  "embedded_id": false,
+  "keywords": [
+   "render"
+  ],
+  "path": "toolbox/geo_rewm.py",
+  "family_size": 4,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/geo_search_matrix.py": {
+  "bytes": 1602,
+  "category": "capability",
+  "purpose": "Parallel GEO research - 5 angles, all in one batch.",
+  "owner_skill": "",
+  "family": "geo",
+  "has_docstring": true,
+  "embedded_id": false,
+  "keywords": [
+   "agent",
+   "encoding",
+   "search"
+  ],
+  "path": "toolbox/geo_search_matrix.py",
+  "family_size": 4,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/geo_search_v2.py": {
+  "bytes": 1760,
+  "category": "oneoff_family",
+  "purpose": "Phase 2: 去重 + 评分 + 读取 Top 文章",
+  "owner_skill": "",
+  "family": "geo",
+  "has_docstring": true,
+  "embedded_id": false,
+  "keywords": [
+   "agent",
+   "encoding",
+   "search"
+  ],
+  "path": "toolbox/geo_search_v2.py",
+  "family_size": 4,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/geo_v4_mckinsey.py": {
+  "bytes": 21255,
+  "category": "capability",
+  "purpose": "GEO topic · V4 麦肯锡 9 张小红书图.",
+  "owner_skill": "",
+  "family": "geo",
+  "has_docstring": true,
+  "embedded_id": false,
+  "keywords": [
+   "agent",
+   "image",
+   "index"
+  ],
+  "path": "toolbox/geo_v4_mckinsey.py",
+  "family_size": 4,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/get_size.py": {
+  "bytes": 360,
+  "category": "orphan",
+  "purpose": "import os",
+  "owner_skill": "",
+  "family": "get",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [],
+  "path": "toolbox/get_size.py",
+  "family_size": 1,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/grep_ersxiao.py": {
+  "bytes": 702,
+  "category": "orphan",
+  "purpose": "import sys, io, os, re",
+  "owner_skill": "",
+  "family": "grep",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding"
+  ],
+  "path": "toolbox/grep_ersxiao.py",
+  "family_size": 2,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/grep_guoyan.py": {
+  "bytes": 629,
+  "category": "orphan",
+  "purpose": "import sys, io",
+  "owner_skill": "",
+  "family": "grep",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding"
+  ],
+  "path": "toolbox/grep_guoyan.py",
+  "family_size": 2,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/guoyan_3levels_sensitivity.py": {
+  "bytes": 11813,
+  "category": "orphan",
+  "purpose": "国堰宾馆·文创改造 投资敏感性分析 — 3 档投资测试 (3000/4000/5000 万)",
+  "owner_skill": "",
+  "family": "guoyan",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding"
+  ],
+  "path": "toolbox/guoyan_3levels_sensitivity.py",
+  "family_size": 1,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/hb_state_update.py": {
+  "bytes": 748,
+  "category": "orphan",
+  "purpose": "import json, os",
+  "owner_skill": "",
+  "family": "hb",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding"
+  ],
+  "path": "toolbox/hb_state_update.py",
+  "family_size": 3,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/hb_tick.py": {
+  "bytes": 1172,
+  "category": "orphan",
+  "purpose": "import json, os, sys, time",
+  "owner_skill": "",
+  "family": "hb",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding"
+  ],
+  "path": "toolbox/hb_tick.py",
+  "family_size": 3,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/hb_tick_670.py": {
+  "bytes": 4193,
+  "category": "orphan",
+  "purpose": "import json",
+  "owner_skill": "",
+  "family": "hb",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding",
+   "index",
+   "infographic"
+  ],
+  "path": "toolbox/hb_tick_670.py",
+  "family_size": 3,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/heartbeat_append.py": {
+  "bytes": 6500,
+  "category": "orphan",
+  "purpose": "Heartbeat append utility (R-NEW-V2 enforced).",
+  "owner_skill": "",
+  "family": "heartbeat",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding"
+  ],
+  "path": "toolbox/heartbeat_append.py",
+  "family_size": 7,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/heartbeat_archive.py": {
+  "bytes": 2763,
+  "category": "capability",
+  "purpose": "R268 HEARTBEAT.md Archive Maintenance",
+  "owner_skill": "",
+  "family": "heartbeat",
+  "has_docstring": true,
+  "embedded_id": false,
+  "keywords": [
+   "encoding",
+   "search"
+  ],
+  "path": "toolbox/heartbeat_archive.py",
+  "family_size": 7,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/heartbeat_hb330.py": {
+  "bytes": 3887,
+  "category": "orphan",
+  "purpose": "HB #330 heartbeat handler — 2026-07-17 05:18 GMT+8",
+  "owner_skill": "",
+  "family": "heartbeat",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding",
+   "eval"
+  ],
+  "path": "toolbox/heartbeat_hb330.py",
+  "family_size": 7,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/heartbeat_tick.py": {
+  "bytes": 1050,
+  "category": "capability",
+  "purpose": "Heartbeat atomic tick per R-NEW-V4.",
+  "owner_skill": "",
+  "family": "heartbeat",
+  "has_docstring": true,
+  "embedded_id": false,
+  "keywords": [
+   "encoding"
+  ],
+  "path": "toolbox/heartbeat_tick.py",
+  "family_size": 7,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/heartbeat_tick_3430.py": {
+  "bytes": 4884,
+  "category": "oneoff_family",
+  "purpose": "R271 + R-NEW-V3 + R-NEW-V4 compliant heartbeat tick.",
+  "owner_skill": "",
+  "family": "heartbeat",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding",
+   "render"
+  ],
+  "path": "toolbox/heartbeat_tick_3430.py",
+  "family_size": 7,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/heartbeat_tick_v2.py": {
+  "bytes": 4535,
+  "category": "oneoff_family",
+  "purpose": "Heartbeat atomic tick: state.json (R-NEW-V4) + daily note append (R-NEW-V3).",
+  "owner_skill": "",
+  "family": "heartbeat",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding"
+  ],
+  "path": "toolbox/heartbeat_tick_v2.py",
+  "family_size": 7,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/heartbeat_weather.py": {
+  "bytes": 383,
+  "category": "orphan",
+  "purpose": "import urllib.request, json",
+  "owner_skill": "weather",
+  "family": "heartbeat",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [],
+  "path": "toolbox/heartbeat_weather.py",
+  "family_size": 7,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/hotel_h1_xhs_master.py": {
+  "bytes": 19894,
+  "category": "capability",
+  "purpose": "2026 H1 中国酒店行业全景状态报告 · 小红书 12 图",
+  "owner_skill": "",
+  "family": "hotel",
+  "has_docstring": true,
+  "embedded_id": false,
+  "keywords": [],
+  "path": "toolbox/hotel_h1_xhs_master.py",
+  "family_size": 4,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/hotel_irr_calc.py": {
+  "bytes": 28910,
+  "category": "orphan",
+  "purpose": "hotel_irr_calc.py — 酒店投资测算自动化脚本（按集团通用模版 v1.0 口径）",
+  "owner_skill": "",
+  "family": "hotel",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [],
+  "path": "toolbox/hotel_irr_calc.py",
+  "family_size": 4,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/hotel_list.py": {
+  "bytes": 582,
+  "category": "orphan",
+  "purpose": "import sys, io, re",
+  "owner_skill": "",
+  "family": "hotel",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding"
+  ],
+  "path": "toolbox/hotel_list.py",
+  "family_size": 4,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/hotel_sources.py": {
+  "bytes": 28111,
+  "category": "capability",
+  "purpose": "B166ER 酒店行业信源矩阵",
+  "owner_skill": "",
+  "family": "hotel",
+  "has_docstring": true,
+  "embedded_id": false,
+  "keywords": [
+   "review"
+  ],
+  "path": "toolbox/hotel_sources.py",
+  "family_size": 4,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/import_external_to_vault.py": {
+  "bytes": 6054,
+  "category": "oneoff_family",
+  "purpose": "import sys, io, shutil",
+  "owner_skill": "",
+  "family": "import",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "agent",
+   "docx",
+   "encoding",
+   "index"
+  ],
+  "path": "toolbox/import_external_to_vault.py",
+  "family_size": 1,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/inject_key.py": {
+  "bytes": 1327,
+  "category": "capability",
+  "purpose": "Inject working apiclaude key into OpenClaw auth_profile_store",
+  "owner_skill": "",
+  "family": "inject",
+  "has_docstring": true,
+  "embedded_id": false,
+  "keywords": [
+   "agent",
+   "encoding",
+   "fetch",
+   "search"
+  ],
+  "path": "toolbox/inject_key.py",
+  "family_size": 1,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/inspect_auth_store.py": {
+  "bytes": 2050,
+  "category": "capability",
+  "purpose": "Update OpenClaw auth store to use the working apiclaude key",
+  "owner_skill": "",
+  "family": "inspect",
+  "has_docstring": true,
+  "embedded_id": false,
+  "keywords": [
+   "agent",
+   "encoding",
+   "fetch",
+   "search"
+  ],
+  "path": "toolbox/inspect_auth_store.py",
+  "family_size": 4,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/inspect_e9.py": {
+  "bytes": 1693,
+  "category": "capability",
+  "purpose": "检查 E9 完整属性 - 找出为什么变成 CTG!A1",
+  "owner_skill": "",
+  "family": "inspect",
+  "has_docstring": true,
+  "embedded_id": false,
+  "keywords": [],
+  "path": "toolbox/inspect_e9.py",
+  "family_size": 4,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/inspect_failed_cron_jobs.py": {
+  "bytes": 1264,
+  "category": "orphan",
+  "purpose": "Eric 2026-09-08 15:09 决策",
+  "owner_skill": "",
+  "family": "inspect",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "fetch"
+  ],
+  "path": "toolbox/inspect_failed_cron_jobs.py",
+  "family_size": 4,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/inspect_template.py": {
+  "bytes": 1416,
+  "category": "capability",
+  "purpose": "检查模板文档的字体/样式设置",
+  "owner_skill": "",
+  "family": "inspect",
+  "has_docstring": true,
+  "embedded_id": false,
+  "keywords": [
+   "docx"
+  ],
+  "path": "toolbox/inspect_template.py",
+  "family_size": 4,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/invisible_playwright.py": {
+  "bytes": 785,
+  "category": "orphan",
+  "purpose": "invisible_playwright.py - 兼容垫片 (shim)",
+  "owner_skill": "",
+  "family": "invisible",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "agent",
+   "scrap"
+  ],
+  "path": "toolbox/invisible_playwright.py",
+  "family_size": 1,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/kb_deepener.py": {
+  "bytes": 9418,
+  "category": "orphan",
+  "purpose": "kb_deepener.py - V4 方法论自动应用工具",
+  "owner_skill": "",
+  "family": "kb",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding"
+  ],
+  "path": "toolbox/kb_deepener.py",
+  "family_size": 1,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/knowledge_base.py": {
+  "bytes": 6220,
+  "category": "orphan",
+  "purpose": "knowledge_base.py — Compatibility shim for `from knowledge_base import B166ERKnowledgeBase`",
+  "owner_skill": "",
+  "family": "knowledge",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding",
+   "index",
+   "search",
+   "semantic"
+  ],
+  "path": "toolbox/knowledge_base.py",
+  "family_size": 1,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/local_backup.py": {
+  "bytes": 2653,
+  "category": "orphan",
+  "purpose": "B166ER Local Backup Script",
+  "owner_skill": "",
+  "family": "local",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "agent",
+   "encoding"
+  ],
+  "path": "toolbox/local_backup.py",
+  "family_size": 1,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/log_hb861.py": {
+  "bytes": 789,
+  "category": "capability",
+  "purpose": "Append minimal HB #861 log entry to today's memory file (R-NEW-V2 compliant).",
+  "owner_skill": "",
+  "family": "log",
+  "has_docstring": true,
+  "embedded_id": false,
+  "keywords": [
+   "encoding"
+  ],
+  "path": "toolbox/log_hb861.py",
+  "family_size": 2,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/log_rnewv3_violation.py": {
+  "bytes": 2196,
+  "category": "capability",
+  "purpose": "R-NEW-V3 violation #5 log append to corrections.md",
+  "owner_skill": "",
+  "family": "log",
+  "has_docstring": true,
+  "embedded_id": false,
+  "keywords": [
+   "encoding"
+  ],
+  "path": "toolbox/log_rnewv3_violation.py",
+  "family_size": 2,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/make_topology.py": {
+  "bytes": 20150,
+  "category": "oneoff_family",
+  "purpose": "用法:",
+  "owner_skill": "",
+  "family": "make",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding",
+   "eval",
+   "image",
+   "topology"
+  ],
+  "path": "toolbox/make_topology.py",
+  "family_size": 1,
+  "skill_equivalent": "topology-infographic",
+  "scope_note": "拓扑图生成器（本技能正主）"
+ },
+ "toolbox/map_probe.py": {
+  "bytes": 2194,
+  "category": "orphan",
+  "purpose": "import sys, asyncio, json, re, io",
+  "owner_skill": "",
+  "family": "map",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "agent",
+   "encoding",
+   "search"
+  ],
+  "path": "toolbox/map_probe.py",
+  "family_size": 1,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/md2docx.py": {
+  "bytes": 6788,
+  "category": "orphan",
+  "purpose": "用法: python md2docx.py <in.md> <out.docx> [--title \"...\"] [--subtitle \"...\"]",
+  "owner_skill": "",
+  "family": "md2docx",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "docx",
+   "encoding"
+  ],
+  "path": "toolbox/md2docx.py",
+  "family_size": 1,
+  "skill_equivalent": "docx-md-bridge",
+  "scope_note": "研判报告排版变体（宋体/黑体/纸色主题）。★通用 md→docx 请用 skills/docx-md-bridge"
+ },
+ "toolbox/md2gongwen_docx.py": {
+  "bytes": 5964,
+  "category": "orphan",
+  "purpose": "参照 toolbox/_mk_mt_docx.py 排版参数：",
+  "owner_skill": "",
+  "family": "md2gongwen",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "docx",
+   "encoding"
+  ],
+  "path": "toolbox/md2gongwen_docx.py",
+  "family_size": 1,
+  "skill_equivalent": "gongwen-docx-cn",
+  "scope_note": "公文版式（旧克隆）—— 已被 skills/gongwen-docx-cn 取代"
+ },
+ "toolbox/md_to_pdf.py": {
+  "bytes": 6186,
+  "category": "orphan",
+  "purpose": "MD → HTML → PDF 转换器（使用 Edge headless）",
+  "owner_skill": "",
+  "family": "md",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding",
+   "pdf"
+  ],
+  "path": "toolbox/md_to_pdf.py",
+  "family_size": 1,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/mem_str.py": {
+  "bytes": 4569,
+  "category": "orphan",
+  "purpose": "﻿# -*- coding: utf-8 -*-",
+  "owner_skill": "github",
+  "family": "mem",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "docx",
+   "encoding",
+   "pdf"
+  ],
+  "path": "toolbox/mem_str.py",
+  "family_size": 1,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/merge_all.py": {
+  "bytes": 10495,
+  "category": "oneoff_family",
+  "purpose": "import sys, io",
+  "owner_skill": "",
+  "family": "merge",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "agent",
+   "encoding"
+  ],
+  "path": "toolbox/merge_all.py",
+  "family_size": 5,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/merge_pdf.py": {
+  "bytes": 20510,
+  "category": "oneoff_family",
+  "purpose": "合并 13 个 MD 为综合主报告 PDF",
+  "owner_skill": "",
+  "family": "merge",
+  "has_docstring": true,
+  "embedded_id": false,
+  "keywords": [
+   "pdf"
+  ],
+  "path": "toolbox/merge_pdf.py",
+  "family_size": 5,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/merge_training.py": {
+  "bytes": 1092,
+  "category": "oneoff_family",
+  "purpose": "import os",
+  "owner_skill": "",
+  "family": "merge",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [],
+  "path": "toolbox/merge_training.py",
+  "family_size": 5,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/merge_v5.py": {
+  "bytes": 9743,
+  "category": "oneoff_family",
+  "purpose": "import io, os, re, sys",
+  "owner_skill": "",
+  "family": "merge",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding"
+  ],
+  "path": "toolbox/merge_v5.py",
+  "family_size": 5,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/merge_v51.py": {
+  "bytes": 15922,
+  "category": "oneoff_family",
+  "purpose": "import io, os, re, sys",
+  "owner_skill": "",
+  "family": "merge",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding",
+   "index"
+  ],
+  "path": "toolbox/merge_v51.py",
+  "family_size": 5,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/monthly_review_check.py": {
+  "bytes": 3087,
+  "category": "orphan",
+  "purpose": "月度复盘报告「缺席检测」脚本 (2026-10-26 新增)",
+  "owner_skill": "",
+  "family": "monthly",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding",
+   "review"
+  ],
+  "path": "toolbox/monthly_review_check.py",
+  "family_size": 1,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/obsidian_archive_empty.py": {
+  "bytes": 1416,
+  "category": "orphan",
+  "purpose": "import sys, shutil",
+  "owner_skill": "",
+  "family": "obsidian",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding"
+  ],
+  "path": "toolbox/obsidian_archive_empty.py",
+  "family_size": 19,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/obsidian_check_errors.py": {
+  "bytes": 1771,
+  "category": "orphan",
+  "purpose": "import sys",
+  "owner_skill": "",
+  "family": "obsidian",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "agent",
+   "encoding",
+   "review"
+  ],
+  "path": "toolbox/obsidian_check_errors.py",
+  "family_size": 19,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/obsidian_classify.py": {
+  "bytes": 1410,
+  "category": "orphan",
+  "purpose": "import os",
+  "owner_skill": "",
+  "family": "obsidian",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [],
+  "path": "toolbox/obsidian_classify.py",
+  "family_size": 19,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/obsidian_copy_phase1.py": {
+  "bytes": 3298,
+  "category": "orphan",
+  "purpose": "Step 2: 桌面 -> vault 复制 (复制, 不是移动; 不删除桌面)",
+  "owner_skill": "",
+  "family": "obsidian",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding"
+  ],
+  "path": "toolbox/obsidian_copy_phase1.py",
+  "family_size": 19,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/obsidian_copy_phase2.py": {
+  "bytes": 2768,
+  "category": "orphan",
+  "purpose": "import sys, shutil, hashlib",
+  "owner_skill": "",
+  "family": "obsidian",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "docx",
+   "encoding",
+   "pdf"
+  ],
+  "path": "toolbox/obsidian_copy_phase2.py",
+  "family_size": 19,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/obsidian_delivery.py": {
+  "bytes": 10063,
+  "category": "orphan",
+  "purpose": "import sys",
+  "owner_skill": "",
+  "family": "obsidian",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "docx",
+   "encoding",
+   "index",
+   "pdf",
+   "pptx"
+  ],
+  "path": "toolbox/obsidian_delivery.py",
+  "family_size": 19,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/obsidian_index_phase3.py": {
+  "bytes": 9890,
+  "category": "orphan",
+  "purpose": "import sys",
+  "owner_skill": "",
+  "family": "obsidian",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding",
+   "index",
+   "pdf"
+  ],
+  "path": "toolbox/obsidian_index_phase3.py",
+  "family_size": 19,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/obsidian_link_diag.py": {
+  "bytes": 2196,
+  "category": "orphan",
+  "purpose": "import sys, re",
+  "owner_skill": "",
+  "family": "obsidian",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "agent",
+   "encoding"
+  ],
+  "path": "toolbox/obsidian_link_diag.py",
+  "family_size": 19,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/obsidian_link_injector.py": {
+  "bytes": 8615,
+  "category": "orphan",
+  "purpose": "obsidian_link_injector.py",
+  "owner_skill": "",
+  "family": "obsidian",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "agent",
+   "encoding",
+   "review",
+   "search"
+  ],
+  "path": "toolbox/obsidian_link_injector.py",
+  "family_size": 19,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/obsidian_link_injector_v2.py": {
+  "bytes": 3107,
+  "category": "oneoff_family",
+  "purpose": "策略:",
+  "owner_skill": "",
+  "family": "obsidian",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding",
+   "search"
+  ],
+  "path": "toolbox/obsidian_link_injector_v2.py",
+  "family_size": 19,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/obsidian_link_suite.py": {
+  "bytes": 2472,
+  "category": "orphan",
+  "purpose": "obsidian_link_suite.py — Obsidian 链接工具集 (今晚所有 ROI 整合)",
+  "owner_skill": "",
+  "family": "obsidian",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding"
+  ],
+  "path": "toolbox/obsidian_link_suite.py",
+  "family_size": 19,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/obsidian_map_readme.py": {
+  "bytes": 6346,
+  "category": "orphan",
+  "purpose": "import sys",
+  "owner_skill": "",
+  "family": "obsidian",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "docx",
+   "encoding",
+   "index",
+   "pdf"
+  ],
+  "path": "toolbox/obsidian_map_readme.py",
+  "family_size": 19,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/obsidian_phase5.py": {
+  "bytes": 1157,
+  "category": "orphan",
+  "purpose": "策略: 备份到 main vault 后, 删除空 vault 整个目录",
+  "owner_skill": "",
+  "family": "obsidian",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding"
+  ],
+  "path": "toolbox/obsidian_phase5.py",
+  "family_size": 19,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/obsidian_phase5_recovery.py": {
+  "bytes": 2213,
+  "category": "orphan",
+  "purpose": "import sys",
+  "owner_skill": "",
+  "family": "obsidian",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding"
+  ],
+  "path": "toolbox/obsidian_phase5_recovery.py",
+  "family_size": 19,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/obsidian_roi25_inject.py": {
+  "bytes": 4770,
+  "category": "orphan",
+  "purpose": "import sys, re",
+  "owner_skill": "",
+  "family": "obsidian",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding",
+   "review",
+   "search"
+  ],
+  "path": "toolbox/obsidian_roi25_inject.py",
+  "family_size": 19,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/obsidian_roi25_mirror.py": {
+  "bytes": 5099,
+  "category": "orphan",
+  "purpose": "import sys, re",
+  "owner_skill": "",
+  "family": "obsidian",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "agent",
+   "encoding",
+   "search"
+  ],
+  "path": "toolbox/obsidian_roi25_mirror.py",
+  "family_size": 19,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/obsidian_roi2_inject.py": {
+  "bytes": 5664,
+  "category": "orphan",
+  "purpose": "ROI 2 实施: 给 hub MOC 加 ## 📋 桌面项目素材 区, 列出该主题的所有相关 .md",
+  "owner_skill": "",
+  "family": "obsidian",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "agent",
+   "encoding",
+   "search"
+  ],
+  "path": "toolbox/obsidian_roi2_inject.py",
+  "family_size": 19,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/obsidian_step1_overlap.py": {
+  "bytes": 4160,
+  "category": "orphan",
+  "purpose": "Step 1: 找桌面 vs vault 的同名/同名类似文件,识别重叠",
+  "owner_skill": "",
+  "family": "obsidian",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding",
+   "index"
+  ],
+  "path": "toolbox/obsidian_step1_overlap.py",
+  "family_size": 19,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/obsidian_sync.py": {
+  "bytes": 8704,
+  "category": "orphan",
+  "purpose": "obsidian_sync.py — Obsidian 统一归纳工具 (V1.0)",
+  "owner_skill": "",
+  "family": "obsidian",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "docx",
+   "encoding",
+   "index",
+   "pdf"
+  ],
+  "path": "toolbox/obsidian_sync.py",
+  "family_size": 19,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/ocr_15wu.py": {
+  "bytes": 1912,
+  "category": "orphan",
+  "purpose": "import pypdfium2 as pdfium",
+  "owner_skill": "",
+  "family": "ocr",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding",
+   "image",
+   "ocr",
+   "pdf",
+   "render"
+  ],
+  "path": "toolbox/ocr_15wu.py",
+  "family_size": 2,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/ocr_guozi.py": {
+  "bytes": 1801,
+  "category": "orphan",
+  "purpose": "import fitz",
+  "owner_skill": "",
+  "family": "ocr",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding",
+   "image",
+   "ocr",
+   "pdf",
+   "render"
+  ],
+  "path": "toolbox/ocr_guozi.py",
+  "family_size": 2,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/officecli_skill.py": {
+  "bytes": 11865,
+  "category": "capability",
+  "purpose": "officecli_skill.py — B166ER production wrapper for OfficeCLI v1.0.135",
+  "owner_skill": "officecli",
+  "family": "officecli",
+  "has_docstring": true,
+  "embedded_id": false,
+  "keywords": [
+   "docx",
+   "encoding",
+   "index",
+   "pptx"
+  ],
+  "path": "toolbox/officecli_skill.py",
+  "family_size": 1,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/ota_probe.py": {
+  "bytes": 2003,
+  "category": "orphan",
+  "purpose": "import sys, asyncio, json, re",
+  "owner_skill": "",
+  "family": "ota",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "agent",
+   "encoding"
+  ],
+  "path": "toolbox/ota_probe.py",
+  "family_size": 1,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/patch_auth.py": {
+  "bytes": 2117,
+  "category": "oneoff_family",
+  "purpose": "Inject working apiclaude key into OpenClaw auth_profile_store (overwrite anthropic:default)",
+  "owner_skill": "",
+  "family": "patch",
+  "has_docstring": true,
+  "embedded_id": false,
+  "keywords": [
+   "agent",
+   "encoding",
+   "fetch",
+   "search"
+  ],
+  "path": "toolbox/patch_auth.py",
+  "family_size": 1,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/pdf_15n.py": {
+  "bytes": 802,
+  "category": "orphan",
+  "purpose": "import sys, io, os",
+  "owner_skill": "",
+  "family": "pdf",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding",
+   "pdf"
+  ],
+  "path": "toolbox/pdf_15n.py",
+  "family_size": 1,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/push_monthly_pred.py": {
+  "bytes": 1175,
+  "category": "oneoff_family",
+  "purpose": "推送月报预测-T5 到 Obsidian",
+  "owner_skill": "",
+  "family": "push",
+  "has_docstring": true,
+  "embedded_id": false,
+  "keywords": [],
+  "path": "toolbox/push_monthly_pred.py",
+  "family_size": 2,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/push_to_vault.py": {
+  "bytes": 10687,
+  "category": "oneoff_family",
+  "purpose": "push_to_vault.py — 对话产出实时入 vault + 自动关联",
+  "owner_skill": "",
+  "family": "push",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "agent",
+   "encoding",
+   "scrap"
+  ],
+  "path": "toolbox/push_to_vault.py",
+  "family_size": 2,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/quick_user_scan.py": {
+  "bytes": 3781,
+  "category": "orphan",
+  "purpose": "import sys, io",
+  "owner_skill": "",
+  "family": "quick",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "docx",
+   "encoding",
+   "image",
+   "pdf",
+   "pptx"
+  ],
+  "path": "toolbox/quick_user_scan.py",
+  "family_size": 1,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/r_system_corrupt_map.py": {
+  "bytes": 1853,
+  "category": "orphan",
+  "purpose": "import os, re",
+  "owner_skill": "",
+  "family": "r",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding"
+  ],
+  "path": "toolbox/r_system_corrupt_map.py",
+  "family_size": 4,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/r_system_diagnose.py": {
+  "bytes": 2913,
+  "category": "orphan",
+  "purpose": "import re, os, collections",
+  "owner_skill": "",
+  "family": "r",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding",
+   "pdf",
+   "search"
+  ],
+  "path": "toolbox/r_system_diagnose.py",
+  "family_size": 4,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/r_system_encoding_check.py": {
+  "bytes": 2003,
+  "category": "orphan",
+  "purpose": "import os",
+  "owner_skill": "",
+  "family": "r",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [],
+  "path": "toolbox/r_system_encoding_check.py",
+  "family_size": 4,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/r_system_fix.py": {
+  "bytes": 5121,
+  "category": "orphan",
+  "purpose": "import os, re",
+  "owner_skill": "",
+  "family": "r",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding"
+  ],
+  "path": "toolbox/r_system_fix.py",
+  "family_size": 4,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/read_docx_batch.py": {
+  "bytes": 1452,
+  "category": "orphan",
+  "purpose": "import os",
+  "owner_skill": "",
+  "family": "read",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "docx"
+  ],
+  "path": "toolbox/read_docx_batch.py",
+  "family_size": 7,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/read_garden_ppt.py": {
+  "bytes": 823,
+  "category": "capability",
+  "purpose": "读取花园宾馆改造 PPT 所有文本",
+  "owner_skill": "",
+  "family": "read",
+  "has_docstring": true,
+  "embedded_id": false,
+  "keywords": [
+   "encoding",
+   "pptx"
+  ],
+  "path": "toolbox/read_garden_ppt.py",
+  "family_size": 7,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/read_pdf.py": {
+  "bytes": 820,
+  "category": "orphan",
+  "purpose": "from pypdf import PdfReader",
+  "owner_skill": "",
+  "family": "read",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "pdf"
+  ],
+  "path": "toolbox/read_pdf.py",
+  "family_size": 7,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/read_tianfu_files.py": {
+  "bytes": 1129,
+  "category": "orphan",
+  "purpose": "import sys",
+  "owner_skill": "",
+  "family": "read",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "docx",
+   "encoding"
+  ],
+  "path": "toolbox/read_tianfu_files.py",
+  "family_size": 7,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/read_tianfu_pdfs.py": {
+  "bytes": 961,
+  "category": "orphan",
+  "purpose": "import sys",
+  "owner_skill": "",
+  "family": "read",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding",
+   "pdf"
+  ],
+  "path": "toolbox/read_tianfu_pdfs.py",
+  "family_size": 7,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/read_xlsx.py": {
+  "bytes": 680,
+  "category": "orphan",
+  "purpose": "import sys, io",
+  "owner_skill": "",
+  "family": "read",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding"
+  ],
+  "path": "toolbox/read_xlsx.py",
+  "family_size": 7,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/read_zongfu_files.py": {
+  "bytes": 1124,
+  "category": "orphan",
+  "purpose": "import sys",
+  "owner_skill": "",
+  "family": "read",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "docx",
+   "encoding"
+  ],
+  "path": "toolbox/read_zongfu_files.py",
+  "family_size": 7,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/rebuild_c_lost.py": {
+  "bytes": 7241,
+  "category": "orphan",
+  "purpose": "from pathlib import Path",
+  "owner_skill": "",
+  "family": "rebuild",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "agent",
+   "encoding"
+  ],
+  "path": "toolbox/rebuild_c_lost.py",
+  "family_size": 6,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/rebuild_c_lost_part2.py": {
+  "bytes": 19304,
+  "category": "orphan",
+  "purpose": "from pathlib import Path",
+  "owner_skill": "",
+  "family": "rebuild",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "agent",
+   "encoding"
+  ],
+  "path": "toolbox/rebuild_c_lost_part2.py",
+  "family_size": 6,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/rebuild_c_lost_part3.py": {
+  "bytes": 7030,
+  "category": "orphan",
+  "purpose": "from pathlib import Path",
+  "owner_skill": "hotel-revenue-management",
+  "family": "rebuild",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding",
+   "index",
+   "search"
+  ],
+  "path": "toolbox/rebuild_c_lost_part3.py",
+  "family_size": 6,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/rebuild_hotel_source_matrix.py": {
+  "bytes": 5763,
+  "category": "orphan",
+  "purpose": "Eric 2026-09-07 00:55 指令: 重新建立酒店行业信源矩阵",
+  "owner_skill": "hotel-report",
+  "family": "rebuild",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding"
+  ],
+  "path": "toolbox/rebuild_hotel_source_matrix.py",
+  "family_size": 6,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/rebuild_obsidian_vault.py": {
+  "bytes": 4225,
+  "category": "orphan",
+  "purpose": "保守恢复 obsidian-vault (方案 1)",
+  "owner_skill": "",
+  "family": "rebuild",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding"
+  ],
+  "path": "toolbox/rebuild_obsidian_vault.py",
+  "family_size": 6,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/rebuild_sqlite.py": {
+  "bytes": 2816,
+  "category": "orphan",
+  "purpose": "VACUUM 不够，因为是 IMMEDIATE 锁 vs gateway 的写入冲突。",
+  "owner_skill": "",
+  "family": "rebuild",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "agent",
+   "encoding",
+   "fetch"
+  ],
+  "path": "toolbox/rebuild_sqlite.py",
+  "family_size": 6,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/redbook_poster.py": {
+  "bytes": 25383,
+  "category": "capability",
+  "purpose": "小红书既定范式海报生成器 — 深蓝金奢华版 (PIL 本地渲染)",
+  "owner_skill": "",
+  "family": "redbook",
+  "has_docstring": true,
+  "embedded_id": false,
+  "keywords": [
+   "image",
+   "render"
+  ],
+  "path": "toolbox/redbook_poster.py",
+  "family_size": 1,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/regen_template_02.py": {
+  "bytes": 19717,
+  "category": "capability",
+  "purpose": "生成模板 02 - 集团 (15 维度)",
+  "owner_skill": "",
+  "family": "regen",
+  "has_docstring": true,
+  "embedded_id": false,
+  "keywords": [],
+  "path": "toolbox/regen_template_02.py",
+  "family_size": 3,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/regen_template_03.py": {
+  "bytes": 15642,
+  "category": "capability",
+  "purpose": "生成模板 03 - 旗下酒店 (12 维度)",
+  "owner_skill": "",
+  "family": "regen",
+  "has_docstring": true,
+  "embedded_id": false,
+  "keywords": [],
+  "path": "toolbox/regen_template_03.py",
+  "family_size": 3,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/regen_templates.py": {
+  "bytes": 14343,
+  "category": "capability",
+  "purpose": "重新生成 3 个干净的调研模板, 每张表统一 7 列格式",
+  "owner_skill": "",
+  "family": "regen",
+  "has_docstring": true,
+  "embedded_id": false,
+  "keywords": [],
+  "path": "toolbox/regen_templates.py",
+  "family_size": 3,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/registry_gap_probe.py": {
+  "bytes": 13474,
+  "category": "orphan",
+  "purpose": "registry_gap_probe.py — 市场空白监测器 (V2.0, 2026-10-25)",
+  "owner_skill": "",
+  "family": "registry",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "agent",
+   "encoding",
+   "search"
+  ],
+  "path": "toolbox/registry_gap_probe.py",
+  "family_size": 1,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/remove_text_promotional.py": {
+  "bytes": 2295,
+  "category": "oneoff_family",
+  "purpose": "去宣传片截图中的文字 (OCR 检测 + OpenCV inpaint)",
+  "owner_skill": "",
+  "family": "remove",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding",
+   "image",
+   "ocr"
+  ],
+  "path": "toolbox/remove_text_promotional.py",
+  "family_size": 1,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/render_h1_xhs.py": {
+  "bytes": 2173,
+  "category": "capability",
+  "purpose": "Render 12 张 2026 H1 酒店行业 小红书 麦肯锡风 滑片",
+  "owner_skill": "",
+  "family": "render",
+  "has_docstring": true,
+  "embedded_id": false,
+  "keywords": [
+   "encoding",
+   "render"
+  ],
+  "path": "toolbox/render_h1_xhs.py",
+  "family_size": 2,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/render_hotel_benchmark.py": {
+  "bytes": 900,
+  "category": "capability",
+  "purpose": "Render hotel_benchmark.html → 1920x1080 PNG (Retina 2x).",
+  "owner_skill": "",
+  "family": "render",
+  "has_docstring": true,
+  "embedded_id": false,
+  "keywords": [
+   "render"
+  ],
+  "path": "toolbox/render_hotel_benchmark.py",
+  "family_size": 2,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/reorg_xhs.py": {
+  "bytes": 1097,
+  "category": "orphan",
+  "purpose": "import os, shutil",
+  "owner_skill": "",
+  "family": "reorg",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [],
+  "path": "toolbox/reorg_xhs.py",
+  "family_size": 1,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/restore_session_config.py": {
+  "bytes": 2949,
+  "category": "orphan",
+  "purpose": "restore_session_config.py - 从快照恢复 OpenClaw 侧边栏配置",
+  "owner_skill": "",
+  "family": "restore",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding"
+  ],
+  "path": "toolbox/restore_session_config.py",
+  "family_size": 2,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/restore_state_json.py": {
+  "bytes": 1647,
+  "category": "orphan",
+  "purpose": "import json",
+  "owner_skill": "",
+  "family": "restore",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding"
+  ],
+  "path": "toolbox/restore_state_json.py",
+  "family_size": 2,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/rewrite_proposal.py": {
+  "bytes": 9962,
+  "category": "orphan",
+  "purpose": "总府川宾可研报告重写方案 — 关键示例数据计算",
+  "owner_skill": "",
+  "family": "rewrite",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [],
+  "path": "toolbox/rewrite_proposal.py",
+  "family_size": 1,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/rgi_benchmark_sichuan.py": {
+  "bytes": 5362,
+  "category": "orphan",
+  "purpose": "RGI 对标法反推 — 四川宾馆改造项目 (165 间)",
+  "owner_skill": "",
+  "family": "rgi",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [],
+  "path": "toolbox/rgi_benchmark_sichuan.py",
+  "family_size": 1,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/scrape_matrix.py": {
+  "bytes": 30154,
+  "category": "orphan",
+  "purpose": "AHL爬虫技能矩阵 - 统一爬虫接口",
+  "owner_skill": "",
+  "family": "scrape",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "eval",
+   "fetch",
+   "scrap",
+   "search"
+  ],
+  "path": "toolbox/scrape_matrix.py",
+  "family_size": 2,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/scrape_prototype.py": {
+  "bytes": 8181,
+  "category": "orphan",
+  "purpose": "总府川宾竞品扒取原型 — Day 1-2 阶段",
+  "owner_skill": "",
+  "family": "scrape",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding",
+   "scrap",
+   "search"
+  ],
+  "path": "toolbox/scrape_prototype.py",
+  "family_size": 2,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/screenshot_mindmap.py": {
+  "bytes": 1848,
+  "category": "capability",
+  "purpose": "Edge headless screenshot with virtual-time-budget for JS rendering",
+  "owner_skill": "",
+  "family": "screenshot",
+  "has_docstring": true,
+  "embedded_id": false,
+  "keywords": [
+   "encoding",
+   "render"
+  ],
+  "path": "toolbox/screenshot_mindmap.py",
+  "family_size": 2,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/screenshot_mindmap_pw.py": {
+  "bytes": 2049,
+  "category": "capability",
+  "purpose": "使用 Playwright 截图（带 JS 等待）",
+  "owner_skill": "",
+  "family": "screenshot",
+  "has_docstring": true,
+  "embedded_id": false,
+  "keywords": [
+   "image"
+  ],
+  "path": "toolbox/screenshot_mindmap_pw.py",
+  "family_size": 2,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/selfcheck.py": {
+  "bytes": 50854,
+  "category": "orphan",
+  "purpose": "用法:",
+  "owner_skill": "",
+  "family": "selfcheck",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding",
+   "eval",
+   "index",
+   "search",
+   "selfcheck"
+  ],
+  "path": "toolbox/selfcheck.py",
+  "family_size": 1,
+  "skill_equivalent": "self-check-assertions",
+  "scope_note": "自检断言执行器（本技能正主）"
+ },
+ "toolbox/skel.py": {
+  "bytes": 1551,
+  "category": "orphan",
+  "purpose": "﻿# -*- coding: utf-8 -*-",
+  "owner_skill": "",
+  "family": "skel",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding",
+   "search"
+  ],
+  "path": "toolbox/skel.py",
+  "family_size": 1,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/skill_market_scan.py": {
+  "bytes": 42673,
+  "category": "orphan",
+  "purpose": "r\"\"\"",
+  "owner_skill": "",
+  "family": "skill",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "agent",
+   "encoding",
+   "search"
+  ],
+  "path": "toolbox/skill_market_scan.py",
+  "family_size": 2,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/skill_router.py": {
+  "bytes": 8182,
+  "category": "orphan",
+  "purpose": "★ 用法:",
+  "owner_skill": "",
+  "family": "skill",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "docx",
+   "encoding",
+   "index",
+   "router",
+   "selfcheck"
+  ],
+  "path": "toolbox/skill_router.py",
+  "family_size": 2,
+  "skill_equivalent": "skill-registry-router",
+  "scope_note": "技能路由（本技能正主）"
+ },
+ "toolbox/skills_health.py": {
+  "bytes": 2592,
+  "category": "orphan",
+  "purpose": "import json",
+  "owner_skill": "",
+  "family": "skills",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "agent",
+   "encoding"
+  ],
+  "path": "toolbox/skills_health.py",
+  "family_size": 1,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/skyvern_client.py": {
+  "bytes": 1304,
+  "category": "orphan",
+  "purpose": "skyvern_client.py - 兼容垫片 (shim)",
+  "owner_skill": "",
+  "family": "skyvern",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "agent",
+   "scrap"
+  ],
+  "path": "toolbox/skyvern_client.py",
+  "family_size": 1,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/strip_ctg_terms.py": {
+  "bytes": 1682,
+  "category": "capability",
+  "purpose": "删除 集团价格代码字典.xlsx 中的指定字串: 中旅/中国旅游/CTG/心享会",
+  "owner_skill": "",
+  "family": "strip",
+  "has_docstring": true,
+  "embedded_id": false,
+  "keywords": [],
+  "path": "toolbox/strip_ctg_terms.py",
+  "family_size": 3,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/strip_ctg_terms_v2.py": {
+  "bytes": 1956,
+  "category": "oneoff_family",
+  "purpose": "删除 集团价格代码字典.xlsx 中的指定字串: 中旅/中国旅游/CTG/心享会",
+  "owner_skill": "",
+  "family": "strip",
+  "has_docstring": true,
+  "embedded_id": false,
+  "keywords": [],
+  "path": "toolbox/strip_ctg_terms_v2.py",
+  "family_size": 3,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/strip_ctg_terms_v3.py": {
+  "bytes": 2715,
+  "category": "oneoff_family",
+  "purpose": "完整清理 v3:",
+  "owner_skill": "",
+  "family": "strip",
+  "has_docstring": true,
+  "embedded_id": false,
+  "keywords": [],
+  "path": "toolbox/strip_ctg_terms_v3.py",
+  "family_size": 3,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/survey_all_sources.py": {
+  "bytes": 2408,
+  "category": "capability",
+  "purpose": "盘点 B166ER 实际信源矩阵的全貌",
+  "owner_skill": "",
+  "family": "survey",
+  "has_docstring": true,
+  "embedded_id": false,
+  "keywords": [
+   "encoding",
+   "index"
+  ],
+  "path": "toolbox/survey_all_sources.py",
+  "family_size": 1,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/svg_to_png.py": {
+  "bytes": 751,
+  "category": "capability",
+  "purpose": "SVG 转 PNG (高分辨率)",
+  "owner_skill": "",
+  "family": "svg",
+  "has_docstring": true,
+  "embedded_id": false,
+  "keywords": [
+   "pdf",
+   "render"
+  ],
+  "path": "toolbox/svg_to_png.py",
+  "family_size": 1,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/sync_all_to_vault.py": {
+  "bytes": 7236,
+  "category": "oneoff_family",
+  "purpose": "import sys, io, shutil",
+  "owner_skill": "",
+  "family": "sync",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "agent",
+   "encoding",
+   "search"
+  ],
+  "path": "toolbox/sync_all_to_vault.py",
+  "family_size": 2,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/sync_external_p2.py": {
+  "bytes": 2086,
+  "category": "oneoff_family",
+  "purpose": "import sys, io, shutil",
+  "owner_skill": "",
+  "family": "sync",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding"
+  ],
+  "path": "toolbox/sync_external_p2.py",
+  "family_size": 2,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/tavily_search.py": {
+  "bytes": 1520,
+  "category": "orphan",
+  "purpose": "tavily_search.py - 兼容垫片 (shim)",
+  "owner_skill": "",
+  "family": "tavily",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "scrap",
+   "search"
+  ],
+  "path": "toolbox/tavily_search.py",
+  "family_size": 1,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/test_apiclaude_diag.py": {
+  "bytes": 2148,
+  "category": "capability",
+  "purpose": "Test apiclaude.cc connectivity with the real key from openclaw.json",
+  "owner_skill": "",
+  "family": "test",
+  "has_docstring": true,
+  "embedded_id": false,
+  "keywords": [
+   "encoding",
+   "search"
+  ],
+  "path": "toolbox/test_apiclaude_diag.py",
+  "family_size": 2,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/test_minimal_repro.py": {
+  "bytes": 1871,
+  "category": "capability",
+  "purpose": "最小复现测试:只修改 E9 一个单元格(CTG → '')",
+  "owner_skill": "",
+  "family": "test",
+  "has_docstring": true,
+  "embedded_id": false,
+  "keywords": [],
+  "path": "toolbox/test_minimal_repro.py",
+  "family_size": 2,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/tick_3268.py": {
+  "bytes": 5155,
+  "category": "oneoff_family",
+  "purpose": "HB #3268 tick — R271 atomic-write + R-NEW-V3 daily-file append.",
+  "owner_skill": "",
+  "family": "tick",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding",
+   "render"
+  ],
+  "path": "toolbox/tick_3268.py",
+  "family_size": 9,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/tick_hb.py": {
+  "bytes": 762,
+  "category": "orphan",
+  "purpose": "import json, os, time",
+  "owner_skill": "",
+  "family": "tick",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding"
+  ],
+  "path": "toolbox/tick_hb.py",
+  "family_size": 9,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/tick_hb861.py": {
+  "bytes": 1732,
+  "category": "capability",
+  "purpose": "Minimal HB tick updater — R-NEW-V2 compliant (Python utf-8 explicit read+write).",
+  "owner_skill": "",
+  "family": "tick",
+  "has_docstring": true,
+  "embedded_id": false,
+  "keywords": [
+   "encoding"
+  ],
+  "path": "toolbox/tick_hb861.py",
+  "family_size": 9,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/tick_hb861_fix.py": {
+  "bytes": 1613,
+  "category": "capability",
+  "purpose": "Minimal HB tick updater — fix: preserve existing duration fields, just bump count + timestamps.",
+  "owner_skill": "",
+  "family": "tick",
+  "has_docstring": true,
+  "embedded_id": false,
+  "keywords": [
+   "encoding"
+  ],
+  "path": "toolbox/tick_hb861_fix.py",
+  "family_size": 9,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/tick_hb_3308.py": {
+  "bytes": 4824,
+  "category": "oneoff_family",
+  "purpose": "import json",
+  "owner_skill": "",
+  "family": "tick",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding",
+   "render"
+  ],
+  "path": "toolbox/tick_hb_3308.py",
+  "family_size": 9,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/tick_hb_3665.py": {
+  "bytes": 519,
+  "category": "oneoff_family",
+  "purpose": "import json, os",
+  "owner_skill": "",
+  "family": "tick",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding"
+  ],
+  "path": "toolbox/tick_hb_3665.py",
+  "family_size": 9,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/tick_heartbeat.py": {
+  "bytes": 653,
+  "category": "orphan",
+  "purpose": "import json, os, time",
+  "owner_skill": "",
+  "family": "tick",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding"
+  ],
+  "path": "toolbox/tick_heartbeat.py",
+  "family_size": 9,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/tick_state.py": {
+  "bytes": 815,
+  "category": "orphan",
+  "purpose": "import json, os",
+  "owner_skill": "",
+  "family": "tick",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding"
+  ],
+  "path": "toolbox/tick_state.py",
+  "family_size": 9,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/tick_time.py": {
+  "bytes": 311,
+  "category": "capability",
+  "purpose": "B166ER heartbeat tick — minimal stdout for cron pipelines.",
+  "owner_skill": "",
+  "family": "tick",
+  "has_docstring": true,
+  "embedded_id": false,
+  "keywords": [],
+  "path": "toolbox/tick_time.py",
+  "family_size": 9,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/token_guard.py": {
+  "bytes": 3720,
+  "category": "orphan",
+  "purpose": "token_guard.py - 上下文使用量守护",
+  "owner_skill": "",
+  "family": "token",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding"
+  ],
+  "path": "toolbox/token_guard.py",
+  "family_size": 2,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/token_guard_silent.py": {
+  "bytes": 3238,
+  "category": "orphan",
+  "purpose": "Token Guard v3 Silent - 后台静默版",
+  "owner_skill": "",
+  "family": "token",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding"
+  ],
+  "path": "toolbox/token_guard_silent.py",
+  "family_size": 2,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/tools_matrix_pdf.py": {
+  "bytes": 28796,
+  "category": "capability",
+  "purpose": "工具清单 PDF：整合 05 + 12，按规模分级组织",
+  "owner_skill": "",
+  "family": "tools",
+  "has_docstring": true,
+  "embedded_id": false,
+  "keywords": [
+   "pdf"
+  ],
+  "path": "toolbox/tools_matrix_pdf.py",
+  "family_size": 1,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/triple_test.py": {
+  "bytes": 835,
+  "category": "orphan",
+  "purpose": "import sys",
+  "owner_skill": "github",
+  "family": "triple",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "crawl"
+  ],
+  "path": "toolbox/triple_test.py",
+  "family_size": 1,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/update_cron_readme.py": {
+  "bytes": 4969,
+  "category": "oneoff_family",
+  "purpose": "扫描当日 cron 推送，更新 Dashboard「今日 cron 推送」面板 + 更新 cron-push README",
+  "owner_skill": "",
+  "family": "update",
+  "has_docstring": true,
+  "embedded_id": false,
+  "keywords": [
+   "encoding",
+   "search"
+  ],
+  "path": "toolbox/update_cron_readme.py",
+  "family_size": 5,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/update_daily_note.py": {
+  "bytes": 2844,
+  "category": "oneoff_family",
+  "purpose": "更新 daily note 中关于钟部长的 R66 偏差",
+  "owner_skill": "",
+  "family": "update",
+  "has_docstring": true,
+  "embedded_id": false,
+  "keywords": [
+   "encoding"
+  ],
+  "path": "toolbox/update_daily_note.py",
+  "family_size": 5,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/update_hb_state.py": {
+  "bytes": 1757,
+  "category": "oneoff_family",
+  "purpose": "R271 atomic heartbeat state update.",
+  "owner_skill": "",
+  "family": "update",
+  "has_docstring": true,
+  "embedded_id": false,
+  "keywords": [
+   "encoding"
+  ],
+  "path": "toolbox/update_hb_state.py",
+  "family_size": 5,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/update_hb_state_932.py": {
+  "bytes": 1656,
+  "category": "oneoff_family",
+  "purpose": "import json",
+  "owner_skill": "",
+  "family": "update",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding"
+  ],
+  "path": "toolbox/update_hb_state_932.py",
+  "family_size": 5,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/update_state.py": {
+  "bytes": 1415,
+  "category": "oneoff_family",
+  "purpose": "import json",
+  "owner_skill": "",
+  "family": "update",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding"
+  ],
+  "path": "toolbox/update_state.py",
+  "family_size": 5,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/urgent_wal_fix.py": {
+  "bytes": 1709,
+  "category": "orphan",
+  "purpose": "import sqlite3, os, sys, time",
+  "owner_skill": "",
+  "family": "urgent",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "fetch"
+  ],
+  "path": "toolbox/urgent_wal_fix.py",
+  "family_size": 1,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/v12.py": {
+  "bytes": 530,
+  "category": "oneoff_family",
+  "purpose": "﻿import openpyxl",
+  "owner_skill": "",
+  "family": "v",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [],
+  "path": "toolbox/v12.py",
+  "family_size": 1,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/v13chk.py": {
+  "bytes": 891,
+  "category": "orphan",
+  "purpose": "﻿import openpyxl",
+  "owner_skill": "",
+  "family": "v13chk",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [],
+  "path": "toolbox/v13chk.py",
+  "family_size": 1,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/v13chk2.py": {
+  "bytes": 1170,
+  "category": "orphan",
+  "purpose": "﻿import openpyxl",
+  "owner_skill": "",
+  "family": "v13chk2",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [],
+  "path": "toolbox/v13chk2.py",
+  "family_size": 1,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/v6_dongfang.py": {
+  "bytes": 16970,
+  "category": "capability",
+  "purpose": "V6 · 东方气韵 master — Eric's primary production visual.",
+  "owner_skill": "",
+  "family": "v6",
+  "has_docstring": true,
+  "embedded_id": false,
+  "keywords": [
+   "index"
+  ],
+  "path": "toolbox/v6_dongfang.py",
+  "family_size": 1,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/v8_kimi_data.py": {
+  "bytes": 13987,
+  "category": "capability",
+  "purpose": "V8 · KIMI PPT 数据报告蓝灰版 master.",
+  "owner_skill": "",
+  "family": "v8",
+  "has_docstring": true,
+  "embedded_id": false,
+  "keywords": [
+   "render"
+  ],
+  "path": "toolbox/v8_kimi_data.py",
+  "family_size": 1,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/validate_intel.py": {
+  "bytes": 1609,
+  "category": "orphan",
+  "purpose": "import json",
+  "owner_skill": "",
+  "family": "validate",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding",
+   "eval"
+  ],
+  "path": "toolbox/validate_intel.py",
+  "family_size": 2,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/validate_package.py": {
+  "bytes": 3735,
+  "category": "capability",
+  "purpose": "验证最终交付包结构 + 文件大小",
+  "owner_skill": "",
+  "family": "validate",
+  "has_docstring": true,
+  "embedded_id": false,
+  "keywords": [
+   "pdf"
+  ],
+  "path": "toolbox/validate_package.py",
+  "family_size": 2,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/vault_index.py": {
+  "bytes": 21613,
+  "category": "orphan",
+  "purpose": "vault_index.py — Obsidian vault 预计算索引",
+  "owner_skill": "",
+  "family": "vault",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "agent",
+   "encoding",
+   "index",
+   "review",
+   "scrap",
+   "search"
+  ],
+  "path": "toolbox/vault_index.py",
+  "family_size": 4,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/vault_safe_run.py": {
+  "bytes": 2013,
+  "category": "orphan",
+  "purpose": "vault_safe_run.py - 强制隔离的 vault 操作接口",
+  "owner_skill": "",
+  "family": "vault",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "agent"
+  ],
+  "path": "toolbox/vault_safe_run.py",
+  "family_size": 4,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/vault_search.py": {
+  "bytes": 9174,
+  "category": "orphan",
+  "purpose": "vault_search.py — MOC 优先网状检索",
+  "owner_skill": "",
+  "family": "vault",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "agent",
+   "encoding",
+   "index",
+   "review",
+   "scrap",
+   "search"
+  ],
+  "path": "toolbox/vault_search.py",
+  "family_size": 4,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/vault_sync.py": {
+  "bytes": 7851,
+  "category": "orphan",
+  "purpose": "vault_sync.py — Vault 统一操作门面 (R13 重 IO 隔离入口)",
+  "owner_skill": "",
+  "family": "vault",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding",
+   "index",
+   "search"
+  ],
+  "path": "toolbox/vault_sync.py",
+  "family_size": 4,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/verify_add.py": {
+  "bytes": 1482,
+  "category": "orphan",
+  "purpose": "﻿import io",
+  "owner_skill": "",
+  "family": "verify",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "docx",
+   "encoding"
+  ],
+  "path": "toolbox/verify_add.py",
+  "family_size": 22,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/verify_and_restart.py": {
+  "bytes": 3709,
+  "category": "capability",
+  "purpose": "1. 检查 cron 数据库，列出所有任务和它们的 OBSIDIAN-PUSH 状态",
+  "owner_skill": "",
+  "family": "verify",
+  "has_docstring": true,
+  "embedded_id": false,
+  "keywords": [
+   "encoding",
+   "fetch",
+   "image"
+  ],
+  "path": "toolbox/verify_and_restart.py",
+  "family_size": 22,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/verify_bmarks.py": {
+  "bytes": 836,
+  "category": "orphan",
+  "purpose": "from pptx import Presentation",
+  "owner_skill": "",
+  "family": "verify",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "pptx"
+  ],
+  "path": "toolbox/verify_bmarks.py",
+  "family_size": 22,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/verify_feedback.py": {
+  "bytes": 918,
+  "category": "orphan",
+  "purpose": "import sys, io",
+  "owner_skill": "",
+  "family": "verify",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding"
+  ],
+  "path": "toolbox/verify_feedback.py",
+  "family_size": 22,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/verify_final.py": {
+  "bytes": 4048,
+  "category": "capability",
+  "purpose": "R66 验证扫描 - 重新检查文件",
+  "owner_skill": "",
+  "family": "verify",
+  "has_docstring": true,
+  "embedded_id": false,
+  "keywords": [
+   "encoding"
+  ],
+  "path": "toolbox/verify_final.py",
+  "family_size": 22,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/verify_hb.py": {
+  "bytes": 908,
+  "category": "capability",
+  "purpose": "Verify final HEARTBEAT.md state",
+  "owner_skill": "",
+  "family": "verify",
+  "has_docstring": true,
+  "embedded_id": false,
+  "keywords": [
+   "encoding"
+  ],
+  "path": "toolbox/verify_hb.py",
+  "family_size": 22,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/verify_hb760.py": {
+  "bytes": 798,
+  "category": "orphan",
+  "purpose": "import json",
+  "owner_skill": "",
+  "family": "verify",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding"
+  ],
+  "path": "toolbox/verify_hb760.py",
+  "family_size": 22,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/verify_hb_932.py": {
+  "bytes": 866,
+  "category": "orphan",
+  "purpose": "with open(r\"D:\\B166ER-OpenClaw\\workspace\\HEARTBEAT.md\", 'r', encoding='utf-8') as f:",
+  "owner_skill": "",
+  "family": "verify",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding"
+  ],
+  "path": "toolbox/verify_hb_932.py",
+  "family_size": 22,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/verify_moc.py": {
+  "bytes": 444,
+  "category": "orphan",
+  "purpose": "import sys",
+  "owner_skill": "",
+  "family": "verify",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding"
+  ],
+  "path": "toolbox/verify_moc.py",
+  "family_size": 22,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/verify_p5.py": {
+  "bytes": 1193,
+  "category": "orphan",
+  "purpose": "﻿import io",
+  "owner_skill": "",
+  "family": "verify",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "docx",
+   "encoding"
+  ],
+  "path": "toolbox/verify_p5.py",
+  "family_size": 22,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/verify_p5b.py": {
+  "bytes": 1141,
+  "category": "orphan",
+  "purpose": "﻿import io",
+  "owner_skill": "",
+  "family": "verify",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "docx",
+   "encoding"
+  ],
+  "path": "toolbox/verify_p5b.py",
+  "family_size": 22,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/verify_rb.py": {
+  "bytes": 675,
+  "category": "orphan",
+  "purpose": "﻿import openpyxl, io",
+  "owner_skill": "",
+  "family": "verify",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding"
+  ],
+  "path": "toolbox/verify_rb.py",
+  "family_size": 22,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/verify_req.py": {
+  "bytes": 1130,
+  "category": "orphan",
+  "purpose": "﻿# 校验：1107表的\"股东回报要求\"列是否 = 实缴资本 x 3.5%",
+  "owner_skill": "",
+  "family": "verify",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [],
+  "path": "toolbox/verify_req.py",
+  "family_size": 22,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/verify_tone.py": {
+  "bytes": 1134,
+  "category": "orphan",
+  "purpose": "import sys, io",
+  "owner_skill": "",
+  "family": "verify",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding"
+  ],
+  "path": "toolbox/verify_tone.py",
+  "family_size": 22,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/verify_tz.py": {
+  "bytes": 862,
+  "category": "orphan",
+  "purpose": "import openpyxl, io",
+  "owner_skill": "",
+  "family": "verify",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding"
+  ],
+  "path": "toolbox/verify_tz.py",
+  "family_size": 22,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/verify_tz2.py": {
+  "bytes": 760,
+  "category": "orphan",
+  "purpose": "import openpyxl, io",
+  "owner_skill": "",
+  "family": "verify",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding"
+  ],
+  "path": "toolbox/verify_tz2.py",
+  "family_size": 22,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/verify_tz3.py": {
+  "bytes": 732,
+  "category": "orphan",
+  "purpose": "import openpyxl, io",
+  "owner_skill": "",
+  "family": "verify",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding"
+  ],
+  "path": "toolbox/verify_tz3.py",
+  "family_size": 22,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/verify_v11.py": {
+  "bytes": 1172,
+  "category": "oneoff_family",
+  "purpose": "﻿import openpyxl, io",
+  "owner_skill": "",
+  "family": "verify",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding"
+  ],
+  "path": "toolbox/verify_v11.py",
+  "family_size": 22,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/verify_v2.py": {
+  "bytes": 689,
+  "category": "oneoff_family",
+  "purpose": "import sys, io",
+  "owner_skill": "",
+  "family": "verify",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding",
+   "eval"
+  ],
+  "path": "toolbox/verify_v2.py",
+  "family_size": 22,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/verify_v3.py": {
+  "bytes": 3093,
+  "category": "oneoff_family",
+  "purpose": "最终验证 v3",
+  "owner_skill": "",
+  "family": "verify",
+  "has_docstring": true,
+  "embedded_id": false,
+  "keywords": [
+   "encoding"
+  ],
+  "path": "toolbox/verify_v3.py",
+  "family_size": 22,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/verify_vault.py": {
+  "bytes": 4874,
+  "category": "orphan",
+  "purpose": "import os",
+  "owner_skill": "",
+  "family": "verify",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding"
+  ],
+  "path": "toolbox/verify_vault.py",
+  "family_size": 22,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/verify_vault_final.py": {
+  "bytes": 808,
+  "category": "orphan",
+  "purpose": "import sys, io",
+  "owner_skill": "",
+  "family": "verify",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding"
+  ],
+  "path": "toolbox/verify_vault_final.py",
+  "family_size": 22,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/vf.py": {
+  "bytes": 613,
+  "category": "orphan",
+  "purpose": "﻿import io",
+  "owner_skill": "",
+  "family": "vf",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "docx",
+   "encoding"
+  ],
+  "path": "toolbox/vf.py",
+  "family_size": 1,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/vrb2.py": {
+  "bytes": 471,
+  "category": "orphan",
+  "purpose": "﻿import openpyxl, io",
+  "owner_skill": "",
+  "family": "vrb2",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding"
+  ],
+  "path": "toolbox/vrb2.py",
+  "family_size": 1,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/watermark_tool.py": {
+  "bytes": 7210,
+  "category": "orphan",
+  "purpose": "B166ER 全量出品水印工具 — 基于 guofei9987/blind_watermark",
+  "owner_skill": "",
+  "family": "watermark",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "image",
+   "index",
+   "pdf",
+   "pptx"
+  ],
+  "path": "toolbox/watermark_tool.py",
+  "family_size": 1,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/weekly_backup.py": {
+  "bytes": 7019,
+  "category": "orphan",
+  "purpose": "B166ER 每周全量备份脚本",
+  "owner_skill": "playwright-cli",
+  "family": "weekly",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "image",
+   "pdf",
+   "review"
+  ],
+  "path": "toolbox/weekly_backup.py",
+  "family_size": 2,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/weekly_backup_run.py": {
+  "bytes": 425,
+  "category": "orphan",
+  "purpose": "import sys",
+  "owner_skill": "",
+  "family": "weekly",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding"
+  ],
+  "path": "toolbox/weekly_backup_run.py",
+  "family_size": 2,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/workspace_root_dedup.py": {
+  "bytes": 4675,
+  "category": "orphan",
+  "purpose": "workspace_root_dedup.py — 工作根文件去重决策器",
+  "owner_skill": "",
+  "family": "workspace",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "agent",
+   "index",
+   "pdf"
+  ],
+  "path": "toolbox/workspace_root_dedup.py",
+  "family_size": 1,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/write_speech.py": {
+  "bytes": 8671,
+  "category": "orphan",
+  "purpose": "Eric 2026-09-08 19:20 任务",
+  "owner_skill": "",
+  "family": "write",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "agent",
+   "encoding"
+  ],
+  "path": "toolbox/write_speech.py",
+  "family_size": 2,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/write_speech_v2.py": {
+  "bytes": 12596,
+  "category": "oneoff_family",
+  "purpose": "Eric 2026-09-08 19:34 任务",
+  "owner_skill": "",
+  "family": "write",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "agent"
+  ],
+  "path": "toolbox/write_speech_v2.py",
+  "family_size": 2,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/xhs_85_render.py": {
+  "bytes": 27136,
+  "category": "capability",
+  "purpose": "民政部85号令 × 酒店行业 — 小红书6图生成",
+  "owner_skill": "",
+  "family": "xhs",
+  "has_docstring": true,
+  "embedded_id": false,
+  "keywords": [
+   "image",
+   "index"
+  ],
+  "path": "toolbox/xhs_85_render.py",
+  "family_size": 16,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/xhs_85_v3_render.py": {
+  "bytes": 31559,
+  "category": "orphan",
+  "purpose": "xhs_85_v3_render.py — 民政部85号令 × 酒店行业 6图 (V3 Swiss Modern 范式)",
+  "owner_skill": "",
+  "family": "xhs",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding",
+   "image",
+   "index",
+   "render"
+  ],
+  "path": "toolbox/xhs_85_v3_render.py",
+  "family_size": 16,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/xhs_86_mice_render.py": {
+  "bytes": 38196,
+  "category": "orphan",
+  "purpose": "xhs_86_mice_render.py — 民政部85号令 × 酒店行业 × MICE 6图 (V3 Swiss Modern 范式)",
+  "owner_skill": "",
+  "family": "xhs",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding",
+   "image",
+   "index",
+   "render"
+  ],
+  "path": "toolbox/xhs_86_mice_render.py",
+  "family_size": 16,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/xhs_ahl_render.py": {
+  "bytes": 2224,
+  "category": "capability",
+  "purpose": "Step 1: Render 7 张 AHL 小红书 麦肯锡风 滑片",
+  "owner_skill": "",
+  "family": "xhs",
+  "has_docstring": true,
+  "embedded_id": false,
+  "keywords": [
+   "encoding",
+   "render"
+  ],
+  "path": "toolbox/xhs_ahl_render.py",
+  "family_size": 16,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/xhs_ahl_render_v2.py": {
+  "bytes": 2219,
+  "category": "oneoff_family",
+  "purpose": "Step 1: Render 7 张 AHL 小红书 麦肯锡风 滑片 - 重写路径到 B166ER-OpenClaw",
+  "owner_skill": "",
+  "family": "xhs",
+  "has_docstring": true,
+  "embedded_id": false,
+  "keywords": [
+   "encoding",
+   "render"
+  ],
+  "path": "toolbox/xhs_ahl_render_v2.py",
+  "family_size": 16,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/xhs_bio_master.py": {
+  "bytes": 8073,
+  "category": "orphan",
+  "purpose": "import sys",
+  "owner_skill": "",
+  "family": "xhs",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding"
+  ],
+  "path": "toolbox/xhs_bio_master.py",
+  "family_size": 16,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/xhs_pil_wm.py": {
+  "bytes": 2172,
+  "category": "capability",
+  "purpose": "Step 2: Add visual watermark to all 7 slides (PIL, no hang).",
+  "owner_skill": "",
+  "family": "xhs",
+  "has_docstring": true,
+  "embedded_id": false,
+  "keywords": [
+   "image"
+  ],
+  "path": "toolbox/xhs_pil_wm.py",
+  "family_size": 16,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/xhs_pioneer.py": {
+  "bytes": 11633,
+  "category": "orphan",
+  "purpose": "范式: rules-XHS-多图研报笔记 (R34) + geo_v4_mckinsey.py 的 COMMON_CSS / render / pil_watermark",
+  "owner_skill": "",
+  "family": "xhs",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding",
+   "image",
+   "render"
+  ],
+  "path": "toolbox/xhs_pioneer.py",
+  "family_size": 16,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/xhs_pioneer_cream.py": {
+  "bytes": 6685,
+  "category": "orphan",
+  "purpose": "import sys",
+  "owner_skill": "",
+  "family": "xhs",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding"
+  ],
+  "path": "toolbox/xhs_pioneer_cream.py",
+  "family_size": 16,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/xhs_pioneer_cream_render.py": {
+  "bytes": 4983,
+  "category": "orphan",
+  "purpose": "import sys",
+  "owner_skill": "",
+  "family": "xhs",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding",
+   "eval",
+   "image"
+  ],
+  "path": "toolbox/xhs_pioneer_cream_render.py",
+  "family_size": 16,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/xhs_pioneer_render.py": {
+  "bytes": 4830,
+  "category": "orphan",
+  "purpose": "import sys",
+  "owner_skill": "",
+  "family": "xhs",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding",
+   "eval",
+   "image"
+  ],
+  "path": "toolbox/xhs_pioneer_render.py",
+  "family_size": 16,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/xhs_rel_master.py": {
+  "bytes": 13017,
+  "category": "orphan",
+  "purpose": "import sys",
+  "owner_skill": "",
+  "family": "xhs",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "agent",
+   "encoding"
+  ],
+  "path": "toolbox/xhs_rel_master.py",
+  "family_size": 16,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/xhs_render_generic.py": {
+  "bytes": 4850,
+  "category": "orphan",
+  "purpose": "import sys, importlib",
+  "owner_skill": "",
+  "family": "xhs",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "encoding",
+   "eval",
+   "image",
+   "render"
+  ],
+  "path": "toolbox/xhs_render_generic.py",
+  "family_size": 16,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/xhs_render_only.py": {
+  "bytes": 2108,
+  "category": "capability",
+  "purpose": "Step 1: Render 7 slides — V2 (exec f-strings properly).",
+  "owner_skill": "",
+  "family": "xhs",
+  "has_docstring": true,
+  "embedded_id": false,
+  "keywords": [
+   "encoding",
+   "eval",
+   "render"
+  ],
+  "path": "toolbox/xhs_render_only.py",
+  "family_size": 16,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/xhs_slides.py": {
+  "bytes": 21655,
+  "category": "capability",
+  "purpose": "Generate 7 小红书 slides (1080x1440) for the 智驾小蓝灯 topic.",
+  "owner_skill": "",
+  "family": "xhs",
+  "has_docstring": true,
+  "embedded_id": false,
+  "keywords": [
+   "image",
+   "index",
+   "render"
+  ],
+  "path": "toolbox/xhs_slides.py",
+  "family_size": 16,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/xhs_visual_wm.py": {
+  "bytes": 1860,
+  "category": "capability",
+  "purpose": "Visual watermark for slides 5/6/7 (PIL, fast, no hang).",
+  "owner_skill": "",
+  "family": "xhs",
+  "has_docstring": true,
+  "embedded_id": false,
+  "keywords": [
+   "image"
+  ],
+  "path": "toolbox/xhs_visual_wm.py",
+  "family_size": 16,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/xml_inspect.py": {
+  "bytes": 437,
+  "category": "orphan",
+  "purpose": "import zipfile",
+  "owner_skill": "",
+  "family": "xml",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [],
+  "path": "toolbox/xml_inspect.py",
+  "family_size": 2,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/xml_inspect2.py": {
+  "bytes": 718,
+  "category": "capability",
+  "purpose": "看 sheet1.xml 当前 E9 实际写了什么",
+  "owner_skill": "",
+  "family": "xml",
+  "has_docstring": true,
+  "embedded_id": false,
+  "keywords": [
+   "search"
+  ],
+  "path": "toolbox/xml_inspect2.py",
+  "family_size": 2,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/zip_ls.py": {
+  "bytes": 592,
+  "category": "orphan",
+  "purpose": "﻿import zipfile, os",
+  "owner_skill": "",
+  "family": "zip",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "docx",
+   "encoding"
+  ],
+  "path": "toolbox/zip_ls.py",
+  "family_size": 2,
+  "skill_equivalent": "",
+  "scope_note": ""
+ },
+ "toolbox/zip_media.py": {
+  "bytes": 905,
+  "category": "orphan",
+  "purpose": "﻿import zipfile, os",
+  "owner_skill": "",
+  "family": "zip",
+  "has_docstring": false,
+  "embedded_id": false,
+  "keywords": [
+   "docx",
+   "image"
+  ],
+  "path": "toolbox/zip_media.py",
+  "family_size": 2,
+  "skill_equivalent": "",
+  "scope_note": ""
+ }
+}

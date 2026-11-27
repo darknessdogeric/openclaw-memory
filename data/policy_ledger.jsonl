@@ -1,0 +1,8 @@
+{"policy": "deliver-location", "title": "交付位置必须在产业发展部对应项目文件夹", "decision": "ESCALATE", "reasons": ["AGENTS.md 硬规矩：桌面只作临时中转，不得作为交付终点"], "idempotency_key": "3279e72bbb06a7ca", "ts": "2026-11-28T07:48:34"}
+{"policy": "deliver-location", "title": "交付位置必须在产业发展部对应项目文件夹", "decision": "ALLOW", "reasons": [], "idempotency_key": "69891b093b39e396", "ts": "2026-11-28T07:48:34"}
+{"policy": "brand-mark", "title": "B 标一律写 ERIC & B166ER", "decision": "DENY", "reasons": ["AGENTS.md 硬规矩：旧形态含 X/x/*/· 等一律作废"], "idempotency_key": "dfedb25bfa0eceb9", "ts": "2026-11-28T07:48:34"}
+{"policy": "brand-mark", "title": "B 标一律写 ERIC & B166ER", "decision": "ALLOW", "reasons": [], "idempotency_key": "783743f7689e80f7", "ts": "2026-11-28T07:48:34"}
+{"policy": "formal-no-narrative", "title": "正式件不出现「我改了什么」的叙述", "decision": "DENY", "reasons": ["AGENTS.md 硬规矩：正式交付件只讲内容本身"], "idempotency_key": "b09371b196eadc29", "ts": "2026-11-28T07:48:35"}
+{"policy": "stats-caliber", "title": "统计口径必须拆开标注，推算必须写明来源与公式", "decision": "DENY", "reasons": ["口径混淆是最常见的低成本错误"], "idempotency_key": "1a249da84d3ac726", "ts": "2026-11-28T07:48:35"}
+{"policy": "brand-mark", "title": "B 标一律写 ERIC & B166ER", "decision": "DENY", "reasons": ["AGENTS.md 硬规矩：旧形态含 X/x/*/· 等一律作废"], "idempotency_key": "dfedb25bfa0eceb9", "ts": "2026-11-28T07:51:23"}
+{"policy": "brand-mark", "title": "B 标一律写 ERIC & B166ER", "decision": "ALLOW", "reasons": [], "idempotency_key": "783743f7689e80f7", "ts": "2026-11-28T07:51:23"}

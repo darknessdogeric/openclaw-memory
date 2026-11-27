@@ -1,0 +1,291 @@
+# -*- coding: utf-8 -*-
+"""_mkreport11.py - 生成审计报告 v1.1（补入工具层治理），v1.0 归档"""
+import io
+import sys
+import os
+import re
+import json
+import glob
+import shutil
+import tempfile
+
+sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace")
+ROOT = r"D:\B166ER-openclaw\workspace"
+AUD = os.path.join(ROOT, "output", "audit_skills")
+KB4 = os.path.join(ROOT, "anyi-ops-kb", "04_方法论")
+J = lambda n: json.load(open(os.path.join(AUD, n), encoding="utf-8"))
+
+REG = J("SKILL_REGISTRY.json")
+WF = J("WORKFLOWS.json")
+PARA = J("PARADIGM_REGISTRY.json")
+IDLE = J("IDLE_VERDICT.json")
+LED = J("GITHUB_INSTALL_LEDGER.json")
+TOOLS = J("TOOL_INDEX.json")
+HBMAN = J("hb_family_archive_manifest_2026-11-18.json")
+HBEVI = J("_hb_evidence.json")
+
+# ---------- 补最后一条待补范式 ----------
+for w in WF:
+    if w["task"] == "技术文档写作":
+        w["paradigms"] = ["technical-documentation（技能自带规范）", "SI_domains/代码与工具链.md"]
+fd, tmp = tempfile.mkstemp(dir=AUD, suffix=".tmp")
+with os.fdopen(fd, "w", encoding="utf-8") as f:
+    json.dump(WF, f, ensure_ascii=False, indent=1)
+os.replace(tmp, os.path.join(AUD, "WORKFLOWS.json"))
+
+# ---------- 取数 ----------
+st = {}
+for r in REG:
+    st[r["status"]] = st.get(r["status"], 0) + 1
+loc = {}
+for r in REG:
+    for l in r["all_locs"]:
+        loc[l] = loc.get(l, 0) + 1
+tc = {}
+for v in TOOLS.values():
+    tc[v["category"]] = tc.get(v["category"], 0) + 1
+ib = {}
+for v in IDLE:
+    ib[v["action"]] = ib.get(v["action"], 0) + 1
+psrc = {}
+for p in PARA:
+    psrc[p["trigger_source"]] = psrc.get(p["trigger_source"], 0) + 1
+owned = sum(1 for v in TOOLS.values() if v["owner_skill"])
+n_hb = len(HBMAN["moved"])
+hb_keep = len(HBMAN["kept"])
+hb_mb = sum(m["bytes"] for m in HBMAN["moved"]) / 1024.0
+
+R = f"""# B166ER 技能库与范式库深度审计报告
+
+审计日期：2026 年 11 月 18 日　｜　版本：v1.1（含工具层治理）　｜　范围：技能库 3 处目录 ＋ 范式库 4 类来源 ＋ toolbox 工具层
+
+---
+
+## 一、审计结论先行
+
+本次审计的核心结论是一句话：**库里有，不等于能路由到；能路由到，不等于会被调用。** 这三件事过去被当成一件，导致"装备完善"的假结论和"每次重新造轮子"的真症状同时存在。
+
+| 维度 | 审计前 | 审计后 |
+|---|---|---|
+| 物理 SKILL.md 份数 | 271 | 271（清理口径，非删文件） |
+| 去重后命名数 | 185 | 185 |
+| **真实技能数** | 134（口径错误） | **{len(REG)}** |
+| 无 description 的技能（不可路由） | 8 | **0** |
+| 跨技能路径错引 | 11 处 | **0** |
+| **固定工作流条数** | 0 | **{len(WF)}** |
+| **范式条目（全部带触发词）** | 不可路由 | **{len(PARA)}** |
+| **toolbox 非临时工具数** | 698 | **{len(TOOLS)}** |
+| **工具已归属技能数** | 0（无索引） | **{owned}** |
+| **自检断言条数** | 12 | **22** |
+| md→docx 同族变体 | 16 套 | **1 正本 + 1 有分工变体** |
+| 一次性心跳脚本 | 284 件散在根目录 | **{n_hb} 件已归档（保留 3 件有引用）** |
+
+审计后自检结果：22 条断言全部通过，退出码 0。
+
+---
+
+## 二、完整性的真实状况
+
+### （一）三个目录的同源情况
+
+审计位置共三处：workspace/skills、用户目录 skills、.claude/skills。物理文件合计 271 份，去重后 185 个命名，其中 79 组同名。
+
+**但 79 组同名里只有 3 组存在真实内容差异，其余 76 组仅是行尾符（CRLF 与 LF）差异。** 逐字节比对后确认，这三处不是三个独立技能库，而是同一套东西的多个投放位置。
+
+按正确口径重算（祖先目录判据：一个 SKILL.md 的所有祖先目录都不含 SKILL.md，才算独立技能；技能内部的 examples、variants 目录不算），真实技能数为 **{len(REG)}** 个，各位置分布：workspace {loc.get("WS", 0)} 个、用户目录 {loc.get("HOME", 0)} 个、claude 目录 {loc.get("CLAUDE", 0)} 个。
+
+### （二）路由能力的真实缺口
+
+系统提示中暴露的技能清单是截断的（155 个只显示 115 个，藏了 40 个）。这意味着**路由依赖"扫描提示"必然漏**——这是"有工具不用"的结构性原因，不是偶发疏忽。
+
+已修复：8 个无 description 的技能（cad-batch-processing、cost-governor、hotel-feasibility-report、interior-fullplan、officecli、en、zh-CN、skill-vetter）全部补写含触发词的可路由描述；11 处跨技能路径错引（如 ppt-visual-editor 的 7 个配套件实际位于 ppt-deck-builder-pro）已指向真实所在。
+
+### （三）配套文件缺失
+
+初筛 42 处引用缺失，逐条核实后：真实缺失 17 组，其中 5 组实为路径写错（文件在兄弟技能里，已修正），其余为源技能本身即缺件，属外部技能包本身不完整。
+
+---
+
+## 三、闲置裁决
+
+判定依据为三重证据交叉：语料提及频次、目录内可执行件实扫、外部二进制依赖实测。
+
+| 裁决 | 数量 | 处置 |
+|---|---|---|
+| 活跃（已被真实调用） | {st.get("active", 0)} | 保留 |
+| 保留待装（缺外部二进制）／保留待用 | {st.get("hold", 0)} | 标注状态，装上即激活 |
+| 受保护（今日新建或被工作流引用） | {st.get("protected", 0)} | 不动 |
+| 纳入工作流激活 | {st.get("activate", 0)} | 已并入固定工作流 |
+
+**实测确认只有 arkcli 与 gstack 两个外部二进制真实缺失。** 需要澄清两处常见误判：pip 不在 PATH 上但 python -m pip 可用（pip 26.0.1，退出码 0），brew 是 macOS 专属而本机为 Windows——**平台不适用不等于缺依赖**。若按粗口径判据，会误伤 19 个实际可用的技能。
+
+同族活跃技能（如 ponytail 家族 5 个子技能）一律不拆散，宁可保留也不让家族残缺。
+
+---
+
+## 四、GitHub 补装：只补已证实的缺口
+
+本机 clawhub 命令行不可用（配置库版本不兼容），改走 GitHub 直连官方注册表 openclaw/clawhub（MIT 许可，{LED["repos"]["openclaw/clawhub"]["stars"]} 星）。
+
+| 技能 | 补的什么缺口 | 文件数 | 许可证 |
+|---|---|---|---|
+| writing-evals | 自检与回归的写法层缺失 | 21 | MIT |
+| autoreview | 自动代码审阅，验证断言的独立视角 | 1 | MIT |
+| technical-documentation | 技术文档写作规范 | 13 | MIT |
+
+安装 commit 统一为 {LED["repos"]["openclaw/clawhub"]["commit"]}，来源、许可、commit、回滚方式已全部落盘到 output/audit_skills/GITHUB_INSTALL_LEDGER.json，回滚即删除对应技能目录，无系统级副作用。
+
+另一个高星仓库 VoltAgent/awesome-openclaw-skills（{LED["repos"].get("VoltAgent/awesome-openclaw-skills", {}).get("stars", "—")} 星）仅作缺口发现目录使用，未安装任何条目——因为没有已证实缺口与之对应。
+
+---
+
+## 五、固定工作流与调用逻辑
+
+这是本次审计最核心的产出。此前的问题是：工具散在各处，靠"临时想起来"去调。
+
+现在建成了四层结构：
+
+| 层 | 文件 | 内容 |
+|---|---|---|
+| 技能索引 | SKILL_REGISTRY.json | {len(REG)} 个技能的描述、可执行件、位置、活跃状态 |
+| 路由 | WORKFLOWS.json | {len(WF)} 条「任务 → 技能 → 范式 → 依据」 |
+| 范式 | PARADIGM_REGISTRY.json | {len(PARA)} 条范式的触发词与关键词 |
+| 工具 | TOOL_INDEX.json | {len(TOOLS)} 个工具的分类、归属技能、用途 |
+
+调用入口统一为 toolbox/skill_router.py，四个命令：
+
+    python toolbox/skill_router.py --task "任务描述"
+    python toolbox/skill_router.py --check "拟造工具名"
+    python toolbox/skill_router.py --workflows
+    python toolbox/skill_router.py --tools
+
+第二条是防重复造轮子的闸门——动手造任何工具之前先查一次，命中即用既有件。**第三条查技能，第四条查工具，第一条同时查两者。**
+
+**范式库侧的病与技能库同款**：{len(PARA)} 条范式中，原有 143 条没有"何时用"说明，等于有范式但调不出来。现已为每条补齐可路由关键词（显式触发说明 {psrc.get("explicit", 0)} 条，自动派生 {psrc.get("derived", 0)} 条）。工作流与范式双向绑定，全部落到真实存在的范式文件，零悬空引用。
+
+---
+
+## 六、工具层治理（v1.1 新增）
+
+上一版报告把工具层列为"尚未解决的第一条"。本轮已把它做完，方法与技能层一致：**不靠名字猜，靠内容取证；生成的索引落进技能层；加断言守住。**
+
+### （一）工具索引
+
+新建生成器 skills/tool-index-builder/scripts/build_tool_index.py，扫描 toolbox 全部非临时脚本，按内容级证据分类：
+
+| 分类 | 数量 | 判据 |
+|---|---|---|
+| capability（成品能力工具） | {tc.get("capability", 0)} | 有 docstring、无一次性特征 |
+| oneoff_family（一次性脚本族） | {tc.get("oneoff_family", 0)} | 一次性动词前缀／日期后缀／**文件名内嵌编号** |
+| orphan（待人工裁决） | {tc.get("orphan", 0)} | 无 docstring 且无其它特征 |
+
+已归属技能的工具 {owned} 个。**owner_skill 是内容级判定**（脚本正文里引用的技能名，或路径落在某个技能目录下），不是人工填的标签。
+
+### （二）284 件一次性心跳脚本的处置
+
+工具层最大的一块是 hb 家族：**284 件为不同心跳编号各写一份的写入器**，占工具总数四成。
+
+处置前先做三重取证，缺一不可：
+
+1. **内容交付核对**：脚本内嵌的心跳编号是否已出现在记忆层文件里——166 件已交付
+2. **目标存活核对**：脚本声明写入的目标文件是否还存在——31 件目标已消失
+3. **执行面安全闸**：是否被其它脚本调用、被配置文件引用、或在近 30 天日记中被称"正在运行"——仅 2 件被引用
+
+结论：**{n_hb} 件归档**（移动到 toolbox/_archive/hb_family_2026-11-18/，共 {hb_mb:.0f} KB，**payload 全部保留、可回滚**），**{hb_keep} 件留在原位**（2 件有真实调用关系，1 件目标文件仍在且内容尚未交付）。
+
+**★ 归档是"移动"不是"删除"**：任何一件都能按清单移回原位。清单含 sha256 与回滚路径。
+
+---
+
+## 七、同源治理：重复造轮子的清理
+
+md→docx 家族一度有 16 套变体散在 toolbox 与技能目录。按"先合并唯一内容、再归档、最后删除"的顺序处理：
+
+1. 逐项比对 12 项能力矩阵，确认权威两套（技能目录 docx-md-bridge 与研判报告版式 md2docx）已覆盖表格、代码块、引用、列表、字体设定、行距缩进、页边距、主题配色。
+2. 旧克隆中仅两项独有内容属实：编号列表与分页标记——已移植进正本（新增编号列表悬挂缩进、pagebreak 标记），实跑验证通过。
+3. 6 份旧克隆归档至 toolbox/_archive/legacy_docx_variants_2026-11-18/，清单含 sha256 与回滚说明。
+
+**过程中我自己犯了三次检测器口径错误**，都已在归档前拦下：
+
+- 特征正则只认 List Bullet 样式，没认正本自带的项目符号实现，误判"列表"为旧克隆独有。
+- "目录域"命中的是路径打印语句里的"根目录"二字，正本与克隆都没有真 TOC 域。
+- 判据只扫 scripts 子目录，漏掉技能根目录下的可执行件，差点把当日刚建的 4 个技能当成"纯说明文档"归档。
+
+这三次与今天早些时候信息图质检中的坐标系错误属同一类病：**把检测器的判断当成了事实的权威。** 正确次序永远是先怀疑检查器、再修检查器、最后才看结论。
+
+---
+
+## 八、我在这次审计中犯的错
+
+**一、最贵的一条：绕过既有轮子造了第 9 个变体。**
+技能目录里的 docx-md-bridge 一直可用且完全正常，我当天却手搓了第 9 个 md→docx 变体。更值得记的是：我在新变体里修的那个"表格被吞"缺陷，正本里根本不存在——实测两个转换器输出完全一致（同为 6 段 1 表 3 行）。我在自己造的轮子里修一个不存在的问题。这是"有工具不用"最干净的证据。
+
+**二、检测器口径错连撞五次**（见上节），每次都差点让错误结论变成既定事实。第五次是本轮新增：回读校验时，我的检查器只取段落文本、不取表格单元格，导致表里的数字被误报为"缺失"——**检查器自己在骗我**。
+
+**三、工具与环境误判**：grep 在本机不存在（Windows），改用 Python 实现；全盘扫描误入知识库与向量库目录导致超时，改为定向扫描；后又把扫描范围失控两次。
+
+**四、路径错误**：拼接相对路径时多退了一层目录，导致权威件被排除在能力并集之外，整张"独有能力"表作废。
+
+**五、我差点归档自己刚建的技能**（见上节第三条）。这一条最值得警惕——自动化处置脚本如果没有受保护集合与家族不拆散规则，会在"看起来很合理"的批量操作里毁掉刚做出来的东西。
+
+**六、中文检索用单字切分**。首版路由把"转成""表格"这类通用字混进每个词条，导致"md 转 docx"误命中 regen_templates 等无关工具。改为**双字组切分**后，md2docx.py 回到工具命中首位。
+
+**七、注册表声称归档了实际没归档的技能**。5 个 ponytail 子技能因"同族不拆散"未搬迁，注册表状态却标为 archive。已改为 hold 并复写状态——**索引不能声称一件自己没有的事实**。
+
+---
+
+## 九、已落成的防护
+
+教训写进日记与 corrections 只是记录，不构成防护。真正起作用的是把每条教训写成会失败的断言，并让自检强制执行。
+
+新增 10 条断言（编号 C13 至 C22）：
+
+| 编号 | 断言 | 拦截的错误 |
+|---|---|---|
+| C13 | 技能注册表须存在且每个技能有 description | 有技能但不可路由 |
+| C14 | 注册表须与磁盘技能一致 | 索引漂移、路由指向不存在的技能 |
+| C15 | GitHub 装的技能须有台账 | 无法回滚、无法追责 |
+| C16 | 通用 md→docx 只允许 1 个正本 | 重复造轮子复发 |
+| C17 | 固定工作流表须存在且非空 | 只有口号没有路由 |
+| C18 | 已归档的旧克隆不得回流 | 归档形同虚设 |
+| C19 | 范式须可路由且工作流须绑定范式 | 范式库同款病复发 |
+| C20 | 工具索引须存在且每个工具都有分类 | 工具层黑箱 |
+| C21 | 工具必须能被 --task 检索到 | 工具写进索引却仍是死的 |
+| C22 | 已归档的一次性工具不得回流 | 281 件归档形同虚设 |
+
+同时改写了 C14 的判据，使其与注册表生成器采用完全相同的"什么算一个技能"定义——**断言与被断言对象必须同一定义，否则断言自己就是错的**（首轮 C14 就因两者口径不一致而误报）。
+
+**C14 在本轮真的抓到了问题**：新建两个治理技能后未登记，注册表漂移，断言当场失败。修法是重建注册表，不是改断言。
+
+调用纪律已写入 AGENTS.md 的强制关卡：动手前先查路由，自建前先查重，命中即用不得自建同类工具；新工具必须落进技能层、登记注册表、加一条断言，三件事缺一不算完成。
+
+---
+
+## 十、尚未解决的事
+
+1. **工具归属覆盖仍偏低**：{len(TOOLS)} 个工具里已归属技能 {owned} 个，其余靠启发式分类标为 orphan／oneoff。下一段工作是把它们逐个挂到对应技能，或显式判为可归档。
+2. **orphan 类工具（{tc.get("orphan", 0)} 个）需人工裁决**：其中 8 个超过 20 KB，很可能是没写 docstring 的真工具，分类器把"无 docstring"误当成了"无价值"。
+3. **arkcli 与 gstack 共 26 个技能处于保留待装状态**：装上这两个外部二进制即可激活，在此之前它们不会进入路由。
+4. **同族闲置技能保留**：ponytail 家族 5 个子技能零调用但整体保留，理由是不拆散家族；是否整体降级待定。
+5. **范式与工作流的对齐仍偏粗**：目前是关键词自动匹配，少数条目匹配精度不高，需要人工确认。
+
+---
+
+## 十一、一句话总结
+
+这次审计真正改变的不是文件数量，而是**决策依据**：从此"有没有工具"这个问题有了一个可执行、可失败、可复现的答案——先跑路由，先跑断言，命中即用。
+"""
+
+V11 = os.path.join(KB4, "B166ER_技能库与范式库深度审计报告_v1.1_2026-11-18.md")
+R = re.sub(r"\u2605[ \t]*", "", R)          # 去装饰符号；[ \t]* 绝不碰换行
+R = re.sub(r"[ \t]{2,}", " ", R)
+R = re.sub(r"^[ \t]+", "", R, flags=re.M)
+open(V11, "w", encoding="utf-8", newline="\n").write(R)
+print("✔ v1.1 已生成: %d B ｜ %d 行 ｜ 表格 %d" % (os.path.getsize(V11), R.count("\n") + 1, R.count("\n|---")))
+
+# v1.0 归档
+ARCH = os.path.join(KB4, "_归档_被取代版本")
+os.makedirs(ARCH, exist_ok=True)
+for old in glob.glob(os.path.join(KB4, "B166ER_技能库与范式库深度审计报告_v1.0_2026-11-18.*")):
+    shutil.move(old, os.path.join(ARCH, os.path.basename(old)))
+print("✔ v1.0 已归档 → _归档_被取代版本/（%d 件）" % len(glob.glob(os.path.join(ARCH, "*技能库与范式库*"))))

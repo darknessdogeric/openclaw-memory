@@ -29,7 +29,8 @@ from docx.oxml import OxmlElement
 
 # 字体（GB/T 9704-2012）
 TITLE_FONT = '方正小标宋简体'    # 标题
-BODY_FONT   = '仿宋'             # 正文（优先仿宋_GB2312）
+BODY_FONT   = '仿宋_GB2312'      # 正文（GB/T 9704 标准仿宋，非泛指“仿宋”）
+EN_FONT     = 'Times New Roman'  # 西文与数字
 H1_FONT     = '黑体'              # 一级标题
 H2_FONT     = '楷体'              # 二级标题
 
@@ -56,8 +57,9 @@ def set_font(run, name, size):
         rpr.append(rf)
     # 关键：eastAsia 决定中文/西文字符使用哪个字体
     rf.set(qn('w:eastAsia'), name)
-    rf.set(qn('w:ascii'), name)
-    rf.set(qn('w:hAnsi'), name)
+    rf.set(qn('w:ascii'), EN_FONT)      # 西文/数字必须 Times New Roman，否则数字按中文字体渲染会变形
+    rf.set(qn('w:hAnsi'), EN_FONT)
+    rf.set(qn('w:cs'), EN_FONT)
 
 
 def add_para(doc, text, font=BODY_FONT, size=16,
@@ -178,6 +180,8 @@ def md_to_gongwen_docx(src_md, dst_docx):
     doc = Document()
     sec = doc.sections[0]
     # GB/T 9704 标准页边距
+    sec.page_width = Cm(21.0)      # A4 宽（默认模板是 Letter 8.5in，必须显式设定）
+    sec.page_height = Cm(29.7)     # A4 高
     sec.top_margin = Cm(3.7)
     sec.bottom_margin = Cm(3.5)
     sec.left_margin = Cm(2.8)
