@@ -1585,6 +1585,36 @@ def c50():
             return False, "cron_cost_audit.py 缺 " + k, [k]
     return True, "频率判定逻辑自测通过（7 例已知答案）｜年触发换算含周 52 次与每日 365 次基准", []
 
+
+# ---------------- C51 判断类交付件须与事实底表成对，且底表含口径陷阱（2026-11-28 新增） ----------------
+@check("C51", "宏观/行业判断书须与配套事实底表成对存在，且底表须含口径陷阱章节",
+       "只出结论不出证据 = 判断书与底表会脱节；本轮整合两路研究时即出现过「正文说 Q3 转正、底表实为 Q2」的口径不一致")
+def c51():
+    pairs = [
+        (os.path.join(ROOT, "anyi-ops-kb", "00_全域商业市场认知",
+                      "中国经济周期定位与下行期结束方式判断_v1.0_2026-11-28.md"),
+         os.path.join(ROOT, "anyi-ops-kb", "00_全域商业市场认知", "宏观事实底表_2026-11-28.md")),
+    ]
+    miss = []
+    for report, facts in pairs:
+        if not os.path.exists(report):
+            miss.append("判断书缺失:" + os.path.basename(report))
+            continue
+        if not os.path.exists(facts):
+            miss.append("配套事实底表缺失:" + os.path.basename(facts))
+            continue
+        ft = open(facts, encoding="utf-8", errors="replace").read()
+        if "口径陷阱" not in ft:
+            miss.append("底表缺「口径陷阱」章节:" + os.path.basename(facts))
+        if "置信度" not in ft:
+            miss.append("底表缺置信度标注:" + os.path.basename(facts))
+        rt = open(report, encoding="utf-8", errors="replace").read()
+        for k in ("诚实边界", "先行指标"):
+            if k not in rt:
+                miss.append("判断书缺「%s」章节:%s" % (k, os.path.basename(report)))
+    if miss:
+        return False, "；".join(miss[:6]), miss[:6]
+    return True, "判断书与事实底表成对在位（底表含口径陷阱与置信度标注，判断书含诚实边界与先行指标）", []
 def run(as_json=False):
     res = []
     npass = 0
