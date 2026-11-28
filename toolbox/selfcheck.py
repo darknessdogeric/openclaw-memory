@@ -1554,6 +1554,33 @@ def c49():
     return True, ("结算作业 %d 个（at 节点 %d 个，安全网 %s）｜到期日 %d 个全部覆盖，无每日轮询"
                   % (len(settle), len(at_dates), "有" if has_safety else "无", len(dues))), []
 
+
+# ---------------- C50 自动作业频率判定逻辑须自测通过（2026-11-28 新增） ----------------
+@check("C50", "自动作业频率体检的判定逻辑须经已知答案自测通过（cron 五段→年触发次数）",
+       "假绿比 FAIL 更危险：标签与数值若各写各的，会出现「每年一次」却标成「按月」这类不一致；"
+       "且周与月不可混算（0 9 * * 1 是年 52 次，不是 12 次）")
+def c50():
+    p = os.path.join(ROOT, "skills", "agentos-architecture", "scripts", "cron_cost_audit.py")
+    if not os.path.exists(p):
+        return False, "缺 cron_cost_audit.py（自动作业频率体检工具丢失）", []
+    import subprocess as _sp
+    try:
+        r = _sp.run([sys.executable, p, "--selftest"], capture_output=True, timeout=120)
+        out = r.stdout.decode("utf-8", "replace")
+    except Exception as e:
+        return False, "自测执行失败：%s" % str(e)[:80], []
+    if r.returncode != 0:
+        bad = [l for l in out.split("\n") if "★错" in l or "自测失败" in l]
+        return False, "频率判定逻辑自测未过：" + ("；".join(bad[:4]) if bad else out.strip()[-120:]), bad[:4]
+    if "全部正确" not in out:
+        return False, "自测未报「全部正确」，判定逻辑状态不明", []
+    # 工具本体须含 selftest 入口与年次数换算
+    s = open(p, encoding="utf-8", errors="replace").read()
+    for k in ("def selftest", "def cron_annual", "52", "365"):
+        if k not in s:
+            return False, "cron_cost_audit.py 缺 " + k, [k]
+    return True, "频率判定逻辑自测通过（7 例已知答案）｜年触发换算含周 52 次与每日 365 次基准", []
+
 def run(as_json=False):
     res = []
     npass = 0

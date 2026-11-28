@@ -55,12 +55,15 @@ description: 企业级智能体（AgentOS）架构与工程实践内化。用于
 | `scripts/cost_ledger.py` | 解析 automations 运行记录，把 token 与产出入账，算**空跑成本** | 第 4 章 |
 | `scripts/trace_log.py` | 任务级 Trace（span/耗时/状态）＋ 审计事件（谁/何时/授权/影响面）分账写入，并支持**事故回灌** | 第 8 章 |
 | `scripts/policy_gate.py` | 机器可执行策略层：把硬规矩编译成 ALLOW/DENY/ESCALATE 决策 ＋ 幂等键 ＋ 审批凭据分离 | 第 7 章 |
+| `scripts/cron_cost_audit.py` | 自动作业触发频率体检：把 cron 换算成年触发次数，≥每日须有备案理由（自带判定逻辑自测） | 第 4 章 |
 
 ```bash
 python skills/agentos-architecture/scripts/agentos_gap_audit.py
 python skills/agentos-architecture/scripts/cost_ledger.py --ingest --path data/model_cost_ledger.jsonl
 python skills/agentos-architecture/scripts/trace_log.py audit --actor B166ER --action 口径对齐 --impact 5
 python skills/agentos-architecture/scripts/policy_gate.py check --policy brand-mark --text "署名 ERIC & B166ER"
+python skills/agentos-architecture/scripts/cron_cost_audit.py --selftest
+python skills/agentos-architecture/scripts/cron_cost_audit.py
 ```
 
 ## 四、三条要守住的纪律（从书里提炼）
@@ -68,6 +71,7 @@ python skills/agentos-architecture/scripts/policy_gate.py check --policy brand-m
 1. **Trace 与 AuditEvent 必须分开**（8.5）：Trace 说**发生了什么、耗时多少**；AuditEvent 说**谁授权、影响了谁**。混在一起，就既做不了性能归因，也做不了权限追溯。
 2. **fallback 不许偷偷替换**（4.7）：降级必须**记录在 RouteDecision 里**。降级本身不是罪，**静默降级才是**。
 3. **低置信度要暂停，不要硬答**（6.5）：检索证据不足时暂停并上报，**不要用看似合理的答案填空**。这与《信号与噪声》的纪律同源 —— 查不到就标未结算，不猜。
+4. **全绿要警惕**：任何「判定/断言」函数上线前，先喂一组已知答案做**反向自测**（含至少一个应当失败的样例）。**探针写得像正则、函数做字面匹配**，结果是全绿但全是假的 —— 假绿比 FAIL 更危险。**标签与数值必须同源**（标签由数值反推，别各写各的）。
 
 ## 五、诚实边界
 
