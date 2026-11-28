@@ -1459,6 +1459,101 @@ def c48():
     return True, ("AgentOS 闭环齐备：四工具 + 四账本 + 策略层可判定 ｜ 事故回归集 %d 条 ｜ 成本台账 %d 条"
                   % (len(rg), len(cl))), []
 
+
+# ---------------- C49 自动结算作业须按到期日触发，不得每日空跑（2026-11-28 新增） ----------------
+@check("C49", "台账结算作业须为到期日节点：每日轮询已废止，且每条预测的到期日都须有节点或安全网覆盖",
+       "第 4 章「成本记录：不要等到账单来了才发现问题」的护栏：每日 cron 曾一次空跑烧 678,145 token；"
+       "新预测若没配到期节点就会漏结算 —— 断言让两者都跑不掉")
+def c49():
+    import subprocess as _sp
+    import json as _json
+    CLI = r"C:\Users\ericz\AppData\Roaming\npm\openclaw.cmd"
+    if not os.path.exists(CLI):
+        return False, "openclaw CLI 不存在，无法核验自动作业状态", []
+    try:
+        r = _sp.run([CLI, "cron", "list", "--json"], capture_output=True, timeout=60)
+        raw = r.stdout.decode("utf-8", "replace")
+        jobs = _json.loads(raw).get("jobs", [])
+    except Exception as e:
+        return False, "读取 cron 列表失败，无法核验：%s" % str(e)[:80], []
+
+    def cron_daily(expr):
+        """真正每日 = 分 时 * * *  （日与月均为通配，且星期亦为通配）。
+        注意：'0 9 * * 1' 是每周一，不是每日 —— 不能只看前两位。"""
+        parts = (expr or "").split()
+        if len(parts) != 5:
+            return False
+        mi, hr, dom, mon, dow = parts
+        return dom == "*" and mon == "*" and dow == "*"
+
+    settle = [j for j in jobs if "台账结算" in (j.get("name") or "")]
+    if not settle:
+        return False, "找不到任何台账结算作业", []
+
+    # 1) 不得存在 enabled 的每日结算作业
+    daily = []
+    for j in settle:
+        if not j.get("enabled"):
+            continue
+        sch = j.get("schedule") or {}
+        if sch.get("kind") == "cron" and cron_daily(sch.get("expr")):
+            daily.append("%s (%s)" % (j.get("name"), sch.get("expr")))
+    if daily:
+        return False, "存在每日轮询的结算作业（每日空跑烧 token）：" + "、".join(daily), daily
+
+    # 2) 每条预测的到期日都须被节点覆盖
+    led = os.path.join(ROOT, "data", "prediction_ledger.jsonl")
+    if not os.path.exists(led):
+        return False, "预测台账缺失", []
+    dues = set()
+    for ln in open(led, encoding="utf-8"):
+        ln = ln.strip()
+        if not ln:
+            continue
+        try:
+            o = _json.loads(ln)
+        except Exception:
+            continue
+        d = o.get("resolved_date")
+        if d:
+            dues.add(d)
+    if not dues:
+        return True, "台账无到期日（无需节点）｜结算作业 %d 个，无每日轮询" % len(settle), []
+
+    # 收集节点覆盖：at 节点取日期（本地时区修正 +8）；cron 安全网取其频率
+    at_dates = set()
+    has_safety = False
+    for j in settle:
+        if not j.get("enabled"):
+            continue
+        sch = j.get("schedule") or {}
+        if sch.get("kind") == "at":
+            at = (sch.get("at") or "")[:10]
+            if at:
+                at_dates.add(at)
+        elif sch.get("kind") == "cron":
+            has_safety = True
+    # at 节点用 UTC 存储，取前 8 位后 +1 天（结算允许在到期日当天或之后）
+    uncovered = []
+    for d in sorted(dues):
+        hit = d in at_dates
+        if not hit:
+            # 允许节点早于到期日不超过 3 天（提前结算）
+            try:
+                y, m, dd = [int(x) for x in d.split("-")]
+                import datetime as _dt
+                base = _dt.date(y, m, dd)
+                if any(abs((base - _dt.date(*[int(x) for x in a.split("-")])).days) <= 3 for a in at_dates):
+                    hit = True
+            except Exception:
+                pass
+        if not hit and not has_safety:
+            uncovered.append(d)
+    if uncovered:
+        return False, "这些到期日无节点覆盖且无安全网：" + "、".join(uncovered), uncovered
+    return True, ("结算作业 %d 个（at 节点 %d 个，安全网 %s）｜到期日 %d 个全部覆盖，无每日轮询"
+                  % (len(settle), len(at_dates), "有" if has_safety else "无", len(dues))), []
+
 def run(as_json=False):
     res = []
     npass = 0
