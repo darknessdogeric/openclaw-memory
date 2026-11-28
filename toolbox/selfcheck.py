@@ -1567,6 +1567,10 @@ def c50():
     try:
         r = _sp.run([sys.executable, p, "--selftest"], capture_output=True, timeout=120)
         out = r.stdout.decode("utf-8", "replace")
+        if "全部正确" not in out:
+            alt = r.stdout.decode("mbcs", "replace")
+            if "全部正确" in alt:
+                out = alt
     except Exception as e:
         return False, "自测执行失败：%s" % str(e)[:80], []
     if r.returncode != 0:

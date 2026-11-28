@@ -17,6 +17,11 @@
 """
 import io, sys, os, json, subprocess, argparse
 
+try:
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+except Exception:
+    pass
+
 CLI = r"C:\Users\ericz\AppData\Roaming\npm\openclaw.cmd"
 
 # 高频作业的白名单：name 片段 -> 为什么它需要这么频繁
