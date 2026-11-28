@@ -16,6 +16,8 @@ F_KLM = os.path.join(KB1, "00_全域商业市场认知", "02_资本资产金融"
                      "05_信源矩阵扩展KLM_资本资产金融_v1.0_2026-10-25.md")
 F_H79 = os.path.join(KB1, "00_全域商业市场认知", "01_酒店行业",
                      "信源矩阵_酒店行业复苏判断排查总表_v1.0_2026-11-10.md")
+F_N = os.path.join(KB1, "00_全域商业市场认知", "01_酒店行业",
+                    "06_信源矩阵扩展N_奢华与顶奢_v1.0_2026-11-28.md")
 F_GQ = os.path.join(KB1, "04_行业研究", "2026国庆酒店行业全景",
                     "信源矩阵2026国庆排查总表_2026-10-11.md")
 
@@ -80,6 +82,10 @@ def load():
                      for c, n, s in re.findall(
                          r"##\s*\d+\.\s*([KLM])\s*\u7c7b\uff5c([^\uff08\n]+)\uff08([^\uff09]+)\uff09", tk)]
     D["gap"] = rows_of(sec_of(tk, "## 6. \u5df2\u77e5\u4fe1\u606f\u6e90\u7f3a\u53e3", None))[1:5]
+    tn = rd(F_N)
+    D["cats_n"] = [{"code": c, "name": clean(n), "spec": clean(s)}
+                   for c, n, s in re.findall(
+                       r"##\s*\d+\.\s*(N)\s*\u7c7b\uff5c([^\uff08\n]+)\uff08([^\uff09]+)\uff09", tn)]
 
     th = rd(F_H79)
     D["h79"] = rows_of(sec_of(th, "## 1. \u603b\u7edf\u8ba1", "## 2."))[1:6]

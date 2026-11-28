@@ -1615,6 +1615,37 @@ def c51():
     if miss:
         return False, "；".join(miss[:6]), miss[:6]
     return True, "判断书与事实底表成对在位（底表含口径陷阱与置信度标注，判断书含诚实边界与先行指标）", []
+
+# ---------------- C52 信源矩阵须含奢华与顶奢维度（N 类）且可解析（2026-11-28 新增） ----------------
+@check("C52", "信源矩阵须含 N 类（奢华·顶奢·奢华精品）且解析器可解析出，全景正文须含口径边界与「抗跌≠领先」限定",
+       "Eric 2026-11-28 指出的缺口：这个维度一旦没接进机器可查的解析与信息图，下次重构就会被静默删掉；
+       "而中国的「豪华/高端」与国际 luxury 不同口径，混着取数必然出错")
+def c52():
+    f_n = os.path.join(ROOT, "anyi-ops-kb", "00_全域商业市场认知", "01_酒店行业",
+                       "06_信源矩阵扩展N_奢华与顶奢_v1.0_2026-11-28.md")
+    f_p = os.path.join(ROOT, "anyi-ops-kb", "00_全域商业市场认知", "01_酒店行业",
+                       "奢华与顶奢酒店体系全景_v1.0_2026-11-28.md")
+    miss = []
+    for f, lab in ((f_n, "N 类扩展"), (f_p, "奢华全景正文")):
+        if not os.path.exists(f):
+            miss.append(lab + " 缺失")
+        elif os.path.getsize(f) < 2000:
+            miss.append(lab + " 内容过短")
+    if miss:
+        return False, "；".join(miss), miss
+    t = open(f_n, encoding="utf-8", errors="replace").read()
+    subs = [k for k in ("N1", "N2", "N3", "N4", "N5", "N6") if ("### " + k) not in t]
+    if subs:
+        return False, "N 类缺子域：" + "、".join(subs), subs
+    sp = os.path.join(ROOT, "skills", "source-matrix-infographic", "scripts", "sm_parse.py")
+    s = open(sp, encoding="utf-8", errors="replace").read()
+    if "cats_n" not in s or "F_N" not in s:
+        return False, "解析器未接入 N 类（cats_n / F_N 缺失）—— 该维度将无法进信息图与路由", []
+    p = open(f_p, encoding="utf-8", errors="replace").read()
+    for k in ("不是一回事", "抗跌"):
+        if k not in p:
+            return False, "全景正文缺关键限定：" + k, [k]
+    return True, "N 类在位（6 子域）＋ 解析器已接入 ＋ 全景正文含口径边界与「抗跌≠领先」限定", []
 def run(as_json=False):
     res = []
     npass = 0

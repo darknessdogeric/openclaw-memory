@@ -150,7 +150,7 @@ def build(D, key):
         if len(r) >= 4:
             gap += ("<li><b>" + esc(r[0]) + "</b> ｜ " + esc(r[1]) + " ｜ " + esc(r[2]) + " ｜ " + esc(r[3]) + "</li>")
     cname = {}
-    for c in D["cats_aj"] + D["cats_klm"]:
+    for c in D["cats_aj"] + D["cats_klm"] + D.get("cats_n", []):
         cname[c["code"]] = c["name"]
     hit = ""
     for code in sorted(pc79):
@@ -161,15 +161,23 @@ def build(D, key):
     ajhtml = "".join(card(c, ("　·　%d 源" % ajn[c["code"]] if c["code"] in ajn else ""))
                      for c in D["cats_aj"])
     klmhtml = "".join(card(c, "", True) for c in D["cats_klm"])
+    nhtml = "".join(card(c, "", True) for c in D.get("cats_n", []))
     h79 = SP.bars(D["h79"])
     gq = SP.bars(D["gq"])
 
-    head = "13 类 × 79 源"
+    _nsrc = 0
+    for _c in D.get("cats_n", []):
+        _m = re.search(r"(\d+)\s*源", _c.get("spec", ""))
+        if _m:
+            _nsrc += int(_m.group(1))
+    head = ("14 类 · 79 ＋ %d 源" % _nsrc) if _nsrc else "13 类 × 79 源"
     lede = ("这不是信源清单，是<b>「这些类真能拿到什么」的账</b>。"
             "同一份 79 源名单，<b>国庆轮</b>与<b>Q3/Q4 轮</b>各打一遍："
             "<b>上市集团 9/10、新增的 K/L/M 三类各 5/6 最易穿透</b>；"
             "<b>本土数据 0/3、审计银行 0/8 完全打不动</b>。"
-            "四条取数规则保证拿不到时明说「推算」。")
+            "四条取数规则保证拿不到时明说「推算」。<br>"
+            "<b>新增 N 类｜奢华 · 顶奢 · 奢华精品（6 子域 · %d 源）</b> —— 它与五星级/商务的口径完全不同，"
+            "混着取数必然出错，故单列。" % _nsrc)
     html = open(TPL, encoding="utf-8").read()
     css = open(CSSF, encoding="utf-8").read()
     W, H = PAGES[key]
@@ -181,6 +189,7 @@ def build(D, key):
         "@@LEDE@@": lede,
         "@@AJ@@": ajhtml,
         "@@KLM@@": klmhtml,
+        "@@N@@": nhtml,
         "@@TIERS@@": tiers,
         "@@SOP@@": sop,
         "@@H79@@": stack(h79, "2026-11-10 Q3/Q4 月度轮",
@@ -247,11 +256,12 @@ if __name__ == "__main__":
     if "--only" in sys.argv:
         only = sys.argv[sys.argv.index("--only") + 1]
     D = SP.load()
-    print("载入: A-J %d 类 | KLM %d 类 | 79轮统计 %d | 国庆统计 %d | 逐类命中 %d | 缺口 %d"
-          % (len(D["cats_aj"]), len(D["cats_klm"]), len(D["h79"]), len(D["gq"]),
-             len(D["gq_cats"]), len(D["gap"])))
+    print("载入: A-J %d 类 | KLM %d 类 | N %d 类 | 79轮统计 %d | 国庆统计 %d | 逐类命中 %d | 缺口 %d"
+          % (len(D["cats_aj"]), len(D["cats_klm"]), len(D.get("cats_n", [])),
+             len(D["h79"]), len(D["gq"]), len(D["gq_cats"]), len(D["gap"])))
     # ★ 数据闸门：空内容也���全过质检（无重叠无越界）—— 必须先验内容非空，否则是绿灯假象
-    if len(D["cats_aj"]) < 10 or len(D["cats_klm"]) < 3 or len(D["h79"]) < 5 or len(D["gq_cats"]) < 10:
+    if (len(D["cats_aj"]) < 10 or len(D["cats_klm"]) < 3 or len(D["h79"]) < 5
+            or len(D["gq_cats"]) < 10 or len(D.get("cats_n", [])) < 1):
         print("★ 数据不足（源文件缺失或解析失败），拒绝出图：%s" %
               {k: len(D[k]) for k in ("cats_aj", "cats_klm", "h79", "gq", "gq_cats", "gap")})
         raise SystemExit(2)
